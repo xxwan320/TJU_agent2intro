@@ -1,5 +1,5 @@
 import type { MapPublicConfig, POI, RouteRequest, RouteResponse, UserPosition } from '../../../shared/r2';
-import { AmapNavigation, type AmapSdk, type MapDestination } from '../transport/amap-navigation';
+import { AmapNavigation, type AmapSdk, type MapDestination, type InternalRouteRequest } from '../transport/amap-navigation';
 import { MapBudget } from '../transport/map-budget';
 
 type AMapApi = AmapSdk & Record<string, new (...args: any[]) => any>;
@@ -17,6 +17,7 @@ export interface OnlineMapHandle {
   locateCity(operationId: string, signal: AbortSignal): Promise<UserPosition>;
   findDestination(poi:POI,operationId:string,signal:AbortSignal):Promise<MapDestination[]>;
   walk(request: RouteRequest, poi: POI, signal: AbortSignal, matched?:MapDestination): Promise<RouteResponse>;
+  navigate(request:InternalRouteRequest,poi:POI,signal:AbortSignal,matched?:MapDestination):Promise<{route:RouteResponse;origin:UserPosition;destination?:MapDestination}>;
   destroy(): void;
 }
 // Pure classification remains testable; the M controller validates navigation origins.
@@ -58,7 +59,7 @@ export async function createOnlineMap(host: HTMLElement, config: MapPublicConfig
   }
   function showPosition(position:UserPosition) {
     const point=[position.lng,position.lat];
-    const title=position.source==='manual'?'手动起点':position.accuracy_m===null?'IP 粗略位置（非精确起点）':'设备定位';
+    const title=position.source==='manual'?'手动起点':position.accuracy_m===null?'IP 区域中心（粗略起点）':'设备定位';
     if (!locationMarker) locationMarker=new AMap.Marker({position:point,title,zIndex:200});
     else {locationMarker.setPosition(point);locationMarker.setTitle(title);}
     map.add(locationMarker);
@@ -79,5 +80,5 @@ export async function createOnlineMap(host: HTMLElement, config: MapPublicConfig
     destinationMarker=new AMap.Marker({position:[destination.lng,destination.lat],title:destination.name,zIndex:190});
     map.add(destinationMarker);map.setZoomAndCenter(17,[destination.lng,destination.lat]);
   }
-  return {setPois,showPosition,showDestination,showRoute,highlightStep,pickStart(callback){startPicker=callback;},clearRoute,resize(){map.resize?.();},locate:(id,abort)=>navigation.locate(id,abort,true),locateCity:(id,abort)=>navigation.locateCity(id,abort,true),findDestination:(poi,id,abort)=>navigation.findDestination(poi,id,abort),walk:(request,poi,abort,matched)=>navigation.walk(request,poi,abort,matched),destroy(){startPicker=null;clearRoute();map.destroy();}};
+  return {setPois,showPosition,showDestination,showRoute,highlightStep,pickStart(callback){startPicker=callback;},clearRoute,resize(){map.resize?.();},locate:(id,abort)=>navigation.locate(id,abort,true),locateCity:(id,abort)=>navigation.locateCity(id,abort,true),findDestination:(poi,id,abort)=>navigation.findDestination(poi,id,abort),walk:(request,poi,abort,matched)=>navigation.walk(request,poi,abort,matched),navigate:(request,poi,abort,matched)=>navigation.navigate(request,poi,abort,matched),destroy(){startPicker=null;clearRoute();map.destroy();}};
 }

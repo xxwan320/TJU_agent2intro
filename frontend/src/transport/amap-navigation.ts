@@ -9,6 +9,11 @@ type Callback=(status:string,result:unknown)=>void;
 interface Geo {getCurrentPosition(callback:Callback):void}
 interface CitySearch {getLocalCity(callback:Callback):void}
 export interface MapDestination {poiId:string;providerId:string;name:string;address:string;lng:number;lat:number;matchedAt:number}
+export class DestinationSelectionRequired extends MapCallError{
+ origin?:UserPosition;
+ constructor(readonly matches:MapDestination[]){super('destination_selection_required');}
+}
+export type InternalRouteRequest=Omit<RouteRequest,'origin'>&{origin:UserPosition|null};
 export interface MapHandle {destroy():void}
 export interface AmapSdk {
  Map:new(host:HTMLElement,options:Record<string,unknown>)=>MapHandle;
@@ -63,8 +68,9 @@ export class AmapNavigation {
  private loader:Loader;
  private readJson:typeof api;
  private destinations=new Map<string,MapDestination>();
+ private destinationLists=new Map<string,MapDestination[]>();
  constructor(config:MapPublicConfig,budget:MapBudget,loader:Loader=loadSdk,readJson:typeof api=api){this.config=config;this.budget=budget;this.loader=loader;this.readJson=readJson;}
- private async serviceGet<T>(path:'v3/place/text'|'v3/direction/walking',params:Record<string,string>,signal:AbortSignal):Promise<T>{
+ private async serviceGet<T>(path:'v3/place/text'|'v3/direction/walking'|'v3/ip',params:Record<string,string>,signal:AbortSignal):Promise<T>{
   if(signal.aborted)throw new MapCallError('cancelled');
   let abort:()=>void=()=>{};
   const cancelled=new Promise<never>((_,reject)=>{abort=()=>reject(new MapCallError('cancelled'));signal.addEventListener('abort',abort,{once:true});});
@@ -106,7 +112,7 @@ export class AmapNavigation {
    const geo=new sdk.Geolocation({enableHighAccuracy:true,timeout:10000,convert:true,noIpLocate:0,showMarker:false,showCircle:false,panToLocation:false});
    return callbackResult(signal,done=>geo.getCurrentPosition(done),value=>{
     const result=value as {position:LngLat;accuracy?:number;location_type?:string};const [lng,lat]=pair(result.position);
-    // IP-level/unknown accuracy is not a verified current-position route origin.
+    // Keep coarse positions explicit; the UI labels routes planned from an IP region center.
     const accuracy=typeof result.accuracy==='number'&&Number.isFinite(result.accuracy)&&result.accuracy>=0&&result.location_type!=='ip'?result.accuracy:null;
     return {lng,lat,crs:'GCJ02',source:'amap_geolocation',accuracy_m:accuracy,timestamp:new Date().toISOString()};
    });
@@ -115,23 +121,19 @@ export class AmapNavigation {
  async locateCity(operationId:string,signal:AbortSignal,userConsented:boolean):Promise<UserPosition>{
   this.assertReady();
   return this.budget.run('geolocation',operationId,userConsented,signal,async()=>{
-   const sdk=await this.getSdk();if(signal.aborted)throw new MapCallError('cancelled');
-   if(!sdk.CitySearch)throw new MapCallError('city_location_unavailable');
-   return callbackResult(signal,done=>new sdk.CitySearch!().getLocalCity(done),value=>{
-    const result=value as {bounds?:{getCenter():unknown}|string};
-    let coordinates:Pair;
-    if(typeof result.bounds==='string'){
-     const corners=result.bounds.split(';').map(p=>p.split(',').map(Number));
-     if(corners.length!==2||corners.some(p=>p.length!==2))throw new MapCallError('city_location_unavailable');
-     coordinates=pair({lng:(corners[0][0]+corners[1][0])/2,lat:(corners[0][1]+corners[1][1])/2});
-    }else if(result.bounds?.getCenter)coordinates=pair(result.bounds.getCenter());
-    else throw new MapCallError('city_location_unavailable');
+   const result=await this.serviceGet<{rectangle?:unknown}>('v3/ip',{},signal);
+    if(typeof result.rectangle!=='string'||!result.rectangle.includes(';'))throw new MapCallError('city_location_unavailable');
+    const corners=result.rectangle.split(';').map(providerPoint);
+    if(corners.length!==2)throw new MapCallError('city_location_unavailable');
+    const coordinates=pair({lng:(corners[0][0]+corners[1][0])/2,lat:(corners[0][1]+corners[1][1])/2});
     return {lng:coordinates[0],lat:coordinates[1],crs:'GCJ02',source:'amap_geolocation',accuracy_m:null,timestamp:new Date().toISOString()};
-   });
   });
  }
  async findDestination(poi:POI,operationId:string,signal:AbortSignal):Promise<MapDestination[]>{
   this.assertReady();
+  if(signal.aborted)throw new MapCallError('cancelled');
+  const cached=this.destinationLists.get(poi.id);
+  if(cached?.length&&cached.every(match=>Date.now()-match.matchedAt<600000))return cached;
   return this.budget.run('poi_search',operationId,true,signal,async()=>{
    const campus=poi.campus_id==='weijinlu'?'天津大学卫津路校区':'天津大学北洋园校区';
    const value=await this.serviceGet<{pois?:Array<{id:string;name:string;address?:string;location:string}>}>('v3/place/text',{keywords:campus+' '+poi.name,city:'天津',citylimit:'true',offset:'5',page:'1',extensions:'base'},signal);
@@ -145,26 +147,51 @@ export class AmapNavigation {
     });
     while(this.destinations.size>100)this.destinations.delete(this.destinations.keys().next().value!);
     if(!matches.length)throw new MapCallError('destination_not_found');
+    this.destinationLists.set(poi.id,matches);
+    while(this.destinationLists.size>100)this.destinationLists.delete(this.destinationLists.keys().next().value!);
     return matches;
   });
  }
+ async navigate(request:InternalRouteRequest,poi:POI,signal:AbortSignal,matched?:MapDestination):Promise<{route:RouteResponse;origin:UserPosition;destination?:MapDestination}>{
+  if(poi.id!==request.destination_poi_id||poi.campus_id!==request.campus_id)throw new MapCallError('poi_context_mismatch');
+  if(!request.user_initiated)throw new MapCallError('user_action_required');
+  let origin=request.origin;
+  if(!origin||(origin.source!=='manual'&&(!Number.isFinite(Date.parse(origin.timestamp))||Date.now()-Date.parse(origin.timestamp)>120000))){
+   origin=await this.locateCity(request.route_id+'-ip',signal,true);
+  }
+  let route:RouteResponse;
+  try{route=await this.walk({...request,origin},poi,signal,matched);}
+  catch(error){if(error instanceof DestinationSelectionRequired)error.origin=origin;throw error;}
+  const matches=this.destinationLists.get(poi.id)??[];
+  const destination=matched&&Date.now()-matched.matchedAt<600000?matched:matches.find(candidate=>candidate.name.endsWith(poi.name))??(matches.length===1?matches[0]:undefined);
+  return {route,origin,destination};
+ }
  async walk(request:RouteRequest,poi:POI,signal:AbortSignal,matched?:MapDestination):Promise<RouteResponse>{
+  if(signal.aborted)throw new MapCallError('cancelled');
+  if(!request.user_initiated)throw new MapCallError('user_action_required');
   if(poi.id!==request.destination_poi_id||poi.campus_id!==request.campus_id)throw new MapCallError('poi_context_mismatch');
   const entrance=request.entrance_id?poi.entrances.find(x=>x.id===request.entrance_id):null;
   if(request.entrance_id&&!entrance)throw new MapCallError('entrance_not_found');
   let target:{lng:number;lat:number}|null=entrance?entrance.location:poi.location;
+  if(matched&&Date.now()-matched.matchedAt>=600000)matched=undefined;
+  const loc=entrance?entrance.location:poi.location;
+  if(!matched&&(!loc||loc.crs!=='GCJ02'||loc.quality==='pending'||loc.quality==='approximate'||!loc.verified_at||poi.verification_status!=='verified')){
+   const matches=await this.findDestination(poi,request.route_id+'-destination',signal);
+   const exact=matches.filter(candidate=>candidate.name.endsWith(poi.name));
+   if(exact.length===1)matched=exact[0];
+   else if(matches.length===1)matched=matches[0];
+   else throw new DestinationSelectionRequired(matches);
+  }
   if(matched){
    const known=this.destinations.get(poi.id+'/'+matched.providerId);
    if(!known||known!==matched||known.poiId!==poi.id||Date.now()-known.matchedAt>600000)throw new MapCallError('destination_match_expired');
    target=known;
   }else{
-   const loc=entrance?entrance.location:poi.location;
-   if(!loc||loc.crs!=='GCJ02'||loc.quality==='pending'||loc.quality==='approximate'||!loc.verified_at||poi.verification_status!=='verified')throw new MapCallError('destination_unverified');
-   target=loc;
+   target=loc!;
   }
   const origin=request.origin;pair(origin);pair(target);
   const age=Date.now()-Date.parse(origin.timestamp);
-  if(origin.crs!=='GCJ02'||!['manual','amap_geolocation'].includes(origin.source)||(origin.source==='amap_geolocation'&&(origin.accuracy_m===null||!Number.isFinite(origin.accuracy_m)||origin.accuracy_m<0||origin.accuracy_m>200))||(origin.source==='manual'&&origin.accuracy_m!==null)||!Number.isFinite(age)||age< -5000||age>120000)throw new MapCallError('location_expired_or_inaccurate');
+  if(origin.crs!=='GCJ02'||!['manual','amap_geolocation'].includes(origin.source)||(origin.accuracy_m!==null&&(!Number.isFinite(origin.accuracy_m)||origin.accuracy_m<0))||(origin.source==='manual'&&origin.accuracy_m!==null)||!Number.isFinite(age)||age< -5000||(origin.source!=='manual'&&age>120000))throw new MapCallError('location_expired_or_inaccurate');
   this.assertReady();
   return this.budget.run('walking_route',request.route_id,request.user_initiated,signal,async()=>{
    const point=(p:{lng:number;lat:number})=>p.lng.toFixed(6)+','+p.lat.toFixed(6);
