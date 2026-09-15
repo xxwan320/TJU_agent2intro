@@ -136,7 +136,7 @@ export class AmapNavigation {
   if(cached?.length&&cached.every(match=>Date.now()-match.matchedAt<600000))return cached;
   return this.budget.run('poi_search',operationId,true,signal,async()=>{
    const campus=poi.campus_id==='weijinlu'?'天津大学卫津路校区':'天津大学北洋园校区';
-   const value=await this.serviceGet<{pois?:Array<{id:string;name:string;address?:string;location:string}>}>('v3/place/text',{keywords:campus+' '+poi.name,city:'天津',citylimit:'true',offset:'5',page:'1',extensions:'base'},signal);
+   const value=await this.serviceGet<{pois?:Array<{id:string;name:string;address?:string;location:string}>}>('v3/place/text',{keywords:campus+poi.name.replace(/天津大学|卫津路校区|北洋园校区/g,'').trim(),city:'天津',citylimit:'true',offset:'5',page:'1',extensions:'base'},signal);
     const rows=value.pois;
     if(rows!==undefined&&!Array.isArray(rows))throw new MapCallError('UPSTREAM_PROTOCOL_ERROR');
     if(!rows?.length)throw new MapCallError('destination_not_found');

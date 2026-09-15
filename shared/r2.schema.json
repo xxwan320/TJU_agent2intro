@@ -877,6 +877,19 @@
     "CampusMedia": {
       "additionalProperties": false,
       "properties": {
+        "poi_id": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Poi Id"
+        },
         "id": {
           "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
           "title": "Id",
@@ -1144,6 +1157,19 @@
         "CampusMedia": {
           "additionalProperties": false,
           "properties": {
+            "poi_id": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Poi Id"
+            },
             "id": {
               "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
               "title": "Id",

@@ -6,7 +6,7 @@ export type AvatarState = 'idle' | 'listening' | 'thinking' | 'speaking' | 'erro
 export interface AvatarCapabilities { renderer: boolean; lip_sync: 'none'|'amplitude'|'viseme'; expressions: string[]; motions: string[]; customization: ('scale'|'background')[]; is_3d: boolean; face_morph: boolean }
 export interface AvatarManifest { id: string; display_name: string; source_character: string; renderer: 'live2d'|'image'|'vrm'; model_url: string; core_url?: string; capabilities: AvatarCapabilities }
 export interface AdapterResult { status: 'ready'|'not_implemented'|'failed'; error_code?: string }
-export interface AvatarAdapter { readonly manifest: AvatarManifest; mount(host: HTMLElement): Promise<AdapterResult>; setState(state: AvatarState): void; dispose(): void }
+export interface AvatarAdapter { readonly manifest: AvatarManifest; mount(host: HTMLElement): Promise<AdapterResult>; setState(state: AvatarState): void; setAudioLevel?(level:number):void; dispose(): void }
 export interface SpeechContext { request_id: string; session_id: string; signal: AbortSignal }
 export interface AudioPayload { encoding: 'base64'; mime_type: 'audio/wav'; sample_rate_hz: 16000; channels: 1; audio_base64: string }
 export interface SpeechCallbacks { onText(text: string, is_final: boolean): void; onStart(utterance_id: string): void; onEnd(utterance_id: string): void; onFailure(utterance_id: string, code: string): void }

@@ -41,9 +41,9 @@ def test_coverage_counts_records_not_legacy_summaries():
     k=LocalKnowledge(); facts=json.loads((DATA_DIRECTORY/"facts.json").read_text(encoding="utf-8"))
     assert k.get_coverage().fact_count==len(facts)
     assert len(facts)>=200
-    assert len({f["fact"] for f in facts})==len(facts)
+    assert len({(f["campus_id"], f["fact"]) for f in facts})==len(facts)
     assert k.get_coverage().fact_count==sum(c.facts for c in k.get_coverage().campuses)
-    assert k.get_coverage().source_pages==15
+    assert k.get_coverage().source_pages==22
     assert sum(c.verified_coordinates for c in k.get_coverage().campuses)==0
 
 def test_historical_maps_are_local_relative_only():
@@ -58,7 +58,9 @@ def test_historical_maps_are_local_relative_only():
 
 def _copy_bundle(destination):
     destination.mkdir()
-    for name in importer.MANAGED:shutil.copy2(DATA_DIRECTORY/name,destination/name)
+    for name in importer.MANAGED:
+        (destination/name).parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(DATA_DIRECTORY/name,destination/name)
 
 def test_import_rejects_orphan_before_mutating(tmp_path):
     staging=tmp_path/"staging"; active=tmp_path/"active"

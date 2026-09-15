@@ -9,7 +9,7 @@ export const kelaitaManifest: AvatarManifest = {
   core_url: '/vendor/live2dcubismcore.min.js',
   capabilities: {
     renderer: true,
-    lip_sync: 'none',
+    lip_sync: 'amplitude',
     expressions: [],
     motions: [],
     customization: ['scale'],
@@ -20,4 +20,4 @@ export const kelaitaManifest: AvatarManifest = {
 
 // The selected asset has eye, gaze, brow, head/body, breath and mouth parameters.
 // Its only exp3 toggles the original watermark, so it is deliberately not exposed as emotion.
-// No motion3 or viseme/phoneme timing exists; state poses are parameter-driven and lip_sync stays none.
+// No motion3 or viseme/phoneme timing exists; state poses are parameter-driven and mouth follows actual playback RMS only.

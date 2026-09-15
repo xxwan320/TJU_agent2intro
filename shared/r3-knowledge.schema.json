@@ -1,0 +1,674 @@
+{
+  "contract_version": "1.2.0",
+  "schemas": {
+    "ApplicableEvidence": {
+      "$defs": {
+        "Evidence": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_id": {
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "title": "Evidence Id",
+              "type": "string"
+            },
+            "source_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Ref",
+              "type": "string"
+            },
+            "claim": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Claim",
+              "type": "string"
+            },
+            "relation": {
+              "enum": [
+                "retrieved",
+                "supports",
+                "contradicts"
+              ],
+              "title": "Relation",
+              "type": "string"
+            },
+            "verification": {
+              "enum": [
+                "verified",
+                "unverified",
+                "historical",
+                "disputed"
+              ],
+              "title": "Verification",
+              "type": "string"
+            },
+            "checked_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Checked At"
+            },
+            "valid_until": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Valid Until"
+            }
+          },
+          "required": [
+            "evidence_id",
+            "source_ref",
+            "claim",
+            "relation",
+            "verification",
+            "checked_at"
+          ],
+          "title": "Evidence",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "poi_id": {
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+          "title": "Poi Id",
+          "type": "string"
+        },
+        "campus_id": {
+          "enum": [
+            "weijinlu",
+            "beiyangyuan"
+          ],
+          "title": "Campus Id",
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Url"
+        },
+        "claim_type": {
+          "enum": [
+            "stable_fact",
+            "published_rule",
+            "historical_event",
+            "field_observation"
+          ],
+          "title": "Claim Type",
+          "type": "string"
+        },
+        "applicable_at": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Applicable At"
+        },
+        "audience": {
+          "anyOf": [
+            {
+              "maxLength": 200,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Audience"
+        },
+        "valid_from": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Valid From"
+        },
+        "valid_through": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Valid Through"
+        },
+        "source_checked_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Checked At"
+        },
+        "field_checked_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Field Checked At"
+        },
+        "current_status": {
+          "enum": [
+            "confirmed",
+            "pending",
+            "expired",
+            "conflict",
+            "unknown"
+          ],
+          "title": "Current Status",
+          "type": "string"
+        },
+        "conflict_ids": {
+          "items": {
+            "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+            "type": "string"
+          },
+          "maxItems": 20,
+          "title": "Conflict Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "poi_id",
+        "campus_id",
+        "evidence",
+        "claim_type",
+        "current_status"
+      ],
+      "title": "ApplicableEvidence",
+      "type": "object"
+    },
+    "TourKnowledgeContext": {
+      "$defs": {
+        "ApplicableEvidence": {
+          "additionalProperties": false,
+          "properties": {
+            "poi_id": {
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "title": "Poi Id",
+              "type": "string"
+            },
+            "campus_id": {
+              "enum": [
+                "weijinlu",
+                "beiyangyuan"
+              ],
+              "title": "Campus Id",
+              "type": "string"
+            },
+            "evidence": {
+              "$ref": "#/$defs/Evidence"
+            },
+            "source_url": {
+              "anyOf": [
+                {
+                  "maxLength": 2000,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Source Url"
+            },
+            "claim_type": {
+              "enum": [
+                "stable_fact",
+                "published_rule",
+                "historical_event",
+                "field_observation"
+              ],
+              "title": "Claim Type",
+              "type": "string"
+            },
+            "applicable_at": {
+              "anyOf": [
+                {
+                  "maxLength": 500,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Applicable At"
+            },
+            "audience": {
+              "anyOf": [
+                {
+                  "maxLength": 200,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Audience"
+            },
+            "valid_from": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Valid From"
+            },
+            "valid_through": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Valid Through"
+            },
+            "source_checked_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Source Checked At"
+            },
+            "field_checked_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Field Checked At"
+            },
+            "current_status": {
+              "enum": [
+                "confirmed",
+                "pending",
+                "expired",
+                "conflict",
+                "unknown"
+              ],
+              "title": "Current Status",
+              "type": "string"
+            },
+            "conflict_ids": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "title": "Conflict Ids",
+              "type": "array"
+            }
+          },
+          "required": [
+            "poi_id",
+            "campus_id",
+            "evidence",
+            "claim_type",
+            "current_status"
+          ],
+          "title": "ApplicableEvidence",
+          "type": "object"
+        },
+        "Evidence": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_id": {
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "title": "Evidence Id",
+              "type": "string"
+            },
+            "source_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Ref",
+              "type": "string"
+            },
+            "claim": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Claim",
+              "type": "string"
+            },
+            "relation": {
+              "enum": [
+                "retrieved",
+                "supports",
+                "contradicts"
+              ],
+              "title": "Relation",
+              "type": "string"
+            },
+            "verification": {
+              "enum": [
+                "verified",
+                "unverified",
+                "historical",
+                "disputed"
+              ],
+              "title": "Verification",
+              "type": "string"
+            },
+            "checked_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Checked At"
+            },
+            "valid_until": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Valid Until"
+            }
+          },
+          "required": [
+            "evidence_id",
+            "source_ref",
+            "claim",
+            "relation",
+            "verification",
+            "checked_at"
+          ],
+          "title": "Evidence",
+          "type": "object"
+        },
+        "PlaceRef": {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "poi",
+                "current_position",
+                "unspecified"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "poi_id": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Poi Id"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "title": "PlaceRef",
+          "type": "object"
+        },
+        "RouteCostResult": {
+          "additionalProperties": false,
+          "properties": {
+            "from_ref": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "to_ref": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "distance_m": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Distance M"
+            },
+            "duration_s": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Duration S"
+            },
+            "source": {
+              "enum": [
+                "amap",
+                "campus_evidence",
+                "unknown"
+              ],
+              "title": "Source",
+              "type": "string"
+            },
+            "verification": {
+              "enum": [
+                "verified",
+                "unverified",
+                "historical",
+                "disputed"
+              ],
+              "title": "Verification",
+              "type": "string"
+            },
+            "checked_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Checked At"
+            },
+            "campus_access": {
+              "enum": [
+                "verified",
+                "unverified",
+                "restricted"
+              ],
+              "title": "Campus Access",
+              "type": "string"
+            },
+            "evidence_ids": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "title": "Evidence Ids",
+              "type": "array"
+            },
+            "reason": {
+              "enum": [
+                "available",
+                "missing_data",
+                "not_configured",
+                "cancelled",
+                "unavailable",
+                "budget_exhausted"
+              ],
+              "title": "Reason",
+              "type": "string"
+            }
+          },
+          "required": [
+            "from_ref",
+            "to_ref",
+            "distance_m",
+            "duration_s",
+            "source",
+            "verification",
+            "checked_at",
+            "campus_access",
+            "reason"
+          ],
+          "title": "RouteCostResult",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "poi_id": {
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+          "title": "Poi Id",
+          "type": "string"
+        },
+        "campus_id": {
+          "enum": [
+            "weijinlu",
+            "beiyangyuan"
+          ],
+          "title": "Campus Id",
+          "type": "string"
+        },
+        "requested_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Requested Date"
+        },
+        "version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Version",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/ApplicableEvidence"
+          },
+          "maxItems": 40,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "route_costs": {
+          "items": {
+            "$ref": "#/$defs/RouteCostResult"
+          },
+          "maxItems": 20,
+          "title": "Route Costs",
+          "type": "array"
+        },
+        "warnings": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20,
+          "title": "Warnings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "poi_id",
+        "campus_id",
+        "requested_date",
+        "version"
+      ],
+      "title": "TourKnowledgeContext",
+      "type": "object"
+    }
+  }
+}

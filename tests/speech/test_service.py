@@ -166,3 +166,93 @@ def test_stop_cancels_running_tts_and_preserves_session(monkeypatch, tmp_path: P
         assert conflict.value.status == 409
 
     asyncio.run(run())
+
+
+@pytest.mark.parametrize("failure", [None, "timeout", "unavailable", "empty"])
+def test_asr_chinese_result_safe_errors_and_client_cleanup(monkeypatch, tmp_path, failure):
+    from types import SimpleNamespace
+    closed = []
+    class Client:
+        def __init__(self):
+            self.audio = SimpleNamespace(transcriptions=self)
+        async def create(self, **kwargs):
+            assert kwargs["file"][0] == "speech.wav"
+            assert kwargs["file"][1].startswith(b"RIFF")
+            if failure == "timeout":
+                raise asyncio.TimeoutError("private upstream details")
+            if failure == "unavailable":
+                raise RuntimeError("private upstream details")
+            return SimpleNamespace(text="" if failure == "empty" else "请介绍天津大学")
+        async def close(self):
+            closed.append(True)
+    monkeypatch.setattr("backend.speech.service.prepare_asr_client", lambda *args: Client())
+    async def run():
+        service = CampusSpeechService(settings(asr_url="https://asr.invalid/v1", asr_model="test-asr", asr_api_key="fixture-only"), tmp_path)
+        request = asr_request(pcm16_wav())
+        if failure:
+            with pytest.raises(DomainError) as error:
+                await service.transcribe(request)
+            assert error.value.code == {"timeout":"asr_timeout", "unavailable":"asr_unavailable", "empty":"asr_empty"}[failure]
+            assert "private" not in str(error.value)
+        else:
+            result = await service.transcribe(request)
+            assert result.text == "请介绍天津大学" and result.is_final
+        assert service._operations == {}
+        assert closed == [True]
+    asyncio.run(run())
+
+
+def test_asr_cancel_rejects_provider_that_swallows_cancel_and_uncancels(monkeypatch, tmp_path):
+    from types import SimpleNamespace
+    started = asyncio.Event()
+    closed = []
+    class Client:
+        def __init__(self):
+            self.audio = SimpleNamespace(transcriptions=self)
+        async def create(self, **kwargs):
+            started.set()
+            try:
+                await asyncio.sleep(20)
+            except asyncio.CancelledError:
+                asyncio.current_task().uncancel()
+            return SimpleNamespace(text="迟到文本必须丢弃")
+        async def close(self):
+            closed.append(True)
+    monkeypatch.setattr("backend.speech.service.prepare_asr_client", lambda *args: Client())
+    async def run():
+        service = CampusSpeechService(settings(asr_url="https://asr.invalid/v1", asr_model="test-asr", asr_api_key="fixture-only"), tmp_path)
+        request = asr_request(pcm16_wav())
+        task = asyncio.create_task(service.transcribe(request))
+        await started.wait()
+        result = await service.stop(SpeechContext(request_id=request.request_id, session_id=request.session_id))
+        assert result.upstream_stop == "unconfirmed"
+        with pytest.raises(DomainError) as error:
+            await task
+        assert error.value.code == "stopped"
+        assert service._operations == {} and closed == [True]
+    asyncio.run(run())
+
+
+def test_tts_cancel_rejects_provider_that_writes_late_audio(monkeypatch, tmp_path):
+    started = asyncio.Event()
+    class Provider:
+        async def save(self, target):
+            started.set()
+            try:
+                await asyncio.sleep(20)
+            except asyncio.CancelledError:
+                asyncio.current_task().uncancel()
+            Path(target).write_bytes(b"ID3fixture")
+    monkeypatch.setattr("backend.speech.service.prepare_edge_tts", lambda *args: Provider())
+    async def run():
+        service = CampusSpeechService(settings(), tmp_path)
+        request = TtsRequest(request_id=uuid4(), session_id=uuid4(), utterance_id=uuid4(), text="取消测试", voice_id="zh-CN-XiaoxiaoNeural")
+        task = asyncio.create_task(service.synthesize(request))
+        await started.wait()
+        await service.stop(SpeechContext(request_id=request.request_id, session_id=request.session_id))
+        with pytest.raises(DomainError) as error:
+            await task
+        assert error.value.code == "stopped"
+        assert service.tts_verified is False
+        assert service._audio == {} and list(tmp_path.iterdir()) == []
+    asyncio.run(run())

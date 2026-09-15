@@ -1,0 +1,911 @@
+{
+  "annotation": "Manually selected factual relevance against read official sources; frozen before first evaluation. Ambiguous cases require multiple entities at retrieval, not a claim of model clarification.",
+  "questions": [
+    {
+      "id": "e1",
+      "campus_id": "weijinlu",
+      "query": "北馆在目录里的正式名称是什么？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-weijinlu-chunshui-library"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-chunshui-library"
+      ],
+      "source_refs": [
+        "src-library"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e2",
+      "campus_id": "weijinlu",
+      "query": "南馆叫什么？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-weijinlu-science-library"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-science-library"
+      ],
+      "source_refs": [
+        "src-library"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e3",
+      "campus_id": "weijinlu",
+      "query": "卫津路第九教学楼这个点位有资料吗？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-weijinlu-09-teaching"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-09-teaching"
+      ],
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e4",
+      "campus_id": "weijinlu",
+      "query": "25教在目录中叫什么？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-weijinlu-25-teaching"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-25-teaching"
+      ],
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e5",
+      "campus_id": "weijinlu",
+      "query": "水利馆属于哪个校区？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-weijinlu-water-building"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-water-building"
+      ],
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e6",
+      "campus_id": "weijinlu",
+      "query": "大学生活动中心有收录吗？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-weijinlu-student-center"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-student-center"
+      ],
+      "source_refs": [
+        "src-venues"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e7",
+      "campus_id": "weijinlu",
+      "query": "游泳馆在目录中吗？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-weijinlu-swimming"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-swimming"
+      ],
+      "source_refs": [
+        "src-venues"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e8",
+      "campus_id": "weijinlu",
+      "query": "卫津路东门有收录吗？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-weijinlu-east-gate"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-east-gate"
+      ],
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e9",
+      "campus_id": "weijinlu",
+      "query": "冯骥才文学艺术研究院有官方目录依据吗？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-weijinlu-feng-jicai"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-feng-jicai"
+      ],
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e10",
+      "campus_id": "weijinlu",
+      "query": "爱晚湖属于哪个校区？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-weijinlu-aiwan-lake"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-aiwan-lake"
+      ],
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e11",
+      "campus_id": "weijinlu",
+      "query": "青年湖是否在卫津路目录中？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-weijinlu-youth-lake"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-youth-lake"
+      ],
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e12",
+      "campus_id": "weijinlu",
+      "query": "友谊湖有收录吗？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-weijinlu-youyi-lake"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-youyi-lake"
+      ],
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e13",
+      "campus_id": "weijinlu",
+      "query": "敬业湖的名称有官方依据吗？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-weijinlu-jingye-lake"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-jingye-lake"
+      ],
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e14",
+      "campus_id": "weijinlu",
+      "query": "春水图书馆始建时间是什么？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "chunshui-founded"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-chunshui-library"
+      ],
+      "source_refs": [
+        "src-library"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e15",
+      "campus_id": "weijinlu",
+      "query": "春水图书馆是谁设计的？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "chunshui-designer"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-chunshui-library"
+      ],
+      "source_refs": [
+        "src-library"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e16",
+      "campus_id": "weijinlu",
+      "query": "春水图书馆扩建书库是哪年？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "chunshui-extension"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-chunshui-library"
+      ],
+      "source_refs": [
+        "src-library"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e17",
+      "campus_id": "weijinlu",
+      "query": "北馆改造重新开放时间？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "chunshui-reopened"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-chunshui-library"
+      ],
+      "source_refs": [
+        "src-library"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e18",
+      "campus_id": "weijinlu",
+      "query": "北馆在何年命名春水图书馆？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "chunshui-name"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-chunshui-library"
+      ],
+      "source_refs": [
+        "src-library"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e19",
+      "campus_id": "weijinlu",
+      "query": "科学图书馆是谁捐资助建的？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "science-donor"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-science-library"
+      ],
+      "source_refs": [
+        "src-library"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e20",
+      "campus_id": "weijinlu",
+      "query": "科学图书馆改造后重新开放时间？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "science-reopened"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-science-library"
+      ],
+      "source_refs": [
+        "src-library"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e21",
+      "campus_id": "beiyangyuan",
+      "query": "郑东馆的完整名称是什么？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-beiyangyuan-zhengdong-library"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-zhengdong-library"
+      ],
+      "source_refs": [
+        "src-library"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e22",
+      "campus_id": "beiyangyuan",
+      "query": "三问桥属于哪个校区？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-beiyangyuan-sanwen-bridge"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-sanwen-bridge"
+      ],
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e23",
+      "campus_id": "beiyangyuan",
+      "query": "求实会堂有官方依据吗？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-beiyangyuan-qiushi-hall"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-qiushi-hall"
+      ],
+      "source_refs": [
+        "src-venues"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e24",
+      "campus_id": "beiyangyuan",
+      "query": "大通学生中心有收录吗？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-beiyangyuan-datong-center"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-datong-center"
+      ],
+      "source_refs": [
+        "src-venues"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e25",
+      "campus_id": "beiyangyuan",
+      "query": "梅园餐厅的食堂名称是什么？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-beiyangyuan-xue-1-dining"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-xue-1-dining"
+      ],
+      "source_refs": [
+        "src-dining-2024"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e26",
+      "campus_id": "beiyangyuan",
+      "query": "兰园餐厅属于哪个食堂？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-beiyangyuan-xue-2-dining"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-xue-2-dining"
+      ],
+      "source_refs": [
+        "src-dining-2024"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e27",
+      "campus_id": "beiyangyuan",
+      "query": "格园是资料中的宿舍区域吗？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-beiyangyuan-dorm-ge"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-dorm-ge"
+      ],
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e28",
+      "campus_id": "beiyangyuan",
+      "query": "知园在宿舍资料里吗？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-beiyangyuan-dorm-zhi"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-dorm-zhi"
+      ],
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e29",
+      "campus_id": "beiyangyuan",
+      "query": "北洋园主楼有收录吗？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-beiyangyuan-main-building"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-main-building"
+      ],
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e30",
+      "campus_id": "beiyangyuan",
+      "query": "校训鼎有官方目录依据吗？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "poi-beiyangyuan-motto-ding"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-motto-ding"
+      ],
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e31",
+      "campus_id": "beiyangyuan",
+      "query": "郑东图书馆投入使用时间？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "zhengdong-opened"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-zhengdong-library"
+      ],
+      "source_refs": [
+        "src-library"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e32",
+      "campus_id": "beiyangyuan",
+      "query": "郑东图书馆是谁设计的？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "zhengdong-designer"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-zhengdong-library"
+      ],
+      "source_refs": [
+        "src-library"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e33",
+      "campus_id": "beiyangyuan",
+      "query": "北洋园东门设计者是谁？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "eastgate-designer"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-east-gate"
+      ],
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e34",
+      "campus_id": "beiyangyuan",
+      "query": "东门12块石碑表示什么？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "eastgate-stones"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-east-gate"
+      ],
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e35",
+      "campus_id": "beiyangyuan",
+      "query": "三问桥名字的来源？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "sanwen-origin"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-sanwen-bridge"
+      ],
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e36",
+      "campus_id": "beiyangyuan",
+      "query": "三问桥连接哪里？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "sanwen-connection"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-sanwen-bridge"
+      ],
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e37",
+      "campus_id": "beiyangyuan",
+      "query": "求是大道在校区什么轴线上？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "avenue-axis"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-qiushi-avenue"
+      ],
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e38",
+      "campus_id": "beiyangyuan",
+      "query": "求是大道命名呼应什么？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "avenue-name"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-qiushi-avenue"
+      ],
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e39",
+      "campus_id": "beiyangyuan",
+      "query": "兴学路名称的意义？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "xingxue-origin"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-xingxue-road"
+      ],
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "e40",
+      "campus_id": "beiyangyuan",
+      "query": "郑东图书馆外形结构是什么？",
+      "kind": "evidence",
+      "relevant_fact_ids": [
+        "zhengdong-courtyard"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-zhengdong-library"
+      ],
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "hard_constraints": [
+        "Only answer the stated claim with cited evidence; directory membership does not prove access."
+      ]
+    },
+    {
+      "id": "n1",
+      "campus_id": "weijinlu",
+      "query": "不存在的火星传送塔在哪里？",
+      "kind": "no_evidence",
+      "relevant_fact_ids": [],
+      "split": "development",
+      "expected_entity_ids": [],
+      "source_refs": [],
+      "hard_constraints": [
+        "Return no local factual evidence; explicitly retain unknown."
+      ]
+    },
+    {
+      "id": "n2",
+      "campus_id": "beiyangyuan",
+      "query": "量子跃迁宿舍楼在哪？",
+      "kind": "no_evidence",
+      "relevant_fact_ids": [],
+      "split": "development",
+      "expected_entity_ids": [],
+      "source_refs": [],
+      "hard_constraints": [
+        "Return no local factual evidence; explicitly retain unknown."
+      ]
+    },
+    {
+      "id": "n3",
+      "campus_id": "weijinlu",
+      "query": "今天食堂几点开门？",
+      "kind": "no_evidence",
+      "relevant_fact_ids": [],
+      "split": "development",
+      "expected_entity_ids": [],
+      "source_refs": [],
+      "hard_constraints": [
+        "Return no local factual evidence; explicitly retain unknown."
+      ]
+    },
+    {
+      "id": "n4",
+      "campus_id": "beiyangyuan",
+      "query": "三问桥现在施工吗？",
+      "kind": "no_evidence",
+      "relevant_fact_ids": [],
+      "split": "development",
+      "expected_entity_ids": [],
+      "source_refs": [],
+      "hard_constraints": [
+        "Return no local factual evidence; explicitly retain unknown."
+      ]
+    },
+    {
+      "id": "n5",
+      "campus_id": "weijinlu",
+      "query": "明天校门的门禁安排是什么？",
+      "kind": "no_evidence",
+      "relevant_fact_ids": [],
+      "split": "development",
+      "expected_entity_ids": [],
+      "source_refs": [],
+      "hard_constraints": [
+        "Return no local factual evidence; explicitly retain unknown."
+      ]
+    },
+    {
+      "id": "n6",
+      "campus_id": "beiyangyuan",
+      "query": "郑东馆下周开放时间？",
+      "kind": "no_evidence",
+      "relevant_fact_ids": [],
+      "split": "development",
+      "expected_entity_ids": [],
+      "source_refs": [],
+      "hard_constraints": [
+        "Return no local factual evidence; explicitly retain unknown."
+      ]
+    },
+    {
+      "id": "n7",
+      "campus_id": "weijinlu",
+      "query": "学校有飞船停泊港吗？",
+      "kind": "no_evidence",
+      "relevant_fact_ids": [],
+      "split": "development",
+      "expected_entity_ids": [],
+      "source_refs": [],
+      "hard_constraints": [
+        "Return no local factual evidence; explicitly retain unknown."
+      ]
+    },
+    {
+      "id": "n8",
+      "campus_id": "beiyangyuan",
+      "query": "未公布的夜间泳池营业时间？",
+      "kind": "no_evidence",
+      "relevant_fact_ids": [],
+      "split": "development",
+      "expected_entity_ids": [],
+      "source_refs": [],
+      "hard_constraints": [
+        "Return no local factual evidence; explicitly retain unknown."
+      ]
+    },
+    {
+      "id": "n9",
+      "campus_id": "weijinlu",
+      "query": "图书馆",
+      "kind": "ambiguous",
+      "relevant_fact_ids": [
+        "poi-weijinlu-chunshui-library",
+        "poi-weijinlu-science-library"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-chunshui-library",
+        "weijinlu-science-library"
+      ],
+      "source_refs": [
+        "src-library"
+      ],
+      "hard_constraints": [
+        "Retain every expected candidate; do not silently select one."
+      ]
+    },
+    {
+      "id": "n10",
+      "campus_id": "weijinlu",
+      "query": "食堂",
+      "kind": "ambiguous",
+      "relevant_fact_ids": [
+        "poi-weijinlu-xue-4-dining",
+        "poi-weijinlu-xue-5-dining"
+      ],
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-xue-4-dining",
+        "weijinlu-xue-5-dining"
+      ],
+      "source_refs": [
+        "src-dining-2024"
+      ],
+      "hard_constraints": [
+        "Retain every expected candidate; do not silently select one."
+      ]
+    }
+  ]
+}

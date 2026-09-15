@@ -56,6 +56,7 @@ export class KelaitaAvatarAdapter implements AvatarAdapter {
   private observer?: ResizeObserver;
   private state: AvatarState = 'idle';
   private scale = 0.94;
+  private audioLevel = 0;
   private nextBlinkAt = 0;
   private blinkStartedAt: number | null = null;
   private generation = 0;
@@ -101,10 +102,8 @@ export class KelaitaAvatarAdapter implements AvatarAdapter {
       this.observer = new ResizeObserver(fit);
       this.observer.observe(host);
       fit();
-      app.ticker.add(() => {
-        model.update(app.ticker.deltaMS);
-        this.driveParameters(performance.now());
-      });
+      model.internalModel.on('beforeModelUpdate', () => this.driveParameters(performance.now()));
+      app.ticker.add(() => model.update(app.ticker.deltaMS));
       return { status: 'ready' };
     } catch (error) {
       const code = error instanceof Error && error.message.includes('cubism_core')
@@ -119,6 +118,13 @@ export class KelaitaAvatarAdapter implements AvatarAdapter {
     this.state = state;
   }
 
+  /** Actual playback amplitude only; independent of A's business presentation state. */
+  setAudioLevel(level: number): void {
+    this.audioLevel = Number.isFinite(level) ? Math.max(0, Math.min(1, level)) : 0;
+    const core = this.model?.internalModel.coreModel as unknown as CoreModel | undefined;
+    core?.setParameterValueById('ParamMouthOpenY', this.audioLevel);
+  }
+
   /** Display-only customization supported by the first model. */
   setScale(scale: number): void {
     this.scale = Math.max(0.6, Math.min(1.25, scale));
@@ -127,6 +133,7 @@ export class KelaitaAvatarAdapter implements AvatarAdapter {
   }
 
   dispose(): void {
+    this.setAudioLevel(0);
     this.generation += 1;
     this.observer?.disconnect();
     this.observer = undefined;
@@ -187,7 +194,7 @@ export class KelaitaAvatarAdapter implements AvatarAdapter {
     core.setParameterValueById('ParamBrowLY', browY);
     core.setParameterValueById('ParamBrowRY', browY);
     core.setParameterValueById('ParamBreath', (Math.sin(seconds * 1.9) + 1) / 2);
-    core.setParameterValueById('ParamMouthOpenY', 0);
+    core.setParameterValueById('ParamMouthOpenY', this.audioLevel);
 
     if (this.state === 'error') {
       core.setParameterValueById('ParamEyeLOpen', 0.72);
@@ -211,7 +218,7 @@ export class KelaitaAvatarAdapter implements AvatarAdapter {
   }
 }
 
-export function createAvatarAdapter(): AvatarAdapter {
+export function createAvatarAdapter(): KelaitaAvatarAdapter {
   return new KelaitaAvatarAdapter();
 }
 

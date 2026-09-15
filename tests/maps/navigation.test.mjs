@@ -131,7 +131,7 @@ test('live place matches enable walking for a directory POI without coordinates'
  const nav=new AmapNavigation(config,new MapBudget({limits}),async()=>f.sdk,f.readJson);
  const local={...poi(),name:'Fixture Library',location:null,verification_status:'pending'};
  const [match]=await nav.findDestination(local,'search',sig());
- assert.ok(f.requests[0].searchParams.get('keywords').startsWith('天津大学卫津路校区 '));assert.equal(f.requests[0].searchParams.get('citylimit'),'true');
+ assert.ok(f.requests[0].searchParams.get('keywords').startsWith('天津大学卫津路校区'));assert.equal(f.requests[0].searchParams.get('citylimit'),'true');
  await assert.rejects(nav.walk(request(),local,sig(),{...match}),{code:'destination_match_expired'});
  await assert.rejects(nav.walk({...request(),origin:{...position(),accuracy_m:-1}},local,sig(),match),{code:'location_expired_or_inaccurate'});
  const route=await nav.walk({...request(),origin:{...position(),source:'manual',accuracy_m:null}},local,sig(),match);
@@ -205,4 +205,12 @@ test('ambiguous destinations request selection and resume using the selected liv
 test('an IP with no returned region cannot silently become an invented origin',async()=>{
  const nav=new AmapNavigation(config,new MapBudget({limits}),undefined,async()=>({status:'1',rectangle:[]}));
  await assert.rejects(nav.navigate({...request(),origin:null},poi(),sig()),{code:'city_location_unavailable'});
+});
+
+test('M R3 real museum query avoids duplicated university and campus names',async()=>{
+ const f=fakeSdk();const b=new MapBudget({limits,minIntervalMs:0});
+ const nav=new AmapNavigation(config,b,async()=>f.sdk,f.readJson);
+ const target={...poi(),name:'天津大学校史博物馆',location:null};
+ await nav.findDestination(target,'query-museum',sig());
+ assert.equal(f.requests[0].searchParams.get('keywords'),'天津大学卫津路校区校史博物馆');
 });

@@ -57,7 +57,8 @@
     "category": "library",
     "aliases": [
       "北馆",
-      "春水图书馆"
+      "春水图书馆",
+      "天大北馆"
     ],
     "fact": "校方资料在卫津路校区列有春水图书馆（北馆）。",
     "sources": [
@@ -83,7 +84,8 @@
     "category": "library",
     "aliases": [
       "南馆",
-      "科学图书馆"
+      "科学图书馆",
+      "天大南馆"
     ],
     "fact": "校方资料在卫津路校区列有科学图书馆（南馆）。",
     "sources": [
@@ -297,7 +299,10 @@
     "category": "teaching",
     "aliases": [
       "25教",
-      "曾宪梓楼"
+      "曾宪梓楼",
+      "二十五教",
+      "第25教学楼",
+      "第二十五教学楼"
     ],
     "fact": "校方资料在卫津路校区列有曾宪梓楼（25教）。",
     "sources": [
@@ -4781,5 +4786,1141 @@
     "applicable_at": "2019-04-09",
     "retrieved_at": "2026-09-14",
     "verification_status": "verified"
+  },
+  {
+    "id": "r3-museum-personal",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-history-museum",
+    "title": "校史馆个人参观时段",
+    "category": "service",
+    "aliases": [
+      "校史馆",
+      "几点",
+      "个人",
+      "停止入馆"
+    ],
+    "fact": "【来源规则，当前适用待确认】常设指南：个人周五六14:00-17:00参观，16:00停止入馆，个人无需预约。 适用：常设指南；发布日期未显示；秋季适用待确认。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-museum",
+        "title": "校史博物馆参观指南",
+        "snippet": "常设指南：个人周五六14:00-17:00参观，16:00停止入馆，个人无需预约。",
+        "url": "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+        "campus_id": "weijinlu",
+        "published_at": null,
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "disputed"
+  },
+  {
+    "id": "r3-museum-group",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-history-museum",
+    "title": "校史馆团体参观时段",
+    "category": "service",
+    "aliases": [
+      "校史馆",
+      "团体",
+      "时间"
+    ],
+    "fact": "【来源规则，当前适用待确认】常设指南：团队周二至六9:00-11:30、13:30-16:30；周日一维护，节假日寒暑假不沿用。 适用：常设指南；发布日期未显示；秋季适用待确认。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-museum",
+        "title": "校史博物馆参观指南",
+        "snippet": "常设指南：团队周二至六9:00-11:30、13:30-16:30；周日一维护，节假日寒暑假不沿用。",
+        "url": "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+        "campus_id": "weijinlu",
+        "published_at": null,
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "disputed"
+  },
+  {
+    "id": "r3-museum-booking",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-history-museum",
+    "title": "校史馆团体预约",
+    "category": "service",
+    "aliases": [
+      "校史馆",
+      "团体",
+      "提前多久",
+      "预约"
+    ],
+    "fact": "【来源规则，当前适用待确认】团队至少提前2天，经融合门户、办事大厅的校史博物馆参观预约办理。 适用：常设指南；发布日期未显示；秋季适用待确认。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-museum",
+        "title": "校史博物馆参观指南",
+        "snippet": "团队至少提前2天，经融合门户、办事大厅的校史博物馆参观预约办理。",
+        "url": "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+        "campus_id": "weijinlu",
+        "published_at": null,
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "disputed"
+  },
+  {
+    "id": "r3-museum-id",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-history-museum",
+    "title": "校史馆证件登记",
+    "category": "service",
+    "aliases": [
+      "校史馆",
+      "证件",
+      "个人"
+    ],
+    "fact": "【来源规则，当前适用待确认】个人入馆需有效证件登记；入馆手续不能证明已获进校资格。 适用：常设指南；发布日期未显示；秋季适用待确认。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-museum",
+        "title": "校史博物馆参观指南",
+        "snippet": "个人入馆需有效证件登记；入馆手续不能证明已获进校资格。",
+        "url": "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+        "campus_id": "weijinlu",
+        "published_at": null,
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-museum-late",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-history-museum",
+    "title": "校史馆团队迟到",
+    "category": "service",
+    "aliases": [
+      "校史馆",
+      "团队",
+      "迟到"
+    ],
+    "fact": "【来源规则，当前适用待确认】团队迟到超过半小时不保证讲解；未提前电话告知且超半小时按取消处理。 适用：常设指南；发布日期未显示；秋季适用待确认。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-museum",
+        "title": "校史博物馆参观指南",
+        "snippet": "团队迟到超过半小时不保证讲解；未提前电话告知且超半小时按取消处理。",
+        "url": "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+        "campus_id": "weijinlu",
+        "published_at": null,
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-museum-companion",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-history-museum",
+    "title": "校史馆陪同要求",
+    "category": "service",
+    "aliases": [
+      "校史馆",
+      "行动不便",
+      "老人",
+      "轮椅",
+      "陪同"
+    ],
+    "fact": "【来源规则，当前适用待确认】未成年人由成年人陪同；高龄老人及行动不便者须亲友陪同。 适用：常设指南；发布日期未显示；秋季适用待确认。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-museum",
+        "title": "校史博物馆参观指南",
+        "snippet": "未成年人由成年人陪同；高龄老人及行动不便者须亲友陪同。",
+        "url": "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+        "campus_id": "weijinlu",
+        "published_at": null,
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-museum-food",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-history-museum",
+    "title": "校史馆展厅饮食",
+    "category": "service",
+    "aliases": [
+      "校史馆",
+      "饮料",
+      "饮食"
+    ],
+    "fact": "【来源规则，当前适用待确认】展厅不携带饮料；馆内不得饮食或吸烟。 适用：常设指南；发布日期未显示；秋季适用待确认。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-museum",
+        "title": "校史博物馆参观指南",
+        "snippet": "展厅不携带饮料；馆内不得饮食或吸烟。",
+        "url": "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+        "campus_id": "weijinlu",
+        "published_at": null,
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-museum-photo",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-history-museum",
+    "title": "校史馆摄影",
+    "category": "service",
+    "aliases": [
+      "校史馆",
+      "闪光灯",
+      "拍照"
+    ],
+    "fact": "【来源规则，当前适用待确认】未经许可不得在馆内使用闪光灯拍照或摄像。 适用：常设指南；发布日期未显示；秋季适用待确认。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-museum",
+        "title": "校史博物馆参观指南",
+        "snippet": "未经许可不得在馆内使用闪光灯拍照或摄像。",
+        "url": "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+        "campus_id": "weijinlu",
+        "published_at": null,
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-museum-closure",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-history-museum",
+    "title": "校史馆临时闭馆",
+    "category": "service",
+    "aliases": [
+      "校史馆",
+      "临时闭馆",
+      "重大活动"
+    ],
+    "fact": "【来源规则，当前适用待确认】学校重大活动可能导致临时闭馆；应先核实活动安排。 适用：常设指南；发布日期未显示；秋季适用待确认。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-museum",
+        "title": "校史博物馆参观指南",
+        "snippet": "学校重大活动可能导致临时闭馆；应先核实活动安排。",
+        "url": "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+        "campus_id": "weijinlu",
+        "published_at": null,
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-museum-contact",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-history-museum",
+    "title": "校史馆咨询",
+    "category": "service",
+    "aliases": [
+      "校史馆",
+      "咨询",
+      "雨天",
+      "电话"
+    ],
+    "fact": "【来源规则，当前适用待确认】校史馆咨询电话022-27402305，工作日8:30-16:30；雨天改室内前先询问准入及无障碍设施。 适用：常设指南；发布日期未显示；秋季适用待确认。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-museum",
+        "title": "校史博物馆参观指南",
+        "snippet": "校史馆咨询电话022-27402305，工作日8:30-16:30；雨天改室内前先询问准入及无障碍设施。",
+        "url": "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+        "campus_id": "weijinlu",
+        "published_at": null,
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-library-hours-wj",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-chunshui-library",
+    "title": "图书馆常规开放时段",
+    "category": "service",
+    "aliases": [
+      "图书馆",
+      "北馆",
+      "南馆",
+      "郑东馆",
+      "开放时间",
+      "几点"
+    ],
+    "fact": "【来源规则，当前适用待确认】2024新生指南列双校区周一至日8:00-22:30；法定节假日及寒暑假另行安排。 适用：2024新生及常规学期；法定节假日寒暑假另行安排。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-library-guide",
+        "title": "新生图书馆快速指南",
+        "snippet": "2024新生指南列双校区周一至日8:00-22:30；法定节假日及寒暑假另行安排。",
+        "url": "https://yx.tju.edu.cn/xztd/tsg/",
+        "campus_id": "weijinlu",
+        "published_at": "2024-08-20",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-library-hours-by",
+    "campus_id": "beiyangyuan",
+    "entity_id": "beiyangyuan-zhengdong-library",
+    "title": "图书馆常规开放时段",
+    "category": "service",
+    "aliases": [
+      "图书馆",
+      "北馆",
+      "南馆",
+      "郑东馆",
+      "开放时间",
+      "几点"
+    ],
+    "fact": "【来源规则，当前适用待确认】2024新生指南列双校区周一至日8:00-22:30；法定节假日及寒暑假另行安排。 适用：2024新生及常规学期；法定节假日寒暑假另行安排。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-library-guide",
+        "title": "新生图书馆快速指南",
+        "snippet": "2024新生指南列双校区周一至日8:00-22:30；法定节假日及寒暑假另行安排。",
+        "url": "https://yx.tju.edu.cn/xztd/tsg/",
+        "campus_id": "beiyangyuan",
+        "published_at": "2024-08-20",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-library-entry-wj",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-chunshui-library",
+    "title": "新生图书馆入馆凭证",
+    "category": "service",
+    "aliases": [
+      "图书馆",
+      "新生",
+      "入馆",
+      "校园卡"
+    ],
+    "fact": "【来源规则，当前适用待确认】新生可使用一卡通实卡、电子支付码或自主绑定的人脸识别入馆。 适用：2024新生及常规学期；法定节假日寒暑假另行安排。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-library-guide",
+        "title": "新生图书馆快速指南",
+        "snippet": "新生可使用一卡通实卡、电子支付码或自主绑定的人脸识别入馆。",
+        "url": "https://yx.tju.edu.cn/xztd/tsg/",
+        "campus_id": "weijinlu",
+        "published_at": "2024-08-20",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-library-entry-by",
+    "campus_id": "beiyangyuan",
+    "entity_id": "beiyangyuan-zhengdong-library",
+    "title": "新生图书馆入馆凭证",
+    "category": "service",
+    "aliases": [
+      "图书馆",
+      "新生",
+      "入馆",
+      "校园卡"
+    ],
+    "fact": "【来源规则，当前适用待确认】新生可使用一卡通实卡、电子支付码或自主绑定的人脸识别入馆。 适用：2024新生及常规学期；法定节假日寒暑假另行安排。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-library-guide",
+        "title": "新生图书馆快速指南",
+        "snippet": "新生可使用一卡通实卡、电子支付码或自主绑定的人脸识别入馆。",
+        "url": "https://yx.tju.edu.cn/xztd/tsg/",
+        "campus_id": "beiyangyuan",
+        "published_at": "2024-08-20",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-library-newstudent-wj",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-chunshui-library",
+    "title": "暂无一卡通的新生入馆",
+    "category": "service",
+    "aliases": [
+      "图书馆",
+      "新生",
+      "没有校园卡",
+      "录取通知"
+    ],
+    "fact": "【来源规则，当前适用待确认】暂无一卡通的新生可凭录取报到通知单入馆；不适用于一般社会访客。 适用：2024新生及常规学期；法定节假日寒暑假另行安排。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-library-guide",
+        "title": "新生图书馆快速指南",
+        "snippet": "暂无一卡通的新生可凭录取报到通知单入馆；不适用于一般社会访客。",
+        "url": "https://yx.tju.edu.cn/xztd/tsg/",
+        "campus_id": "weijinlu",
+        "published_at": "2024-08-20",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-library-newstudent-by",
+    "campus_id": "beiyangyuan",
+    "entity_id": "beiyangyuan-zhengdong-library",
+    "title": "暂无一卡通的新生入馆",
+    "category": "service",
+    "aliases": [
+      "图书馆",
+      "新生",
+      "没有校园卡",
+      "录取通知"
+    ],
+    "fact": "【来源规则，当前适用待确认】暂无一卡通的新生可凭录取报到通知单入馆；不适用于一般社会访客。 适用：2024新生及常规学期；法定节假日寒暑假另行安排。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-library-guide",
+        "title": "新生图书馆快速指南",
+        "snippet": "暂无一卡通的新生可凭录取报到通知单入馆；不适用于一般社会访客。",
+        "url": "https://yx.tju.edu.cn/xztd/tsg/",
+        "campus_id": "beiyangyuan",
+        "published_at": "2024-08-20",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-library-account-wj",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-chunshui-library",
+    "title": "新生图书馆账户",
+    "category": "service",
+    "aliases": [
+      "图书馆",
+      "账户",
+      "统一认证"
+    ],
+    "fact": "【来源规则，当前适用待确认】激活学校统一认证后开通图书馆账户，取得图书借还、空间服务权限。 适用：2024新生及常规学期；法定节假日寒暑假另行安排。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-library-guide",
+        "title": "新生图书馆快速指南",
+        "snippet": "激活学校统一认证后开通图书馆账户，取得图书借还、空间服务权限。",
+        "url": "https://yx.tju.edu.cn/xztd/tsg/",
+        "campus_id": "weijinlu",
+        "published_at": "2024-08-20",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-library-account-by",
+    "campus_id": "beiyangyuan",
+    "entity_id": "beiyangyuan-zhengdong-library",
+    "title": "新生图书馆账户",
+    "category": "service",
+    "aliases": [
+      "图书馆",
+      "账户",
+      "统一认证"
+    ],
+    "fact": "【来源规则，当前适用待确认】激活学校统一认证后开通图书馆账户，取得图书借还、空间服务权限。 适用：2024新生及常规学期；法定节假日寒暑假另行安排。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-library-guide",
+        "title": "新生图书馆快速指南",
+        "snippet": "激活学校统一认证后开通图书馆账户，取得图书借还、空间服务权限。",
+        "url": "https://yx.tju.edu.cn/xztd/tsg/",
+        "campus_id": "beiyangyuan",
+        "published_at": "2024-08-20",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-library-seat-wj",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-chunshui-library",
+    "title": "图书馆预约空间",
+    "category": "service",
+    "aliases": [
+      "图书馆",
+      "座位",
+      "休息",
+      "研讨",
+      "预约"
+    ],
+    "fact": "【来源规则，当前适用待确认】部分自习及研讨空间实行预约；新生绑定天圕服务后预约使用。 适用：2024新生及常规学期；法定节假日寒暑假另行安排。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-library-guide",
+        "title": "新生图书馆快速指南",
+        "snippet": "部分自习及研讨空间实行预约；新生绑定天圕服务后预约使用。",
+        "url": "https://yx.tju.edu.cn/xztd/tsg/",
+        "campus_id": "weijinlu",
+        "published_at": "2024-08-20",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-library-seat-by",
+    "campus_id": "beiyangyuan",
+    "entity_id": "beiyangyuan-zhengdong-library",
+    "title": "图书馆预约空间",
+    "category": "service",
+    "aliases": [
+      "图书馆",
+      "座位",
+      "休息",
+      "研讨",
+      "预约"
+    ],
+    "fact": "【来源规则，当前适用待确认】部分自习及研讨空间实行预约；新生绑定天圕服务后预约使用。 适用：2024新生及常规学期；法定节假日寒暑假另行安排。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-library-guide",
+        "title": "新生图书馆快速指南",
+        "snippet": "部分自习及研讨空间实行预约；新生绑定天圕服务后预约使用。",
+        "url": "https://yx.tju.edu.cn/xztd/tsg/",
+        "campus_id": "beiyangyuan",
+        "published_at": "2024-08-20",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-library-food-wj",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-chunshui-library",
+    "title": "图书馆阅览区饮食",
+    "category": "service",
+    "aliases": [
+      "图书馆",
+      "饮料",
+      "奶茶",
+      "饮食"
+    ],
+    "fact": "【来源规则，当前适用待确认】不要把食物、饮料或冲调饮品带入阅览区。 适用：2024新生及常规学期；法定节假日寒暑假另行安排。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-library-guide",
+        "title": "新生图书馆快速指南",
+        "snippet": "不要把食物、饮料或冲调饮品带入阅览区。",
+        "url": "https://yx.tju.edu.cn/xztd/tsg/",
+        "campus_id": "weijinlu",
+        "published_at": "2024-08-20",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-library-food-by",
+    "campus_id": "beiyangyuan",
+    "entity_id": "beiyangyuan-zhengdong-library",
+    "title": "图书馆阅览区饮食",
+    "category": "service",
+    "aliases": [
+      "图书馆",
+      "饮料",
+      "奶茶",
+      "饮食"
+    ],
+    "fact": "【来源规则，当前适用待确认】不要把食物、饮料或冲调饮品带入阅览区。 适用：2024新生及常规学期；法定节假日寒暑假另行安排。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-library-guide",
+        "title": "新生图书馆快速指南",
+        "snippet": "不要把食物、饮料或冲调饮品带入阅览区。",
+        "url": "https://yx.tju.edu.cn/xztd/tsg/",
+        "campus_id": "beiyangyuan",
+        "published_at": "2024-08-20",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-library-notice-wj",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-chunshui-library",
+    "title": "图书馆最新安排查询",
+    "category": "service",
+    "aliases": [
+      "图书馆",
+      "通知",
+      "安排",
+      "查询"
+    ],
+    "fact": "【来源规则，当前适用待确认】通过天津大学图书馆订阅号查看最新资讯；天圕服务绑定后使用各类服务。 适用：2024新生及常规学期；法定节假日寒暑假另行安排。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-library-guide",
+        "title": "新生图书馆快速指南",
+        "snippet": "通过天津大学图书馆订阅号查看最新资讯；天圕服务绑定后使用各类服务。",
+        "url": "https://yx.tju.edu.cn/xztd/tsg/",
+        "campus_id": "weijinlu",
+        "published_at": "2024-08-20",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-library-notice-by",
+    "campus_id": "beiyangyuan",
+    "entity_id": "beiyangyuan-zhengdong-library",
+    "title": "图书馆最新安排查询",
+    "category": "service",
+    "aliases": [
+      "图书馆",
+      "通知",
+      "安排",
+      "查询"
+    ],
+    "fact": "【来源规则，当前适用待确认】通过天津大学图书馆订阅号查看最新资讯；天圕服务绑定后使用各类服务。 适用：2024新生及常规学期；法定节假日寒暑假另行安排。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-library-guide",
+        "title": "新生图书馆快速指南",
+        "snippet": "通过天津大学图书馆订阅号查看最新资讯；天圕服务绑定后使用各类服务。",
+        "url": "https://yx.tju.edu.cn/xztd/tsg/",
+        "campus_id": "beiyangyuan",
+        "published_at": "2024-08-20",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-haitang-student-wj",
+    "campus_id": "weijinlu",
+    "entity_id": null,
+    "title": "2026海棠季中学生免预约条件",
+    "category": "service",
+    "aliases": [
+      "海棠季",
+      "中学生",
+      "免预约",
+      "证件"
+    ],
+    "fact": "【已过适用期】2026海棠季初高中学生出示本人中学生证、陪同家长身份证，可免线上预约。 适用：2026-04-04至2026-04-11。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-haitang-2026",
+        "title": "2026海棠季入校报道",
+        "snippet": "2026海棠季初高中学生出示本人中学生证、陪同家长身份证，可免线上预约。",
+        "url": "https://news.tju.edu.cn/info/1005/590619.htm",
+        "campus_id": "weijinlu",
+        "published_at": "2026-04-01",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2026-04-04至2026-04-11",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "historical"
+  },
+  {
+    "id": "r3-haitang-student-by",
+    "campus_id": "beiyangyuan",
+    "entity_id": null,
+    "title": "2026海棠季中学生免预约条件",
+    "category": "service",
+    "aliases": [
+      "海棠季",
+      "中学生",
+      "免预约",
+      "证件"
+    ],
+    "fact": "【已过适用期】2026海棠季初高中学生出示本人中学生证、陪同家长身份证，可免线上预约。 适用：2026-04-04至2026-04-11。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-haitang-2026",
+        "title": "2026海棠季入校报道",
+        "snippet": "2026海棠季初高中学生出示本人中学生证、陪同家长身份证，可免线上预约。",
+        "url": "https://news.tju.edu.cn/info/1005/590619.htm",
+        "campus_id": "beiyangyuan",
+        "published_at": "2026-04-01",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2026-04-04至2026-04-11",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "historical"
+  },
+  {
+    "id": "r3-haitang-public-wj",
+    "campus_id": "weijinlu",
+    "entity_id": null,
+    "title": "2026海棠季市民预约",
+    "category": "service",
+    "aliases": [
+      "海棠季",
+      "市民",
+      "预约"
+    ],
+    "fact": "【已过适用期】市民通过天大海棠季入校预约系统申请。 适用：2026-04-04至2026-04-11。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-haitang-2026",
+        "title": "2026海棠季入校报道",
+        "snippet": "市民通过天大海棠季入校预约系统申请。",
+        "url": "https://news.tju.edu.cn/info/1005/590619.htm",
+        "campus_id": "weijinlu",
+        "published_at": "2026-04-01",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2026-04-04至2026-04-11",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "historical"
+  },
+  {
+    "id": "r3-haitang-public-by",
+    "campus_id": "beiyangyuan",
+    "entity_id": null,
+    "title": "2026海棠季市民预约",
+    "category": "service",
+    "aliases": [
+      "海棠季",
+      "市民",
+      "预约"
+    ],
+    "fact": "【已过适用期】市民通过天大海棠季入校预约系统申请。 适用：2026-04-04至2026-04-11。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-haitang-2026",
+        "title": "2026海棠季入校报道",
+        "snippet": "市民通过天大海棠季入校预约系统申请。",
+        "url": "https://news.tju.edu.cn/info/1005/590619.htm",
+        "campus_id": "beiyangyuan",
+        "published_at": "2026-04-01",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2026-04-04至2026-04-11",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "historical"
+  },
+  {
+    "id": "r3-haitang-family-wj",
+    "campus_id": "weijinlu",
+    "entity_id": null,
+    "title": "2026海棠季亲友校友入口",
+    "category": "service",
+    "aliases": [
+      "海棠季",
+      "校友",
+      "亲友",
+      "申请"
+    ],
+    "fact": "【已过适用期】在校生及亲友通过学生访客、校友通过校友卡提交入校申请。 适用：2026-04-04至2026-04-11。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-haitang-2026",
+        "title": "2026海棠季入校报道",
+        "snippet": "在校生及亲友通过学生访客、校友通过校友卡提交入校申请。",
+        "url": "https://news.tju.edu.cn/info/1005/590619.htm",
+        "campus_id": "weijinlu",
+        "published_at": "2026-04-01",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2026-04-04至2026-04-11",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "historical"
+  },
+  {
+    "id": "r3-haitang-family-by",
+    "campus_id": "beiyangyuan",
+    "entity_id": null,
+    "title": "2026海棠季亲友校友入口",
+    "category": "service",
+    "aliases": [
+      "海棠季",
+      "校友",
+      "亲友",
+      "申请"
+    ],
+    "fact": "【已过适用期】在校生及亲友通过学生访客、校友通过校友卡提交入校申请。 适用：2026-04-04至2026-04-11。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-haitang-2026",
+        "title": "2026海棠季入校报道",
+        "snippet": "在校生及亲友通过学生访客、校友通过校友卡提交入校申请。",
+        "url": "https://news.tju.edu.cn/info/1005/590619.htm",
+        "campus_id": "beiyangyuan",
+        "published_at": "2026-04-01",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2026-04-04至2026-04-11",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "historical"
+  },
+  {
+    "id": "r3-haitang-transport-wj",
+    "campus_id": "weijinlu",
+    "entity_id": null,
+    "title": "2026海棠季交通提示",
+    "category": "service",
+    "aliases": [
+      "海棠季",
+      "开车",
+      "交通"
+    ],
+    "fact": "【已过适用期】活动建议绿色出行、勿驾车进校并错峰参观。 适用：2026-04-04至2026-04-11。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-haitang-2026",
+        "title": "2026海棠季入校报道",
+        "snippet": "活动建议绿色出行、勿驾车进校并错峰参观。",
+        "url": "https://news.tju.edu.cn/info/1005/590619.htm",
+        "campus_id": "weijinlu",
+        "published_at": "2026-04-01",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2026-04-04至2026-04-11",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "historical"
+  },
+  {
+    "id": "r3-haitang-transport-by",
+    "campus_id": "beiyangyuan",
+    "entity_id": null,
+    "title": "2026海棠季交通提示",
+    "category": "service",
+    "aliases": [
+      "海棠季",
+      "开车",
+      "交通"
+    ],
+    "fact": "【已过适用期】活动建议绿色出行、勿驾车进校并错峰参观。 适用：2026-04-04至2026-04-11。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-haitang-2026",
+        "title": "2026海棠季入校报道",
+        "snippet": "活动建议绿色出行、勿驾车进校并错峰参观。",
+        "url": "https://news.tju.edu.cn/info/1005/590619.htm",
+        "campus_id": "beiyangyuan",
+        "published_at": "2026-04-01",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2026-04-04至2026-04-11",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "historical"
+  },
+  {
+    "id": "r3-dining-halal-wj",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-xue-5-dining",
+    "title": "卫津路清真餐饮线索",
+    "category": "service",
+    "aliases": [
+      "清真",
+      "学五",
+      "餐饮"
+    ],
+    "fact": "【历史资料，现行待确认】2024页面将学五二层列为面向全校学生的清真食堂；先确认当前楼层及游客支付。 适用：2024-08-15食堂页面；2026窗口与游客支付待确认。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-dining-2024",
+        "title": "双校区食堂名称与2024页面时效标记",
+        "snippet": "2024页面将学五二层列为面向全校学生的清真食堂；先确认当前楼层及游客支付。",
+        "url": "https://yx.tju.edu.cn/jztd/ys/201806/t20180602_307309.htm",
+        "campus_id": "weijinlu",
+        "published_at": "2024-08-15",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024-08-15食堂页面；2026窗口与游客支付待确认",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "historical"
+  },
+  {
+    "id": "r3-dining-halal-by",
+    "campus_id": "beiyangyuan",
+    "entity_id": "beiyangyuan-xue-6-dining",
+    "title": "北洋园清真餐饮线索",
+    "category": "service",
+    "aliases": [
+      "清真",
+      "菊园",
+      "餐饮"
+    ],
+    "fact": "【历史资料，现行待确认】2024页面列学六为菊园餐厅、清真食堂；现行营业与访客条件待确认。 适用：2024-08-15食堂页面；2026窗口与游客支付待确认。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-dining-2024",
+        "title": "双校区食堂名称与2024页面时效标记",
+        "snippet": "2024页面列学六为菊园餐厅、清真食堂；现行营业与访客条件待确认。",
+        "url": "https://yx.tju.edu.cn/jztd/ys/201806/t20180602_307309.htm",
+        "campus_id": "beiyangyuan",
+        "published_at": "2024-08-15",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2024-08-15食堂页面；2026窗口与游客支付待确认",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "historical"
+  },
+  {
+    "id": "r3-summer-student-wj",
+    "campus_id": "weijinlu",
+    "entity_id": null,
+    "title": "2026暑期中小学生入校",
+    "category": "service",
+    "aliases": [
+      "暑期",
+      "中小学生",
+      "免预约"
+    ],
+    "fact": "【已过适用期】暑期政策至8月26日：中小学生持学生证或身份证等有效证件，在家长陪同下免预约入校。 适用：原报道2026-07-24即日起至2026-08-26；转载2026-07-25。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-summer-entry",
+        "title": "暑期中小学生免预约入校",
+        "snippet": "暑期政策至8月26日：中小学生持学生证或身份证等有效证件，在家长陪同下免预约入校。",
+        "url": "https://news.tju.edu.cn/info/1005/606499.htm",
+        "campus_id": "weijinlu",
+        "published_at": "2026-07-25",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "原报道2026-07-24即日起至2026-08-26；转载2026-07-25",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "historical"
+  },
+  {
+    "id": "r3-summer-student-by",
+    "campus_id": "beiyangyuan",
+    "entity_id": null,
+    "title": "2026暑期中小学生入校",
+    "category": "service",
+    "aliases": [
+      "暑期",
+      "中小学生",
+      "免预约"
+    ],
+    "fact": "【已过适用期】暑期政策至8月26日：中小学生持学生证或身份证等有效证件，在家长陪同下免预约入校。 适用：原报道2026-07-24即日起至2026-08-26；转载2026-07-25。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-summer-entry",
+        "title": "暑期中小学生免预约入校",
+        "snippet": "暑期政策至8月26日：中小学生持学生证或身份证等有效证件，在家长陪同下免预约入校。",
+        "url": "https://news.tju.edu.cn/info/1005/606499.htm",
+        "campus_id": "beiyangyuan",
+        "published_at": "2026-07-25",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "原报道2026-07-24即日起至2026-08-26；转载2026-07-25",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "historical"
+  },
+  {
+    "id": "r3-museum-summer",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-history-museum",
+    "title": "2026暑期校史馆开放",
+    "category": "service",
+    "aliases": [
+      "校史馆",
+      "暑期",
+      "免预约"
+    ],
+    "fact": "【已过适用期】2026暑期总结记录工作日免预约入馆；新闻报道已收官，不作为秋季开放表。 适用：2026暑期；已结束，起止日未完整列明。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-museum-summer",
+        "title": "校史馆2026暑期开放总结",
+        "snippet": "2026暑期总结记录工作日免预约入馆；新闻报道已收官，不作为秋季开放表。",
+        "url": "https://news.tju.edu.cn/info/1700/610489.htm",
+        "campus_id": "weijinlu",
+        "published_at": "2026-09-07",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2026暑期；已结束，起止日未完整列明",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "historical"
+  },
+  {
+    "id": "r3-driving-august-wj",
+    "campus_id": "weijinlu",
+    "entity_id": null,
+    "title": "2026迎新驾车预约暂停",
+    "category": "service",
+    "aliases": [
+      "迎新",
+      "驾车",
+      "预约"
+    ],
+    "fact": "【已过适用期】就业中心提示用人单位8月25至31日暂停驾车进校预约，改约非机动车方式；不外推为全年限制。 适用：2026-08-25至2026-08-31；用人单位。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-driving-august",
+        "title": "迎新暂停驾车预约提示",
+        "snippet": "就业中心提示用人单位8月25至31日暂停驾车进校预约，改约非机动车方式；不外推为全年限制。",
+        "url": "https://job.tju.edu.cn/news/content/id/2731.html",
+        "campus_id": "weijinlu",
+        "published_at": "2026-08-24",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2026-08-25至2026-08-31；用人单位",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "historical"
+  },
+  {
+    "id": "r3-driving-august-by",
+    "campus_id": "beiyangyuan",
+    "entity_id": null,
+    "title": "2026迎新驾车预约暂停",
+    "category": "service",
+    "aliases": [
+      "迎新",
+      "驾车",
+      "预约"
+    ],
+    "fact": "【已过适用期】就业中心提示用人单位8月25至31日暂停驾车进校预约，改约非机动车方式；不外推为全年限制。 适用：2026-08-25至2026-08-31；用人单位。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-driving-august",
+        "title": "迎新暂停驾车预约提示",
+        "snippet": "就业中心提示用人单位8月25至31日暂停驾车进校预约，改约非机动车方式；不外推为全年限制。",
+        "url": "https://job.tju.edu.cn/news/content/id/2731.html",
+        "campus_id": "beiyangyuan",
+        "published_at": "2026-08-24",
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "2026-08-25至2026-08-31；用人单位",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "historical"
+  },
+  {
+    "id": "r3-venue-contact-wj",
+    "campus_id": "weijinlu",
+    "entity_id": "weijinlu-student-center",
+    "title": "卫津路场馆咨询",
+    "category": "service",
+    "aliases": [
+      "大活",
+      "场馆",
+      "咨询",
+      "电话"
+    ],
+    "fact": "【来源规则，当前适用待确认】卫津路大活咨询27402492、体育馆27402342；开放与访客资格需先询问。 适用：常设联系目录；电话实际接通未核验。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-venue-contact",
+        "title": "场馆中心联系方式",
+        "snippet": "卫津路大活咨询27402492、体育馆27402342；开放与访客资格需先询问。",
+        "url": "https://www.tju.edu.cn/info/1216/1671.htm",
+        "campus_id": "weijinlu",
+        "published_at": null,
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "常设联系目录；电话实际接通未核验",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
+  },
+  {
+    "id": "r3-venue-contact-by",
+    "campus_id": "beiyangyuan",
+    "entity_id": "beiyangyuan-qiushi-hall",
+    "title": "北洋园场馆咨询",
+    "category": "service",
+    "aliases": [
+      "会堂",
+      "体育馆",
+      "场馆",
+      "电话"
+    ],
+    "fact": "【来源规则，当前适用待确认】北洋园会堂咨询27407870、体育馆18522086627；先核实场次及访客资格。 适用：常设联系目录；电话实际接通未核验。现场及当日开放未核验。",
+    "sources": [
+      {
+        "id": "src-r3-venue-contact",
+        "title": "场馆中心联系方式",
+        "snippet": "北洋园会堂咨询27407870、体育馆18522086627；先核实场次及访客资格。",
+        "url": "https://www.tju.edu.cn/info/1216/1671.htm",
+        "campus_id": "beiyangyuan",
+        "published_at": null,
+        "retrieved_at": "2026-09-15"
+      }
+    ],
+    "applicable_at": "常设联系目录；电话实际接通未核验",
+    "retrieved_at": "2026-09-15",
+    "verification_status": "pending"
   }
 ]

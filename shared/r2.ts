@@ -10,7 +10,7 @@ export interface Entrance {id:string;name:string;location:GeoLocation|null;sourc
 export interface POI {id:string;campus_id:CampusId;name:string;aliases:string[];category:POICategory;description:string;source_refs:string[];location:GeoLocation|null;schematic_position:SchematicPosition|null;entrances:Entrance[];verification_status:Verification}
 export interface POIPage {items:POI[];total:number|null;next_cursor:string|null;version:string|null}
 export interface KnowledgeRecord {id:string;campus_id:CampusId;entity_id:string|null;title:string;category:string;aliases:string[];fact:string;sources:Source[];applicable_at:string|null;retrieved_at:string;verification_status:Verification}
-export interface CampusMedia {id:string;campus_id:CampusId;local_path:string;source_url:string;creator:string|null;usage_basis:string;caption:string;focal_point:[number,number];width:number;height:number}
+export interface CampusMedia {id:string;poi_id?:string|null;campus_id:CampusId;local_path:string;source_url:string;creator:string|null;usage_basis:string;caption:string;focal_point:[number,number];width:number;height:number}
 export interface CampusMap {id:string;campus_id:CampusId;local_path:string;kind:'schematic'|'licensed_map';width:number;height:number;source_refs:string[];creator:string;usage_basis:string;version:string;data_as_of:string|null;supports_precise_navigation:false}
 export interface CampusAssets {maps:CampusMap[];media:CampusMedia[];version:string|null}
 export interface ProviderCrosswalk {poi_id:string;provider:'amap';provider_poi_id:string;matched_at:string;match_status:'verified'|'pending';retention_basis:string}
@@ -43,7 +43,7 @@ export interface SpeechController {
  playSegment(run:SpeechRun,text:string,segment_id:string):Promise<AdapterResult>;
  playFull(run:SpeechRun,text:string):Promise<AdapterResult>;
  stop(reason:'user'|'new_request'|'clear'|'campus_change'|'cancel'):Promise<void>;
- replay?():Promise<AdapterResult>; continueRemaining?():Promise<AdapterResult>;
+ replay?(run?:SpeechRun):Promise<AdapterResult>; continueRemaining?(run?:SpeechRun):Promise<AdapterResult>;
  playVerbatimUrl?(run:SpeechRun,text:string,segment_id:string,explicitRequest:boolean):Promise<AdapterResult>;
  pause():Promise<AdapterResult>; resume():Promise<AdapterResult>;
  listVoices():Promise<Voice[]>;

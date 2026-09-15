@@ -1,0 +1,475 @@
+[
+  {
+    "poi_id": "weijinlu-east-gate",
+    "campus_id": "weijinlu",
+    "name_evidence_ids": [
+      "poi-weijinlu-east-gate"
+    ],
+    "service_rule_ids": [],
+    "entrance_status": "pending",
+    "entrance_source_refs": [],
+    "coordinate_status": "pending",
+    "coordinate_source": null,
+    "visitor_access": "pending",
+    "road_source_refs": [
+      "src-maps-2017"
+    ],
+    "road_evidence_kind": "historical_schematic_only",
+    "road_access": "pending",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "pending_items": [
+      "现场拍摄入口及门牌，记录公众入口和开放时段",
+      "由校方或授权地图资料获取坐标、坐标系、精度及许可；不从示意图换算",
+      "向管理方确认访客条件、预约、临时关闭及有效期",
+      "步行核查相邻核心点通行、台阶、坡道、过街与施工",
+      "核查最近公众卫生间、无障碍厕位、可坐休息点及雨天替代"
+    ],
+    "assembled_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_check_note": "沿用R2已核对的名称目录来源日期；R3核对ID关联，未重新逐页核对原名称目录。服务规则另有2026-09-15获取时间。"
+  },
+  {
+    "poi_id": "weijinlu-history-museum",
+    "campus_id": "weijinlu",
+    "name_evidence_ids": [
+      "poi-weijinlu-history-museum"
+    ],
+    "service_rule_ids": [
+      "rule-museum-personal",
+      "rule-museum-group",
+      "rule-museum-booking",
+      "rule-museum-id",
+      "rule-museum-late",
+      "rule-museum-companion",
+      "rule-museum-food",
+      "rule-museum-photo",
+      "rule-museum-closure",
+      "rule-museum-contact",
+      "rule-museum-summer"
+    ],
+    "entrance_status": "pending",
+    "entrance_source_refs": [],
+    "coordinate_status": "pending",
+    "coordinate_source": null,
+    "visitor_access": "pending",
+    "road_source_refs": [
+      "src-maps-2017"
+    ],
+    "road_evidence_kind": "historical_schematic_only",
+    "road_access": "pending",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "pending_items": [
+      "现场拍摄入口及门牌，记录公众入口和开放时段",
+      "由校方或授权地图资料获取坐标、坐标系、精度及许可；不从示意图换算",
+      "向管理方确认访客条件、预约、临时关闭及有效期",
+      "步行核查相邻核心点通行、台阶、坡道、过街与施工",
+      "核查最近公众卫生间、无障碍厕位、可坐休息点及雨天替代"
+    ],
+    "assembled_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_check_note": "沿用R2已核对的名称目录来源日期；R3核对ID关联，未重新逐页核对原名称目录。服务规则另有2026-09-15获取时间。"
+  },
+  {
+    "poi_id": "weijinlu-chunshui-library",
+    "campus_id": "weijinlu",
+    "name_evidence_ids": [
+      "poi-weijinlu-chunshui-library"
+    ],
+    "service_rule_ids": [
+      "rule-library-hours",
+      "rule-library-entry",
+      "rule-library-newstudent",
+      "rule-library-account",
+      "rule-library-seat",
+      "rule-library-food",
+      "rule-library-notice"
+    ],
+    "entrance_status": "pending",
+    "entrance_source_refs": [],
+    "coordinate_status": "pending",
+    "coordinate_source": null,
+    "visitor_access": "pending",
+    "road_source_refs": [
+      "src-maps-2017"
+    ],
+    "road_evidence_kind": "historical_schematic_only",
+    "road_access": "pending",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "pending_items": [
+      "现场拍摄入口及门牌，记录公众入口和开放时段",
+      "由校方或授权地图资料获取坐标、坐标系、精度及许可；不从示意图换算",
+      "向管理方确认访客条件、预约、临时关闭及有效期",
+      "步行核查相邻核心点通行、台阶、坡道、过街与施工",
+      "核查最近公众卫生间、无障碍厕位、可坐休息点及雨天替代"
+    ],
+    "assembled_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_check_note": "沿用R2已核对的名称目录来源日期；R3核对ID关联，未重新逐页核对原名称目录。服务规则另有2026-09-15获取时间。"
+  },
+  {
+    "poi_id": "weijinlu-science-library",
+    "campus_id": "weijinlu",
+    "name_evidence_ids": [
+      "poi-weijinlu-science-library"
+    ],
+    "service_rule_ids": [
+      "rule-library-hours",
+      "rule-library-entry",
+      "rule-library-newstudent",
+      "rule-library-account",
+      "rule-library-seat",
+      "rule-library-food",
+      "rule-library-notice"
+    ],
+    "entrance_status": "pending",
+    "entrance_source_refs": [],
+    "coordinate_status": "pending",
+    "coordinate_source": null,
+    "visitor_access": "pending",
+    "road_source_refs": [
+      "src-maps-2017"
+    ],
+    "road_evidence_kind": "historical_schematic_only",
+    "road_access": "pending",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "pending_items": [
+      "现场拍摄入口及门牌，记录公众入口和开放时段",
+      "由校方或授权地图资料获取坐标、坐标系、精度及许可；不从示意图换算",
+      "向管理方确认访客条件、预约、临时关闭及有效期",
+      "步行核查相邻核心点通行、台阶、坡道、过街与施工",
+      "核查最近公众卫生间、无障碍厕位、可坐休息点及雨天替代"
+    ],
+    "assembled_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_check_note": "沿用R2已核对的名称目录来源日期；R3核对ID关联，未重新逐页核对原名称目录。服务规则另有2026-09-15获取时间。"
+  },
+  {
+    "poi_id": "weijinlu-09-teaching",
+    "campus_id": "weijinlu",
+    "name_evidence_ids": [
+      "poi-weijinlu-09-teaching"
+    ],
+    "service_rule_ids": [],
+    "entrance_status": "pending",
+    "entrance_source_refs": [],
+    "coordinate_status": "pending",
+    "coordinate_source": null,
+    "visitor_access": "pending",
+    "road_source_refs": [
+      "src-maps-2017"
+    ],
+    "road_evidence_kind": "historical_schematic_only",
+    "road_access": "pending",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "pending_items": [
+      "现场拍摄入口及门牌，记录公众入口和开放时段",
+      "由校方或授权地图资料获取坐标、坐标系、精度及许可；不从示意图换算",
+      "向管理方确认访客条件、预约、临时关闭及有效期",
+      "步行核查相邻核心点通行、台阶、坡道、过街与施工",
+      "核查最近公众卫生间、无障碍厕位、可坐休息点及雨天替代"
+    ],
+    "assembled_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_check_note": "沿用R2已核对的名称目录来源日期；R3核对ID关联，未重新逐页核对原名称目录。服务规则另有2026-09-15获取时间。"
+  },
+  {
+    "poi_id": "weijinlu-25-teaching",
+    "campus_id": "weijinlu",
+    "name_evidence_ids": [
+      "poi-weijinlu-25-teaching"
+    ],
+    "service_rule_ids": [],
+    "entrance_status": "pending",
+    "entrance_source_refs": [],
+    "coordinate_status": "pending",
+    "coordinate_source": null,
+    "visitor_access": "pending",
+    "road_source_refs": [
+      "src-maps-2017"
+    ],
+    "road_evidence_kind": "historical_schematic_only",
+    "road_access": "pending",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "pending_items": [
+      "现场拍摄入口及门牌，记录公众入口和开放时段",
+      "由校方或授权地图资料获取坐标、坐标系、精度及许可；不从示意图换算",
+      "向管理方确认访客条件、预约、临时关闭及有效期",
+      "步行核查相邻核心点通行、台阶、坡道、过街与施工",
+      "核查最近公众卫生间、无障碍厕位、可坐休息点及雨天替代"
+    ],
+    "assembled_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_check_note": "沿用R2已核对的名称目录来源日期；R3核对ID关联，未重新逐页核对原名称目录。服务规则另有2026-09-15获取时间。"
+  },
+  {
+    "poi_id": "weijinlu-xue-4-dining",
+    "campus_id": "weijinlu",
+    "name_evidence_ids": [
+      "poi-weijinlu-xue-4-dining"
+    ],
+    "service_rule_ids": [],
+    "entrance_status": "pending",
+    "entrance_source_refs": [],
+    "coordinate_status": "pending",
+    "coordinate_source": null,
+    "visitor_access": "pending",
+    "road_source_refs": [
+      "src-maps-2017"
+    ],
+    "road_evidence_kind": "historical_schematic_only",
+    "road_access": "pending",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "pending_items": [
+      "现场拍摄入口及门牌，记录公众入口和开放时段",
+      "由校方或授权地图资料获取坐标、坐标系、精度及许可；不从示意图换算",
+      "向管理方确认访客条件、预约、临时关闭及有效期",
+      "步行核查相邻核心点通行、台阶、坡道、过街与施工",
+      "核查最近公众卫生间、无障碍厕位、可坐休息点及雨天替代"
+    ],
+    "assembled_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_check_note": "沿用R2已核对的名称目录来源日期；R3核对ID关联，未重新逐页核对原名称目录。服务规则另有2026-09-15获取时间。"
+  },
+  {
+    "poi_id": "weijinlu-youth-lake",
+    "campus_id": "weijinlu",
+    "name_evidence_ids": [
+      "poi-weijinlu-youth-lake"
+    ],
+    "service_rule_ids": [],
+    "entrance_status": "pending",
+    "entrance_source_refs": [],
+    "coordinate_status": "pending",
+    "coordinate_source": null,
+    "visitor_access": "pending",
+    "road_source_refs": [
+      "src-maps-2017"
+    ],
+    "road_evidence_kind": "historical_schematic_only",
+    "road_access": "pending",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "pending_items": [
+      "现场拍摄入口及门牌，记录公众入口和开放时段",
+      "由校方或授权地图资料获取坐标、坐标系、精度及许可；不从示意图换算",
+      "向管理方确认访客条件、预约、临时关闭及有效期",
+      "步行核查相邻核心点通行、台阶、坡道、过街与施工",
+      "核查最近公众卫生间、无障碍厕位、可坐休息点及雨天替代"
+    ],
+    "assembled_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_check_note": "沿用R2已核对的名称目录来源日期；R3核对ID关联，未重新逐页核对原名称目录。服务规则另有2026-09-15获取时间。"
+  },
+  {
+    "poi_id": "beiyangyuan-east-gate",
+    "campus_id": "beiyangyuan",
+    "name_evidence_ids": [
+      "poi-beiyangyuan-east-gate"
+    ],
+    "service_rule_ids": [],
+    "entrance_status": "pending",
+    "entrance_source_refs": [],
+    "coordinate_status": "pending",
+    "coordinate_source": null,
+    "visitor_access": "pending",
+    "road_source_refs": [
+      "src-maps-2017"
+    ],
+    "road_evidence_kind": "historical_schematic_only",
+    "road_access": "pending",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "pending_items": [
+      "现场拍摄入口及门牌，记录公众入口和开放时段",
+      "由校方或授权地图资料获取坐标、坐标系、精度及许可；不从示意图换算",
+      "向管理方确认访客条件、预约、临时关闭及有效期",
+      "步行核查相邻核心点通行、台阶、坡道、过街与施工",
+      "核查最近公众卫生间、无障碍厕位、可坐休息点及雨天替代"
+    ],
+    "assembled_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_check_note": "沿用R2已核对的名称目录来源日期；R3核对ID关联，未重新逐页核对原名称目录。服务规则另有2026-09-15获取时间。"
+  },
+  {
+    "poi_id": "beiyangyuan-qiushi-avenue",
+    "campus_id": "beiyangyuan",
+    "name_evidence_ids": [
+      "poi-beiyangyuan-qiushi-avenue"
+    ],
+    "service_rule_ids": [],
+    "entrance_status": "pending",
+    "entrance_source_refs": [],
+    "coordinate_status": "pending",
+    "coordinate_source": null,
+    "visitor_access": "pending",
+    "road_source_refs": [
+      "src-maps-2017"
+    ],
+    "road_evidence_kind": "historical_schematic_only",
+    "road_access": "pending",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "pending_items": [
+      "现场拍摄入口及门牌，记录公众入口和开放时段",
+      "由校方或授权地图资料获取坐标、坐标系、精度及许可；不从示意图换算",
+      "向管理方确认访客条件、预约、临时关闭及有效期",
+      "步行核查相邻核心点通行、台阶、坡道、过街与施工",
+      "核查最近公众卫生间、无障碍厕位、可坐休息点及雨天替代"
+    ],
+    "assembled_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_check_note": "沿用R2已核对的名称目录来源日期；R3核对ID关联，未重新逐页核对原名称目录。服务规则另有2026-09-15获取时间。"
+  },
+  {
+    "poi_id": "beiyangyuan-sanwen-bridge",
+    "campus_id": "beiyangyuan",
+    "name_evidence_ids": [
+      "poi-beiyangyuan-sanwen-bridge"
+    ],
+    "service_rule_ids": [],
+    "entrance_status": "pending",
+    "entrance_source_refs": [],
+    "coordinate_status": "pending",
+    "coordinate_source": null,
+    "visitor_access": "pending",
+    "road_source_refs": [
+      "src-maps-2017"
+    ],
+    "road_evidence_kind": "historical_schematic_only",
+    "road_access": "pending",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "pending_items": [
+      "现场拍摄入口及门牌，记录公众入口和开放时段",
+      "由校方或授权地图资料获取坐标、坐标系、精度及许可；不从示意图换算",
+      "向管理方确认访客条件、预约、临时关闭及有效期",
+      "步行核查相邻核心点通行、台阶、坡道、过街与施工",
+      "核查最近公众卫生间、无障碍厕位、可坐休息点及雨天替代"
+    ],
+    "assembled_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_check_note": "沿用R2已核对的名称目录来源日期；R3核对ID关联，未重新逐页核对原名称目录。服务规则另有2026-09-15获取时间。"
+  },
+  {
+    "poi_id": "beiyangyuan-zhengdong-library",
+    "campus_id": "beiyangyuan",
+    "name_evidence_ids": [
+      "poi-beiyangyuan-zhengdong-library"
+    ],
+    "service_rule_ids": [
+      "rule-library-hours",
+      "rule-library-entry",
+      "rule-library-newstudent",
+      "rule-library-account",
+      "rule-library-seat",
+      "rule-library-food",
+      "rule-library-notice"
+    ],
+    "entrance_status": "pending",
+    "entrance_source_refs": [],
+    "coordinate_status": "pending",
+    "coordinate_source": null,
+    "visitor_access": "pending",
+    "road_source_refs": [
+      "src-maps-2017"
+    ],
+    "road_evidence_kind": "historical_schematic_only",
+    "road_access": "pending",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "pending_items": [
+      "现场拍摄入口及门牌，记录公众入口和开放时段",
+      "由校方或授权地图资料获取坐标、坐标系、精度及许可；不从示意图换算",
+      "向管理方确认访客条件、预约、临时关闭及有效期",
+      "步行核查相邻核心点通行、台阶、坡道、过街与施工",
+      "核查最近公众卫生间、无障碍厕位、可坐休息点及雨天替代"
+    ],
+    "assembled_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_check_note": "沿用R2已核对的名称目录来源日期；R3核对ID关联，未重新逐页核对原名称目录。服务规则另有2026-09-15获取时间。"
+  },
+  {
+    "poi_id": "beiyangyuan-xue-3-dining",
+    "campus_id": "beiyangyuan",
+    "name_evidence_ids": [
+      "poi-beiyangyuan-xue-3-dining"
+    ],
+    "service_rule_ids": [],
+    "entrance_status": "pending",
+    "entrance_source_refs": [],
+    "coordinate_status": "pending",
+    "coordinate_source": null,
+    "visitor_access": "pending",
+    "road_source_refs": [
+      "src-maps-2017",
+      "src-dining-2024"
+    ],
+    "road_evidence_kind": "historical_schematic_and_2024_relative_road_description",
+    "road_access": "pending",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "pending_items": [
+      "现场拍摄入口及门牌，记录公众入口和开放时段",
+      "由校方或授权地图资料获取坐标、坐标系、精度及许可；不从示意图换算",
+      "向管理方确认访客条件、预约、临时关闭及有效期",
+      "步行核查相邻核心点通行、台阶、坡道、过街与施工",
+      "核查最近公众卫生间、无障碍厕位、可坐休息点及雨天替代"
+    ],
+    "assembled_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_check_note": "沿用R2已核对的名称目录来源日期；R3核对ID关联，未重新逐页核对原名称目录。服务规则另有2026-09-15获取时间。",
+    "road_note": "2024页面记述学三与学五在双台中路和新元中路中间南北两侧、郑东馆与学生中心在东西两侧；仅相对位置，不证明当前路网可走。"
+  },
+  {
+    "poi_id": "beiyangyuan-datong-center",
+    "campus_id": "beiyangyuan",
+    "name_evidence_ids": [
+      "poi-beiyangyuan-datong-center"
+    ],
+    "service_rule_ids": [],
+    "entrance_status": "pending",
+    "entrance_source_refs": [],
+    "coordinate_status": "pending",
+    "coordinate_source": null,
+    "visitor_access": "pending",
+    "road_source_refs": [
+      "src-maps-2017"
+    ],
+    "road_evidence_kind": "historical_schematic_only",
+    "road_access": "pending",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "pending_items": [
+      "现场拍摄入口及门牌，记录公众入口和开放时段",
+      "由校方或授权地图资料获取坐标、坐标系、精度及许可；不从示意图换算",
+      "向管理方确认访客条件、预约、临时关闭及有效期",
+      "步行核查相邻核心点通行、台阶、坡道、过街与施工",
+      "核查最近公众卫生间、无障碍厕位、可坐休息点及雨天替代"
+    ],
+    "assembled_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_check_note": "沿用R2已核对的名称目录来源日期；R3核对ID关联，未重新逐页核对原名称目录。服务规则另有2026-09-15获取时间。"
+  },
+  {
+    "poi_id": "beiyangyuan-haitang-bank",
+    "campus_id": "beiyangyuan",
+    "name_evidence_ids": [
+      "poi-beiyangyuan-haitang-bank"
+    ],
+    "service_rule_ids": [],
+    "entrance_status": "pending",
+    "entrance_source_refs": [],
+    "coordinate_status": "pending",
+    "coordinate_source": null,
+    "visitor_access": "pending",
+    "road_source_refs": [
+      "src-maps-2017"
+    ],
+    "road_evidence_kind": "historical_schematic_only",
+    "road_access": "pending",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "pending_items": [
+      "现场拍摄入口及门牌，记录公众入口和开放时段",
+      "由校方或授权地图资料获取坐标、坐标系、精度及许可；不从示意图换算",
+      "向管理方确认访客条件、预约、临时关闭及有效期",
+      "步行核查相邻核心点通行、台阶、坡道、过街与施工",
+      "核查最近公众卫生间、无障碍厕位、可坐休息点及雨天替代"
+    ],
+    "assembled_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_check_note": "沿用R2已核对的名称目录来源日期；R3核对ID关联，未重新逐页核对原名称目录。服务规则另有2026-09-15获取时间。"
+  }
+]

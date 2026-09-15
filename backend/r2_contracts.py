@@ -73,6 +73,7 @@ class KnowledgeRecord(Strict):
     retrieved_at: str
     verification_status: Verification
 class CampusMedia(Strict):
+    poi_id: Id | None = None
     id: Id
     campus_id: CampusId
     local_path: str

@@ -1,0 +1,4648 @@
+[
+  {
+    "fact_id": "r3-museum-personal",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [
+      "conflict-museum-calendar"
+    ],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-museum-personal"
+  },
+  {
+    "fact_id": "r3-museum-group",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [
+      "conflict-museum-calendar"
+    ],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-museum-group"
+  },
+  {
+    "fact_id": "r3-museum-booking",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [
+      "conflict-museum-calendar"
+    ],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-museum-booking"
+  },
+  {
+    "fact_id": "r3-museum-id",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-museum-id"
+  },
+  {
+    "fact_id": "r3-museum-late",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-museum-late"
+  },
+  {
+    "fact_id": "r3-museum-companion",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-museum-companion"
+  },
+  {
+    "fact_id": "r3-museum-food",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-museum-food"
+  },
+  {
+    "fact_id": "r3-museum-photo",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-museum-photo"
+  },
+  {
+    "fact_id": "r3-museum-closure",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-museum-closure"
+  },
+  {
+    "fact_id": "r3-museum-contact",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-museum-contact"
+  },
+  {
+    "fact_id": "r3-library-hours-wj",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "entity_ids": [
+      "weijinlu-chunshui-library",
+      "weijinlu-science-library"
+    ],
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "service_rule_id": "rule-library-hours"
+  },
+  {
+    "fact_id": "r3-library-hours-by",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library"
+    ],
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "service_rule_id": "rule-library-hours"
+  },
+  {
+    "fact_id": "r3-library-entry-wj",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "entity_ids": [
+      "weijinlu-chunshui-library",
+      "weijinlu-science-library"
+    ],
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "service_rule_id": "rule-library-entry"
+  },
+  {
+    "fact_id": "r3-library-entry-by",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library"
+    ],
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "service_rule_id": "rule-library-entry"
+  },
+  {
+    "fact_id": "r3-library-newstudent-wj",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "entity_ids": [
+      "weijinlu-chunshui-library",
+      "weijinlu-science-library"
+    ],
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "service_rule_id": "rule-library-newstudent"
+  },
+  {
+    "fact_id": "r3-library-newstudent-by",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library"
+    ],
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "service_rule_id": "rule-library-newstudent"
+  },
+  {
+    "fact_id": "r3-library-account-wj",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "entity_ids": [
+      "weijinlu-chunshui-library",
+      "weijinlu-science-library"
+    ],
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "service_rule_id": "rule-library-account"
+  },
+  {
+    "fact_id": "r3-library-account-by",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library"
+    ],
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "service_rule_id": "rule-library-account"
+  },
+  {
+    "fact_id": "r3-library-seat-wj",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "entity_ids": [
+      "weijinlu-chunshui-library",
+      "weijinlu-science-library"
+    ],
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "service_rule_id": "rule-library-seat"
+  },
+  {
+    "fact_id": "r3-library-seat-by",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library"
+    ],
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "service_rule_id": "rule-library-seat"
+  },
+  {
+    "fact_id": "r3-library-food-wj",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "entity_ids": [
+      "weijinlu-chunshui-library",
+      "weijinlu-science-library"
+    ],
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "service_rule_id": "rule-library-food"
+  },
+  {
+    "fact_id": "r3-library-food-by",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library"
+    ],
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "service_rule_id": "rule-library-food"
+  },
+  {
+    "fact_id": "r3-library-notice-wj",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "entity_ids": [
+      "weijinlu-chunshui-library",
+      "weijinlu-science-library"
+    ],
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "service_rule_id": "rule-library-notice"
+  },
+  {
+    "fact_id": "r3-library-notice-by",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library"
+    ],
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "service_rule_id": "rule-library-notice"
+  },
+  {
+    "fact_id": "r3-haitang-student-wj",
+    "claim_type": "historical_rule",
+    "source_refs": [
+      "src-r3-haitang-2026"
+    ],
+    "entity_ids": [],
+    "published_at": "2026-04-01",
+    "applicable_at": "2026-04-04至2026-04-11",
+    "valid_from": "2026-04-04",
+    "valid_until": "2026-04-11",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-haitang-student"
+  },
+  {
+    "fact_id": "r3-haitang-student-by",
+    "claim_type": "historical_rule",
+    "source_refs": [
+      "src-r3-haitang-2026"
+    ],
+    "entity_ids": [],
+    "published_at": "2026-04-01",
+    "applicable_at": "2026-04-04至2026-04-11",
+    "valid_from": "2026-04-04",
+    "valid_until": "2026-04-11",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-haitang-student"
+  },
+  {
+    "fact_id": "r3-haitang-public-wj",
+    "claim_type": "historical_rule",
+    "source_refs": [
+      "src-r3-haitang-2026"
+    ],
+    "entity_ids": [],
+    "published_at": "2026-04-01",
+    "applicable_at": "2026-04-04至2026-04-11",
+    "valid_from": "2026-04-04",
+    "valid_until": "2026-04-11",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-haitang-public"
+  },
+  {
+    "fact_id": "r3-haitang-public-by",
+    "claim_type": "historical_rule",
+    "source_refs": [
+      "src-r3-haitang-2026"
+    ],
+    "entity_ids": [],
+    "published_at": "2026-04-01",
+    "applicable_at": "2026-04-04至2026-04-11",
+    "valid_from": "2026-04-04",
+    "valid_until": "2026-04-11",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-haitang-public"
+  },
+  {
+    "fact_id": "r3-haitang-family-wj",
+    "claim_type": "historical_rule",
+    "source_refs": [
+      "src-r3-haitang-2026"
+    ],
+    "entity_ids": [],
+    "published_at": "2026-04-01",
+    "applicable_at": "2026-04-04至2026-04-11",
+    "valid_from": "2026-04-04",
+    "valid_until": "2026-04-11",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-haitang-family"
+  },
+  {
+    "fact_id": "r3-haitang-family-by",
+    "claim_type": "historical_rule",
+    "source_refs": [
+      "src-r3-haitang-2026"
+    ],
+    "entity_ids": [],
+    "published_at": "2026-04-01",
+    "applicable_at": "2026-04-04至2026-04-11",
+    "valid_from": "2026-04-04",
+    "valid_until": "2026-04-11",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-haitang-family"
+  },
+  {
+    "fact_id": "r3-haitang-transport-wj",
+    "claim_type": "historical_rule",
+    "source_refs": [
+      "src-r3-haitang-2026"
+    ],
+    "entity_ids": [],
+    "published_at": "2026-04-01",
+    "applicable_at": "2026-04-04至2026-04-11",
+    "valid_from": "2026-04-04",
+    "valid_until": "2026-04-11",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-haitang-transport"
+  },
+  {
+    "fact_id": "r3-haitang-transport-by",
+    "claim_type": "historical_rule",
+    "source_refs": [
+      "src-r3-haitang-2026"
+    ],
+    "entity_ids": [],
+    "published_at": "2026-04-01",
+    "applicable_at": "2026-04-04至2026-04-11",
+    "valid_from": "2026-04-04",
+    "valid_until": "2026-04-11",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-haitang-transport"
+  },
+  {
+    "fact_id": "r3-dining-halal-wj",
+    "claim_type": "historical_rule",
+    "source_refs": [
+      "src-dining-2024"
+    ],
+    "entity_ids": [
+      "weijinlu-xue-5-dining"
+    ],
+    "published_at": "2024-08-15",
+    "applicable_at": "2024-08-15食堂页面；2026窗口与游客支付待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "全校学生；游客条件pending",
+    "service_rule_id": "rule-dining-halal-wj"
+  },
+  {
+    "fact_id": "r3-dining-halal-by",
+    "claim_type": "historical_rule",
+    "source_refs": [
+      "src-dining-2024"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xue-6-dining"
+    ],
+    "published_at": "2024-08-15",
+    "applicable_at": "2024-08-15食堂页面；2026窗口与游客支付待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-dining-halal-by"
+  },
+  {
+    "fact_id": "r3-summer-student-wj",
+    "claim_type": "historical_rule",
+    "source_refs": [
+      "src-r3-summer-entry"
+    ],
+    "entity_ids": [],
+    "published_at": "2026-07-25",
+    "applicable_at": "原报道2026-07-24即日起至2026-08-26；转载2026-07-25",
+    "valid_from": "2026-07-24",
+    "valid_until": "2026-08-26",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-summer-student"
+  },
+  {
+    "fact_id": "r3-summer-student-by",
+    "claim_type": "historical_rule",
+    "source_refs": [
+      "src-r3-summer-entry"
+    ],
+    "entity_ids": [],
+    "published_at": "2026-07-25",
+    "applicable_at": "原报道2026-07-24即日起至2026-08-26；转载2026-07-25",
+    "valid_from": "2026-07-24",
+    "valid_until": "2026-08-26",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-summer-student"
+  },
+  {
+    "fact_id": "r3-museum-summer",
+    "claim_type": "historical_rule",
+    "source_refs": [
+      "src-r3-museum-summer"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "published_at": "2026-09-07",
+    "applicable_at": "2026暑期；已结束，起止日未完整列明",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": [
+      "conflict-museum-calendar"
+    ],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-museum-summer"
+  },
+  {
+    "fact_id": "r3-driving-august-wj",
+    "claim_type": "historical_rule",
+    "source_refs": [
+      "src-r3-driving-august"
+    ],
+    "entity_ids": [],
+    "published_at": "2026-08-24",
+    "applicable_at": "2026-08-25至2026-08-31；用人单位",
+    "valid_from": "2026-08-25",
+    "valid_until": "2026-08-31",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": [],
+    "audience": "用人单位",
+    "service_rule_id": "rule-driving-august"
+  },
+  {
+    "fact_id": "r3-driving-august-by",
+    "claim_type": "historical_rule",
+    "source_refs": [
+      "src-r3-driving-august"
+    ],
+    "entity_ids": [],
+    "published_at": "2026-08-24",
+    "applicable_at": "2026-08-25至2026-08-31；用人单位",
+    "valid_from": "2026-08-25",
+    "valid_until": "2026-08-31",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": [],
+    "audience": "用人单位",
+    "service_rule_id": "rule-driving-august"
+  },
+  {
+    "fact_id": "r3-venue-contact-wj",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-venue-contact"
+    ],
+    "entity_ids": [
+      "weijinlu-student-center",
+      "weijinlu-gym"
+    ],
+    "published_at": null,
+    "applicable_at": "常设联系目录；电话实际接通未核验",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-venue-contact-wj"
+  },
+  {
+    "fact_id": "r3-venue-contact-by",
+    "claim_type": "published_rule",
+    "source_refs": [
+      "src-r3-venue-contact"
+    ],
+    "entity_ids": [
+      "beiyangyuan-qiushi-hall",
+      "beiyangyuan-gym"
+    ],
+    "published_at": null,
+    "applicable_at": "常设联系目录；电话实际接通未核验",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [],
+    "audience": "按来源指定身份",
+    "service_rule_id": "rule-venue-contact-by"
+  },
+  {
+    "fact_id": "poi-weijinlu-09-teaching",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-09-teaching"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-history-museum",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-chunshui-library",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-library"
+    ],
+    "entity_ids": [
+      "weijinlu-chunshui-library"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": [],
+    "alias_note": "R3检索表达归一：天大前缀及阿拉伯数字/中文数字教学楼称呼；不是新增正式名称或历史名称断言。"
+  },
+  {
+    "fact_id": "poi-weijinlu-science-library",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-library"
+    ],
+    "entity_ids": [
+      "weijinlu-science-library"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": [],
+    "alias_note": "R3检索表达归一：天大前缀及阿拉伯数字/中文数字教学楼称呼；不是新增正式名称或历史名称断言。"
+  },
+  {
+    "fact_id": "poi-weijinlu-student-center",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-venues"
+    ],
+    "entity_ids": [
+      "weijinlu-student-center"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-old-gym",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-old-gym"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-stadium",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-venues"
+    ],
+    "entity_ids": [
+      "weijinlu-stadium"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-gym",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-venues"
+    ],
+    "entity_ids": [
+      "weijinlu-gym"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-swimming",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-venues"
+    ],
+    "entity_ids": [
+      "weijinlu-swimming"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-water-building",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-water-building"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-wang-xuezhong",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-wang-xuezhong"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-feng-jicai",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-feng-jicai"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-25-teaching",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-25-teaching"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": [],
+    "alias_note": "R3检索表达归一：天大前缀及阿拉伯数字/中文数字教学楼称呼；不是新增正式名称或历史名称断言。"
+  },
+  {
+    "fact_id": "poi-weijinlu-alumni-home",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-alumni-home"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-east-gate",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-east-gate"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-east-gate-square",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-east-gate-square"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-dream-stone",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-dream-stone"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-beiyang-pavilion",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-beiyang-pavilion"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-qin-exam",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-qin-exam"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-school-song",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-school-song"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-beiyang-square",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-beiyang-square"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-qiushi-pavilion",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-qiushi-pavilion"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-haitang",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-haitang"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-newton-tree",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-newton-tree"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-jingye-stone",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-jingye-stone"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-tiangong-stone",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-tiangong-stone"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-suyuan-stone",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-suyuan-stone"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-jingye-lake",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-jingye-lake"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-youth-lake",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-youth-lake"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-aiwan-lake",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-aiwan-lake"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-youyi-lake",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-youyi-lake"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-xiliang-garden",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-xiliang-garden"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-double-pavilions",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-double-pavilions"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-xue-4-dining",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-dining-2024"
+    ],
+    "entity_ids": [
+      "weijinlu-xue-4-dining"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-xue-5-dining",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-dining-2024"
+    ],
+    "entity_ids": [
+      "weijinlu-xue-5-dining"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-liuyuan-dining",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-dining-2024"
+    ],
+    "entity_ids": [
+      "weijinlu-liuyuan-dining"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-zhang-tailei",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-zhang-tailei"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-sheng-xuanhuai",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-sheng-xuanhuai"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-ma-yinchu",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-ma-yinchu"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-li-shusen",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-li-shusen"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-xu-zhong",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-xu-zhong"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-lu-sheng",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-lu-sheng"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-shen-yulin",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-shen-yulin"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-liu-bao",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-liu-bao"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-main-building",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-main-building"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-qiushi-hall",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-venues"
+    ],
+    "entity_ids": [
+      "beiyangyuan-qiushi-hall"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-jufang-guiyuan",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-jufang-guiyuan"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-datong-center",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-venues"
+    ],
+    "entity_ids": [
+      "beiyangyuan-datong-center"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-gym",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-gym"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-xingsun-building",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xingsun-building"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-earthquake-facility",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-earthquake-facility"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-east-gate",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-east-gate"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-qiushi-avenue",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-qiushi-avenue"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-xuanhuai-square",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xuanhuai-square"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-tailei-square",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-tailei-square"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-tianlin-square",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-tianlin-square"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-shutian-square",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-shutian-square"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-xingxue-road",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xingxue-road"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-bowen-road",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-bowen-road"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-xigu-road",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xigu-road"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-qixing-road",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-qixing-road"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-shuangtai-road",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-shuangtai-road"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-xinyuan-road",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xinyuan-road"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-li-garden",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-li-garden"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-le-garden",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-le-garden"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-she-garden",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-she-garden"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-yu-garden",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-yu-garden"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-shu-garden",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-shu-garden"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-shu-garden-2",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-shu-garden-2"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-memorial-pavilion",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-memorial-pavilion"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-qin-exam",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-qin-exam"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-haitang-bank",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-haitang-bank"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-peach-bank",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-peach-bank"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-sanwen-bridge",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-sanwen-bridge"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-youth-lake",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-youth-lake"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-tju-star",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-tju-star"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-shangxian-stone",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-shangxian-stone"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-gaokao-wall",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-gaokao-wall"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-motto-stone",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-motto-stone"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-suzhou-pavilion",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-suzhou-pavilion"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-chunhui-garden",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-chunhui-garden"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-alumni-forest",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-alumni-forest"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-newton-tree",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-newton-tree"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-motto-ding",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-fw-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-motto-ding"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-xue-1-dining",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-dining-2024"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xue-1-dining"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-xue-2-dining",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-dining-2024"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xue-2-dining"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-xue-3-dining",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-dining-2024"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xue-3-dining"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": [
+      "conflict-dining-order"
+    ]
+  },
+  {
+    "fact_id": "poi-beiyangyuan-xue-4-dining",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-dining-2024"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xue-4-dining"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-xue-5-dining",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-dining-2024"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xue-5-dining"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": [
+      "conflict-dining-order"
+    ]
+  },
+  {
+    "fact_id": "poi-beiyangyuan-xue-6-dining",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-dining-2024"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xue-6-dining"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-international-dining",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-dining-2024"
+    ],
+    "entity_ids": [
+      "beiyangyuan-international-dining"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-zhengdong-library",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-library"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-dorm-ge",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-dorm-ge"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-dorm-zhi",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-dorm-zhi"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-dorm-cheng",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-dorm-cheng"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-dorm-zheng",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-dorm-zheng"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-dorm-xiu",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-dorm-xiu"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-dorm-qi",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-dorm-qi"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-dorm-zhi-guo",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-dorm-zhi-guo"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-beiyangyuan-dorm-ping",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-dorm-ping"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-dorm-yi",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-maps-2017"
+    ],
+    "entity_ids": [
+      "weijinlu-dorm-yi"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-dorm-er",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-maps-2017"
+    ],
+    "entity_ids": [
+      "weijinlu-dorm-er"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-dorm-san",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-maps-2017"
+    ],
+    "entity_ids": [
+      "weijinlu-dorm-san"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-dorm-si",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-maps-2017"
+    ],
+    "entity_ids": [
+      "weijinlu-dorm-si"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-dorm-wu",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-maps-2017"
+    ],
+    "entity_ids": [
+      "weijinlu-dorm-wu"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "poi-weijinlu-dorm-liu",
+    "claim_type": "directory_assertion",
+    "source_refs": [
+      "src-maps-2017"
+    ],
+    "entity_ids": [
+      "weijinlu-dorm-liu"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "chunshui-founded",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-library"
+    ],
+    "entity_ids": [
+      "weijinlu-chunshui-library"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "chunshui-designer",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-library"
+    ],
+    "entity_ids": [
+      "weijinlu-chunshui-library"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "chunshui-extension",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-library"
+    ],
+    "entity_ids": [
+      "weijinlu-chunshui-library"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "chunshui-reopened",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-library"
+    ],
+    "entity_ids": [
+      "weijinlu-chunshui-library"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "chunshui-name",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-library"
+    ],
+    "entity_ids": [
+      "weijinlu-chunshui-library"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "science-opened",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-library"
+    ],
+    "entity_ids": [
+      "weijinlu-science-library"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "science-donor",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-library"
+    ],
+    "entity_ids": [
+      "weijinlu-science-library"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "science-reopened",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-library"
+    ],
+    "entity_ids": [
+      "weijinlu-science-library"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "zhengdong-opened",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-library"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "zhengdong-designer",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-library"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "eastgate-designer",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-east-gate"
+    ],
+    "published_at": null,
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "eastgate-stones",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-east-gate"
+    ],
+    "published_at": null,
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "sanwen-origin",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-sanwen-bridge"
+    ],
+    "published_at": null,
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "sanwen-connection",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-sanwen-bridge"
+    ],
+    "published_at": null,
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "avenue-axis",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-qiushi-avenue"
+    ],
+    "published_at": null,
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "avenue-name",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-qiushi-avenue"
+    ],
+    "published_at": null,
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "xingxue-origin",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xingxue-road"
+    ],
+    "published_at": null,
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "zhengdong-courtyard",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library"
+    ],
+    "published_at": null,
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "campus-beiyang-opened",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "campus-weijin-move",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-campus-overview"
+    ],
+    "entity_ids": [],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "dorm-undergraduate",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [],
+    "published_at": null,
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "dorm-master",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [],
+    "published_at": null,
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "dorm-doctoral",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-beiyang"
+    ],
+    "entity_ids": [],
+    "published_at": null,
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-nine-1",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-nine"
+    ],
+    "entity_ids": [
+      "weijinlu-09-teaching"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-nine-2",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-nine"
+    ],
+    "entity_ids": [
+      "weijinlu-09-teaching"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-nine-3",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-nine"
+    ],
+    "entity_ids": [
+      "weijinlu-09-teaching"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-nine-4",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-nine"
+    ],
+    "entity_ids": [
+      "weijinlu-09-teaching"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-nine-5",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-nine"
+    ],
+    "entity_ids": [
+      "weijinlu-09-teaching"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-nine-6",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-nine"
+    ],
+    "entity_ids": [
+      "weijinlu-09-teaching"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-nine-7",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-nine"
+    ],
+    "entity_ids": [
+      "weijinlu-09-teaching"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-design-nine-1",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-design-nine"
+    ],
+    "entity_ids": [
+      "weijinlu-09-teaching"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-design-nine-2",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-design-nine"
+    ],
+    "entity_ids": [
+      "weijinlu-09-teaching"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-1",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "weijinlu-east-gate"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-2",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "weijinlu-east-gate"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-3",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "weijinlu-east-gate"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-4",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "weijinlu-east-gate"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-5",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "weijinlu-beiyang-square"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-6",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "weijinlu-beiyang-square"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-7",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "weijinlu-beiyang-square"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-8",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "weijinlu-beiyang-square"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-9",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "weijinlu-beiyang-pavilion"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-10",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "weijinlu-beiyang-pavilion"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-11",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "weijinlu-beiyang-pavilion"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-12",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "weijinlu-beiyang-pavilion"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-13",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "beiyangyuan-qiushi-hall"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-14",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "beiyangyuan-qiushi-hall"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-15",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "beiyangyuan-datong-center"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-16",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "beiyangyuan-datong-center"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-17",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "beiyangyuan-datong-center"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-landscape-2016-18",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-landscape-2016"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library"
+    ],
+    "published_at": "2016-08-25",
+    "applicable_at": "2016-08-25",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-welcome-weijin-1",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-jingye-lake"
+    ],
+    "published_at": "2024-08-15",
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-welcome-weijin-2",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-youth-lake"
+    ],
+    "published_at": "2024-08-15",
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-welcome-weijin-3",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-youth-lake"
+    ],
+    "published_at": "2024-08-15",
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-welcome-weijin-4",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-youyi-lake"
+    ],
+    "published_at": "2024-08-15",
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-welcome-weijin-5",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-student-center"
+    ],
+    "published_at": "2024-08-15",
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-welcome-weijin-6",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-student-center"
+    ],
+    "published_at": "2024-08-15",
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-welcome-weijin-7",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-dream-stone"
+    ],
+    "published_at": "2024-08-15",
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-welcome-weijin-8",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-dream-stone"
+    ],
+    "published_at": "2024-08-15",
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-welcome-weijin-9",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-ma-yinchu"
+    ],
+    "published_at": "2024-08-15",
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-welcome-weijin-10",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-welcome-weijin"
+    ],
+    "entity_ids": [
+      "weijinlu-zhang-tailei"
+    ],
+    "published_at": "2024-08-15",
+    "applicable_at": "2024-08-15",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-culture-2025-1",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-culture-2025"
+    ],
+    "entity_ids": [
+      "beiyangyuan-motto-stone"
+    ],
+    "published_at": "2025-09-06",
+    "applicable_at": "2025-09-06",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-culture-2025-2",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-culture-2025"
+    ],
+    "entity_ids": [
+      "beiyangyuan-motto-stone"
+    ],
+    "published_at": "2025-09-06",
+    "applicable_at": "2025-09-06",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-culture-2025-3",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-culture-2025"
+    ],
+    "entity_ids": [
+      "beiyangyuan-motto-stone"
+    ],
+    "published_at": "2025-09-06",
+    "applicable_at": "2025-09-06",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-culture-2025-4",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-culture-2025"
+    ],
+    "entity_ids": [
+      "beiyangyuan-motto-stone"
+    ],
+    "published_at": "2025-09-06",
+    "applicable_at": "2025-09-06",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-culture-2025-5",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-culture-2025"
+    ],
+    "entity_ids": [
+      "beiyangyuan-motto-stone"
+    ],
+    "published_at": "2025-09-06",
+    "applicable_at": "2025-09-06",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-culture-2025-6",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-culture-2025"
+    ],
+    "entity_ids": [
+      "beiyangyuan-main-building"
+    ],
+    "published_at": "2025-09-06",
+    "applicable_at": "2025-09-06",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-culture-2025-7",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-culture-2025"
+    ],
+    "entity_ids": [
+      "beiyangyuan-main-building"
+    ],
+    "published_at": "2025-09-06",
+    "applicable_at": "2025-09-06",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-culture-2025-8",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-culture-2025"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xuanhuai-square"
+    ],
+    "published_at": "2025-09-06",
+    "applicable_at": "2025-09-06",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-culture-2025-9",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-culture-2025"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xuanhuai-square"
+    ],
+    "published_at": "2025-09-06",
+    "applicable_at": "2025-09-06",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-culture-2025-10",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-culture-2025"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xuanhuai-square"
+    ],
+    "published_at": "2025-09-06",
+    "applicable_at": "2025-09-06",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-culture-2025-11",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-culture-2025"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xuanhuai-square"
+    ],
+    "published_at": "2025-09-06",
+    "applicable_at": "2025-09-06",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-culture-2025-12",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-culture-2025"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xuanhuai-square"
+    ],
+    "published_at": "2025-09-06",
+    "applicable_at": "2025-09-06",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-culture-2025-13",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-culture-2025"
+    ],
+    "entity_ids": [
+      "beiyangyuan-sanwen-bridge"
+    ],
+    "published_at": "2025-09-06",
+    "applicable_at": "2025-09-06",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-culture-2025-14",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-culture-2025"
+    ],
+    "entity_ids": [
+      "weijinlu-school-song"
+    ],
+    "published_at": "2025-09-06",
+    "applicable_at": "2025-09-06",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-wang-institute-1",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-wang-institute"
+    ],
+    "entity_ids": [
+      "weijinlu-wang-xuezhong"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-wang-institute-2",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-wang-institute"
+    ],
+    "entity_ids": [
+      "weijinlu-wang-xuezhong"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-wang-institute-3",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-wang-institute"
+    ],
+    "entity_ids": [
+      "weijinlu-wang-xuezhong"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-wang-institute-4",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-wang-institute"
+    ],
+    "entity_ids": [
+      "weijinlu-wang-xuezhong"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-wang-institute-5",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-wang-institute"
+    ],
+    "entity_ids": [
+      "weijinlu-wang-xuezhong"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-wang-institute-6",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-wang-institute"
+    ],
+    "entity_ids": [
+      "weijinlu-wang-xuezhong"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-wang-institute-7",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-wang-institute"
+    ],
+    "entity_ids": [
+      "weijinlu-wang-xuezhong"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-wang-institute-8",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-wang-institute"
+    ],
+    "entity_ids": [
+      "weijinlu-wang-xuezhong"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-wang-institute-9",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-wang-institute"
+    ],
+    "entity_ids": [
+      "weijinlu-wang-xuezhong"
+    ],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-venues-1",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-venues"
+    ],
+    "entity_ids": [],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-venues-2",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-venues"
+    ],
+    "entity_ids": [],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-venues-3",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-venues"
+    ],
+    "entity_ids": [],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-venues-4",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-venues"
+    ],
+    "entity_ids": [],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-venues-5",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-venues"
+    ],
+    "entity_ids": [],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-venues-6",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-venues"
+    ],
+    "entity_ids": [],
+    "published_at": null,
+    "applicable_at": null,
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-xuzhong-oaa-1",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-xuzhong-oaa"
+    ],
+    "entity_ids": [],
+    "published_at": "2019-04-09",
+    "applicable_at": "2019-04-09",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-xuzhong-oaa-2",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-xuzhong-oaa"
+    ],
+    "entity_ids": [],
+    "published_at": "2019-04-09",
+    "applicable_at": "2019-04-09",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-xuzhong-oaa-3",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-xuzhong-oaa"
+    ],
+    "entity_ids": [],
+    "published_at": "2019-04-09",
+    "applicable_at": "2019-04-09",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-xuzhong-oaa-4",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-xuzhong-oaa"
+    ],
+    "entity_ids": [],
+    "published_at": "2019-04-09",
+    "applicable_at": "2019-04-09",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-xuzhong-oaa-5",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-xuzhong-oaa"
+    ],
+    "entity_ids": [],
+    "published_at": "2019-04-09",
+    "applicable_at": "2019-04-09",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  },
+  {
+    "fact_id": "detail-xuzhong-oaa-6",
+    "claim_type": "historical_fact",
+    "source_refs": [
+      "src-xuzhong-oaa"
+    ],
+    "entity_ids": [],
+    "published_at": "2019-04-09",
+    "applicable_at": "2019-04-09",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-14",
+    "source_checked_at": "2026-09-14",
+    "field_checked_at": null,
+    "current_status": "not_applicable",
+    "conflict_ids": []
+  }
+]

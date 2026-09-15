@@ -25,6 +25,10 @@ export interface SpeechAdapterOptions {
   onTrace?: (event: SpeechPlaybackTrace) => void;
   volume?: number;
   muted?: boolean;
+  /** Injectable only for isolated tests; production uses the pinned vad-web module. */
+  loadVad?: typeof loadVadModule;
+  asrTimeoutMs?: number;
+  captureTimeoutMs?: number;
 }
 
 export type SpeechPlaybackTraceStage =
@@ -66,6 +70,13 @@ export type PreparedSpeech = {
   readonly objectUrl?: string;
   released: boolean;
 };
+
+export interface CaptureOptions {
+  continuous?: boolean;
+  canAccept?: () => boolean;
+  onVoice?: () => void;
+  automaticBargeIn?: boolean;
+}
 
 type VadInstance = {
   pause(): Promise<void>;
@@ -136,6 +147,16 @@ function elapsed(startedAt: number): number {
   return Math.round((now() - startedAt) * 10) / 10;
 }
 
+/** Settle promptly even if a provider/permission promise ignores AbortSignal. */
+function abortable<T>(pending: Promise<T>, signal: AbortSignal): Promise<T> {
+  return new Promise<T>((resolve, reject) => {
+    const abort = () => reject(new DOMException('Stopped', 'AbortError'));
+    pending.then(resolve, reject).finally(() => signal.removeEventListener('abort', abort));
+    if (signal.aborted) { abort(); return; }
+    signal.addEventListener('abort', abort, { once: true });
+  });
+}
+
 function permissionCode(error: unknown): string {
   if (error instanceof DOMException && (error.name === 'NotAllowedError' || error.name === 'SecurityError')) {
     return 'permission_denied';
@@ -166,6 +187,7 @@ export class CampusSpeechAdapter implements SpeechAdapter {
   };
 
   private readonly recognitionMode: RecognitionMode;
+  get supportsContinuousRecognition(): boolean { return this.recognitionMode === 'server'; }
   private readonly onTrace?: (event: SpeechPlaybackTrace) => void;
   private capture?: Capture;
   private playback?: Playback;
@@ -177,9 +199,23 @@ export class CampusSpeechAdapter implements SpeechAdapter {
   private playbackGeneration = 0;
   private volume: number;
   private muted: boolean;
+  private readonly loadVad: typeof loadVadModule;
+  private readonly asrTimeoutMs: number;
+  private readonly captureTimeoutMs: number;
+  private captureOptions?: CaptureOptions;
+  private captureAbort?: AbortController;
+  private readonly levels = new Set<(level: number) => void>();
+  private analyser?: AnalyserNode;
+  private source?: MediaElementAudioSourceNode;
+  private levelFrame?: number;
+  private sounding = false;
+  readonly recognitionStatus = { configured: false, state: 'idle', error_code: null as string | null };
 
   constructor(options: SpeechAdapterOptions = {}) {
     this.recognitionMode = options.recognitionMode ?? 'server';
+    this.loadVad = options.loadVad ?? loadVadModule;
+    this.asrTimeoutMs = options.asrTimeoutMs ?? 35000;
+    this.captureTimeoutMs = options.captureTimeoutMs ?? 20000;
     this.onTrace = options.onTrace;
     this.volume = Math.max(0, Math.min(1, options.volume ?? 1));
     this.muted = options.muted ?? false;
@@ -211,6 +247,7 @@ export class CampusSpeechAdapter implements SpeechAdapter {
   setOutput(volume: number, muted: boolean): void {
     this.volume = Math.max(0, Math.min(1, volume));
     this.muted = muted;
+    if (muted || this.volume === 0) this.emitLevel(0);
     if (this.player) {
       this.player.volume = this.volume;
       this.player.muted = this.muted;
@@ -224,13 +261,28 @@ export class CampusSpeechAdapter implements SpeechAdapter {
     this.preparing.clear();
     for (const item of [...this.prepared]) this.releasePrepared(item);
     if (this.audioContext && this.audioContext.state !== 'closed') void this.audioContext.close();
+    this.stopLevels();
+    this.source?.disconnect();
+    this.analyser?.disconnect();
+    this.source = undefined;
+    this.analyser = undefined;
+    this.levels.clear();
     this.audioContext = undefined;
     this.player = undefined;
   }
 
-  async start(context: SpeechContext, callbacks: SpeechCallbacks): Promise<AdapterResult> {
-    await this.stopCapture();
-    this.cancelPlayback();
+  subscribeAudioLevel(callback: (level: number) => void): () => void {
+    this.levels.add(callback);
+    return () => this.levels.delete(callback);
+  }
+
+  async start(context: SpeechContext, callbacks: SpeechCallbacks, options?: CaptureOptions): Promise<AdapterResult> {
+    const stopping = this.stopCapture();
+    const generation = this.captureGeneration;
+    await stopping;
+    if (generation !== this.captureGeneration) return { status: 'failed', error_code: 'stopped' };
+    this.captureOptions = options;
+    if (!options?.continuous) this.cancelPlayback();
     if (context.signal.aborted) return { status: 'failed', error_code: 'stopped' };
     return this.recognitionMode === 'browser'
       ? this.startBrowserRecognition(context, callbacks)
@@ -240,8 +292,8 @@ export class CampusSpeechAdapter implements SpeechAdapter {
   async stop(requestId: string) {
     const stoppedCapture = !!this.capture && this.capture.requestId === requestId;
     const stoppedPlayback = !!this.playback && this.playback.requestId === requestId;
-    if (stoppedCapture) await this.stopCapture();
     if (stoppedPlayback) this.cancelPlayback();
+    const stoppingCapture = stoppedCapture ? this.stopCapture() : Promise.resolve();
     for (const [controller, preparingRequestId] of this.preparing) {
       if (preparingRequestId === requestId) controller.abort();
     }
@@ -252,6 +304,7 @@ export class CampusSpeechAdapter implements SpeechAdapter {
     const stopController = new AbortController();
     const stopTimeout = setTimeout(() => stopController.abort(), 5000);
     try {
+      await stoppingCapture;
       const sessionId = this.lastSessionByRequest.get(requestId);
       if (!sessionId) return { local_stopped: true, upstream_stop: 'not_started' as const };
       const response = await fetch('/api/speech/stop', {
@@ -316,7 +369,7 @@ export class CampusSpeechAdapter implements SpeechAdapter {
     if (prepared.released || prepared.context.signal.aborted) {
       return { status: 'failed', error_code: 'stopped' };
     }
-    await this.stopCapture();
+    if (!this.captureOptions?.continuous) await this.stopCapture();
     if (prepared.released || prepared.context.signal.aborted) return { status: 'failed', error_code: 'stopped' };
     this.cancelPlayback();
     if (prepared.kind === 'browser') {
@@ -368,87 +421,127 @@ export class CampusSpeechAdapter implements SpeechAdapter {
 
   private async startServerRecognition(context: SpeechContext, callbacks: SpeechCallbacks): Promise<AdapterResult> {
     this.remember(context);
-    if (!navigator.mediaDevices?.getUserMedia) {
-      callbacks.onFailure(context.request_id, 'capture_unsupported');
-      return { status: 'failed', error_code: 'capture_unsupported' };
-    }
+    const options = this.captureOptions;
     const generation = ++this.captureGeneration;
+    const controller = new AbortController();
+    this.captureAbort = controller;
+    const current = () => generation === this.captureGeneration && !context.signal.aborted && !controller.signal.aborted;
+    const fail = (code: string) => {
+      if (!current()) return;
+      this.recognitionStatus.state = 'error'; this.recognitionStatus.error_code = code;
+      callbacks.onFailure(context.request_id, code);
+      if (current()) void this.stopCapture();
+    };
+    if (typeof navigator === 'undefined' || !navigator.mediaDevices?.getUserMedia) {
+      fail('capture_unsupported'); return { status: 'failed', error_code: 'capture_unsupported' };
+    }
     let vad: VadInstance | undefined;
-    const abort = () => void this.stopCapture();
+    let stream: MediaStream | undefined;
+    let busy = false, contaminated = false, trustedMs = 0, voiced = false;
+    let segmentTimer: ReturnType<typeof setTimeout> | undefined;
+    const abort = () => { if (generation === this.captureGeneration) void this.stopCapture(); };
     context.signal.addEventListener('abort', abort, { once: true });
+    const stopTracks = () => stream?.getTracks().forEach(track => track.stop());
+    const initialTimer = setTimeout(() => fail('capture_timeout'), this.captureTimeoutMs);
+    this.capture = {
+      requestId: context.request_id, generation,
+      removeAbort: () => context.signal.removeEventListener('abort', abort),
+      stop: async () => { controller.abort(); clearTimeout(initialTimer); clearTimeout(segmentTimer); stopTracks(); await vad?.destroy(); },
+    };
+    this.recognitionStatus.state = 'starting'; this.recognitionStatus.error_code = null;
     try {
-      const module = await loadVadModule();
-      vad = await module.MicVAD.new({
-        model: 'v5',
-        baseAssetPath: '/vendor/vad/',
-        onnxWASMBasePath: '/vendor/ort/',
-        startOnLoad: true,
-        onSpeechEnd: (audio: Float32Array) => void this.submitAudio(context, generation, audio, callbacks),
+      const module = await abortable(this.loadVad(), controller.signal);
+      if (!current()) return { status: 'failed', error_code: 'stopped' };
+      const pending = module.MicVAD.new({
+        model: 'v5', baseAssetPath: '/vendor/vad/', onnxWASMBasePath: '/vendor/ort/', startOnLoad: true,
+        positiveSpeechThreshold: 0.85, negativeSpeechThreshold: 0.65,
+        minSpeechMs: 480, redemptionMs: 650, preSpeechPadMs: 250,
+        getStream: async () => {
+          const acquired = await navigator.mediaDevices.getUserMedia({ audio: {
+            channelCount: 1, echoCancellation: true, noiseSuppression: true, autoGainControl: true,
+          } });
+          if (!current()) { acquired.getTracks().forEach(track => track.stop()); throw new DOMException('Stopped', 'AbortError'); }
+          stream = acquired;
+          return acquired;
+        },
+        pauseStream: async () => { stopTracks(); },
+        onSpeechStart: () => {
+          if (!current()) return;
+          contaminated = busy || !(options?.canAccept?.() ?? true); trustedMs = 0; voiced = false;
+          clearTimeout(segmentTimer);
+          segmentTimer = setTimeout(() => fail('audio_too_long'), 29000);
+        },
+        onFrameProcessed: (probabilities, frame) => {
+          if (!current()) return;
+          if (!(options?.canAccept?.() ?? true)) contaminated = true;
+          const rms = Math.sqrt(frame.reduce((sum, value) => sum + value * value, 0) / Math.max(1, frame.length));
+          trustedMs = probabilities.isSpeech >= 0.9 && rms >= 0.025 ? trustedMs + frame.length / 16 : 0;
+          if (!contaminated && !busy && !voiced && trustedMs >= 480) {
+            voiced = true;
+            if (options?.automaticBargeIn && stream?.getAudioTracks()[0]?.getSettings().echoCancellation === true) options.onVoice?.();
+          }
+        },
+        onVADMisfire: () => { clearTimeout(segmentTimer); trustedMs = 0; },
+        onSpeechEnd: (audio) => {
+          clearTimeout(segmentTimer);
+          if (!current() || busy || contaminated || !(options?.canAccept?.() ?? true)) return;
+          busy = true;
+          void this.submitAudio(context, generation, audio, callbacks, controller.signal).finally(() => { busy = false; });
+        },
       });
-      if (generation !== this.captureGeneration || context.signal.aborted) {
-        await vad.destroy();
-        return { status: 'failed', error_code: 'stopped' };
-      }
-      this.capture = {
-        requestId: context.request_id,
-        generation,
-        stop: () => vad!.destroy(),
-        removeAbort: () => context.signal.removeEventListener('abort', abort),
-      };
+      // A permission prompt or model load cannot keep start() pending after stop/timeout.
+      void pending.then(async instance => { if (!current()) await instance.destroy(); }, () => undefined);
+      vad = await abortable(pending, controller.signal);
+      clearTimeout(initialTimer);
+      if (!current()) { await vad.destroy(); return { status: 'failed', error_code: 'stopped' }; }
+      this.recognitionStatus.state = 'listening';
+      if (!options?.continuous) segmentTimer = setTimeout(() => fail('capture_timeout'), this.captureTimeoutMs);
       return { status: 'ready' };
     } catch (error) {
-      context.signal.removeEventListener('abort', abort);
-      const code = permissionCode(error);
-      callbacks.onFailure(context.request_id, code);
+      stopTracks();
+      if (!current()) return { status: 'failed', error_code: this.recognitionStatus.error_code ?? 'stopped' };
+      const code = permissionCode(error); fail(code);
       return { status: 'failed', error_code: code };
     }
   }
 
-  private async submitAudio(
-    context: SpeechContext,
-    generation: number,
-    audio: Float32Array,
-    callbacks: SpeechCallbacks,
-  ): Promise<void> {
-    if (generation !== this.captureGeneration || context.signal.aborted) return;
-    if (audio.length > 16000 * 30) {
-      callbacks.onFailure(context.request_id, 'audio_too_long');
-      return;
-    }
+  private async submitAudio(context: SpeechContext, generation: number, audio: Float32Array, callbacks: SpeechCallbacks, captureSignal: AbortSignal): Promise<void> {
+    const current = () => generation === this.captureGeneration && !context.signal.aborted && !captureSignal.aborted;
+    if (!current()) return;
+    const controller = new AbortController();
+    const abort = () => controller.abort();
+    captureSignal.addEventListener('abort', abort, { once: true });
+    let timedOut = false;
+    const timeout = setTimeout(() => { timedOut = true; controller.abort(); }, this.asrTimeoutMs);
+    const fail = (code: string) => {
+      if (!current()) return;
+      this.recognitionStatus.state = 'error'; this.recognitionStatus.error_code = code;
+      callbacks.onFailure(context.request_id, code);
+      if (current()) void this.stopCapture();
+    };
     try {
-      const vad = await loadVadModule();
+      if (!audio.length || audio.length > 16000 * 30) { fail('audio_too_long'); return; }
+      const vad = await abortable(this.loadVad(), controller.signal);
+      if (!current() || controller.signal.aborted) return;
       const wav = vad.utils.encodeWAV(audio, 1, 16000, 1, 16);
-      const response = await fetch('/api/speech/asr', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        signal: context.signal,
-        body: JSON.stringify({
-          request_id: context.request_id,
-          session_id: context.session_id,
-          audio: {
-            encoding: 'base64',
-            mime_type: 'audio/wav',
-            sample_rate_hz: 16000,
-            channels: 1,
-            audio_base64: vad.utils.arrayBufferToBase64(wav),
-          },
-        }),
-      });
-      if (!response.ok) {
-        callbacks.onFailure(context.request_id, await safeErrorCode(response, 'asr_unavailable'));
-        return;
-      }
-      const body = await response.json() as AsrResponse;
-      if (generation === this.captureGeneration && body.request_id === context.request_id) {
-        this.capabilities.asr = true;
-        callbacks.onText(body.text, body.is_final);
-      }
-    } catch (error) {
-      if (generation === this.captureGeneration && !context.signal.aborted) {
-        callbacks.onFailure(context.request_id, error instanceof TypeError ? 'asr_unavailable' : 'capture_failed');
-      }
+      this.recognitionStatus.state = 'recognizing';
+      const response = await abortable(fetch('/api/speech/asr', {
+        method: 'POST', headers: { 'content-type': 'application/json' }, signal: controller.signal,
+        body: JSON.stringify({ request_id: context.request_id, session_id: context.session_id,
+          audio: { encoding: 'base64', mime_type: 'audio/wav', sample_rate_hz: 16000, channels: 1, audio_base64: vad.utils.arrayBufferToBase64(wav) } }),
+      }), controller.signal);
+      if (!current()) return;
+      if (!response.ok) { const code = await abortable(safeErrorCode(response, 'asr_unavailable'), controller.signal); fail(code); return; }
+      const body = await abortable(response.json(), controller.signal) as AsrResponse;
+      if (!current()) return;
+      if (body.request_id !== context.request_id || typeof body.text !== 'string' || !body.text.trim() || body.text.length > 8000 || body.is_final !== true) { fail('invalid_asr_response'); return; }
+      this.capabilities.asr = true; this.recognitionStatus.state = 'listening';
+      callbacks.onText(body.text.trim(), true);
+    } catch {
+      fail(timedOut ? 'asr_timeout' : 'asr_unavailable');
     } finally {
-      if (generation === this.capture?.generation) await this.stopCapture();
+      clearTimeout(timeout); captureSignal.removeEventListener('abort', abort);
+      if (current() && !this.captureOptions?.continuous) await this.stopCapture();
     }
   }
 
@@ -615,6 +708,9 @@ export class CampusSpeechAdapter implements SpeechAdapter {
         audio.onplaying = null;
         audio.onended = null;
         audio.onerror = null;
+        audio.onpause = null;
+        audio.onwaiting = null;
+        this.stopLevels();
       }
       if (release) this.releasePrepared(prepared);
       if (this.playback?.generation === generation) this.playback = undefined;
@@ -625,6 +721,8 @@ export class CampusSpeechAdapter implements SpeechAdapter {
           elapsed_ms: elapsed(startedAt), volume: audio.volume, muted: audio.muted,
           audio_context_state: this.audioContext?.state ?? 'unavailable',
         });
+        if (this.audioContext?.state === 'suspended') await this.audioContext.resume();
+        if (generation !== this.playbackGeneration || prepared.context.signal.aborted) return { status: 'failed', error_code: 'stopped' };
         await audio.play();
         if (generation !== this.playbackGeneration || prepared.context.signal.aborted) return { status: 'failed', error_code: 'stopped' };
         blocked = false;
@@ -649,12 +747,14 @@ export class CampusSpeechAdapter implements SpeechAdapter {
     audio.load();
     audio.onplaying = () => {
       if (generation !== this.playbackGeneration) return;
+      this.startLevels();
       this.trace('playing', prepared.requestId, prepared.utteranceId, {
         elapsed_ms: elapsed(startedAt), volume: audio.volume, muted: audio.muted,
         audio_context_state: this.audioContext?.state ?? 'unavailable',
       });
       callbacks.onStart(prepared.utteranceId);
     };
+    audio.onpause = audio.onwaiting = () => { if (generation === this.playbackGeneration) this.stopLevels(); };
     audio.onended = () => {
       if (generation !== this.playbackGeneration) return;
       this.trace('ended', prepared.requestId, prepared.utteranceId, { elapsed_ms: elapsed(startedAt) });
@@ -671,6 +771,7 @@ export class CampusSpeechAdapter implements SpeechAdapter {
       requestId: prepared.requestId,
       generation,
       stop: () => {
+        this.stopLevels();
         audio.pause();
         audio.removeAttribute('src');
         audio.load();
@@ -679,6 +780,7 @@ export class CampusSpeechAdapter implements SpeechAdapter {
       removeAbort: () => prepared.context.signal.removeEventListener('abort', abort),
       pause: () => {
         if (audio.paused || audio.ended) return false;
+        this.stopLevels();
         audio.pause();
         this.trace('paused', prepared.requestId, prepared.utteranceId, { elapsed_ms: elapsed(startedAt) });
         return true;
@@ -761,14 +863,16 @@ export class CampusSpeechAdapter implements SpeechAdapter {
     return { status: 'ready' };
   }
 
-  private async refreshAsrCapability(): Promise<void> {
-    if (this.recognitionMode === 'browser') { this.capabilities.asr = !!browserRecognitionConstructor(); return; }
+  async refreshAsrCapability(): Promise<void> {
+    if (this.recognitionMode === 'browser') { this.capabilities.asr = !!browserRecognitionConstructor(); this.recognitionStatus.configured = this.capabilities.asr; this.recognitionStatus.error_code = this.capabilities.asr ? null : 'browser_asr_unsupported'; return; }
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), 4000);
     try {
       const response = await fetch('/api/health', { signal: controller.signal });
-      if (response.ok) this.capabilities.asr = (await response.json()).capabilities?.asr === true;
-    } catch { this.capabilities.asr = false; }
+      this.capabilities.asr = response.ok && (await response.json()).capabilities?.asr === true;
+      this.recognitionStatus.configured = this.capabilities.asr;
+      this.recognitionStatus.error_code = response.ok ? (this.capabilities.asr ? null : 'asr_not_configured') : 'asr_unavailable';
+    } catch { this.capabilities.asr = false; this.recognitionStatus.configured = false; this.recognitionStatus.error_code = 'asr_unavailable'; }
     finally { window.clearTimeout(timeout); }
   }
 
@@ -792,7 +896,10 @@ export class CampusSpeechAdapter implements SpeechAdapter {
   private async stopCapture(): Promise<void> {
     const capture = this.capture;
     this.capture = undefined;
+    this.captureAbort?.abort();
+    this.captureAbort = undefined;
     this.captureGeneration += 1;
+    if (this.recognitionStatus.state !== 'error') this.recognitionStatus.state = 'idle';
     if (!capture) return;
     capture.removeAbort();
     try {
@@ -800,6 +907,38 @@ export class CampusSpeechAdapter implements SpeechAdapter {
     } catch {
       // The local microphone state is already detached from this adapter.
     }
+  }
+
+  private emitLevel(level: number): void { for (const callback of this.levels) callback(level); }
+  private stopLevels(): void {
+    this.sounding = false;
+    if (this.levelFrame !== undefined) cancelAnimationFrame(this.levelFrame);
+    this.levelFrame = undefined;
+    this.emitLevel(0);
+  }
+  private startLevels(): void {
+    this.stopLevels();
+    if (!this.audioContext || !this.player || typeof requestAnimationFrame === 'undefined') return;
+    try {
+      if (!this.source) {
+        this.analyser = this.audioContext.createAnalyser();
+        this.analyser.fftSize = 512;
+        this.source = this.audioContext.createMediaElementSource(this.player);
+        this.source.connect(this.analyser);
+        this.analyser.connect(this.audioContext.destination);
+      }
+      this.sounding = true;
+      const samples = new Float32Array(this.analyser!.fftSize);
+      const tick = () => {
+        if (!this.sounding) return;
+        this.analyser!.getFloatTimeDomainData(samples);
+        const rms = Math.sqrt(samples.reduce((sum, value) => sum + value * value, 0) / samples.length);
+        const audible = !this.player!.muted && !this.player!.paused && !this.player!.ended && this.audioContext?.state === 'running';
+        this.emitLevel(audible ? Math.min(1, Math.max(0, rms - 0.008) * 6 * this.player!.volume) : 0);
+        this.levelFrame = requestAnimationFrame(tick);
+      };
+      tick();
+    } catch { this.stopLevels(); }
   }
 
   private ensurePlayer(): HTMLAudioElement {
@@ -834,6 +973,7 @@ export class CampusSpeechAdapter implements SpeechAdapter {
 
   private cancelPlayback(): void {
     const playback = this.playback;
+    this.stopLevels();
     this.playback = undefined;
     this.playbackGeneration += 1;
     if (!playback) return;

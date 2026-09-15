@@ -10,7 +10,7 @@ def test_status_counts_are_backed_by_checked_in_data():
     assert status.document_count >= 129
     assert status.building_count >= 100
     assert status.version and status.version.startswith("sha256:")
-    assert status.updated_at == "2026-09-14"
+    assert status.updated_at == "2026-09-15"
 
 
 def test_alias_and_building_association_are_searchable():

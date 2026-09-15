@@ -1,3 +1,5 @@
+import type { TourSession, TourStop } from '../../../shared/r3';
+import { navigateTourStop } from '../transport/tour-navigation';
 import type { MapPublicConfig, POI, RouteRequest, RouteResponse, UserPosition } from '../../../shared/r2';
 import { AmapNavigation, type AmapSdk, type MapDestination, type InternalRouteRequest } from '../transport/amap-navigation';
 import { MapBudget } from '../transport/map-budget';
@@ -6,7 +8,7 @@ type AMapApi = AmapSdk & Record<string, new (...args: any[]) => any>;
 
 export interface OnlineMapHandle {
   setPois(pois: POI[], selectedId: string | null): void;
-  showPosition(position: UserPosition): void;
+  showPosition(position: UserPosition): void; clearPosition():void;
   showDestination(destination:MapDestination|null):void;
   showRoute(polyline: [number, number][][]): void;
   highlightStep(polyline:[number,number][]):void;
@@ -18,6 +20,7 @@ export interface OnlineMapHandle {
   findDestination(poi:POI,operationId:string,signal:AbortSignal):Promise<MapDestination[]>;
   walk(request: RouteRequest, poi: POI, signal: AbortSignal, matched?:MapDestination): Promise<RouteResponse>;
   navigate(request:InternalRouteRequest,poi:POI,signal:AbortSignal,matched?:MapDestination):Promise<{route:RouteResponse;origin:UserPosition;destination?:MapDestination}>;
+  navigateTour(session:TourSession,stop:TourStop,poi:POI,routeId:string,origin:UserPosition|null,signal:AbortSignal,matched?:MapDestination):ReturnType<typeof navigateTourStop>;
   destroy(): void;
 }
 // Pure classification remains testable; the M controller validates navigation origins.
@@ -80,5 +83,5 @@ export async function createOnlineMap(host: HTMLElement, config: MapPublicConfig
     destinationMarker=new AMap.Marker({position:[destination.lng,destination.lat],title:destination.name,zIndex:190});
     map.add(destinationMarker);map.setZoomAndCenter(17,[destination.lng,destination.lat]);
   }
-  return {setPois,showPosition,showDestination,showRoute,highlightStep,pickStart(callback){startPicker=callback;},clearRoute,resize(){map.resize?.();},locate:(id,abort)=>navigation.locate(id,abort,true),locateCity:(id,abort)=>navigation.locateCity(id,abort,true),findDestination:(poi,id,abort)=>navigation.findDestination(poi,id,abort),walk:(request,poi,abort,matched)=>navigation.walk(request,poi,abort,matched),navigate:(request,poi,abort,matched)=>navigation.navigate(request,poi,abort,matched),destroy(){startPicker=null;clearRoute();map.destroy();}};
+  return {setPois,showPosition,clearPosition(){if(locationMarker)map.remove(locationMarker);if(accuracyCircle)map.remove(accuracyCircle);locationMarker=null;accuracyCircle=null;},showDestination,showRoute,highlightStep,pickStart(callback){startPicker=callback;},clearRoute,resize(){map.resize?.();},locate:(id,abort)=>navigation.locate(id,abort,true),locateCity:(id,abort)=>navigation.locateCity(id,abort,true),findDestination:(poi,id,abort)=>navigation.findDestination(poi,id,abort),walk:(request,poi,abort,matched)=>navigation.walk(request,poi,abort,matched),navigate:(request,poi,abort,matched)=>navigation.navigate(request,poi,abort,matched),navigateTour:(session,stop,poi,id,origin,abort,matched)=>navigateTourStop(navigation,session,stop,poi,id,origin,abort,matched),destroy(){startPicker=null;clearRoute();map.destroy();}};
 }

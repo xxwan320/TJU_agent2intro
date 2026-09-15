@@ -227,11 +227,18 @@ export const SPEECH_ERROR_MESSAGES: Readonly<Record<string, string>> = {
 
 export interface SpeechControllerOptions extends SpeechAdapterOptions { adapter?: CampusSpeechAdapter }
 
+export interface PlaybackEvent {
+  run: SpeechRun;
+  type: 'playback.started' | 'playback.ended' | 'playback.cancelled';
+  utterance_id: string;
+}
+
 export class CampusSpeechController implements SpeechController {
   readonly capabilities = { incremental: true, pause: true, resume: true, timestamps: 'none' as const };
   private readonly adapter: CampusSpeechAdapter;
   private readonly listeners = new Set<(state: SpeechProgress) => void>();
   private readonly traces: SpeechPlaybackTrace[] = [];
+  private readonly playbackListeners = new Set<(event: PlaybackEvent) => void>();
   private enabled = false;
   private activeRun: ActiveRun | null = null;
   private activeItem: QueueItem | null = null;
@@ -251,8 +258,16 @@ export class CampusSpeechController implements SpeechController {
     } });
   }
 
+  subscribePlayback(callback: (event: PlaybackEvent) => void): () => void {
+    this.playbackListeners.add(callback);
+    return () => this.playbackListeners.delete(callback);
+  }
+  private playbackEvent(run: SpeechRun, type: PlaybackEvent['type'], utterance_id: string): void {
+    for (const callback of this.playbackListeners) callback({ run, type, utterance_id });
+  }
+
   getTrace(): readonly SpeechPlaybackTrace[] { return [...this.traces]; }
-  /** Use this same adapter for ASR so starting capture enforces half duplex by stopping TTS. */
+  /** Shared ASR/player resource owner; R3 continuous capture uses this exact instance. */
   getAdapter(): CampusSpeechAdapter { return this.adapter; }
 
   async enable(enabled: boolean): Promise<AdapterResult> {
@@ -327,6 +342,7 @@ export class CampusSpeechController implements SpeechController {
     this.transition += 1;
     if (reason !== 'user') { this.lastResponse = null; this.lastPlayback = null; }
     const state = this.activeRun;
+    const utterance = this.activeItem?.utteranceId;
     this.activeRun = null;
     this.activeItem = null;
     this.blocked = false;
@@ -339,6 +355,7 @@ export class CampusSpeechController implements SpeechController {
     if (prefetched) void prefetched.promise.then((item) => { if (!('status' in item)) this.adapter.releasePrepared(item); });
     const stopping = this.adapter.stop(state.run.request_id);
     for (const resolve of state.drainWaiters.splice(0)) resolve();
+    if (utterance) this.playbackEvent(state.run, 'playback.cancelled', utterance);
     this.emitFor(state.run, 'stopped', reason);
     await stopping;
   }
@@ -367,28 +384,28 @@ export class CampusSpeechController implements SpeechController {
   }
 
   /** Replays the current or most recently started segment from its beginning. */
-  async replay(): Promise<AdapterResult> {
+  async replay(run?: SpeechRun): Promise<AdapterResult> {
     const current = this.activeRun && this.activeItem
       ? { run: this.activeRun.run, text: this.activeItem.text, segmentId: this.activeItem.segmentId }
       : this.lastPlayback;
     if (!current) return { status: 'failed', error_code: 'nothing_to_replay' };
     const replayRun: SpeechRun = {
-      ...current.run,
-      generation_id: crypto.randomUUID(),
-      signal: new AbortController().signal,
+      ...(run ?? current.run),
+      generation_id: run?.generation_id ?? crypto.randomUUID(),
+      signal: run?.signal ?? new AbortController().signal,
       mode: 'full',
     };
     return this.playSegment(replayRun, current.text, `replay-${current.segmentId}`);
   }
 
   /** Continues only the unspoken remainder left by the latest automatic brief. */
-  async continueRemaining(): Promise<AdapterResult> {
+  async continueRemaining(nextRun?: SpeechRun): Promise<AdapterResult> {
     const previous = this.lastResponse;
     if (!previous?.remaining) return { status: 'failed', error_code: 'nothing_to_continue' };
     const run: SpeechRun = {
-      ...previous.run,
-      generation_id: crypto.randomUUID(),
-      signal: new AbortController().signal,
+      ...(nextRun ?? previous.run),
+      generation_id: nextRun?.generation_id ?? crypto.randomUUID(),
+      signal: nextRun?.signal ?? new AbortController().signal,
       mode: 'full',
     };
     const remaining = previous.remaining;
@@ -412,7 +429,7 @@ export class CampusSpeechController implements SpeechController {
 
   listVoices(): Promise<Voice[]> { return this.adapter.listVoices(); }
   subscribe(callback: (state: SpeechProgress) => void): () => void { this.listeners.add(callback); return () => this.listeners.delete(callback); }
-  dispose(): void { if (this.disposed) return; this.disposed = true; void this.stop('clear'); this.listeners.clear(); this.adapter.dispose(); }
+  dispose(): void { if (this.disposed) return; this.disposed = true; void this.stop('clear'); this.listeners.clear(); this.playbackListeners.clear(); this.adapter.dispose(); }
 
   private enqueue(state: ActiveRun, segments: string[]): void {
     for (const segment of segments) {
@@ -475,8 +492,8 @@ export class CampusSpeechController implements SpeechController {
     this.ensurePrefetch();
     const result = await this.adapter.playPreparedSpeech(prepared, {
       onText: () => undefined,
-      onStart: (utteranceId) => { if (this.isCurrent(state, item, utteranceId)) { this.lastPlayback = { run: state.run, text: item.text, segmentId: item.segmentId }; this.emit('speaking', null, item); } },
-      onEnd: (utteranceId) => { if (!this.isCurrent(state, item, utteranceId)) return; this.activeItem = null; this.pumping = false; if (state.queue.length) this.emit('buffering', null, item); void this.pump(); },
+      onStart: (utteranceId) => { if (this.isCurrent(state, item, utteranceId)) { this.lastPlayback = { run: state.run, text: item.text, segmentId: item.segmentId }; this.playbackEvent(state.run, 'playback.started', utteranceId); if (this.isCurrent(state, item, utteranceId)) this.emit('speaking', null, item); } },
+      onEnd: (utteranceId) => { if (!this.isCurrent(state, item, utteranceId)) return; this.playbackEvent(state.run, 'playback.ended', utteranceId); if (!this.isCurrent(state, item, utteranceId)) return; this.activeItem = null; this.pumping = false; if (state.queue.length) this.emit('buffering', null, item); void this.pump(); },
       onFailure: (utteranceId, code) => {
         if (!this.isCurrent(state, item, utteranceId)) return;
         this.blocked = code === 'playback_permission_denied';

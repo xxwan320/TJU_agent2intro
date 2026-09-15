@@ -1,0 +1,824 @@
+[
+  {
+    "id": "rule-museum-personal",
+    "title": "校史馆个人参观时段",
+    "campus_ids": [
+      "weijinlu"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "fact_ids": [
+      "r3-museum-personal"
+    ],
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "action": "常设指南：个人周五六14:00-17:00参观，16:00停止入馆，个人无需预约。",
+    "audience": "按来源指定身份",
+    "claim_type": "published_rule",
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [
+      "conflict-museum-calendar"
+    ]
+  },
+  {
+    "id": "rule-museum-group",
+    "title": "校史馆团体参观时段",
+    "campus_ids": [
+      "weijinlu"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "fact_ids": [
+      "r3-museum-group"
+    ],
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "action": "常设指南：团队周二至六9:00-11:30、13:30-16:30；周日一维护，节假日寒暑假不沿用。",
+    "audience": "按来源指定身份",
+    "claim_type": "published_rule",
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [
+      "conflict-museum-calendar"
+    ]
+  },
+  {
+    "id": "rule-museum-booking",
+    "title": "校史馆团体预约",
+    "campus_ids": [
+      "weijinlu"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "fact_ids": [
+      "r3-museum-booking"
+    ],
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "action": "团队至少提前2天，经融合门户、办事大厅的校史博物馆参观预约办理。",
+    "audience": "按来源指定身份",
+    "claim_type": "published_rule",
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": [
+      "conflict-museum-calendar"
+    ]
+  },
+  {
+    "id": "rule-museum-id",
+    "title": "校史馆证件登记",
+    "campus_ids": [
+      "weijinlu"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "fact_ids": [
+      "r3-museum-id"
+    ],
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "action": "个人入馆需有效证件登记；入馆手续不能证明已获进校资格。",
+    "audience": "按来源指定身份",
+    "claim_type": "published_rule",
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-museum-late",
+    "title": "校史馆团队迟到",
+    "campus_ids": [
+      "weijinlu"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "fact_ids": [
+      "r3-museum-late"
+    ],
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "action": "团队迟到超过半小时不保证讲解；未提前电话告知且超半小时按取消处理。",
+    "audience": "按来源指定身份",
+    "claim_type": "published_rule",
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-museum-companion",
+    "title": "校史馆陪同要求",
+    "campus_ids": [
+      "weijinlu"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "fact_ids": [
+      "r3-museum-companion"
+    ],
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "action": "未成年人由成年人陪同；高龄老人及行动不便者须亲友陪同。",
+    "audience": "按来源指定身份",
+    "claim_type": "published_rule",
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-museum-food",
+    "title": "校史馆展厅饮食",
+    "campus_ids": [
+      "weijinlu"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "fact_ids": [
+      "r3-museum-food"
+    ],
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "action": "展厅不携带饮料；馆内不得饮食或吸烟。",
+    "audience": "按来源指定身份",
+    "claim_type": "published_rule",
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-museum-photo",
+    "title": "校史馆摄影",
+    "campus_ids": [
+      "weijinlu"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "fact_ids": [
+      "r3-museum-photo"
+    ],
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "action": "未经许可不得在馆内使用闪光灯拍照或摄像。",
+    "audience": "按来源指定身份",
+    "claim_type": "published_rule",
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-museum-closure",
+    "title": "校史馆临时闭馆",
+    "campus_ids": [
+      "weijinlu"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "fact_ids": [
+      "r3-museum-closure"
+    ],
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "action": "学校重大活动可能导致临时闭馆；应先核实活动安排。",
+    "audience": "按来源指定身份",
+    "claim_type": "published_rule",
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-museum-contact",
+    "title": "校史馆咨询",
+    "campus_ids": [
+      "weijinlu"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "fact_ids": [
+      "r3-museum-contact"
+    ],
+    "source_refs": [
+      "src-r3-museum"
+    ],
+    "action": "校史馆咨询电话022-27402305，工作日8:30-16:30；雨天改室内前先询问准入及无障碍设施。",
+    "audience": "按来源指定身份",
+    "claim_type": "published_rule",
+    "published_at": null,
+    "applicable_at": "常设指南；发布日期未显示；秋季适用待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-library-hours",
+    "title": "图书馆常规开放时段",
+    "campus_ids": [
+      "weijinlu",
+      "beiyangyuan"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library",
+      "weijinlu-chunshui-library",
+      "weijinlu-science-library"
+    ],
+    "fact_ids": [
+      "r3-library-hours-wj",
+      "r3-library-hours-by"
+    ],
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "action": "2024新生指南列双校区周一至日8:00-22:30；法定节假日及寒暑假另行安排。",
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "claim_type": "published_rule",
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-library-entry",
+    "title": "新生图书馆入馆凭证",
+    "campus_ids": [
+      "weijinlu",
+      "beiyangyuan"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library",
+      "weijinlu-chunshui-library",
+      "weijinlu-science-library"
+    ],
+    "fact_ids": [
+      "r3-library-entry-wj",
+      "r3-library-entry-by"
+    ],
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "action": "新生可使用一卡通实卡、电子支付码或自主绑定的人脸识别入馆。",
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "claim_type": "published_rule",
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-library-newstudent",
+    "title": "暂无一卡通的新生入馆",
+    "campus_ids": [
+      "weijinlu",
+      "beiyangyuan"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library",
+      "weijinlu-chunshui-library",
+      "weijinlu-science-library"
+    ],
+    "fact_ids": [
+      "r3-library-newstudent-wj",
+      "r3-library-newstudent-by"
+    ],
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "action": "暂无一卡通的新生可凭录取报到通知单入馆；不适用于一般社会访客。",
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "claim_type": "published_rule",
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-library-account",
+    "title": "新生图书馆账户",
+    "campus_ids": [
+      "weijinlu",
+      "beiyangyuan"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library",
+      "weijinlu-chunshui-library",
+      "weijinlu-science-library"
+    ],
+    "fact_ids": [
+      "r3-library-account-wj",
+      "r3-library-account-by"
+    ],
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "action": "激活学校统一认证后开通图书馆账户，取得图书借还、空间服务权限。",
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "claim_type": "published_rule",
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-library-seat",
+    "title": "图书馆预约空间",
+    "campus_ids": [
+      "weijinlu",
+      "beiyangyuan"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library",
+      "weijinlu-chunshui-library",
+      "weijinlu-science-library"
+    ],
+    "fact_ids": [
+      "r3-library-seat-wj",
+      "r3-library-seat-by"
+    ],
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "action": "部分自习及研讨空间实行预约；新生绑定天圕服务后预约使用。",
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "claim_type": "published_rule",
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-library-food",
+    "title": "图书馆阅览区饮食",
+    "campus_ids": [
+      "weijinlu",
+      "beiyangyuan"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library",
+      "weijinlu-chunshui-library",
+      "weijinlu-science-library"
+    ],
+    "fact_ids": [
+      "r3-library-food-wj",
+      "r3-library-food-by"
+    ],
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "action": "不要把食物、饮料或冲调饮品带入阅览区。",
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "claim_type": "published_rule",
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-library-notice",
+    "title": "图书馆最新安排查询",
+    "campus_ids": [
+      "weijinlu",
+      "beiyangyuan"
+    ],
+    "entity_ids": [
+      "beiyangyuan-zhengdong-library",
+      "weijinlu-chunshui-library",
+      "weijinlu-science-library"
+    ],
+    "fact_ids": [
+      "r3-library-notice-wj",
+      "r3-library-notice-by"
+    ],
+    "source_refs": [
+      "src-r3-library-guide"
+    ],
+    "action": "通过天津大学图书馆订阅号查看最新资讯；天圕服务绑定后使用各类服务。",
+    "audience": "新生读者；一般社会访客资格未覆盖",
+    "claim_type": "published_rule",
+    "published_at": "2024-08-20",
+    "applicable_at": "2024新生及常规学期；法定节假日寒暑假另行安排",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-haitang-student",
+    "title": "2026海棠季中学生免预约条件",
+    "campus_ids": [
+      "weijinlu",
+      "beiyangyuan"
+    ],
+    "entity_ids": [],
+    "fact_ids": [
+      "r3-haitang-student-wj",
+      "r3-haitang-student-by"
+    ],
+    "source_refs": [
+      "src-r3-haitang-2026"
+    ],
+    "action": "2026海棠季初高中学生出示本人中学生证、陪同家长身份证，可免线上预约。",
+    "audience": "按来源指定身份",
+    "claim_type": "historical_rule",
+    "published_at": "2026-04-01",
+    "applicable_at": "2026-04-04至2026-04-11",
+    "valid_from": "2026-04-04",
+    "valid_until": "2026-04-11",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-haitang-public",
+    "title": "2026海棠季市民预约",
+    "campus_ids": [
+      "weijinlu",
+      "beiyangyuan"
+    ],
+    "entity_ids": [],
+    "fact_ids": [
+      "r3-haitang-public-wj",
+      "r3-haitang-public-by"
+    ],
+    "source_refs": [
+      "src-r3-haitang-2026"
+    ],
+    "action": "市民通过天大海棠季入校预约系统申请。",
+    "audience": "按来源指定身份",
+    "claim_type": "historical_rule",
+    "published_at": "2026-04-01",
+    "applicable_at": "2026-04-04至2026-04-11",
+    "valid_from": "2026-04-04",
+    "valid_until": "2026-04-11",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-haitang-family",
+    "title": "2026海棠季亲友校友入口",
+    "campus_ids": [
+      "weijinlu",
+      "beiyangyuan"
+    ],
+    "entity_ids": [],
+    "fact_ids": [
+      "r3-haitang-family-wj",
+      "r3-haitang-family-by"
+    ],
+    "source_refs": [
+      "src-r3-haitang-2026"
+    ],
+    "action": "在校生及亲友通过学生访客、校友通过校友卡提交入校申请。",
+    "audience": "按来源指定身份",
+    "claim_type": "historical_rule",
+    "published_at": "2026-04-01",
+    "applicable_at": "2026-04-04至2026-04-11",
+    "valid_from": "2026-04-04",
+    "valid_until": "2026-04-11",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-haitang-transport",
+    "title": "2026海棠季交通提示",
+    "campus_ids": [
+      "weijinlu",
+      "beiyangyuan"
+    ],
+    "entity_ids": [],
+    "fact_ids": [
+      "r3-haitang-transport-wj",
+      "r3-haitang-transport-by"
+    ],
+    "source_refs": [
+      "src-r3-haitang-2026"
+    ],
+    "action": "活动建议绿色出行、勿驾车进校并错峰参观。",
+    "audience": "按来源指定身份",
+    "claim_type": "historical_rule",
+    "published_at": "2026-04-01",
+    "applicable_at": "2026-04-04至2026-04-11",
+    "valid_from": "2026-04-04",
+    "valid_until": "2026-04-11",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-dining-halal-wj",
+    "title": "卫津路清真餐饮线索",
+    "campus_ids": [
+      "weijinlu"
+    ],
+    "entity_ids": [
+      "weijinlu-xue-5-dining"
+    ],
+    "fact_ids": [
+      "r3-dining-halal-wj"
+    ],
+    "source_refs": [
+      "src-dining-2024"
+    ],
+    "action": "2024页面将学五二层列为面向全校学生的清真食堂；先确认当前楼层及游客支付。",
+    "audience": "全校学生；游客条件pending",
+    "claim_type": "historical_rule",
+    "published_at": "2024-08-15",
+    "applicable_at": "2024-08-15食堂页面；2026窗口与游客支付待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-dining-halal-by",
+    "title": "北洋园清真餐饮线索",
+    "campus_ids": [
+      "beiyangyuan"
+    ],
+    "entity_ids": [
+      "beiyangyuan-xue-6-dining"
+    ],
+    "fact_ids": [
+      "r3-dining-halal-by"
+    ],
+    "source_refs": [
+      "src-dining-2024"
+    ],
+    "action": "2024页面列学六为菊园餐厅、清真食堂；现行营业与访客条件待确认。",
+    "audience": "按来源指定身份",
+    "claim_type": "historical_rule",
+    "published_at": "2024-08-15",
+    "applicable_at": "2024-08-15食堂页面；2026窗口与游客支付待确认",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-summer-student",
+    "title": "2026暑期中小学生入校",
+    "campus_ids": [
+      "weijinlu",
+      "beiyangyuan"
+    ],
+    "entity_ids": [],
+    "fact_ids": [
+      "r3-summer-student-wj",
+      "r3-summer-student-by"
+    ],
+    "source_refs": [
+      "src-r3-summer-entry"
+    ],
+    "action": "暑期政策至8月26日：中小学生持学生证或身份证等有效证件，在家长陪同下免预约入校。",
+    "audience": "按来源指定身份",
+    "claim_type": "historical_rule",
+    "published_at": "2026-07-25",
+    "applicable_at": "原报道2026-07-24即日起至2026-08-26；转载2026-07-25",
+    "valid_from": "2026-07-24",
+    "valid_until": "2026-08-26",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-museum-summer",
+    "title": "2026暑期校史馆开放",
+    "campus_ids": [
+      "weijinlu"
+    ],
+    "entity_ids": [
+      "weijinlu-history-museum"
+    ],
+    "fact_ids": [
+      "r3-museum-summer"
+    ],
+    "source_refs": [
+      "src-r3-museum-summer"
+    ],
+    "action": "2026暑期总结记录工作日免预约入馆；新闻报道已收官，不作为秋季开放表。",
+    "audience": "按来源指定身份",
+    "claim_type": "historical_rule",
+    "published_at": "2026-09-07",
+    "applicable_at": "2026暑期；已结束，起止日未完整列明",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": [
+      "conflict-museum-calendar"
+    ]
+  },
+  {
+    "id": "rule-driving-august",
+    "title": "2026迎新驾车预约暂停",
+    "campus_ids": [
+      "weijinlu",
+      "beiyangyuan"
+    ],
+    "entity_ids": [],
+    "fact_ids": [
+      "r3-driving-august-wj",
+      "r3-driving-august-by"
+    ],
+    "source_refs": [
+      "src-r3-driving-august"
+    ],
+    "action": "就业中心提示用人单位8月25至31日暂停驾车进校预约，改约非机动车方式；不外推为全年限制。",
+    "audience": "用人单位",
+    "claim_type": "historical_rule",
+    "published_at": "2026-08-24",
+    "applicable_at": "2026-08-25至2026-08-31；用人单位",
+    "valid_from": "2026-08-25",
+    "valid_until": "2026-08-31",
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "expired",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-venue-contact-wj",
+    "title": "卫津路场馆咨询",
+    "campus_ids": [
+      "weijinlu"
+    ],
+    "entity_ids": [
+      "weijinlu-gym",
+      "weijinlu-student-center"
+    ],
+    "fact_ids": [
+      "r3-venue-contact-wj"
+    ],
+    "source_refs": [
+      "src-r3-venue-contact"
+    ],
+    "action": "卫津路大活咨询27402492、体育馆27402342；开放与访客资格需先询问。",
+    "audience": "按来源指定身份",
+    "claim_type": "published_rule",
+    "published_at": null,
+    "applicable_at": "常设联系目录；电话实际接通未核验",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  },
+  {
+    "id": "rule-venue-contact-by",
+    "title": "北洋园场馆咨询",
+    "campus_ids": [
+      "beiyangyuan"
+    ],
+    "entity_ids": [
+      "beiyangyuan-gym",
+      "beiyangyuan-qiushi-hall"
+    ],
+    "fact_ids": [
+      "r3-venue-contact-by"
+    ],
+    "source_refs": [
+      "src-r3-venue-contact"
+    ],
+    "action": "北洋园会堂咨询27407870、体育馆18522086627；先核实场次及访客资格。",
+    "audience": "按来源指定身份",
+    "claim_type": "published_rule",
+    "published_at": null,
+    "applicable_at": "常设联系目录；电话实际接通未核验",
+    "valid_from": null,
+    "valid_until": null,
+    "retrieved_at": "2026-09-15T02:17:29.202142+00:00",
+    "source_checked_at": "2026-09-15T02:17:29.202142+00:00",
+    "field_checked_at": null,
+    "current_status": "pending",
+    "conflict_ids": []
+  }
+]

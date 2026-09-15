@@ -26,3 +26,7 @@ cd E:\AI4TJU
 `scripts/start-dev.ps1` 为5173/8000开发模式；`scripts/check-r2.ps1` 为统一离线回归。前端所有模型请求只走自有后端。根.env和运行日志忽略，不复制到工作树。原integration/m0和四个work分支保留，审核政策见[REVIEW_POLICY](docs/REVIEW_POLICY.md)。
 
 [开源选型](docs/OPEN_SOURCE_DECISION.md) · [第三方使用与许可](THIRD_PARTY_NOTICES.md) · [后续比赛能力](docs/NEXT_PHASE.md)。成熟组件直接依赖与设计参考明确分开，角色/SDK授权不随代码许可证自动改变。
+
+## R3 多窗口准备
+
+R3首轮围绕60分钟参观的结构化行程、执行与多轮调整、中文语音往返和基础嘴形。当前仅M0共享准备，不表示业务已完成。五窗实际路径、共同基线和启动条件见 [R3基线](docs/R3/BASELINE.md) 与 [并行启动](docs/R3/PARALLEL_RUN.md)，接口见 [R3契约](docs/R3/CONTRACTS.md)，独立验收见 [矩阵](docs/R3/ACCEPTANCE_MATRIX.md)。保留当前高德同源JS代理、IP粗略起点、目的地匹配和应用内步行。统一离线检查：scripts/check-r3.ps1。

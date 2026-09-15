@@ -1,0 +1,21 @@
+[
+  {
+    "id": "conflict-museum-calendar",
+    "source_refs": [
+      "src-r3-museum",
+      "src-r3-museum-summer"
+    ],
+    "claim": "常设指南的周五六个人开放与2026暑期工作日免预约适用范围不同。",
+    "status": "pending_current_confirmation",
+    "handling": "两者并存；暑期总结不覆盖秋季。联系校史馆确认9月时段，不自动取较新文章替代常设规则。"
+  },
+  {
+    "id": "conflict-dining-order",
+    "source_refs": [
+      "src-dining-2024"
+    ],
+    "claim": "页面枚举学三棠园、学五桃园，但后句按三五顺序写桃园和棠园。",
+    "status": "pending_editor_confirmation",
+    "handling": "沿用带编号详细段落的学三棠园、学五桃园；保留内文差异，不因后句交换POI身份。"
+  }
+]

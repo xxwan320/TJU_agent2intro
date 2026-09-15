@@ -12,6 +12,8 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 from backend.common.config import get_settings
 from backend.common.errors import DomainError
 from backend.contracts import ApiError, ErrorDetail, Health, CONTRACT_VERSION
+from backend.common.knowledge_tour_routes import router as knowledge_tour_router
+from backend.common.tour_routes import router as tour_router
 from backend.model.routes import router as model_router
 from backend.model.stream_routes import router as stream_router
 from backend.maps.routes import router as maps_router
@@ -61,6 +63,8 @@ def health():
         capabilities={"chat": connectivity.configured,
             "asr": bool(settings.asr_url and settings.asr_model and settings.asr_api_key.get_secret_value() and settings.asr_url.rstrip("/") not in (settings.llm_url.rstrip("/"), settings.sdk_base_url.rstrip("/"))),
             "tts": speech.tts_verified, "knowledge": knowledge.get_status().status == "ready", "scene_3d": False})
+app.include_router(knowledge_tour_router)
+app.include_router(tour_router)
 app.include_router(model_router)
 app.include_router(speech_router)
 app.include_router(knowledge_router)

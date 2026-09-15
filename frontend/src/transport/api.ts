@@ -5,7 +5,7 @@ export async function api<T>(path:string, options?:RequestInit):Promise<T> {
   const external=options?.signal;
   const abort=()=>controller.abort(external?.reason);
   if(external?.aborted)abort();else external?.addEventListener('abort',abort,{once:true});
-  const timeout=setTimeout(()=>controller.abort(new Error('transport_timeout')),path==='/chat'?125000:15000);
+  const timeout=setTimeout(()=>controller.abort(new Error('transport_timeout')),(path==='/chat'||path==='/tours'||path.startsWith('/tours/'))?125000:15000);
   try {
     const response=await fetch('/api'+path,{...options,signal:controller.signal});
     let body:unknown;

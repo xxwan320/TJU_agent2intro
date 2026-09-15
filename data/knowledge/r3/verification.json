@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-09-15T02:43:31.628624+00:00",
+  "data_version": "sha256:ca65cc62c92e",
+  "tests": {
+    "command": ".venv/Scripts/python.exe -B -m pytest -p no:langsmith -p no:cacheprovider -q tests/knowledge tests/test_r3_contracts.py",
+    "passed": 50,
+    "failed": 0,
+    "warning": "existing Starlette/AnyIO deprecation warning"
+  },
+  "import_validation": "PASS: 106 POI, 242 facts+metadata, 28 rules, 15 core, 22 sources, 2 conflict records",
+  "retrieval_report": "verification-retrieval.json",
+  "holdout": "NOT_RUN_BY_D",
+  "tasks": "NOT_RUN; M responsible",
+  "real_model": "NOT_RUN",
+  "real_maps": "NOT_RUN",
+  "field_visit": "NOT_RUN",
+  "browser_visual": "NOT_RUN",
+  "usable_photos": 0,
+  "notes": [
+    "Read-only metadata/schema checks include holdout reference existence, never execute holdout questions.",
+    "No new embedding/reranker, dependency, lock, app entry or shared contract change.",
+    "Local HTTP views checked through TestClient; this is not a real browser or deployed backend."
+  ]
+}

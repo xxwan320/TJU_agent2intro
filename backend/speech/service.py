@@ -16,7 +16,7 @@ from uuid import UUID, uuid4
 import wave
 
 import edge_tts
-from openai import AsyncOpenAI
+from openai import AsyncOpenAI, APITimeoutError
 
 from backend.common.config import Settings, get_settings
 from backend.common.errors import DomainError
@@ -41,6 +41,7 @@ class Operation:
     session_id: UUID
     task: asyncio.Task
     upstream_started: bool = False
+    cancelled: bool = False
 
 
 @dataclass
@@ -149,12 +150,15 @@ class CampusSpeechService:
             )
         operation = self._begin(request.request_id, request.session_id)
         operation.upstream_started = True
+        client = None
         try:
             client = prepare_asr_client(asr_url, key)
             result = await client.audio.transcriptions.create(
                 model=self.settings.asr_model,
                 file=("speech.wav", audio, "audio/wav"),
             )
+            if self._operations.get(request.request_id) is not operation or operation.cancelled or operation.task.cancelling():
+                raise DomainError("stopped", "语音识别已取消", 499, request.request_id)
             text = result.text.strip()
             if not text:
                 raise DomainError("asr_empty", "语音服务未识别到文字", 503, request.request_id, True)
@@ -163,11 +167,18 @@ class CampusSpeechService:
             raise DomainError("stopped", "语音识别已取消", 499, request.request_id) from None
         except DomainError:
             raise
+        except (APITimeoutError, asyncio.TimeoutError):
+            raise DomainError("asr_timeout", "语音识别超时，请重试", 503, request.request_id, True) from None
         except Exception as error:
             logger.warning("ASR provider failed (%s)", type(error).__name__)
             raise DomainError("asr_unavailable", "语音识别服务暂时不可用", 503, request.request_id, True) from None
         finally:
             self._finish(request.request_id, operation)
+            if client is not None:
+                try:
+                    await client.close()
+                except Exception:
+                    pass
 
     async def synthesize(self, request: TtsRequest) -> TtsResponse:
         if self.settings.tts_provider != "edge":
@@ -184,6 +195,8 @@ class CampusSpeechService:
         operation.upstream_started = True
         try:
             await asyncio.wait_for(prepare_edge_tts(request.text, voice).save(str(temporary)), timeout=30)
+            if operation.cancelled:
+                raise asyncio.CancelledError()
             temporary.replace(destination)
             size = destination.stat().st_size
             if size <= 0 or size > MAX_AUDIO_BYTES:
@@ -229,6 +242,7 @@ class CampusSpeechService:
         if operation.session_id != request.session_id:
             raise DomainError("session_conflict", "语音操作不属于该会话", 409, request.request_id)
         upstream = "unconfirmed" if operation.upstream_started else "not_started"
+        operation.cancelled = True
         if not operation.task.done():
             operation.task.cancel()
             await asyncio.sleep(0)
