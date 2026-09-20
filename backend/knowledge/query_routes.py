@@ -7,6 +7,8 @@ from pydantic import BaseModel, ConfigDict, Field
 from typing import Literal
 from .service import knowledge
 from .retrieval import ROOT, retriever, today
+from .campus_feeds import campus_feeds
+from .user_library import user_library
 
 router=APIRouter(prefix='/api/campus',tags=['campus-evidence'])
 
@@ -30,7 +32,10 @@ async def execute_tool(name:str,args:dict,deadline=None):
         poi=knowledge.get_poi(value.poiId)
         return {'poiId':poi.id,'campusId':poi.campus_id,'name':poi.name,'description':poi.description,'sourceIds':poi.source_refs}
     if name=='search_local':
-        return [s.model_dump() for s in knowledge.search(value.query,value.campusId,6)]
+        local=knowledge.search(value.query,value.campusId,6)
+        return [s.model_dump() for s in local+user_library.search_campus(value.query,value.campusId,4)]
+    if name=='search_subscriptions':
+        return [s.model_dump() for s in await campus_feeds.search(value.query,value.campusId,6)]
     if name in ('search_official','search_supplemental'):
         return asdict(await retriever.retrieve(value.query,value.campusId,value.poiId,
                       str(value.asOf) if value.asOf else today(),deadline=deadline,supplemental=name=='search_supplemental'))
@@ -63,5 +68,6 @@ async def query_trace(request_id:str):
 TOOLS=[{'type':'function','function':{'name':name,'description':description,
         'parameters':ToolArgs.model_json_schema()}} for name,description in [
     ('get_poi','读取同校区已登记地点，不能生成ID'),('search_local','查询本地校园资料'),
+    ('search_subscriptions','检索校内公众号链接与可用维基缓存；标题和旧缓存不能确认今日规定'),
     ('search_official','限时读取注册官方来源'),('search_supplemental','读取社区文化资料，不能确认今日开放'),
     ('get_trip_brief','取得已选站点出发提示和已收录公告')]]
