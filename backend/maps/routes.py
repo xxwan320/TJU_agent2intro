@@ -12,11 +12,13 @@ settings=get_settings();maps=MapService(settings)
 @router.get("/status",response_model=MapStatus)
 def status():
  def exists(asset):
-  public=(Path(__file__).resolve().parents[2]/"frontend"/"public").resolve()
   relative=asset.local_path
   if not relative.startswith("/assets/"):return False
-  target=(public/relative.lstrip("/")).resolve()
-  return target.is_relative_to(public) and target.is_file()
+  root=Path(__file__).resolve().parents[2]
+  for public in ((root/"dist").resolve(),(root/"frontend"/"public").resolve()):
+   target=(public/relative.lstrip("/")).resolve()
+   if target.is_relative_to(public) and target.is_file():return True
+  return False
  getter=getattr(knowledge,"get_campus_assets",None) or getattr(knowledge,"get_assets",None)
  local_ready=False
  if getter:

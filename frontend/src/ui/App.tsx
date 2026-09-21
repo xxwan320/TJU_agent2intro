@@ -11,6 +11,7 @@ import { GuidePresentation } from './GuidePresentation';
 import { introductionIntent,mentionedPois } from './introduction';
 import {ChatComposer,type ChatComposerHandle} from './ChatComposer';
 import {presentationText} from '../../../shared/presentation-text';
+import {poiIntroduction} from './poi-introduction';
 import type { CampusAssets, GenerationOptions, POI, SpeechController, SpeechProgress, SpeechRun, StreamEvent } from '../../../shared/r2';
 import { createAvatarAdapter } from '../avatar/adapter';
 import { createSpeechController, SPEECH_ERROR_MESSAGES } from '../speech/controller';
@@ -350,8 +351,8 @@ export function App() {
     if(epoch!==playbackEpoch.current||poi.id!==selectedPoiRef.current?.id)return;
     rememberPoi(poi);
     const prior=narrationSnapshotRef.current;
-    if(!prior||prior.poi.id!==poi.id||['ended','stopped','error'].includes(prior.status))introductionTask.current={id:addDialog(topic===poi.name?'介绍一下'+poi.name:topic,poi.name+'。'+poi.description,'introduction',poi),poiId:poi.id};
-    setSpeechEnabled(true);setNarrationText(poi.description);
+    if(!prior||prior.poi.id!==poi.id||['ended','stopped','error'].includes(prior.status))introductionTask.current={id:addDialog(topic===poi.name?'介绍一下'+poi.name:topic,poiIntroduction(poi),'introduction',poi),poiId:poi.id};
+    setSpeechEnabled(true);setNarrationText(poiIntroduction(poi));
     await narratorRef.current?.start(poi,topic,currentSession('chat',poi.campus_id),voiceId);
   }
   async function recoverSpeech(){

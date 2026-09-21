@@ -2,6 +2,7 @@ import type {POI, SpeechProgress, SpeechRun} from '../../../shared/r2';
 import type {CampusSpeechController} from '../speech/controller';
 import {tourKnowledgeContext} from '../transport/r3-knowledge';
 import {tourPhotosFor,type TourPhoto} from './tour-photos';
+import {poiIntroduction} from './poi-introduction';
 
 export type NarrationStatus='preparing'|'playing'|'buffering'|'paused'|'ended'|'stopped'|'error';
 export interface NarrationSnapshot {
@@ -34,7 +35,7 @@ export class NarrationSession {
     this.lastStart={poi,topic,sessionId,voiceId};this.started=false;
     const id=crypto.randomUUID(), abort=new AbortController();this.abort=abort;
     const photos=tourPhotosFor(poi.id,poi.name);
-    this.active={id,poi,status:'preparing',text:poi.name+'。'+poi.description,caption:'',photos,mediaStatus:photos[0]?.placeholder?'missing':'ready',error:null};
+    this.active={id,poi,status:'preparing',text:poiIntroduction(poi),caption:'',photos,mediaStatus:photos[0]?.placeholder?'missing':'ready',error:null};
     this.publish(this.active);guideTrace('introduction.request',{id,poi:poi.id,campus:poi.campus_id});
     const current=()=>this.active?.id===id&&!abort.signal.aborted;
     // Point-specific image sets are local and never block narration preparation.
@@ -44,8 +45,14 @@ export class NarrationSession {
     if(enabled.status!=='ready'){this.update({status:'error',error:'点击继续播放以开启声音。'});return;}
     const extra=await Promise.race([context,new Promise<null>(resolve=>{const timer=setTimeout(()=>resolve(null),1600);abort.signal.addEventListener('abort',()=>{clearTimeout(timer);resolve(null);},{once:true});})]);
     if(!current())return;
-    const claims=(extra?.evidence??[]).filter(x=>x.poi_id===poi.id&&x.campus_id===poi.campus_id&&x.evidence.relation==='supports'&&['stable_fact','historical_event'].includes(x.claim_type)&&['verified','historical'].includes(x.evidence.verification)&&x.current_status!=='conflict').map(x=>x.evidence.claim.replace(/（适用日期未提供）/g,''));
-    const text=[poi.name+'。',poi.description,...[...new Set(claims)].filter(s=>!s.startsWith(poi.description)).slice(0,3)].join('\n');
+    const introduction=poiIntroduction(poi);
+    const claims=(extra?.evidence??[]).filter(x=>x.poi_id===poi.id&&x.campus_id===poi.campus_id&&x.evidence.relation==='supports'&&['stable_fact','historical_event'].includes(x.claim_type)&&['verified','historical'].includes(x.evidence.verification)&&x.current_status!=='conflict').map(x=>x.evidence.claim.replace(/（适用日期未提供）/g,'')).filter(claim=>{
+      const core=claim.trim().replace(/[。！？!?；;]+$/g,'');
+      if(/^(?:校方|学校).*资料.*(?:列有|收录)/.test(core))return false;
+      const withoutName=core.startsWith(poi.name)?core.slice(poi.name.length):core;
+      return !introduction.includes(core)&&!(withoutName.length>=4&&introduction.includes(withoutName));
+    });
+    const text=[introduction,...[...new Set(claims)].slice(0,3)].join('\n');
     this.update({text});
     const run:SpeechRun={request_id:id,session_id:sessionId,campus_id:poi.campus_id,generation_id:id,voice_id:voiceId||'edge:zh-CN-XiaoxiaoNeural',mode:'full',signal:abort.signal};
     const result=await this.speech.playFull(run,text);
