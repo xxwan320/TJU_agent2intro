@@ -90,19 +90,15 @@ class Planner:
 
     @staticmethod
     def _diversify(selected, required, previous_ids, pool_ids, avoid):
-        """Keep at most one previously used optional stop so '换一批' really changes the set."""
+        """Replace optional stops, preferring unseen candidates; never relax constraints."""
         if not previous_ids:
             return selected
-        required_set = set(required)
         result = list(selected)
-        reused = [pid for pid in result if pid not in required_set and pid in previous_ids]
-        if len(reused) <= 1:
-            return result
-        replacements = [pid for pid in pool_ids if pid not in result and pid not in previous_ids and pid not in avoid]
-        for pid in reused[1:]:
-            if not replacements:
-                break
-            result[result.index(pid)] = replacements.pop(0)
+        reused = [pid for pid in result if pid not in required and pid in previous_ids]
+        replacements = [pid for pid in pool_ids if pid not in result and pid not in avoid]
+        replacements.sort(key=lambda pid: pid in previous_ids)
+        for pid, replacement in zip(reused, replacements):
+            result[result.index(pid)] = replacement
         return result
 
     async def create(self, body, metrics, previous_plans=None):
@@ -177,7 +173,15 @@ class Planner:
                 selected = suggestion
             except (ValueError, KeyError, TypeError):
                 warnings.append('模型候选未通过约束检查，已使用目录候选草稿。')
+        # Start from the last set when constraints still permit it, so repeated
+        # refreshes cannot settle on the same deterministic alternative.
+        if previous_plans:
+            last = previous_plans[-1]
+            if len(last) == len(selected) and set(required) <= set(last) <= set(pool_ids) and not set(last) & set(req.avoid):
+                selected = list(last)
         selected = self._diversify(selected, required, previous_ids, pool_ids, req.avoid)
+        if previous_plans and set(selected) == set(previous_plans[-1]):
+            warnings.append('换一批：当前必去、起终点和避开条件下没有可替换站点；已保留原站点。可减少必去点或放宽避开条件后重试。')
         if body.start.kind == 'poi' and body.start.poi_id in selected:
             selected.remove(body.start.poi_id); selected.insert(0, body.start.poi_id)
         if body.end.kind == 'poi' and body.end.poi_id in selected:

@@ -294,3 +294,25 @@
 .poi-profile-stories a {font-size:12px;padding:0;min-height:auto;border:0;color:#155b50}
 .poi-card .poi-actions {margin-top:20px;flex-wrap:wrap}
 @media(max-width:640px) {.poi-profile{grid-template-columns:1fr}.poi-profile figure{min-height:0;height:180px}}
+
+/* Let the artwork show through large surfaces; keep controls and maps crisp. */
+.r2-shell:has(.tour-workspace){position:relative;isolation:isolate;background:transparent;--muted:#435d70}
+.r2-shell:has(.tour-workspace)::before{content:"";position:fixed;inset:-22px;z-index:-1;pointer-events:none;background:linear-gradient(#ffffff14,#ffffff24),url('/assets/campus/background.jpg') center bottom/cover no-repeat;filter:blur(10px)}
+.r2-shell:has(.tour-workspace) .topbar{background:rgba(255,255,255,.74);backdrop-filter:blur(12px)}
+.tour-workspace .tour-input,.tour-workspace .tour-plan,.tour-workspace .saved-tours,.tour-map .explorer{background:rgba(255,255,255,.60);border-color:rgba(255,255,255,.82);box-shadow:0 8px 28px #2643570c;backdrop-filter:blur(5px)}
+.tour-map .explorer-toolbar,.tour-map .location-panel,.tour-map .poi-directory,.tour-map .directory-summary,.tour-map .map-budget{background:transparent}
+.tour-map .poi-list>button{background:rgba(255,255,255,.25);border-bottom-color:#6a81951c;color:var(--ink)}
+.tour-map .poi-list>button:hover,.tour-map .poi-list>button.selected{background:#e5f3f9ed}
+.tour-workspace .tour-constraint-group{background:rgba(255,255,255,.28);border-color:#607e9638}
+.tour-workspace .poi-card,.tour-workspace .route-result{background:rgba(255,255,255,.76)}
+.tour-workspace input,.tour-workspace select,.tour-workspace textarea{background:rgba(255,255,255,.92);color:#193b50;border-color:#94aebe}
+.tour-workspace .tour-composer-input{background:transparent}
+.tour-workspace .location-panel,.tour-workspace .directory-summary,.tour-workspace .tour-input>summary{color:#193b50}
+.tour-workspace .location-panel span,.tour-workspace .poi-card p{color:#435d70}
+@media(max-width:640px){.tour-workspace .tour-input,.tour-workspace .tour-plan,.tour-workspace .saved-tours,.tour-map .explorer{background:rgba(255,255,255,.70)}}
+.common-origin{display:flex;gap:8px;min-width:180px;max-width:100%;margin-top:10px}
+.common-origin select{min-width:0;max-width:100%;padding:9px;border:1px solid var(--line-strong);border-radius:8px;background:white;color:var(--ink)}
+@media(max-width:640px){
+ .r2-shell .tour-workspace .tour-input[open]>form{display:flex;flex-direction:column;gap:16px}
+ .r2-shell .tour-workspace .tour-input .tour-form-row{grid-template-columns:minmax(0,1fr)}
+}

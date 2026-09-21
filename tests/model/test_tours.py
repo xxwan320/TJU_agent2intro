@@ -291,3 +291,36 @@ def test_variety_keeps_at_most_one_previous_optional_stop():
         assert len(set(second_ids)&set(first_ids))<=1
         assert provider.calls==2
     asyncio.run(run())
+
+
+@pytest.mark.parametrize('campus', ['weijinlu', 'beiyangyuan'])
+def test_refresh_single_optional_stop_keeps_constraints_across_rounds(campus):
+    async def run():
+        service, provider = fixture_service(Costs())
+        ids = [f'fixture-{campus}-{i}' for i in range(5)]
+        body = request(campus_id=campus, start={'kind':'poi', 'poi_id':ids[0]},
+                       end={'kind':'poi', 'poi_id':ids[1]}, must_visit=[ids[0]],
+                       avoid=[ids[4]], max_walking_minutes=10, accessibility='step_free')
+        previous = None
+        for _ in range(6):
+            result = (await service.create(body.model_copy(update={'request_id':uuid4()}))).session
+            current = [s.poi_id for s in result.plan.stops]
+            assert current[0] == ids[0] and current[-1] == ids[1]
+            assert ids[4] not in current
+            assert len(current) == 3 and current != previous
+            assert result.plan.request.max_walking_minutes == 10
+            assert result.plan.request.accessibility == 'step_free'
+            previous = current
+        assert provider.calls == 0
+    asyncio.run(run())
+
+
+def test_refresh_fixed_stops_explains_no_alternative():
+    async def run():
+        service, _ = fixture_service(Costs())
+        body = request(must_visit=['fixture-weijinlu-0','fixture-weijinlu-1'])
+        first = (await service.create(body)).session
+        second = (await service.create(body.model_copy(update={'request_id':uuid4()}))).session
+        assert [s.poi_id for s in first.plan.stops] == [s.poi_id for s in second.plan.stops]
+        assert any('没有可替换站点' in warning for warning in second.plan.warnings)
+    asyncio.run(run())

@@ -62,15 +62,15 @@ test('I06-I08 map/manual origin, route retention, late route cancellation, missi
  directory(h,samples[4].name).props.onClick();await h.settle();assert.equal(r.drawn.length,1);assert.ok(text(h.tree).includes('步行方案'));
  let finish;const original=r.map.navigate;r.map.navigate=async req=>new Promise(resolve=>finish=()=>original(req).then(resolve));button(h,'从起点步行到这里').onClick();await h.settle();button(h,'清空路线').onClick();finish();await h.settle();assert.equal(r.drawn.length,0);
  r.map.findDestination=async()=>{throw Error('destination_not_found');};directory(h,samples[2].name).props.onClick();await h.settle();assert.equal(r.destination,null);assert.ok(text(h.tree).includes('暂未定位'));assert.ok(nodes(h.tree).some(n=>n.type?.name==='PoiProfile'&&n.props.poi.id===samples[2].id&&n.props.poi.description===samples[2].description)); // This fixture does not render child components; Chrome verifies visibility.
- input(h,'手动起点经度').onChange({target:{value:'181'}});input(h,'手动起点纬度').onChange({target:{value:'39'}});await h.settle();button(h,'应用').onClick();await h.settle();assert.ok(text(h.tree).includes('请输入有效'));
+ assert.ok(!nodes(h.tree).some(n=>n.props['aria-label']==='手动起点经度'));
  h.dispose();
 });
-test('all origin buttons: denied GPS, continuous IP update/stop, coarse route rejection, follow toggle and cleanup',async()=>{
+test('origin controls: denied GPS, coarse fallback rejection, continuous update/stop and cleanup',async()=>{
  const r=rig(),h=r.h;await h.settle();await button(h,'定位一次').onClick();await h.settle();assert.ok(text(h.tree).includes('定位权限被拒绝'));
- await button(h,'持续 IP 定位').onClick();await h.settle();assert.equal(r.callbacks.size,1);assert.ok(text(h.tree).includes('IP 城市粗略位置'));
+ r.map.locate=async()=>({...position(),source:'amap_geolocation'});await button(h,'持续定位').onClick();await h.settle();assert.equal(r.callbacks.size,1);assert.ok(text(h.tree).includes('IP 城市粗略位置'));
  button(h,'停止定位').onClick();await h.settle();assert.equal(r.callbacks.size,0);
  directory(h,samples[3].name).props.onClick();await h.settle();await button(h,'先确认步行起点').onClick();await h.settle();assert.ok(text(h.tree).includes('IP 城市中心不能'));
- button(h,'实时跟随路线：关').onClick();await h.settle();assert.equal(button(h,'实时跟随路线：开')['aria-pressed'],true);
+ assert.ok(!text(h.tree).includes('持续 IP 定位'));
  r.map.locate=async()=>({...position(),source:'amap_geolocation',accuracy_m:10});await button(h,'持续定位').onClick();await h.settle();assert.equal(r.callbacks.size,1);h.dispose();assert.equal(r.callbacks.size,0);
 });
 test('chat target and draft itinerary automatically apply paths after origin confirmation, without a second map form',async()=>{
@@ -94,10 +94,28 @@ test('live follow actually replans only after movement/time thresholds and keeps
  try{
   await h.settle();button(h,'在地图选择起点').onClick();r.picker(position());await h.settle();directory(h,samples[3].name).props.onClick();await h.settle();button(h,'从起点步行到这里').onClick();await h.settle();assert.equal(plans,1);
   r.map.locate=async()=>({...position(),lng:117.31+shift,source:'amap_geolocation',accuracy_m:10});Date.now=()=>now()+offset;
-  button(h,'实时跟随路线：关').onClick();await h.settle();button(h,'持续定位').onClick();await h.settle();assert.equal(plans,1);
+  button(h,'持续定位').onClick();await h.settle();assert.equal(plans,1);
   const tick=async()=>{const [id,timer]=[...r.callbacks][0];r.callbacks.delete(id);timer.fn();await h.settle();};
   shift=.0001;offset=61000;await tick();assert.equal(plans,1);
   shift=.002;await tick();assert.equal(plans,2);assert.equal(r.callbacks.size,1);assert.ok(button(h,'停止定位'));
-  button(h,'实时跟随路线：开').onClick();await h.settle();shift=.004;offset=122000;await tick();assert.equal(plans,2);
+  button(h,'停止定位').onClick();await h.settle();assert.equal(r.callbacks.size,0);assert.equal(plans,2);
  }finally{Date.now=now;h.dispose();}
+});
+
+test('draft POI origin and endpoint auto-route without location or extra clicks',async()=>{
+ const r=rig(),h=r.h;await h.settle();const calls=[];const navigate=r.map.navigate;
+ r.map.navigate=async req=>{calls.push(req);return navigate(req);};
+ const session={tour_id:'poi-origin',session_id:'s',status:'checked',plan:{version:1,request:{start:{kind:'poi',poi_id:samples[0].id},end:{kind:'poi',poi_id:samples[4].id}},stops:samples.slice(0,3).map((p,i)=>({poi_id:p.id,stop_id:String(i),title:p.name}))}};
+ h.set({tourSession:session});await h.settle();
+ assert.deepEqual(calls.map(c=>c.destination_poi_id),[samples[1].id,samples[2].id,samples[4].id]);
+ assert.equal(calls[0].origin.lng,117.313);assert.ok(text(h.tree).includes('行程路线已显示'));
+ h.set({tourSession:{...session,status:'active'}});await h.settle();assert.equal(calls.length,3);h.dispose();
+});
+test('common origins use existing POIs and stop continuous location',async()=>{
+ const r=rig(),h=r.h;await h.settle();r.map.locate=async()=>({...position(),source:'amap_geolocation',accuracy_m:10});
+ await button(h,'持续定位').onClick();await h.settle();assert.equal(r.callbacks.size,1);
+ const select=nodes(h.tree).find(n=>n.type==='select'&&n.props['aria-label']==='常用起点');assert.ok(select);
+ assert.equal(nodes(select).filter(n=>n.type==='option').length,samples.length+1);
+ await select.props.onChange({target:{value:samples[2].id}});await h.settle();assert.equal(r.callbacks.size,0);
+ assert.equal(r.map.position.lng,117.313);assert.ok(text(h.tree).includes('常用起点：'+samples[2].name));h.dispose();
 });
