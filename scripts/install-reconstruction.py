@@ -23,6 +23,6 @@ def main():
     (HOME/'compat').mkdir(exist_ok=True)
     (HOME/'compat/torchmcubes.py').write_text('import torch\nfrom skimage.measure import marching_cubes as mc\ndef marching_cubes(volume, threshold):\n v,f,_,_=mc(volume.detach().cpu().numpy(),level=threshold)\n return torch.from_numpy(v[:,[2,1,0]].copy()),torch.from_numpy(f.astype("int64").copy())\n')
     run([py,'-c',f'from huggingface_hub import snapshot_download; import pathlib,json; p=snapshot_download("stabilityai/TripoSR",revision="{WEIGHTS}",allow_patterns=["config.yaml","model.ckpt"]); pathlib.Path(".reconstruction/weights.json").write_text(json.dumps({{"repo":"stabilityai/TripoSR","path":p,"revision":"{WEIGHTS}"}}))'])
-    run([py,'-c',"import rembg,torch; rembg.new_session('u2net',providers=['CPUExecutionProvider']); x=torch.randn(64,64,device='cuda'); assert torch.isfinite(x@x).all(); print(torch.cuda.get_device_name(),torch.version.cuda)"])
+    run([py,'-c',"import rembg,torch; rembg.new_session('u2net',providers=['CPUExecutionProvider']); rembg.new_session('u2netp',providers=['CPUExecutionProvider']); x=torch.randn(64,64,device='cuda'); assert torch.isfinite(x@x).all(); print(torch.cuda.get_device_name(),torch.version.cuda)"])
     print('Installed. Run a reconstruction job to validate mesh extraction and output quality.')
 if __name__=='__main__':main()
