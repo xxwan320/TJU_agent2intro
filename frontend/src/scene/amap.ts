@@ -1,3 +1,4 @@
+import {registerReconstructionMap} from './reconstruction-map';
 import type { TourSession, TourStop } from '../../../shared/r3';
 import type { CampusId } from '../../../shared/contracts';
 import { navigateTourStop } from '../transport/tour-navigation';
@@ -46,8 +47,9 @@ export async function createOnlineMap(host: HTMLElement, config: MapPublicConfig
     namespace = await loader.default.load({key:settings.js_key!,version:'2.0',plugins:['AMap.Geolocation','AMap.CitySearch','AMap.Scale']}) as AMapApi;
     return namespace;
   });
-  const map = await navigation.createMap(host, operationId, signal, true, {viewMode:'2D',center:view.center,zoom:view.zoom}) as any;
+  const map = await navigation.createMap(host, operationId, signal, true, {viewMode:'3D',pitch:0,center:view.center,zoom:view.zoom}) as any;
   const AMap = namespace! as AMapApi;
+  const releaseReconstruction=registerReconstructionMap(map,AMap,host,poi=>navigation.findDestination(poi,'model-anchor-'+crypto.randomUUID(),new AbortController().signal));
   if (AMap.Scale) map.addControl(new AMap.Scale());
   let markers:any[] = [], locationMarker:any = null, accuracyCircle:any = null, routeLines:any[] = [], tourMarkers:any[] = [];
   const poiMarkers=new Map<string,{marker:any;key:string}>();
@@ -122,5 +124,5 @@ export async function createOnlineMap(host: HTMLElement, config: MapPublicConfig
     destinationMarker.on('click',()=>onSelect(destination.poiId));
     map.add(destinationMarker);map.setZoomAndCenter(17,[destination.lng,destination.lat]);
   }
-  return {focusCampus(center,zoom){map.setZoomAndCenter(zoom,center);},setPois,showTourStops,showPosition,clearPosition(){if(locationMarker)map.remove(locationMarker);if(accuracyCircle)map.remove(accuracyCircle);locationMarker=null;accuracyCircle=null;},showDestination,showRoute,highlightStep,pickStart(callback){startPicker=callback;},clearRoute,resize(){map.resize?.();},locate:(id,abort)=>navigation.locate(id,abort,true),locateCity:(id,abort)=>navigation.locateCity(id,abort,true),findDestination:(poi,id,abort)=>navigation.findDestination(poi,id,abort),walk:(request,poi,abort,matched)=>navigation.walk(request,poi,abort,matched),navigate:(request,poi,abort,matched)=>navigation.navigate(request,poi,abort,matched),navigateTour:(session,stop,poi,id,origin,abort,matched)=>navigateTourStop(navigation,session,stop,poi,id,origin,abort,matched),destroy(){startPicker=null;clearRoute();if(tourMarkers.length){map.remove(tourMarkers);tourMarkers=[];}map.destroy();}};
+  return {focusCampus(center,zoom){map.setZoomAndCenter(zoom,center);},setPois,showTourStops,showPosition,clearPosition(){if(locationMarker)map.remove(locationMarker);if(accuracyCircle)map.remove(accuracyCircle);locationMarker=null;accuracyCircle=null;},showDestination,showRoute,highlightStep,pickStart(callback){startPicker=callback;},clearRoute,resize(){map.resize?.();},locate:(id,abort)=>navigation.locate(id,abort,true),locateCity:(id,abort)=>navigation.locateCity(id,abort,true),findDestination:(poi,id,abort)=>navigation.findDestination(poi,id,abort),walk:(request,poi,abort,matched)=>navigation.walk(request,poi,abort,matched),navigate:(request,poi,abort,matched)=>navigation.navigate(request,poi,abort,matched),navigateTour:(session,stop,poi,id,origin,abort,matched)=>navigateTourStop(navigation,session,stop,poi,id,origin,abort,matched),destroy(){releaseReconstruction();startPicker=null;clearRoute();if(tourMarkers.length){map.remove(tourMarkers);tourMarkers=[];}map.destroy();}};
 }

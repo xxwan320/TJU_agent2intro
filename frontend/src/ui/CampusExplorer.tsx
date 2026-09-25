@@ -410,7 +410,7 @@ export function CampusExplorer({campus,sessionId,focusPoiId,focusRevision,onSele
       lastFollowOrigin.current=planned.origin;lastFollowAt.current=Date.now();
       if(planned.destination&&selectedRef.current?.id===poi.id){setDestination(planned.destination);setDestinations([planned.destination]);onlineRef.current.showDestination(planned.destination);}
       setRoute(result);
-      try{onlineRef.current.showRoute(result.steps.map(step=>step.polyline));const end=result.steps.at(-1)?.polyline.at(-1);if(end)onlineRef.current.showTourStops([{stop_id:result.route_id,poiId:poi.id,title:poi.name,lng:end[0],lat:end[1],index:0}]);setRouteOriginNote(note+' 路线已显示。');}
+      try{onlineRef.current.showRoute(result.steps.map(step=>step.polyline));const end=result.steps.at(-1)?.polyline.at(-1);if(end)onlineRef.current.showTourStops([{stop_id:result.route_id,poiId:poi.id,title:poi.name,lng:end[0],lat:end[1],index:0}]);await new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve())));if(!operation.current()||campusRef.current!==campus)return;onRouteApplied?.(result);setRouteOriginNote(note+' 路线已显示。');}
       catch{setRouteError('路线已取得，但地图绘制失败；下方可查看实际分步指引。（map_render_failed）');}
     }catch(error){if(operation.current()){
       if(error instanceof DestinationSelectionRequired){if(error.origin)setPosition(error.origin);setDestinations(error.matches);pendingDestinationRoute.current=true;onlineRef.current.showDestination(null);setRouteError('找到了多个同名地点，请在下方选择目的地，随后自动继续应用内步行规划。');}

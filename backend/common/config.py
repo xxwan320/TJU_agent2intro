@@ -4,7 +4,7 @@ from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_prefix="CAMPUS_", extra="ignore")
-    llm_url: str = "http://111.32.22.35:32592/mgate/v1/chat/completions"
+    llm_url: str = "https://111.32.22.35:32592/mgate/v1/chat/completions"
     llm_model: str = "glm-5.1"
     llm_api_key: SecretStr = SecretStr("")
     asr_url: str = ""

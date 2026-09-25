@@ -14,3 +14,10 @@ __pycache__/
 .cache/
 frontend/public/assets/kelaita/
 frontend/public/vendor/
+
+# Session-selected documents are private runtime data.
+data/user_knowledge/
+
+# Local reconstruction environment and private generated assets
+.reconstruction/
+.runtime/

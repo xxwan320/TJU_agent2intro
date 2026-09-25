@@ -1,3 +1,8 @@
+import {ReconstructionPanel} from './ReconstructionPanel';
+import {isCompoundIntent,isReconstructionIntent,startReconstructionTask} from '../transport/reconstruction';
+import {createDeviceExecutor,type DeviceRequest,type DeviceResult} from '../device/a-device';
+import {HarnessClient,observed,failed,waitObserved,downloadHarness} from '../transport/harness';
+import type {ToolRequest,ToolResult} from '../../../shared/harness';
 import { TourWorkspace, type TourMemory } from './TourWorkspace';
 import { privateText, speechEventCurrent } from './tour-model';
 import type { SpeechInteractionController, SpeechInteractionContext } from '../../../shared/r3-speech';
@@ -105,6 +110,72 @@ const MemoTaskCard=memo(TaskCard,(a,b)=>a.task===b.task&&a.currentCampus===b.cur
 export function App() {
   const [prefs, setPrefs] = useState(readPreferences); const [health, setHealth] = useState<Health | null>(null); const [serviceError, setServiceError] = useState(false);
   const tourTextRef=useRef<((text:string)=>Promise<boolean>)|null>(null);
+  const harnessClient=useRef(new HarnessClient());
+  const harnessDeviceId=useRef(freshUuid());
+  const selectedUpload=useRef<Partial<Record<CampusId,string>>>({});
+  const deviceExecutor=useRef<ReturnType<typeof createDeviceExecutor>|null>(null);
+  const normalizeDevice=(value:DeviceResult):ToolResult=>({...value,error:value.error?{code:value.error.code,message:value.error.message}:null});
+  function ensureDevice(){
+    if(!deviceExecutor.current)deviceExecutor.current=createDeviceExecutor({speechAdapter:asrRef.current??undefined,getSession:()=>harnessClient.current.context?{...harnessClient.current.context,deviceId:harnessDeviceId.current,expiresAt:new Date(Date.now()+60000).toISOString(),connected:true}:null,upload:(file,ctx)=>harnessClient.current.upload(file,ctx.request as ToolRequest,ctx.signal)});
+    return deviceExecutor.current;
+  }
+  async function resumeDevice(result:ToolResult,token:string,event:Event){
+    const request=result.data?.continuation as ToolRequest|undefined;if(!request)return;
+    const value=normalizeDevice(await ensureDevice().resume_tool(String(result.data?.pendingAction.actionId),request as DeviceRequest,event));
+    if(request.context.generation!==harnessClient.current.context?.generation)return;
+    const ack=await fetch(`/api/harness/runs/${request.runId}/continuation-ack`,{method:'POST',headers:{'Content-Type':'application/json','X-Harness-Token':token},body:JSON.stringify({context:request.context,result:value})});
+    if(!ack.ok){setHarnessText('操作回执已过期，未更新当前任务。');return;}
+    if(value.status==='completed'&&typeof value.data?.uploadId==='string')selectedUpload.current[request.context.campusId]=value.data.uploadId;
+    setHarnessResults(items=>items.filter(x=>x.result.toolCallId!==result.toolCallId));
+    setHarnessText(value.status==='completed'?(value.data?.uploadId?'文档已选定，可以询问其中内容。':'设备接口已返回，实际发送或目标操作未作保证。'):value.status==='cancelled'?'设备操作已取消。':value.error?.message??'设备操作未完成');
+  }
+
+  const [harnessBusy,setHarnessBusy]=useState(false),[harnessText,setHarnessText]=useState('');
+  const [harnessResults,setHarnessResults]=useState<Array<{result:ToolResult;token:string}>>([]);
+  const harnessEpoch=useRef(0),harnessExecuting=useRef(false);
+  const harnessRoute=useRef<((poiId:string,signal:AbortSignal,deadline:string)=>Promise<Record<string,unknown>>)|null>(null);
+  async function cancelHarness(){++harnessEpoch.current;setHarnessBusy(false);deviceExecutor.current?.disconnect();deviceExecutor.current=null;harnessClient.current.context=null;setHarnessResults([]);await harnessClient.current.cancel();}
+  async function executeHarness(request:ToolRequest,signal:AbortSignal):Promise<ToolResult>{
+    try{
+      if(request.context.campusId!==campusRef.current||signal.aborted)throw Error('任务已经失效');
+      harnessExecuting.current=true;
+      signal.addEventListener('abort',()=>{if(request.toolName==='narration_control')void narratorRef.current?.stop();},{once:true});
+      const id=String(request.input.poiId??selectedPoiRef.current?.id??'');
+      if(request.toolName==='poi_select'){
+        const poi=await r2Transport.poi(id);if(signal.aborted)throw Error('已取消');onSelectPoi(poi);mapFocusRef.current?.(id);
+        await waitObserved(()=>selectedPoiRef.current?.id===id&&!!document.querySelector(`[data-poi-id="${CSS.escape(id)}"]`),signal,request.deadlineAt);
+        return observed(request,{poiId:id,cardApplied:true,mapSelection:'仅在现有匹配 marker 可用时同步'});
+      }
+      if(request.toolName==='route_plan'){
+        if(!harnessRoute.current)throw Error('地图入口尚未就绪');
+        return observed(request,await harnessRoute.current(id,signal,request.deadlineAt),'map_applied');
+      }
+      if(request.toolName==='narration_control'){
+        const action=request.input.action;
+        if(action==='start'){
+          const poi=await r2Transport.poi(id);if(signal.aborted)throw Error('已取消');await startIntroduction(poi);
+        }else if(action==='pause')await narratorRef.current?.pause();
+        else if(action==='resume')await narratorRef.current?.resume();
+        else await narratorRef.current?.stop();
+        const status=action==='start'||action==='resume'?'playing':action==='pause'?'paused':'stopped';
+        await waitObserved(()=>narrationSnapshotRef.current?.status===status&&(status==='stopped'||narrationSnapshotRef.current?.poi.id===id),signal,request.deadlineAt);
+        return observed(request,{poiId:narrationSnapshotRef.current?.poi.id,status},'media_event');
+      }
+      if(request.toolName.startsWith('device_')||request.toolName==='speech_input')return normalizeDevice(await ensureDevice().execute_tool(request as DeviceRequest));
+      throw Error('客户端工具尚未接入');
+    }catch(e){return failed(request,e);}finally{harnessExecuting.current=false;}
+  }
+  async function runHarness(message:string,direct?:{toolName:string;input:Record<string,unknown>},sessionId?:string){
+    deviceExecutor.current?.disconnect();deviceExecutor.current=null;setPanelOpen(true);const epoch=++harnessEpoch.current;setHarnessBusy(true);setHarnessText('正在处理…');setHarnessResults([]);
+    harnessClient.current.onContext=context=>{harnessClient.current.deviceCapabilities=ensureDevice().list_capabilities(context as Parameters<ReturnType<typeof createDeviceExecutor>['list_capabilities']>[0]);};
+    try{await harnessClient.current.run({deviceId:harnessDeviceId.current,uploadId:selectedUpload.current[campusRef.current]??null,sessionId:sessionId??currentSession('chat'),campusId:campusRef.current,channel:'harness',tourId:tourMemoryRef.current[campusRef.current]?.session?.tour_id??null,tourSessionId:tourMemoryRef.current[campusRef.current]?.session?.session_id??null,poiId:selectedPoiRef.current?.id??null},message,direct,(event,token)=>{
+      if(epoch!==harnessEpoch.current)return;
+      if(event.text)setHarnessText(event.text);
+      if(event.result)setHarnessResults(items=>[...items,{result:event.result!,token}]);
+    },executeHarness);}catch(e){if(epoch===harnessEpoch.current)setHarnessText(e instanceof Error?e.message:'工具请求未完成');}
+    finally{if(epoch===harnessEpoch.current)setHarnessBusy(false);}
+  }
+
   const tourMemoryRef=useRef<Partial<Record<CampusId,TourMemory>>>({});const mapFocusRef=useRef<((poiId:string|null)=>void)|null>(null);const tourCancelRef=useRef<(()=>void)|null>(null);
   const [voiceSend,setVoiceSend]=useState<'confirm'|'auto'>('confirm');
   const interactionRef=useRef<SpeechInteractionController|null>(null); const interactionContext=useRef<SpeechInteractionContext|null>(null); const voiceSendRef=useRef(voiceSend); voiceSendRef.current=voiceSend;
@@ -177,11 +248,12 @@ export function App() {
   const asrAbortRef = useRef<AbortController | null>(null); const asrGenerationRef = useRef(0); const asrRequestRef = useRef<string | null>(null);
   const playbackEpoch=useRef(0);
   const onSelectPoi = useCallback((poi: POI | null) => {
-    if(selectedPoiRef.current?.id!==poi?.id){void narratorRef.current?.stop(true);playbackEpoch.current++;void speechControllerRef.current?.stop('new_request');lastSpeechRunRef.current=null;void cancelLane('chat');void cancelLane('generation');setAvatarState('idle');}
+    if(selectedPoiRef.current?.id!==poi?.id){if(!harnessExecuting.current)void cancelHarness();void narratorRef.current?.stop(true);playbackEpoch.current++;void speechControllerRef.current?.stop('new_request');lastSpeechRunRef.current=null;void cancelLane('chat');void cancelLane('generation');setAvatarState('idle');}
     selectedPoiRef.current = poi; setSelectedPoi(poi);setNarrationText(poi?.description??'');
   }, []);
   const onRouteChange=useCallback(()=>{void narratorRef.current?.stop(true);setNarrationText('');playbackEpoch.current++;lastSpeechRunRef.current=null;void speechControllerRef.current?.stop('new_request');setAvatarState('idle');},[]); const onCampusAssets = useCallback((assets: CampusAssets | null) => setCampusAssets(assets), []);
 
+  useEffect(()=>()=>{void cancelHarness();},[prefs.campus]);
   useEffect(() => { try { localStorage.setItem('ai4tju.r2.preferences', JSON.stringify(prefs)); } catch { /* Preferences remain in memory. */ } }, [prefs]);
   campusRef.current=prefs.campus;
   useEffect(() => {
@@ -370,6 +442,10 @@ export function App() {
   }
   async function submitTourText(text:string){
     text=text.trim();if(!text)return;
+    if(isReconstructionIntent(text)){try{await startReconstructionTask(text,campusRef.current);setNotice('建模任务已提交，请查看建筑建模面板的实际进度。');}catch(e){setNotice(e instanceof Error?e.message:'建模任务无法启动');}return;}
+    if(isCompoundIntent(text)){setPanelOpen(true);await runHarness(text);return;}
+    if(/文档|上传|分享|能做什么|天气.*(通知|出发)|官网.*天气/.test(text)){setPanelOpen(true);setChatInput('');await runHarness(text);return;}
+    if(/导出.*(行程|安排)|(行程|安排).*导出/.test(text)){const tour=tourMemoryRef.current[campusRef.current]?.session;if(!tour){setNotice('请先创建参观行程。');return;}await runHarness(text,{toolName:'itinerary_export',input:{tourId:tour.tour_id,tourSessionId:tour.session_id,format:/json/i.test(text)?'json':'markdown'}},tour.session_id);return;}
     const epoch=++submitEpoch.current,pendingCandidates=introCandidates;
     pendingIntroduction.current=null;++playbackEpoch.current;
     setPanelOpen(true);setChatInput('');setNotice('');setIntroCandidates([]);
@@ -385,7 +461,7 @@ export function App() {
         if(narrationSnapshotRef.current&&!['ended','stopped'].includes(narrationSnapshotRef.current.status))await narratorRef.current?.resume();
         else if(context)await startIntroduction(context,'进一步介绍'+context.name);
         else await runTask('chat','请继续刚才的话题。','campus_qa',null,null,null);
-      }else{await narratorRef.current?.stop(intent.action==='change');if(intent.action==='change'){rememberPoi(null);onSelectPoi(null);}}
+      }else{await cancelHarness();await narratorRef.current?.stop(intent.action==='change');if(intent.action==='change'){rememberPoi(null);onSelectPoi(null);}}
       if(intent.action!=='resume')addDialog(text,intent.action==='pause'?'讲解已暂停，你可以继续提问。':intent.action==='change'?'想聊哪个地方？直接告诉我名字就可以。':'已停止讲解。','control');
       return;
     }
@@ -397,9 +473,11 @@ export function App() {
     }
     await narratorRef.current?.stop(true);
     if(epoch!==submitEpoch.current)return;
+    const routePois=mentionedPois(text,pois).filter(p=>p.campus_id===campusRef.current);
+    if(/路线|导航|怎么走|步行|走到/.test(text)&&routePois.length===1){await runHarness(text,{toolName:'route_plan',input:{poiId:routePois[0].id}});return;}
     const tourHandled=await tourTextRef.current?.(text);
     if(epoch!==submitEpoch.current)return;
-    if(tourHandled){addDialog(text,'已处理导航或行程请求，可以在地图中查看。','control');return;}
+    if(tourHandled){addDialog(text,'请求已交给地图或行程面板，完成状态请看面板提示。','control');return;}
     const named=mentionedPois(text,pois),poi=named.length===1?named[0]:/它|这里|那里|这个地方|刚才/.test(text)?context:null;
     if(poi)rememberPoi(poi);else if(!/它|这里|那里|这个地方|刚才|继续/.test(text))rememberPoi(null);
     await runTask('chat',text,'campus_qa',null,null,poi);
@@ -473,12 +551,12 @@ export function App() {
   return <div className="app-shell r2-shell">
     <header className="topbar"><div className="topbar-left"><div className="topbar-pill topbar-clock" title="北京时间（Asia/Shanghai）"><strong>{timeText}</strong><span>{dateText}</span></div><div className="topbar-pill topbar-weather" title={weather ? `天津 · ${weather.label}` : '天津天气暂不可用'}><strong>{weather ? `${weather.temp}°C` : '--'}</strong><span>{weather ? weather.label : '天气 --'}</span></div></div><div className="topbar-right"><details className="speech-menu"><summary>语音讲解<small>{speechSummary}</small></summary><div className="speech-menu-body"><div className="speech-controls">{!speechEnabled ? <button onClick={() => void enableSpeech()}>开启语音导览</button> : <><select aria-label="自动播报方式" value={prefs.speechMode} onChange={(event) => { setPrefs({ ...prefs, speechMode: event.target.value as SpeechMode }); if (event.target.value === 'off') void speechControllerRef.current?.stop('user'); }}><option value="off">自动播报关闭</option><option value="brief">自动简述</option><option value="full">自动全文</option></select><select aria-label="导览语音" value={voiceId} onChange={(event) => setVoiceId(event.target.value)}>{voices.map((voice) => <option key={voice.id} value={voice.id}>{voice.name}</option>)}</select><button onClick={() => void enableSpeech()}>刷新音色</button><button onClick={() => void recoverSpeech()}>恢复声音</button>{speechControllerRef.current?.continueRemaining && <button onClick={() => void continueSpeech()}>继续讲</button>}<span>{speechProgress?.status === 'speaking' ? '正在播报' : speechProgress?.status === 'buffering' ? '准备播报' : speechProgress?.status === 'error' ? '播报失败，请恢复或重读' : speechProgress?.status === 'paused' ? '播报已暂停' : '语音已开启'}</span>{(speechProgress?.status === 'speaking' || speechProgress?.status === 'buffering') && <button onClick={() => void speechControllerRef.current?.stop('user')}>停止播报</button>}</>}</div></div></details><button className="logs-button" onClick={() => showLogs()}><span>运行日志</span>{events.length > 0 && <b>{events.length}</b>}</button></div></header>
     <aside className="guide-character" aria-label="数字人导游"><div ref={avatarHostRef} className="guide-character-host" style={{transform: `scale(${prefs.avatarScale})`}}/></aside>
-    <button className="open-guide" onClick={()=>setPanelOpen(!panelOpen)}>{panelOpen?'收起对话':'和海小棠聊聊'}</button><TourWorkspace key={prefs.campus} campus={prefs.campus} memory={tourMemoryRef.current[prefs.campus]} onMemory={value=>{tourMemoryRef.current[prefs.campus]=value;}} registerCancel={handler=>{tourCancelRef.current=handler;}} registerText={handler=>{tourTextRef.current=handler;}} registerMapFocus={handler=>{mapFocusRef.current=handler;}} selectedPoi={selectedPoi} onExplainPoi={poi=>void explainPoi(poi)} onRouteChange={onRouteChange} onSelectPoi={onSelectPoi} onCampus={campus=>setPrefs(current=>({...current,campus}))}
+    <button className="open-guide" onClick={()=>setPanelOpen(!panelOpen)}>{panelOpen?'收起对话':'和海小棠聊聊'}</button><TourWorkspace registerHarnessRoute={handler=>{harnessRoute.current=handler;}} onExport={(tour,format)=>void runHarness('导出行程',{toolName:'itinerary_export',input:{tourId:tour.tour_id,tourSessionId:tour.session_id,format}},tour.session_id)} key={prefs.campus} campus={prefs.campus} memory={tourMemoryRef.current[prefs.campus]} onMemory={value=>{tourMemoryRef.current[prefs.campus]=value;}} registerCancel={handler=>{tourCancelRef.current=handler;}} registerText={handler=>{tourTextRef.current=handler;}} registerMapFocus={handler=>{mapFocusRef.current=handler;}} selectedPoi={selectedPoi} onExplainPoi={poi=>void explainPoi(poi)} onRouteChange={onRouteChange} onSelectPoi={onSelectPoi} onCampus={campus=>setPrefs(current=>({...current,campus}))}
       explainLabel={narrationSession&&narrationSession.poi.id===selectedPoi?.id?(['playing','buffering','preparing'].includes(narrationSession.status)?'暂停讲解':['paused','error'].includes(narrationSession.status)?'继续讲解':'开始讲解'):'开始讲解'}
       presentation={narrationSession?.poi.id===selectedPoi?.id&&narrationSession?<GuidePresentation key={narrationSession.id} session={narrationSession} avatar={avatarRef.current} onPause={()=>void narratorRef.current?.pause()} onResume={()=>void narratorRef.current?.resume()} onStop={()=>void narratorRef.current?.stop()}/>:null}
       speechStatus={<div className="poi-speech-status" role="status" aria-live="polite"><span>{speechProgress?.status==='speaking'?'正在播放':speechProgress?.status==='buffering'?'正在准备语音':speechProgress?.status==='stopped'?'已停止':speechProgress?.status==='error'?'声音暂未播放，请点击继续讲解':!speechEnabled?'点击开始讲解，将开启中文语音':'语音已就绪'}</span>{speechProgress?.status==='error'&&<button onClick={()=>void recoverSpeech()}>再次播放声音</button>}{notice&&<p>{notice}</p>}</div>}
       onReadRoute={route=>{const task:TaskRecord={...newTask(freshUuid(),freshUuid()),lane:'chat',prompt:'路线讲解',mode:'campus_qa',campus:prefs.campus,poiId:null,generation:null};void playTask(task,privateText(routeNarration(route)));}}
-      onStop={async()=>{void narratorRef.current?.stop();playbackEpoch.current++;lastSpeechRunRef.current=null;void speechControllerRef.current?.stop('user');await stopListening();await cancelLane('chat');await cancelLane('generation');await speechControllerRef.current?.stop('user');}}
+      onStop={async()=>{await cancelHarness();void narratorRef.current?.stop();playbackEpoch.current++;lastSpeechRunRef.current=null;void speechControllerRef.current?.stop('user');await stopListening();await cancelLane('chat');await cancelLane('generation');await speechControllerRef.current?.stop('user');}}
       panelOpen={panelOpen} onPanelClose={()=>setPanelOpen(false)} onExplain={stop=>{void r2Transport.poi(stop.poi_id).then(poi=>startIntroduction(poi)).catch(()=>setNotice('地点暂时无法读取。'));}}
       caption={asrBusy?'正在聆听…':speechProgress?.status==='speaking'?'正在播报当前讲解':notice}
       narration={narrationText}
@@ -488,6 +566,8 @@ export function App() {
 {narrationSession&&<div className="dialog-narration-controls"><span>{narrationSession.poi.name}</span><button onClick={()=>void explainPoi(narrationSession.poi)}>{narrationSession.status==='paused'?'继续讲解':['ended','stopped','error'].includes(narrationSession.status)?'重新讲解':'暂停讲解'}</button><button onClick={()=>void narratorRef.current?.stop()}>停止讲解</button><button onClick={()=>{setPanelOpen(false);document.querySelector('.guide-presentation')?.scrollIntoView({behavior:'smooth',block:'center'});}}>查看讲解画面</button></div>}
 </div>
 
+<button disabled={harnessBusy} onClick={()=>void runHarness('选择文档',{toolName:'device_pick_document',input:{}})}>选择文档（TXT/MD）</button>
+{(harnessText||harnessBusy)&&<div className="task-card" role="status"><RichText text={harnessText}/>{harnessBusy&&<button onClick={()=>void cancelHarness()}>停止工具任务</button>}{harnessResults.flatMap(({result})=>result.sources).filter((source,index,all)=>all.findIndex(s=>s.sourceId===source.sourceId)===index).map(source=><details key={source.sourceId}><summary>资料来源：{source.title??'所选资料'}</summary><p>{source.excerpt}</p>{source.url&&safeSourceUrl(source.url)&&<a href={safeSourceUrl(source.url)!} target="_blank" rel="noreferrer">打开来源</a>}</details>)}{harnessResults.map(({result,token})=>result.data?.downloadUrl?<button key={result.toolCallId} onClick={()=>void downloadHarness(result.data!.downloadUrl,token,result.data!.filename).catch(()=>setHarnessText('文件无法下载，请重新导出。'))}>下载 {result.data.filename}</button>:result.status==='pending_user_action'?<button key={result.toolCallId} onClick={event=>void resumeDevice(result,token,event.nativeEvent)}>{result.data?.pendingAction?.label??'在设备上继续'}</button>:null)}</div>}
 {showLatest&&<button className="latest-button" onClick={goLatest}>回到最新</button>}
 
 {dialogContext&&<div className="context-chip">正在聊：{dialogContext.name}<button onClick={()=>rememberPoi(null)} aria-label="清除对话地点">×</button></div>}
@@ -496,6 +576,7 @@ export function App() {
  onEdit={()=>{if(asrBusy){recorderRef.current?.cancel();setAsrBusy(false);setRecordingState('已取消识别，保留编辑文字。');}}}/>
 {recordingState&&<p role="status">{recordingState}{asrBusy&&<button onClick={()=>{void stopListening();setRecordingState('录音与识别已取消。');}}>取消录音/识别</button>}</p>}
 <div className="tour-composer-foot"><details className="tour-voice-more"><summary>语音设置</summary><div className="tour-voice-menu"><p>录音停止后转成可编辑文字，由你确认发送，不会自动执行路线。</p><div className="tour-voice-buttons"><button type="button" className="tour-voice-action" onClick={()=>void enableSpeech()}>开启中文播报</button><button type="button" className="tour-voice-action danger" onClick={()=>void speechControllerRef.current?.stop('user')}>停止播报</button></div></div></details><button type="button" className="tour-chat-clear" onClick={clearChat} disabled={campusChatTasks.length===0}>清空对话</button></div></>}/>
+    <ReconstructionPanel campus={prefs.campus}/>
     <div className={`drawer-backdrop ${logsOpen ? 'open' : ''}`} onClick={() => setLogsOpen(false)}/><aside className={`log-drawer ${logsOpen ? 'open' : ''}`} inert={!logsOpen} aria-hidden={!logsOpen}><header><div><strong>{logRequest ? `请求 ${logRequest.slice(0, 8)} 的日志` : '当前会话日志'}</strong><span>仅显示服务返回的真实事件</span></div><button onClick={() => setLogsOpen(false)}>关闭</button></header><div className="drawer-tools"><button disabled={!shownEvents.length} onClick={() => { const blob = new Blob([sanitizedLogExport(shownEvents)], { type: 'application/json' }); const url = URL.createObjectURL(blob); const anchor = document.createElement('a'); anchor.href = url; anchor.download = 'ai4tju-runtime-events.json'; anchor.click(); URL.revokeObjectURL(url); }}>脱敏导出</button></div><div className="log-list">{shownEvents.length === 0 ? <p>尚无实际运行事件。</p> : shownEvents.map((event) => <article key={`${event.origin}:${event.event_id}`}><i className={event.status}/><div><strong>{event.origin === 'backend' ? '后端' : '浏览器'} · {event.stage}</strong><span>{event.status} · {event.duration_ms == null ? '耗时未返回' : `${Math.round(event.duration_ms)} ms`}</span><time>{new Date(event.timestamp).toLocaleTimeString('zh-CN', { hour12: false })}</time></div></article>)}</div></aside>
   </div>;
 }
