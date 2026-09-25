@@ -1,0 +1,3566 @@
+{
+  "startedAt": "2026-09-25T12:18:49.477531+00:00",
+  "finishedAt": "2026-09-25T12:18:57.198666+00:00",
+  "liveNetworkEnabled": true,
+  "callLedger": {
+    "pageFetches": 15,
+    "searchRequests": 0,
+    "modelRequests": 0
+  },
+  "sources": [
+    {
+      "registryId": "tju-main",
+      "entryUrls": [
+        "https://www.tju.edu.cn/"
+      ],
+      "topics": [
+        "campus_overview",
+        "stable_history",
+        "recent_news"
+      ],
+      "trustTier": "official",
+      "fetchMethod": "existing registered HTML parser",
+      "enabled": true,
+      "status": "PASS_REAL",
+      "lastCheckedAt": "2026-09-25T12:18:54.698786+00:00",
+      "priorVerification": "readable_index",
+      "observations": [
+        {
+          "registryId": "tju-main",
+          "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+          "lastCheckedAt": "2026-09-25T12:18:52.123313+00:00",
+          "status": "PASS_REAL",
+          "scope": "adapter extracted relevant evidence"
+        },
+        {
+          "registryId": "tju-main",
+          "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+          "lastCheckedAt": "2026-09-25T12:18:54.698786+00:00",
+          "status": "PASS_REAL",
+          "scope": "adapter extracted relevant evidence"
+        }
+      ]
+    },
+    {
+      "registryId": "tju-news",
+      "entryUrls": [
+        "https://news.tju.edu.cn/",
+        "https://news.tju.edu.cn/info/1003/89019.htm"
+      ],
+      "topics": [
+        "stable_history",
+        "poi_introduction",
+        "recent_news",
+        "official_notice"
+      ],
+      "trustTier": "official",
+      "fetchMethod": "existing registered HTML parser",
+      "enabled": true,
+      "status": "PASS_REAL",
+      "lastCheckedAt": "2026-09-25T12:18:57.197667+00:00",
+      "priorVerification": "readable_index_and_article",
+      "observations": [
+        {
+          "registryId": "tju-news",
+          "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+          "lastCheckedAt": "2026-09-25T12:18:54.700789+00:00",
+          "status": "PASS_REAL",
+          "scope": "adapter extracted relevant evidence"
+        },
+        {
+          "registryId": "tju-news",
+          "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+          "lastCheckedAt": "2026-09-25T12:18:57.197667+00:00",
+          "status": "PASS_REAL",
+          "scope": "adapter extracted relevant evidence"
+        }
+      ]
+    },
+    {
+      "registryId": "tju-alumni-beiyang",
+      "entryUrls": [
+        "https://alumni.tju.edu.cn/xyfwmap/byyxq.htm",
+        "https://alumni.tju.edu.cn/info/1137/3357.htm"
+      ],
+      "topics": [
+        "poi_catalog",
+        "poi_introduction",
+        "stable_history"
+      ],
+      "trustTier": "official",
+      "fetchMethod": "existing registered HTML parser",
+      "enabled": true,
+      "status": "NOT_RUN",
+      "lastCheckedAt": null,
+      "priorVerification": "readable_directory_image_only_detail",
+      "observations": []
+    },
+    {
+      "registryId": "tju-alumni-weijin",
+      "entryUrls": [
+        "https://alumni.tju.edu.cn/xyfwmap/wjlxq.htm"
+      ],
+      "topics": [
+        "poi_catalog",
+        "poi_introduction",
+        "stable_history"
+      ],
+      "trustTier": "official",
+      "fetchMethod": "existing registered HTML parser",
+      "enabled": true,
+      "status": "NOT_RUN",
+      "lastCheckedAt": null,
+      "priorVerification": "readable_directory",
+      "observations": []
+    },
+    {
+      "registryId": "tju-archives",
+      "entryUrls": [
+        "https://dag.tju.edu.cn/",
+        "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+        "https://dag.tju.edu.cn/web/news/info/231147/237592.htmlx"
+      ],
+      "topics": [
+        "stable_history",
+        "museum_visit_guide",
+        "recent_news",
+        "official_notice"
+      ],
+      "trustTier": "official",
+      "fetchMethod": "existing registered HTML parser",
+      "enabled": true,
+      "status": "NOT_RUN",
+      "lastCheckedAt": null,
+      "priorVerification": "readable_index_and_articles",
+      "observations": []
+    },
+    {
+      "registryId": "beiyang-wiki",
+      "entryUrls": [
+        "https://wiki.tjubot.cn/",
+        "https://wiki.tjubot.cn/category/campus-attractions/"
+      ],
+      "topics": [
+        "poi_introduction",
+        "stable_history",
+        "visitor_experience"
+      ],
+      "trustTier": "community",
+      "fetchMethod": "existing registered HTML parser",
+      "enabled": true,
+      "status": "NOT_RUN",
+      "lastCheckedAt": null,
+      "priorVerification": "readable_index_and_category",
+      "observations": []
+    },
+    {
+      "registryId": "tju-library",
+      "entryUrls": [
+        "https://home.lib.tju.edu.cn/"
+      ],
+      "topics": [
+        "library_visit_guide",
+        "official_notice"
+      ],
+      "trustTier": "official",
+      "fetchMethod": "existing registered HTML parser",
+      "enabled": false,
+      "status": "NOT_RUN",
+      "lastCheckedAt": null,
+      "priorVerification": "official_link_confirmed_body_not_extracted",
+      "observations": []
+    }
+  ],
+  "timings": [
+    {
+      "tool": "knowledge_search",
+      "poiId": "beiyangyuan-zhengdong-library",
+      "coldMs": [
+        1.676,
+        1.71,
+        1.923
+      ],
+      "warmMs": [
+        1.397,
+        1.306,
+        1.369
+      ],
+      "coldMedianMs": 1.71,
+      "warmMedianMs": 1.369,
+      "scope": "fresh provider vs same-provider repeat; OS/network caches not controlled; not page render timing",
+      "results": [
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-zhengdong-library-0-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-zhengdong-library",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "tju-main",
+                "sourceId": "poi-beiyangyuan-zhengdong-library",
+                "title": "郑东图书馆",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有郑东图书馆。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "src-welcome-beiyang",
+                "sourceId": "beiyangyuan-zhengdong-library",
+                "title": "郑东图书馆",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "localRef": "data/knowledge",
+                "excerpt": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+                "publishedAt": "2024-08-15",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-18",
+                "title": "郑东图书馆 · 庭院尺寸",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "2016设计介绍记述郑东图书馆中心庭院为72米见方。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-main",
+                "sourceId": "zhengdong-opened",
+                "title": "郑东图书馆 · 沿革",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆于2015年9月投入使用。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-main",
+                "sourceId": "zhengdong-designer",
+                "title": "郑东图书馆 · 沿革",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆由周恺领衔设计。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "src-welcome-beiyang",
+                "sourceId": "zhengdong-courtyard",
+                "title": "郑东图书馆 · 文化",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆采用四面围合的庭院式形态。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "poi-beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有郑东图书馆。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "src-welcome-beiyang",
+              "sourceId": "beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "localRef": "data/knowledge",
+              "excerpt": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+              "publishedAt": "2024-08-15",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-18",
+              "title": "郑东图书馆 · 庭院尺寸",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "2016设计介绍记述郑东图书馆中心庭院为72米见方。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "zhengdong-opened",
+              "title": "郑东图书馆 · 沿革",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆于2015年9月投入使用。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "zhengdong-designer",
+              "title": "郑东图书馆 · 沿革",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆由周恺领衔设计。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "src-welcome-beiyang",
+              "sourceId": "zhengdong-courtyard",
+              "title": "郑东图书馆 · 文化",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆采用四面围合的庭院式形态。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:50.121868Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-zhengdong-library-0-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-zhengdong-library-0-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-zhengdong-library",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "tju-main",
+                "sourceId": "poi-beiyangyuan-zhengdong-library",
+                "title": "郑东图书馆",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有郑东图书馆。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "src-welcome-beiyang",
+                "sourceId": "beiyangyuan-zhengdong-library",
+                "title": "郑东图书馆",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "localRef": "data/knowledge",
+                "excerpt": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+                "publishedAt": "2024-08-15",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-18",
+                "title": "郑东图书馆 · 庭院尺寸",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "2016设计介绍记述郑东图书馆中心庭院为72米见方。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-main",
+                "sourceId": "zhengdong-opened",
+                "title": "郑东图书馆 · 沿革",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆于2015年9月投入使用。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-main",
+                "sourceId": "zhengdong-designer",
+                "title": "郑东图书馆 · 沿革",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆由周恺领衔设计。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "src-welcome-beiyang",
+                "sourceId": "zhengdong-courtyard",
+                "title": "郑东图书馆 · 文化",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆采用四面围合的庭院式形态。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "poi-beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有郑东图书馆。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "src-welcome-beiyang",
+              "sourceId": "beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "localRef": "data/knowledge",
+              "excerpt": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+              "publishedAt": "2024-08-15",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-18",
+              "title": "郑东图书馆 · 庭院尺寸",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "2016设计介绍记述郑东图书馆中心庭院为72米见方。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "zhengdong-opened",
+              "title": "郑东图书馆 · 沿革",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆于2015年9月投入使用。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "zhengdong-designer",
+              "title": "郑东图书馆 · 沿革",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆由周恺领衔设计。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "src-welcome-beiyang",
+              "sourceId": "zhengdong-courtyard",
+              "title": "郑东图书馆 · 文化",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆采用四面围合的庭院式形态。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:50.124867Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-zhengdong-library-0-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-zhengdong-library-1-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-zhengdong-library",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "tju-main",
+                "sourceId": "poi-beiyangyuan-zhengdong-library",
+                "title": "郑东图书馆",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有郑东图书馆。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "src-welcome-beiyang",
+                "sourceId": "beiyangyuan-zhengdong-library",
+                "title": "郑东图书馆",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "localRef": "data/knowledge",
+                "excerpt": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+                "publishedAt": "2024-08-15",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-18",
+                "title": "郑东图书馆 · 庭院尺寸",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "2016设计介绍记述郑东图书馆中心庭院为72米见方。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-main",
+                "sourceId": "zhengdong-opened",
+                "title": "郑东图书馆 · 沿革",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆于2015年9月投入使用。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-main",
+                "sourceId": "zhengdong-designer",
+                "title": "郑东图书馆 · 沿革",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆由周恺领衔设计。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "src-welcome-beiyang",
+                "sourceId": "zhengdong-courtyard",
+                "title": "郑东图书馆 · 文化",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆采用四面围合的庭院式形态。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "poi-beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有郑东图书馆。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "src-welcome-beiyang",
+              "sourceId": "beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "localRef": "data/knowledge",
+              "excerpt": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+              "publishedAt": "2024-08-15",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-18",
+              "title": "郑东图书馆 · 庭院尺寸",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "2016设计介绍记述郑东图书馆中心庭院为72米见方。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "zhengdong-opened",
+              "title": "郑东图书馆 · 沿革",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆于2015年9月投入使用。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "zhengdong-designer",
+              "title": "郑东图书馆 · 沿革",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆由周恺领衔设计。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "src-welcome-beiyang",
+              "sourceId": "zhengdong-courtyard",
+              "title": "郑东图书馆 · 文化",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆采用四面围合的庭院式形态。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:50.460612Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-zhengdong-library-1-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-zhengdong-library-1-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-zhengdong-library",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "tju-main",
+                "sourceId": "poi-beiyangyuan-zhengdong-library",
+                "title": "郑东图书馆",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有郑东图书馆。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "src-welcome-beiyang",
+                "sourceId": "beiyangyuan-zhengdong-library",
+                "title": "郑东图书馆",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "localRef": "data/knowledge",
+                "excerpt": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+                "publishedAt": "2024-08-15",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-18",
+                "title": "郑东图书馆 · 庭院尺寸",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "2016设计介绍记述郑东图书馆中心庭院为72米见方。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-main",
+                "sourceId": "zhengdong-opened",
+                "title": "郑东图书馆 · 沿革",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆于2015年9月投入使用。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-main",
+                "sourceId": "zhengdong-designer",
+                "title": "郑东图书馆 · 沿革",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆由周恺领衔设计。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "src-welcome-beiyang",
+                "sourceId": "zhengdong-courtyard",
+                "title": "郑东图书馆 · 文化",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆采用四面围合的庭院式形态。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "poi-beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有郑东图书馆。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "src-welcome-beiyang",
+              "sourceId": "beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "localRef": "data/knowledge",
+              "excerpt": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+              "publishedAt": "2024-08-15",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-18",
+              "title": "郑东图书馆 · 庭院尺寸",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "2016设计介绍记述郑东图书馆中心庭院为72米见方。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "zhengdong-opened",
+              "title": "郑东图书馆 · 沿革",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆于2015年9月投入使用。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "zhengdong-designer",
+              "title": "郑东图书馆 · 沿革",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆由周恺领衔设计。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "src-welcome-beiyang",
+              "sourceId": "zhengdong-courtyard",
+              "title": "郑东图书馆 · 文化",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆采用四面围合的庭院式形态。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:50.462612Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-zhengdong-library-1-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-zhengdong-library-2-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-zhengdong-library",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "tju-main",
+                "sourceId": "poi-beiyangyuan-zhengdong-library",
+                "title": "郑东图书馆",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有郑东图书馆。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "src-welcome-beiyang",
+                "sourceId": "beiyangyuan-zhengdong-library",
+                "title": "郑东图书馆",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "localRef": "data/knowledge",
+                "excerpt": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+                "publishedAt": "2024-08-15",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-18",
+                "title": "郑东图书馆 · 庭院尺寸",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "2016设计介绍记述郑东图书馆中心庭院为72米见方。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-main",
+                "sourceId": "zhengdong-opened",
+                "title": "郑东图书馆 · 沿革",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆于2015年9月投入使用。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-main",
+                "sourceId": "zhengdong-designer",
+                "title": "郑东图书馆 · 沿革",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆由周恺领衔设计。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "src-welcome-beiyang",
+                "sourceId": "zhengdong-courtyard",
+                "title": "郑东图书馆 · 文化",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆采用四面围合的庭院式形态。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "poi-beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有郑东图书馆。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "src-welcome-beiyang",
+              "sourceId": "beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "localRef": "data/knowledge",
+              "excerpt": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+              "publishedAt": "2024-08-15",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-18",
+              "title": "郑东图书馆 · 庭院尺寸",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "2016设计介绍记述郑东图书馆中心庭院为72米见方。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "zhengdong-opened",
+              "title": "郑东图书馆 · 沿革",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆于2015年9月投入使用。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "zhengdong-designer",
+              "title": "郑东图书馆 · 沿革",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆由周恺领衔设计。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "src-welcome-beiyang",
+              "sourceId": "zhengdong-courtyard",
+              "title": "郑东图书馆 · 文化",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆采用四面围合的庭院式形态。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:50.809666Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-zhengdong-library-2-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-zhengdong-library-2-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-zhengdong-library",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "tju-main",
+                "sourceId": "poi-beiyangyuan-zhengdong-library",
+                "title": "郑东图书馆",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有郑东图书馆。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "src-welcome-beiyang",
+                "sourceId": "beiyangyuan-zhengdong-library",
+                "title": "郑东图书馆",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "localRef": "data/knowledge",
+                "excerpt": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+                "publishedAt": "2024-08-15",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-18",
+                "title": "郑东图书馆 · 庭院尺寸",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "2016设计介绍记述郑东图书馆中心庭院为72米见方。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-main",
+                "sourceId": "zhengdong-opened",
+                "title": "郑东图书馆 · 沿革",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆于2015年9月投入使用。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-main",
+                "sourceId": "zhengdong-designer",
+                "title": "郑东图书馆 · 沿革",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆由周恺领衔设计。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "src-welcome-beiyang",
+                "sourceId": "zhengdong-courtyard",
+                "title": "郑东图书馆 · 文化",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "localRef": "data/knowledge",
+                "excerpt": "郑东图书馆采用四面围合的庭院式形态。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "poi-beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有郑东图书馆。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "src-welcome-beiyang",
+              "sourceId": "beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "localRef": "data/knowledge",
+              "excerpt": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+              "publishedAt": "2024-08-15",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-18",
+              "title": "郑东图书馆 · 庭院尺寸",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "2016设计介绍记述郑东图书馆中心庭院为72米见方。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "zhengdong-opened",
+              "title": "郑东图书馆 · 沿革",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆于2015年9月投入使用。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "zhengdong-designer",
+              "title": "郑东图书馆 · 沿革",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆由周恺领衔设计。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "src-welcome-beiyang",
+              "sourceId": "zhengdong-courtyard",
+              "title": "郑东图书馆 · 文化",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "localRef": "data/knowledge",
+              "excerpt": "郑东图书馆采用四面围合的庭院式形态。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:50.809666Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-zhengdong-library-2-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        }
+      ]
+    },
+    {
+      "tool": "official_search",
+      "poiId": "beiyangyuan-zhengdong-library",
+      "coldMs": [
+        143.929,
+        95.314,
+        93.192
+      ],
+      "warmMs": [
+        0.541,
+        0.51,
+        1.307
+      ],
+      "coldMedianMs": 95.314,
+      "warmMedianMs": 0.541,
+      "scope": "fresh provider vs same-provider repeat; OS/network caches not controlled; not page render timing",
+      "results": [
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-zhengdong-library-0-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 2
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-zhengdong-library",
+            "currentAccess": "unknown",
+            "cacheHit": false,
+            "trace": [
+              {
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "elapsed_ms": 141.0
+              },
+              {
+                "url": "https://news.tju.edu.cn/",
+                "elapsed_ms": 141.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-main",
+                  "tju-news"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 2
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "web-448f3da80e9fad4b",
+              "title": "图书馆-天津大学",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": null,
+              "excerpt": "百卅光阴，文脉绵长。天津大学图书馆的前身——北洋大学图书馆，诞生于1895年，开中国近代大学图书馆之先河。百卅年来，图书馆始终与学校风雨兼程、同舟共济，不仅承载着无数学者的思想求索，更以其厚重的馆藏与不灭的灯火，成为一代代天大人精神深处永恒的知识灯塔。图书馆现有三处馆舍，分别是卫津路校区的春水图书馆（北馆）、科学图书馆（南馆）和北洋园校区的郑东图书馆，总建筑面积约7. 6万平方米。北馆始建于1958年，由建筑专家、天津大学建筑系创始人徐中教授设计，建筑面积9853平方米；1985年扩建了建筑面积4570平方米的八层书库，与原有馆舍相连，形成一体；2018年3月，北馆经改造后重新开馆，并于2024年正式命名为春水图书馆。科学图书馆于1990年建成开放，由邵逸夫先生捐资助建，建筑面积10968平方米；2024年4月，科学图书馆完成改造后重新开馆，空间布局更趋现代化。2015年9月，由天津大学知名校友、国家级建筑大师周恺领衔设计的郑东图书馆正式投入使用，建筑面积约5万平方米，成为北洋园校区的标志性建筑。图书馆紧密围绕学校发展战略，以支撑教学科研、人才培养和科学管理为宗旨，着力构建多层次的文献资源保障体系。截至2025年底，馆藏纸质书刊总量达354万册，电子图书222万种，电子期刊6.4万种，中外文电子数据库177个（含子库）。在特藏方面，馆藏珍稀古籍包括《闲情偶寄》《御纂周易折中》《西湖志》等，并藏有数百种线装书、数万册国学典籍及西文旧籍，兼具历史厚度与学术深度。图书馆始终坚守“读者第一，服务至上”的理念，实行开架阅览、借阅合一的服务模式，每周开放7天，每天服务时长达14.5小时。馆内积极打造了日新书斋、特藏阅览室、新技术体验区、影音欣赏室、读者研究厢、文化展厅、天津大学文库、“七星灯火”书房、马克思主义理论图书专区、习近平新时代中国特色社会主义思想图书阅览专区、青竹书屋、冯骥才作品阅览专区等各类特色服务空间，满足读者多元化的学习和研究需求。在知识服务层面，图书馆紧密围绕学校、学科、学院、学者和学生的多层次需求，不断深化信息素养培训与教学、科技查新与查收查引、学科情报分析、学术数据服务及知识产权信息服务等业务，致力于构建创新型知识服务体系，为学校“双一流”建设提供有效支撑。与此同时，图书馆充分发挥文化阵地优势，打造“知学”育人品牌，围绕“四季两日”开展形式多样、内容丰富的知识传播与文化活动。2023年，图书馆入选天津市首批科学家精神教育基地；2024年，获批国家语言文字推广基地（天津大学）成员单位及语言文化活动推广工作室。天津大学图书馆是中国高等教育文献保障系统（CALIS）和中国高校人文社会科学文献中心（CASHL）成员馆、卓越联盟高校成员馆、“中国高校数字图书馆联盟”发起单位及理事单位、天津高等教育文献信息中心（TALIS）成员馆，同时也是世界知识产权组织在华建设的首批技术与创新支持中心（TISC）承办机构，天津市“高等教育工程文献中心”也设立于此。一直以来，图书馆秉承“以人为本、传承文明、激发创新、卓越服务”的办馆宗旨，努力构建与天津大学事业发展相适应的文献资源保障服务体系和高水准的信息系统平台，持续为广大师生提供优质的信息资源与服务。读者可通过图书馆官方网站及官方微信公众号获取最新服务动态与资源指南，欢迎广大师生充分利用图书馆的各项资源与服务。联系方式：022-27406247；022-85356198网址：https://home.lib.tju.edu.cn/",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:51.288593+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:51.293565Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-zhengdong-library-0-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-zhengdong-library-0-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-zhengdong-library",
+            "currentAccess": "unknown",
+            "cacheHit": true,
+            "trace": [
+              {
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "elapsed_ms": 141.0
+              },
+              {
+                "url": "https://news.tju.edu.cn/",
+                "elapsed_ms": 141.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-main",
+                  "tju-news"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 2
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "web-448f3da80e9fad4b",
+              "title": "图书馆-天津大学",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": null,
+              "excerpt": "百卅光阴，文脉绵长。天津大学图书馆的前身——北洋大学图书馆，诞生于1895年，开中国近代大学图书馆之先河。百卅年来，图书馆始终与学校风雨兼程、同舟共济，不仅承载着无数学者的思想求索，更以其厚重的馆藏与不灭的灯火，成为一代代天大人精神深处永恒的知识灯塔。图书馆现有三处馆舍，分别是卫津路校区的春水图书馆（北馆）、科学图书馆（南馆）和北洋园校区的郑东图书馆，总建筑面积约7. 6万平方米。北馆始建于1958年，由建筑专家、天津大学建筑系创始人徐中教授设计，建筑面积9853平方米；1985年扩建了建筑面积4570平方米的八层书库，与原有馆舍相连，形成一体；2018年3月，北馆经改造后重新开馆，并于2024年正式命名为春水图书馆。科学图书馆于1990年建成开放，由邵逸夫先生捐资助建，建筑面积10968平方米；2024年4月，科学图书馆完成改造后重新开馆，空间布局更趋现代化。2015年9月，由天津大学知名校友、国家级建筑大师周恺领衔设计的郑东图书馆正式投入使用，建筑面积约5万平方米，成为北洋园校区的标志性建筑。图书馆紧密围绕学校发展战略，以支撑教学科研、人才培养和科学管理为宗旨，着力构建多层次的文献资源保障体系。截至2025年底，馆藏纸质书刊总量达354万册，电子图书222万种，电子期刊6.4万种，中外文电子数据库177个（含子库）。在特藏方面，馆藏珍稀古籍包括《闲情偶寄》《御纂周易折中》《西湖志》等，并藏有数百种线装书、数万册国学典籍及西文旧籍，兼具历史厚度与学术深度。图书馆始终坚守“读者第一，服务至上”的理念，实行开架阅览、借阅合一的服务模式，每周开放7天，每天服务时长达14.5小时。馆内积极打造了日新书斋、特藏阅览室、新技术体验区、影音欣赏室、读者研究厢、文化展厅、天津大学文库、“七星灯火”书房、马克思主义理论图书专区、习近平新时代中国特色社会主义思想图书阅览专区、青竹书屋、冯骥才作品阅览专区等各类特色服务空间，满足读者多元化的学习和研究需求。在知识服务层面，图书馆紧密围绕学校、学科、学院、学者和学生的多层次需求，不断深化信息素养培训与教学、科技查新与查收查引、学科情报分析、学术数据服务及知识产权信息服务等业务，致力于构建创新型知识服务体系，为学校“双一流”建设提供有效支撑。与此同时，图书馆充分发挥文化阵地优势，打造“知学”育人品牌，围绕“四季两日”开展形式多样、内容丰富的知识传播与文化活动。2023年，图书馆入选天津市首批科学家精神教育基地；2024年，获批国家语言文字推广基地（天津大学）成员单位及语言文化活动推广工作室。天津大学图书馆是中国高等教育文献保障系统（CALIS）和中国高校人文社会科学文献中心（CASHL）成员馆、卓越联盟高校成员馆、“中国高校数字图书馆联盟”发起单位及理事单位、天津高等教育文献信息中心（TALIS）成员馆，同时也是世界知识产权组织在华建设的首批技术与创新支持中心（TISC）承办机构，天津市“高等教育工程文献中心”也设立于此。一直以来，图书馆秉承“以人为本、传承文明、激发创新、卓越服务”的办馆宗旨，努力构建与天津大学事业发展相适应的文献资源保障服务体系和高水准的信息系统平台，持续为广大师生提供优质的信息资源与服务。读者可通过图书馆官方网站及官方微信公众号获取最新服务动态与资源指南，欢迎广大师生充分利用图书馆的各项资源与服务。联系方式：022-27406247；022-85356198网址：https://home.lib.tju.edu.cn/",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:51.288593+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:51.294565Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-zhengdong-library-0-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-zhengdong-library-1-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 2
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-zhengdong-library",
+            "currentAccess": "unknown",
+            "cacheHit": false,
+            "trace": [
+              {
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "elapsed_ms": 94.0
+              },
+              {
+                "url": "https://news.tju.edu.cn/",
+                "elapsed_ms": 94.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-main",
+                  "tju-news"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 2
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "web-448f3da80e9fad4b",
+              "title": "图书馆-天津大学",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": null,
+              "excerpt": "百卅光阴，文脉绵长。天津大学图书馆的前身——北洋大学图书馆，诞生于1895年，开中国近代大学图书馆之先河。百卅年来，图书馆始终与学校风雨兼程、同舟共济，不仅承载着无数学者的思想求索，更以其厚重的馆藏与不灭的灯火，成为一代代天大人精神深处永恒的知识灯塔。图书馆现有三处馆舍，分别是卫津路校区的春水图书馆（北馆）、科学图书馆（南馆）和北洋园校区的郑东图书馆，总建筑面积约7. 6万平方米。北馆始建于1958年，由建筑专家、天津大学建筑系创始人徐中教授设计，建筑面积9853平方米；1985年扩建了建筑面积4570平方米的八层书库，与原有馆舍相连，形成一体；2018年3月，北馆经改造后重新开馆，并于2024年正式命名为春水图书馆。科学图书馆于1990年建成开放，由邵逸夫先生捐资助建，建筑面积10968平方米；2024年4月，科学图书馆完成改造后重新开馆，空间布局更趋现代化。2015年9月，由天津大学知名校友、国家级建筑大师周恺领衔设计的郑东图书馆正式投入使用，建筑面积约5万平方米，成为北洋园校区的标志性建筑。图书馆紧密围绕学校发展战略，以支撑教学科研、人才培养和科学管理为宗旨，着力构建多层次的文献资源保障体系。截至2025年底，馆藏纸质书刊总量达354万册，电子图书222万种，电子期刊6.4万种，中外文电子数据库177个（含子库）。在特藏方面，馆藏珍稀古籍包括《闲情偶寄》《御纂周易折中》《西湖志》等，并藏有数百种线装书、数万册国学典籍及西文旧籍，兼具历史厚度与学术深度。图书馆始终坚守“读者第一，服务至上”的理念，实行开架阅览、借阅合一的服务模式，每周开放7天，每天服务时长达14.5小时。馆内积极打造了日新书斋、特藏阅览室、新技术体验区、影音欣赏室、读者研究厢、文化展厅、天津大学文库、“七星灯火”书房、马克思主义理论图书专区、习近平新时代中国特色社会主义思想图书阅览专区、青竹书屋、冯骥才作品阅览专区等各类特色服务空间，满足读者多元化的学习和研究需求。在知识服务层面，图书馆紧密围绕学校、学科、学院、学者和学生的多层次需求，不断深化信息素养培训与教学、科技查新与查收查引、学科情报分析、学术数据服务及知识产权信息服务等业务，致力于构建创新型知识服务体系，为学校“双一流”建设提供有效支撑。与此同时，图书馆充分发挥文化阵地优势，打造“知学”育人品牌，围绕“四季两日”开展形式多样、内容丰富的知识传播与文化活动。2023年，图书馆入选天津市首批科学家精神教育基地；2024年，获批国家语言文字推广基地（天津大学）成员单位及语言文化活动推广工作室。天津大学图书馆是中国高等教育文献保障系统（CALIS）和中国高校人文社会科学文献中心（CASHL）成员馆、卓越联盟高校成员馆、“中国高校数字图书馆联盟”发起单位及理事单位、天津高等教育文献信息中心（TALIS）成员馆，同时也是世界知识产权组织在华建设的首批技术与创新支持中心（TISC）承办机构，天津市“高等教育工程文献中心”也设立于此。一直以来，图书馆秉承“以人为本、传承文明、激发创新、卓越服务”的办馆宗旨，努力构建与天津大学事业发展相适应的文献资源保障服务体系和高水准的信息系统平台，持续为广大师生提供优质的信息资源与服务。读者可通过图书馆官方网站及官方微信公众号获取最新服务动态与资源指南，欢迎广大师生充分利用图书馆的各项资源与服务。联系方式：022-27406247；022-85356198网址：https://home.lib.tju.edu.cn/",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:51.698453+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:51.703605Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-zhengdong-library-1-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-zhengdong-library-1-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-zhengdong-library",
+            "currentAccess": "unknown",
+            "cacheHit": true,
+            "trace": [
+              {
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "elapsed_ms": 94.0
+              },
+              {
+                "url": "https://news.tju.edu.cn/",
+                "elapsed_ms": 94.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-main",
+                  "tju-news"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 2
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "web-448f3da80e9fad4b",
+              "title": "图书馆-天津大学",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": null,
+              "excerpt": "百卅光阴，文脉绵长。天津大学图书馆的前身——北洋大学图书馆，诞生于1895年，开中国近代大学图书馆之先河。百卅年来，图书馆始终与学校风雨兼程、同舟共济，不仅承载着无数学者的思想求索，更以其厚重的馆藏与不灭的灯火，成为一代代天大人精神深处永恒的知识灯塔。图书馆现有三处馆舍，分别是卫津路校区的春水图书馆（北馆）、科学图书馆（南馆）和北洋园校区的郑东图书馆，总建筑面积约7. 6万平方米。北馆始建于1958年，由建筑专家、天津大学建筑系创始人徐中教授设计，建筑面积9853平方米；1985年扩建了建筑面积4570平方米的八层书库，与原有馆舍相连，形成一体；2018年3月，北馆经改造后重新开馆，并于2024年正式命名为春水图书馆。科学图书馆于1990年建成开放，由邵逸夫先生捐资助建，建筑面积10968平方米；2024年4月，科学图书馆完成改造后重新开馆，空间布局更趋现代化。2015年9月，由天津大学知名校友、国家级建筑大师周恺领衔设计的郑东图书馆正式投入使用，建筑面积约5万平方米，成为北洋园校区的标志性建筑。图书馆紧密围绕学校发展战略，以支撑教学科研、人才培养和科学管理为宗旨，着力构建多层次的文献资源保障体系。截至2025年底，馆藏纸质书刊总量达354万册，电子图书222万种，电子期刊6.4万种，中外文电子数据库177个（含子库）。在特藏方面，馆藏珍稀古籍包括《闲情偶寄》《御纂周易折中》《西湖志》等，并藏有数百种线装书、数万册国学典籍及西文旧籍，兼具历史厚度与学术深度。图书馆始终坚守“读者第一，服务至上”的理念，实行开架阅览、借阅合一的服务模式，每周开放7天，每天服务时长达14.5小时。馆内积极打造了日新书斋、特藏阅览室、新技术体验区、影音欣赏室、读者研究厢、文化展厅、天津大学文库、“七星灯火”书房、马克思主义理论图书专区、习近平新时代中国特色社会主义思想图书阅览专区、青竹书屋、冯骥才作品阅览专区等各类特色服务空间，满足读者多元化的学习和研究需求。在知识服务层面，图书馆紧密围绕学校、学科、学院、学者和学生的多层次需求，不断深化信息素养培训与教学、科技查新与查收查引、学科情报分析、学术数据服务及知识产权信息服务等业务，致力于构建创新型知识服务体系，为学校“双一流”建设提供有效支撑。与此同时，图书馆充分发挥文化阵地优势，打造“知学”育人品牌，围绕“四季两日”开展形式多样、内容丰富的知识传播与文化活动。2023年，图书馆入选天津市首批科学家精神教育基地；2024年，获批国家语言文字推广基地（天津大学）成员单位及语言文化活动推广工作室。天津大学图书馆是中国高等教育文献保障系统（CALIS）和中国高校人文社会科学文献中心（CASHL）成员馆、卓越联盟高校成员馆、“中国高校数字图书馆联盟”发起单位及理事单位、天津高等教育文献信息中心（TALIS）成员馆，同时也是世界知识产权组织在华建设的首批技术与创新支持中心（TISC）承办机构，天津市“高等教育工程文献中心”也设立于此。一直以来，图书馆秉承“以人为本、传承文明、激发创新、卓越服务”的办馆宗旨，努力构建与天津大学事业发展相适应的文献资源保障服务体系和高水准的信息系统平台，持续为广大师生提供优质的信息资源与服务。读者可通过图书馆官方网站及官方微信公众号获取最新服务动态与资源指南，欢迎广大师生充分利用图书馆的各项资源与服务。联系方式：022-27406247；022-85356198网址：https://home.lib.tju.edu.cn/",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:51.698453+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:51.704601Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-zhengdong-library-1-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-zhengdong-library-2-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 2
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-zhengdong-library",
+            "currentAccess": "unknown",
+            "cacheHit": false,
+            "trace": [
+              {
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "url": "https://news.tju.edu.cn/",
+                "elapsed_ms": 93.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-main",
+                  "tju-news"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 2
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "web-448f3da80e9fad4b",
+              "title": "图书馆-天津大学",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": null,
+              "excerpt": "百卅光阴，文脉绵长。天津大学图书馆的前身——北洋大学图书馆，诞生于1895年，开中国近代大学图书馆之先河。百卅年来，图书馆始终与学校风雨兼程、同舟共济，不仅承载着无数学者的思想求索，更以其厚重的馆藏与不灭的灯火，成为一代代天大人精神深处永恒的知识灯塔。图书馆现有三处馆舍，分别是卫津路校区的春水图书馆（北馆）、科学图书馆（南馆）和北洋园校区的郑东图书馆，总建筑面积约7. 6万平方米。北馆始建于1958年，由建筑专家、天津大学建筑系创始人徐中教授设计，建筑面积9853平方米；1985年扩建了建筑面积4570平方米的八层书库，与原有馆舍相连，形成一体；2018年3月，北馆经改造后重新开馆，并于2024年正式命名为春水图书馆。科学图书馆于1990年建成开放，由邵逸夫先生捐资助建，建筑面积10968平方米；2024年4月，科学图书馆完成改造后重新开馆，空间布局更趋现代化。2015年9月，由天津大学知名校友、国家级建筑大师周恺领衔设计的郑东图书馆正式投入使用，建筑面积约5万平方米，成为北洋园校区的标志性建筑。图书馆紧密围绕学校发展战略，以支撑教学科研、人才培养和科学管理为宗旨，着力构建多层次的文献资源保障体系。截至2025年底，馆藏纸质书刊总量达354万册，电子图书222万种，电子期刊6.4万种，中外文电子数据库177个（含子库）。在特藏方面，馆藏珍稀古籍包括《闲情偶寄》《御纂周易折中》《西湖志》等，并藏有数百种线装书、数万册国学典籍及西文旧籍，兼具历史厚度与学术深度。图书馆始终坚守“读者第一，服务至上”的理念，实行开架阅览、借阅合一的服务模式，每周开放7天，每天服务时长达14.5小时。馆内积极打造了日新书斋、特藏阅览室、新技术体验区、影音欣赏室、读者研究厢、文化展厅、天津大学文库、“七星灯火”书房、马克思主义理论图书专区、习近平新时代中国特色社会主义思想图书阅览专区、青竹书屋、冯骥才作品阅览专区等各类特色服务空间，满足读者多元化的学习和研究需求。在知识服务层面，图书馆紧密围绕学校、学科、学院、学者和学生的多层次需求，不断深化信息素养培训与教学、科技查新与查收查引、学科情报分析、学术数据服务及知识产权信息服务等业务，致力于构建创新型知识服务体系，为学校“双一流”建设提供有效支撑。与此同时，图书馆充分发挥文化阵地优势，打造“知学”育人品牌，围绕“四季两日”开展形式多样、内容丰富的知识传播与文化活动。2023年，图书馆入选天津市首批科学家精神教育基地；2024年，获批国家语言文字推广基地（天津大学）成员单位及语言文化活动推广工作室。天津大学图书馆是中国高等教育文献保障系统（CALIS）和中国高校人文社会科学文献中心（CASHL）成员馆、卓越联盟高校成员馆、“中国高校数字图书馆联盟”发起单位及理事单位、天津高等教育文献信息中心（TALIS）成员馆，同时也是世界知识产权组织在华建设的首批技术与创新支持中心（TISC）承办机构，天津市“高等教育工程文献中心”也设立于此。一直以来，图书馆秉承“以人为本、传承文明、激发创新、卓越服务”的办馆宗旨，努力构建与天津大学事业发展相适应的文献资源保障服务体系和高水准的信息系统平台，持续为广大师生提供优质的信息资源与服务。读者可通过图书馆官方网站及官方微信公众号获取最新服务动态与资源指南，欢迎广大师生充分利用图书馆的各项资源与服务。联系方式：022-27406247；022-85356198网址：https://home.lib.tju.edu.cn/",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:52.123313+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:52.132306Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-zhengdong-library-2-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-zhengdong-library-2-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-zhengdong-library",
+            "currentAccess": "unknown",
+            "cacheHit": true,
+            "trace": [
+              {
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "url": "https://news.tju.edu.cn/",
+                "elapsed_ms": 93.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-main",
+                  "tju-news"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 2
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "web-448f3da80e9fad4b",
+              "title": "图书馆-天津大学",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "localRef": null,
+              "excerpt": "百卅光阴，文脉绵长。天津大学图书馆的前身——北洋大学图书馆，诞生于1895年，开中国近代大学图书馆之先河。百卅年来，图书馆始终与学校风雨兼程、同舟共济，不仅承载着无数学者的思想求索，更以其厚重的馆藏与不灭的灯火，成为一代代天大人精神深处永恒的知识灯塔。图书馆现有三处馆舍，分别是卫津路校区的春水图书馆（北馆）、科学图书馆（南馆）和北洋园校区的郑东图书馆，总建筑面积约7. 6万平方米。北馆始建于1958年，由建筑专家、天津大学建筑系创始人徐中教授设计，建筑面积9853平方米；1985年扩建了建筑面积4570平方米的八层书库，与原有馆舍相连，形成一体；2018年3月，北馆经改造后重新开馆，并于2024年正式命名为春水图书馆。科学图书馆于1990年建成开放，由邵逸夫先生捐资助建，建筑面积10968平方米；2024年4月，科学图书馆完成改造后重新开馆，空间布局更趋现代化。2015年9月，由天津大学知名校友、国家级建筑大师周恺领衔设计的郑东图书馆正式投入使用，建筑面积约5万平方米，成为北洋园校区的标志性建筑。图书馆紧密围绕学校发展战略，以支撑教学科研、人才培养和科学管理为宗旨，着力构建多层次的文献资源保障体系。截至2025年底，馆藏纸质书刊总量达354万册，电子图书222万种，电子期刊6.4万种，中外文电子数据库177个（含子库）。在特藏方面，馆藏珍稀古籍包括《闲情偶寄》《御纂周易折中》《西湖志》等，并藏有数百种线装书、数万册国学典籍及西文旧籍，兼具历史厚度与学术深度。图书馆始终坚守“读者第一，服务至上”的理念，实行开架阅览、借阅合一的服务模式，每周开放7天，每天服务时长达14.5小时。馆内积极打造了日新书斋、特藏阅览室、新技术体验区、影音欣赏室、读者研究厢、文化展厅、天津大学文库、“七星灯火”书房、马克思主义理论图书专区、习近平新时代中国特色社会主义思想图书阅览专区、青竹书屋、冯骥才作品阅览专区等各类特色服务空间，满足读者多元化的学习和研究需求。在知识服务层面，图书馆紧密围绕学校、学科、学院、学者和学生的多层次需求，不断深化信息素养培训与教学、科技查新与查收查引、学科情报分析、学术数据服务及知识产权信息服务等业务，致力于构建创新型知识服务体系，为学校“双一流”建设提供有效支撑。与此同时，图书馆充分发挥文化阵地优势，打造“知学”育人品牌，围绕“四季两日”开展形式多样、内容丰富的知识传播与文化活动。2023年，图书馆入选天津市首批科学家精神教育基地；2024年，获批国家语言文字推广基地（天津大学）成员单位及语言文化活动推广工作室。天津大学图书馆是中国高等教育文献保障系统（CALIS）和中国高校人文社会科学文献中心（CASHL）成员馆、卓越联盟高校成员馆、“中国高校数字图书馆联盟”发起单位及理事单位、天津高等教育文献信息中心（TALIS）成员馆，同时也是世界知识产权组织在华建设的首批技术与创新支持中心（TISC）承办机构，天津市“高等教育工程文献中心”也设立于此。一直以来，图书馆秉承“以人为本、传承文明、激发创新、卓越服务”的办馆宗旨，努力构建与天津大学事业发展相适应的文献资源保障服务体系和高水准的信息系统平台，持续为广大师生提供优质的信息资源与服务。读者可通过图书馆官方网站及官方微信公众号获取最新服务动态与资源指南，欢迎广大师生充分利用图书馆的各项资源与服务。联系方式：022-27406247；022-85356198网址：https://home.lib.tju.edu.cn/",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:52.123313+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:52.133353Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-zhengdong-library-2-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        }
+      ]
+    },
+    {
+      "tool": "knowledge_search",
+      "poiId": "beiyangyuan-datong-center",
+      "coldMs": [
+        1.376,
+        1.439,
+        1.299
+      ],
+      "warmMs": [
+        0.898,
+        0.985,
+        0.882
+      ],
+      "coldMedianMs": 1.376,
+      "warmMedianMs": 0.898,
+      "scope": "fresh provider vs same-provider repeat; OS/network caches not controlled; not page render timing",
+      "results": [
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-datong-center-0-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-datong-center",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "tju-main",
+                "sourceId": "poi-beiyangyuan-datong-center",
+                "title": "大通学生中心",
+                "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有大通学生中心。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-15",
+                "title": "大通学生中心 · 轴线位置",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-16",
+                "title": "大通学生中心 · 体块",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心由三个依次排列的矩形体块构成。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-17",
+                "title": "大通学生中心 · 设计",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "poi-beiyangyuan-datong-center",
+              "title": "大通学生中心",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有大通学生中心。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-15",
+              "title": "大通学生中心 · 轴线位置",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-16",
+              "title": "大通学生中心 · 体块",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心由三个依次排列的矩形体块构成。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-17",
+              "title": "大通学生中心 · 设计",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:52.813837Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-datong-center-0-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-datong-center-0-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-datong-center",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "tju-main",
+                "sourceId": "poi-beiyangyuan-datong-center",
+                "title": "大通学生中心",
+                "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有大通学生中心。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-15",
+                "title": "大通学生中心 · 轴线位置",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-16",
+                "title": "大通学生中心 · 体块",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心由三个依次排列的矩形体块构成。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-17",
+                "title": "大通学生中心 · 设计",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "poi-beiyangyuan-datong-center",
+              "title": "大通学生中心",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有大通学生中心。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-15",
+              "title": "大通学生中心 · 轴线位置",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-16",
+              "title": "大通学生中心 · 体块",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心由三个依次排列的矩形体块构成。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-17",
+              "title": "大通学生中心 · 设计",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:52.814836Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-datong-center-0-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-datong-center-1-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-datong-center",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "tju-main",
+                "sourceId": "poi-beiyangyuan-datong-center",
+                "title": "大通学生中心",
+                "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有大通学生中心。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-15",
+                "title": "大通学生中心 · 轴线位置",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-16",
+                "title": "大通学生中心 · 体块",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心由三个依次排列的矩形体块构成。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-17",
+                "title": "大通学生中心 · 设计",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "poi-beiyangyuan-datong-center",
+              "title": "大通学生中心",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有大通学生中心。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-15",
+              "title": "大通学生中心 · 轴线位置",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-16",
+              "title": "大通学生中心 · 体块",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心由三个依次排列的矩形体块构成。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-17",
+              "title": "大通学生中心 · 设计",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:53.149231Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-datong-center-1-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-datong-center-1-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-datong-center",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "tju-main",
+                "sourceId": "poi-beiyangyuan-datong-center",
+                "title": "大通学生中心",
+                "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有大通学生中心。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-15",
+                "title": "大通学生中心 · 轴线位置",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-16",
+                "title": "大通学生中心 · 体块",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心由三个依次排列的矩形体块构成。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-17",
+                "title": "大通学生中心 · 设计",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "poi-beiyangyuan-datong-center",
+              "title": "大通学生中心",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有大通学生中心。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-15",
+              "title": "大通学生中心 · 轴线位置",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-16",
+              "title": "大通学生中心 · 体块",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心由三个依次排列的矩形体块构成。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-17",
+              "title": "大通学生中心 · 设计",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:53.150726Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-datong-center-1-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-datong-center-2-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-datong-center",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "tju-main",
+                "sourceId": "poi-beiyangyuan-datong-center",
+                "title": "大通学生中心",
+                "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有大通学生中心。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-15",
+                "title": "大通学生中心 · 轴线位置",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-16",
+                "title": "大通学生中心 · 体块",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心由三个依次排列的矩形体块构成。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-17",
+                "title": "大通学生中心 · 设计",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "poi-beiyangyuan-datong-center",
+              "title": "大通学生中心",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有大通学生中心。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-15",
+              "title": "大通学生中心 · 轴线位置",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-16",
+              "title": "大通学生中心 · 体块",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心由三个依次排列的矩形体块构成。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-17",
+              "title": "大通学生中心 · 设计",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:53.478137Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-datong-center-2-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-datong-center-2-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-datong-center",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "tju-main",
+                "sourceId": "poi-beiyangyuan-datong-center",
+                "title": "大通学生中心",
+                "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有大通学生中心。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-15",
+                "title": "大通学生中心 · 轴线位置",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-16",
+                "title": "大通学生中心 · 体块",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心由三个依次排列的矩形体块构成。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "detail-landscape-2016-17",
+                "title": "大通学生中心 · 设计",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+                "publishedAt": "2016-08-25",
+                "fetchedAt": "2026-09-14"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-main",
+              "sourceId": "poi-beiyangyuan-datong-center",
+              "title": "大通学生中心",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有大通学生中心。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-15",
+              "title": "大通学生中心 · 轴线位置",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-16",
+              "title": "大通学生中心 · 体块",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心由三个依次排列的矩形体块构成。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "detail-landscape-2016-17",
+              "title": "大通学生中心 · 设计",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+              "publishedAt": "2016-08-25",
+              "fetchedAt": "2026-09-14"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:53.478653Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-datong-center-2-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        }
+      ]
+    },
+    {
+      "tool": "official_search",
+      "poiId": "beiyangyuan-datong-center",
+      "coldMs": [
+        128.32,
+        84.201,
+        86.16
+      ],
+      "warmMs": [
+        0.509,
+        0.511,
+        0.493
+      ],
+      "coldMedianMs": 86.16,
+      "warmMedianMs": 0.509,
+      "scope": "fresh provider vs same-provider repeat; OS/network caches not controlled; not page render timing",
+      "results": [
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-datong-center-0-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 2
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-datong-center",
+            "currentAccess": "unknown",
+            "cacheHit": false,
+            "trace": [
+              {
+                "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "elapsed_ms": 125.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-news",
+                  "tju-main"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 2
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-news",
+              "sourceId": "web-e6924b796f472b0f",
+              "title": "【校报特稿】“校园景观荟萃”专版-天津大学新闻网",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": null,
+              "excerpt": "编者按 建设了60年的天津大学卫津路老校区，有近20万各行各业的优秀校友从这里走向祖国四面八方。津大园给“天大人”留下了最美的记忆。作为开中国现代高等教育之先河的第一所大学，天大本身就氤氲着一股浩然盛大之美。这种美，弥漫在校园里，凝结在人身上，无处不风采。一所大学特有的爱国传统和严谨精神，就在这北洋园中的各个角落得到了最形象、直观的彰显。老校区的北洋园中，湖光柳姿，风雅漫溢，宽广大气的“北洋广场”、巍峨壮观的“第九教学楼”、古朴庄重的“北洋亭”、夜晚伴着蛙声和着笛羌映着湖光的“大学生活动中心”让你留连忘返。 在天津市津南区海河教育园区内，原来有个村庄叫北洋村，而天津大学卫津路老校区东门前潺潺流过的卫津河，蜿蜒城市数十里仍然流经这里。天津大学遂把这里定名为 “北洋园”校区，希望能够在这片新土地上承袭天大百廿年的历史文脉和人文精神。 天大于2009年底启动了北洋园新校区筹建工作，学校120年校庆前夕，2015年9月全部建设完成投入使用。新校区的各主要单体建筑的设计是以我校建筑学院毕业的杰出校友组成的“工作营”为主体，还特邀了校友之外的一些优秀建筑师共同参与完成的。校友们把对母校的情感、学生时代的记忆和对天大文化精神的领悟注入到新校区的设计之中。可谓是“天大人”自己为自己设计的现代化大学校区。中心为面积达1000余平方米的椭圆形喷水池。 大学生活动中心 天津大学大学生活动中心位于青年湖畔，依水而建，远远望去，似一艘即将扬帆起航的巨轮。该中心在香港邵逸夫先生捐款的基础上，由学校多方筹措资金建设，于1996年底竣工并投入使用，建筑面积4000平方米。 自建成以来，大学生活动中心已成为天津大学加强素质教育特别是艺术教育和文化活动的重要基地。诺贝尔奖获得者杨振宁、夏普莱斯、朱棣文，澳大利亚前总理陆克文，我国最高科学奖获得者闵恩泽、诺贝尔文学奖获得者莫言等都曾在这里与学生交流。大学生活动中心还是我校举办重大活动的场所，在这里，学校多次召开了党代会、教代会及各类表彰大会、大奖赛等，确立了面向21世纪发展的“三步走”战略，吹响了把天津大学建设成为世界知名高水平大学的号角。 北洋园新校区景观 新校区设计的建设思路重点有以下 3 方面：1. 以学生为本的紧凑的校区空间结构，2. 串联学院强化交流的生态河，3. 体现大学之道的中轴空间序列。中轴线分为三段， 三段共组 “大学之道，在明明德，在亲民，在止于至善”的精神——由校门开始至校前区的会议中心止，彰显天大历史的“明德段”；学生中心及音乐厅构成通往可持续公园门户的“至善段”。整组建筑以圆形的广场为中心，建筑沿广场周边布置，呈现出一种开放的姿态。 图 书 馆 设计者 周恺 张莉兰 吴岳 章宁 王力新 李博 刘若谷 左克伟 郭恩健 封新华 安君 曹睿智 刘鑫 李江 被誉为新校区最美建筑的图书馆处于新校区的中心位置，建筑主体重心与校园东西轴线相重合，周边有公共教学区环绕，是各个景观轴线交汇处。图书馆总体借鉴中国传统建筑的以“庭院”为中心的空间模式，营造出一个具有现代校园精神的公共性、开放性的文化场所。建筑总体呈长方形，中部设有72 m×72 m的室外庭院（中心庭院），并以158 m×117 m的空间体量，以玻璃、铝幕墙为主的通透明快、水平伸展的形体表现了其现代、开放的气质。由中部贯通东西的空间入口，引导人流进入中心庭院空间，再依次到达图书馆大厅、学术报告厅、多功能厅、自习教室、书店、咖啡茶吧等功能空间，同时，庭院空间也提供了优雅静谧的环境和室外阅读休憩的场所，在此也可举办各种典礼仪式和文化活动。 1895行政服务中心 设计者 荆子洋 张键 新校区1895行政服务中心设计将多重院落嵌入建筑之中，尺度亲切，室内外空间丰富，模块化的功能分区有利于多功能合理布局，“化整为零”的体量创造良好的采光与通风条件，将自然院落融入办公环境。工作人员可从行政服务中心前开阔的广场经过柱廊、前庭进入门厅，通过景观楼梯到达茶歇及各办公区域，形成独具特色的空间序列。 大通学生中心 设计者 齐欣 刘阳 戴博军 于向东 学生中心坐落在新校区主轴线的尽端，突出水面的半岛将其引向开阔的自然景观，与轴线序列空间中端庄的校园景象形成对比。在这块东西长、南北窄的地段上，3个简单的矩形体块依次排开：从与教学中心区的严整对位，逐渐过渡到湖区的自由舒展。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:53.915994+00:00"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "web-cb373a10c85227e8",
+              "title": "场馆中心-天津大学",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "localRef": null,
+              "excerpt": "天津大学场馆中心（原体育设施管理中心）成立于2002年，正式职工10人，场馆中心行使对学校公共报告厅、体育类场馆的日常管理，为学校体育教学、训练、竞赛及学生、教职工课余文体活动提供保障和服务。目前中心负责管理的场馆包括卫津路校区：大学生活动中心、体育馆、体育场、篮球馆、游泳馆；北洋园校区：求实会堂、大通学生中心、体育馆、游泳馆、体育场、体育公园。公共报告厅主要承担各类大型活动、演出及会议等的场地保障任务，如承担了首次双校区同步视频直播开学典礼、毕业晚会、迎新晚会、欧洲杯直播、大型话剧、周末音乐会等活动的场地保障。体育类场馆承担体育教学场地使用的任务，可保障足球、篮球、排球、羽毛球、乒乓球、太极拳、游泳等课程对场地的需求；保障高水平运动队、普通运动队训练对场地的需求；课余满足社团、俱乐部及师生体育锻炼、培训的需求。近些年来，随着北洋园校区的投入使用，学校的场馆面积及设施水平有了大幅度地提高。中心不断提高管理效率和服务水平，在学校的人才培养、师资队伍建设以及丰富师生课余文体生活方面做出贡献，受到广泛好评！联系方式：022-27403264",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:53.878342+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:53.916994Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-datong-center-0-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-datong-center-0-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-datong-center",
+            "currentAccess": "unknown",
+            "cacheHit": true,
+            "trace": [
+              {
+                "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "elapsed_ms": 125.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-news",
+                  "tju-main"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 2
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-news",
+              "sourceId": "web-e6924b796f472b0f",
+              "title": "【校报特稿】“校园景观荟萃”专版-天津大学新闻网",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": null,
+              "excerpt": "编者按 建设了60年的天津大学卫津路老校区，有近20万各行各业的优秀校友从这里走向祖国四面八方。津大园给“天大人”留下了最美的记忆。作为开中国现代高等教育之先河的第一所大学，天大本身就氤氲着一股浩然盛大之美。这种美，弥漫在校园里，凝结在人身上，无处不风采。一所大学特有的爱国传统和严谨精神，就在这北洋园中的各个角落得到了最形象、直观的彰显。老校区的北洋园中，湖光柳姿，风雅漫溢，宽广大气的“北洋广场”、巍峨壮观的“第九教学楼”、古朴庄重的“北洋亭”、夜晚伴着蛙声和着笛羌映着湖光的“大学生活动中心”让你留连忘返。 在天津市津南区海河教育园区内，原来有个村庄叫北洋村，而天津大学卫津路老校区东门前潺潺流过的卫津河，蜿蜒城市数十里仍然流经这里。天津大学遂把这里定名为 “北洋园”校区，希望能够在这片新土地上承袭天大百廿年的历史文脉和人文精神。 天大于2009年底启动了北洋园新校区筹建工作，学校120年校庆前夕，2015年9月全部建设完成投入使用。新校区的各主要单体建筑的设计是以我校建筑学院毕业的杰出校友组成的“工作营”为主体，还特邀了校友之外的一些优秀建筑师共同参与完成的。校友们把对母校的情感、学生时代的记忆和对天大文化精神的领悟注入到新校区的设计之中。可谓是“天大人”自己为自己设计的现代化大学校区。中心为面积达1000余平方米的椭圆形喷水池。 大学生活动中心 天津大学大学生活动中心位于青年湖畔，依水而建，远远望去，似一艘即将扬帆起航的巨轮。该中心在香港邵逸夫先生捐款的基础上，由学校多方筹措资金建设，于1996年底竣工并投入使用，建筑面积4000平方米。 自建成以来，大学生活动中心已成为天津大学加强素质教育特别是艺术教育和文化活动的重要基地。诺贝尔奖获得者杨振宁、夏普莱斯、朱棣文，澳大利亚前总理陆克文，我国最高科学奖获得者闵恩泽、诺贝尔文学奖获得者莫言等都曾在这里与学生交流。大学生活动中心还是我校举办重大活动的场所，在这里，学校多次召开了党代会、教代会及各类表彰大会、大奖赛等，确立了面向21世纪发展的“三步走”战略，吹响了把天津大学建设成为世界知名高水平大学的号角。 北洋园新校区景观 新校区设计的建设思路重点有以下 3 方面：1. 以学生为本的紧凑的校区空间结构，2. 串联学院强化交流的生态河，3. 体现大学之道的中轴空间序列。中轴线分为三段， 三段共组 “大学之道，在明明德，在亲民，在止于至善”的精神——由校门开始至校前区的会议中心止，彰显天大历史的“明德段”；学生中心及音乐厅构成通往可持续公园门户的“至善段”。整组建筑以圆形的广场为中心，建筑沿广场周边布置，呈现出一种开放的姿态。 图 书 馆 设计者 周恺 张莉兰 吴岳 章宁 王力新 李博 刘若谷 左克伟 郭恩健 封新华 安君 曹睿智 刘鑫 李江 被誉为新校区最美建筑的图书馆处于新校区的中心位置，建筑主体重心与校园东西轴线相重合，周边有公共教学区环绕，是各个景观轴线交汇处。图书馆总体借鉴中国传统建筑的以“庭院”为中心的空间模式，营造出一个具有现代校园精神的公共性、开放性的文化场所。建筑总体呈长方形，中部设有72 m×72 m的室外庭院（中心庭院），并以158 m×117 m的空间体量，以玻璃、铝幕墙为主的通透明快、水平伸展的形体表现了其现代、开放的气质。由中部贯通东西的空间入口，引导人流进入中心庭院空间，再依次到达图书馆大厅、学术报告厅、多功能厅、自习教室、书店、咖啡茶吧等功能空间，同时，庭院空间也提供了优雅静谧的环境和室外阅读休憩的场所，在此也可举办各种典礼仪式和文化活动。 1895行政服务中心 设计者 荆子洋 张键 新校区1895行政服务中心设计将多重院落嵌入建筑之中，尺度亲切，室内外空间丰富，模块化的功能分区有利于多功能合理布局，“化整为零”的体量创造良好的采光与通风条件，将自然院落融入办公环境。工作人员可从行政服务中心前开阔的广场经过柱廊、前庭进入门厅，通过景观楼梯到达茶歇及各办公区域，形成独具特色的空间序列。 大通学生中心 设计者 齐欣 刘阳 戴博军 于向东 学生中心坐落在新校区主轴线的尽端，突出水面的半岛将其引向开阔的自然景观，与轴线序列空间中端庄的校园景象形成对比。在这块东西长、南北窄的地段上，3个简单的矩形体块依次排开：从与教学中心区的严整对位，逐渐过渡到湖区的自由舒展。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:53.915994+00:00"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "web-cb373a10c85227e8",
+              "title": "场馆中心-天津大学",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "localRef": null,
+              "excerpt": "天津大学场馆中心（原体育设施管理中心）成立于2002年，正式职工10人，场馆中心行使对学校公共报告厅、体育类场馆的日常管理，为学校体育教学、训练、竞赛及学生、教职工课余文体活动提供保障和服务。目前中心负责管理的场馆包括卫津路校区：大学生活动中心、体育馆、体育场、篮球馆、游泳馆；北洋园校区：求实会堂、大通学生中心、体育馆、游泳馆、体育场、体育公园。公共报告厅主要承担各类大型活动、演出及会议等的场地保障任务，如承担了首次双校区同步视频直播开学典礼、毕业晚会、迎新晚会、欧洲杯直播、大型话剧、周末音乐会等活动的场地保障。体育类场馆承担体育教学场地使用的任务，可保障足球、篮球、排球、羽毛球、乒乓球、太极拳、游泳等课程对场地的需求；保障高水平运动队、普通运动队训练对场地的需求；课余满足社团、俱乐部及师生体育锻炼、培训的需求。近些年来，随着北洋园校区的投入使用，学校的场馆面积及设施水平有了大幅度地提高。中心不断提高管理效率和服务水平，在学校的人才培养、师资队伍建设以及丰富师生课余文体生活方面做出贡献，受到广泛好评！联系方式：022-27403264",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:53.878342+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:53.916994Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-datong-center-0-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-datong-center-1-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 2
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-datong-center",
+            "currentAccess": "unknown",
+            "cacheHit": false,
+            "trace": [
+              {
+                "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-news",
+                  "tju-main"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 2
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-news",
+              "sourceId": "web-e6924b796f472b0f",
+              "title": "【校报特稿】“校园景观荟萃”专版-天津大学新闻网",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": null,
+              "excerpt": "编者按 建设了60年的天津大学卫津路老校区，有近20万各行各业的优秀校友从这里走向祖国四面八方。津大园给“天大人”留下了最美的记忆。作为开中国现代高等教育之先河的第一所大学，天大本身就氤氲着一股浩然盛大之美。这种美，弥漫在校园里，凝结在人身上，无处不风采。一所大学特有的爱国传统和严谨精神，就在这北洋园中的各个角落得到了最形象、直观的彰显。老校区的北洋园中，湖光柳姿，风雅漫溢，宽广大气的“北洋广场”、巍峨壮观的“第九教学楼”、古朴庄重的“北洋亭”、夜晚伴着蛙声和着笛羌映着湖光的“大学生活动中心”让你留连忘返。 在天津市津南区海河教育园区内，原来有个村庄叫北洋村，而天津大学卫津路老校区东门前潺潺流过的卫津河，蜿蜒城市数十里仍然流经这里。天津大学遂把这里定名为 “北洋园”校区，希望能够在这片新土地上承袭天大百廿年的历史文脉和人文精神。 天大于2009年底启动了北洋园新校区筹建工作，学校120年校庆前夕，2015年9月全部建设完成投入使用。新校区的各主要单体建筑的设计是以我校建筑学院毕业的杰出校友组成的“工作营”为主体，还特邀了校友之外的一些优秀建筑师共同参与完成的。校友们把对母校的情感、学生时代的记忆和对天大文化精神的领悟注入到新校区的设计之中。可谓是“天大人”自己为自己设计的现代化大学校区。中心为面积达1000余平方米的椭圆形喷水池。 大学生活动中心 天津大学大学生活动中心位于青年湖畔，依水而建，远远望去，似一艘即将扬帆起航的巨轮。该中心在香港邵逸夫先生捐款的基础上，由学校多方筹措资金建设，于1996年底竣工并投入使用，建筑面积4000平方米。 自建成以来，大学生活动中心已成为天津大学加强素质教育特别是艺术教育和文化活动的重要基地。诺贝尔奖获得者杨振宁、夏普莱斯、朱棣文，澳大利亚前总理陆克文，我国最高科学奖获得者闵恩泽、诺贝尔文学奖获得者莫言等都曾在这里与学生交流。大学生活动中心还是我校举办重大活动的场所，在这里，学校多次召开了党代会、教代会及各类表彰大会、大奖赛等，确立了面向21世纪发展的“三步走”战略，吹响了把天津大学建设成为世界知名高水平大学的号角。 北洋园新校区景观 新校区设计的建设思路重点有以下 3 方面：1. 以学生为本的紧凑的校区空间结构，2. 串联学院强化交流的生态河，3. 体现大学之道的中轴空间序列。中轴线分为三段， 三段共组 “大学之道，在明明德，在亲民，在止于至善”的精神——由校门开始至校前区的会议中心止，彰显天大历史的“明德段”；学生中心及音乐厅构成通往可持续公园门户的“至善段”。整组建筑以圆形的广场为中心，建筑沿广场周边布置，呈现出一种开放的姿态。 图 书 馆 设计者 周恺 张莉兰 吴岳 章宁 王力新 李博 刘若谷 左克伟 郭恩健 封新华 安君 曹睿智 刘鑫 李江 被誉为新校区最美建筑的图书馆处于新校区的中心位置，建筑主体重心与校园东西轴线相重合，周边有公共教学区环绕，是各个景观轴线交汇处。图书馆总体借鉴中国传统建筑的以“庭院”为中心的空间模式，营造出一个具有现代校园精神的公共性、开放性的文化场所。建筑总体呈长方形，中部设有72 m×72 m的室外庭院（中心庭院），并以158 m×117 m的空间体量，以玻璃、铝幕墙为主的通透明快、水平伸展的形体表现了其现代、开放的气质。由中部贯通东西的空间入口，引导人流进入中心庭院空间，再依次到达图书馆大厅、学术报告厅、多功能厅、自习教室、书店、咖啡茶吧等功能空间，同时，庭院空间也提供了优雅静谧的环境和室外阅读休憩的场所，在此也可举办各种典礼仪式和文化活动。 1895行政服务中心 设计者 荆子洋 张键 新校区1895行政服务中心设计将多重院落嵌入建筑之中，尺度亲切，室内外空间丰富，模块化的功能分区有利于多功能合理布局，“化整为零”的体量创造良好的采光与通风条件，将自然院落融入办公环境。工作人员可从行政服务中心前开阔的广场经过柱廊、前庭进入门厅，通过景观楼梯到达茶歇及各办公区域，形成独具特色的空间序列。 大通学生中心 设计者 齐欣 刘阳 戴博军 于向东 学生中心坐落在新校区主轴线的尽端，突出水面的半岛将其引向开阔的自然景观，与轴线序列空间中端庄的校园景象形成对比。在这块东西长、南北窄的地段上，3个简单的矩形体块依次排开：从与教学中心区的严整对位，逐渐过渡到湖区的自由舒展。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:54.308870+00:00"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "web-cb373a10c85227e8",
+              "title": "场馆中心-天津大学",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "localRef": null,
+              "excerpt": "天津大学场馆中心（原体育设施管理中心）成立于2002年，正式职工10人，场馆中心行使对学校公共报告厅、体育类场馆的日常管理，为学校体育教学、训练、竞赛及学生、教职工课余文体活动提供保障和服务。目前中心负责管理的场馆包括卫津路校区：大学生活动中心、体育馆、体育场、篮球馆、游泳馆；北洋园校区：求实会堂、大通学生中心、体育馆、游泳馆、体育场、体育公园。公共报告厅主要承担各类大型活动、演出及会议等的场地保障任务，如承担了首次双校区同步视频直播开学典礼、毕业晚会、迎新晚会、欧洲杯直播、大型话剧、周末音乐会等活动的场地保障。体育类场馆承担体育教学场地使用的任务，可保障足球、篮球、排球、羽毛球、乒乓球、太极拳、游泳等课程对场地的需求；保障高水平运动队、普通运动队训练对场地的需求；课余满足社团、俱乐部及师生体育锻炼、培训的需求。近些年来，随着北洋园校区的投入使用，学校的场馆面积及设施水平有了大幅度地提高。中心不断提高管理效率和服务水平，在学校的人才培养、师资队伍建设以及丰富师生课余文体生活方面做出贡献，受到广泛好评！联系方式：022-27403264",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:54.306369+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:54.309879Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-datong-center-1-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-datong-center-1-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-datong-center",
+            "currentAccess": "unknown",
+            "cacheHit": true,
+            "trace": [
+              {
+                "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-news",
+                  "tju-main"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 2
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-news",
+              "sourceId": "web-e6924b796f472b0f",
+              "title": "【校报特稿】“校园景观荟萃”专版-天津大学新闻网",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": null,
+              "excerpt": "编者按 建设了60年的天津大学卫津路老校区，有近20万各行各业的优秀校友从这里走向祖国四面八方。津大园给“天大人”留下了最美的记忆。作为开中国现代高等教育之先河的第一所大学，天大本身就氤氲着一股浩然盛大之美。这种美，弥漫在校园里，凝结在人身上，无处不风采。一所大学特有的爱国传统和严谨精神，就在这北洋园中的各个角落得到了最形象、直观的彰显。老校区的北洋园中，湖光柳姿，风雅漫溢，宽广大气的“北洋广场”、巍峨壮观的“第九教学楼”、古朴庄重的“北洋亭”、夜晚伴着蛙声和着笛羌映着湖光的“大学生活动中心”让你留连忘返。 在天津市津南区海河教育园区内，原来有个村庄叫北洋村，而天津大学卫津路老校区东门前潺潺流过的卫津河，蜿蜒城市数十里仍然流经这里。天津大学遂把这里定名为 “北洋园”校区，希望能够在这片新土地上承袭天大百廿年的历史文脉和人文精神。 天大于2009年底启动了北洋园新校区筹建工作，学校120年校庆前夕，2015年9月全部建设完成投入使用。新校区的各主要单体建筑的设计是以我校建筑学院毕业的杰出校友组成的“工作营”为主体，还特邀了校友之外的一些优秀建筑师共同参与完成的。校友们把对母校的情感、学生时代的记忆和对天大文化精神的领悟注入到新校区的设计之中。可谓是“天大人”自己为自己设计的现代化大学校区。中心为面积达1000余平方米的椭圆形喷水池。 大学生活动中心 天津大学大学生活动中心位于青年湖畔，依水而建，远远望去，似一艘即将扬帆起航的巨轮。该中心在香港邵逸夫先生捐款的基础上，由学校多方筹措资金建设，于1996年底竣工并投入使用，建筑面积4000平方米。 自建成以来，大学生活动中心已成为天津大学加强素质教育特别是艺术教育和文化活动的重要基地。诺贝尔奖获得者杨振宁、夏普莱斯、朱棣文，澳大利亚前总理陆克文，我国最高科学奖获得者闵恩泽、诺贝尔文学奖获得者莫言等都曾在这里与学生交流。大学生活动中心还是我校举办重大活动的场所，在这里，学校多次召开了党代会、教代会及各类表彰大会、大奖赛等，确立了面向21世纪发展的“三步走”战略，吹响了把天津大学建设成为世界知名高水平大学的号角。 北洋园新校区景观 新校区设计的建设思路重点有以下 3 方面：1. 以学生为本的紧凑的校区空间结构，2. 串联学院强化交流的生态河，3. 体现大学之道的中轴空间序列。中轴线分为三段， 三段共组 “大学之道，在明明德，在亲民，在止于至善”的精神——由校门开始至校前区的会议中心止，彰显天大历史的“明德段”；学生中心及音乐厅构成通往可持续公园门户的“至善段”。整组建筑以圆形的广场为中心，建筑沿广场周边布置，呈现出一种开放的姿态。 图 书 馆 设计者 周恺 张莉兰 吴岳 章宁 王力新 李博 刘若谷 左克伟 郭恩健 封新华 安君 曹睿智 刘鑫 李江 被誉为新校区最美建筑的图书馆处于新校区的中心位置，建筑主体重心与校园东西轴线相重合，周边有公共教学区环绕，是各个景观轴线交汇处。图书馆总体借鉴中国传统建筑的以“庭院”为中心的空间模式，营造出一个具有现代校园精神的公共性、开放性的文化场所。建筑总体呈长方形，中部设有72 m×72 m的室外庭院（中心庭院），并以158 m×117 m的空间体量，以玻璃、铝幕墙为主的通透明快、水平伸展的形体表现了其现代、开放的气质。由中部贯通东西的空间入口，引导人流进入中心庭院空间，再依次到达图书馆大厅、学术报告厅、多功能厅、自习教室、书店、咖啡茶吧等功能空间，同时，庭院空间也提供了优雅静谧的环境和室外阅读休憩的场所，在此也可举办各种典礼仪式和文化活动。 1895行政服务中心 设计者 荆子洋 张键 新校区1895行政服务中心设计将多重院落嵌入建筑之中，尺度亲切，室内外空间丰富，模块化的功能分区有利于多功能合理布局，“化整为零”的体量创造良好的采光与通风条件，将自然院落融入办公环境。工作人员可从行政服务中心前开阔的广场经过柱廊、前庭进入门厅，通过景观楼梯到达茶歇及各办公区域，形成独具特色的空间序列。 大通学生中心 设计者 齐欣 刘阳 戴博军 于向东 学生中心坐落在新校区主轴线的尽端，突出水面的半岛将其引向开阔的自然景观，与轴线序列空间中端庄的校园景象形成对比。在这块东西长、南北窄的地段上，3个简单的矩形体块依次排开：从与教学中心区的严整对位，逐渐过渡到湖区的自由舒展。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:54.308870+00:00"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "web-cb373a10c85227e8",
+              "title": "场馆中心-天津大学",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "localRef": null,
+              "excerpt": "天津大学场馆中心（原体育设施管理中心）成立于2002年，正式职工10人，场馆中心行使对学校公共报告厅、体育类场馆的日常管理，为学校体育教学、训练、竞赛及学生、教职工课余文体活动提供保障和服务。目前中心负责管理的场馆包括卫津路校区：大学生活动中心、体育馆、体育场、篮球馆、游泳馆；北洋园校区：求实会堂、大通学生中心、体育馆、游泳馆、体育场、体育公园。公共报告厅主要承担各类大型活动、演出及会议等的场地保障任务，如承担了首次双校区同步视频直播开学典礼、毕业晚会、迎新晚会、欧洲杯直播、大型话剧、周末音乐会等活动的场地保障。体育类场馆承担体育教学场地使用的任务，可保障足球、篮球、排球、羽毛球、乒乓球、太极拳、游泳等课程对场地的需求；保障高水平运动队、普通运动队训练对场地的需求；课余满足社团、俱乐部及师生体育锻炼、培训的需求。近些年来，随着北洋园校区的投入使用，学校的场馆面积及设施水平有了大幅度地提高。中心不断提高管理效率和服务水平，在学校的人才培养、师资队伍建设以及丰富师生课余文体生活方面做出贡献，受到广泛好评！联系方式：022-27403264",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:54.306369+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:54.309879Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-datong-center-1-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-datong-center-2-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 2
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-datong-center",
+            "currentAccess": "unknown",
+            "cacheHit": false,
+            "trace": [
+              {
+                "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-news",
+                  "tju-main"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 2
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-news",
+              "sourceId": "web-e6924b796f472b0f",
+              "title": "【校报特稿】“校园景观荟萃”专版-天津大学新闻网",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": null,
+              "excerpt": "编者按 建设了60年的天津大学卫津路老校区，有近20万各行各业的优秀校友从这里走向祖国四面八方。津大园给“天大人”留下了最美的记忆。作为开中国现代高等教育之先河的第一所大学，天大本身就氤氲着一股浩然盛大之美。这种美，弥漫在校园里，凝结在人身上，无处不风采。一所大学特有的爱国传统和严谨精神，就在这北洋园中的各个角落得到了最形象、直观的彰显。老校区的北洋园中，湖光柳姿，风雅漫溢，宽广大气的“北洋广场”、巍峨壮观的“第九教学楼”、古朴庄重的“北洋亭”、夜晚伴着蛙声和着笛羌映着湖光的“大学生活动中心”让你留连忘返。 在天津市津南区海河教育园区内，原来有个村庄叫北洋村，而天津大学卫津路老校区东门前潺潺流过的卫津河，蜿蜒城市数十里仍然流经这里。天津大学遂把这里定名为 “北洋园”校区，希望能够在这片新土地上承袭天大百廿年的历史文脉和人文精神。 天大于2009年底启动了北洋园新校区筹建工作，学校120年校庆前夕，2015年9月全部建设完成投入使用。新校区的各主要单体建筑的设计是以我校建筑学院毕业的杰出校友组成的“工作营”为主体，还特邀了校友之外的一些优秀建筑师共同参与完成的。校友们把对母校的情感、学生时代的记忆和对天大文化精神的领悟注入到新校区的设计之中。可谓是“天大人”自己为自己设计的现代化大学校区。中心为面积达1000余平方米的椭圆形喷水池。 大学生活动中心 天津大学大学生活动中心位于青年湖畔，依水而建，远远望去，似一艘即将扬帆起航的巨轮。该中心在香港邵逸夫先生捐款的基础上，由学校多方筹措资金建设，于1996年底竣工并投入使用，建筑面积4000平方米。 自建成以来，大学生活动中心已成为天津大学加强素质教育特别是艺术教育和文化活动的重要基地。诺贝尔奖获得者杨振宁、夏普莱斯、朱棣文，澳大利亚前总理陆克文，我国最高科学奖获得者闵恩泽、诺贝尔文学奖获得者莫言等都曾在这里与学生交流。大学生活动中心还是我校举办重大活动的场所，在这里，学校多次召开了党代会、教代会及各类表彰大会、大奖赛等，确立了面向21世纪发展的“三步走”战略，吹响了把天津大学建设成为世界知名高水平大学的号角。 北洋园新校区景观 新校区设计的建设思路重点有以下 3 方面：1. 以学生为本的紧凑的校区空间结构，2. 串联学院强化交流的生态河，3. 体现大学之道的中轴空间序列。中轴线分为三段， 三段共组 “大学之道，在明明德，在亲民，在止于至善”的精神——由校门开始至校前区的会议中心止，彰显天大历史的“明德段”；学生中心及音乐厅构成通往可持续公园门户的“至善段”。整组建筑以圆形的广场为中心，建筑沿广场周边布置，呈现出一种开放的姿态。 图 书 馆 设计者 周恺 张莉兰 吴岳 章宁 王力新 李博 刘若谷 左克伟 郭恩健 封新华 安君 曹睿智 刘鑫 李江 被誉为新校区最美建筑的图书馆处于新校区的中心位置，建筑主体重心与校园东西轴线相重合，周边有公共教学区环绕，是各个景观轴线交汇处。图书馆总体借鉴中国传统建筑的以“庭院”为中心的空间模式，营造出一个具有现代校园精神的公共性、开放性的文化场所。建筑总体呈长方形，中部设有72 m×72 m的室外庭院（中心庭院），并以158 m×117 m的空间体量，以玻璃、铝幕墙为主的通透明快、水平伸展的形体表现了其现代、开放的气质。由中部贯通东西的空间入口，引导人流进入中心庭院空间，再依次到达图书馆大厅、学术报告厅、多功能厅、自习教室、书店、咖啡茶吧等功能空间，同时，庭院空间也提供了优雅静谧的环境和室外阅读休憩的场所，在此也可举办各种典礼仪式和文化活动。 1895行政服务中心 设计者 荆子洋 张键 新校区1895行政服务中心设计将多重院落嵌入建筑之中，尺度亲切，室内外空间丰富，模块化的功能分区有利于多功能合理布局，“化整为零”的体量创造良好的采光与通风条件，将自然院落融入办公环境。工作人员可从行政服务中心前开阔的广场经过柱廊、前庭进入门厅，通过景观楼梯到达茶歇及各办公区域，形成独具特色的空间序列。 大通学生中心 设计者 齐欣 刘阳 戴博军 于向东 学生中心坐落在新校区主轴线的尽端，突出水面的半岛将其引向开阔的自然景观，与轴线序列空间中端庄的校园景象形成对比。在这块东西长、南北窄的地段上，3个简单的矩形体块依次排开：从与教学中心区的严整对位，逐渐过渡到湖区的自由舒展。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:54.700789+00:00"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "web-cb373a10c85227e8",
+              "title": "场馆中心-天津大学",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "localRef": null,
+              "excerpt": "天津大学场馆中心（原体育设施管理中心）成立于2002年，正式职工10人，场馆中心行使对学校公共报告厅、体育类场馆的日常管理，为学校体育教学、训练、竞赛及学生、教职工课余文体活动提供保障和服务。目前中心负责管理的场馆包括卫津路校区：大学生活动中心、体育馆、体育场、篮球馆、游泳馆；北洋园校区：求实会堂、大通学生中心、体育馆、游泳馆、体育场、体育公园。公共报告厅主要承担各类大型活动、演出及会议等的场地保障任务，如承担了首次双校区同步视频直播开学典礼、毕业晚会、迎新晚会、欧洲杯直播、大型话剧、周末音乐会等活动的场地保障。体育类场馆承担体育教学场地使用的任务，可保障足球、篮球、排球、羽毛球、乒乓球、太极拳、游泳等课程对场地的需求；保障高水平运动队、普通运动队训练对场地的需求；课余满足社团、俱乐部及师生体育锻炼、培训的需求。近些年来，随着北洋园校区的投入使用，学校的场馆面积及设施水平有了大幅度地提高。中心不断提高管理效率和服务水平，在学校的人才培养、师资队伍建设以及丰富师生课余文体生活方面做出贡献，受到广泛好评！联系方式：022-27403264",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:54.698786+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:54.701789Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-datong-center-2-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-datong-center-2-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-datong-center",
+            "currentAccess": "unknown",
+            "cacheHit": true,
+            "trace": [
+              {
+                "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-news",
+                  "tju-main"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 2
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-news",
+              "sourceId": "web-e6924b796f472b0f",
+              "title": "【校报特稿】“校园景观荟萃”专版-天津大学新闻网",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "localRef": null,
+              "excerpt": "编者按 建设了60年的天津大学卫津路老校区，有近20万各行各业的优秀校友从这里走向祖国四面八方。津大园给“天大人”留下了最美的记忆。作为开中国现代高等教育之先河的第一所大学，天大本身就氤氲着一股浩然盛大之美。这种美，弥漫在校园里，凝结在人身上，无处不风采。一所大学特有的爱国传统和严谨精神，就在这北洋园中的各个角落得到了最形象、直观的彰显。老校区的北洋园中，湖光柳姿，风雅漫溢，宽广大气的“北洋广场”、巍峨壮观的“第九教学楼”、古朴庄重的“北洋亭”、夜晚伴着蛙声和着笛羌映着湖光的“大学生活动中心”让你留连忘返。 在天津市津南区海河教育园区内，原来有个村庄叫北洋村，而天津大学卫津路老校区东门前潺潺流过的卫津河，蜿蜒城市数十里仍然流经这里。天津大学遂把这里定名为 “北洋园”校区，希望能够在这片新土地上承袭天大百廿年的历史文脉和人文精神。 天大于2009年底启动了北洋园新校区筹建工作，学校120年校庆前夕，2015年9月全部建设完成投入使用。新校区的各主要单体建筑的设计是以我校建筑学院毕业的杰出校友组成的“工作营”为主体，还特邀了校友之外的一些优秀建筑师共同参与完成的。校友们把对母校的情感、学生时代的记忆和对天大文化精神的领悟注入到新校区的设计之中。可谓是“天大人”自己为自己设计的现代化大学校区。中心为面积达1000余平方米的椭圆形喷水池。 大学生活动中心 天津大学大学生活动中心位于青年湖畔，依水而建，远远望去，似一艘即将扬帆起航的巨轮。该中心在香港邵逸夫先生捐款的基础上，由学校多方筹措资金建设，于1996年底竣工并投入使用，建筑面积4000平方米。 自建成以来，大学生活动中心已成为天津大学加强素质教育特别是艺术教育和文化活动的重要基地。诺贝尔奖获得者杨振宁、夏普莱斯、朱棣文，澳大利亚前总理陆克文，我国最高科学奖获得者闵恩泽、诺贝尔文学奖获得者莫言等都曾在这里与学生交流。大学生活动中心还是我校举办重大活动的场所，在这里，学校多次召开了党代会、教代会及各类表彰大会、大奖赛等，确立了面向21世纪发展的“三步走”战略，吹响了把天津大学建设成为世界知名高水平大学的号角。 北洋园新校区景观 新校区设计的建设思路重点有以下 3 方面：1. 以学生为本的紧凑的校区空间结构，2. 串联学院强化交流的生态河，3. 体现大学之道的中轴空间序列。中轴线分为三段， 三段共组 “大学之道，在明明德，在亲民，在止于至善”的精神——由校门开始至校前区的会议中心止，彰显天大历史的“明德段”；学生中心及音乐厅构成通往可持续公园门户的“至善段”。整组建筑以圆形的广场为中心，建筑沿广场周边布置，呈现出一种开放的姿态。 图 书 馆 设计者 周恺 张莉兰 吴岳 章宁 王力新 李博 刘若谷 左克伟 郭恩健 封新华 安君 曹睿智 刘鑫 李江 被誉为新校区最美建筑的图书馆处于新校区的中心位置，建筑主体重心与校园东西轴线相重合，周边有公共教学区环绕，是各个景观轴线交汇处。图书馆总体借鉴中国传统建筑的以“庭院”为中心的空间模式，营造出一个具有现代校园精神的公共性、开放性的文化场所。建筑总体呈长方形，中部设有72 m×72 m的室外庭院（中心庭院），并以158 m×117 m的空间体量，以玻璃、铝幕墙为主的通透明快、水平伸展的形体表现了其现代、开放的气质。由中部贯通东西的空间入口，引导人流进入中心庭院空间，再依次到达图书馆大厅、学术报告厅、多功能厅、自习教室、书店、咖啡茶吧等功能空间，同时，庭院空间也提供了优雅静谧的环境和室外阅读休憩的场所，在此也可举办各种典礼仪式和文化活动。 1895行政服务中心 设计者 荆子洋 张键 新校区1895行政服务中心设计将多重院落嵌入建筑之中，尺度亲切，室内外空间丰富，模块化的功能分区有利于多功能合理布局，“化整为零”的体量创造良好的采光与通风条件，将自然院落融入办公环境。工作人员可从行政服务中心前开阔的广场经过柱廊、前庭进入门厅，通过景观楼梯到达茶歇及各办公区域，形成独具特色的空间序列。 大通学生中心 设计者 齐欣 刘阳 戴博军 于向东 学生中心坐落在新校区主轴线的尽端，突出水面的半岛将其引向开阔的自然景观，与轴线序列空间中端庄的校园景象形成对比。在这块东西长、南北窄的地段上，3个简单的矩形体块依次排开：从与教学中心区的严整对位，逐渐过渡到湖区的自由舒展。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:54.700789+00:00"
+            },
+            {
+              "registryId": "tju-main",
+              "sourceId": "web-cb373a10c85227e8",
+              "title": "场馆中心-天津大学",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "localRef": null,
+              "excerpt": "天津大学场馆中心（原体育设施管理中心）成立于2002年，正式职工10人，场馆中心行使对学校公共报告厅、体育类场馆的日常管理，为学校体育教学、训练、竞赛及学生、教职工课余文体活动提供保障和服务。目前中心负责管理的场馆包括卫津路校区：大学生活动中心、体育馆、体育场、篮球馆、游泳馆；北洋园校区：求实会堂、大通学生中心、体育馆、游泳馆、体育场、体育公园。公共报告厅主要承担各类大型活动、演出及会议等的场地保障任务，如承担了首次双校区同步视频直播开学典礼、毕业晚会、迎新晚会、欧洲杯直播、大型话剧、周末音乐会等活动的场地保障。体育类场馆承担体育教学场地使用的任务，可保障足球、篮球、排球、羽毛球、乒乓球、太极拳、游泳等课程对场地的需求；保障高水平运动队、普通运动队训练对场地的需求；课余满足社团、俱乐部及师生体育锻炼、培训的需求。近些年来，随着北洋园校区的投入使用，学校的场馆面积及设施水平有了大幅度地提高。中心不断提高管理效率和服务水平，在学校的人才培养、师资队伍建设以及丰富师生课余文体生活方面做出贡献，受到广泛好评！联系方式：022-27403264",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-25T12:18:54.698786+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:54.701789Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-datong-center-2-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        }
+      ]
+    },
+    {
+      "tool": "knowledge_search",
+      "poiId": "beiyangyuan-shangxian-stone",
+      "coldMs": [
+        1.294,
+        1.188,
+        1.23
+      ],
+      "warmMs": [
+        0.928,
+        0.807,
+        0.819
+      ],
+      "coldMedianMs": 1.23,
+      "warmMedianMs": 0.819,
+      "scope": "fresh provider vs same-provider repeat; OS/network caches not controlled; not page render timing",
+      "results": [
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-shangxian-stone-0-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-shangxian-stone",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "src-fw-beiyang",
+                "sourceId": "poi-beiyangyuan-shangxian-stone",
+                "title": "尚贤石",
+                "url": "https://fw.tju.edu.cn/Beiyang.html",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有尚贤石。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "tju-news-shangxian-20150928",
+                "title": "【120年校庆】泰山孔子石落户北洋园",
+                "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+                "publishedAt": "2015-09-28",
+                "fetchedAt": "2026-09-17"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "src-fw-beiyang",
+              "sourceId": "poi-beiyangyuan-shangxian-stone",
+              "title": "尚贤石",
+              "url": "https://fw.tju.edu.cn/Beiyang.html",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有尚贤石。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "tju-news-shangxian-20150928",
+              "title": "【120年校庆】泰山孔子石落户北洋园",
+              "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+              "publishedAt": "2015-09-28",
+              "fetchedAt": "2026-09-17"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:55.322000Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-shangxian-stone-0-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-shangxian-stone-0-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-shangxian-stone",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "src-fw-beiyang",
+                "sourceId": "poi-beiyangyuan-shangxian-stone",
+                "title": "尚贤石",
+                "url": "https://fw.tju.edu.cn/Beiyang.html",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有尚贤石。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "tju-news-shangxian-20150928",
+                "title": "【120年校庆】泰山孔子石落户北洋园",
+                "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+                "publishedAt": "2015-09-28",
+                "fetchedAt": "2026-09-17"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "src-fw-beiyang",
+              "sourceId": "poi-beiyangyuan-shangxian-stone",
+              "title": "尚贤石",
+              "url": "https://fw.tju.edu.cn/Beiyang.html",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有尚贤石。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "tju-news-shangxian-20150928",
+              "title": "【120年校庆】泰山孔子石落户北洋园",
+              "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+              "publishedAt": "2015-09-28",
+              "fetchedAt": "2026-09-17"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:55.323000Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-shangxian-stone-0-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-shangxian-stone-1-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-shangxian-stone",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "src-fw-beiyang",
+                "sourceId": "poi-beiyangyuan-shangxian-stone",
+                "title": "尚贤石",
+                "url": "https://fw.tju.edu.cn/Beiyang.html",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有尚贤石。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "tju-news-shangxian-20150928",
+                "title": "【120年校庆】泰山孔子石落户北洋园",
+                "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+                "publishedAt": "2015-09-28",
+                "fetchedAt": "2026-09-17"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "src-fw-beiyang",
+              "sourceId": "poi-beiyangyuan-shangxian-stone",
+              "title": "尚贤石",
+              "url": "https://fw.tju.edu.cn/Beiyang.html",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有尚贤石。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "tju-news-shangxian-20150928",
+              "title": "【120年校庆】泰山孔子石落户北洋园",
+              "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+              "publishedAt": "2015-09-28",
+              "fetchedAt": "2026-09-17"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:55.634063Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-shangxian-stone-1-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-shangxian-stone-1-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-shangxian-stone",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "src-fw-beiyang",
+                "sourceId": "poi-beiyangyuan-shangxian-stone",
+                "title": "尚贤石",
+                "url": "https://fw.tju.edu.cn/Beiyang.html",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有尚贤石。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "tju-news-shangxian-20150928",
+                "title": "【120年校庆】泰山孔子石落户北洋园",
+                "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+                "publishedAt": "2015-09-28",
+                "fetchedAt": "2026-09-17"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "src-fw-beiyang",
+              "sourceId": "poi-beiyangyuan-shangxian-stone",
+              "title": "尚贤石",
+              "url": "https://fw.tju.edu.cn/Beiyang.html",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有尚贤石。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "tju-news-shangxian-20150928",
+              "title": "【120年校庆】泰山孔子石落户北洋园",
+              "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+              "publishedAt": "2015-09-28",
+              "fetchedAt": "2026-09-17"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:55.635064Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-shangxian-stone-1-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-shangxian-stone-2-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-shangxian-stone",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "src-fw-beiyang",
+                "sourceId": "poi-beiyangyuan-shangxian-stone",
+                "title": "尚贤石",
+                "url": "https://fw.tju.edu.cn/Beiyang.html",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有尚贤石。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "tju-news-shangxian-20150928",
+                "title": "【120年校庆】泰山孔子石落户北洋园",
+                "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+                "publishedAt": "2015-09-28",
+                "fetchedAt": "2026-09-17"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "src-fw-beiyang",
+              "sourceId": "poi-beiyangyuan-shangxian-stone",
+              "title": "尚贤石",
+              "url": "https://fw.tju.edu.cn/Beiyang.html",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有尚贤石。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "tju-news-shangxian-20150928",
+              "title": "【120年校庆】泰山孔子石落户北洋园",
+              "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+              "publishedAt": "2015-09-28",
+              "fetchedAt": "2026-09-17"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:55.945953Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-shangxian-stone-2-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "knowledge_search-beiyangyuan-shangxian-stone-2-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "poiId": "beiyangyuan-shangxian-stone",
+            "currentAccess": "unknown",
+            "facts": [
+              {
+                "registryId": "src-fw-beiyang",
+                "sourceId": "poi-beiyangyuan-shangxian-stone",
+                "title": "尚贤石",
+                "url": "https://fw.tju.edu.cn/Beiyang.html",
+                "localRef": "data/knowledge",
+                "excerpt": "校方资料在北洋园校区列有尚贤石。",
+                "publishedAt": null,
+                "fetchedAt": "2026-09-14"
+              },
+              {
+                "registryId": "tju-news",
+                "sourceId": "tju-news-shangxian-20150928",
+                "title": "【120年校庆】泰山孔子石落户北洋园",
+                "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+                "localRef": "data/knowledge",
+                "excerpt": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+                "publishedAt": "2015-09-28",
+                "fetchedAt": "2026-09-17"
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "src-fw-beiyang",
+              "sourceId": "poi-beiyangyuan-shangxian-stone",
+              "title": "尚贤石",
+              "url": "https://fw.tju.edu.cn/Beiyang.html",
+              "localRef": "data/knowledge",
+              "excerpt": "校方资料在北洋园校区列有尚贤石。",
+              "publishedAt": null,
+              "fetchedAt": "2026-09-14"
+            },
+            {
+              "registryId": "tju-news",
+              "sourceId": "tju-news-shangxian-20150928",
+              "title": "【120年校庆】泰山孔子石落户北洋园",
+              "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+              "localRef": "data/knowledge",
+              "excerpt": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+              "publishedAt": "2015-09-28",
+              "fetchedAt": "2026-09-17"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:55.946958Z",
+          "evidence": [
+            {
+              "type": "LOCAL_DATA",
+              "observed": {
+                "tool": "knowledge_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/knowledge_search-beiyangyuan-shangxian-stone-2-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        }
+      ]
+    },
+    {
+      "tool": "official_search",
+      "poiId": "beiyangyuan-shangxian-stone",
+      "coldMs": [
+        123.82,
+        80.556,
+        76.372
+      ],
+      "warmMs": [
+        0.542,
+        0.528,
+        0.543
+      ],
+      "coldMedianMs": 80.556,
+      "warmMedianMs": 0.542,
+      "scope": "fresh provider vs same-provider repeat; OS/network caches not controlled; not page render timing",
+      "results": [
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-shangxian-stone-0-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 1
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-shangxian-stone",
+            "currentAccess": "unknown",
+            "cacheHit": false,
+            "trace": [
+              {
+                "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+                "elapsed_ms": 125.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-news"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 1
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-news",
+              "sourceId": "web-349d6b2506fb1c5b",
+              "title": "【120年校庆】泰山孔子石落户北洋园-天津大学新闻网",
+              "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+              "localRef": null,
+              "excerpt": "天津大学校长李家俊、捐赠人赵子仁等为尚贤石揭幕 天津大学师生与捐赠人等在尚贤石前合影 尚贤石捐赠人赵子仁先生接受记者采访 天大学子欣赏尚贤石 本站讯（记者 摄影 宋雪峰）9月28日，一块被称为“泰山孔子石”的奇石落户天津大学北洋园校区，为我校120周年校庆增添了别样的喜庆氛围。石上刻有我国著名书法家赵冷月先生所书“尚贤”二字。天津大学校长李家俊和奇石捐献者赵子仁先生共同为这块“尚贤石”揭幕。 自古以来，泰山石以古朴、苍劲、凝重，造型别致，线条奇异而著称，是大自然鬼斧神工产出的精品。更有人以“慧目鉴赏，浮想联翩，纵横观赏，灵感喷涌”来评价泰山石苍天造化的原生态之美。 由赵冷月先生之子赵子仁先生捐赠的这块泰山石为世间罕见。该石可以一石双看。作为山峰石观赏，可见群峰叠㠉，嶙峋峥嵘，谷壑窍洞，幽深孤傲，银瀑飞溅，山水相映。作为人物石鉴赏，有翁有妪，有老有少，形神各异，栩栩如生，无生命而似有生命，分布于硕大石壁之上。更为奇特的是，如果凝目细察，可见身着宏服长袍、双拳举袖而立的圣人孔子肖像立于灵石之中，昂首望长空，故被世人称为‘泰山孔子石”。 此石高3.8米，宽1.8米，厚0.8米，重12吨。据说，当年此石开采出来时，“石现时轰然有礼乐之声，裂石尘飞如祥云”。而该石上所刻“尚贤”二字是20年前，书法大家赵冷月先生应上海格致中学校长之请所题写，取自《墨子尚贤篇》。 赵子仁表示，他的父亲赵冷月最大的愿望是希望中国书法文化不会因为社会的快速发展而被大家所遗忘。“大学是培养国家栋梁的地方，如果将父亲‘尚贤’的题字刻于泰山石上，置于中国第一所大学的校园之内，使学子见贤思齐，当是名至实归。”于是，赵子仁与好友周庆堂、吕建春在山东四处寻找一块能担此重任的泰山石。山东省赏石名家、中国观赏石监评师、淄博市赏石文化社常务副社长昝新国先生得知此事，割爱转让了这块“泰山孔子石”。知名雕刻艺术家房平宽将“尚贤”二字雕刻其上。随该石一同捐赠的还有赵冷月先生的书法作品“尚贤”条幅。而与天津大学有着密切合作关系的武警后勤学院院长李玉明将军最终促成此事。 赵子仁希望这块“尚贤石”能为天津大学增添一份笔墨之香，希望校园内每一位莘莘学子能够重视中国传统文化，并将之发扬光大。 天津大学校长李家俊十分感谢社会各界对学校的支持与厚望。“孔子是中国最早的教育家，天大是中国第一所现代大学，所以天大在某种程度上也传承了孔子留给我们的教育思想和理念，而今天是天津大学举办北洋园新校区落成典礼的日子，同时也是孔子诞辰纪念日，在这样一天为‘尚贤泰山孔子石’揭幕，是一件非常有意义的一件事。” 李玉明专门为这次捐赠作了一副对联，“万世师表，尚贤事能便为强国富民时；北洋三问，实事求是定有海晏河清日。” “尚贤泰山孔子石”在校内的选址也颇有新意。解放战争时期担任北洋大学校长、后担任新中国水利部副部长的张含英曾手书一幅“实事求是”校训条幅，上面还题有“懂吗？会吗？敢吗？”三问。在北洋园校区就有一座桥被命名为“三问”桥。“尚贤石”即座落于“三问”桥畔，“举贤三问”也成为北洋园校区新景观，成为学生见贤思齐的教化之所。",
+              "publishedAt": "2015-09-28",
+              "fetchedAt": "2026-09-25T12:18:56.389624+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:56.389624Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-shangxian-stone-0-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-shangxian-stone-0-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-shangxian-stone",
+            "currentAccess": "unknown",
+            "cacheHit": true,
+            "trace": [
+              {
+                "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+                "elapsed_ms": 125.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-news"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 1
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-news",
+              "sourceId": "web-349d6b2506fb1c5b",
+              "title": "【120年校庆】泰山孔子石落户北洋园-天津大学新闻网",
+              "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+              "localRef": null,
+              "excerpt": "天津大学校长李家俊、捐赠人赵子仁等为尚贤石揭幕 天津大学师生与捐赠人等在尚贤石前合影 尚贤石捐赠人赵子仁先生接受记者采访 天大学子欣赏尚贤石 本站讯（记者 摄影 宋雪峰）9月28日，一块被称为“泰山孔子石”的奇石落户天津大学北洋园校区，为我校120周年校庆增添了别样的喜庆氛围。石上刻有我国著名书法家赵冷月先生所书“尚贤”二字。天津大学校长李家俊和奇石捐献者赵子仁先生共同为这块“尚贤石”揭幕。 自古以来，泰山石以古朴、苍劲、凝重，造型别致，线条奇异而著称，是大自然鬼斧神工产出的精品。更有人以“慧目鉴赏，浮想联翩，纵横观赏，灵感喷涌”来评价泰山石苍天造化的原生态之美。 由赵冷月先生之子赵子仁先生捐赠的这块泰山石为世间罕见。该石可以一石双看。作为山峰石观赏，可见群峰叠㠉，嶙峋峥嵘，谷壑窍洞，幽深孤傲，银瀑飞溅，山水相映。作为人物石鉴赏，有翁有妪，有老有少，形神各异，栩栩如生，无生命而似有生命，分布于硕大石壁之上。更为奇特的是，如果凝目细察，可见身着宏服长袍、双拳举袖而立的圣人孔子肖像立于灵石之中，昂首望长空，故被世人称为‘泰山孔子石”。 此石高3.8米，宽1.8米，厚0.8米，重12吨。据说，当年此石开采出来时，“石现时轰然有礼乐之声，裂石尘飞如祥云”。而该石上所刻“尚贤”二字是20年前，书法大家赵冷月先生应上海格致中学校长之请所题写，取自《墨子尚贤篇》。 赵子仁表示，他的父亲赵冷月最大的愿望是希望中国书法文化不会因为社会的快速发展而被大家所遗忘。“大学是培养国家栋梁的地方，如果将父亲‘尚贤’的题字刻于泰山石上，置于中国第一所大学的校园之内，使学子见贤思齐，当是名至实归。”于是，赵子仁与好友周庆堂、吕建春在山东四处寻找一块能担此重任的泰山石。山东省赏石名家、中国观赏石监评师、淄博市赏石文化社常务副社长昝新国先生得知此事，割爱转让了这块“泰山孔子石”。知名雕刻艺术家房平宽将“尚贤”二字雕刻其上。随该石一同捐赠的还有赵冷月先生的书法作品“尚贤”条幅。而与天津大学有着密切合作关系的武警后勤学院院长李玉明将军最终促成此事。 赵子仁希望这块“尚贤石”能为天津大学增添一份笔墨之香，希望校园内每一位莘莘学子能够重视中国传统文化，并将之发扬光大。 天津大学校长李家俊十分感谢社会各界对学校的支持与厚望。“孔子是中国最早的教育家，天大是中国第一所现代大学，所以天大在某种程度上也传承了孔子留给我们的教育思想和理念，而今天是天津大学举办北洋园新校区落成典礼的日子，同时也是孔子诞辰纪念日，在这样一天为‘尚贤泰山孔子石’揭幕，是一件非常有意义的一件事。” 李玉明专门为这次捐赠作了一副对联，“万世师表，尚贤事能便为强国富民时；北洋三问，实事求是定有海晏河清日。” “尚贤泰山孔子石”在校内的选址也颇有新意。解放战争时期担任北洋大学校长、后担任新中国水利部副部长的张含英曾手书一幅“实事求是”校训条幅，上面还题有“懂吗？会吗？敢吗？”三问。在北洋园校区就有一座桥被命名为“三问”桥。“尚贤石”即座落于“三问”桥畔，“举贤三问”也成为北洋园校区新景观，成为学生见贤思齐的教化之所。",
+              "publishedAt": "2015-09-28",
+              "fetchedAt": "2026-09-25T12:18:56.389624+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:56.390628Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-shangxian-stone-0-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-shangxian-stone-1-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 1
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-shangxian-stone",
+            "currentAccess": "unknown",
+            "cacheHit": false,
+            "trace": [
+              {
+                "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-news"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 1
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-news",
+              "sourceId": "web-349d6b2506fb1c5b",
+              "title": "【120年校庆】泰山孔子石落户北洋园-天津大学新闻网",
+              "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+              "localRef": null,
+              "excerpt": "天津大学校长李家俊、捐赠人赵子仁等为尚贤石揭幕 天津大学师生与捐赠人等在尚贤石前合影 尚贤石捐赠人赵子仁先生接受记者采访 天大学子欣赏尚贤石 本站讯（记者 摄影 宋雪峰）9月28日，一块被称为“泰山孔子石”的奇石落户天津大学北洋园校区，为我校120周年校庆增添了别样的喜庆氛围。石上刻有我国著名书法家赵冷月先生所书“尚贤”二字。天津大学校长李家俊和奇石捐献者赵子仁先生共同为这块“尚贤石”揭幕。 自古以来，泰山石以古朴、苍劲、凝重，造型别致，线条奇异而著称，是大自然鬼斧神工产出的精品。更有人以“慧目鉴赏，浮想联翩，纵横观赏，灵感喷涌”来评价泰山石苍天造化的原生态之美。 由赵冷月先生之子赵子仁先生捐赠的这块泰山石为世间罕见。该石可以一石双看。作为山峰石观赏，可见群峰叠㠉，嶙峋峥嵘，谷壑窍洞，幽深孤傲，银瀑飞溅，山水相映。作为人物石鉴赏，有翁有妪，有老有少，形神各异，栩栩如生，无生命而似有生命，分布于硕大石壁之上。更为奇特的是，如果凝目细察，可见身着宏服长袍、双拳举袖而立的圣人孔子肖像立于灵石之中，昂首望长空，故被世人称为‘泰山孔子石”。 此石高3.8米，宽1.8米，厚0.8米，重12吨。据说，当年此石开采出来时，“石现时轰然有礼乐之声，裂石尘飞如祥云”。而该石上所刻“尚贤”二字是20年前，书法大家赵冷月先生应上海格致中学校长之请所题写，取自《墨子尚贤篇》。 赵子仁表示，他的父亲赵冷月最大的愿望是希望中国书法文化不会因为社会的快速发展而被大家所遗忘。“大学是培养国家栋梁的地方，如果将父亲‘尚贤’的题字刻于泰山石上，置于中国第一所大学的校园之内，使学子见贤思齐，当是名至实归。”于是，赵子仁与好友周庆堂、吕建春在山东四处寻找一块能担此重任的泰山石。山东省赏石名家、中国观赏石监评师、淄博市赏石文化社常务副社长昝新国先生得知此事，割爱转让了这块“泰山孔子石”。知名雕刻艺术家房平宽将“尚贤”二字雕刻其上。随该石一同捐赠的还有赵冷月先生的书法作品“尚贤”条幅。而与天津大学有着密切合作关系的武警后勤学院院长李玉明将军最终促成此事。 赵子仁希望这块“尚贤石”能为天津大学增添一份笔墨之香，希望校园内每一位莘莘学子能够重视中国传统文化，并将之发扬光大。 天津大学校长李家俊十分感谢社会各界对学校的支持与厚望。“孔子是中国最早的教育家，天大是中国第一所现代大学，所以天大在某种程度上也传承了孔子留给我们的教育思想和理念，而今天是天津大学举办北洋园新校区落成典礼的日子，同时也是孔子诞辰纪念日，在这样一天为‘尚贤泰山孔子石’揭幕，是一件非常有意义的一件事。” 李玉明专门为这次捐赠作了一副对联，“万世师表，尚贤事能便为强国富民时；北洋三问，实事求是定有海晏河清日。” “尚贤泰山孔子石”在校内的选址也颇有新意。解放战争时期担任北洋大学校长、后担任新中国水利部副部长的张含英曾手书一幅“实事求是”校训条幅，上面还题有“懂吗？会吗？敢吗？”三问。在北洋园校区就有一座桥被命名为“三问”桥。“尚贤石”即座落于“三问”桥畔，“举贤三问”也成为北洋园校区新景观，成为学生见贤思齐的教化之所。",
+              "publishedAt": "2015-09-28",
+              "fetchedAt": "2026-09-25T12:18:56.793977+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:56.793977Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-shangxian-stone-1-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-shangxian-stone-1-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-shangxian-stone",
+            "currentAccess": "unknown",
+            "cacheHit": true,
+            "trace": [
+              {
+                "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-news"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 1
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-news",
+              "sourceId": "web-349d6b2506fb1c5b",
+              "title": "【120年校庆】泰山孔子石落户北洋园-天津大学新闻网",
+              "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+              "localRef": null,
+              "excerpt": "天津大学校长李家俊、捐赠人赵子仁等为尚贤石揭幕 天津大学师生与捐赠人等在尚贤石前合影 尚贤石捐赠人赵子仁先生接受记者采访 天大学子欣赏尚贤石 本站讯（记者 摄影 宋雪峰）9月28日，一块被称为“泰山孔子石”的奇石落户天津大学北洋园校区，为我校120周年校庆增添了别样的喜庆氛围。石上刻有我国著名书法家赵冷月先生所书“尚贤”二字。天津大学校长李家俊和奇石捐献者赵子仁先生共同为这块“尚贤石”揭幕。 自古以来，泰山石以古朴、苍劲、凝重，造型别致，线条奇异而著称，是大自然鬼斧神工产出的精品。更有人以“慧目鉴赏，浮想联翩，纵横观赏，灵感喷涌”来评价泰山石苍天造化的原生态之美。 由赵冷月先生之子赵子仁先生捐赠的这块泰山石为世间罕见。该石可以一石双看。作为山峰石观赏，可见群峰叠㠉，嶙峋峥嵘，谷壑窍洞，幽深孤傲，银瀑飞溅，山水相映。作为人物石鉴赏，有翁有妪，有老有少，形神各异，栩栩如生，无生命而似有生命，分布于硕大石壁之上。更为奇特的是，如果凝目细察，可见身着宏服长袍、双拳举袖而立的圣人孔子肖像立于灵石之中，昂首望长空，故被世人称为‘泰山孔子石”。 此石高3.8米，宽1.8米，厚0.8米，重12吨。据说，当年此石开采出来时，“石现时轰然有礼乐之声，裂石尘飞如祥云”。而该石上所刻“尚贤”二字是20年前，书法大家赵冷月先生应上海格致中学校长之请所题写，取自《墨子尚贤篇》。 赵子仁表示，他的父亲赵冷月最大的愿望是希望中国书法文化不会因为社会的快速发展而被大家所遗忘。“大学是培养国家栋梁的地方，如果将父亲‘尚贤’的题字刻于泰山石上，置于中国第一所大学的校园之内，使学子见贤思齐，当是名至实归。”于是，赵子仁与好友周庆堂、吕建春在山东四处寻找一块能担此重任的泰山石。山东省赏石名家、中国观赏石监评师、淄博市赏石文化社常务副社长昝新国先生得知此事，割爱转让了这块“泰山孔子石”。知名雕刻艺术家房平宽将“尚贤”二字雕刻其上。随该石一同捐赠的还有赵冷月先生的书法作品“尚贤”条幅。而与天津大学有着密切合作关系的武警后勤学院院长李玉明将军最终促成此事。 赵子仁希望这块“尚贤石”能为天津大学增添一份笔墨之香，希望校园内每一位莘莘学子能够重视中国传统文化，并将之发扬光大。 天津大学校长李家俊十分感谢社会各界对学校的支持与厚望。“孔子是中国最早的教育家，天大是中国第一所现代大学，所以天大在某种程度上也传承了孔子留给我们的教育思想和理念，而今天是天津大学举办北洋园新校区落成典礼的日子，同时也是孔子诞辰纪念日，在这样一天为‘尚贤泰山孔子石’揭幕，是一件非常有意义的一件事。” 李玉明专门为这次捐赠作了一副对联，“万世师表，尚贤事能便为强国富民时；北洋三问，实事求是定有海晏河清日。” “尚贤泰山孔子石”在校内的选址也颇有新意。解放战争时期担任北洋大学校长、后担任新中国水利部副部长的张含英曾手书一幅“实事求是”校训条幅，上面还题有“懂吗？会吗？敢吗？”三问。在北洋园校区就有一座桥被命名为“三问”桥。“尚贤石”即座落于“三问”桥畔，“举贤三问”也成为北洋园校区新景观，成为学生见贤思齐的教化之所。",
+              "publishedAt": "2015-09-28",
+              "fetchedAt": "2026-09-25T12:18:56.793977+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:56.793977Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-shangxian-stone-1-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-shangxian-stone-2-cold",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 1
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-shangxian-stone",
+            "currentAccess": "unknown",
+            "cacheHit": false,
+            "trace": [
+              {
+                "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-news"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 1
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-news",
+              "sourceId": "web-349d6b2506fb1c5b",
+              "title": "【120年校庆】泰山孔子石落户北洋园-天津大学新闻网",
+              "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+              "localRef": null,
+              "excerpt": "天津大学校长李家俊、捐赠人赵子仁等为尚贤石揭幕 天津大学师生与捐赠人等在尚贤石前合影 尚贤石捐赠人赵子仁先生接受记者采访 天大学子欣赏尚贤石 本站讯（记者 摄影 宋雪峰）9月28日，一块被称为“泰山孔子石”的奇石落户天津大学北洋园校区，为我校120周年校庆增添了别样的喜庆氛围。石上刻有我国著名书法家赵冷月先生所书“尚贤”二字。天津大学校长李家俊和奇石捐献者赵子仁先生共同为这块“尚贤石”揭幕。 自古以来，泰山石以古朴、苍劲、凝重，造型别致，线条奇异而著称，是大自然鬼斧神工产出的精品。更有人以“慧目鉴赏，浮想联翩，纵横观赏，灵感喷涌”来评价泰山石苍天造化的原生态之美。 由赵冷月先生之子赵子仁先生捐赠的这块泰山石为世间罕见。该石可以一石双看。作为山峰石观赏，可见群峰叠㠉，嶙峋峥嵘，谷壑窍洞，幽深孤傲，银瀑飞溅，山水相映。作为人物石鉴赏，有翁有妪，有老有少，形神各异，栩栩如生，无生命而似有生命，分布于硕大石壁之上。更为奇特的是，如果凝目细察，可见身着宏服长袍、双拳举袖而立的圣人孔子肖像立于灵石之中，昂首望长空，故被世人称为‘泰山孔子石”。 此石高3.8米，宽1.8米，厚0.8米，重12吨。据说，当年此石开采出来时，“石现时轰然有礼乐之声，裂石尘飞如祥云”。而该石上所刻“尚贤”二字是20年前，书法大家赵冷月先生应上海格致中学校长之请所题写，取自《墨子尚贤篇》。 赵子仁表示，他的父亲赵冷月最大的愿望是希望中国书法文化不会因为社会的快速发展而被大家所遗忘。“大学是培养国家栋梁的地方，如果将父亲‘尚贤’的题字刻于泰山石上，置于中国第一所大学的校园之内，使学子见贤思齐，当是名至实归。”于是，赵子仁与好友周庆堂、吕建春在山东四处寻找一块能担此重任的泰山石。山东省赏石名家、中国观赏石监评师、淄博市赏石文化社常务副社长昝新国先生得知此事，割爱转让了这块“泰山孔子石”。知名雕刻艺术家房平宽将“尚贤”二字雕刻其上。随该石一同捐赠的还有赵冷月先生的书法作品“尚贤”条幅。而与天津大学有着密切合作关系的武警后勤学院院长李玉明将军最终促成此事。 赵子仁希望这块“尚贤石”能为天津大学增添一份笔墨之香，希望校园内每一位莘莘学子能够重视中国传统文化，并将之发扬光大。 天津大学校长李家俊十分感谢社会各界对学校的支持与厚望。“孔子是中国最早的教育家，天大是中国第一所现代大学，所以天大在某种程度上也传承了孔子留给我们的教育思想和理念，而今天是天津大学举办北洋园新校区落成典礼的日子，同时也是孔子诞辰纪念日，在这样一天为‘尚贤泰山孔子石’揭幕，是一件非常有意义的一件事。” 李玉明专门为这次捐赠作了一副对联，“万世师表，尚贤事能便为强国富民时；北洋三问，实事求是定有海晏河清日。” “尚贤泰山孔子石”在校内的选址也颇有新意。解放战争时期担任北洋大学校长、后担任新中国水利部副部长的张含英曾手书一幅“实事求是”校训条幅，上面还题有“懂吗？会吗？敢吗？”三问。在北洋园校区就有一座桥被命名为“三问”桥。“尚贤石”即座落于“三问”桥畔，“举贤三问”也成为北洋园校区新景观，成为学生见贤思齐的教化之所。",
+              "publishedAt": "2015-09-28",
+              "fetchedAt": "2026-09-25T12:18:57.197667+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:57.197667Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-shangxian-stone-2-cold"
+            }
+          ],
+          "timingCategory": "cold"
+        },
+        {
+          "schemaVersion": "1.0",
+          "toolCallId": "official_search-beiyangyuan-shangxian-stone-2-warm",
+          "status": "completed",
+          "data": {
+            "runId": "a-source-probe",
+            "sessionId": "a-source-probe",
+            "channel": "probe",
+            "generation": 1,
+            "callLedger": {
+              "modelRequests": 0,
+              "searchRequests": 0,
+              "pageFetches": 0
+            },
+            "retrievalStatus": "success",
+            "partial": false,
+            "poiId": "beiyangyuan-shangxian-stone",
+            "currentAccess": "unknown",
+            "cacheHit": true,
+            "trace": [
+              {
+                "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+                "elapsed_ms": 78.0
+              },
+              {
+                "status": "success",
+                "scope": [
+                  "tju-news"
+                ],
+                "coverage": "registered pages only; no search provider configured",
+                "page_calls": 1
+              }
+            ]
+          },
+          "sources": [
+            {
+              "registryId": "tju-news",
+              "sourceId": "web-349d6b2506fb1c5b",
+              "title": "【120年校庆】泰山孔子石落户北洋园-天津大学新闻网",
+              "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+              "localRef": null,
+              "excerpt": "天津大学校长李家俊、捐赠人赵子仁等为尚贤石揭幕 天津大学师生与捐赠人等在尚贤石前合影 尚贤石捐赠人赵子仁先生接受记者采访 天大学子欣赏尚贤石 本站讯（记者 摄影 宋雪峰）9月28日，一块被称为“泰山孔子石”的奇石落户天津大学北洋园校区，为我校120周年校庆增添了别样的喜庆氛围。石上刻有我国著名书法家赵冷月先生所书“尚贤”二字。天津大学校长李家俊和奇石捐献者赵子仁先生共同为这块“尚贤石”揭幕。 自古以来，泰山石以古朴、苍劲、凝重，造型别致，线条奇异而著称，是大自然鬼斧神工产出的精品。更有人以“慧目鉴赏，浮想联翩，纵横观赏，灵感喷涌”来评价泰山石苍天造化的原生态之美。 由赵冷月先生之子赵子仁先生捐赠的这块泰山石为世间罕见。该石可以一石双看。作为山峰石观赏，可见群峰叠㠉，嶙峋峥嵘，谷壑窍洞，幽深孤傲，银瀑飞溅，山水相映。作为人物石鉴赏，有翁有妪，有老有少，形神各异，栩栩如生，无生命而似有生命，分布于硕大石壁之上。更为奇特的是，如果凝目细察，可见身着宏服长袍、双拳举袖而立的圣人孔子肖像立于灵石之中，昂首望长空，故被世人称为‘泰山孔子石”。 此石高3.8米，宽1.8米，厚0.8米，重12吨。据说，当年此石开采出来时，“石现时轰然有礼乐之声，裂石尘飞如祥云”。而该石上所刻“尚贤”二字是20年前，书法大家赵冷月先生应上海格致中学校长之请所题写，取自《墨子尚贤篇》。 赵子仁表示，他的父亲赵冷月最大的愿望是希望中国书法文化不会因为社会的快速发展而被大家所遗忘。“大学是培养国家栋梁的地方，如果将父亲‘尚贤’的题字刻于泰山石上，置于中国第一所大学的校园之内，使学子见贤思齐，当是名至实归。”于是，赵子仁与好友周庆堂、吕建春在山东四处寻找一块能担此重任的泰山石。山东省赏石名家、中国观赏石监评师、淄博市赏石文化社常务副社长昝新国先生得知此事，割爱转让了这块“泰山孔子石”。知名雕刻艺术家房平宽将“尚贤”二字雕刻其上。随该石一同捐赠的还有赵冷月先生的书法作品“尚贤”条幅。而与天津大学有着密切合作关系的武警后勤学院院长李玉明将军最终促成此事。 赵子仁希望这块“尚贤石”能为天津大学增添一份笔墨之香，希望校园内每一位莘莘学子能够重视中国传统文化，并将之发扬光大。 天津大学校长李家俊十分感谢社会各界对学校的支持与厚望。“孔子是中国最早的教育家，天大是中国第一所现代大学，所以天大在某种程度上也传承了孔子留给我们的教育思想和理念，而今天是天津大学举办北洋园新校区落成典礼的日子，同时也是孔子诞辰纪念日，在这样一天为‘尚贤泰山孔子石’揭幕，是一件非常有意义的一件事。” 李玉明专门为这次捐赠作了一副对联，“万世师表，尚贤事能便为强国富民时；北洋三问，实事求是定有海晏河清日。” “尚贤泰山孔子石”在校内的选址也颇有新意。解放战争时期担任北洋大学校长、后担任新中国水利部副部长的张含英曾手书一幅“实事求是”校训条幅，上面还题有“懂吗？会吗？敢吗？”三问。在北洋园校区就有一座桥被命名为“三问”桥。“尚贤石”即座落于“三问”桥畔，“举贤三问”也成为北洋园校区新景观，成为学生见贤思齐的教化之所。",
+              "publishedAt": "2015-09-28",
+              "fetchedAt": "2026-09-25T12:18:57.197667+00:00"
+            }
+          ],
+          "error": null,
+          "observedAt": "2026-09-25T12:18:57.197667Z",
+          "evidence": [
+            {
+              "type": "REGISTERED_HTTP",
+              "observed": {
+                "tool": "official_search",
+                "outcome": "completed"
+              },
+              "traceRef": "a-source-probe/official_search-beiyangyuan-shangxian-stone-2-warm"
+            }
+          ],
+          "timingCategory": "warm"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Desktop microphone and physical mobile not exercised",
+    "No model calls",
+    "Unknown dates remain null; local fetchedAt is not rewritten",
+    "Network failures are not proof of no announcements"
+  ]
+}

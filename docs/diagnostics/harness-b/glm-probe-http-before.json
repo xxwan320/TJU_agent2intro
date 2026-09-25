@@ -1,0 +1,22 @@
+{
+  "model": "glm-5.1",
+  "sdkRetries": 0,
+  "gatewayRetries": "unknown",
+  "imageInput": "unknown",
+  "audioInput": "unknown",
+  "nativeMcp": "unknown",
+  "parallelTools": "unknown",
+  "status": "FAIL",
+  "error": "BadRequestError",
+  "nativeTools": "unknown",
+  "modelRequests": 1,
+  "toolExecutions": 0,
+  "elapsedMs": 2889.999999999418,
+  "ledger": [
+    {
+      "event": "model_started",
+      "attempt": 1,
+      "maxRetries": 0
+    }
+  ]
+}

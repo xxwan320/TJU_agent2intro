@@ -1,0 +1,9 @@
+{
+  "args": [
+    "node",
+    "scripts/closeout-chat-browser.mjs"
+  ],
+  "code": 0,
+  "stdout": "{\n  \"scope\": \"real ordinary chat, one explicit greeting request, speech off\",\n  \"requests\": [\n    \"/api/chat/stream\",\n    \"/web_map/get_tile\",\n    \"/web_map/get_tile\"\n  ],\n  \"errors\": [],\n  \"answer\": \"你好，我是海小棠，很高兴在天津大学与你相遇。\\n\\n读这一段\",\n  \"elapsedMs\": 16332,\n  \"status\": \"PASS_REAL\"\n}\n",
+  "stderr": ""
+}

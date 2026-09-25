@@ -1,0 +1,97 @@
+{
+  "sameBaseline": true,
+  "files": [
+    {
+      "path": "backend/knowledge/harness_provider.py",
+      "matches": true,
+      "sha256": "52b7d53dc10bc16c0edbd48a479b763c29c649fab00abc053bcc9b74f11ac1b7"
+    },
+    {
+      "path": "frontend/src/device/a-device.ts",
+      "matches": true,
+      "sha256": "9b5e613b4c950851851c90ec215a054af18a710572f0e1bc078d017a6bbab061"
+    },
+    {
+      "path": "tests/knowledge/test_harness_provider.py",
+      "matches": true,
+      "sha256": "9052c20cabd51fc805dca9348de9b511432fe9ed6fbd65702fd5bfeceb37339e"
+    },
+    {
+      "path": "tests/interaction/a-device.test.mjs",
+      "matches": true,
+      "sha256": "36d701deccbbbe2d088eaba2fc7605539901a69f1033807768a26ee50f9dcd35"
+    },
+    {
+      "path": "scripts/audit-a-assets.py",
+      "matches": true,
+      "sha256": "331e257ce23b9e25d1d51ec7d4b24ce95182751fbe22fab8c856fcfe96630602"
+    },
+    {
+      "path": "scripts/verify-a-provider.py",
+      "matches": true,
+      "sha256": "7bcd0b4866cc37f1538f36379161329ec364300144539c03ecb8c87b7164575e"
+    },
+    {
+      "path": "data/knowledge/a_asset_inventory.json",
+      "matches": true,
+      "sha256": "f90b9ada1de7c799aac0152644dcf34d3c8fe2e7ba983d0cd2b2d01e5d3f9022"
+    },
+    {
+      "path": "data/knowledge/a_fact_samples.json",
+      "matches": true,
+      "sha256": "5300a374f371f4df847bc0f0f65d76bb4772059446d5ab596fd42542922d5f92"
+    },
+    {
+      "path": "data/knowledge/a_source_observations.json",
+      "matches": true,
+      "sha256": "480df1dc421fc8fc40f1a18c9158e3b0ca6f1f0623c4636916a606cd06788fa9"
+    },
+    {
+      "path": "docs/diagnostics/a-data-device-baseline.md",
+      "matches": true,
+      "sha256": "9d5b9a751e0307953784f256b10fc76b5f0ba89e18bf963ce70dc2583dbca5e1"
+    },
+    {
+      "path": "docs/handoff/A_data_device.md",
+      "matches": true,
+      "sha256": "ec64ac701be84fe792583a4088f9d1b1d262deb04adb2384483fba0079b4e746"
+    },
+    {
+      "path": "docs/diagnostics/harness-a/baseline.json",
+      "matches": true,
+      "sha256": "ef227a1a23650e5acc5e0435de37289a85c653caab5f2ea4cac279c15c0c22aa"
+    },
+    {
+      "path": "docs/diagnostics/harness-a/provider-probe.json",
+      "matches": true,
+      "sha256": "e182dbc4562048292739e30f99bb291e1c4bd91230165a64c0526fbb07546d79"
+    },
+    {
+      "path": "docs/diagnostics/harness-a/assets-report.md",
+      "matches": true,
+      "sha256": "5360db91efccdcf82c051d72c0dd3f41197dddf10f6a2daf69b862bc9be86fdf"
+    },
+    {
+      "path": "docs/diagnostics/harness-a/mobile-report.md",
+      "matches": true,
+      "sha256": "a0e176838ada7dc0efcea007ddba85cbc198ebbf0a695332c0ed3a1202d63f8f"
+    },
+    {
+      "path": "docs/diagnostics/harness-a/acceptance.json",
+      "matches": true,
+      "sha256": "6ed7594d9dc7e64f48cf4d589c55d2a554b9e319bdc78f3d784f981f4f0fd10c"
+    }
+  ],
+  "allHashesMatch": true,
+  "patchReverseCheck": false,
+  "patchCheckDiagnostic": "error: patch failed: docs/diagnostics/harness-a/mobile-report.md:1\nerror: docs/diagnostics/harness-a/mobile-report.md: patch does not apply\nerror: patch failed: docs/diagnostics/harness-a/provider-probe.json:1\nerror: docs/diagnostics/harness-a/provider-probe.json: patch does not apply\nerror: patch failed: docs/diagnostics/harness-a/baseline.json:1\nerror: docs/diagnostics/harness-a/baseline.json: patch does not apply\nerror: patch failed: docs/handoff/A_data_device.md:1\nerror: docs/handoff/A_data_device.md: patch does not apply\nerror: patch failed: data/knowledge/a_source_observations.json:1\nerror: data/knowledge/a_source_observations.json: patch does not apply\nerror: patch failed: data/knowledge/a_fact_samples.json:1\nerror: data/knowledge/a_fact_samples.json: patch does not apply\nerror: patch failed: frontend/src/device/a-device.ts:1\nerror: frontend/src/device/a-device.ts: patch does not apply\n",
+  "integration": "A already wrote isolated files into shared tree; no duplicate patch applied or tree copied",
+  "provider": "backend.knowledge.harness_provider.provider",
+  "routerMounted": true,
+  "tests": "A provider tests, strict shared contract, actual browser upload and native GLM document read passed",
+  "reviewedExactManifestPatch": {
+    "passed": true,
+    "diagnostic": ""
+  },
+  "reviewedPatch": "a-reviewed-incremental.patch"
+}

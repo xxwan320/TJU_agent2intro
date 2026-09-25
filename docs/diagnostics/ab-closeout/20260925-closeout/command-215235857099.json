@@ -1,0 +1,9 @@
+{
+  "args": [
+    "python",
+    "C:/Users/ASUS/ai4tju_requirements_audit.py"
+  ],
+  "code": 0,
+  "stdout": "{\"report\": \"E:\\\\AI4TJU\\\\docs\\\\diagnostics\\\\3d-harness-requirements-audit\\\\report.md\", \"gpu\": \"NVIDIA GeForce RTX 5060 Laptop GPU, 8151 MiB, 5299 MiB, 616.92\", \"live\": {\"capabilities\": {\"httpStatus\": 200, \"items\": [{\"toolName\": \"poi_select\", \"status\": \"available\"}, {\"toolName\": \"narration_control\", \"status\": \"available\"}, {\"toolName\": \"route_plan\", \"status\": \"available\"}, {\"toolName\": \"itinerary_export\", \"status\": \"available\"}, {\"toolName\": \"knowledge_search\", \"status\": \"available\"}, {\"toolName\": \"official_search\", \"status\": \"available\"}, {\"toolName\": \"document_read\", \"status\": \"available\"}, {\"toolName\": \"weather_query\", \"status\": \"unavailable\"}, {\"toolName\": \"device_capabilities\", \"status\": \"available\"}, {\"toolName\": \"device_pick_document\", \"status\": \"unavailable\"}, {\"toolName\": \"speech_input\", \"status\": \"unavailable\"}, {\"toolName\": \"device_share\", \"status\": \"unavailable\"}, {\"toolName\": \"device_open_app\", \"status\": \"unavailable\"}]}, \"imageExtensionProbe\": {\"httpStatus\": 422, \"response\": {\"error\": {\"code\": \"http_error\", \"message\": \"端点不存在或请求方法不支持\", \"request_id\": null, \"retryable\": false}}, \"scope\": \"synthetic PNG signature only, checks image filename rejection; not image inference\"}}, \"poiCount\": 106, \"locatedPois\": 0, \"modelRuns\": [{\"runId\": \"37b016cb-8e7c-46a1-bf27-6b7992f1340f\", \"modelCalls\": 2, \"toolCalls\": 1, \"tools\": [\"document_read\"]}]}\n",
+  "stderr": ""
+}

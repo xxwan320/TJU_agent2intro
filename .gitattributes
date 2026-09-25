@@ -1,3 +1,5 @@
 * text=auto eol=lf
 *.ps1 text eol=crlf
 docs/licenses/** -text -whitespace
+models/weights/** filter=lfs diff=lfs merge=lfs -text
+models/generated/*.glb filter=lfs diff=lfs merge=lfs -text

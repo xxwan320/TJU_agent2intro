@@ -1,0 +1,11 @@
+{
+  "args": [
+    "powershell",
+    "-NoProfile",
+    "-Command",
+    "Set-Location E:\\AI4TJU; npm.cmd run build"
+  ],
+  "code": 0,
+  "stdout": "vite v8.3.0 building client environment for production...\ntransforming...\n✓ 182 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                             0.47 kB │ gzip:   0.34 kB\ndist/assets/index-Bmng_5dI.css             62.35 kB │ gzip:  12.97 kB\ndist/assets/rolldown-runtime-DkW27tQK.js    1.19 kB │ gzip:   0.67 kB\ndist/assets/dist-BhNQyHkr.js                4.94 kB │ gzip:   1.58 kB\ndist/assets/cubism4.es-wPRUm0AM.js        117.67 kB │ gzip:  29.29 kB\ndist/assets/pixi-3-Wr4OcN.js              238.74 kB │ gzip:  65.79 kB\ndist/assets/display-RG8akvZS.js           262.39 kB │ gzip:  75.65 kB\ndist/assets/dist-37cnt7mW.js              427.91 kB │ gzip: 115.44 kB\ndist/assets/index-Boi354g8.js             471.23 kB │ gzip: 151.46 kB\ndist/assets/renderer-CEo7nlWE.js          762.23 kB │ gzip: 189.83 kB\n\n✓ built in 405ms\n",
+  "stderr": "npm notice run ai4tju-guide@0.0.1 build\nnpm notice run tsc --noEmit && vite build\n[plugin builtin:vite-reporter] \n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n"
+}

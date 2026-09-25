@@ -1,0 +1,13 @@
+{
+  "branch": "fix/ip-route-autoplanning",
+  "head": "f459060bd5e8e1c9d5540ca348d5e08fe9a18e36",
+  "initialDirty": [
+    ".worktrees/publish"
+  ],
+  "A_baseline": "docs/handoff/A_data_device.md",
+  "B_baseline": "docs/handoff/B_harness_toolchain.md",
+  "captureSource": "initial git status/branch/rev-parse tool results before edits",
+  "startup": "scripts/start-app.ps1 -Build",
+  "dev": "scripts/start-dev.ps1",
+  "beforePerformance": "NOT_RUN: no instrumented prechange browser baseline; no speedup claim"
+}

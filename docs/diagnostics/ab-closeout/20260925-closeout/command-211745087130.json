@@ -1,0 +1,10 @@
+{
+  "args": [
+    "node",
+    "--test",
+    "tests/interaction/harness-closeout.test.mjs"
+  ],
+  "code": 0,
+  "stdout": "✔ C12 stop during session establishment prevents any run submission (12.5441ms)\n✔ C12 newer run supersedes an older session wait even if replies arrive reversed (1.3415ms)\nℹ tests 2\nℹ suites 0\nℹ pass 2\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 261.5254\n",
+  "stderr": ""
+}

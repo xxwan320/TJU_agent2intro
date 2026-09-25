@@ -1,0 +1,180 @@
+{
+  "decision": "NO_OPTIMIZATION_ADOPTED",
+  "reason": "No stable attributable bottleneck identified. A 1051ms warm image observation includes scroll/wait and has no resource phase trace; additional exact-mapping checks do not isolate a product bottleneck. No speedup claimed.",
+  "correctedBaseline": "fixed-baseline.json",
+  "device": "Windows Chrome 153.0.8010.53",
+  "baselineSamples": [
+    {
+      "sample": 0,
+      "cache": "cold",
+      "poiId": "weijinlu-09-teaching",
+      "domMs": 211,
+      "imageMs": 250
+    },
+    {
+      "sample": 0,
+      "cache": "warm",
+      "poiId": "weijinlu-09-teaching",
+      "domMs": 17,
+      "imageMs": 106
+    },
+    {
+      "sample": 1,
+      "cache": "cold",
+      "poiId": "weijinlu-09-teaching",
+      "domMs": 28,
+      "imageMs": 47
+    },
+    {
+      "sample": 1,
+      "cache": "warm",
+      "poiId": "weijinlu-09-teaching",
+      "domMs": 74,
+      "imageMs": 152
+    },
+    {
+      "sample": 2,
+      "cache": "cold",
+      "poiId": "weijinlu-09-teaching",
+      "domMs": 23,
+      "imageMs": 45
+    },
+    {
+      "sample": 2,
+      "cache": "warm",
+      "poiId": "weijinlu-09-teaching",
+      "domMs": 73,
+      "imageMs": 1051
+    }
+  ],
+  "baselineMedians": {
+    "cold": {
+      "domMs": 28,
+      "imageMs": 47
+    },
+    "warm": {
+      "domMs": 73,
+      "imageMs": 152
+    }
+  },
+  "exactMappingSamples": [
+    {
+      "round": 0,
+      "id": "beiyangyuan-zhengdong-library",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-zhengdong-library-1.jpg",
+      "domMs": 267,
+      "imageMs": 296,
+      "cache": "first pass"
+    },
+    {
+      "round": 0,
+      "id": "beiyangyuan-datong-center",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-datong-center-1.jpg",
+      "domMs": 76,
+      "imageMs": 92,
+      "cache": "first pass"
+    },
+    {
+      "round": 0,
+      "id": "beiyangyuan-zhengdong-library",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-zhengdong-library-1.jpg",
+      "domMs": 15,
+      "imageMs": 33,
+      "cache": "first pass"
+    },
+    {
+      "round": 1,
+      "id": "beiyangyuan-zhengdong-library",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-zhengdong-library-1.jpg",
+      "domMs": 35,
+      "imageMs": 179,
+      "cache": "warm"
+    },
+    {
+      "round": 1,
+      "id": "beiyangyuan-datong-center",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-datong-center-1.jpg",
+      "domMs": 12,
+      "imageMs": 30,
+      "cache": "warm"
+    },
+    {
+      "round": 1,
+      "id": "beiyangyuan-zhengdong-library",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-zhengdong-library-1.jpg",
+      "domMs": 8,
+      "imageMs": 24,
+      "cache": "warm"
+    },
+    {
+      "round": 2,
+      "id": "beiyangyuan-zhengdong-library",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-zhengdong-library-1.jpg",
+      "domMs": 5,
+      "imageMs": 18,
+      "cache": "warm"
+    },
+    {
+      "round": 2,
+      "id": "beiyangyuan-datong-center",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-datong-center-1.jpg",
+      "domMs": 8,
+      "imageMs": 24,
+      "cache": "warm"
+    },
+    {
+      "round": 2,
+      "id": "beiyangyuan-zhengdong-library",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-zhengdong-library-1.jpg",
+      "domMs": 8,
+      "imageMs": 26,
+      "cache": "warm"
+    }
+  ],
+  "mediaSamples": [
+    {
+      "metric": "selection-to-card-and-image",
+      "sample": 0,
+      "ms": 47,
+      "cache": "first observation"
+    },
+    {
+      "metric": "selection-to-card-and-image",
+      "sample": 1,
+      "ms": 38,
+      "cache": "warm"
+    },
+    {
+      "metric": "selection-to-card-and-image",
+      "sample": 2,
+      "ms": 30,
+      "cache": "warm"
+    },
+    {
+      "metric": "start-to-observed-playing",
+      "ms": 2071,
+      "cache": "first observation"
+    },
+    {
+      "metric": "stop-to-observed-stopped",
+      "ms": 26
+    }
+  ],
+  "routeSample": {
+    "requestToRenderedAndAckMs": 5674,
+    "samples": 1
+  },
+  "chatCompleteSample": 16332,
+  "firstValidTextMs": null,
+  "optimizationSamples": [],
+  "adopted": false,
+  "coldDefinition": "cold = new browser context; warm = same page after first point; backend cache not cleared",
+  "limitations": [
+    "browser instrumentation and scroll costs included",
+    "audio playing is not manual audible verification",
+    "route includes request, drawing, ack and test overhead",
+    "ordinary chat completion includes polling overhead, first text not recorded",
+    "no pre-fix versus post-fix performance comparison",
+    "no P95 from these samples"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "GLM": {
+    "model": "glm-5.1",
+    "actualAttempts": 9,
+    "breakdown": {
+      "initialHttpEcho": 1,
+      "firstHttpDocumentRunBeforePersistentLedger": 1,
+      "httpDocumentFallbackRun": 1,
+      "httpsEchoConfigurationProbe": 2,
+      "httpsDocumentSecondRoundRequestedExtraTool": 2,
+      "finalHttpsDocumentClosedLoop": 2
+    },
+    "sdkAutomaticRetries": 0,
+    "observedTokens": 3857,
+    "callsWithoutUsage": 4,
+    "gatewayRetriesAndBilling": "unknown"
+  },
+  "A": {
+    "registeredPageRequests": 15,
+    "searchProviderRequests": 0,
+    "GLMRequests": 0
+  },
+  "B_readonlyGatewayDiagnostics": {
+    "modelListRequests": 2,
+    "generationRequests": 0
+  },
+  "B_routeAcceptance": {
+    "walking": 1,
+    "poiSearch": 2,
+    "mapSdkLoad": 1
+  },
+  "B_otherBrowserMapCalls": "unknown: earlier browser runs did not capture all SDK counters; not counted as zero",
+  "TTS": "actual playing events verified; aggregate upstream synthesis count not instrumented, unknown",
+  "ASR": {
+    "realMicrophoneRequests": 0,
+    "physicalTest": "NOT_RUN"
+  },
+  "visualModelRequests": 0,
+  "externalMcpCalls": 0,
+  "GUIActions": 0,
+  "budgetNotes": "Offline model doubles are TEST_PROVIDER, not real requests. Each final ordinary task <=2 GLM/6 tools/45s. Upload continuation separate 1-tool budget; SDK retry=0."
+}

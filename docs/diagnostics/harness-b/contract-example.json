@@ -1,0 +1,37 @@
+{
+  "label": "TEST_PROVIDER",
+  "request": {
+    "schemaVersion": "1.0",
+    "runId": "offline-run",
+    "toolCallId": "offline-call",
+    "toolName": "knowledge_search",
+    "input": {
+      "query": "校史"
+    },
+    "context": {
+      "sessionId": "offline-session",
+      "campusId": "weijinlu",
+      "channel": "harness",
+      "generation": 1
+    },
+    "deadlineAt": "2026-09-25T23:59:00Z",
+    "cancelToken": "offline-run"
+  },
+  "result": {
+    "toolCallId": "offline-call",
+    "status": "completed",
+    "data": {
+      "text": "离线样例，不是校园事实"
+    },
+    "sources": [],
+    "error": null,
+    "observedAt": "2026-09-25T09:00:00Z",
+    "evidence": [
+      {
+        "type": "TEST_PROVIDER",
+        "observed": "schema example only",
+        "traceRef": null
+      }
+    ]
+  }
+}

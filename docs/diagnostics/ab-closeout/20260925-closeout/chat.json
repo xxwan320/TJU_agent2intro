@@ -1,0 +1,12 @@
+{
+  "scope": "real ordinary chat, one explicit greeting request, speech off",
+  "requests": [
+    "/api/chat/stream",
+    "/web_map/get_tile",
+    "/web_map/get_tile"
+  ],
+  "errors": [],
+  "answer": "你好，我是海小棠，很高兴在天津大学与你相遇。\n\n读这一段",
+  "elapsedMs": 16332,
+  "status": "PASS_REAL"
+}

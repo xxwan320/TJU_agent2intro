@@ -1,0 +1,198 @@
+{
+  "tour_id": "e9e946ac-48d5-44f4-bd13-dde1691ae426",
+  "session_id": "bbfc4ccd-ba15-4575-9abf-be5a2f362492",
+  "state_version": 1,
+  "status": "draft",
+  "plan": {
+    "plan_id": "466ece8c-7a8b-4713-b4e4-dc4244559245",
+    "version": 1,
+    "campus_id": "beiyangyuan",
+    "status": "draft",
+    "request": {
+      "request_id": "ee23b157-591c-4b2e-a4f8-c7de44805ecd",
+      "session_id": "bbfc4ccd-ba15-4575-9abf-be5a2f362492",
+      "campus_id": "beiyangyuan",
+      "duration_minutes": 60,
+      "interests": [
+        "校园历史",
+        "建筑"
+      ],
+      "start": {
+        "kind": "unspecified",
+        "poi_id": null
+      },
+      "end": {
+        "kind": "unspecified",
+        "poi_id": null
+      },
+      "accessibility": "standard",
+      "message": "校园历史、建筑",
+      "must_visit": [],
+      "avoid": [],
+      "visit_date": null,
+      "max_walking_minutes": null
+    },
+    "stops": [
+      {
+        "stop_id": "25f3ce3e-2da1-4eba-8da1-f8b461f2b6fb",
+        "poi_id": "beiyangyuan-shutian-square",
+        "title": "书田广场",
+        "visit_minutes": 10,
+        "visit_time_source": "planner_allocation",
+        "purpose": "按兴趣分配停留；开放与入口须现场确认。",
+        "evidence_ids": [
+          "poi-beiyangyuan-shutian-square"
+        ]
+      },
+      {
+        "stop_id": "46d52225-8b5d-406d-bcc6-a19b1edd3327",
+        "poi_id": "beiyangyuan-tailei-square",
+        "title": "太雷广场",
+        "visit_minutes": 10,
+        "visit_time_source": "planner_allocation",
+        "purpose": "按兴趣分配停留；开放与入口须现场确认。",
+        "evidence_ids": [
+          "poi-beiyangyuan-tailei-square"
+        ]
+      },
+      {
+        "stop_id": "26f2a9d7-d926-4f40-bcb3-fba2a905ab49",
+        "poi_id": "beiyangyuan-tianlin-square",
+        "title": "天麟广场",
+        "visit_minutes": 10,
+        "visit_time_source": "planner_allocation",
+        "purpose": "按兴趣分配停留；开放与入口须现场确认。",
+        "evidence_ids": [
+          "poi-beiyangyuan-tianlin-square"
+        ]
+      }
+    ],
+    "legs": [
+      {
+        "from_ref": {
+          "kind": "unspecified",
+          "poi_id": null
+        },
+        "to_ref": {
+          "kind": "poi",
+          "poi_id": "beiyangyuan-shutian-square"
+        },
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "checked_at": null,
+        "campus_access": "unverified",
+        "evidence_ids": [],
+        "reason": "missing_data"
+      },
+      {
+        "from_ref": {
+          "kind": "poi",
+          "poi_id": "beiyangyuan-shutian-square"
+        },
+        "to_ref": {
+          "kind": "poi",
+          "poi_id": "beiyangyuan-tailei-square"
+        },
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "checked_at": null,
+        "campus_access": "unverified",
+        "evidence_ids": [],
+        "reason": "missing_data"
+      },
+      {
+        "from_ref": {
+          "kind": "poi",
+          "poi_id": "beiyangyuan-tailei-square"
+        },
+        "to_ref": {
+          "kind": "poi",
+          "poi_id": "beiyangyuan-tianlin-square"
+        },
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "checked_at": null,
+        "campus_access": "unverified",
+        "evidence_ids": [],
+        "reason": "missing_data"
+      },
+      {
+        "from_ref": {
+          "kind": "poi",
+          "poi_id": "beiyangyuan-tianlin-square"
+        },
+        "to_ref": {
+          "kind": "unspecified",
+          "poi_id": null
+        },
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "checked_at": null,
+        "campus_access": "unverified",
+        "evidence_ids": [],
+        "reason": "missing_data"
+      }
+    ],
+    "evidence": [
+      {
+        "evidence_id": "poi-beiyangyuan-shutian-square",
+        "source_ref": "poi-beiyangyuan-shutian-square",
+        "claim": "校方资料在北洋园校区列有书田广场。（适用日期未提供）",
+        "relation": "supports",
+        "verification": "verified",
+        "checked_at": "2026-09-14T00:00:00Z",
+        "valid_until": null
+      },
+      {
+        "evidence_id": "poi-beiyangyuan-tailei-square",
+        "source_ref": "poi-beiyangyuan-tailei-square",
+        "claim": "校方资料在北洋园校区列有太雷广场。（适用日期未提供）",
+        "relation": "supports",
+        "verification": "verified",
+        "checked_at": "2026-09-14T00:00:00Z",
+        "valid_until": null
+      },
+      {
+        "evidence_id": "poi-beiyangyuan-tianlin-square",
+        "source_ref": "poi-beiyangyuan-tianlin-square",
+        "claim": "校方资料在北洋园校区列有天麟广场。（适用日期未提供）",
+        "relation": "supports",
+        "verification": "verified",
+        "checked_at": "2026-09-14T00:00:00Z",
+        "valid_until": null
+      }
+    ],
+    "warnings": [
+      "路线：步行时间/距离未知，无法证明总时长可行；计划为待核实草稿，开始前请确认。",
+      "资料：入口、门禁和今日开放尚未核实；历史开放事件不代表今日规则。"
+    ],
+    "created_at": "2026-09-25T13:21:12.051276Z"
+  },
+  "progress": [
+    {
+      "stop_id": "25f3ce3e-2da1-4eba-8da1-f8b461f2b6fb",
+      "state": "pending"
+    },
+    {
+      "stop_id": "46d52225-8b5d-406d-bcc6-a19b1edd3327",
+      "state": "pending"
+    },
+    {
+      "stop_id": "26f2a9d7-d926-4f40-bcb3-fba2a905ab49",
+      "state": "pending"
+    }
+  ],
+  "current_stop_id": null,
+  "remaining_minutes": 60,
+  "saved": false,
+  "updated_at": "2026-09-25T13:21:12.052309Z",
+  "completion_reason": null
+}

@@ -1,0 +1,105 @@
+{
+  "browser": "153.0.8010.53",
+  "scope": "real Windows Chrome and local backend; no physical microphone or manual listening",
+  "cases": [
+    {
+      "name": "real selected document upload via trusted file picker continuation",
+      "status": "PASS_REAL",
+      "observation": "file chooser selected actual TXT, upload ticket accepted, continuation receipt recorded"
+    },
+    {
+      "name": "document question through actual provider and GLM",
+      "status": "PASS_REAL",
+      "answer": "根据上传文档的内容，活动集合时间为 09:30（2026年9月26日），集合地点为北洋广场。\n\n资料来源：harness-notice.txt",
+      "modelAnswer": true,
+      "scope": "actual GLM answer"
+    },
+    {
+      "name": "real structured itinerary and Markdown JSON downloads",
+      "status": "PASS_REAL",
+      "outputs": [
+        {
+          "filename": "tju-itinerary.md",
+          "bytes": 1052
+        },
+        {
+          "filename": "tju-itinerary.json",
+          "bytes": 5920
+        }
+      ]
+    },
+    {
+      "name": "point selection actual text and image, A-B-A stale guards",
+      "status": "PASS_REAL",
+      "ids": [
+        "beiyangyuan-zhengdong-library",
+        "beiyangyuan-datong-center",
+        "beiyangyuan-zhengdong-library"
+      ]
+    },
+    {
+      "name": "real narration playing pause resume stop events",
+      "status": "PASS_REAL",
+      "media": [
+        {
+          "type": "playing",
+          "tag": "AUDIO",
+          "at": 9445,
+          "time": 0
+        },
+        {
+          "type": "pause",
+          "tag": "AUDIO",
+          "at": 9478,
+          "time": 0.032
+        },
+        {
+          "type": "playing",
+          "tag": "AUDIO",
+          "at": 9507.89999999851,
+          "time": 0.038321
+        },
+        {
+          "type": "playing",
+          "tag": "AUDIO",
+          "at": 9507.89999999851,
+          "time": 0.038324
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "performance": [
+    {
+      "metric": "selection-to-card-and-image",
+      "sample": 0,
+      "ms": 47,
+      "cache": "first observation"
+    },
+    {
+      "metric": "selection-to-card-and-image",
+      "sample": 1,
+      "ms": 38,
+      "cache": "warm"
+    },
+    {
+      "metric": "selection-to-card-and-image",
+      "sample": 2,
+      "ms": 30,
+      "cache": "warm"
+    },
+    {
+      "metric": "start-to-observed-playing",
+      "ms": 2071,
+      "cache": "first observation"
+    },
+    {
+      "metric": "stop-to-observed-stopped",
+      "ms": 26
+    }
+  ],
+  "layout": {
+    "viewport": 390,
+    "scrollWidth": 390
+  }
+}

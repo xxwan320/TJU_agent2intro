@@ -1,0 +1,80 @@
+{
+  "baseHead": "f459060bd5e8e1c9d5540ca348d5e08fe9a18e36",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "19d645897012b87ce8aeee768deaf09f59c635ca3286727abfb6f27e990f9231"
+    },
+    {
+      "path": "backend/app.py",
+      "sha256": "0950bef1295d4e94dc1d562f705a1a5185d66f6436912cfe4f7ad97f13090afd"
+    },
+    {
+      "path": "backend/common/config.py",
+      "sha256": "ac75f02d7d298e989b8d8383afc96492a49d6ecea71f4c02ebde61f69779cb30"
+    },
+    {
+      "path": "backend/harness_contracts.py",
+      "sha256": "72d80cf25248a557760cd9120648dcbb78e019653c7f6f8553827810724b2609"
+    },
+    {
+      "path": "backend/harness_routes.py",
+      "sha256": "a6c84987f2c3a1bdd539d1e20f5ac9f67265136414dd31a22a5f7d4b43a0fd8b"
+    },
+    {
+      "path": "backend/model/harness.py",
+      "sha256": "e2b2a1410ae1fb27a88cdaf825ad4e3ac3e2a38acbd3dac802154fa1f11b8a18"
+    },
+    {
+      "path": "frontend/src/ui/App.tsx",
+      "sha256": "8bdd7eaac042ed1dd793f9b62db14d1ecd71a3711f2ae28937ac2d98bc633f1e"
+    },
+    {
+      "path": "frontend/src/ui/CampusExplorer.tsx",
+      "sha256": "c272a6c6f176259291bd6ba9d01e8c9ec683e3322e8bd7f8f900e0ecd3228963"
+    },
+    {
+      "path": "frontend/src/ui/TourWorkspace.tsx",
+      "sha256": "5bea7e70624a0d62c63fb480f11727ccb216e957d564372050760801dd5a290a"
+    },
+    {
+      "path": "frontend/src/transport/harness.ts",
+      "sha256": "cc8e3a0d5c2dc2b3adfad8ebf5f618dcf896a694b3bb1167a51f8bcc6e3c9a8d"
+    },
+    {
+      "path": "shared/harness.ts",
+      "sha256": "716d428f2cc6e1351f3bbe1dc151c5e45d2c64a4e109da152ae353f93c1bf77a"
+    },
+    {
+      "path": "shared/harness.schema.json",
+      "sha256": "27ca58bb517c782b8c9f5c5b9ba800ec5dfecc2d1b9c8cc9f7a1f2a738122476"
+    },
+    {
+      "path": "tests/harness/test_runtime.py",
+      "sha256": "71db64c193ebf2cef611d4cf0123917e149656ff2934aa116e747588b92690e6"
+    },
+    {
+      "path": "tests/harness/test_integration.py",
+      "sha256": "db70b905d0fdd87dee2d2b75a19e756da7b24b30cd185c85b1ed0e7582f26618"
+    },
+    {
+      "path": "scripts/harness-probe.py",
+      "sha256": "a44decc2ab4febae1e97b4806ecb2c492895102193cda9a55f665f737f03a0af"
+    },
+    {
+      "path": "scripts/harness-browser.mjs",
+      "sha256": "68086e58247526924edb43a3cf124e05dcb8e98208a3d74019a5fdffadca7e16"
+    },
+    {
+      "path": "scripts/harness-route-browser.mjs",
+      "sha256": "643b774ff29b4ecbfc432c31369e6f43959713b09a1102cb9838995a6cf94dd9"
+    },
+    {
+      "path": "scripts/harness-performance.mjs",
+      "sha256": "4bf12ce70d6787d2905de81bcb2a5c0094a762da03192e7fd7b205b911d85154"
+    }
+  ],
+  "privateConfiguration": "root .env: only LLM URL scheme http->https, key/model untouched; excluded from patches",
+  "artifacts": "docs/diagnostics/harness-b and docs/evaluation/harness-split",
+  "A_files": "see verified A delivery manifest"
+}

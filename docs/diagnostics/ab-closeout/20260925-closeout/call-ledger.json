@@ -1,0 +1,58 @@
+{
+  "scope": "this closeout only; A/B previous attempts excluded",
+  "harnessGlmRequests": 2,
+  "ordinaryChatRequests": 1,
+  "ordinaryChatUpstreamAttempts": "one browser chat request; provider retries=0 by existing implementation; internal unobserved calls not claimed as measured",
+  "ttsRequests": 2,
+  "poiQueries": 4,
+  "walkingRequests": 1,
+  "searchRequests": 0,
+  "officialPageFetches": 0,
+  "visionRequests": 0,
+  "asrRequests": 0,
+  "providerInternalRetries": "not observable; do not count as zero",
+  "budget": "GLM 8/TTS 2/POI 4/walking 2/search 4/page 8/vision 0",
+  "requests": [
+    {
+      "kind": "modelTasks",
+      "path": "/api/harness/runs",
+      "at": "2026-09-25T13:21:07.419Z"
+    },
+    {
+      "kind": "poi",
+      "path": "/api/maps/amap/_AMapService/v3/place/text",
+      "at": "2026-09-25T13:21:12.093Z"
+    },
+    {
+      "kind": "tts",
+      "path": "/api/speech/tts",
+      "at": "2026-09-25T13:21:12.935Z"
+    },
+    {
+      "kind": "tts",
+      "path": "/api/speech/tts",
+      "at": "2026-09-25T13:21:12.935Z"
+    },
+    {
+      "kind": "poi",
+      "path": "/api/maps/amap/_AMapService/v3/place/text",
+      "at": "2026-09-25T13:22:03.255Z"
+    },
+    {
+      "kind": "walking",
+      "path": "/api/maps/amap/_AMapService/v3/direction/walking",
+      "at": "2026-09-25T13:22:08.358Z"
+    },
+    {
+      "kind": "poi",
+      "path": "/api/maps/amap/_AMapService/v3/place/text",
+      "at": "2026-09-25T13:22:08.552Z"
+    },
+    {
+      "kind": "poi",
+      "path": "/api/maps/amap/_AMapService/v3/place/text",
+      "at": "2026-09-25T13:22:33.860Z"
+    }
+  ],
+  "blocked": []
+}

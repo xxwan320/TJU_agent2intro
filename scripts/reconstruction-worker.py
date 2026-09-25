@@ -4,6 +4,7 @@ import sys,json,time,os,hashlib,platform
 root=Path(__file__).resolve().parents[1];home=root/'.reconstruction'
 sys.path[:0]=[str(home/'compat'),str(home/'TripoSR')]
 os.environ['HF_HUB_DISABLE_TELEMETRY']='1'
+os.environ['U2NET_HOME']=str(root/'models/weights/rembg')
 jobfile=Path(sys.argv[1]);job=json.loads(jobfile.read_text());folder=jobfile.parent
 start=time.time();times={};fast=job.get('quality','fast')=='fast';resolution=128 if fast else 256
 def phase(name):

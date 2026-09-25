@@ -1,0 +1,149 @@
+{
+  "at": "2026-09-25T21:52:35.838754",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, 8151 MiB, 5299 MiB, 616.92",
+  "registeredTools": [
+    "device_capabilities",
+    "device_open_app",
+    "device_pick_document",
+    "device_share",
+    "document_read",
+    "itinerary_export",
+    "knowledge_search",
+    "narration_control",
+    "official_search",
+    "poi_select",
+    "route_plan",
+    "speech_input",
+    "weather_query"
+  ],
+  "assetInventory": {
+    "referencePhotos": 91,
+    "runtimeBindings": 59,
+    "runtimePhotoInstances": 104,
+    "unreadableReferencePhotos": 0,
+    "brokenRuntimePhotos": 0,
+    "crossPoiPhotoInstances": 13,
+    "videos": 1,
+    "avatarModels": 2,
+    "campusModels": 0,
+    "activePois": 42,
+    "activeMissingPhotos": 0,
+    "originalsAndMappingsUnchanged": true
+  },
+  "assetInventoryScope": "previous inventory re-read, not a new exhaustive disk audit",
+  "poiCount": 106,
+  "poisWithLocation": 0,
+  "samples": [
+    {
+      "id": "beiyangyuan-datong-center",
+      "name": "大通学生中心",
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.47,
+        "y": 0.515,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      }
+    },
+    {
+      "id": "beiyangyuan-zhengdong-library",
+      "name": "郑东图书馆",
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.584,
+        "y": 0.522,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      }
+    }
+  ],
+  "previousRealModelRuns": [
+    {
+      "runId": "37b016cb-8e7c-46a1-bf27-6b7992f1340f",
+      "modelCalls": 2,
+      "toolCalls": 1,
+      "tools": [
+        "document_read"
+      ]
+    }
+  ],
+  "live": {
+    "capabilities": {
+      "httpStatus": 200,
+      "items": [
+        {
+          "toolName": "poi_select",
+          "status": "available"
+        },
+        {
+          "toolName": "narration_control",
+          "status": "available"
+        },
+        {
+          "toolName": "route_plan",
+          "status": "available"
+        },
+        {
+          "toolName": "itinerary_export",
+          "status": "available"
+        },
+        {
+          "toolName": "knowledge_search",
+          "status": "available"
+        },
+        {
+          "toolName": "official_search",
+          "status": "available"
+        },
+        {
+          "toolName": "document_read",
+          "status": "available"
+        },
+        {
+          "toolName": "weather_query",
+          "status": "unavailable"
+        },
+        {
+          "toolName": "device_capabilities",
+          "status": "available"
+        },
+        {
+          "toolName": "device_pick_document",
+          "status": "unavailable"
+        },
+        {
+          "toolName": "speech_input",
+          "status": "unavailable"
+        },
+        {
+          "toolName": "device_share",
+          "status": "unavailable"
+        },
+        {
+          "toolName": "device_open_app",
+          "status": "unavailable"
+        }
+      ]
+    },
+    "imageExtensionProbe": {
+      "httpStatus": 422,
+      "response": {
+        "error": {
+          "code": "http_error",
+          "message": "端点不存在或请求方法不支持",
+          "request_id": null,
+          "retryable": false
+        }
+      },
+      "scope": "synthetic PNG signature only, checks image filename rejection; not image inference"
+    }
+  },
+  "externalModelCallsThisAudit": 0,
+  "codeHashes": {
+    "backend/model/harness.py": "0b118f46a84d72aa1da735baeea31720b64c5a4b39cf7acd855a8982c7aba948",
+    "frontend/src/ui/App.tsx": "8bdd7eaac042ed1dd793f9b62db14d1ecd71a3711f2ae28937ac2d98bc633f1e",
+    "backend/knowledge/harness_provider.py": "52b7d53dc10bc16c0edbd48a479b763c29c649fab00abc053bcc9b74f11ac1b7"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "args": [
+    "node",
+    "scripts/closeout-harness-browser.mjs"
+  ],
+  "code": 0,
+  "stdout": "PASS real selected document upload via trusted file picker continuation\nPASS document question through actual provider and GLM\nPASS real structured itinerary and Markdown JSON downloads\nPASS point selection actual text and image, A-B-A stale guards\nPASS real narration playing pause resume stop events\n{\n  \"cases\": [\n    {\n      \"name\": \"real selected document upload via trusted file picker continuation\",\n      \"status\": \"PASS_REAL\"\n    },\n    {\n      \"name\": \"document question through actual provider and GLM\",\n      \"status\": \"PASS_REAL\"\n    },\n    {\n      \"name\": \"real structured itinerary and Markdown JSON downloads\",\n      \"status\": \"PASS_REAL\"\n    },\n    {\n      \"name\": \"point selection actual text and image, A-B-A stale guards\",\n      \"status\": \"PASS_REAL\"\n    },\n    {\n      \"name\": \"real narration playing pause resume stop events\",\n      \"status\": \"PASS_REAL\"\n    }\n  ],\n  \"errors\": [],\n  \"layout\": {\n    \"viewport\": 390,\n    \"scrollWidth\": 390\n  }\n}\n",
+  "stderr": ""
+}

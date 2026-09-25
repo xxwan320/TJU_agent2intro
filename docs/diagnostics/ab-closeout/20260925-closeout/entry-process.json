@@ -1,0 +1,38 @@
+{
+  "root": "E:\\AI4TJU",
+  "mode": "app",
+  "api_port": 8000,
+  "web_port": 8000,
+  "processes": [
+    {
+      "pid": 43944,
+      "started_ticks": "639259380505275910",
+      "role": "asr-launcher"
+    },
+    {
+      "pid": 48808,
+      "started_ticks": "639259380505772104",
+      "role": "api-launcher"
+    },
+    {
+      "pid": 48208,
+      "started_ticks": "639259380505366528",
+      "role": "child"
+    },
+    {
+      "pid": 50356,
+      "started_ticks": "639259380505673771",
+      "role": "child"
+    },
+    {
+      "pid": 42988,
+      "started_ticks": "639259380505848361",
+      "role": "child"
+    },
+    {
+      "pid": 52156,
+      "started_ticks": "639259380506142867",
+      "role": "child"
+    }
+  ]
+}

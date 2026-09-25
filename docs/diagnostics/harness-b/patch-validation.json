@@ -1,0 +1,11 @@
+{
+  "B": {
+    "passed": true,
+    "diagnostic": ""
+  },
+  "A_reviewed": {
+    "passed": true,
+    "diagnostic": ""
+  },
+  "explanation": "Preserved UTF-8 BOM and missing-final-newline markers; A originals untouched, reviewed patch from hash-matching whitelist only"
+}

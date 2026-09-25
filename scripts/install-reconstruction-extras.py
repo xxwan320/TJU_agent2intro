@@ -15,8 +15,11 @@ def install():
  if '--verify' not in sys.argv:
   for name,url,commit in [('shap-e','https://github.com/openai/shap-e.git',SHAPE),('CLIP','https://github.com/openai/CLIP.git',CLIP)]:
    repo=ROOT/'.reconstruction'/name
-   if not repo.exists():run(['git','clone',url,repo])
-   run(['git','-C',repo,'checkout','--detach',commit])
+   if not repo.exists():
+    bundled=ROOT/'models/vendor'/name
+    if bundled.is_dir():shutil.copytree(bundled,repo)
+    else:run(['git','clone',url,repo])
+   if (repo/'.git').exists():run(['git','-C',repo,'checkout','--detach',commit])
   run([py,'-m','ensurepip','--upgrade'])
   run([py,'-m','pip','install','--no-deps',ROOT/'.reconstruction/CLIP','blobfile==3.3.0','ftfy==6.3.1','humanize==4.16.0','fire==0.7.1','pycryptodomex==3.23.0','lxml==6.1.3','wcwidth==0.9.1','termcolor==3.3.0'])
   run([py,'-m','pip','install','--target',ROOT/'.vision/packages','transformers==4.57.6','numpy==1.26.4','pillow==11.3.0'])
@@ -57,20 +60,31 @@ def download(url,expected):
  assembled=target.with_suffix('.assembled');assert hashlib.sha256(assembled.read_bytes()).hexdigest()==expected;assembled.replace(target)
  print('RANGE_VERIFIED',target.name,flush=True)
 
+bundle=ROOT/'models/weights'
+for source,name in [('vector_decoder.pt','decoder'),('text_cond.pt','text300M'),('ViT-L-14.pt','clip')]:
+ sourcefile=bundle/('shap-e' if name!='clip' else 'shap-e')/source
+ if sourcefile.is_file():
+  target=cache/sourcefile.name
+  if not target.is_file():shutil.copy2(sourcefile,target)
 for name in ('decoder','text300M'):download(MODEL_PATHS[name],URL_HASHES[MODEL_PATHS[name]])
 for name in ('decoder','text300M','diffusion'):fetch_file_cached(CONFIG_PATHS[name],cache_dir=str(cache))
 url=clip.clip._MODELS['ViT-L/14'];download(url,url.split('/')[-2])
 (ROOT/'.reconstruction/shap-e-version.json').write_text(json.dumps({'commit':SHAPE,'cache':str(cache)}))
 repo='HuggingFaceTB/SmolVLM-256M-Instruct';cache=ROOT/'.vision/weights';cache.mkdir(parents=True,exist_ok=True)
+bundle=ROOT/'models/weights/smolvlm'
+if bundle.is_dir():
+ for sourcefile in bundle.iterdir():
+  if sourcefile.is_file() and not (cache/sourcefile.name).exists():shutil.copy2(sourcefile,cache/sourcefile.name)
 if '--verify' in sys.argv:
  meta=json.loads((ROOT/'.vision/weights.json').read_text());assert meta['revision']==VISION
  assert hashlib.sha256((cache/'model.safetensors').read_bytes()).hexdigest()==meta['weightSha256']
 else:
- info=HfApi().model_info(repo,revision=VISION,files_metadata=True)
- for file in info.siblings:
-  name=file.rfilename
-  if '/' in name or not name.endswith(('.json','.safetensors','.jinja','.txt')):continue
-  if name.endswith('.safetensors'):download(f'https://huggingface.co/{repo}/resolve/{VISION}/{name}',file.lfs.sha256)
-  else:shutil.copyfile(hf_hub_download(repo,name,revision=VISION),cache/name)
+ if not (cache/'model.safetensors').is_file():
+  info=HfApi().model_info(repo,revision=VISION,files_metadata=True)
+  for file in info.siblings:
+   name=file.rfilename
+   if '/' in name or not name.endswith(('.json','.safetensors','.jinja','.txt')):continue
+   if name.endswith('.safetensors'):download(f'https://huggingface.co/{repo}/resolve/{VISION}/{name}',file.lfs.sha256)
+   else:shutil.copyfile(hf_hub_download(repo,name,revision=VISION),cache/name)
  (ROOT/'.vision/weights.json').write_text(json.dumps({'repo':repo,'revision':VISION,'path':str(cache),'weightSha256':hashlib.sha256((cache/'model.safetensors').read_bytes()).hexdigest()}))
 print('Optional text generation and image-description recovery weights verified.')

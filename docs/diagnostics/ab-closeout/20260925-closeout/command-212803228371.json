@@ -1,0 +1,10 @@
+{
+  "args": [
+    "E:/AI4TJU/.venv/Scripts/python.exe",
+    "scripts/export-r3-schema.py",
+    "--check"
+  ],
+  "code": 0,
+  "stdout": "R3 schema/types checked\n",
+  "stderr": ""
+}
