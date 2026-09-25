@@ -1,0 +1,13 @@
+✔ T12 delayed create cannot overwrite the latest response; cancellation is sent remotely (2.6493ms)
+✔ T12 late responses after cancel/campus switch and foreign contexts are ignored (0.5321ms)
+✔ T12 a delayed GET cannot overwrite a later mutation (0.6274ms)
+✔ S02 B events must match every context dimension; partial and final share the same guard (0.377ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 510.3924
+

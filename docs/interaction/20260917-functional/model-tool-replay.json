@@ -1,0 +1,176 @@
+[
+  {
+    "request_id": "5af33bf5-7ca7-4f4a-88d2-12ca899cb724",
+    "input": "请联网介绍尚贤石，使用注册的资料工具。",
+    "answer": {
+      "request_id": "5af33bf5-7ca7-4f4a-88d2-12ca899cb724",
+      "session_id": "200361d7-37a7-4c9e-ad43-43dd65b19948",
+      "answer": "猫眼石，快看这块沉静的“原石”。尚贤石于2015年天大120周年校庆时落户北洋园，亦称泰山孔子石。石上“尚贤”二字由书法家赵冷月先生题写，取自《墨子·尚贤篇》，宛如一场凝固的舞曲，静静诉说着对贤才的推崇。它立于北洋园中轴的求是大道旁，作为新校区同年落成的献礼，这块泰山的馈赠自有一种不可估量的庄重与美感。",
+      "sources": [
+        {
+          "id": "poi-beiyangyuan-shangxian-stone",
+          "title": "尚贤石",
+          "snippet": "校方资料在北洋园校区列有尚贤石。",
+          "url": "https://fw.tju.edu.cn/Beiyang.html",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "tju-news-shangxian-20150928",
+          "title": "【120年校庆】泰山孔子石落户北洋园",
+          "snippet": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+          "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+          "campus_id": "beiyangyuan",
+          "published_at": "2015-09-28",
+          "retrieved_at": "2026-09-17"
+        },
+        {
+          "id": "beiyangyuan-roads",
+          "title": "北洋园道路命名",
+          "snippet": "迎新网介绍将北洋园主干道概括为六纵、三环和一中轴，并说明中轴道名为求是大道。",
+          "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+          "campus_id": "beiyangyuan",
+          "published_at": "2024-08-15",
+          "retrieved_at": "2026-09-14"
+        }
+      ],
+      "model": "glm-5.1",
+      "usage": {
+        "prompt_tokens": 1034,
+        "completion_tokens": 1183,
+        "total_tokens": 2217
+      },
+      "elapsed_ms": 32578.00000000134,
+      "actions": []
+    },
+    "trace": {
+      "status": "success",
+      "local_source_ids": [
+        "poi-beiyangyuan-shangxian-stone",
+        "tju-news-shangxian-20150928",
+        "beiyangyuan-opened-2015",
+        "beiyangyuan-roads"
+      ],
+      "external": {
+        "status": "success",
+        "evidence": [
+          {
+            "sourceId": "web-349d6b2506fb1c5b",
+            "registryId": "tju-news",
+            "title": "【120年校庆】泰山孔子石落户北洋园-天津大学新闻网",
+            "text": "天津大学校长李家俊、捐赠人赵子仁等为尚贤石揭幕 天津大学师生与捐赠人等在尚贤石前合影 尚贤石捐赠人赵子仁先生接受记者采访 天大学子欣赏尚贤石 本站讯（记者 摄影 宋雪峰）9月28日，一块被称为“泰山孔子石”的奇石落户天津大学北洋园校区，为我校120周年校庆增添了别样的喜庆氛围。石上刻有我国著名书法家赵冷月先生所书“尚贤”二字。天津大学校长李家俊和奇石捐献者赵子仁先生共同为这块“尚贤石”揭幕。 自古以来，泰山石以古朴、苍劲、凝重，造型别致，线条奇异而著称，是大自然鬼斧神工产出的精品。更有人以“慧目鉴赏，浮想联翩，纵横观赏，灵感喷涌”来评价泰山石苍天造化的原生态之美。 由赵冷月先生之子赵子仁先生捐赠的这块泰山石为世间罕见。该石可以一石双看。作为山峰石观赏，可见群峰叠㠉，嶙峋峥嵘，谷壑窍洞，幽深孤傲，银瀑飞溅，山水相映。作为人物石鉴赏，有翁有妪，有老有少，形神各异，栩栩如生，无生命而似有生命，分布于硕大石壁之上。更为奇特的是，如果凝目细察，可见身着宏服长袍、双拳举袖而立的圣人孔子肖像立于灵石之中，昂首望长空，故被世人称为‘泰山孔子石”。 此石高3.8米，宽1.8米，厚0.8米，重12吨。据说，当年此石开采出来时，“石现时轰然有礼乐之声，裂石尘飞如祥云”。而该石上所刻“尚贤”二字是20年前，书法大家赵冷月先生应上海格致中学校长之请所题写，取自《墨子尚贤篇》。 赵子仁表示，他的父亲赵冷月最大的愿望是希望中国书法文化不会因为社会的快速发展而被大家所遗忘。“大学是培养国家栋梁的地方，如果将父亲‘尚贤’的题字刻于泰山石上，置于中国第一所大学的校园之内，使学子见贤思齐，当是名至实归。”于是，赵子仁与好友周庆堂、吕建春在山东四处寻找一块能担此重任的泰山石。山东省赏石名家、中国观赏石监评师、淄博市赏石文化社常务副社长昝新国先生得知此事，割爱转让了这块“泰山孔子石”。知名雕刻艺术家房平宽将“尚贤”二字雕刻其上。随该石一同捐赠的还有赵冷月先生的书法作品“尚贤”条幅。而与天津大学有着密切合作关系的武警后勤学院院长李玉明将军最终促成此事。 赵子仁希望这块“尚贤石”能为天津大学增添一份笔墨之香，希望校园内每一位莘莘学子能够重视中国传统文化，并将之发扬光大。 天津大学校长李家俊十分感谢社会各界对学校的支持与厚望。“孔子是中国最早的教育家，天大是中国第一所现代大学，所以天大在某种程度上也传承了孔子留给我们的教育思想和理念，而今天是天津大学举办北洋园新校区落成典礼的日子，同时也是孔子诞辰纪念日，在这样一天为‘尚贤泰山孔子石’揭幕，是一件非常有意义的一件事。” 李玉明专门为这次捐赠作了一副对联，“万世师表，尚贤事能便为强国富民时；北洋三问，实事求是定有海晏河清日。” “尚贤泰山孔子石”在校内的选址也颇有新意。解放战争时期担任北洋大学校长、后担任新中国水利部副部长的张含英曾手书一幅“实事求是”校训条幅，上面还题有“懂吗？会吗？敢吗？”三问。在北洋园校区就有一座桥被命名为“三问”桥。“尚贤石”即座落于“三问”桥畔，“举贤三问”也成为北洋园校区新景观，成为学生见贤思齐的教化之所。",
+            "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+            "finalUrl": "https://news.tju.edu.cn/info/1003/89019.htm",
+            "publishedAt": null,
+            "validFrom": null,
+            "validTo": null,
+            "fetchedAt": "2026-09-17T19:29:02.692319+08:00",
+            "campusId": "beiyangyuan",
+            "poiIds": [],
+            "provenance": {
+              "publisher": "天津大学新闻网",
+              "sourceTier": "official",
+              "retrievalMethod": "registered_page",
+              "repostOf": null
+            },
+            "currentApplicable": false
+          }
+        ],
+        "scope": [
+          "tju-news"
+        ],
+        "trace": [
+          {
+            "evidence_type": "recorded_replay",
+            "fixture": "live-pages-authorized.json"
+          }
+        ],
+        "page_calls": 0,
+        "search_calls": 0,
+        "cache_hit": false
+      },
+      "parts": {
+        "answer": "success"
+      }
+    },
+    "elapsed_ms": 32578.00000000134,
+    "model_evidence": "live_http",
+    "page_evidence": "recorded_replay"
+  },
+  {
+    "request_id": "a6a77175-01fa-45ca-b76c-458504b72e9d",
+    "input": "北洋园启用年份，以及图书馆今天几点关门？",
+    "answer": {
+      "request_id": "a6a77175-01fa-45ca-b76c-458504b72e9d",
+      "session_id": "db0354a0-157f-4b8b-b923-210b463137f0",
+      "answer": "猫眼石，这场校园舞曲的乐章可是有迹可循的。北洋园校区于2015年正式启用，如同切割完美的宝石般迎来了它的初登场，奠定了新校区的格局。至于图书馆今晚几点落幕，目前我手中的目录并未收录今日（9月17日）的具体闭馆时间，无法为你拍板确切的落幕时刻，建议直接查阅天津大学图书馆官网或现场公告，以免白跑一趟。",
+      "sources": [
+        {
+          "id": "poi-beiyangyuan-main-building",
+          "title": "北洋园校区主楼",
+          "snippet": "校方资料在北洋园校区列有北洋园校区主楼。",
+          "url": "https://fw.tju.edu.cn/Beiyang.html",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "poi-beiyangyuan-east-gate",
+          "title": "北洋园校区东门",
+          "snippet": "校方资料在北洋园校区列有北洋园校区东门。",
+          "url": "https://fw.tju.edu.cn/Beiyang.html",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "poi-beiyangyuan-memorial-pavilion",
+          "title": "北洋纪念亭",
+          "snippet": "校方资料在北洋园校区列有北洋纪念亭。",
+          "url": "https://fw.tju.edu.cn/Beiyang.html",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        }
+      ],
+      "model": "glm-5.1",
+      "usage": {
+        "prompt_tokens": 855,
+        "completion_tokens": 1299,
+        "total_tokens": 2154
+      },
+      "elapsed_ms": 29891.00000000326,
+      "actions": []
+    },
+    "trace": {
+      "status": "unavailable",
+      "local_source_ids": [
+        "poi-beiyangyuan-main-building",
+        "poi-beiyangyuan-east-gate",
+        "poi-beiyangyuan-memorial-pavilion"
+      ],
+      "external": {
+        "status": "unavailable",
+        "evidence": [],
+        "scope": [],
+        "trace": [
+          {
+            "evidence_type": "recorded_replay",
+            "reason": "No applicable current library evidence; registered library adapter disabled"
+          }
+        ],
+        "page_calls": 0,
+        "search_calls": 0,
+        "cache_hit": false
+      },
+      "parts": {
+        "stable": "success",
+        "current": "unavailable"
+      }
+    },
+    "elapsed_ms": 29891.00000000326,
+    "model_evidence": "live_http",
+    "page_evidence": "recorded_replay"
+  }
+]

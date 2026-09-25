@@ -1,4 +1,4 @@
-# M/C only. Does not print secrets or copy .env into worktrees.
+# Does not print secrets.
 $ErrorActionPreference='Stop'
 $root=Split-Path -Parent $PSScriptRoot
 $path=Join-Path $root '.env'

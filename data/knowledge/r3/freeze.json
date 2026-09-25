@@ -1,0 +1,20 @@
+{
+  "frozen_at": "2026-09-15T02:13:28.987722+00:00",
+  "base_commit": "0bf2e4bc8f49a9697878eaf0db614a1017ace5c1",
+  "data_version": "sha256:d75f2e7e8ac0",
+  "file_sha256": {
+    "documents.json": "74fd65a0e85b9756a188d67f92c16d81158f965614508076b0981fd38d727026",
+    "buildings.json": "0d29b05bb8a4e48d1299baf20144138ce1d0475ac8073a15fbc27744c2e4f5fc",
+    "pois.json": "0c6196bdfce3a117136de2e9d2ae2d8fa05c9862c58a6f6017e0916d6e28a135",
+    "assets.json": "4d07143ce7cb7cf1d5bb8bfc99422073b2e0362e584050e994e710fee286cc6f",
+    "facts.json": "54bc70366f803bcae8208e3e2a54ae4fdb5aa58d94ec5f9cceec2bb564a82717",
+    "SOURCE_REGISTRY.json": "3cc4b9454412d1bacddc37587eed0a4f964b8fe0e2b58416d640f2702eeb20cf",
+    "evaluation.json": "3230eff8dab6fe57744f8ed0b81e936950dddd88101089dfbbc26819cdcb23be"
+  },
+  "evaluation_sha256": {
+    "legacy-50.json": "ce8d0f9861383d4c7cd4f0b6a1755664eb08b303ceb9befdaf180b9d2d956180",
+    "evaluation-v1.json": "50e845ad6dcb75ccae1b976536dd2e18f4d4ea1dc3ae355a40a246becb18780b"
+  },
+  "note": "Baseline doc a5e0678c385d differs from actual d75f2e7e8ac0; raw-byte version is checkout sensitive. HEAD/tag/receipt match; actual measured version retained.",
+  "encoding_note": "Corrected Windows pipe ASCII encoding before optimization and before first freeze commit; questions and evidence design unchanged."
+}

@@ -1,0 +1,13 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "--test-name-pattern=T12|S02",
+    "tests/ui/tour.test.mjs"
+  ],
+  "validation": "simulation_only",
+  "elapsed_ms": 584.1356,
+  "exit_code": 0,
+  "error": null,
+  "external_calls": 0
+}

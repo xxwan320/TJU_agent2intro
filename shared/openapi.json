@@ -5,6 +5,265 @@
     "version": "1.1.0"
   },
   "paths": {
+    "/api/campus/trip-brief": {
+      "post": {
+        "tags": [
+          "campus-evidence"
+        ],
+        "summary": "Trip Brief",
+        "operationId": "trip_brief_api_campus_trip_brief_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ToolArgs"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request Entity Too Large",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "499": {
+            "description": "Additional Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Not Implemented",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/campus/query-trace/{request_id}": {
+      "get": {
+        "tags": [
+          "campus-evidence"
+        ],
+        "summary": "Query Trace",
+        "operationId": "query_trace_api_campus_query_trace__request_id__get",
+        "parameters": [
+          {
+            "name": "request_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Request Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Request Entity Too Large"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Too Many Requests"
+          },
+          "499": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Additional Response"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Implemented"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
     "/api/health": {
       "get": {
         "summary": "Health",
@@ -16,6 +275,1110 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Health"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request Entity Too Large",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "499": {
+            "description": "Additional Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Not Implemented",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/knowledge/tour-context/{poi_id}": {
+      "get": {
+        "tags": [
+          "R3 knowledge"
+        ],
+        "summary": "Tour Context",
+        "operationId": "tour_context_api_knowledge_tour_context__poi_id__get",
+        "parameters": [
+          {
+            "name": "poi_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "title": "Poi Id"
+            }
+          },
+          {
+            "name": "campus_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "enum": [
+                "weijinlu",
+                "beiyangyuan"
+              ],
+              "type": "string",
+              "title": "Campus Id"
+            }
+          },
+          {
+            "name": "visit_date",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Visit Date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TourKnowledgeContext"
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Request Entity Too Large"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Too Many Requests"
+          },
+          "499": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Additional Response"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Implemented"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/api/tours/status": {
+      "get": {
+        "tags": [
+          "R3"
+        ],
+        "summary": "Status",
+        "operationId": "status_api_tours_status_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request Entity Too Large",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "499": {
+            "description": "Additional Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Not Implemented",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tours": {
+      "post": {
+        "tags": [
+          "R3"
+        ],
+        "summary": "Create",
+        "operationId": "create_api_tours_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TourRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TourResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request Entity Too Large",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "499": {
+            "description": "Additional Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Not Implemented",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tours/restore": {
+      "post": {
+        "tags": [
+          "R3"
+        ],
+        "summary": "Restore",
+        "operationId": "restore_api_tours_restore_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TourRestore"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TourResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request Entity Too Large",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "499": {
+            "description": "Additional Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "501": {
+            "description": "Not Implemented",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tours/{tour_id}": {
+      "get": {
+        "tags": [
+          "R3"
+        ],
+        "summary": "Read",
+        "operationId": "read_api_tours__tour_id__get",
+        "parameters": [
+          {
+            "name": "tour_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Tour Id"
+            }
+          },
+          {
+            "name": "session_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Session Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TourSession"
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Request Entity Too Large"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Too Many Requests"
+          },
+          "499": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Additional Response"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Implemented"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/api/tours/{tour_id}/revisions": {
+      "post": {
+        "tags": [
+          "R3"
+        ],
+        "summary": "Revise",
+        "operationId": "revise_api_tours__tour_id__revisions_post",
+        "parameters": [
+          {
+            "name": "tour_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Tour Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlanRevision"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TourResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Request Entity Too Large"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Too Many Requests"
+          },
+          "499": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Additional Response"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Implemented"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/api/tours/{tour_id}/commands": {
+      "post": {
+        "tags": [
+          "R3"
+        ],
+        "summary": "Command",
+        "operationId": "command_api_tours__tour_id__commands_post",
+        "parameters": [
+          {
+            "name": "tour_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Tour Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TourCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TourResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Request Entity Too Large"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Too Many Requests"
+          },
+          "499": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Additional Response"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Implemented"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/api/maps/route-costs": {
+      "post": {
+        "tags": [
+          "R3"
+        ],
+        "summary": "Costs",
+        "operationId": "costs_api_maps_route_costs_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RouteCostRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RouteCostResponse"
                 }
               }
             }
@@ -3628,6 +4991,300 @@
           }
         }
       }
+    },
+    "/api/knowledge/videos/search": {
+      "get": {
+        "tags": [
+          "knowledge-videos"
+        ],
+        "summary": "Search",
+        "operationId": "search_api_knowledge_videos_search_get",
+        "parameters": [
+          {
+            "name": "campus_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "enum": [
+                "weijinlu",
+                "beiyangyuan"
+              ],
+              "type": "string",
+              "title": "Campus Id"
+            }
+          },
+          {
+            "name": "poi_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 120
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Poi Id"
+            }
+          },
+          {
+            "name": "query",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "maxLength": 1000,
+              "default": "",
+              "title": "Query"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VideoResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Request Entity Too Large"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Too Many Requests"
+          },
+          "499": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Additional Response"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Implemented"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    },
+    "/api/knowledge/videos/file/{filename}": {
+      "get": {
+        "tags": [
+          "knowledge-videos"
+        ],
+        "summary": "Video File",
+        "operationId": "video_file_api_knowledge_videos_file__filename__get",
+        "parameters": [
+          {
+            "name": "filename",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Filename"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "413": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Request Entity Too Large"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Too Many Requests"
+          },
+          "499": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Additional Response"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "501": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Not Implemented"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -3659,6 +5316,150 @@
           "error"
         ],
         "title": "ApiError"
+      },
+      "ApplicableEvidence": {
+        "properties": {
+          "poi_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+            "title": "Poi Id"
+          },
+          "campus_id": {
+            "type": "string",
+            "enum": [
+              "weijinlu",
+              "beiyangyuan"
+            ],
+            "title": "Campus Id"
+          },
+          "evidence": {
+            "$ref": "#/components/schemas/Evidence"
+          },
+          "source_url": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 2000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Url"
+          },
+          "claim_type": {
+            "type": "string",
+            "enum": [
+              "stable_fact",
+              "published_rule",
+              "historical_event",
+              "field_observation"
+            ],
+            "title": "Claim Type"
+          },
+          "applicable_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 500
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Applicable At"
+          },
+          "audience": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 200
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Audience"
+          },
+          "valid_from": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valid From"
+          },
+          "valid_through": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valid Through"
+          },
+          "source_checked_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Checked At"
+          },
+          "field_checked_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Field Checked At"
+          },
+          "current_status": {
+            "type": "string",
+            "enum": [
+              "confirmed",
+              "pending",
+              "expired",
+              "conflict",
+              "unknown"
+            ],
+            "title": "Current Status"
+          },
+          "conflict_ids": {
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+            },
+            "type": "array",
+            "maxItems": 20,
+            "title": "Conflict Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "poi_id",
+          "campus_id",
+          "evidence",
+          "claim_type",
+          "current_status"
+        ],
+        "title": "ApplicableEvidence"
       },
       "AsrRequest": {
         "properties": {
@@ -4005,6 +5806,18 @@
       },
       "CampusMedia": {
         "properties": {
+          "poi_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Poi Id"
+          },
           "id": {
             "type": "string",
             "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
@@ -4263,6 +6076,55 @@
           "actions"
         ],
         "title": "ChatResponse"
+      },
+      "ClarificationQuestion": {
+        "properties": {
+          "question_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+            "title": "Question Id"
+          },
+          "field": {
+            "type": "string",
+            "enum": [
+              "message",
+              "duration_minutes",
+              "interests",
+              "start",
+              "end",
+              "must_visit",
+              "avoid",
+              "visit_date",
+              "max_walking_minutes",
+              "accessibility"
+            ],
+            "title": "Field"
+          },
+          "prompt": {
+            "type": "string",
+            "maxLength": 500,
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Prompt"
+          },
+          "candidate_poi_ids": {
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+            },
+            "type": "array",
+            "maxItems": 20,
+            "title": "Candidate Poi Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "question_id",
+          "field",
+          "prompt"
+        ],
+        "title": "ClarificationQuestion"
       },
       "ClientEventData": {
         "properties": {
@@ -4628,6 +6490,82 @@
           "truncated"
         ],
         "title": "EventPage"
+      },
+      "Evidence": {
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+            "title": "Evidence Id"
+          },
+          "source_ref": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Source Ref"
+          },
+          "claim": {
+            "type": "string",
+            "maxLength": 500,
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Claim"
+          },
+          "relation": {
+            "type": "string",
+            "enum": [
+              "retrieved",
+              "supports",
+              "contradicts"
+            ],
+            "title": "Relation"
+          },
+          "verification": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "unverified",
+              "historical",
+              "disputed"
+            ],
+            "title": "Verification"
+          },
+          "checked_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Checked At"
+          },
+          "valid_until": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valid Until"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "evidence_id",
+          "source_ref",
+          "claim",
+          "relation",
+          "verification",
+          "checked_at"
+        ],
+        "title": "Evidence"
       },
       "ExternalNavigation": {
         "properties": {
@@ -5197,6 +7135,117 @@
         ],
         "title": "POIPage"
       },
+      "PlaceRef": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "poi",
+              "current_position",
+              "unspecified"
+            ],
+            "title": "Kind"
+          },
+          "poi_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Poi Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "kind"
+        ],
+        "title": "PlaceRef"
+      },
+      "PlanRevision": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Request Id"
+          },
+          "session_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Session Id"
+          },
+          "expected_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Expected Version"
+          },
+          "expected_state_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Expected State Version"
+          },
+          "operation": {
+            "type": "string",
+            "enum": [
+              "set_remaining_time",
+              "remove_stop",
+              "replace_stop"
+            ],
+            "title": "Operation"
+          },
+          "remaining_minutes": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 240.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Remaining Minutes"
+          },
+          "stop_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Stop Id"
+          },
+          "replacement_poi_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Replacement Poi Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "session_id",
+          "expected_version",
+          "expected_state_version",
+          "operation"
+        ],
+        "title": "PlanRevision"
+      },
       "R2ChatRequest": {
         "properties": {
           "request_id": {
@@ -5365,6 +7414,180 @@
           "upstream_stop"
         ],
         "title": "RouteCancelResponse"
+      },
+      "RouteCostRequest": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Request Id"
+          },
+          "session_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Session Id"
+          },
+          "campus_id": {
+            "type": "string",
+            "enum": [
+              "weijinlu",
+              "beiyangyuan"
+            ],
+            "title": "Campus Id"
+          },
+          "places": {
+            "items": {
+              "$ref": "#/components/schemas/PlaceRef"
+            },
+            "type": "array",
+            "maxItems": 7,
+            "minItems": 2,
+            "title": "Places"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "session_id",
+          "campus_id",
+          "places"
+        ],
+        "title": "RouteCostRequest"
+      },
+      "RouteCostResponse": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Request Id"
+          },
+          "costs": {
+            "items": {
+              "$ref": "#/components/schemas/RouteCostResult"
+            },
+            "type": "array",
+            "maxItems": 6,
+            "minItems": 1,
+            "title": "Costs"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "costs"
+        ],
+        "title": "RouteCostResponse"
+      },
+      "RouteCostResult": {
+        "properties": {
+          "from_ref": {
+            "$ref": "#/components/schemas/PlaceRef"
+          },
+          "to_ref": {
+            "$ref": "#/components/schemas/PlaceRef"
+          },
+          "distance_m": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Distance M"
+          },
+          "duration_s": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Duration S"
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "amap",
+              "campus_evidence",
+              "unknown"
+            ],
+            "title": "Source"
+          },
+          "verification": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "unverified",
+              "historical",
+              "disputed"
+            ],
+            "title": "Verification"
+          },
+          "checked_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Checked At"
+          },
+          "campus_access": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "unverified",
+              "restricted"
+            ],
+            "title": "Campus Access"
+          },
+          "evidence_ids": {
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+            },
+            "type": "array",
+            "maxItems": 20,
+            "title": "Evidence Ids"
+          },
+          "reason": {
+            "type": "string",
+            "enum": [
+              "available",
+              "missing_data",
+              "not_configured",
+              "cancelled",
+              "unavailable",
+              "budget_exhausted"
+            ],
+            "title": "Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "from_ref",
+          "to_ref",
+          "distance_m",
+          "duration_s",
+          "source",
+          "verification",
+          "checked_at",
+          "campus_access",
+          "reason"
+        ],
+        "title": "RouteCostResult"
       },
       "RouteRequest": {
         "properties": {
@@ -5906,6 +8129,669 @@
         ],
         "title": "SpeechStopResponse"
       },
+      "StopProgress": {
+        "properties": {
+          "stop_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Stop Id"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "navigating",
+              "arrived",
+              "explaining",
+              "completed",
+              "skipped"
+            ],
+            "title": "State"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "stop_id",
+          "state"
+        ],
+        "title": "StopProgress"
+      },
+      "ToolArgs": {
+        "properties": {
+          "campusId": {
+            "type": "string",
+            "enum": [
+              "weijinlu",
+              "beiyangyuan"
+            ],
+            "title": "Campusid"
+          },
+          "poiId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Poiid"
+          },
+          "query": {
+            "type": "string",
+            "maxLength": 2000,
+            "title": "Query",
+            "default": ""
+          },
+          "asOf": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Asof"
+          },
+          "stopIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 5,
+            "title": "Stopids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "campusId"
+        ],
+        "title": "ToolArgs"
+      },
+      "TourCommand": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Request Id"
+          },
+          "session_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Session Id"
+          },
+          "expected_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Expected Version"
+          },
+          "expected_state_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Expected State Version"
+          },
+          "accept_unverified": {
+            "type": "boolean",
+            "title": "Accept Unverified",
+            "default": false
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "check",
+              "start",
+              "arrive",
+              "explain",
+              "complete_stop",
+              "next",
+              "pause",
+              "resume",
+              "cancel",
+              "save",
+              "forget",
+              "skip",
+              "end"
+            ],
+            "title": "Action"
+          },
+          "stop_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Stop Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "session_id",
+          "expected_version",
+          "expected_state_version",
+          "action"
+        ],
+        "title": "TourCommand"
+      },
+      "TourKnowledgeContext": {
+        "properties": {
+          "poi_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+            "title": "Poi Id"
+          },
+          "campus_id": {
+            "type": "string",
+            "enum": [
+              "weijinlu",
+              "beiyangyuan"
+            ],
+            "title": "Campus Id"
+          },
+          "requested_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Requested Date"
+          },
+          "version": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Version"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/ApplicableEvidence"
+            },
+            "type": "array",
+            "maxItems": 40,
+            "title": "Evidence"
+          },
+          "route_costs": {
+            "items": {
+              "$ref": "#/components/schemas/RouteCostResult"
+            },
+            "type": "array",
+            "maxItems": 20,
+            "title": "Route Costs"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 20,
+            "title": "Warnings"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "poi_id",
+          "campus_id",
+          "requested_date",
+          "version"
+        ],
+        "title": "TourKnowledgeContext"
+      },
+      "TourPlan": {
+        "properties": {
+          "plan_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Plan Id"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Version"
+          },
+          "campus_id": {
+            "type": "string",
+            "enum": [
+              "weijinlu",
+              "beiyangyuan"
+            ],
+            "title": "Campus Id"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "draft",
+              "checked",
+              "infeasible"
+            ],
+            "title": "Status"
+          },
+          "request": {
+            "$ref": "#/components/schemas/TourRequest"
+          },
+          "stops": {
+            "items": {
+              "$ref": "#/components/schemas/TourStop"
+            },
+            "type": "array",
+            "maxItems": 5,
+            "title": "Stops"
+          },
+          "legs": {
+            "items": {
+              "$ref": "#/components/schemas/RouteCostResult"
+            },
+            "type": "array",
+            "maxItems": 6,
+            "title": "Legs"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/Evidence"
+            },
+            "type": "array",
+            "maxItems": 80,
+            "title": "Evidence"
+          },
+          "warnings": {
+            "items": {
+              "type": "string",
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "type": "array",
+            "maxItems": 20,
+            "title": "Warnings"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "plan_id",
+          "version",
+          "campus_id",
+          "status",
+          "request",
+          "stops",
+          "created_at"
+        ],
+        "title": "TourPlan"
+      },
+      "TourRequest": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Request Id"
+          },
+          "session_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Session Id"
+          },
+          "campus_id": {
+            "type": "string",
+            "enum": [
+              "weijinlu",
+              "beiyangyuan"
+            ],
+            "title": "Campus Id"
+          },
+          "duration_minutes": {
+            "type": "integer",
+            "maximum": 240.0,
+            "minimum": 10.0,
+            "title": "Duration Minutes"
+          },
+          "interests": {
+            "items": {
+              "type": "string",
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "type": "array",
+            "maxItems": 8,
+            "minItems": 1,
+            "title": "Interests"
+          },
+          "start": {
+            "$ref": "#/components/schemas/PlaceRef"
+          },
+          "end": {
+            "$ref": "#/components/schemas/PlaceRef"
+          },
+          "accessibility": {
+            "type": "string",
+            "enum": [
+              "standard",
+              "step_free"
+            ],
+            "title": "Accessibility",
+            "default": "standard"
+          },
+          "message": {
+            "type": "string",
+            "maxLength": 2000,
+            "title": "Message",
+            "default": ""
+          },
+          "must_visit": {
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+            },
+            "type": "array",
+            "maxItems": 5,
+            "title": "Must Visit"
+          },
+          "avoid": {
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+            },
+            "type": "array",
+            "maxItems": 5,
+            "title": "Avoid"
+          },
+          "visit_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Visit Date"
+          },
+          "max_walking_minutes": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 240.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Walking Minutes"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "session_id",
+          "campus_id",
+          "duration_minutes",
+          "interests",
+          "start",
+          "end"
+        ],
+        "title": "TourRequest"
+      },
+      "TourRestore": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Request Id"
+          },
+          "session_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Session Id"
+          },
+          "snapshot": {
+            "$ref": "#/components/schemas/TourSession"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "session_id",
+          "snapshot"
+        ],
+        "title": "TourRestore"
+      },
+      "TourResult": {
+        "properties": {
+          "contract_version": {
+            "type": "string",
+            "const": "1.2.0",
+            "title": "Contract Version",
+            "default": "1.2.0"
+          },
+          "request_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Request Id"
+          },
+          "session": {
+            "$ref": "#/components/schemas/TourSession"
+          },
+          "replayed": {
+            "type": "boolean",
+            "title": "Replayed",
+            "default": false
+          },
+          "usage": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Usage"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "clarification_required": {
+            "type": "boolean",
+            "title": "Clarification Required",
+            "default": false
+          },
+          "clarifications": {
+            "items": {
+              "$ref": "#/components/schemas/ClarificationQuestion"
+            },
+            "type": "array",
+            "maxItems": 8,
+            "title": "Clarifications"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "session"
+        ],
+        "title": "TourResult"
+      },
+      "TourSession": {
+        "properties": {
+          "tour_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Tour Id"
+          },
+          "session_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Session Id"
+          },
+          "state_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "State Version"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "draft",
+              "checked",
+              "active",
+              "paused",
+              "completed",
+              "cancelled",
+              "infeasible"
+            ],
+            "title": "Status"
+          },
+          "plan": {
+            "$ref": "#/components/schemas/TourPlan"
+          },
+          "progress": {
+            "items": {
+              "$ref": "#/components/schemas/StopProgress"
+            },
+            "type": "array",
+            "maxItems": 5,
+            "title": "Progress"
+          },
+          "current_stop_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Current Stop Id"
+          },
+          "remaining_minutes": {
+            "type": "integer",
+            "maximum": 240.0,
+            "minimum": 0.0,
+            "title": "Remaining Minutes"
+          },
+          "saved": {
+            "type": "boolean",
+            "title": "Saved"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          },
+          "completion_reason": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "all_stops_resolved",
+                  "user_ended"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Completion Reason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "tour_id",
+          "session_id",
+          "state_version",
+          "status",
+          "plan",
+          "progress",
+          "current_stop_id",
+          "remaining_minutes",
+          "saved",
+          "updated_at"
+        ],
+        "title": "TourSession"
+      },
+      "TourStop": {
+        "properties": {
+          "stop_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Stop Id"
+          },
+          "poi_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+            "title": "Poi Id"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 500,
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Title"
+          },
+          "visit_minutes": {
+            "type": "integer",
+            "maximum": 120.0,
+            "minimum": 1.0,
+            "title": "Visit Minutes"
+          },
+          "visit_time_source": {
+            "type": "string",
+            "enum": [
+              "user_preference",
+              "planner_allocation"
+            ],
+            "title": "Visit Time Source"
+          },
+          "purpose": {
+            "type": "string",
+            "maxLength": 500,
+            "minLength": 1,
+            "pattern": "\\S",
+            "title": "Purpose"
+          },
+          "evidence_ids": {
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+            },
+            "type": "array",
+            "maxItems": 20,
+            "title": "Evidence Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "stop_id",
+          "poi_id",
+          "title",
+          "visit_minutes",
+          "visit_time_source",
+          "purpose"
+        ],
+        "title": "TourStop"
+      },
       "TtsRequest": {
         "properties": {
           "request_id": {
@@ -6070,6 +8956,91 @@
           "timestamp"
         ],
         "title": "UserPosition"
+      },
+      "VideoMatch": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "default": ""
+          },
+          "poi_id": {
+            "type": "string",
+            "title": "Poi Id"
+          },
+          "campus_id": {
+            "type": "string",
+            "enum": [
+              "weijinlu",
+              "beiyangyuan"
+            ],
+            "title": "Campus Id"
+          },
+          "src": {
+            "type": "string",
+            "title": "Src"
+          },
+          "mime": {
+            "type": "string",
+            "title": "Mime"
+          },
+          "caption": {
+            "type": "string",
+            "title": "Caption"
+          },
+          "kind": {
+            "type": "string",
+            "title": "Kind",
+            "default": "video"
+          },
+          "poster": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Poster"
+          },
+          "source": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source"
+          }
+        },
+        "type": "object",
+        "required": [
+          "poi_id",
+          "campus_id",
+          "src",
+          "mime",
+          "caption"
+        ],
+        "title": "VideoMatch"
+      },
+      "VideoResult": {
+        "properties": {
+          "video": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/VideoMatch"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "VideoResult"
       },
       "Voice": {
         "properties": {

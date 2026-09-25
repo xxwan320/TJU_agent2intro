@@ -1,0 +1,189 @@
+"""Assemble local evidence, build identity and reviewable rollback patch; no external providers."""
+import hashlib
+import json
+import re
+import statistics
+import subprocess
+from datetime import datetime
+from pathlib import Path
+import httpx
+
+OUT=Path('docs/interaction/20260917-optimization')
+def read(name):return json.loads((OUT/name).read_text(encoding='utf-8'))
+def save(name,data):(OUT/name).write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
+def git(*args):return subprocess.check_output(['git',*args]).decode('utf-8').strip()
+def main():
+    source=git('diff','--name-only').splitlines()
+    added=['frontend/src/transport/interaction.ts','scripts/check-interaction.mjs','scripts/interaction-knowledge-benchmark.py','scripts/interaction-live.py','scripts/interaction-map-live.mjs','scripts/interaction-report.py','tests/model/test_interaction_retrieval.py',*map(str,Path('tests/interaction').glob('*'))]
+    added=[name.replace('\\','/') for name in added]
+    files=source+added
+    patch=subprocess.check_output(['git','diff','--binary','--',*source])
+    for name in added:
+        result=subprocess.run(['git','diff','--no-index','--binary','--','/dev/null',name],capture_output=True)
+        if result.returncode not in (0,1):raise RuntimeError(result.stderr.decode())
+        patch+=result.stdout
+    (OUT/'changes.patch').write_bytes(patch)
+    manifest={name.replace('\\','/'):hashlib.sha256(Path(name).read_bytes()).hexdigest() for name in files}
+    with httpx.Client(base_url='http://127.0.0.1:8000',trust_env=False,timeout=10) as client:
+        index=client.get('/').text;asset=re.search(r'src="([^"]+\.js)"',index).group(1);content=client.get(asset).content
+        identity={'time':datetime.now().astimezone().isoformat(),'branch':git('branch','--show-current'),'head':git('rev-parse','HEAD'),'dirty':True,'asset':asset,'sha256':hashlib.sha256(content).hexdigest(),'matches_dist':content==(Path('dist')/asset.lstrip('/')).read_bytes(),'files_sha256':manifest,'runtime':json.loads(Path('.runtime/managed-processes.json').read_text(encoding='utf-8-sig')),'health':client.get('/api/health').json()}
+        assert identity['matches_dist']
+    save('final-build.json',identity)
+    budget=read('call-budget.json');maps=read('live-map.json');budget.update(poi=maps['budget']['counters']['poi_search']['initiated'],walking=maps['budget']['counters']['walking_route']['initiated'],browser_audio_playback=0,provider_internal_attempts=None)
+    save('call-budget.json',budget)
+    before,after=read('knowledge-before.json'),read('knowledge-after.json')
+    perf=[]
+    for question in dict.fromkeys(r['question'] for r in before):
+        a=[r['retrieval_ms'] for r in before if r['question']==question];b=[r['retrieval_ms'] for r in after if r['question']==question]
+        assert [r['hits'] for r in before if r['question']==question]==[r['hits'] for r in after if r['question']==question]
+        perf.append(f'| {question} | '+', '.join(f'{v:.3f}' for v in a)+' | '+', '.join(f'{v:.3f}' for v in b)+f' | {statistics.median(a):.3f} → {statistics.median(b):.3f} |')
+    marker=read('marker-performance.json');a=[r['update_ms'] for r in marker if r['label']=='before'];b=[r['update_ms'] for r in marker if r['label']=='after']
+    marker_row='| 100次选中切换（5个标记，离线 SDK） | '+', '.join(f'{v:.3f}' for v in a)+' | '+', '.join(f'{v:.3f}' for v in b)+f' | {statistics.median(a):.3f} → {statistics.median(b):.3f} |'
+    qa=read('live-qa.json');tts=read('live-tts.json')
+    from backend.contracts import Source
+    from backend.model.service import _citations
+    from uuid import uuid4
+    replay=[]
+    for row in qa:
+        final=row['events'][-1]['payload'].get('response',{})
+        text=''.join(e['payload']['text'] for e in row['events'] if e['type']=='answer_delta')
+        cleaned,refs=_citations(text,[Source(**s) for s in final.get('sources',[])],True,uuid4())
+        assert '[source:' not in cleaned
+        replay.append({'question':row['question'],'answer':cleaned,'sources':[s.id for s in refs],'validation':'recorded live text replay; zero additional LLM calls'})
+    save('qa-citation-replay.json',replay)
+    qa_rows='\n'.join(f"| {r['question']} | {r['first_text_ms']:.1f} | {r['total_ms']:.1f} | {r['events'][-1]['type']} |" for r in qa)
+    route_rows='\n'.join(f"- {r['id']}：{r['route']['distance_m']} 米、{len(r['route']['steps'])} 步，服务耗时 {r['ms']:.2f} ms。" for r in maps['routes'])
+    report=f'''# 现有联动修复与小步加速 · {identity['time']}
+
+代码修复已完成；浏览器实测尚未通过验收。工具返回浏览器列表为空及 `No browser is available`，因此无本轮页面截图、DOM 绘制、实际听音或角色观察证据。下述离线事件/SDK/audio 夹具与真实 HTTP 服务证据分别标注，不以接口200代替页面通过。
+
+## 工作区与构建
+
+- 根目录 `E:\\AI4TJU`；分支 `{identity['branch']}`；HEAD `{identity['head']}`，附本轮未提交修改。
+- 无适用 AGENTS.md；启动入口 `scripts/start-app.ps1`，单服务 `http://127.0.0.1:8000`；已通过项目自有停止/启动脚本重启。
+- 最终前端 `{asset}`，SHA256 `{identity['sha256']}`；HTTP 字节与最终 dist 一致。源文件哈希、PID 和时间见 [final-build.json](final-build.json)。
+- 真实服务调用发生在 [runtime.json](runtime.json) 记录的中间构建；最后补充的排队、来源清理、文本同步等使用最终源码离线复验。没有将中间构建的 HTTP 结果冒充最终浏览器验收。
+- 保留原有 `.worktrees/`、`docs/diagnostics/`；未改布局/配色 CSS、角色外观或用户原图、图片映射，未自动提交。现有图片区域和标题增补选中、开始/停止讲解、清空/重规划操作。
+
+## 修复位置
+
+| 文件 / 符号 | 最终行为 |
+|---|---|
+| App / onSelectPoi、playTask、onRouteChange | 唯一当前 POI 传给目录、行程和图片；切换同步取消旧文本/音频代际，清待播与续播上下文；当前讲解文本同步。 |
+| TourWorkspace / registerText、CampusExplorer props、command | 点位标题/图片反向选择；明确到某地点的路线请求直接传给地图；生成的结构化行程自动进入分段规划，起点不足时提示确认。 |
+| PhotoCarousel | 选点时锁定该点原有照片；缺图为当前点占位；不残留上一张、不触发自动语音。 |
+| CampusExplorer / choose、viewOnMap、planRoute、planItinerary | 选中请求与线路请求分开管理；选点保留有效路线；地图选点/坐标更新 origin；连续定位不反复清线；线路成功应用后才显示成功。 |
+| amap / setPois、showPosition、showTourStops、showDestination | 复用标记，仅改新旧选中状态；持续定位更新不抢焦点；路线端点/途经标记可反向选择，清线清相关标记。 |
+| interaction / campusCandidate、planSegments、preciseOrigin | 校区范围、名称及别名筛选，排除公交站/其他学校；逐段真实路径，代际与目标校验；IP 粗定位不能进入页面步行流程。 |
+| amap-navigation、map-budget / findDestination、waitForSlot | 10分钟现有结果缓存；未缓存请求在额度间隔前可取消等待，不通过自动失败重试消耗调用。 |
+| CampusModelService / stable_local_question、_citations | 两类有完整本地依据的单一稳定问题不等联网；时效/复合/主动联网保留原分支。兼容组合来源标签，修复真实问答发现的标记泄漏。 |
+| scripts/check-r3.ps1 | 修复仓库中缺少 check-r2.ps1 导致的检查入口失效；保留现有模式并接入构建、后端、schema、地图/语音/联动回归。 |
+
+讲解直接读取当次地点已有介绍，调用原 speech controller 的 `playFull`，分句/FIFO/角色适配不重写。语音未开启时提示开启，不显示假播报。
+
+## 固定样本
+
+| 地点 / ID 后缀（均北洋园） | 现有照片 | 本轮高德筛选 |
+|---|---|---|
+| 校友林景观带 / alumni-forest | 原有缺图占位 | 没有可靠匹配，显示暂未定位 |
+| 博文路 / bowen-road | 原有缺图占位 | 没有可靠匹配，显示暂未定位 |
+| 春晖园 / chunhui-garden | 原有缺图占位 | 没有可靠匹配，显示暂未定位 |
+| 大通学生中心 / datong-center | 已有 JPG | 唯一同校区匹配 |
+| 郑东图书馆 / zhengdong-library | 已有 JPG | 唯一同校区匹配 |
+
+全部使用 `data/knowledge/pois.json` 与 `tour-photos.ts` 既有关系。未整理全量地点库；没有把地图 POI 中心或示意像素当作已核验入口。
+
+## I01—I08 验收
+
+| 编号 | 代码/可执行结果 | 浏览器状态 |
+|---|---|---|
+| I01 | 离线页面事件验证目录高亮、详情 ID/介绍、图片、匹配 marker 同一 POI；两张原图 HTTP 可取。 | 待 DOM 与图片实测 |
+| I02 | 快速 A→B→A、B 迟到、旧聚焦资料迟到均不能覆盖 A；缺图转当前点占位。 | 待快速点击观察 |
+| I03 | 离线 SDK marker/途经点回调反向选中；重复选中不重查；行程标题接入同一焦点。 | 待地图/行程点击 |
+| I04 | 开始/停止接现有控制器；现有音频事件夹具验证 playing/pause/mute/end/cancel 与嘴形 RMS；真实 TTS 可解析。 | audio playing、人工听音、角色观察均待验 |
+| I05 | 选点取消旧流/队列与待播代际；B 详情与讲解文本同步；真实播音切换未测试。 | 待 A 播音中切 B |
+| I06 | 离线地图起点→聊天目标/草稿多站线路自动应用，无第二次地图输入；真实服务完成2条步行路径。 | 待真实地图选点→自动画线 |
+| I07 | 离线迟到线路被取消；选点保留路线；实际清空/重规划清旧线路、端点和朗读上下文。 | 待路线 A→B/清空 |
+| I08 | 拒绝 GPS、非法坐标、缺图、无匹配离线验证；真实三个目录地点无可靠结果，不画假路线。 | 待页面反馈观察 |
+
+离线页面测试使用显式 React hook/event fixtures，未使用真实 React DOM，不等同浏览器。最终构建与两套 schema 检查通过；后端108项通过见 [final-check.log](final-check.log)，前端/地图/语音71项通过见 [frontend-final.log](frontend-final.log)，包含实时跟随移动阈值测试。
+
+## 起点按钮逐项记录
+
+| 按钮 | 本轮结果与边界 |
+|---|---|
+| 定位一次 | 模拟通过：拒绝提示明确；真实 GPS 权限/硬件环境受限。 |
+| 持续定位 | 模拟通过：启动、位置更新、停止/卸载取消，单个30秒定时器；设备移动待验。 |
+| IP 城市定位 | 代码/定位服务夹具通过；本轮未发送真实 IP 请求；保持粗定位并要求手动确认。 |
+| 持续 IP 定位 | 模拟通过：单个30秒轮询、停止清理、后台暂停；未做长期/真实轮询。 |
+| 在地图选择起点 | 模拟通过：进入模式、回调更新 origin/marker 并退出；真实地图点击待验。 |
+| 输入起点坐标 | 模拟通过：非法经纬度拒绝、GCJ-02 手动来源；有效起点与 marker 复用同一更新路径。 |
+| 实时跟随路线 | 模拟通过：实测事件处理在移动不足80米/间隔不足60秒时不重算，超过阈值重算，关闭停止自动重算，保留单个定位定时器；设备实测待验。 |
+
+## 真实服务与预算
+
+本轮新请求：LLM **{budget['llm']}/6**、TTS **{budget['tts']}/2**、步行 **{budget['walking']}/2**、POI 查询 **{budget['poi']}/6**、定位/IP **0**。无应用层失败重试。LLM SDK 设置 max_retries=0；网关、地图供应商内部次数不可见；edge-tts 库内部可能重试，未伪称等于供应商扣费次数。
+
+检索基准另含8次联网入口尝试（含初试2次）；最终改前6个样本均 `web_search.unavailable`。改后两类稳定问题不进入联网；真实5题中的3个非稳定分支仍允许联网。不能据此报告成功联网核验。
+
+{route_rows}
+
+上述起点是复用历史高德记录中的公开校园坐标，标记为手动测试夹具，并非真实 GPS/浏览器选点。路径是供应商实际分步折线，未将直线冒充步行；本轮没有验证 DOM 上应用路径的耗时。
+
+真实问答见 [live-qa.json](live-qa.json)：2015年9月、北洋园校区、当前大通学生中心均对应；未知展厅要求名称且无法确认；复合问题分别提供历史年份和今日时刻未载明。第三题发现组合来源标记残留后，用录制的原始流离线复验修复，见 [qa-citation-replay.json](qa-citation-replay.json)，没有再调用模型。
+
+| 问题 | 首个 SSE 正文 ms | 请求完成 ms | 终态 |
+|---|---:|---:|---|
+{qa_rows}
+
+TTS 合成 {tts['synthesis_ms']:.1f} ms，{tts['audio_bytes']} 字节，MP3 24kHz 单声道、15.336秒；[audio-format.json](audio-format.json)、[selected-poi.mp3](selected-poi.mp3)。这是合成与解析证据，首音、扬声器听音、角色表现均未测。
+
+## 两项小步提速
+
+1. 固定稳定问题本地充分命中时移除联网等待，检索资料列表保持完全相同，仍调用原模型生成回答。
+2. 复用在线地图标记，100次选中切换的 SDK Marker 构造从500次降为5次，自动 fitView 从100次降为0次；仅改选中状态，不重建地图/角色。
+
+| 测量（ms） | 改前原始值 | 改后原始值 | 中位数 |
+|---|---|---|---|
+{chr(10).join(perf)}
+{marker_row}
+
+标记耗时使用轻量离线 SDK，不能换算浏览器性能倍数。检索改前联网不可用，绝不把该样本推广成正常公网的稳定收益。未报告倍数或 P95。真实模型首字仍约12.7—33.6秒，未被检索阶段毫秒级优化消除。
+
+首屏、A/B图片切换、热缓存重复访问、点击→介绍出现、首音、路线应用：**浏览器不可用，改前/改后均待测**。原图未改；[image-http.json](image-http.json) 仅记录同两张JPG的3次HTTP读取，不能充当浏览器缓存/解码性能对比。其余3个固定样本沿用SVG占位。
+
+## 复跑与最短人工验收
+
+离线回归（不调用模型/TTS/高德）：
+
+```powershell
+cd E:\\AI4TJU
+.\\scripts\\check-r3.ps1
+```
+
+已经运行的页面：`http://127.0.0.1:8000`，刷新到最新构建。人工按顺序：
+
+1. 选北洋园，点击大通学生中心→郑东图书馆→大通，核对标题、照片、介绍和已选 marker；再点击春晖园，核对当前占位与“暂未定位”。
+2. 开启语音导览，点大通“开始讲解”→“停止讲解”；再播放中切图书馆，确认旧声音/嘴形立即停，再讲图书馆。
+3. 点“在地图选择起点”，在校园道路上选点；聊天输入“请规划步行到郑东图书馆的路线”，确认自动显示真实路径；选择其他点不清线；再点“清空路线”。
+4. 起点保留时创建行程，检查多站路径和编号标记；未知点显示失败信息。按上表逐个定位按钮启停；无GPS权限时拒绝并继续用地图选点。
+
+人工或脚本再次调用外部服务需另记新一轮预算；**本轮两次步行预算已经用完**。保留的 `interaction-live.py` 会新增5次LLM+1次TTS；`interaction-map-live.mjs` 会新增最多5次POI+2次步行；不要把它们当作离线回归命令。
+
+## 回退
+
+[changes.patch](changes.patch) 包含本轮代码/测试/脚本变更，不包含原有用户目录。先检查补丁适用性，失败则停下检查后续改动：
+
+```powershell
+git apply -R --check docs/interaction/20260917-optimization/changes.patch
+git apply -R docs/interaction/20260917-optimization/changes.patch
+.\\scripts\\stop.ps1
+.\\scripts\\start-app.ps1 -Build
+```
+
+未执行回退或提交；文档证据保留。后续只建议一个功能：保存最近一次用户手动确认的起点，并在恢复时要求核对；本轮不扩展实现。
+'''
+    (OUT/'REPORT_zh.md').write_text(report,encoding='utf-8')
+    print(json.dumps({'asset':asset,'matches_dist':True,'budget':budget,'files':len(files)},ensure_ascii=False))
+
+if __name__=='__main__':main()

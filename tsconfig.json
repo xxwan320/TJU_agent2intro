@@ -24,7 +24,6 @@
     "vite.config.ts"
   ],
   "exclude": [
-    ".worktrees",
     "node_modules",
     "dist",
     ".venv",

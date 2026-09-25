@@ -1,0 +1,375 @@
+{
+  "run": "20260917-150656",
+  "date": "2026-09-17T15:30:30.671071+08:00",
+  "mode": "diagnostic_only",
+  "base_url": "http://127.0.0.1:8000",
+  "budget": {
+    "limits": {
+      "llm": 4,
+      "maps": 2,
+      "asr": 1,
+      "tts": 1
+    },
+    "actual": {
+      "llm": 3,
+      "maps": 1,
+      "asr": 0,
+      "tts": null
+    },
+    "additional_poi_search_http_requests": 3,
+    "web_search_application_requests": 3,
+    "web_search_underlying_provider_requests": null,
+    "retries_model": 0,
+    "note": "DDGS内部搜索提供方次数没有暴露；不计为LLM但明确未测。所有付费模型请求由现有服务发出。",
+    "tts_application_invocations": 1,
+    "tts_provider_attempts": null,
+    "tts_provider_attempts_upper_bound": 2,
+    "tts_budget_compliance": "not_fully_observable: installed edge_tts.stream may retry once on HTTP403; application does not expose attempts; no additional call made"
+  },
+  "cases": [
+    {
+      "id": 1,
+      "input": "北洋园校区何时正式落成并投入使用？请用不超过80字回答并标出资料来源。",
+      "expected": "2015年9月，引用 beiyangyuan-opened-2015",
+      "validation_type": "真实运行通过（HTTP客户端；浏览器未验证）",
+      "result": "猫眼石，北洋园校区这枚珍贵的校园宝石，于2015年9月正式落成并投入使用。",
+      "measurements": {
+        "submit_to_client_first_effective_answer_ms": 16586.45919999981,
+        "effective_marker": "2015年9月",
+        "submit_to_client_first_nonempty_delta_ms": 16455.671199997596,
+        "submit_to_first_display_ms": null,
+        "submit_to_complete_ms": 16695.39209999857,
+        "submit_to_actual_audio_play_ms": null,
+        "asr_ms": null,
+        "tts_ms": null,
+        "backend_route_to_first_content_ms": 16438.0,
+        "clock": "client perf_counter; backend monotonic separately; never subtract across clocks",
+        "process_state": "existing warm application, new isolated session; upstream cold/warm unknown",
+        "llm_cache_hit": null,
+        "web_status": "web_search.unavailable",
+        "web_elapsed_ms": 12014.999999999418
+      },
+      "calls": {
+        "llm": 1,
+        "maps": 0,
+        "asr": 0,
+        "tts": 0
+      },
+      "errors": null,
+      "evidence": [
+        "chat_1.json",
+        "local_knowledge.json"
+      ],
+      "limitations": "只验证该事实，不代表全库；首个非空delta为角色称呼",
+      "commands": [
+        ".\\.venv\\Scripts\\python.exe -B docs/diagnostics/20260917-150656/probe.py chat 1"
+      ],
+      "started_at": "2026-09-17T15:09:15.264716+08:00"
+    },
+    {
+      "id": 2,
+      "input": "北洋园的大通在哪里？请用不超过80字回答；有歧义就澄清。",
+      "expected": "大通学生中心或澄清，不编造具体方位",
+      "validation_type": "真实运行通过（HTTP客户端；浏览器未验证）",
+      "result": "猫眼石，你说的“大通”是指“大通学生中心”吧？它坐落于北洋园校区内，是师生文化活动的璀璨舞台。未核验其精确方位，入校后请顺指示牌寻觅吧。",
+      "measurements": {
+        "submit_to_client_first_effective_answer_ms": 29624.15790000159,
+        "effective_marker": "大通学生中心",
+        "submit_to_client_first_nonempty_delta_ms": 29392.251000001124,
+        "submit_to_first_display_ms": null,
+        "submit_to_complete_ms": 30273.340499999904,
+        "submit_to_actual_audio_play_ms": null,
+        "asr_ms": null,
+        "tts_ms": null,
+        "backend_route_to_first_content_ms": 29375.0,
+        "clock": "client perf_counter; backend monotonic separately; never subtract across clocks",
+        "process_state": "existing warm application, new isolated session; upstream cold/warm unknown",
+        "llm_cache_hit": null,
+        "web_status": "web_search.completed",
+        "web_elapsed_ms": 6562.999999998283
+      },
+      "calls": {
+        "llm": 1,
+        "maps": 0,
+        "asr": 0,
+        "tts": 0
+      },
+      "errors": null,
+      "evidence": [
+        "chat_2.json",
+        "local_knowledge.json"
+      ],
+      "limitations": "实体解析器未命中简称；模型谨慎澄清；联网资料含多条明显无关结果，检索质量失败",
+      "commands": [
+        ".\\.venv\\Scripts\\python.exe -B docs/diagnostics/20260917-150656/probe.py chat 2"
+      ],
+      "started_at": "2026-09-17T15:10:39.671350+08:00"
+    },
+    {
+      "id": 3,
+      "input": "北洋园量子玫瑰秘密展厅2026年9月17日几点开放，门票多少？请用不超过80字回答；没有资料请明确说明。",
+      "expected": "明确无资料，不编造展厅、票价、开放时间",
+      "validation_type": "真实运行通过（HTTP客户端；浏览器未验证）",
+      "result": "猫眼石，我翻遍了收藏的图录，未见“北洋园量子玫瑰秘密展厅”的记录。故无法提供该日开放时间与门票，此地点暂未核验，请确认名称哦。\n\n资料提示：部分引用未能与本次资料对应；正文已保留，相关细节请结合参考资料核实。",
+      "measurements": {
+        "submit_to_client_first_effective_answer_ms": 22321.29800000257,
+        "effective_marker": "未见",
+        "submit_to_client_first_nonempty_delta_ms": 22089.234600000054,
+        "submit_to_first_display_ms": null,
+        "submit_to_complete_ms": 23962.26690000185,
+        "submit_to_actual_audio_play_ms": null,
+        "asr_ms": null,
+        "tts_ms": null,
+        "backend_route_to_first_content_ms": 22078.0,
+        "clock": "client perf_counter; backend monotonic separately; never subtract across clocks",
+        "process_state": "existing warm application, new isolated session; upstream cold/warm unknown",
+        "llm_cache_hit": null,
+        "web_status": "web_search.completed",
+        "web_elapsed_ms": 6437.000000001717
+      },
+      "calls": {
+        "llm": 1,
+        "maps": 0,
+        "asr": 0,
+        "tts": 0
+      },
+      "errors": null,
+      "evidence": [
+        "chat_3.json",
+        "local_knowledge.json"
+      ],
+      "limitations": "无编造所问事实；引用ID存在不匹配，返回了资料提示及不支持该展厅的泛校园参考",
+      "commands": [
+        ".\\.venv\\Scripts\\python.exe -B docs/diagnostics/20260917-150656/probe.py chat 3"
+      ],
+      "started_at": "2026-09-17T15:16:33.078194+08:00"
+    },
+    {
+      "id": 4,
+      "input": "大通学生中心 → 郑东图书馆（北洋园）；初选东门因匹配失败改选",
+      "expected": "同校区真实地点、供应商步行折线，地图/说明/朗读共享结果",
+      "validation_type": "真实代理路线通过＋录制响应解析模拟通过；浏览器未验证",
+      "result": {
+        "provider": "amap",
+        "crs": "GCJ02",
+        "distance_m": 286,
+        "duration_s": 229,
+        "steps": 3,
+        "polylines": true,
+        "map_display": null,
+        "chat_route_record": null,
+        "role_speech": null
+      },
+      "measurements": {
+        "submit_to_client_first_effective_answer_ms": null,
+        "submit_to_first_display_ms": null,
+        "submit_to_complete_ms": null,
+        "submit_to_actual_audio_play_ms": null,
+        "route_submit_to_service_return_ms": 92.08799999760231,
+        "route_submit_to_map_applied_ms": null,
+        "cache_hit": null
+      },
+      "calls": {
+        "llm": 0,
+        "maps": 1,
+        "poi_search": 3,
+        "asr": 0,
+        "tts": 0
+      },
+      "errors": [
+        "东门检索出现公交站及其他学校；未选用这些候选",
+        "初次离线回放因data URL无法解析Vite分块失败；改为独立目录构建后通过，零新增外部调用"
+      ],
+      "evidence": [
+        "map_candidates.json",
+        "map_extra.json",
+        "map_route.json",
+        "route-replay.json",
+        "route-replay.mjs"
+      ],
+      "limitations": "实时探针走现有同源代理；没有启动SDK，前端解析复用录制响应；入口及门禁未核验。路线朗读未写入聊天任务列表，场景更换是否同步停止旧讲解未验证。",
+      "commands": [
+        ".\\.venv\\Scripts\\python.exe -B docs/diagnostics/20260917-150656/probe.py maps_find",
+        ".\\.venv\\Scripts\\python.exe -B docs/diagnostics/20260917-150656/probe.py map_extra",
+        ".\\.venv\\Scripts\\python.exe -B docs/diagnostics/20260917-150656/probe.py maps_route",
+        "node docs/diagnostics/20260917-150656/route-replay.mjs"
+      ],
+      "started_at": null,
+      "time_note": "wall-clock start not separately captured; original monotonic measurement/TAP preserved; do not infer from file mtime"
+    },
+    {
+      "id": 5,
+      "input": "夹具A延迟返回、B先完成；取消/跨校区/过期GET/旧ASR事件",
+      "expected": "A不能覆盖B；已停止的旧语音事件不复活",
+      "validation_type": "仅模拟通过",
+      "result": "TourLifecycle与speechEventCurrent 4项通过；旧ASR及停止后旧播放事件由组8覆盖",
+      "measurements": {
+        "submit_to_client_first_effective_answer_ms": null,
+        "submit_to_first_display_ms": null,
+        "submit_to_complete_ms": null,
+        "submit_to_actual_audio_play_ms": null
+      },
+      "calls": {
+        "llm": 0,
+        "maps": 0,
+        "asr": 0,
+        "tts": 0
+      },
+      "errors": null,
+      "evidence": [
+        "offline-1.json",
+        "offline-1.txt",
+        "offline-2.txt"
+      ],
+      "limitations": "夹具验证生产纯逻辑和语音控制器；没有覆盖真实App DOM、路线切换自动停止讲解或真人麦克风",
+      "commands": [
+        "node docs/diagnostics/20260917-150656/offline.mjs"
+      ],
+      "started_at": null,
+      "time_note": "wall-clock start not separately captured; original monotonic measurement/TAP preserved; do not infer from file mtime"
+    },
+    {
+      "id": 6,
+      "input": "复用组1 SSE记录",
+      "expected": "有效正文多段送达，不以accepted/status/思考流作为首答",
+      "validation_type": "真实HTTP流通过；UI未验证",
+      "result": "正文分段抵达，非全文结束后一次性收到；瓶颈主要在联网检索等待和上游首正文前",
+      "measurements": {
+        "submit_to_client_first_effective_answer_ms": 16586.45919999981,
+        "effective_marker": "2015年9月",
+        "submit_to_client_first_nonempty_delta_ms": 16455.671199997596,
+        "submit_to_first_display_ms": null,
+        "submit_to_complete_ms": 16695.39209999857,
+        "submit_to_actual_audio_play_ms": null,
+        "asr_ms": null,
+        "tts_ms": null,
+        "backend_route_to_first_content_ms": 16438.0,
+        "clock": "client perf_counter; backend monotonic separately; never subtract across clocks",
+        "process_state": "existing warm application, new isolated session; upstream cold/warm unknown",
+        "llm_cache_hit": null,
+        "web_status": "web_search.unavailable",
+        "web_elapsed_ms": 12014.999999999418
+      },
+      "calls": {
+        "llm": 0,
+        "maps": 0,
+        "asr": 0,
+        "tts": 0
+      },
+      "reuses_case": 1,
+      "errors": null,
+      "evidence": [
+        "chat_1.json"
+      ],
+      "limitations": "后端与客户端用各自单调钟；不能从两个绝对时间直接推出传输延迟；浏览器绘制延迟null",
+      "commands": [
+        "reuse chat_1.json, no additional call"
+      ],
+      "started_at": null,
+      "time_note": "wall-clock start not separately captured; original monotonic measurement/TAP preserved; do not infer from file mtime"
+    },
+    {
+      "id": 7,
+      "input": "欢迎来到天津大学北洋园校区。",
+      "expected": "ASR识别校园名称；TTS音频生成；实际播放器启动分别验证",
+      "validation_type": "TTS真实运行通过；ASR/浏览器播放未验证",
+      "result": {
+        "tts_status": 200,
+        "audio_bytes": 20592,
+        "ffprobe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "mp3",
+              "sample_rate": "24000",
+              "channels": 1
+            }
+          ],
+          "format": {
+            "duration": "3.432000",
+            "size": "20592"
+          }
+        },
+        "asr": null,
+        "browser_audio": null
+      },
+      "measurements": {
+        "submit_to_client_first_effective_answer_ms": null,
+        "submit_to_first_display_ms": null,
+        "submit_to_complete_ms": null,
+        "submit_to_actual_audio_play_ms": null,
+        "tts_ms": 1763.8194999999541,
+        "asr_ms": null
+      },
+      "calls": {
+        "llm": 0,
+        "maps": 0,
+        "asr": 0,
+        "tts": null,
+        "tts_application_invocations": 1
+      },
+      "errors": [
+        "运行健康检查asr=false；无可用已知校园名称测试录音；无浏览器或麦克风控制面"
+      ],
+      "evidence": [
+        "tts.json",
+        "tts_sample.mp3",
+        "tts_ffprobe.json",
+        "baseline.json"
+      ],
+      "limitations": "MP3 24kHz单声道3.432秒，仅证明音频产出可解析，不能证明已播放或真人识别；供应商尝试数未暴露，不能严格证明TTS上游调用≤1（SDK可能403重试）。",
+      "commands": [
+        ".\\.venv\\Scripts\\python.exe -B docs/diagnostics/20260917-150656/probe.py tts",
+        "ffprobe -v error -show_entries format=duration,size:stream=codec_name,sample_rate,channels -of json docs/diagnostics/20260917-150656/tts_sample.mp3"
+      ],
+      "started_at": "2026-09-17T15:17:51.457882+08:00"
+    },
+    {
+      "id": 8,
+      "input": "复用隔离播放器测试：播放中停止、旧ended回调、RMS口型；角色点击静态检查",
+      "expected": "停止清空队列、旧事件不复活、角色回idle/闭口；点击有响应",
+      "validation_type": "停止与口型仅模拟通过；VRM点击仅静态证据",
+      "result": "4项语音测试通过；默认VRM RoamController.greet点击显示气泡并触发1.5秒姿态；Live2D autoInteract=false",
+      "measurements": {
+        "submit_to_client_first_effective_answer_ms": null,
+        "submit_to_first_display_ms": null,
+        "submit_to_complete_ms": null,
+        "submit_to_actual_audio_play_ms": null
+      },
+      "calls": {
+        "llm": 0,
+        "maps": 0,
+        "asr": 0,
+        "tts": 0
+      },
+      "errors": null,
+      "evidence": [
+        "offline-2.json",
+        "offline-2.txt",
+        "source_index.json",
+        "runtime_identity.json"
+      ],
+      "limitations": "fake Audio/AudioContext，并非真实播放；VRM渲染、点击、角色停止实际状态未验证",
+      "commands": [
+        "node docs/diagnostics/20260917-150656/offline.mjs (shared execution with case5)",
+        "rg static inspection of frontend/src/avatar/vrm and frontend/src/avatar/adapter.ts"
+      ],
+      "started_at": null,
+      "time_note": "wall-clock start not separately captured; original monotonic measurement/TAP preserved; do not infer from file mtime"
+    }
+  ],
+  "processes_started": [],
+  "side_effects": [
+    "本目录报告、独立脚本、回放构建、下载的参考文本",
+    "既有服务内存隔离聊天会话/事件/联网缓存/地图计数",
+    "既有服务 .runtime/model-r2.jsonl 和 .runtime/map-r2.jsonl 追加脱敏事件",
+    "既有服务 .runtime/speech-audio/a765902117f24fb48adf4450a09d4e92.mp3 音频及服务按原逻辑的缓存清理；本目录保留音频副本"
+  ],
+  "limitations": [
+    "无浏览器控制面，apps=[] browsers=[]",
+    "未重启或停止既有服务，启动流程为静态核验，冷启动耗时未测",
+    "没有执行新行程LLM生成，只有tours/status和源码证据",
+    "未测稳定P95或确定加速倍数"
+  ]
+}

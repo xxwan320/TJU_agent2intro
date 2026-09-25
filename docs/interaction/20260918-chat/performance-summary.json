@@ -1,0 +1,16 @@
+{
+  "before": {
+    "n": 58,
+    "p50_ms": 7.35,
+    "p95_ms": 11.9,
+    "max_ms": 17.4,
+    "long_tasks_during_typing": 0
+  },
+  "after": {
+    "n": 58,
+    "p50_ms": 3.15,
+    "p95_ms": 6.6,
+    "max_ms": 8.5,
+    "long_tasks_during_typing": 0
+  }
+}

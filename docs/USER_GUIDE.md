@@ -20,7 +20,7 @@ cd E:\AI4TJU
 .\scripts\start-app.ps1 -Build
 ```
 
-停止脚本仅处理本工作树记录的 PID，并比对创建时间。端口占用时不会杀其他程序。需要换端口可用 ` .\scripts\start-app.ps1 -Port 8080 `，对应访问 http://127.0.0.1:8080。
+停止脚本仅处理本项目记录的 PID，并比对创建时间。端口占用时不会杀其他程序。需要换端口可用 ` .\scripts\start-app.ps1 -Port 8080 `，对应访问 http://127.0.0.1:8080。
 
 ## 2. 五分钟试用流程
 
@@ -60,15 +60,7 @@ cd E:\AI4TJU
 
 若浏览器发生错误，请记录使用的浏览器版本、步骤、界面错误码及截图。可从“运行日志→脱敏导出”导出事件；不要附 .env、原始录音或含其他个人信息的浏览器窗口。
 
-## 5. 接口与开发检查
-
-```powershell
-cd E:\AI4TJU
-.\scripts\check-api.ps1
-.\scripts\check-api.ps1 -Chat  # 明确执行一次真实模型请求
-```
-
-health 的 configured 表示密钥存在，verified 表示该后端进程已真实获得指定模型回复。重启后 verified 回到 false，第一次真实成功后变 true；它不是持续在线监控。
+## 5. 开发模式
 
 开发界面（改代码时用）：
 
@@ -85,17 +77,6 @@ health 的 configured 表示密钥存在，verified 表示该后端进程已真�
 .\scripts\start-app.ps1 -Build
 ```
 
-自动验证命令：
-
-```powershell
-.\.venv\Scripts\python.exe -m pytest -q
-npm.cmd run build
-node scripts/check-adapters.mjs
-node --test tests/ui/model.test.ts tests/speech/adapter.test.mjs
-```
-
-真实验收脚本 ` .\.venv\Scripts\python.exe scripts/verify-live.py ` 会发送多轮实际模型与 TTS 请求，并覆盖 docs/evidence/live-api.json 的脱敏验收记录；日常试用优先页面或 check-api，不必每次运行整套。
-
 ## 6. 常见问题
 
 |现象|处理|
@@ -103,7 +84,7 @@ node --test tests/ui/model.test.ts tests/speech/adapter.test.mjs
 |PowerShell 提示脚本被禁用|本次进程可使用 powershell -NoProfile -ExecutionPolicy Bypass -File E:\AI4TJU\scripts\start-app.ps1；不修改全局策略。|
 |8000 已占用|若是本项目，先运行 stop.ps1；若是其他程序，用 -Port 8080。|
 |模型未配置|只在本机运行 scripts/Configure-Local.ps1 隐藏输入，随后重启。已有配置无需重填。|
-|模型超时/认证失败|查看页面安全错误码或 check-api；先确认网络及网关授权。不会自动换模型。不要把密钥发到聊天或截图。|
+|模型超时/认证失败|查看页面安全错误码；先确认网络及网关授权。不会自动换模型。不要把密钥发到聊天或截图。|
 |人物加载失败|确认 public 下 kelaita/Core 资源存在；使用 Chrome/Edge 的正常图形环境。图形设置、浏览器权限由你自己检查。|
 |没有中文音色/播放失败|确认网络、设备音量和浏览器播放状态。可关闭自动播报，点击当前回答下的播放重试；专业中文语音仍属后续。|
 |资料为空|当前 7 条摘要/2 个北洋园点位，不代表覆盖全部天大；没有来源时应说明资料不足。|
@@ -111,4 +92,4 @@ node --test tests/ui/model.test.ts tests/speech/adapter.test.mjs
 
 新环境需要 Node >=22.12、Python 3.11、Git。安装使用固定锁文件：
 ` .\scripts\setup.ps1 -Python '你的Python311路径' -AssetSource '素材归档目录' `。
-归档应包含 kelaita/ReadMe.txt、kelaita/runtime 下模型相关文件和 live2dcubismcore.min.js。主目录 .env 不复制到工作树；其他窗口需要配置时只能显式指定 AI4TJU_ENV_FILE。
+归档应包含 kelaita/ReadMe.txt、kelaita/runtime 下模型相关文件和 live2dcubismcore.min.js。项目 `.env` 仅保存在本机，不纳入 Git。

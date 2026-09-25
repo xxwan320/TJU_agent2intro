@@ -1,0 +1,442 @@
+{
+  "trace": [
+    {
+      "event": "introduction.request",
+      "at": 2555.60000000149,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "poi": "beiyangyuan-zhengdong-library",
+      "campus": "beiyangyuan"
+    },
+    {
+      "event": "card.visible",
+      "at": 2580.5,
+      "poi": "beiyangyuan-zhengdong-library",
+      "campus": "beiyangyuan"
+    },
+    {
+      "event": "speech.buffering",
+      "at": 2617.10000000149,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "utterance": null
+    },
+    {
+      "event": "speech.buffering",
+      "at": 2617.7000000011176,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "utterance": "e5e530af-63ba-4bda-9f06-0e5d1d253a68"
+    },
+    {
+      "event": "speech.buffering",
+      "at": 2619.60000000149,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "utterance": "106e607a-50c2-41e9-8e78-11b163cbed5d"
+    },
+    {
+      "event": "speech.speaking",
+      "at": 4706.800000000745,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "utterance": "e5e530af-63ba-4bda-9f06-0e5d1d253a68"
+    },
+    {
+      "event": "video.play_request",
+      "at": 4711.5,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "time": 0
+    },
+    {
+      "event": "video.playing",
+      "at": 4711.800000000745,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "time": 0.000224
+    },
+    {
+      "event": "video.playing",
+      "at": 4905.10000000149,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "time": 0.183073
+    },
+    {
+      "event": "command.pause",
+      "at": 5233.9000000003725,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667"
+    },
+    {
+      "event": "speech.paused",
+      "at": 5234.10000000149,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "utterance": "e5e530af-63ba-4bda-9f06-0e5d1d253a68"
+    },
+    {
+      "event": "video.pause",
+      "at": 5239.300000000745,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "time": 0.513478
+    },
+    {
+      "event": "command.resume",
+      "at": 5885.700000001118,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667"
+    },
+    {
+      "event": "speech.speaking",
+      "at": 5891.60000000149,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "utterance": "e5e530af-63ba-4bda-9f06-0e5d1d253a68"
+    },
+    {
+      "event": "video.play_request",
+      "at": 5893,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "time": 0.513478
+    },
+    {
+      "event": "video.playing",
+      "at": 5893.200000001118,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "time": 0.513641
+    },
+    {
+      "event": "speech.buffering",
+      "at": 16154.200000001118,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "utterance": "e5e530af-63ba-4bda-9f06-0e5d1d253a68"
+    },
+    {
+      "event": "video.pause",
+      "at": 16159,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "time": 10.779285
+    },
+    {
+      "event": "speech.speaking",
+      "at": 16160.400000000373,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "utterance": "106e607a-50c2-41e9-8e78-11b163cbed5d"
+    },
+    {
+      "event": "video.play_request",
+      "at": 16165.5,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "time": 10.779285
+    },
+    {
+      "event": "video.playing",
+      "at": 16165.700000001118,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "time": 10.779454
+    },
+    {
+      "event": "session.stop",
+      "at": 16196.200000001118,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667"
+    },
+    {
+      "event": "video.pause",
+      "at": 16202,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667",
+      "time": 10.812766
+    },
+    {
+      "event": "session.stop",
+      "at": 16568.900000000373,
+      "id": "fe56f953-c029-4885-8234-5d7fa18a4667"
+    },
+    {
+      "event": "introduction.request",
+      "at": 16568.900000000373,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5",
+      "poi": "beiyangyuan-zhengdong-library",
+      "campus": "beiyangyuan"
+    },
+    {
+      "event": "speech.buffering",
+      "at": 16571.900000000373,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5",
+      "utterance": null
+    },
+    {
+      "event": "speech.buffering",
+      "at": 16572.800000000745,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5",
+      "utterance": "78e99768-78e8-42ee-ba05-f5dd57c1ef67"
+    },
+    {
+      "event": "speech.buffering",
+      "at": 16573.10000000149,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5",
+      "utterance": "628af044-b199-4372-bdcf-7bf44ad434e1"
+    },
+    {
+      "event": "speech.speaking",
+      "at": 16588.800000000745,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5",
+      "utterance": "78e99768-78e8-42ee-ba05-f5dd57c1ef67"
+    },
+    {
+      "event": "video.play_request",
+      "at": 16605.60000000149,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5",
+      "time": 0
+    },
+    {
+      "event": "video.playing",
+      "at": 16605.800000000745,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5",
+      "time": 0.000118
+    },
+    {
+      "event": "command.pause",
+      "at": 16657.60000000149,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5"
+    },
+    {
+      "event": "speech.paused",
+      "at": 16657.800000000745,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5",
+      "utterance": "78e99768-78e8-42ee-ba05-f5dd57c1ef67"
+    },
+    {
+      "event": "video.pause",
+      "at": 16663.200000001118,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5",
+      "time": 0.053635
+    },
+    {
+      "event": "command.resume",
+      "at": 16705.900000000373,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5"
+    },
+    {
+      "event": "speech.speaking",
+      "at": 16710.300000000745,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5",
+      "utterance": "78e99768-78e8-42ee-ba05-f5dd57c1ef67"
+    },
+    {
+      "event": "video.play_request",
+      "at": 16711.5,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5",
+      "time": 0.053635
+    },
+    {
+      "event": "video.playing",
+      "at": 16711.60000000149,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5",
+      "time": 0.053768
+    },
+    {
+      "event": "session.stop",
+      "at": 16749.800000000745,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5"
+    },
+    {
+      "event": "video.pause",
+      "at": 16756.10000000149,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5",
+      "time": 0.093387
+    },
+    {
+      "event": "session.stop",
+      "at": 16765.5,
+      "id": "82fff8c9-93cc-44d5-be7f-9efd07c21fa5"
+    },
+    {
+      "event": "card.visible",
+      "at": 16767.200000001118,
+      "poi": "beiyangyuan-datong-center",
+      "campus": "beiyangyuan"
+    },
+    {
+      "event": "card.visible",
+      "at": 16821.800000000745,
+      "poi": "beiyangyuan-zhengdong-library",
+      "campus": "beiyangyuan"
+    }
+  ],
+  "media": [
+    {
+      "event": "loadedmetadata",
+      "tag": "AUDIO",
+      "at": 4674.200000001118,
+      "time": 0,
+      "src": "blob:http://127.0.0.1:8000/a92af587-7870-48d1-bff4-49b67cf7b77a",
+      "muted": false
+    },
+    {
+      "event": "playing",
+      "tag": "AUDIO",
+      "at": 4706.800000000745,
+      "time": 0,
+      "src": "blob:http://127.0.0.1:8000/a92af587-7870-48d1-bff4-49b67cf7b77a",
+      "muted": false
+    },
+    {
+      "event": "playing",
+      "tag": "VIDEO",
+      "at": 4711.800000000745,
+      "time": 0.000246,
+      "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+      "muted": true
+    },
+    {
+      "event": "playing",
+      "tag": "VIDEO",
+      "at": 4905.10000000149,
+      "time": 0.183108,
+      "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+      "muted": true
+    },
+    {
+      "event": "pause",
+      "tag": "AUDIO",
+      "at": 5239,
+      "time": 0.52807,
+      "src": "blob:http://127.0.0.1:8000/a92af587-7870-48d1-bff4-49b67cf7b77a",
+      "muted": false
+    },
+    {
+      "event": "pause",
+      "tag": "VIDEO",
+      "at": 5239.300000000745,
+      "time": 0.513478,
+      "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+      "muted": true
+    },
+    {
+      "event": "playing",
+      "tag": "AUDIO",
+      "at": 5891.700000001118,
+      "time": 0.533333,
+      "src": "blob:http://127.0.0.1:8000/a92af587-7870-48d1-bff4-49b67cf7b77a",
+      "muted": false
+    },
+    {
+      "event": "playing",
+      "tag": "VIDEO",
+      "at": 5893.200000001118,
+      "time": 0.513649,
+      "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+      "muted": true
+    },
+    {
+      "event": "pause",
+      "tag": "AUDIO",
+      "at": 16153.900000000373,
+      "time": 10.8,
+      "src": "blob:http://127.0.0.1:8000/a92af587-7870-48d1-bff4-49b67cf7b77a",
+      "muted": false
+    },
+    {
+      "event": "ended",
+      "tag": "AUDIO",
+      "at": 16154.60000000149,
+      "time": 0,
+      "src": "blob:http://127.0.0.1:8000/a92af587-7870-48d1-bff4-49b67cf7b77a",
+      "muted": false
+    },
+    {
+      "event": "pause",
+      "tag": "VIDEO",
+      "at": 16159,
+      "time": 10.779285,
+      "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+      "muted": true
+    },
+    {
+      "event": "loadedmetadata",
+      "tag": "AUDIO",
+      "at": 16160,
+      "time": 0,
+      "src": "blob:http://127.0.0.1:8000/566c0c46-8ecf-4c11-832a-90ace31bc82f",
+      "muted": false
+    },
+    {
+      "event": "playing",
+      "tag": "AUDIO",
+      "at": 16160.400000000373,
+      "time": 0,
+      "src": "blob:http://127.0.0.1:8000/566c0c46-8ecf-4c11-832a-90ace31bc82f",
+      "muted": false
+    },
+    {
+      "event": "playing",
+      "tag": "VIDEO",
+      "at": 16165.700000001118,
+      "time": 10.779459,
+      "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+      "muted": true
+    },
+    {
+      "event": "pause",
+      "tag": "VIDEO",
+      "at": 16202.10000000149,
+      "time": 10.812766,
+      "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+      "muted": true
+    },
+    {
+      "event": "loadedmetadata",
+      "tag": "AUDIO",
+      "at": 16588.700000001118,
+      "time": 0,
+      "src": "blob:http://127.0.0.1:8000/7463ebb3-714d-476b-88b2-6abeb6212b16",
+      "muted": false
+    },
+    {
+      "event": "playing",
+      "tag": "AUDIO",
+      "at": 16588.700000001118,
+      "time": 0,
+      "src": "blob:http://127.0.0.1:8000/7463ebb3-714d-476b-88b2-6abeb6212b16",
+      "muted": false
+    },
+    {
+      "event": "playing",
+      "tag": "VIDEO",
+      "at": 16605.800000000745,
+      "time": 0.00013,
+      "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+      "muted": true
+    },
+    {
+      "event": "pause",
+      "tag": "AUDIO",
+      "at": 16663.10000000149,
+      "time": 0.073159,
+      "src": "blob:http://127.0.0.1:8000/7463ebb3-714d-476b-88b2-6abeb6212b16",
+      "muted": false
+    },
+    {
+      "event": "pause",
+      "tag": "VIDEO",
+      "at": 16663.300000000745,
+      "time": 0.053635,
+      "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+      "muted": true
+    },
+    {
+      "event": "playing",
+      "tag": "AUDIO",
+      "at": 16710.200000001118,
+      "time": 0.074667,
+      "src": "blob:http://127.0.0.1:8000/7463ebb3-714d-476b-88b2-6abeb6212b16",
+      "muted": false
+    },
+    {
+      "event": "playing",
+      "tag": "VIDEO",
+      "at": 16711.60000000149,
+      "time": 0.053773,
+      "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+      "muted": true
+    },
+    {
+      "event": "pause",
+      "tag": "VIDEO",
+      "at": 16756.200000001118,
+      "time": 0.093387,
+      "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+      "muted": true
+    }
+  ]
+}

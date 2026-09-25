@@ -1,0 +1,72 @@
+{
+  ".tour-workspace": {
+    "x": 0,
+    "y": 19,
+    "width": 1440,
+    "height": 1248.78125,
+    "scrollHeight": 1249,
+    "overflow": "visible",
+    "flex": "0 1 auto",
+    "maxHeight": "none"
+  },
+  ".tour-map": {
+    "x": 542,
+    "y": 255,
+    "width": 862,
+    "height": 800,
+    "scrollHeight": 800,
+    "overflow": "visible",
+    "flex": "0 1 auto",
+    "maxHeight": "800px"
+  },
+  ".explorer": {
+    "x": 542,
+    "y": 255,
+    "width": 862,
+    "height": 800,
+    "scrollHeight": 908,
+    "overflow": "auto",
+    "flex": "1 1 0%",
+    "maxHeight": "none"
+  },
+  ".map-directory": {
+    "x": 559,
+    "y": 324,
+    "width": 828,
+    "height": 730.5,
+    "scrollHeight": 731,
+    "overflow": "visible",
+    "flex": "0 0 auto",
+    "maxHeight": "none"
+  },
+  ".poi-card": {
+    "x": 559,
+    "y": 1066.5,
+    "width": 828,
+    "height": 30,
+    "scrollHeight": 293,
+    "overflow": "hidden",
+    "flex": "0 1 auto",
+    "maxHeight": "none"
+  },
+  ".poi-profile": {
+    "x": 574,
+    "y": 1081.5,
+    "width": 446.015625,
+    "height": 0,
+    "scrollHeight": 279,
+    "overflow": "visible",
+    "flex": "0 1 auto",
+    "maxHeight": "none"
+  },
+  ".poi-actions": {
+    "x": 1038.015625,
+    "y": 1101.5,
+    "width": 333.984375,
+    "height": 0,
+    "scrollHeight": 86,
+    "overflow": "visible",
+    "flex": "0 1 auto",
+    "maxHeight": "none"
+  }
+}

@@ -5,17 +5,15 @@
       {
         "id": "weijinlu-schematic-2017",
         "campus_id": "weijinlu",
-        "local_path": "/assets/campus/weijinlu-schematic-2017.svg",
+        "local_path": "/assets/campus/weijinlu-campus-map.jpg",
         "kind": "schematic",
-        "width": 1000,
-        "height": 800,
-        "source_refs": [
-          "src-maps-2017"
-        ],
-        "creator": "AI4TJU project; independently drawn schematic",
-        "usage_basis": "Original abstract SVG; only relative factual layout read from official 2017 map, no source image redistributed.",
-        "version": "r2-reviewed-2017-v1",
-        "data_as_of": "2017-06-01",
+        "width": 1024,
+        "height": 724,
+        "source_refs": [],
+        "creator": "天津大学保卫处《天津大学校园电子地图》（用户提供本地文件）",
+        "usage_basis": "本机校园导览展示用；公开再分发许可未核验；非精确导航，不作为楼门入口或路线依据",
+        "version": "r2-local-map-v1",
+        "data_as_of": null,
         "supports_precise_navigation": false
       }
     ],
@@ -27,17 +25,15 @@
       {
         "id": "beiyangyuan-schematic-2017",
         "campus_id": "beiyangyuan",
-        "local_path": "/assets/campus/beiyangyuan-schematic-2017.svg",
+        "local_path": "/assets/campus/beiyangyuan-campus-map.jpg",
         "kind": "schematic",
-        "width": 1000,
-        "height": 800,
-        "source_refs": [
-          "src-maps-2017"
-        ],
-        "creator": "AI4TJU project; independently drawn schematic",
-        "usage_basis": "Original abstract SVG; only relative factual layout read from official 2017 map, no source image redistributed.",
-        "version": "r2-reviewed-2017-v1",
-        "data_as_of": "2017-06-01",
+        "width": 1024,
+        "height": 724,
+        "source_refs": [],
+        "creator": "天津大学《北洋园校区道路、楼宇及景观命名示意图》缩印版（用户提供本地文件）",
+        "usage_basis": "本机校园导览展示用；公开再分发许可未核验；非精确导航，不作为楼门入口或路线依据",
+        "version": "r2-local-map-v1",
+        "data_as_of": null,
         "supports_precise_navigation": false
       }
     ],

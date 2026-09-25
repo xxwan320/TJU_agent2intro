@@ -1,0 +1,914 @@
+[
+  {
+    "poi_id": "weijinlu-09-teaching",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-history-museum",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-chunshui-library",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-science-library",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-student-center",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 2,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-old-gym",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 5,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-stadium",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 10,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-gym",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 10,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-swimming",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 5
+  },
+  {
+    "poi_id": "weijinlu-water-building",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-wang-xuezhong",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 2,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-feng-jicai",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 5,
+    "usable_candidate_count": 5
+  },
+  {
+    "poi_id": "weijinlu-25-teaching",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-alumni-home",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-east-gate",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-east-gate-square",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-dream-stone",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-beiyang-pavilion",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-qin-exam",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-school-song",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-beiyang-square",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-qiushi-pavilion",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 14,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-haitang",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 5,
+    "usable_candidate_count": 5
+  },
+  {
+    "poi_id": "weijinlu-newton-tree",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-jingye-stone",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-tiangong-stone",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-suyuan-stone",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-jingye-lake",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-youth-lake",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 9,
+    "usable_candidate_count": 2
+  },
+  {
+    "poi_id": "weijinlu-aiwan-lake",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-youyi-lake",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-xiliang-garden",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-double-pavilions",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-xue-4-dining",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-xue-5-dining",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 2,
+    "usable_candidate_count": 2
+  },
+  {
+    "poi_id": "weijinlu-liuyuan-dining",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 0,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-zhang-tailei",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-sheng-xuanhuai",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-ma-yinchu",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-li-shusen",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-xu-zhong",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-lu-sheng",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-shen-yulin",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-liu-bao",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-main-building",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-qiushi-hall",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 8,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-jufang-guiyuan",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-datong-center",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-gym",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 6,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-xingsun-building",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-earthquake-facility",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 2,
+    "usable_candidate_count": 2
+  },
+  {
+    "poi_id": "beiyangyuan-east-gate",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 4,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-qiushi-avenue",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 8,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-xuanhuai-square",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 5,
+    "usable_candidate_count": 2
+  },
+  {
+    "poi_id": "beiyangyuan-tailei-square",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 2,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-tianlin-square",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-shutian-square",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 19,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-xingxue-road",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-bowen-road",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 24,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-xigu-road",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 15,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-qixing-road",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-shuangtai-road",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-xinyuan-road",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-li-garden",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-le-garden",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-she-garden",
+    "provider": "amap",
+    "status": "searchable",
+    "frontend_visible": false,
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-yu-garden",
+    "provider": "amap",
+    "status": "searchable",
+    "frontend_visible": false,
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-shu-garden",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-shu-garden-2",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 4,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-memorial-pavilion",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 3,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-qin-exam",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-haitang-bank",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-peach-bank",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-sanwen-bridge",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 4,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-youth-lake",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 6,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-tju-star",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-shangxian-stone",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-gaokao-wall",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 23,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-motto-stone",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-suzhou-pavilion",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-chunhui-garden",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-alumni-forest",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 2,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-newton-tree",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 7,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-motto-ding",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-xue-1-dining",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 2,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-xue-2-dining",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 2,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-xue-3-dining",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-xue-4-dining",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-xue-5-dining",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-xue-6-dining",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-international-dining",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-zhengdong-library",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-dorm-ge",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 2,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-dorm-zhi",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 2,
+    "usable_candidate_count": 2
+  },
+  {
+    "poi_id": "beiyangyuan-dorm-cheng",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 3,
+    "usable_candidate_count": 2
+  },
+  {
+    "poi_id": "beiyangyuan-dorm-zheng",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-dorm-xiu",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-dorm-qi",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 4,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "beiyangyuan-dorm-zhi-guo",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 5,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "beiyangyuan-dorm-ping",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 3,
+    "usable_candidate_count": 2
+  },
+  {
+    "poi_id": "weijinlu-dorm-yi",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 0,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-dorm-er",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 1,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-dorm-san",
+    "provider": "amap",
+    "status": "searchable",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 6,
+    "usable_candidate_count": 1
+  },
+  {
+    "poi_id": "weijinlu-dorm-si",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 5,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-dorm-wu",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 6,
+    "usable_candidate_count": 0,
+    "note": ""
+  },
+  {
+    "poi_id": "weijinlu-dorm-liu",
+    "provider": "amap",
+    "status": "not_found",
+    "checked_at": "2026-09-18",
+    "provider_candidate_count": 25,
+    "usable_candidate_count": 0,
+    "note": ""
+  }
+]

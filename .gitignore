@@ -1,4 +1,3 @@
-.worktrees/
 .env
 .env.*
 !.env.example
@@ -8,11 +7,17 @@
 node_modules/
 dist/
 build/
+参赛提交_待填写联系人+赛道一+海小棠校园数字人导游/
 __pycache__/
-.pytest_cache/
 *.pyc
 *.egg-info/
 .cache/
-coverage/
 frontend/public/assets/kelaita/
 frontend/public/vendor/
+
+# Session-selected documents are private runtime data.
+data/user_knowledge/
+
+# Local reconstruction environment and private generated assets
+.reconstruction/
+.runtime/

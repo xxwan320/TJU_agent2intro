@@ -1,0 +1,1994 @@
+{
+  "status": {
+    "status": "ready",
+    "version": "sha256:d05f72a518c3",
+    "document_count": 249,
+    "building_count": 106,
+    "updated_at": "2026-09-15"
+  },
+  "coverage": {
+    "status": "ready",
+    "version": "sha256:d05f72a518c3",
+    "source_pages": 22,
+    "fact_count": 242,
+    "chunk_count": 0,
+    "campuses": [
+      {
+        "campus_id": "weijinlu",
+        "facts": 132,
+        "pois": 50,
+        "verified_coordinates": 0,
+        "usable_media": 0
+      },
+      {
+        "campus_id": "beiyangyuan",
+        "facts": 110,
+        "pois": 56,
+        "verified_coordinates": 0,
+        "usable_media": 0
+      }
+    ]
+  },
+  "counts": {
+    "assets.json": 2,
+    "buildings.json": 2,
+    "core_routes.json": 78,
+    "documents.json": 7,
+    "evaluation.json": null,
+    "evidence_metadata.json": 242,
+    "facts.json": 242,
+    "media_candidates.json": 6,
+    "media_manifest.json": null,
+    "pois.json": 106,
+    "service_rules.json": 28,
+    "SOURCE_REGISTRY.json": 22
+  },
+  "pois": [
+    {
+      "id": "weijinlu-09-teaching",
+      "campus_id": "weijinlu",
+      "name": "第九教学楼",
+      "aliases": [
+        "9教",
+        "九楼"
+      ],
+      "category": "teaching",
+      "description": "官方卫津路校区导览将其列为楼宇场馆。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "weijinlu-schematic-2017",
+        "x": 0.7939,
+        "y": 0.6602,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-history-museum",
+      "campus_id": "weijinlu",
+      "name": "天津大学校史博物馆",
+      "aliases": [
+        "校史馆"
+      ],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为楼宇场馆。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-chunshui-library",
+      "campus_id": "weijinlu",
+      "name": "春水图书馆（北馆）",
+      "aliases": [
+        "北馆",
+        "春水图书馆",
+        "天大北馆"
+      ],
+      "category": "library",
+      "description": "天津大学全校三处馆舍中的卫津路校区馆舍；该校区有春水和科学两馆。",
+      "source_refs": [
+        "src-library"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "weijinlu-schematic-2017",
+        "x": 0.6982,
+        "y": 0.6326,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-science-library",
+      "campus_id": "weijinlu",
+      "name": "科学图书馆（南馆）",
+      "aliases": [
+        "南馆",
+        "科学图书馆",
+        "天大南馆"
+      ],
+      "category": "library",
+      "description": "天津大学全校三处馆舍中的卫津路校区馆舍；该校区有春水和科学两馆。",
+      "source_refs": [
+        "src-library"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "weijinlu-schematic-2017",
+        "x": 0.6641,
+        "y": 0.8149,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-student-center",
+      "campus_id": "weijinlu",
+      "name": "大学生活动中心",
+      "aliases": [
+        "大活"
+      ],
+      "category": "service",
+      "description": "官方场馆中心页面列为卫津路校区管理场馆。",
+      "source_refs": [
+        "src-venues"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "weijinlu-schematic-2017",
+        "x": 0.6504,
+        "y": 0.3867,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-old-gym",
+      "campus_id": "weijinlu",
+      "name": "老体育馆（篮球馆）",
+      "aliases": [
+        "篮球馆"
+      ],
+      "category": "sports",
+      "description": "官方卫津路校区导览将其列为楼宇场馆。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-stadium",
+      "campus_id": "weijinlu",
+      "name": "体育场",
+      "aliases": [],
+      "category": "sports",
+      "description": "官方场馆中心页面列为卫津路校区管理场馆。",
+      "source_refs": [
+        "src-venues"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "weijinlu-schematic-2017",
+        "x": 0.9326,
+        "y": 0.4627,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-gym",
+      "campus_id": "weijinlu",
+      "name": "体育馆",
+      "aliases": [],
+      "category": "sports",
+      "description": "官方场馆中心页面列为卫津路校区管理场馆。",
+      "source_refs": [
+        "src-venues"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "weijinlu-schematic-2017",
+        "x": 0.9502,
+        "y": 0.2569,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-swimming",
+      "campus_id": "weijinlu",
+      "name": "游泳馆",
+      "aliases": [],
+      "category": "sports",
+      "description": "官方场馆中心页面列为卫津路校区管理场馆。",
+      "source_refs": [
+        "src-venues"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "weijinlu-schematic-2017",
+        "x": 0.7979,
+        "y": 0.3494,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-water-building",
+      "campus_id": "weijinlu",
+      "name": "水利馆",
+      "aliases": [],
+      "category": "teaching",
+      "description": "官方卫津路校区导览将其列为楼宇场馆。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "weijinlu-schematic-2017",
+        "x": 0.4639,
+        "y": 0.7638,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-wang-xuezhong",
+      "campus_id": "weijinlu",
+      "name": "王学仲艺术研究所",
+      "aliases": [
+        "黾园",
+        "王研所"
+      ],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为楼宇场馆。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-feng-jicai",
+      "campus_id": "weijinlu",
+      "name": "冯骥才文学艺术研究院",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为楼宇场馆。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "weijinlu-schematic-2017",
+        "x": 0.7676,
+        "y": 0.482,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-25-teaching",
+      "campus_id": "weijinlu",
+      "name": "曾宪梓楼（25教）",
+      "aliases": [
+        "25教",
+        "曾宪梓楼",
+        "二十五教",
+        "第25教学楼",
+        "第二十五教学楼"
+      ],
+      "category": "teaching",
+      "description": "官方卫津路校区导览将其列为楼宇场馆。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "weijinlu-schematic-2017",
+        "x": 0.8496,
+        "y": 0.808,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-alumni-home",
+      "campus_id": "weijinlu",
+      "name": "校友之家",
+      "aliases": [],
+      "category": "service",
+      "description": "官方卫津路校区导览将其列为楼宇场馆。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-east-gate",
+      "campus_id": "weijinlu",
+      "name": "卫津路校区东门",
+      "aliases": [
+        "卫津路东门",
+        "东门"
+      ],
+      "category": "gate",
+      "description": "官方卫津路校区导览将其列为风物景观。入口坐标和开放规则未核验。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "weijinlu-schematic-2017",
+        "x": 0.9883,
+        "y": 0.7182,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-east-gate-square",
+      "campus_id": "weijinlu",
+      "name": "东门广场",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-dream-stone",
+      "campus_id": "weijinlu",
+      "name": "梦成真石",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-beiyang-pavilion",
+      "campus_id": "weijinlu",
+      "name": "北洋大学堂纪念碑亭",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-qin-exam",
+      "campus_id": "weijinlu",
+      "name": "钦字第一号考凭",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-school-song",
+      "campus_id": "weijinlu",
+      "name": "校歌",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-beiyang-square",
+      "campus_id": "weijinlu",
+      "name": "北洋广场",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-qiushi-pavilion",
+      "campus_id": "weijinlu",
+      "name": "求是亭",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-haitang",
+      "campus_id": "weijinlu",
+      "name": "铭德道海棠",
+      "aliases": [
+        "海棠"
+      ],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-newton-tree",
+      "campus_id": "weijinlu",
+      "name": "牛顿苹果树",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-jingye-stone",
+      "campus_id": "weijinlu",
+      "name": "敬业石",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-tiangong-stone",
+      "campus_id": "weijinlu",
+      "name": "天工石",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-suyuan-stone",
+      "campus_id": "weijinlu",
+      "name": "溯源石",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-jingye-lake",
+      "campus_id": "weijinlu",
+      "name": "敬业湖",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "weijinlu-schematic-2017",
+        "x": 0.6836,
+        "y": 0.7376,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-youth-lake",
+      "campus_id": "weijinlu",
+      "name": "青年湖",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "weijinlu-schematic-2017",
+        "x": 0.6982,
+        "y": 0.4144,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-aiwan-lake",
+      "campus_id": "weijinlu",
+      "name": "爱晚湖",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "weijinlu-schematic-2017",
+        "x": 0.5322,
+        "y": 0.6602,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-youyi-lake",
+      "campus_id": "weijinlu",
+      "name": "友谊湖",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "weijinlu-schematic-2017",
+        "x": 0.2029,
+        "y": 0.8811,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-xiliang-garden",
+      "campus_id": "weijinlu",
+      "name": "锡良模型园",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-double-pavilions",
+      "campus_id": "weijinlu",
+      "name": "青年湖畔双亭",
+      "aliases": [
+        "双亭"
+      ],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-xue-4-dining",
+      "campus_id": "weijinlu",
+      "name": "学四食堂",
+      "aliases": [
+        "学4食堂"
+      ],
+      "category": "dining",
+      "description": "2024年迎新网食堂信息将其列为卫津路当时开放食堂之一。营业时间未核验。",
+      "source_refs": [
+        "src-dining-2024"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "weijinlu-xue-5-dining",
+      "campus_id": "weijinlu",
+      "name": "学五食堂",
+      "aliases": [
+        "学5食堂",
+        "清真食堂"
+      ],
+      "category": "dining",
+      "description": "2024年迎新网食堂信息将其列为卫津路当时开放食堂之一，并称二层为清真食堂。营业时间未核验。",
+      "source_refs": [
+        "src-dining-2024"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "weijinlu-liuyuan-dining",
+      "campus_id": "weijinlu",
+      "name": "留园餐厅",
+      "aliases": [],
+      "category": "dining",
+      "description": "2024年迎新网食堂信息将其列为卫津路当时开放食堂之一。营业时间未核验。",
+      "source_refs": [
+        "src-dining-2024"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "weijinlu-zhang-tailei",
+      "campus_id": "weijinlu",
+      "name": "张太雷像",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为天大雕塑。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-sheng-xuanhuai",
+      "campus_id": "weijinlu",
+      "name": "盛宣怀像",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为天大雕塑。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-ma-yinchu",
+      "campus_id": "weijinlu",
+      "name": "马寅初像",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为天大雕塑。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-li-shusen",
+      "campus_id": "weijinlu",
+      "name": "李曙森像",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为天大雕塑。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-xu-zhong",
+      "campus_id": "weijinlu",
+      "name": "徐中像",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为天大雕塑。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-lu-sheng",
+      "campus_id": "weijinlu",
+      "name": "卢绳像",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为天大雕塑。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-shen-yulin",
+      "campus_id": "weijinlu",
+      "name": "沈玉麟像",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为天大雕塑。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "weijinlu-liu-bao",
+      "campus_id": "weijinlu",
+      "name": "刘豹像",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方卫津路校区导览将其列为天大雕塑。",
+      "source_refs": [
+        "src-fw-weijin"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-main-building",
+      "campus_id": "beiyangyuan",
+      "name": "北洋园校区主楼",
+      "aliases": [
+        "主楼",
+        "32教学楼",
+        "32教"
+      ],
+      "category": "teaching",
+      "description": "官方北洋园校区导览将其列为楼宇场馆。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.81,
+        "y": 0.531,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-qiushi-hall",
+      "campus_id": "beiyangyuan",
+      "name": "求实会堂",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方场馆中心页面列为北洋园校区管理场馆。",
+      "source_refs": [
+        "src-venues"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-jufang-guiyuan",
+      "campus_id": "beiyangyuan",
+      "name": "矩方规圆楼",
+      "aliases": [],
+      "category": "teaching",
+      "description": "官方北洋园校区导览将其列为楼宇场馆。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-datong-center",
+      "campus_id": "beiyangyuan",
+      "name": "大通学生中心",
+      "aliases": [
+        "学生中心"
+      ],
+      "category": "service",
+      "description": "大通学生中心位于北洋园主轴线尽端的临水半岛；2016校方设计介绍与2017图面“学生活动中心”位置相互印证，图面仅为历史相对示意。",
+      "source_refs": [
+        "src-venues",
+        "src-landscape-2016"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.47,
+        "y": 0.515,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-gym",
+      "campus_id": "beiyangyuan",
+      "name": "综合体育馆",
+      "aliases": [
+        "体育馆"
+      ],
+      "category": "sports",
+      "description": "官方北洋园校区导览将其列为楼宇场馆。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.7813,
+        "y": 0.7873,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-xingsun-building",
+      "campus_id": "beiyangyuan",
+      "name": "杏荪楼",
+      "aliases": [],
+      "category": "teaching",
+      "description": "官方北洋园校区导览将其列为楼宇场馆。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-earthquake-facility",
+      "campus_id": "beiyangyuan",
+      "name": "国家大型地震工程模拟研究设施",
+      "aliases": [],
+      "category": "teaching",
+      "description": "官方北洋园校区导览将其列为楼宇场馆。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-east-gate",
+      "campus_id": "beiyangyuan",
+      "name": "北洋园校区东门",
+      "aliases": [
+        "北洋园东门",
+        "东门"
+      ],
+      "category": "gate",
+      "description": "官方北洋园校区导览将其列为校园规划项目。入口坐标和开放规则未核验。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.93,
+        "y": 0.586,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-qiushi-avenue",
+      "campus_id": "beiyangyuan",
+      "name": "求是大道",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为校园规划项目。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.644,
+        "y": 0.529,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-xuanhuai-square",
+      "campus_id": "beiyangyuan",
+      "name": "宣怀广场",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为校园规划项目。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-tailei-square",
+      "campus_id": "beiyangyuan",
+      "name": "太雷广场",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为校园规划项目。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-tianlin-square",
+      "campus_id": "beiyangyuan",
+      "name": "天麟广场",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为校园规划项目。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-shutian-square",
+      "campus_id": "beiyangyuan",
+      "name": "书田广场",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为校园规划项目。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-xingxue-road",
+      "campus_id": "beiyangyuan",
+      "name": "兴学路",
+      "aliases": [],
+      "category": "other",
+      "description": "官方北洋园校区导览将其列为校园规划项目。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.742,
+        "y": 0.447,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-bowen-road",
+      "campus_id": "beiyangyuan",
+      "name": "博文路",
+      "aliases": [],
+      "category": "other",
+      "description": "官方北洋园校区导览将其列为校园规划项目。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.673,
+        "y": 0.431,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-xigu-road",
+      "campus_id": "beiyangyuan",
+      "name": "西沽路",
+      "aliases": [],
+      "category": "other",
+      "description": "官方北洋园校区导览将其列为校园规划项目。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.642,
+        "y": 0.431,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-qixing-road",
+      "campus_id": "beiyangyuan",
+      "name": "七星路",
+      "aliases": [],
+      "category": "other",
+      "description": "官方北洋园校区导览将其列为校园规划项目。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.612,
+        "y": 0.431,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-shuangtai-road",
+      "campus_id": "beiyangyuan",
+      "name": "双台路",
+      "aliases": [],
+      "category": "other",
+      "description": "官方北洋园校区导览将其列为校园规划项目。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.559,
+        "y": 0.42,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-xinyuan-road",
+      "campus_id": "beiyangyuan",
+      "name": "新元路",
+      "aliases": [],
+      "category": "other",
+      "description": "官方北洋园校区导览将其列为校园规划项目。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.527,
+        "y": 0.42,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-li-garden",
+      "campus_id": "beiyangyuan",
+      "name": "礼园",
+      "aliases": [],
+      "category": "other",
+      "description": "校方导览名称，具体用途尚未核验；不据此认定学生宿舍。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "pending"
+    },
+    {
+      "id": "beiyangyuan-le-garden",
+      "campus_id": "beiyangyuan",
+      "name": "乐园",
+      "aliases": [],
+      "category": "other",
+      "description": "校方导览名称，具体用途尚未核验；不据此认定学生宿舍。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "pending"
+    },
+    {
+      "id": "beiyangyuan-she-garden",
+      "campus_id": "beiyangyuan",
+      "name": "射园",
+      "aliases": [],
+      "category": "other",
+      "description": "校方导览名称，具体用途尚未核验；不据此认定学生宿舍。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "pending"
+    },
+    {
+      "id": "beiyangyuan-yu-garden",
+      "campus_id": "beiyangyuan",
+      "name": "御园",
+      "aliases": [],
+      "category": "other",
+      "description": "校方导览名称，具体用途尚未核验；不据此认定学生宿舍。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "pending"
+    },
+    {
+      "id": "beiyangyuan-shu-garden",
+      "campus_id": "beiyangyuan",
+      "name": "书园",
+      "aliases": [],
+      "category": "other",
+      "description": "校方导览名称，具体用途尚未核验；不据此认定学生宿舍。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "pending"
+    },
+    {
+      "id": "beiyangyuan-shu-garden-2",
+      "campus_id": "beiyangyuan",
+      "name": "数园",
+      "aliases": [],
+      "category": "other",
+      "description": "校方导览名称，具体用途尚未核验；不据此认定学生宿舍。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "pending"
+    },
+    {
+      "id": "beiyangyuan-memorial-pavilion",
+      "campus_id": "beiyangyuan",
+      "name": "北洋纪念亭",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-qin-exam",
+      "campus_id": "beiyangyuan",
+      "name": "钦字第一号考凭",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-haitang-bank",
+      "campus_id": "beiyangyuan",
+      "name": "海棠堤",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-peach-bank",
+      "campus_id": "beiyangyuan",
+      "name": "桃花堤",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-sanwen-bridge",
+      "campus_id": "beiyangyuan",
+      "name": "三问桥",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.746,
+        "y": 0.53,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-youth-lake",
+      "campus_id": "beiyangyuan",
+      "name": "青年湖",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.416,
+        "y": 0.511,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-tju-star",
+      "campus_id": "beiyangyuan",
+      "name": "天津大学星",
+      "aliases": [
+        "天大星"
+      ],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-shangxian-stone",
+      "campus_id": "beiyangyuan",
+      "name": "尚贤石",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-gaokao-wall",
+      "campus_id": "beiyangyuan",
+      "name": "恢复高考纪念墙",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-motto-stone",
+      "campus_id": "beiyangyuan",
+      "name": "实事求是校训石",
+      "aliases": [
+        "校训石"
+      ],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-suzhou-pavilion",
+      "campus_id": "beiyangyuan",
+      "name": "苏州亭",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-chunhui-garden",
+      "campus_id": "beiyangyuan",
+      "name": "春晖园",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-alumni-forest",
+      "campus_id": "beiyangyuan",
+      "name": "校友林景观带",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-newton-tree",
+      "campus_id": "beiyangyuan",
+      "name": "牛顿苹果树",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-motto-ding",
+      "campus_id": "beiyangyuan",
+      "name": "校训鼎",
+      "aliases": [],
+      "category": "culture",
+      "description": "官方北洋园校区导览将其列为风物景观。",
+      "source_refs": [
+        "src-fw-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-xue-1-dining",
+      "campus_id": "beiyangyuan",
+      "name": "学一食堂（梅园餐厅）",
+      "aliases": [
+        "学1食堂",
+        "梅园餐厅"
+      ],
+      "category": "dining",
+      "description": "2024年迎新网食堂信息称其为北洋园学生食堂。营业时间未核验。",
+      "source_refs": [
+        "src-dining-2024"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "beiyangyuan-xue-2-dining",
+      "campus_id": "beiyangyuan",
+      "name": "学二食堂（兰园餐厅）",
+      "aliases": [
+        "学2食堂",
+        "兰园餐厅"
+      ],
+      "category": "dining",
+      "description": "2024年迎新网食堂信息称其为北洋园学生食堂。营业时间未核验。",
+      "source_refs": [
+        "src-dining-2024"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "beiyangyuan-xue-3-dining",
+      "campus_id": "beiyangyuan",
+      "name": "学三食堂（棠园餐厅）",
+      "aliases": [
+        "学3食堂",
+        "棠园餐厅"
+      ],
+      "category": "dining",
+      "description": "2024年迎新网食堂信息称其为北洋园学生食堂。营业时间未核验。",
+      "source_refs": [
+        "src-dining-2024"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "beiyangyuan-xue-4-dining",
+      "campus_id": "beiyangyuan",
+      "name": "学四食堂（竹园餐厅）",
+      "aliases": [
+        "学4食堂",
+        "竹园餐厅"
+      ],
+      "category": "dining",
+      "description": "2024年迎新网食堂信息称其为北洋园学生食堂。营业时间未核验。",
+      "source_refs": [
+        "src-dining-2024"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "beiyangyuan-xue-5-dining",
+      "campus_id": "beiyangyuan",
+      "name": "学五食堂（桃园餐厅）",
+      "aliases": [
+        "学5食堂",
+        "桃园餐厅"
+      ],
+      "category": "dining",
+      "description": "2024年迎新网食堂信息称其为北洋园学生食堂。营业时间未核验。",
+      "source_refs": [
+        "src-dining-2024"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "beiyangyuan-xue-6-dining",
+      "campus_id": "beiyangyuan",
+      "name": "学六食堂（菊园餐厅）",
+      "aliases": [
+        "学6食堂",
+        "菊园餐厅",
+        "清真食堂"
+      ],
+      "category": "dining",
+      "description": "2024年迎新网食堂信息称其为北洋园学生食堂，并称其为清真食堂。营业时间未核验。",
+      "source_refs": [
+        "src-dining-2024"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "beiyangyuan-international-dining",
+      "campus_id": "beiyangyuan",
+      "name": "留学生食堂",
+      "aliases": [],
+      "category": "dining",
+      "description": "2024年迎新网食堂信息将其列为北洋园食堂。营业时间未核验。",
+      "source_refs": [
+        "src-dining-2024"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "beiyangyuan-zhengdong-library",
+      "campus_id": "beiyangyuan",
+      "name": "郑东图书馆",
+      "aliases": [
+        "郑东馆",
+        "图书馆"
+      ],
+      "category": "library",
+      "description": "北洋园校区图书馆，2015年9月投入使用。",
+      "source_refs": [
+        "src-library"
+      ],
+      "location": null,
+      "schematic_position": {
+        "map_id": "beiyangyuan-schematic-2017",
+        "x": 0.584,
+        "y": 0.522,
+        "source_ref": "src-maps-2017",
+        "quality": "map_checked"
+      },
+      "entrances": [],
+      "verification_status": "verified"
+    },
+    {
+      "id": "beiyangyuan-dorm-ge",
+      "campus_id": "beiyangyuan",
+      "name": "格园",
+      "aliases": [],
+      "category": "dorm_area",
+      "description": "2024迎新介绍列出的学生宿舍区域；当前住宿分配和出入规则须另核验。",
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "beiyangyuan-dorm-zhi",
+      "campus_id": "beiyangyuan",
+      "name": "知园",
+      "aliases": [],
+      "category": "dorm_area",
+      "description": "2024迎新介绍列出的学生宿舍区域；当前住宿分配和出入规则须另核验。",
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "beiyangyuan-dorm-cheng",
+      "campus_id": "beiyangyuan",
+      "name": "诚园",
+      "aliases": [],
+      "category": "dorm_area",
+      "description": "2024迎新介绍列出的学生宿舍区域；当前住宿分配和出入规则须另核验。",
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "beiyangyuan-dorm-zheng",
+      "campus_id": "beiyangyuan",
+      "name": "正园",
+      "aliases": [],
+      "category": "dorm_area",
+      "description": "2024迎新介绍列出的学生宿舍区域；当前住宿分配和出入规则须另核验。",
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "beiyangyuan-dorm-xiu",
+      "campus_id": "beiyangyuan",
+      "name": "修园",
+      "aliases": [],
+      "category": "dorm_area",
+      "description": "2024迎新介绍列出的学生宿舍区域；当前住宿分配和出入规则须另核验。",
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "beiyangyuan-dorm-qi",
+      "campus_id": "beiyangyuan",
+      "name": "齐园",
+      "aliases": [],
+      "category": "dorm_area",
+      "description": "2024迎新介绍列出的学生宿舍区域；当前住宿分配和出入规则须另核验。",
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "beiyangyuan-dorm-zhi-guo",
+      "campus_id": "beiyangyuan",
+      "name": "治园",
+      "aliases": [],
+      "category": "dorm_area",
+      "description": "2024迎新介绍列出的学生宿舍区域；当前住宿分配和出入规则须另核验。",
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "beiyangyuan-dorm-ping",
+      "campus_id": "beiyangyuan",
+      "name": "平园",
+      "aliases": [],
+      "category": "dorm_area",
+      "description": "2024迎新介绍列出的学生宿舍区域；当前住宿分配和出入规则须另核验。",
+      "source_refs": [
+        "src-welcome-beiyang"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "weijinlu-dorm-yi",
+      "campus_id": "weijinlu",
+      "name": "一斋",
+      "aliases": [],
+      "category": "dorm_area",
+      "description": "2017校方地图所标学生宿舍楼；当前用途、开放与入口待核验。",
+      "source_refs": [
+        "src-maps-2017"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "weijinlu-dorm-er",
+      "campus_id": "weijinlu",
+      "name": "二斋",
+      "aliases": [],
+      "category": "dorm_area",
+      "description": "2017校方地图所标学生宿舍楼；当前用途、开放与入口待核验。",
+      "source_refs": [
+        "src-maps-2017"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "weijinlu-dorm-san",
+      "campus_id": "weijinlu",
+      "name": "三斋",
+      "aliases": [],
+      "category": "dorm_area",
+      "description": "2017校方地图所标学生宿舍楼；当前用途、开放与入口待核验。",
+      "source_refs": [
+        "src-maps-2017"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "weijinlu-dorm-si",
+      "campus_id": "weijinlu",
+      "name": "四斋",
+      "aliases": [],
+      "category": "dorm_area",
+      "description": "2017校方地图所标学生宿舍楼；当前用途、开放与入口待核验。",
+      "source_refs": [
+        "src-maps-2017"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "weijinlu-dorm-wu",
+      "campus_id": "weijinlu",
+      "name": "五斋",
+      "aliases": [],
+      "category": "dorm_area",
+      "description": "2017校方地图所标学生宿舍楼；当前用途、开放与入口待核验。",
+      "source_refs": [
+        "src-maps-2017"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    },
+    {
+      "id": "weijinlu-dorm-liu",
+      "campus_id": "weijinlu",
+      "name": "六斋",
+      "aliases": [],
+      "category": "dorm_area",
+      "description": "2017校方地图所标学生宿舍楼；当前用途、开放与入口待核验。",
+      "source_refs": [
+        "src-maps-2017"
+      ],
+      "location": null,
+      "schematic_position": null,
+      "entrances": [],
+      "verification_status": "historical"
+    }
+  ],
+  "samples": {
+    "北洋园校区何时正式落成并投入使用？请用不超过80字回答并标出资料来源。": {
+      "resolved": [],
+      "hits": [
+        {
+          "id": "beiyangyuan-opened-2015",
+          "title": "北洋园校区投入使用",
+          "snippet": "天津大学迎新网介绍称，北洋园校区于2015年9月正式落成并投入使用。",
+          "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+          "campus_id": "beiyangyuan",
+          "published_at": "2024-08-15",
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "poi-beiyangyuan-main-building",
+          "title": "北洋园校区主楼",
+          "snippet": "校方资料在北洋园校区列有北洋园校区主楼。",
+          "url": "https://fw.tju.edu.cn/Beiyang.html",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "poi-beiyangyuan-east-gate",
+          "title": "北洋园校区东门",
+          "snippet": "校方资料在北洋园校区列有北洋园校区东门。",
+          "url": "https://fw.tju.edu.cn/Beiyang.html",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "poi-beiyangyuan-memorial-pavilion",
+          "title": "北洋纪念亭",
+          "snippet": "校方资料在北洋园校区列有北洋纪念亭。",
+          "url": "https://fw.tju.edu.cn/Beiyang.html",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "poi-beiyangyuan-qiushi-hall",
+          "title": "求实会堂",
+          "snippet": "校方资料在北洋园校区列有求实会堂。",
+          "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        }
+      ]
+    },
+    "北洋园的大通在哪里？请用不超过80字回答；有歧义就澄清。": {
+      "resolved": [],
+      "hits": [
+        {
+          "id": "poi-beiyangyuan-main-building",
+          "title": "北洋园校区主楼",
+          "snippet": "校方资料在北洋园校区列有北洋园校区主楼。",
+          "url": "https://fw.tju.edu.cn/Beiyang.html",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "poi-beiyangyuan-east-gate",
+          "title": "北洋园校区东门",
+          "snippet": "校方资料在北洋园校区列有北洋园校区东门。",
+          "url": "https://fw.tju.edu.cn/Beiyang.html",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "poi-beiyangyuan-datong-center",
+          "title": "大通学生中心",
+          "snippet": "校方资料在北洋园校区列有大通学生中心。",
+          "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "poi-beiyangyuan-memorial-pavilion",
+          "title": "北洋纪念亭",
+          "snippet": "校方资料在北洋园校区列有北洋纪念亭。",
+          "url": "https://fw.tju.edu.cn/Beiyang.html",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "poi-beiyangyuan-qiushi-hall",
+          "title": "求实会堂",
+          "snippet": "校方资料在北洋园校区列有求实会堂。",
+          "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        }
+      ]
+    },
+    "北洋园量子玫瑰秘密展厅2026年9月17日几点开放，门票多少？请用不超过80字回答；没有资料请明确说明。": {
+      "resolved": [],
+      "hits": []
+    }
+  }
+}

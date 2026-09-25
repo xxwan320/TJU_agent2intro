@@ -15,8 +15,8 @@
     "location": null,
     "schematic_position": {
       "map_id": "weijinlu-schematic-2017",
-      "x": 0.6619,
-      "y": 0.6444,
+      "x": 0.7939,
+      "y": 0.6602,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -46,7 +46,8 @@
     "name": "春水图书馆（北馆）",
     "aliases": [
       "北馆",
-      "春水图书馆"
+      "春水图书馆",
+      "天大北馆"
     ],
     "category": "library",
     "description": "天津大学全校三处馆舍中的卫津路校区馆舍；该校区有春水和科学两馆。",
@@ -56,8 +57,8 @@
     "location": null,
     "schematic_position": {
       "map_id": "weijinlu-schematic-2017",
-      "x": 0.4952,
-      "y": 0.6111,
+      "x": 0.6982,
+      "y": 0.6326,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -70,7 +71,8 @@
     "name": "科学图书馆（南馆）",
     "aliases": [
       "南馆",
-      "科学图书馆"
+      "科学图书馆",
+      "天大南馆"
     ],
     "category": "library",
     "description": "天津大学全校三处馆舍中的卫津路校区馆舍；该校区有春水和科学两馆。",
@@ -80,8 +82,8 @@
     "location": null,
     "schematic_position": {
       "map_id": "weijinlu-schematic-2017",
-      "x": 0.4524,
-      "y": 0.8556,
+      "x": 0.6641,
+      "y": 0.8149,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -103,8 +105,8 @@
     "location": null,
     "schematic_position": {
       "map_id": "weijinlu-schematic-2017",
-      "x": 0.4,
-      "y": 0.2667,
+      "x": 0.6504,
+      "y": 0.3867,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -141,8 +143,8 @@
     "location": null,
     "schematic_position": {
       "map_id": "weijinlu-schematic-2017",
-      "x": 0.8952,
-      "y": 0.3311,
+      "x": 0.9326,
+      "y": 0.4627,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -162,8 +164,8 @@
     "location": null,
     "schematic_position": {
       "map_id": "weijinlu-schematic-2017",
-      "x": 0.8952,
-      "y": 0.0611,
+      "x": 0.9502,
+      "y": 0.2569,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -183,8 +185,8 @@
     "location": null,
     "schematic_position": {
       "map_id": "weijinlu-schematic-2017",
-      "x": 0.6733,
-      "y": 0.2156,
+      "x": 0.7979,
+      "y": 0.3494,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -204,8 +206,8 @@
     "location": null,
     "schematic_position": {
       "map_id": "weijinlu-schematic-2017",
-      "x": 0.2762,
-      "y": 0.7744,
+      "x": 0.4639,
+      "y": 0.7638,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -243,8 +245,8 @@
     "location": null,
     "schematic_position": {
       "map_id": "weijinlu-schematic-2017",
-      "x": 0.6667,
-      "y": 0.3378,
+      "x": 0.7676,
+      "y": 0.482,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -257,7 +259,10 @@
     "name": "曾宪梓楼（25教）",
     "aliases": [
       "25教",
-      "曾宪梓楼"
+      "曾宪梓楼",
+      "二十五教",
+      "第25教学楼",
+      "第二十五教学楼"
     ],
     "category": "teaching",
     "description": "官方卫津路校区导览将其列为楼宇场馆。",
@@ -267,8 +272,8 @@
     "location": null,
     "schematic_position": {
       "map_id": "weijinlu-schematic-2017",
-      "x": 0.7571,
-      "y": 0.8511,
+      "x": 0.8496,
+      "y": 0.808,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -306,8 +311,8 @@
     "location": null,
     "schematic_position": {
       "map_id": "weijinlu-schematic-2017",
-      "x": 0.9952,
-      "y": 0.7311,
+      "x": 0.9883,
+      "y": 0.7182,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -509,8 +514,8 @@
     "location": null,
     "schematic_position": {
       "map_id": "weijinlu-schematic-2017",
-      "x": 0.4381,
-      "y": 0.75,
+      "x": 0.6836,
+      "y": 0.7376,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -530,8 +535,8 @@
     "location": null,
     "schematic_position": {
       "map_id": "weijinlu-schematic-2017",
-      "x": 0.5,
-      "y": 0.3022,
+      "x": 0.6982,
+      "y": 0.4144,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -551,8 +556,8 @@
     "location": null,
     "schematic_position": {
       "map_id": "weijinlu-schematic-2017",
-      "x": 0.2048,
-      "y": 0.6444,
+      "x": 0.5322,
+      "y": 0.6602,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -876,8 +881,8 @@
     "location": null,
     "schematic_position": {
       "map_id": "beiyangyuan-schematic-2017",
-      "x": 0.795,
-      "y": 0.78,
+      "x": 0.7813,
+      "y": 0.7873,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -1330,7 +1335,7 @@
     "schematic_position": {
       "map_id": "beiyangyuan-schematic-2017",
       "x": 0.416,
-      "y": 0.53,
+      "y": 0.511,
       "source_ref": "src-maps-2017",
       "quality": "map_checked"
     },
@@ -1360,9 +1365,10 @@
     "name": "尚贤石",
     "aliases": [],
     "category": "culture",
-    "description": "官方北洋园校区导览将其列为风物景观。",
+    "description": "尚贤石于2015年落户天津大学北洋园校区。石上的“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》；这块石头也被称为“泰山孔子石”。参观时可以留意石上的题字。",
     "source_refs": [
-      "src-fw-beiyang"
+      "src-fw-beiyang",
+      "tju-news-shangxian-20150928"
     ],
     "location": null,
     "schematic_position": null,

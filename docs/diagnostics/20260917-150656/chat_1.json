@@ -1,0 +1,643 @@
+{
+  "input": {
+    "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+    "session_id": "b8ba68e8-a954-44ac-b45f-f5f40e19b3e5",
+    "message_id": "ad66e65c-f973-4ff9-9de6-c3f64a547ee5",
+    "campus_id": "beiyangyuan",
+    "mode": "campus_qa",
+    "message": "北洋园校区何时正式落成并投入使用？请用不超过80字回答并标出资料来源。",
+    "selected_building_id": null
+  },
+  "time": "2026-09-17T15:09:15.264716+08:00",
+  "validation": "real_http",
+  "events": [
+    {
+      "client_ms": 22.254899999097688,
+      "event": {
+        "event_id": "64fe6062-5582-41ca-bbd2-02c231c91383",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 1,
+        "timestamp": "2026-09-17T07:09:15.410657Z",
+        "type": "accepted",
+        "payload": {
+          "session_id": "b8ba68e8-a954-44ac-b45f-f5f40e19b3e5",
+          "message_id": "ad66e65c-f973-4ff9-9de6-c3f64a547ee5",
+          "campus_id": "beiyangyuan",
+          "mode": "campus_qa"
+        }
+      }
+    },
+    {
+      "client_ms": 24.900999997043982,
+      "event": {
+        "event_id": "77194e33-6171-4ee0-9e90-9bd076018659",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 2,
+        "timestamp": "2026-09-17T07:09:15.411665Z",
+        "type": "status",
+        "payload": {
+          "stage": "request",
+          "status": "started"
+        }
+      }
+    },
+    {
+      "client_ms": 12052.17730000004,
+      "event": {
+        "event_id": "2d756e17-d365-4f15-bc54-eb0fcda23bf2",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 3,
+        "timestamp": "2026-09-17T07:09:27.442041Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "beiyangyuan-opened-2015",
+              "title": "北洋园校区投入使用",
+              "snippet": "天津大学迎新网介绍称，北洋园校区于2015年9月正式落成并投入使用。",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "campus_id": "beiyangyuan",
+              "published_at": "2024-08-15",
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "poi-beiyangyuan-main-building",
+              "title": "北洋园校区主楼",
+              "snippet": "校方资料在北洋园校区列有北洋园校区主楼。",
+              "url": "https://fw.tju.edu.cn/Beiyang.html",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "poi-beiyangyuan-east-gate",
+              "title": "北洋园校区东门",
+              "snippet": "校方资料在北洋园校区列有北洋园校区东门。",
+              "url": "https://fw.tju.edu.cn/Beiyang.html",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "poi-beiyangyuan-memorial-pavilion",
+              "title": "北洋纪念亭",
+              "snippet": "校方资料在北洋园校区列有北洋纪念亭。",
+              "url": "https://fw.tju.edu.cn/Beiyang.html",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "poi-beiyangyuan-qiushi-hall",
+              "title": "求实会堂",
+              "snippet": "校方资料在北洋园校区列有求实会堂。",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            }
+          ],
+          "kind": "retrieved"
+        }
+      }
+    },
+    {
+      "client_ms": 12052.325499997096,
+      "event": {
+        "event_id": "036ca0a5-113d-4750-b9cf-79900a834a20",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 4,
+        "timestamp": "2026-09-17T07:09:27.442041Z",
+        "type": "status",
+        "payload": {
+          "stage": "model",
+          "status": "started"
+        }
+      }
+    },
+    {
+      "client_ms": 16455.671199997596,
+      "event": {
+        "event_id": "6a2dc6a7-ea58-4a8b-a348-4dd6d96e94bb",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 5,
+        "timestamp": "2026-09-17T07:09:31.845315Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "猫眼"
+        }
+      }
+    },
+    {
+      "client_ms": 16477.433599997312,
+      "event": {
+        "event_id": "1533b815-b0bd-4ef4-9f04-5193984ad532",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 6,
+        "timestamp": "2026-09-17T07:09:31.867465Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "石，北洋"
+        }
+      }
+    },
+    {
+      "client_ms": 16498.40459999905,
+      "event": {
+        "event_id": "63b4b982-dc8c-452b-9d8c-97e0e0d53ce2",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 7,
+        "timestamp": "2026-09-17T07:09:31.888576Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "园校区"
+        }
+      }
+    },
+    {
+      "client_ms": 16520.171899999696,
+      "event": {
+        "event_id": "253a0626-1ef2-420a-bdc6-ba3ea70764e2",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 8,
+        "timestamp": "2026-09-17T07:09:31.910301Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "这枚珍贵的"
+        }
+      }
+    },
+    {
+      "client_ms": 16542.20229999919,
+      "event": {
+        "event_id": "02315287-724a-4f45-bea9-5f730815a2b7",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 9,
+        "timestamp": "2026-09-17T07:09:31.932081Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "校园宝石"
+        }
+      }
+    },
+    {
+      "client_ms": 16562.83429999894,
+      "event": {
+        "event_id": "2ddce269-fbb8-4912-b4ed-dfe1eb7de338",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 10,
+        "timestamp": "2026-09-17T07:09:31.952936Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "，于2015"
+        }
+      }
+    },
+    {
+      "client_ms": 16586.45919999981,
+      "event": {
+        "event_id": "a7e5358f-8c6f-4afa-ad44-da6f00a51014",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 11,
+        "timestamp": "2026-09-17T07:09:31.976502Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "年9月正式"
+        }
+      }
+    },
+    {
+      "client_ms": 16607.68989999997,
+      "event": {
+        "event_id": "b670d3b6-2493-4a7a-b20d-83c54926d14c",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 12,
+        "timestamp": "2026-09-17T07:09:31.997528Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "落成"
+        }
+      }
+    },
+    {
+      "client_ms": 16628.87669999691,
+      "event": {
+        "event_id": "d94c2eef-89a0-4ff9-9b98-aade5165366e",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 13,
+        "timestamp": "2026-09-17T07:09:32.018683Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "并投入使用。\n\n[source"
+        }
+      }
+    },
+    {
+      "client_ms": 16648.925399997097,
+      "event": {
+        "event_id": "0a5b1af3-2a1d-40f5-ba48-456573e4f15e",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 14,
+        "timestamp": "2026-09-17T07:09:32.038757Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": ":beiy"
+        }
+      }
+    },
+    {
+      "client_ms": 16670.98469999837,
+      "event": {
+        "event_id": "96c66e59-3607-4bef-957a-459c426531ee",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 15,
+        "timestamp": "2026-09-17T07:09:32.060838Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "angyuan-open"
+        }
+      }
+    },
+    {
+      "client_ms": 16692.79319999987,
+      "event": {
+        "event_id": "beea18e9-79c3-4fdd-80c5-2b19dd9cdaa7",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 16,
+        "timestamp": "2026-09-17T07:09:32.083081Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "ed-2015"
+        }
+      }
+    },
+    {
+      "client_ms": 16693.0575999977,
+      "event": {
+        "event_id": "dccaec13-1283-4133-9adb-2ff2aac9c9ce",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 17,
+        "timestamp": "2026-09-17T07:09:32.083081Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "]"
+        }
+      }
+    },
+    {
+      "client_ms": 16695.05389999904,
+      "event": {
+        "event_id": "cb0face0-bd0e-459f-a9db-244aa725d0fe",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 18,
+        "timestamp": "2026-09-17T07:09:32.084473Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "beiyangyuan-opened-2015",
+              "title": "北洋园校区投入使用",
+              "snippet": "天津大学迎新网介绍称，北洋园校区于2015年9月正式落成并投入使用。",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "campus_id": "beiyangyuan",
+              "published_at": "2024-08-15",
+              "retrieved_at": "2026-09-14"
+            }
+          ],
+          "kind": "cited"
+        }
+      }
+    },
+    {
+      "client_ms": 16695.239599997876,
+      "event": {
+        "event_id": "1613e784-daa5-4ea6-845c-4db15d272cfc",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 19,
+        "timestamp": "2026-09-17T07:09:32.084473Z",
+        "type": "usage",
+        "payload": {
+          "model": "glm-51-fp8",
+          "usage": {
+            "prompt_tokens": 902,
+            "completion_tokens": 534,
+            "total_tokens": 1436
+          }
+        }
+      }
+    },
+    {
+      "client_ms": 16695.39209999857,
+      "event": {
+        "event_id": "45f1ecc0-6646-476c-8af5-4453cbd6d1d5",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 20,
+        "timestamp": "2026-09-17T07:09:32.084473Z",
+        "type": "completed",
+        "payload": {
+          "response": {
+            "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+            "session_id": "b8ba68e8-a954-44ac-b45f-f5f40e19b3e5",
+            "answer": "猫眼石，北洋园校区这枚珍贵的校园宝石，于2015年9月正式落成并投入使用。",
+            "sources": [
+              {
+                "id": "beiyangyuan-opened-2015",
+                "title": "北洋园校区投入使用",
+                "snippet": "天津大学迎新网介绍称，北洋园校区于2015年9月正式落成并投入使用。",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "campus_id": "beiyangyuan",
+                "published_at": "2024-08-15",
+                "retrieved_at": "2026-09-14"
+              }
+            ],
+            "model": "glm-51-fp8",
+            "usage": {
+              "prompt_tokens": 902,
+              "completion_tokens": 534,
+              "total_tokens": 1436
+            },
+            "elapsed_ms": 16687.999999998283,
+            "actions": []
+          }
+        }
+      }
+    }
+  ],
+  "first_answer_ms": 16455.671199997596,
+  "complete_ms": 16695.39209999857,
+  "first_display_ms": null,
+  "first_audio_play_ms": null,
+  "error": null,
+  "request_budget_reserved": 1,
+  "http_status": 200,
+  "client_end_ms": 16695.741599996836,
+  "runtime": {
+    "events": [
+      {
+        "event_id": "2f195182-3331-438c-a31a-46051ccafc60",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 29,
+        "timestamp": "2026-09-17T07:09:15.407755+00:00",
+        "origin": "backend",
+        "stage": "request",
+        "status": "started",
+        "duration_ms": null,
+        "data": {
+          "code": null,
+          "action_id": null,
+          "building_id": null,
+          "count": null,
+          "model": null
+        }
+      },
+      {
+        "event_id": "e36ee870-700b-48eb-9994-9513d94a9958",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 30,
+        "timestamp": "2026-09-17T07:09:15.411665+00:00",
+        "origin": "backend",
+        "stage": "knowledge",
+        "status": "started",
+        "duration_ms": null,
+        "data": {
+          "code": null,
+          "action_id": null,
+          "building_id": null,
+          "count": null,
+          "model": null
+        }
+      },
+      {
+        "event_id": "f1666f04-5091-4369-889c-860fa85ef37d",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 31,
+        "timestamp": "2026-09-17T07:09:15.414663+00:00",
+        "origin": "backend",
+        "stage": "knowledge",
+        "status": "completed",
+        "duration_ms": 15.99999999962165,
+        "data": {
+          "code": null,
+          "action_id": null,
+          "building_id": null,
+          "count": 5,
+          "model": null
+        }
+      },
+      {
+        "event_id": "91fe64d2-87dd-4de8-a825-0da267025362",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 32,
+        "timestamp": "2026-09-17T07:09:15.414663+00:00",
+        "origin": "backend",
+        "stage": "knowledge",
+        "status": "started",
+        "duration_ms": null,
+        "data": {
+          "code": "WEB_SEARCH_STARTED",
+          "action_id": null,
+          "building_id": null,
+          "count": null,
+          "model": null
+        }
+      },
+      {
+        "event_id": "44066649-f619-4c9f-baaa-4ed2752892a6",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 33,
+        "timestamp": "2026-09-17T07:09:27.440538+00:00",
+        "origin": "backend",
+        "stage": "knowledge",
+        "status": "completed",
+        "duration_ms": 12014.999999999418,
+        "data": {
+          "code": "WEB_SEARCH_UNAVAILABLE",
+          "action_id": null,
+          "building_id": null,
+          "count": 0,
+          "model": null
+        }
+      },
+      {
+        "event_id": "14761a1b-8af1-44d9-bfaa-c896a4611ba7",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 34,
+        "timestamp": "2026-09-17T07:09:27.442041+00:00",
+        "origin": "backend",
+        "stage": "model",
+        "status": "started",
+        "duration_ms": null,
+        "data": {
+          "code": null,
+          "action_id": null,
+          "building_id": null,
+          "count": null,
+          "model": "glm-5.1"
+        }
+      },
+      {
+        "event_id": "03a56e98-598e-4ef2-870d-4e96e6464d03",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 35,
+        "timestamp": "2026-09-17T07:09:32.083970+00:00",
+        "origin": "backend",
+        "stage": "model",
+        "status": "completed",
+        "duration_ms": 4656.999999999243,
+        "data": {
+          "code": null,
+          "action_id": null,
+          "building_id": null,
+          "count": null,
+          "model": "glm-51-fp8"
+        }
+      },
+      {
+        "event_id": "3197a5ec-8ce5-498a-9443-b681e7041e9a",
+        "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+        "seq": 36,
+        "timestamp": "2026-09-17T07:09:32.084473+00:00",
+        "origin": "backend",
+        "stage": "request",
+        "status": "completed",
+        "duration_ms": 16687.999999998283,
+        "data": {
+          "code": null,
+          "action_id": null,
+          "building_id": null,
+          "count": null,
+          "model": null
+        }
+      }
+    ],
+    "next_cursor": 36,
+    "truncated": false
+  },
+  "trace": [
+    {
+      "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+      "action": "route",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "request",
+      "status": "started",
+      "monotonic_ms": 24308187.0,
+      "elapsed_ms": null,
+      "upstream_http_status": null,
+      "finish_reason": null,
+      "body_chars": null,
+      "usage": null,
+      "content_type": null
+    },
+    {
+      "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+      "action": "retrieval",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "knowledge",
+      "status": "started",
+      "monotonic_ms": 24308187.0,
+      "elapsed_ms": null,
+      "upstream_http_status": null,
+      "finish_reason": null,
+      "body_chars": null,
+      "usage": null,
+      "content_type": null
+    },
+    {
+      "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+      "action": "web_search.unavailable",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "knowledge",
+      "status": "completed",
+      "monotonic_ms": 24320218.0,
+      "elapsed_ms": 12014.999999999418,
+      "upstream_http_status": null,
+      "finish_reason": null,
+      "body_chars": 0,
+      "usage": null,
+      "content_type": null
+    },
+    {
+      "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+      "action": "stream",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "model",
+      "status": "started",
+      "monotonic_ms": 24320218.0,
+      "elapsed_ms": null,
+      "upstream_http_status": null,
+      "finish_reason": null,
+      "body_chars": null,
+      "usage": null,
+      "content_type": null
+    },
+    {
+      "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+      "action": "stream",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "upstream_connected",
+      "status": "completed",
+      "monotonic_ms": 24320593.0,
+      "elapsed_ms": 375.0,
+      "upstream_http_status": 200,
+      "finish_reason": null,
+      "body_chars": null,
+      "usage": null,
+      "content_type": "text/event-stream"
+    },
+    {
+      "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+      "action": "stream",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "first_event",
+      "status": "completed",
+      "monotonic_ms": 24320593.0,
+      "elapsed_ms": 375.0,
+      "upstream_http_status": null,
+      "finish_reason": null,
+      "body_chars": null,
+      "usage": null,
+      "content_type": null
+    },
+    {
+      "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+      "action": "stream",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "first_content",
+      "status": "completed",
+      "monotonic_ms": 24324625.0,
+      "elapsed_ms": 4406.999999999243,
+      "upstream_http_status": null,
+      "finish_reason": null,
+      "body_chars": null,
+      "usage": null,
+      "content_type": null
+    },
+    {
+      "request_id": "e30f45b5-eac6-4a5d-a6d6-aa5b2e7b3a66",
+      "action": "stream",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "model",
+      "status": "completed",
+      "monotonic_ms": 24324875.0,
+      "elapsed_ms": 4656.999999999243,
+      "upstream_http_status": 200,
+      "finish_reason": "stop",
+      "body_chars": 71,
+      "usage": {
+        "prompt_tokens": 902,
+        "completion_tokens": 534,
+        "total_tokens": 1436
+      },
+      "content_type": null
+    }
+  ],
+  "llm_calls_observed": 1
+}

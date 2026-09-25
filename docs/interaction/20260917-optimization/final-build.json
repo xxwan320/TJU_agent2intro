@@ -1,0 +1,70 @@
+{
+  "time": "2026-09-17T16:48:04.521312+08:00",
+  "branch": "fix/ip-route-autoplanning",
+  "head": "c413c1c4493a6dc327477a83aba04f3eff742ff7",
+  "dirty": true,
+  "asset": "/assets/index-BMfdpvF1.js",
+  "sha256": "ddb40cbf0b3868ed49f201498b59c962ab806ddc2455f6585307a85b19882fcc",
+  "matches_dist": true,
+  "files_sha256": {
+    "backend/model/service.py": "59850309fbc543dc672ff784c6c871b0835c3374ee1377f433178b12c9aad0e5",
+    "frontend/src/scene/amap.ts": "1046b62b8dc03cf209cf6403b47cd7d4dad5c55f55bbedde78c2d992444974f1",
+    "frontend/src/transport/amap-navigation.ts": "07a83af7e8effa39cba650d4c4e301aa3bffdebff4fd8266663b32194bd22d2c",
+    "frontend/src/transport/map-budget.ts": "910e82c1d13935ce1d889edd58eb3377fc84556cf7bc9951755c1ec848d8e1ec",
+    "frontend/src/ui/App.tsx": "855e9aaa01bdbcdf91ad51c9bf1853a21b156041d89fc43aab1b6f3de7f7664e",
+    "frontend/src/ui/CampusExplorer.tsx": "45a4f8a247a6de053d3cffe23a3113f2d0248edce6922bd0b9749093b683b02e",
+    "frontend/src/ui/PhotoCarousel.tsx": "3d9df8b3e0cce8a7e002b5d29ca260a52c5ee482018744716763aebe7cb85d84",
+    "frontend/src/ui/TourWorkspace.tsx": "b522a072f19cfd30b77344699abb60f9fb7319ef17ca82467d8a945a997a3b26",
+    "scripts/check-r3.ps1": "08c3d465f29542695e27c309ce740e358e9faaba746f55ae7e5fee4a7df492dd",
+    "tests/maps/navigation.test.mjs": "6940a65494c7482ae92f72e1e7cb1d71c2b3f5ba9eddfb9a33fbf9079e3d4f67",
+    "tests/model/test_web_answers.py": "c8a885b93c10d6ff3f8327febc4c7699d42d486a0e715cc7fb7724f48b2b88fc",
+    "frontend/src/transport/interaction.ts": "6e02fae2151254ce99bbc15aa3878768f862bddeba60f5ac9d5c245d9f0edf43",
+    "scripts/check-interaction.mjs": "c0533613bda80af8eb4f2463e4db5ea557a61c9b26827227e4397708171dda23",
+    "scripts/interaction-knowledge-benchmark.py": "0ec6b0a069855b03f13a736fa541ce23d7989a1aad112bc2c3c277c82f8ebcf7",
+    "scripts/interaction-live.py": "09301a466910920a6397fa4cec839ea05cdee11f7d2e531b74882bb798b257a9",
+    "scripts/interaction-map-live.mjs": "8184aad67819b7a01387c9a320a704658a5c48cad6012d42ebc75aac3fe59d99",
+    "scripts/interaction-report.py": "9d1a2607c1836746629fc7225cc2f832d01bd87203212f558604fec4bed9ddc3",
+    "tests/model/test_interaction_retrieval.py": "bf435aec119210994be99f1344d184d06253079a02e3d370134a77deb8fc6d40",
+    "tests/interaction/entry.ts": "f091b1bcf22ed210cbb68fb44deb39b6beb2a524c9138a2053ac203a171f98e7",
+    "tests/interaction/interaction.test.mjs": "132eb4482ce4e77f89e6c60767de4568639537797b65207de0f428db00a7c1c8",
+    "tests/interaction/page.test.mjs": "88c0b3b3f5b29833bf2bddf602c61a8e4309e36750d9eb0c55f0220d7d21e80b"
+  },
+  "runtime": {
+    "root": "E:\\AI4TJU",
+    "mode": "app",
+    "api_port": 8000,
+    "web_port": 8000,
+    "processes": [
+      {
+        "pid": 46304,
+        "started_ticks": "639252313360400950",
+        "role": "api-launcher"
+      },
+      {
+        "pid": 11080,
+        "started_ticks": "639252313360461633",
+        "role": "child"
+      },
+      {
+        "pid": 43384,
+        "started_ticks": "639252313360727328",
+        "role": "child"
+      }
+    ]
+  },
+  "health": {
+    "status": "ok",
+    "contract_version": "1.1.0",
+    "model": {
+      "configured": true,
+      "verified": false
+    },
+    "capabilities": {
+      "chat": true,
+      "asr": false,
+      "tts": false,
+      "knowledge": true,
+      "scene_3d": false
+    }
+  }
+}

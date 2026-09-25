@@ -16,7 +16,7 @@ from uuid import UUID, uuid4
 import wave
 
 import edge_tts
-from openai import AsyncOpenAI
+from openai import AsyncOpenAI, APITimeoutError
 
 from backend.common.config import Settings, get_settings
 from backend.common.errors import DomainError
@@ -41,6 +41,7 @@ class Operation:
     session_id: UUID
     task: asyncio.Task
     upstream_started: bool = False
+    cancelled: bool = False
 
 
 @dataclass
@@ -64,7 +65,7 @@ def prepare_edge_tts(text: str, voice: str) -> edge_tts.Communicate:
 
 
 def prepare_asr_client(url: str, key: str) -> AsyncOpenAI:
-    return AsyncOpenAI(base_url=url.rstrip("/"), api_key=key, timeout=30, max_retries=0)
+    return AsyncOpenAI(base_url=url.rstrip("/"), api_key=key, timeout=60, max_retries=0)
 
 
 def decode_pcm16_wav(request: AsrRequest) -> bytes:
@@ -100,7 +101,9 @@ class CampusSpeechService:
         self.tts_verified = False
         project_root = Path(__file__).resolve().parents[2]
         self.audio_root = audio_root or project_root / ".runtime" / "speech-audio"
-        self._operations: dict[UUID, Operation] = {}
+        # A narration request may prefetch multiple utterances concurrently.
+        # None identifies ASR; TTS is keyed by its utterance within the request.
+        self._operations: dict[tuple[UUID, UUID | None], Operation] = {}
         self._sessions: OrderedDict[UUID, UUID] = OrderedDict()
         self._audio: OrderedDict[str, AudioFile] = OrderedDict()
         self._voice_cache: tuple[float, list[Voice]] | None = None
@@ -149,12 +152,16 @@ class CampusSpeechService:
             )
         operation = self._begin(request.request_id, request.session_id)
         operation.upstream_started = True
+        client = None
         try:
             client = prepare_asr_client(asr_url, key)
             result = await client.audio.transcriptions.create(
                 model=self.settings.asr_model,
                 file=("speech.wav", audio, "audio/wav"),
+                language="zh",
             )
+            if self._operations.get((request.request_id, None)) is not operation or operation.cancelled or operation.task.cancelling():
+                raise DomainError("stopped", "语音识别已取消", 499, request.request_id)
             text = result.text.strip()
             if not text:
                 raise DomainError("asr_empty", "语音服务未识别到文字", 503, request.request_id, True)
@@ -163,11 +170,18 @@ class CampusSpeechService:
             raise DomainError("stopped", "语音识别已取消", 499, request.request_id) from None
         except DomainError:
             raise
+        except (APITimeoutError, asyncio.TimeoutError):
+            raise DomainError("asr_timeout", "语音识别超时，请重试", 503, request.request_id, True) from None
         except Exception as error:
             logger.warning("ASR provider failed (%s)", type(error).__name__)
             raise DomainError("asr_unavailable", "语音识别服务暂时不可用", 503, request.request_id, True) from None
         finally:
             self._finish(request.request_id, operation)
+            if client is not None:
+                try:
+                    await client.close()
+                except Exception:
+                    pass
 
     async def synthesize(self, request: TtsRequest) -> TtsResponse:
         if self.settings.tts_provider != "edge":
@@ -175,7 +189,7 @@ class CampusSpeechService:
         voice = request.voice_id.removeprefix("edge:")
         if voice not in VOICE_CHOICES:
             raise DomainError("voice_unavailable", "请选择原版女声、普通话男声、粤语或英语", 422, request.request_id)
-        operation = self._begin(request.request_id, request.session_id)
+        operation = self._begin(request.request_id, request.session_id, request.utterance_id)
         self._cleanup_audio()
         self.audio_root.mkdir(parents=True, exist_ok=True)
         token = uuid4().hex
@@ -184,6 +198,8 @@ class CampusSpeechService:
         operation.upstream_started = True
         try:
             await asyncio.wait_for(prepare_edge_tts(request.text, voice).save(str(temporary)), timeout=30)
+            if operation.cancelled:
+                raise asyncio.CancelledError()
             temporary.replace(destination)
             size = destination.stat().st_size
             if size <= 0 or size > MAX_AUDIO_BYTES:
@@ -211,7 +227,7 @@ class CampusSpeechService:
             logger.warning("TTS provider failed (%s)", type(error).__name__)
             raise DomainError("tts_unavailable", "语音合成服务暂时不可用", 503, request.request_id, True) from None
         finally:
-            self._finish(request.request_id, operation)
+            self._finish(request.request_id, operation, request.utterance_id)
 
     async def stop(self, request: SpeechContext):
         from backend.contracts import SpeechStopResponse
@@ -219,19 +235,21 @@ class CampusSpeechService:
         known_session = self._sessions.get(request.request_id)
         if known_session is not None and known_session != request.session_id:
             raise DomainError("session_conflict", "语音操作不属于该会话", 409, request.request_id)
-        operation = self._operations.get(request.request_id)
-        if operation is None:
+        operations = [op for (rid, _), op in self._operations.items() if rid == request.request_id]
+        if not operations:
             return SpeechStopResponse(
                 request_id=request.request_id,
                 local_stopped=True,
                 upstream_stop="not_started",
             )
-        if operation.session_id != request.session_id:
+        if any(op.session_id != request.session_id for op in operations):
             raise DomainError("session_conflict", "语音操作不属于该会话", 409, request.request_id)
-        upstream = "unconfirmed" if operation.upstream_started else "not_started"
-        if not operation.task.done():
-            operation.task.cancel()
-            await asyncio.sleep(0)
+        upstream = "unconfirmed" if any(op.upstream_started for op in operations) else "not_started"
+        for operation in operations:
+            operation.cancelled = True
+            if not operation.task.done():
+                operation.task.cancel()
+        await asyncio.sleep(0)
         return SpeechStopResponse(
             request_id=request.request_id,
             local_stopped=True,
@@ -250,11 +268,12 @@ class CampusSpeechService:
         finally:
             item.path.unlink(missing_ok=True)
 
-    def _begin(self, request_id: UUID, session_id: UUID) -> Operation:
+    def _begin(self, request_id: UUID, session_id: UUID, utterance_id: UUID | None = None) -> Operation:
         known_session = self._sessions.get(request_id)
         if known_session is not None and known_session != session_id:
             raise DomainError("session_conflict", "语音操作不属于该会话", 409, request_id)
-        if request_id in self._operations:
+        key = (request_id, utterance_id)
+        if key in self._operations:
             raise DomainError("speech_conflict", "同一请求已有语音操作在运行", 409, request_id)
         if len(self._operations) >= MAX_RUNNING_OPERATIONS:
             raise DomainError("speech_capacity", "语音服务当前繁忙", 429, request_id, True)
@@ -262,19 +281,21 @@ class CampusSpeechService:
         if task is None:
             raise DomainError("internal_error", "语音任务上下文不可用", 500, request_id)
         operation = Operation(session_id, task)
-        self._operations[request_id] = operation
+        self._operations[key] = operation
         self._sessions[request_id] = session_id
         self._sessions.move_to_end(request_id)
         while len(self._sessions) > 1024:
             oldest, _ = self._sessions.popitem(last=False)
-            if oldest in self._operations:
-                self._sessions[oldest] = self._operations[oldest].session_id
+            active = next((op for (rid, _), op in self._operations.items() if rid == oldest), None)
+            if active is not None:
+                self._sessions[oldest] = active.session_id
                 break
         return operation
 
-    def _finish(self, request_id: UUID, operation: Operation) -> None:
-        if self._operations.get(request_id) is operation:
-            self._operations.pop(request_id, None)
+    def _finish(self, request_id: UUID, operation: Operation, utterance_id: UUID | None = None) -> None:
+        key = (request_id, utterance_id)
+        if self._operations.get(key) is operation:
+            self._operations.pop(key, None)
 
     def _cleanup_audio(self) -> None:
         now = time.monotonic()

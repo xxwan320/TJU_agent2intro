@@ -1,0 +1,3830 @@
+{
+  "contract_version": "1.2.0",
+  "schemas": {
+    "ClarificationQuestion": {
+      "additionalProperties": false,
+      "properties": {
+        "question_id": {
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+          "title": "Question Id",
+          "type": "string"
+        },
+        "field": {
+          "enum": [
+            "message",
+            "duration_minutes",
+            "interests",
+            "start",
+            "end",
+            "must_visit",
+            "avoid",
+            "visit_date",
+            "max_walking_minutes",
+            "accessibility"
+          ],
+          "title": "Field",
+          "type": "string"
+        },
+        "prompt": {
+          "maxLength": 500,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Prompt",
+          "type": "string"
+        },
+        "candidate_poi_ids": {
+          "items": {
+            "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+            "type": "string"
+          },
+          "maxItems": 20,
+          "title": "Candidate Poi Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "question_id",
+        "field",
+        "prompt"
+      ],
+      "title": "ClarificationQuestion",
+      "type": "object"
+    },
+    "PlaceRef": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "poi",
+            "current_position",
+            "unspecified"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "poi_id": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Poi Id"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "title": "PlaceRef",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "source_ref": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Source Ref",
+          "type": "string"
+        },
+        "claim": {
+          "maxLength": 500,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Claim",
+          "type": "string"
+        },
+        "relation": {
+          "enum": [
+            "retrieved",
+            "supports",
+            "contradicts"
+          ],
+          "title": "Relation",
+          "type": "string"
+        },
+        "verification": {
+          "enum": [
+            "verified",
+            "unverified",
+            "historical",
+            "disputed"
+          ],
+          "title": "Verification",
+          "type": "string"
+        },
+        "checked_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Checked At"
+        },
+        "valid_until": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Valid Until"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "source_ref",
+        "claim",
+        "relation",
+        "verification",
+        "checked_at"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "RouteCostResult": {
+      "$defs": {
+        "PlaceRef": {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "poi",
+                "current_position",
+                "unspecified"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "poi_id": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Poi Id"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "title": "PlaceRef",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "from_ref": {
+          "$ref": "#/$defs/PlaceRef"
+        },
+        "to_ref": {
+          "$ref": "#/$defs/PlaceRef"
+        },
+        "distance_m": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Distance M"
+        },
+        "duration_s": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Duration S"
+        },
+        "source": {
+          "enum": [
+            "amap",
+            "campus_evidence",
+            "unknown"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "verification": {
+          "enum": [
+            "verified",
+            "unverified",
+            "historical",
+            "disputed"
+          ],
+          "title": "Verification",
+          "type": "string"
+        },
+        "checked_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Checked At"
+        },
+        "campus_access": {
+          "enum": [
+            "verified",
+            "unverified",
+            "restricted"
+          ],
+          "title": "Campus Access",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+            "type": "string"
+          },
+          "maxItems": 20,
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "reason": {
+          "enum": [
+            "available",
+            "missing_data",
+            "not_configured",
+            "cancelled",
+            "unavailable",
+            "budget_exhausted"
+          ],
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "from_ref",
+        "to_ref",
+        "distance_m",
+        "duration_s",
+        "source",
+        "verification",
+        "checked_at",
+        "campus_access",
+        "reason"
+      ],
+      "title": "RouteCostResult",
+      "type": "object"
+    },
+    "TourRequest": {
+      "$defs": {
+        "PlaceRef": {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "poi",
+                "current_position",
+                "unspecified"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "poi_id": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Poi Id"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "title": "PlaceRef",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "format": "uuid",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "session_id": {
+          "format": "uuid",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "campus_id": {
+          "enum": [
+            "weijinlu",
+            "beiyangyuan"
+          ],
+          "title": "Campus Id",
+          "type": "string"
+        },
+        "duration_minutes": {
+          "maximum": 240,
+          "minimum": 10,
+          "title": "Duration Minutes",
+          "type": "integer"
+        },
+        "interests": {
+          "items": {
+            "maxLength": 500,
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Interests",
+          "type": "array"
+        },
+        "start": {
+          "$ref": "#/$defs/PlaceRef"
+        },
+        "end": {
+          "$ref": "#/$defs/PlaceRef"
+        },
+        "accessibility": {
+          "default": "standard",
+          "enum": [
+            "standard",
+            "step_free"
+          ],
+          "title": "Accessibility",
+          "type": "string"
+        },
+        "message": {
+          "default": "",
+          "maxLength": 2000,
+          "title": "Message",
+          "type": "string"
+        },
+        "must_visit": {
+          "items": {
+            "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+            "type": "string"
+          },
+          "maxItems": 5,
+          "title": "Must Visit",
+          "type": "array"
+        },
+        "avoid": {
+          "items": {
+            "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+            "type": "string"
+          },
+          "maxItems": 5,
+          "title": "Avoid",
+          "type": "array"
+        },
+        "visit_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Visit Date"
+        },
+        "max_walking_minutes": {
+          "anyOf": [
+            {
+              "maximum": 240,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max Walking Minutes"
+        }
+      },
+      "required": [
+        "request_id",
+        "session_id",
+        "campus_id",
+        "duration_minutes",
+        "interests",
+        "start",
+        "end"
+      ],
+      "title": "TourRequest",
+      "type": "object"
+    },
+    "TourStop": {
+      "additionalProperties": false,
+      "properties": {
+        "stop_id": {
+          "format": "uuid",
+          "title": "Stop Id",
+          "type": "string"
+        },
+        "poi_id": {
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+          "title": "Poi Id",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 500,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Title",
+          "type": "string"
+        },
+        "visit_minutes": {
+          "maximum": 120,
+          "minimum": 1,
+          "title": "Visit Minutes",
+          "type": "integer"
+        },
+        "visit_time_source": {
+          "enum": [
+            "user_preference",
+            "planner_allocation"
+          ],
+          "title": "Visit Time Source",
+          "type": "string"
+        },
+        "purpose": {
+          "maxLength": 500,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Purpose",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+            "type": "string"
+          },
+          "maxItems": 20,
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "stop_id",
+        "poi_id",
+        "title",
+        "visit_minutes",
+        "visit_time_source",
+        "purpose"
+      ],
+      "title": "TourStop",
+      "type": "object"
+    },
+    "TourPlan": {
+      "$defs": {
+        "Evidence": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_id": {
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "title": "Evidence Id",
+              "type": "string"
+            },
+            "source_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Ref",
+              "type": "string"
+            },
+            "claim": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Claim",
+              "type": "string"
+            },
+            "relation": {
+              "enum": [
+                "retrieved",
+                "supports",
+                "contradicts"
+              ],
+              "title": "Relation",
+              "type": "string"
+            },
+            "verification": {
+              "enum": [
+                "verified",
+                "unverified",
+                "historical",
+                "disputed"
+              ],
+              "title": "Verification",
+              "type": "string"
+            },
+            "checked_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Checked At"
+            },
+            "valid_until": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Valid Until"
+            }
+          },
+          "required": [
+            "evidence_id",
+            "source_ref",
+            "claim",
+            "relation",
+            "verification",
+            "checked_at"
+          ],
+          "title": "Evidence",
+          "type": "object"
+        },
+        "PlaceRef": {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "poi",
+                "current_position",
+                "unspecified"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "poi_id": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Poi Id"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "title": "PlaceRef",
+          "type": "object"
+        },
+        "RouteCostResult": {
+          "additionalProperties": false,
+          "properties": {
+            "from_ref": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "to_ref": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "distance_m": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Distance M"
+            },
+            "duration_s": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Duration S"
+            },
+            "source": {
+              "enum": [
+                "amap",
+                "campus_evidence",
+                "unknown"
+              ],
+              "title": "Source",
+              "type": "string"
+            },
+            "verification": {
+              "enum": [
+                "verified",
+                "unverified",
+                "historical",
+                "disputed"
+              ],
+              "title": "Verification",
+              "type": "string"
+            },
+            "checked_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Checked At"
+            },
+            "campus_access": {
+              "enum": [
+                "verified",
+                "unverified",
+                "restricted"
+              ],
+              "title": "Campus Access",
+              "type": "string"
+            },
+            "evidence_ids": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "title": "Evidence Ids",
+              "type": "array"
+            },
+            "reason": {
+              "enum": [
+                "available",
+                "missing_data",
+                "not_configured",
+                "cancelled",
+                "unavailable",
+                "budget_exhausted"
+              ],
+              "title": "Reason",
+              "type": "string"
+            }
+          },
+          "required": [
+            "from_ref",
+            "to_ref",
+            "distance_m",
+            "duration_s",
+            "source",
+            "verification",
+            "checked_at",
+            "campus_access",
+            "reason"
+          ],
+          "title": "RouteCostResult",
+          "type": "object"
+        },
+        "TourRequest": {
+          "additionalProperties": false,
+          "properties": {
+            "request_id": {
+              "format": "uuid",
+              "title": "Request Id",
+              "type": "string"
+            },
+            "session_id": {
+              "format": "uuid",
+              "title": "Session Id",
+              "type": "string"
+            },
+            "campus_id": {
+              "enum": [
+                "weijinlu",
+                "beiyangyuan"
+              ],
+              "title": "Campus Id",
+              "type": "string"
+            },
+            "duration_minutes": {
+              "maximum": 240,
+              "minimum": 10,
+              "title": "Duration Minutes",
+              "type": "integer"
+            },
+            "interests": {
+              "items": {
+                "maxLength": 500,
+                "minLength": 1,
+                "pattern": "\\S",
+                "type": "string"
+              },
+              "maxItems": 8,
+              "minItems": 1,
+              "title": "Interests",
+              "type": "array"
+            },
+            "start": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "end": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "accessibility": {
+              "default": "standard",
+              "enum": [
+                "standard",
+                "step_free"
+              ],
+              "title": "Accessibility",
+              "type": "string"
+            },
+            "message": {
+              "default": "",
+              "maxLength": 2000,
+              "title": "Message",
+              "type": "string"
+            },
+            "must_visit": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 5,
+              "title": "Must Visit",
+              "type": "array"
+            },
+            "avoid": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 5,
+              "title": "Avoid",
+              "type": "array"
+            },
+            "visit_date": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Visit Date"
+            },
+            "max_walking_minutes": {
+              "anyOf": [
+                {
+                  "maximum": 240,
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Max Walking Minutes"
+            }
+          },
+          "required": [
+            "request_id",
+            "session_id",
+            "campus_id",
+            "duration_minutes",
+            "interests",
+            "start",
+            "end"
+          ],
+          "title": "TourRequest",
+          "type": "object"
+        },
+        "TourStop": {
+          "additionalProperties": false,
+          "properties": {
+            "stop_id": {
+              "format": "uuid",
+              "title": "Stop Id",
+              "type": "string"
+            },
+            "poi_id": {
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "title": "Poi Id",
+              "type": "string"
+            },
+            "title": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Title",
+              "type": "string"
+            },
+            "visit_minutes": {
+              "maximum": 120,
+              "minimum": 1,
+              "title": "Visit Minutes",
+              "type": "integer"
+            },
+            "visit_time_source": {
+              "enum": [
+                "user_preference",
+                "planner_allocation"
+              ],
+              "title": "Visit Time Source",
+              "type": "string"
+            },
+            "purpose": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Purpose",
+              "type": "string"
+            },
+            "evidence_ids": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "title": "Evidence Ids",
+              "type": "array"
+            }
+          },
+          "required": [
+            "stop_id",
+            "poi_id",
+            "title",
+            "visit_minutes",
+            "visit_time_source",
+            "purpose"
+          ],
+          "title": "TourStop",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "plan_id": {
+          "format": "uuid",
+          "title": "Plan Id",
+          "type": "string"
+        },
+        "version": {
+          "minimum": 1,
+          "title": "Version",
+          "type": "integer"
+        },
+        "campus_id": {
+          "enum": [
+            "weijinlu",
+            "beiyangyuan"
+          ],
+          "title": "Campus Id",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "checked",
+            "infeasible"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "request": {
+          "$ref": "#/$defs/TourRequest"
+        },
+        "stops": {
+          "items": {
+            "$ref": "#/$defs/TourStop"
+          },
+          "maxItems": 5,
+          "title": "Stops",
+          "type": "array"
+        },
+        "legs": {
+          "items": {
+            "$ref": "#/$defs/RouteCostResult"
+          },
+          "maxItems": 6,
+          "title": "Legs",
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "maxItems": 80,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "warnings": {
+          "items": {
+            "maxLength": 500,
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "maxItems": 20,
+          "title": "Warnings",
+          "type": "array"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        }
+      },
+      "required": [
+        "plan_id",
+        "version",
+        "campus_id",
+        "status",
+        "request",
+        "stops",
+        "created_at"
+      ],
+      "title": "TourPlan",
+      "type": "object"
+    },
+    "StopProgress": {
+      "additionalProperties": false,
+      "properties": {
+        "stop_id": {
+          "format": "uuid",
+          "title": "Stop Id",
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "pending",
+            "navigating",
+            "arrived",
+            "explaining",
+            "completed",
+            "skipped"
+          ],
+          "title": "State",
+          "type": "string"
+        }
+      },
+      "required": [
+        "stop_id",
+        "state"
+      ],
+      "title": "StopProgress",
+      "type": "object"
+    },
+    "TourSession": {
+      "$defs": {
+        "Evidence": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_id": {
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "title": "Evidence Id",
+              "type": "string"
+            },
+            "source_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Ref",
+              "type": "string"
+            },
+            "claim": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Claim",
+              "type": "string"
+            },
+            "relation": {
+              "enum": [
+                "retrieved",
+                "supports",
+                "contradicts"
+              ],
+              "title": "Relation",
+              "type": "string"
+            },
+            "verification": {
+              "enum": [
+                "verified",
+                "unverified",
+                "historical",
+                "disputed"
+              ],
+              "title": "Verification",
+              "type": "string"
+            },
+            "checked_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Checked At"
+            },
+            "valid_until": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Valid Until"
+            }
+          },
+          "required": [
+            "evidence_id",
+            "source_ref",
+            "claim",
+            "relation",
+            "verification",
+            "checked_at"
+          ],
+          "title": "Evidence",
+          "type": "object"
+        },
+        "PlaceRef": {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "poi",
+                "current_position",
+                "unspecified"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "poi_id": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Poi Id"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "title": "PlaceRef",
+          "type": "object"
+        },
+        "RouteCostResult": {
+          "additionalProperties": false,
+          "properties": {
+            "from_ref": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "to_ref": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "distance_m": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Distance M"
+            },
+            "duration_s": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Duration S"
+            },
+            "source": {
+              "enum": [
+                "amap",
+                "campus_evidence",
+                "unknown"
+              ],
+              "title": "Source",
+              "type": "string"
+            },
+            "verification": {
+              "enum": [
+                "verified",
+                "unverified",
+                "historical",
+                "disputed"
+              ],
+              "title": "Verification",
+              "type": "string"
+            },
+            "checked_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Checked At"
+            },
+            "campus_access": {
+              "enum": [
+                "verified",
+                "unverified",
+                "restricted"
+              ],
+              "title": "Campus Access",
+              "type": "string"
+            },
+            "evidence_ids": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "title": "Evidence Ids",
+              "type": "array"
+            },
+            "reason": {
+              "enum": [
+                "available",
+                "missing_data",
+                "not_configured",
+                "cancelled",
+                "unavailable",
+                "budget_exhausted"
+              ],
+              "title": "Reason",
+              "type": "string"
+            }
+          },
+          "required": [
+            "from_ref",
+            "to_ref",
+            "distance_m",
+            "duration_s",
+            "source",
+            "verification",
+            "checked_at",
+            "campus_access",
+            "reason"
+          ],
+          "title": "RouteCostResult",
+          "type": "object"
+        },
+        "StopProgress": {
+          "additionalProperties": false,
+          "properties": {
+            "stop_id": {
+              "format": "uuid",
+              "title": "Stop Id",
+              "type": "string"
+            },
+            "state": {
+              "enum": [
+                "pending",
+                "navigating",
+                "arrived",
+                "explaining",
+                "completed",
+                "skipped"
+              ],
+              "title": "State",
+              "type": "string"
+            }
+          },
+          "required": [
+            "stop_id",
+            "state"
+          ],
+          "title": "StopProgress",
+          "type": "object"
+        },
+        "TourPlan": {
+          "additionalProperties": false,
+          "properties": {
+            "plan_id": {
+              "format": "uuid",
+              "title": "Plan Id",
+              "type": "string"
+            },
+            "version": {
+              "minimum": 1,
+              "title": "Version",
+              "type": "integer"
+            },
+            "campus_id": {
+              "enum": [
+                "weijinlu",
+                "beiyangyuan"
+              ],
+              "title": "Campus Id",
+              "type": "string"
+            },
+            "status": {
+              "enum": [
+                "draft",
+                "checked",
+                "infeasible"
+              ],
+              "title": "Status",
+              "type": "string"
+            },
+            "request": {
+              "$ref": "#/$defs/TourRequest"
+            },
+            "stops": {
+              "items": {
+                "$ref": "#/$defs/TourStop"
+              },
+              "maxItems": 5,
+              "title": "Stops",
+              "type": "array"
+            },
+            "legs": {
+              "items": {
+                "$ref": "#/$defs/RouteCostResult"
+              },
+              "maxItems": 6,
+              "title": "Legs",
+              "type": "array"
+            },
+            "evidence": {
+              "items": {
+                "$ref": "#/$defs/Evidence"
+              },
+              "maxItems": 80,
+              "title": "Evidence",
+              "type": "array"
+            },
+            "warnings": {
+              "items": {
+                "maxLength": 500,
+                "minLength": 1,
+                "pattern": "\\S",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "title": "Warnings",
+              "type": "array"
+            },
+            "created_at": {
+              "format": "date-time",
+              "title": "Created At",
+              "type": "string"
+            }
+          },
+          "required": [
+            "plan_id",
+            "version",
+            "campus_id",
+            "status",
+            "request",
+            "stops",
+            "created_at"
+          ],
+          "title": "TourPlan",
+          "type": "object"
+        },
+        "TourRequest": {
+          "additionalProperties": false,
+          "properties": {
+            "request_id": {
+              "format": "uuid",
+              "title": "Request Id",
+              "type": "string"
+            },
+            "session_id": {
+              "format": "uuid",
+              "title": "Session Id",
+              "type": "string"
+            },
+            "campus_id": {
+              "enum": [
+                "weijinlu",
+                "beiyangyuan"
+              ],
+              "title": "Campus Id",
+              "type": "string"
+            },
+            "duration_minutes": {
+              "maximum": 240,
+              "minimum": 10,
+              "title": "Duration Minutes",
+              "type": "integer"
+            },
+            "interests": {
+              "items": {
+                "maxLength": 500,
+                "minLength": 1,
+                "pattern": "\\S",
+                "type": "string"
+              },
+              "maxItems": 8,
+              "minItems": 1,
+              "title": "Interests",
+              "type": "array"
+            },
+            "start": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "end": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "accessibility": {
+              "default": "standard",
+              "enum": [
+                "standard",
+                "step_free"
+              ],
+              "title": "Accessibility",
+              "type": "string"
+            },
+            "message": {
+              "default": "",
+              "maxLength": 2000,
+              "title": "Message",
+              "type": "string"
+            },
+            "must_visit": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 5,
+              "title": "Must Visit",
+              "type": "array"
+            },
+            "avoid": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 5,
+              "title": "Avoid",
+              "type": "array"
+            },
+            "visit_date": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Visit Date"
+            },
+            "max_walking_minutes": {
+              "anyOf": [
+                {
+                  "maximum": 240,
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Max Walking Minutes"
+            }
+          },
+          "required": [
+            "request_id",
+            "session_id",
+            "campus_id",
+            "duration_minutes",
+            "interests",
+            "start",
+            "end"
+          ],
+          "title": "TourRequest",
+          "type": "object"
+        },
+        "TourStop": {
+          "additionalProperties": false,
+          "properties": {
+            "stop_id": {
+              "format": "uuid",
+              "title": "Stop Id",
+              "type": "string"
+            },
+            "poi_id": {
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "title": "Poi Id",
+              "type": "string"
+            },
+            "title": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Title",
+              "type": "string"
+            },
+            "visit_minutes": {
+              "maximum": 120,
+              "minimum": 1,
+              "title": "Visit Minutes",
+              "type": "integer"
+            },
+            "visit_time_source": {
+              "enum": [
+                "user_preference",
+                "planner_allocation"
+              ],
+              "title": "Visit Time Source",
+              "type": "string"
+            },
+            "purpose": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Purpose",
+              "type": "string"
+            },
+            "evidence_ids": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "title": "Evidence Ids",
+              "type": "array"
+            }
+          },
+          "required": [
+            "stop_id",
+            "poi_id",
+            "title",
+            "visit_minutes",
+            "visit_time_source",
+            "purpose"
+          ],
+          "title": "TourStop",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "tour_id": {
+          "format": "uuid",
+          "title": "Tour Id",
+          "type": "string"
+        },
+        "session_id": {
+          "format": "uuid",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "state_version": {
+          "minimum": 1,
+          "title": "State Version",
+          "type": "integer"
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "checked",
+            "active",
+            "paused",
+            "completed",
+            "cancelled",
+            "infeasible"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "plan": {
+          "$ref": "#/$defs/TourPlan"
+        },
+        "progress": {
+          "items": {
+            "$ref": "#/$defs/StopProgress"
+          },
+          "maxItems": 5,
+          "title": "Progress",
+          "type": "array"
+        },
+        "current_stop_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Current Stop Id"
+        },
+        "remaining_minutes": {
+          "maximum": 240,
+          "minimum": 0,
+          "title": "Remaining Minutes",
+          "type": "integer"
+        },
+        "saved": {
+          "title": "Saved",
+          "type": "boolean"
+        },
+        "updated_at": {
+          "format": "date-time",
+          "title": "Updated At",
+          "type": "string"
+        },
+        "completion_reason": {
+          "anyOf": [
+            {
+              "enum": [
+                "all_stops_resolved",
+                "user_ended"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Completion Reason"
+        }
+      },
+      "required": [
+        "tour_id",
+        "session_id",
+        "state_version",
+        "status",
+        "plan",
+        "progress",
+        "current_stop_id",
+        "remaining_minutes",
+        "saved",
+        "updated_at"
+      ],
+      "title": "TourSession",
+      "type": "object"
+    },
+    "PlanRevision": {
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "format": "uuid",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "session_id": {
+          "format": "uuid",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "expected_version": {
+          "minimum": 1,
+          "title": "Expected Version",
+          "type": "integer"
+        },
+        "expected_state_version": {
+          "minimum": 1,
+          "title": "Expected State Version",
+          "type": "integer"
+        },
+        "operation": {
+          "enum": [
+            "set_remaining_time",
+            "remove_stop",
+            "replace_stop"
+          ],
+          "title": "Operation",
+          "type": "string"
+        },
+        "remaining_minutes": {
+          "anyOf": [
+            {
+              "maximum": 240,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Remaining Minutes"
+        },
+        "stop_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stop Id"
+        },
+        "replacement_poi_id": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Replacement Poi Id"
+        }
+      },
+      "required": [
+        "request_id",
+        "session_id",
+        "expected_version",
+        "expected_state_version",
+        "operation"
+      ],
+      "title": "PlanRevision",
+      "type": "object"
+    },
+    "TourCommand": {
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "format": "uuid",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "session_id": {
+          "format": "uuid",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "expected_version": {
+          "minimum": 1,
+          "title": "Expected Version",
+          "type": "integer"
+        },
+        "expected_state_version": {
+          "minimum": 1,
+          "title": "Expected State Version",
+          "type": "integer"
+        },
+        "accept_unverified": {
+          "default": false,
+          "title": "Accept Unverified",
+          "type": "boolean"
+        },
+        "action": {
+          "enum": [
+            "check",
+            "start",
+            "arrive",
+            "explain",
+            "complete_stop",
+            "next",
+            "pause",
+            "resume",
+            "cancel",
+            "save",
+            "forget",
+            "skip",
+            "end"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "stop_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stop Id"
+        }
+      },
+      "required": [
+        "request_id",
+        "session_id",
+        "expected_version",
+        "expected_state_version",
+        "action"
+      ],
+      "title": "TourCommand",
+      "type": "object"
+    },
+    "TourRestore": {
+      "$defs": {
+        "Evidence": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_id": {
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "title": "Evidence Id",
+              "type": "string"
+            },
+            "source_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Ref",
+              "type": "string"
+            },
+            "claim": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Claim",
+              "type": "string"
+            },
+            "relation": {
+              "enum": [
+                "retrieved",
+                "supports",
+                "contradicts"
+              ],
+              "title": "Relation",
+              "type": "string"
+            },
+            "verification": {
+              "enum": [
+                "verified",
+                "unverified",
+                "historical",
+                "disputed"
+              ],
+              "title": "Verification",
+              "type": "string"
+            },
+            "checked_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Checked At"
+            },
+            "valid_until": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Valid Until"
+            }
+          },
+          "required": [
+            "evidence_id",
+            "source_ref",
+            "claim",
+            "relation",
+            "verification",
+            "checked_at"
+          ],
+          "title": "Evidence",
+          "type": "object"
+        },
+        "PlaceRef": {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "poi",
+                "current_position",
+                "unspecified"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "poi_id": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Poi Id"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "title": "PlaceRef",
+          "type": "object"
+        },
+        "RouteCostResult": {
+          "additionalProperties": false,
+          "properties": {
+            "from_ref": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "to_ref": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "distance_m": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Distance M"
+            },
+            "duration_s": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Duration S"
+            },
+            "source": {
+              "enum": [
+                "amap",
+                "campus_evidence",
+                "unknown"
+              ],
+              "title": "Source",
+              "type": "string"
+            },
+            "verification": {
+              "enum": [
+                "verified",
+                "unverified",
+                "historical",
+                "disputed"
+              ],
+              "title": "Verification",
+              "type": "string"
+            },
+            "checked_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Checked At"
+            },
+            "campus_access": {
+              "enum": [
+                "verified",
+                "unverified",
+                "restricted"
+              ],
+              "title": "Campus Access",
+              "type": "string"
+            },
+            "evidence_ids": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "title": "Evidence Ids",
+              "type": "array"
+            },
+            "reason": {
+              "enum": [
+                "available",
+                "missing_data",
+                "not_configured",
+                "cancelled",
+                "unavailable",
+                "budget_exhausted"
+              ],
+              "title": "Reason",
+              "type": "string"
+            }
+          },
+          "required": [
+            "from_ref",
+            "to_ref",
+            "distance_m",
+            "duration_s",
+            "source",
+            "verification",
+            "checked_at",
+            "campus_access",
+            "reason"
+          ],
+          "title": "RouteCostResult",
+          "type": "object"
+        },
+        "StopProgress": {
+          "additionalProperties": false,
+          "properties": {
+            "stop_id": {
+              "format": "uuid",
+              "title": "Stop Id",
+              "type": "string"
+            },
+            "state": {
+              "enum": [
+                "pending",
+                "navigating",
+                "arrived",
+                "explaining",
+                "completed",
+                "skipped"
+              ],
+              "title": "State",
+              "type": "string"
+            }
+          },
+          "required": [
+            "stop_id",
+            "state"
+          ],
+          "title": "StopProgress",
+          "type": "object"
+        },
+        "TourPlan": {
+          "additionalProperties": false,
+          "properties": {
+            "plan_id": {
+              "format": "uuid",
+              "title": "Plan Id",
+              "type": "string"
+            },
+            "version": {
+              "minimum": 1,
+              "title": "Version",
+              "type": "integer"
+            },
+            "campus_id": {
+              "enum": [
+                "weijinlu",
+                "beiyangyuan"
+              ],
+              "title": "Campus Id",
+              "type": "string"
+            },
+            "status": {
+              "enum": [
+                "draft",
+                "checked",
+                "infeasible"
+              ],
+              "title": "Status",
+              "type": "string"
+            },
+            "request": {
+              "$ref": "#/$defs/TourRequest"
+            },
+            "stops": {
+              "items": {
+                "$ref": "#/$defs/TourStop"
+              },
+              "maxItems": 5,
+              "title": "Stops",
+              "type": "array"
+            },
+            "legs": {
+              "items": {
+                "$ref": "#/$defs/RouteCostResult"
+              },
+              "maxItems": 6,
+              "title": "Legs",
+              "type": "array"
+            },
+            "evidence": {
+              "items": {
+                "$ref": "#/$defs/Evidence"
+              },
+              "maxItems": 80,
+              "title": "Evidence",
+              "type": "array"
+            },
+            "warnings": {
+              "items": {
+                "maxLength": 500,
+                "minLength": 1,
+                "pattern": "\\S",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "title": "Warnings",
+              "type": "array"
+            },
+            "created_at": {
+              "format": "date-time",
+              "title": "Created At",
+              "type": "string"
+            }
+          },
+          "required": [
+            "plan_id",
+            "version",
+            "campus_id",
+            "status",
+            "request",
+            "stops",
+            "created_at"
+          ],
+          "title": "TourPlan",
+          "type": "object"
+        },
+        "TourRequest": {
+          "additionalProperties": false,
+          "properties": {
+            "request_id": {
+              "format": "uuid",
+              "title": "Request Id",
+              "type": "string"
+            },
+            "session_id": {
+              "format": "uuid",
+              "title": "Session Id",
+              "type": "string"
+            },
+            "campus_id": {
+              "enum": [
+                "weijinlu",
+                "beiyangyuan"
+              ],
+              "title": "Campus Id",
+              "type": "string"
+            },
+            "duration_minutes": {
+              "maximum": 240,
+              "minimum": 10,
+              "title": "Duration Minutes",
+              "type": "integer"
+            },
+            "interests": {
+              "items": {
+                "maxLength": 500,
+                "minLength": 1,
+                "pattern": "\\S",
+                "type": "string"
+              },
+              "maxItems": 8,
+              "minItems": 1,
+              "title": "Interests",
+              "type": "array"
+            },
+            "start": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "end": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "accessibility": {
+              "default": "standard",
+              "enum": [
+                "standard",
+                "step_free"
+              ],
+              "title": "Accessibility",
+              "type": "string"
+            },
+            "message": {
+              "default": "",
+              "maxLength": 2000,
+              "title": "Message",
+              "type": "string"
+            },
+            "must_visit": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 5,
+              "title": "Must Visit",
+              "type": "array"
+            },
+            "avoid": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 5,
+              "title": "Avoid",
+              "type": "array"
+            },
+            "visit_date": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Visit Date"
+            },
+            "max_walking_minutes": {
+              "anyOf": [
+                {
+                  "maximum": 240,
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Max Walking Minutes"
+            }
+          },
+          "required": [
+            "request_id",
+            "session_id",
+            "campus_id",
+            "duration_minutes",
+            "interests",
+            "start",
+            "end"
+          ],
+          "title": "TourRequest",
+          "type": "object"
+        },
+        "TourSession": {
+          "additionalProperties": false,
+          "properties": {
+            "tour_id": {
+              "format": "uuid",
+              "title": "Tour Id",
+              "type": "string"
+            },
+            "session_id": {
+              "format": "uuid",
+              "title": "Session Id",
+              "type": "string"
+            },
+            "state_version": {
+              "minimum": 1,
+              "title": "State Version",
+              "type": "integer"
+            },
+            "status": {
+              "enum": [
+                "draft",
+                "checked",
+                "active",
+                "paused",
+                "completed",
+                "cancelled",
+                "infeasible"
+              ],
+              "title": "Status",
+              "type": "string"
+            },
+            "plan": {
+              "$ref": "#/$defs/TourPlan"
+            },
+            "progress": {
+              "items": {
+                "$ref": "#/$defs/StopProgress"
+              },
+              "maxItems": 5,
+              "title": "Progress",
+              "type": "array"
+            },
+            "current_stop_id": {
+              "anyOf": [
+                {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Current Stop Id"
+            },
+            "remaining_minutes": {
+              "maximum": 240,
+              "minimum": 0,
+              "title": "Remaining Minutes",
+              "type": "integer"
+            },
+            "saved": {
+              "title": "Saved",
+              "type": "boolean"
+            },
+            "updated_at": {
+              "format": "date-time",
+              "title": "Updated At",
+              "type": "string"
+            },
+            "completion_reason": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "all_stops_resolved",
+                    "user_ended"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Completion Reason"
+            }
+          },
+          "required": [
+            "tour_id",
+            "session_id",
+            "state_version",
+            "status",
+            "plan",
+            "progress",
+            "current_stop_id",
+            "remaining_minutes",
+            "saved",
+            "updated_at"
+          ],
+          "title": "TourSession",
+          "type": "object"
+        },
+        "TourStop": {
+          "additionalProperties": false,
+          "properties": {
+            "stop_id": {
+              "format": "uuid",
+              "title": "Stop Id",
+              "type": "string"
+            },
+            "poi_id": {
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "title": "Poi Id",
+              "type": "string"
+            },
+            "title": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Title",
+              "type": "string"
+            },
+            "visit_minutes": {
+              "maximum": 120,
+              "minimum": 1,
+              "title": "Visit Minutes",
+              "type": "integer"
+            },
+            "visit_time_source": {
+              "enum": [
+                "user_preference",
+                "planner_allocation"
+              ],
+              "title": "Visit Time Source",
+              "type": "string"
+            },
+            "purpose": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Purpose",
+              "type": "string"
+            },
+            "evidence_ids": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "title": "Evidence Ids",
+              "type": "array"
+            }
+          },
+          "required": [
+            "stop_id",
+            "poi_id",
+            "title",
+            "visit_minutes",
+            "visit_time_source",
+            "purpose"
+          ],
+          "title": "TourStop",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "format": "uuid",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "session_id": {
+          "format": "uuid",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "snapshot": {
+          "$ref": "#/$defs/TourSession"
+        }
+      },
+      "required": [
+        "request_id",
+        "session_id",
+        "snapshot"
+      ],
+      "title": "TourRestore",
+      "type": "object"
+    },
+    "TourResult": {
+      "$defs": {
+        "ClarificationQuestion": {
+          "additionalProperties": false,
+          "properties": {
+            "question_id": {
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "title": "Question Id",
+              "type": "string"
+            },
+            "field": {
+              "enum": [
+                "message",
+                "duration_minutes",
+                "interests",
+                "start",
+                "end",
+                "must_visit",
+                "avoid",
+                "visit_date",
+                "max_walking_minutes",
+                "accessibility"
+              ],
+              "title": "Field",
+              "type": "string"
+            },
+            "prompt": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Prompt",
+              "type": "string"
+            },
+            "candidate_poi_ids": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "title": "Candidate Poi Ids",
+              "type": "array"
+            }
+          },
+          "required": [
+            "question_id",
+            "field",
+            "prompt"
+          ],
+          "title": "ClarificationQuestion",
+          "type": "object"
+        },
+        "Evidence": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_id": {
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "title": "Evidence Id",
+              "type": "string"
+            },
+            "source_ref": {
+              "maxLength": 200,
+              "minLength": 1,
+              "title": "Source Ref",
+              "type": "string"
+            },
+            "claim": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Claim",
+              "type": "string"
+            },
+            "relation": {
+              "enum": [
+                "retrieved",
+                "supports",
+                "contradicts"
+              ],
+              "title": "Relation",
+              "type": "string"
+            },
+            "verification": {
+              "enum": [
+                "verified",
+                "unverified",
+                "historical",
+                "disputed"
+              ],
+              "title": "Verification",
+              "type": "string"
+            },
+            "checked_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Checked At"
+            },
+            "valid_until": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Valid Until"
+            }
+          },
+          "required": [
+            "evidence_id",
+            "source_ref",
+            "claim",
+            "relation",
+            "verification",
+            "checked_at"
+          ],
+          "title": "Evidence",
+          "type": "object"
+        },
+        "PlaceRef": {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "poi",
+                "current_position",
+                "unspecified"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "poi_id": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Poi Id"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "title": "PlaceRef",
+          "type": "object"
+        },
+        "RouteCostResult": {
+          "additionalProperties": false,
+          "properties": {
+            "from_ref": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "to_ref": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "distance_m": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Distance M"
+            },
+            "duration_s": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Duration S"
+            },
+            "source": {
+              "enum": [
+                "amap",
+                "campus_evidence",
+                "unknown"
+              ],
+              "title": "Source",
+              "type": "string"
+            },
+            "verification": {
+              "enum": [
+                "verified",
+                "unverified",
+                "historical",
+                "disputed"
+              ],
+              "title": "Verification",
+              "type": "string"
+            },
+            "checked_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Checked At"
+            },
+            "campus_access": {
+              "enum": [
+                "verified",
+                "unverified",
+                "restricted"
+              ],
+              "title": "Campus Access",
+              "type": "string"
+            },
+            "evidence_ids": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "title": "Evidence Ids",
+              "type": "array"
+            },
+            "reason": {
+              "enum": [
+                "available",
+                "missing_data",
+                "not_configured",
+                "cancelled",
+                "unavailable",
+                "budget_exhausted"
+              ],
+              "title": "Reason",
+              "type": "string"
+            }
+          },
+          "required": [
+            "from_ref",
+            "to_ref",
+            "distance_m",
+            "duration_s",
+            "source",
+            "verification",
+            "checked_at",
+            "campus_access",
+            "reason"
+          ],
+          "title": "RouteCostResult",
+          "type": "object"
+        },
+        "StopProgress": {
+          "additionalProperties": false,
+          "properties": {
+            "stop_id": {
+              "format": "uuid",
+              "title": "Stop Id",
+              "type": "string"
+            },
+            "state": {
+              "enum": [
+                "pending",
+                "navigating",
+                "arrived",
+                "explaining",
+                "completed",
+                "skipped"
+              ],
+              "title": "State",
+              "type": "string"
+            }
+          },
+          "required": [
+            "stop_id",
+            "state"
+          ],
+          "title": "StopProgress",
+          "type": "object"
+        },
+        "TourPlan": {
+          "additionalProperties": false,
+          "properties": {
+            "plan_id": {
+              "format": "uuid",
+              "title": "Plan Id",
+              "type": "string"
+            },
+            "version": {
+              "minimum": 1,
+              "title": "Version",
+              "type": "integer"
+            },
+            "campus_id": {
+              "enum": [
+                "weijinlu",
+                "beiyangyuan"
+              ],
+              "title": "Campus Id",
+              "type": "string"
+            },
+            "status": {
+              "enum": [
+                "draft",
+                "checked",
+                "infeasible"
+              ],
+              "title": "Status",
+              "type": "string"
+            },
+            "request": {
+              "$ref": "#/$defs/TourRequest"
+            },
+            "stops": {
+              "items": {
+                "$ref": "#/$defs/TourStop"
+              },
+              "maxItems": 5,
+              "title": "Stops",
+              "type": "array"
+            },
+            "legs": {
+              "items": {
+                "$ref": "#/$defs/RouteCostResult"
+              },
+              "maxItems": 6,
+              "title": "Legs",
+              "type": "array"
+            },
+            "evidence": {
+              "items": {
+                "$ref": "#/$defs/Evidence"
+              },
+              "maxItems": 80,
+              "title": "Evidence",
+              "type": "array"
+            },
+            "warnings": {
+              "items": {
+                "maxLength": 500,
+                "minLength": 1,
+                "pattern": "\\S",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "title": "Warnings",
+              "type": "array"
+            },
+            "created_at": {
+              "format": "date-time",
+              "title": "Created At",
+              "type": "string"
+            }
+          },
+          "required": [
+            "plan_id",
+            "version",
+            "campus_id",
+            "status",
+            "request",
+            "stops",
+            "created_at"
+          ],
+          "title": "TourPlan",
+          "type": "object"
+        },
+        "TourRequest": {
+          "additionalProperties": false,
+          "properties": {
+            "request_id": {
+              "format": "uuid",
+              "title": "Request Id",
+              "type": "string"
+            },
+            "session_id": {
+              "format": "uuid",
+              "title": "Session Id",
+              "type": "string"
+            },
+            "campus_id": {
+              "enum": [
+                "weijinlu",
+                "beiyangyuan"
+              ],
+              "title": "Campus Id",
+              "type": "string"
+            },
+            "duration_minutes": {
+              "maximum": 240,
+              "minimum": 10,
+              "title": "Duration Minutes",
+              "type": "integer"
+            },
+            "interests": {
+              "items": {
+                "maxLength": 500,
+                "minLength": 1,
+                "pattern": "\\S",
+                "type": "string"
+              },
+              "maxItems": 8,
+              "minItems": 1,
+              "title": "Interests",
+              "type": "array"
+            },
+            "start": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "end": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "accessibility": {
+              "default": "standard",
+              "enum": [
+                "standard",
+                "step_free"
+              ],
+              "title": "Accessibility",
+              "type": "string"
+            },
+            "message": {
+              "default": "",
+              "maxLength": 2000,
+              "title": "Message",
+              "type": "string"
+            },
+            "must_visit": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 5,
+              "title": "Must Visit",
+              "type": "array"
+            },
+            "avoid": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 5,
+              "title": "Avoid",
+              "type": "array"
+            },
+            "visit_date": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Visit Date"
+            },
+            "max_walking_minutes": {
+              "anyOf": [
+                {
+                  "maximum": 240,
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Max Walking Minutes"
+            }
+          },
+          "required": [
+            "request_id",
+            "session_id",
+            "campus_id",
+            "duration_minutes",
+            "interests",
+            "start",
+            "end"
+          ],
+          "title": "TourRequest",
+          "type": "object"
+        },
+        "TourSession": {
+          "additionalProperties": false,
+          "properties": {
+            "tour_id": {
+              "format": "uuid",
+              "title": "Tour Id",
+              "type": "string"
+            },
+            "session_id": {
+              "format": "uuid",
+              "title": "Session Id",
+              "type": "string"
+            },
+            "state_version": {
+              "minimum": 1,
+              "title": "State Version",
+              "type": "integer"
+            },
+            "status": {
+              "enum": [
+                "draft",
+                "checked",
+                "active",
+                "paused",
+                "completed",
+                "cancelled",
+                "infeasible"
+              ],
+              "title": "Status",
+              "type": "string"
+            },
+            "plan": {
+              "$ref": "#/$defs/TourPlan"
+            },
+            "progress": {
+              "items": {
+                "$ref": "#/$defs/StopProgress"
+              },
+              "maxItems": 5,
+              "title": "Progress",
+              "type": "array"
+            },
+            "current_stop_id": {
+              "anyOf": [
+                {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Current Stop Id"
+            },
+            "remaining_minutes": {
+              "maximum": 240,
+              "minimum": 0,
+              "title": "Remaining Minutes",
+              "type": "integer"
+            },
+            "saved": {
+              "title": "Saved",
+              "type": "boolean"
+            },
+            "updated_at": {
+              "format": "date-time",
+              "title": "Updated At",
+              "type": "string"
+            },
+            "completion_reason": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "all_stops_resolved",
+                    "user_ended"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Completion Reason"
+            }
+          },
+          "required": [
+            "tour_id",
+            "session_id",
+            "state_version",
+            "status",
+            "plan",
+            "progress",
+            "current_stop_id",
+            "remaining_minutes",
+            "saved",
+            "updated_at"
+          ],
+          "title": "TourSession",
+          "type": "object"
+        },
+        "TourStop": {
+          "additionalProperties": false,
+          "properties": {
+            "stop_id": {
+              "format": "uuid",
+              "title": "Stop Id",
+              "type": "string"
+            },
+            "poi_id": {
+              "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+              "title": "Poi Id",
+              "type": "string"
+            },
+            "title": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Title",
+              "type": "string"
+            },
+            "visit_minutes": {
+              "maximum": 120,
+              "minimum": 1,
+              "title": "Visit Minutes",
+              "type": "integer"
+            },
+            "visit_time_source": {
+              "enum": [
+                "user_preference",
+                "planner_allocation"
+              ],
+              "title": "Visit Time Source",
+              "type": "string"
+            },
+            "purpose": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "\\S",
+              "title": "Purpose",
+              "type": "string"
+            },
+            "evidence_ids": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "title": "Evidence Ids",
+              "type": "array"
+            }
+          },
+          "required": [
+            "stop_id",
+            "poi_id",
+            "title",
+            "visit_minutes",
+            "visit_time_source",
+            "purpose"
+          ],
+          "title": "TourStop",
+          "type": "object"
+        },
+        "Usage": {
+          "additionalProperties": false,
+          "properties": {
+            "prompt_tokens": {
+              "minimum": 0,
+              "title": "Prompt Tokens",
+              "type": "integer"
+            },
+            "completion_tokens": {
+              "minimum": 0,
+              "title": "Completion Tokens",
+              "type": "integer"
+            },
+            "total_tokens": {
+              "minimum": 0,
+              "title": "Total Tokens",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "prompt_tokens",
+            "completion_tokens",
+            "total_tokens"
+          ],
+          "title": "Usage",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "contract_version": {
+          "const": "1.2.0",
+          "default": "1.2.0",
+          "title": "Contract Version",
+          "type": "string"
+        },
+        "request_id": {
+          "format": "uuid",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "session": {
+          "$ref": "#/$defs/TourSession"
+        },
+        "replayed": {
+          "default": false,
+          "title": "Replayed",
+          "type": "boolean"
+        },
+        "usage": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Usage"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "clarification_required": {
+          "default": false,
+          "title": "Clarification Required",
+          "type": "boolean"
+        },
+        "clarifications": {
+          "items": {
+            "$ref": "#/$defs/ClarificationQuestion"
+          },
+          "maxItems": 8,
+          "title": "Clarifications",
+          "type": "array"
+        }
+      },
+      "required": [
+        "request_id",
+        "session"
+      ],
+      "title": "TourResult",
+      "type": "object"
+    },
+    "RouteCostRequest": {
+      "$defs": {
+        "PlaceRef": {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "poi",
+                "current_position",
+                "unspecified"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "poi_id": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Poi Id"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "title": "PlaceRef",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "format": "uuid",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "session_id": {
+          "format": "uuid",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "campus_id": {
+          "enum": [
+            "weijinlu",
+            "beiyangyuan"
+          ],
+          "title": "Campus Id",
+          "type": "string"
+        },
+        "places": {
+          "items": {
+            "$ref": "#/$defs/PlaceRef"
+          },
+          "maxItems": 7,
+          "minItems": 2,
+          "title": "Places",
+          "type": "array"
+        }
+      },
+      "required": [
+        "request_id",
+        "session_id",
+        "campus_id",
+        "places"
+      ],
+      "title": "RouteCostRequest",
+      "type": "object"
+    },
+    "RouteCostResponse": {
+      "$defs": {
+        "PlaceRef": {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "poi",
+                "current_position",
+                "unspecified"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "poi_id": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Poi Id"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "title": "PlaceRef",
+          "type": "object"
+        },
+        "RouteCostResult": {
+          "additionalProperties": false,
+          "properties": {
+            "from_ref": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "to_ref": {
+              "$ref": "#/$defs/PlaceRef"
+            },
+            "distance_m": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Distance M"
+            },
+            "duration_s": {
+              "anyOf": [
+                {
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Duration S"
+            },
+            "source": {
+              "enum": [
+                "amap",
+                "campus_evidence",
+                "unknown"
+              ],
+              "title": "Source",
+              "type": "string"
+            },
+            "verification": {
+              "enum": [
+                "verified",
+                "unverified",
+                "historical",
+                "disputed"
+              ],
+              "title": "Verification",
+              "type": "string"
+            },
+            "checked_at": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Checked At"
+            },
+            "campus_access": {
+              "enum": [
+                "verified",
+                "unverified",
+                "restricted"
+              ],
+              "title": "Campus Access",
+              "type": "string"
+            },
+            "evidence_ids": {
+              "items": {
+                "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+                "type": "string"
+              },
+              "maxItems": 20,
+              "title": "Evidence Ids",
+              "type": "array"
+            },
+            "reason": {
+              "enum": [
+                "available",
+                "missing_data",
+                "not_configured",
+                "cancelled",
+                "unavailable",
+                "budget_exhausted"
+              ],
+              "title": "Reason",
+              "type": "string"
+            }
+          },
+          "required": [
+            "from_ref",
+            "to_ref",
+            "distance_m",
+            "duration_s",
+            "source",
+            "verification",
+            "checked_at",
+            "campus_access",
+            "reason"
+          ],
+          "title": "RouteCostResult",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "request_id": {
+          "format": "uuid",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "costs": {
+          "items": {
+            "$ref": "#/$defs/RouteCostResult"
+          },
+          "maxItems": 6,
+          "minItems": 1,
+          "title": "Costs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "request_id",
+        "costs"
+      ],
+      "title": "RouteCostResponse",
+      "type": "object"
+    },
+    "SpeechInteractionEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "event_id": {
+          "format": "uuid",
+          "title": "Event Id",
+          "type": "string"
+        },
+        "interaction_id": {
+          "format": "uuid",
+          "title": "Interaction Id",
+          "type": "string"
+        },
+        "session_id": {
+          "format": "uuid",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "campus_id": {
+          "enum": [
+            "weijinlu",
+            "beiyangyuan"
+          ],
+          "title": "Campus Id",
+          "type": "string"
+        },
+        "generation_id": {
+          "format": "uuid",
+          "title": "Generation Id",
+          "type": "string"
+        },
+        "request_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Request Id"
+        },
+        "type": {
+          "enum": [
+            "recognition.partial",
+            "recognition.final",
+            "speech.interrupted",
+            "playback.started",
+            "playback.ended",
+            "playback.cancelled",
+            "speech.error"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "timestamp": {
+          "format": "date-time",
+          "title": "Timestamp",
+          "type": "string"
+        },
+        "text": {
+          "anyOf": [
+            {
+              "maxLength": 8000,
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Text"
+        },
+        "utterance_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Utterance Id"
+        },
+        "error_code": {
+          "anyOf": [
+            {
+              "enum": [
+                "permission_denied",
+                "asr_not_configured",
+                "recognition_failed",
+                "playback_failed",
+                "cancelled"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error Code"
+        }
+      },
+      "required": [
+        "event_id",
+        "interaction_id",
+        "session_id",
+        "campus_id",
+        "generation_id",
+        "request_id",
+        "type",
+        "timestamp"
+      ],
+      "title": "SpeechInteractionEvent",
+      "type": "object"
+    },
+    "EvaluationRecord": {
+      "$defs": {
+        "Usage": {
+          "additionalProperties": false,
+          "properties": {
+            "prompt_tokens": {
+              "minimum": 0,
+              "title": "Prompt Tokens",
+              "type": "integer"
+            },
+            "completion_tokens": {
+              "minimum": 0,
+              "title": "Completion Tokens",
+              "type": "integer"
+            },
+            "total_tokens": {
+              "minimum": 0,
+              "title": "Total Tokens",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "prompt_tokens",
+            "completion_tokens",
+            "total_tokens"
+          ],
+          "title": "Usage",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "evaluation_id": {
+          "format": "uuid",
+          "title": "Evaluation Id",
+          "type": "string"
+        },
+        "case_id": {
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$",
+          "title": "Case Id",
+          "type": "string"
+        },
+        "dataset_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Dataset Version",
+          "type": "string"
+        },
+        "build_commit": {
+          "pattern": "^[0-9a-f]{40}$",
+          "title": "Build Commit",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "fixture",
+            "live"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "pass",
+            "fail",
+            "blocked",
+            "not_tested"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "task_completed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Task Completed"
+        },
+        "constraint_passed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Constraint Passed"
+        },
+        "evidence_supported": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Evidence Supported"
+        },
+        "evidence_total": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Evidence Total"
+        },
+        "elapsed_ms": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Elapsed Ms"
+        },
+        "model_calls": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Model Calls"
+        },
+        "usage_status": {
+          "enum": [
+            "known",
+            "partial",
+            "unknown"
+          ],
+          "title": "Usage Status",
+          "type": "string"
+        },
+        "usage": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Usage"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unknown_usage_calls": {
+          "minimum": 0,
+          "title": "Unknown Usage Calls",
+          "type": "integer"
+        },
+        "map_operations": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Map Operations"
+        },
+        "solution_id": {
+          "anyOf": [
+            {
+              "enum": [
+                "direct_glm",
+                "baseline",
+                "enhanced"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Solution Id"
+        },
+        "comparison_group_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Comparison Group Id"
+        },
+        "web_search_calls": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Web Search Calls"
+        },
+        "failure_retries": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Failure Retries"
+        },
+        "first_content_ms": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "First Content Ms"
+        },
+        "first_content_source": {
+          "default": "unknown",
+          "enum": [
+            "stream_first_visible",
+            "nonstream_response",
+            "unknown"
+          ],
+          "title": "First Content Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "evaluation_id",
+        "case_id",
+        "dataset_version",
+        "build_commit",
+        "kind",
+        "outcome",
+        "task_completed",
+        "constraint_passed",
+        "evidence_supported",
+        "evidence_total",
+        "elapsed_ms",
+        "model_calls",
+        "usage_status",
+        "usage",
+        "unknown_usage_calls",
+        "map_operations"
+      ],
+      "title": "EvaluationRecord",
+      "type": "object"
+    }
+  }
+}

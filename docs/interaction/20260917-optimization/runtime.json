@@ -1,0 +1,45 @@
+{
+  "url": "http://127.0.0.1:8000",
+  "asset": "/assets/index-B-vHTct3.js",
+  "sha256": "154b7f89463755ef8dae6b4197707abb790cf55a49c0f6ab108325eb43c8fa69",
+  "matches_dist": true,
+  "health": {
+    "status": "ok",
+    "contract_version": "1.1.0",
+    "model": {
+      "configured": true,
+      "verified": false
+    },
+    "capabilities": {
+      "chat": true,
+      "asr": false,
+      "tts": false,
+      "knowledge": true,
+      "scene_3d": false
+    }
+  },
+  "pid_receipt": {
+    "root": "E:\\AI4TJU",
+    "mode": "app",
+    "api_port": 8000,
+    "web_port": 8000,
+    "processes": [
+      {
+        "pid": 44196,
+        "started_ticks": "639252308119300771",
+        "role": "api-launcher"
+      },
+      {
+        "pid": 47900,
+        "started_ticks": "639252308119413176",
+        "role": "child"
+      },
+      {
+        "pid": 964,
+        "started_ticks": "639252308119681359",
+        "role": "child"
+      }
+    ]
+  },
+  "browser": "unavailable: cua browsers=[]; getBrowser returned No browser is available"
+}

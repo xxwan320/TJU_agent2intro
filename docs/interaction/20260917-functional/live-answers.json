@@ -1,0 +1,788 @@
+[
+  {
+    "id": "Q01",
+    "input": "北洋园校区何时投入使用？",
+    "first_body_ms": 106.40779999812366,
+    "completed_ms": 110.27089999697637,
+    "events": [
+      {
+        "event_id": "ea821184-571a-443e-9d6a-8c82395cf680",
+        "request_id": "d71da55a-3ad8-4063-aa55-8eea13a50e92",
+        "seq": 1,
+        "timestamp": "2026-09-17T11:26:35.015900Z",
+        "type": "accepted",
+        "payload": {
+          "session_id": "778b75f7-9a45-41fe-8bd8-7b3170f5aa4f",
+          "message_id": "38a6822c-0f26-4772-8805-04292c151a8e",
+          "campus_id": "beiyangyuan",
+          "mode": "campus_qa"
+        }
+      },
+      {
+        "event_id": "f6aa80fb-54df-4d75-919b-a3537598c71c",
+        "request_id": "d71da55a-3ad8-4063-aa55-8eea13a50e92",
+        "seq": 2,
+        "timestamp": "2026-09-17T11:26:35.016413Z",
+        "type": "status",
+        "payload": {
+          "stage": "request",
+          "status": "started"
+        }
+      },
+      {
+        "event_id": "7fd4dc7b-6bb0-49c3-84cb-59016b4f3ea3",
+        "request_id": "d71da55a-3ad8-4063-aa55-8eea13a50e92",
+        "seq": 3,
+        "timestamp": "2026-09-17T11:26:35.100246Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "北洋园校区于2015年9月正式落成并投入使用。"
+        }
+      },
+      {
+        "event_id": "acc3bab3-b300-4146-b977-9562d3342622",
+        "request_id": "d71da55a-3ad8-4063-aa55-8eea13a50e92",
+        "seq": 4,
+        "timestamp": "2026-09-17T11:26:35.102249Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "beiyangyuan-opened-2015",
+              "title": "北洋园校区投入使用",
+              "snippet": "天津大学迎新网介绍称，北洋园校区于2015年9月正式落成并投入使用。",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "campus_id": "beiyangyuan",
+              "published_at": "2024-08-15",
+              "retrieved_at": "2026-09-14"
+            }
+          ],
+          "kind": "cited"
+        }
+      },
+      {
+        "event_id": "11629a61-fe7e-481b-92a2-0f2c228fb722",
+        "request_id": "d71da55a-3ad8-4063-aa55-8eea13a50e92",
+        "seq": 5,
+        "timestamp": "2026-09-17T11:26:35.102249Z",
+        "type": "usage",
+        "payload": {
+          "model": "local-evidence",
+          "usage": null
+        }
+      },
+      {
+        "event_id": "12db2aeb-1328-4a0e-9e89-4ac2cebf1565",
+        "request_id": "d71da55a-3ad8-4063-aa55-8eea13a50e92",
+        "seq": 6,
+        "timestamp": "2026-09-17T11:26:35.102249Z",
+        "type": "completed",
+        "payload": {
+          "response": {
+            "request_id": "d71da55a-3ad8-4063-aa55-8eea13a50e92",
+            "session_id": "778b75f7-9a45-41fe-8bd8-7b3170f5aa4f",
+            "answer": "北洋园校区于2015年9月正式落成并投入使用。",
+            "sources": [
+              {
+                "id": "beiyangyuan-opened-2015",
+                "title": "北洋园校区投入使用",
+                "snippet": "天津大学迎新网介绍称，北洋园校区于2015年9月正式落成并投入使用。",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "campus_id": "beiyangyuan",
+                "published_at": "2024-08-15",
+                "retrieved_at": "2026-09-14"
+              }
+            ],
+            "model": "local-evidence",
+            "usage": null,
+            "elapsed_ms": 93.99999999732245,
+            "actions": []
+          }
+        }
+      }
+    ],
+    "trace": {
+      "status": "success",
+      "local_source_ids": [
+        "beiyangyuan-opened-2015",
+        "poi-beiyangyuan-main-building",
+        "poi-beiyangyuan-east-gate",
+        "poi-beiyangyuan-memorial-pavilion",
+        "beiyangyuan-location"
+      ],
+      "external": null
+    }
+  },
+  {
+    "id": "Q02",
+    "input": "郑东图书馆在哪个校区？",
+    "first_body_ms": 4.510900005698204,
+    "completed_ms": 7.0797000007587485,
+    "events": [
+      {
+        "event_id": "9c7aec1c-946a-4500-8118-e93551247f95",
+        "request_id": "400234c4-c8b0-4796-a927-589ff7d35c41",
+        "seq": 1,
+        "timestamp": "2026-09-17T11:26:35.107536Z",
+        "type": "accepted",
+        "payload": {
+          "session_id": "4b48bb9e-6a0d-486f-87ce-39c1767724a5",
+          "message_id": "182cd50e-cfbd-4e78-8766-581c01efcdba",
+          "campus_id": "beiyangyuan",
+          "mode": "campus_qa"
+        }
+      },
+      {
+        "event_id": "ac33d029-ccc1-436b-ad56-75ac08670645",
+        "request_id": "400234c4-c8b0-4796-a927-589ff7d35c41",
+        "seq": 2,
+        "timestamp": "2026-09-17T11:26:35.107536Z",
+        "type": "status",
+        "payload": {
+          "stage": "request",
+          "status": "started"
+        }
+      },
+      {
+        "event_id": "03e2c786-327f-4dc2-8cd1-2d312def864a",
+        "request_id": "400234c4-c8b0-4796-a927-589ff7d35c41",
+        "seq": 3,
+        "timestamp": "2026-09-17T11:26:35.109715Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "郑东图书馆位于天津大学北洋园校区。"
+        }
+      },
+      {
+        "event_id": "7c8ef383-1938-461e-9f92-3ba9fe491e5b",
+        "request_id": "400234c4-c8b0-4796-a927-589ff7d35c41",
+        "seq": 4,
+        "timestamp": "2026-09-17T11:26:35.109715Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "poi-beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "snippet": "校方资料在北洋园校区列有郑东图书馆。",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            }
+          ],
+          "kind": "cited"
+        }
+      },
+      {
+        "event_id": "7dcd6eec-6af0-46e8-90b8-a9d685ea4399",
+        "request_id": "400234c4-c8b0-4796-a927-589ff7d35c41",
+        "seq": 5,
+        "timestamp": "2026-09-17T11:26:35.109715Z",
+        "type": "usage",
+        "payload": {
+          "model": "local-evidence",
+          "usage": null
+        }
+      },
+      {
+        "event_id": "8a3c23bd-c845-41f7-986e-11c877dcf8e7",
+        "request_id": "400234c4-c8b0-4796-a927-589ff7d35c41",
+        "seq": 6,
+        "timestamp": "2026-09-17T11:26:35.109715Z",
+        "type": "completed",
+        "payload": {
+          "response": {
+            "request_id": "400234c4-c8b0-4796-a927-589ff7d35c41",
+            "session_id": "4b48bb9e-6a0d-486f-87ce-39c1767724a5",
+            "answer": "郑东图书馆位于天津大学北洋园校区。",
+            "sources": [
+              {
+                "id": "poi-beiyangyuan-zhengdong-library",
+                "title": "郑东图书馆",
+                "snippet": "校方资料在北洋园校区列有郑东图书馆。",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-14"
+              }
+            ],
+            "model": "local-evidence",
+            "usage": null,
+            "elapsed_ms": 0.0,
+            "actions": []
+          }
+        }
+      }
+    ],
+    "trace": {
+      "status": "success",
+      "local_source_ids": [
+        "poi-beiyangyuan-zhengdong-library",
+        "beiyangyuan-zhengdong-library",
+        "zhengdong-opened",
+        "zhengdong-designer",
+        "zhengdong-courtyard"
+      ],
+      "external": null
+    }
+  },
+  {
+    "id": "Q04",
+    "input": "尚贤石上的字是谁写的？",
+    "first_body_ms": 3.9331999942078255,
+    "completed_ms": 5.041599994001444,
+    "events": [
+      {
+        "event_id": "bead3ab9-d884-4947-833a-41734f0f7afb",
+        "request_id": "189d3107-bfe9-4b8c-850a-c3ca402103c0",
+        "seq": 1,
+        "timestamp": "2026-09-17T11:26:35.114735Z",
+        "type": "accepted",
+        "payload": {
+          "session_id": "3a137d8d-b69f-4576-a7de-b332c373b469",
+          "message_id": "02437e70-d2b4-407f-a66c-8c85348e6d10",
+          "campus_id": "beiyangyuan",
+          "mode": "campus_qa"
+        }
+      },
+      {
+        "event_id": "4b588792-42e9-4d07-a2d9-5ab0e1236e57",
+        "request_id": "189d3107-bfe9-4b8c-850a-c3ca402103c0",
+        "seq": 2,
+        "timestamp": "2026-09-17T11:26:35.114735Z",
+        "type": "status",
+        "payload": {
+          "stage": "request",
+          "status": "started"
+        }
+      },
+      {
+        "event_id": "e305484c-0706-43e8-9479-3bb23d307c27",
+        "request_id": "189d3107-bfe9-4b8c-850a-c3ca402103c0",
+        "seq": 3,
+        "timestamp": "2026-09-17T11:26:35.116748Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》。"
+        }
+      },
+      {
+        "event_id": "6798abe4-26cd-457f-91ae-6a2d0add19cf",
+        "request_id": "189d3107-bfe9-4b8c-850a-c3ca402103c0",
+        "seq": 4,
+        "timestamp": "2026-09-17T11:26:35.116748Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "tju-news-shangxian-20150928",
+              "title": "【120年校庆】泰山孔子石落户北洋园",
+              "snippet": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+              "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": "2015-09-28",
+              "retrieved_at": "2026-09-17"
+            }
+          ],
+          "kind": "cited"
+        }
+      },
+      {
+        "event_id": "2f45f6ee-7f86-48c8-85c2-c02967b2d7ef",
+        "request_id": "189d3107-bfe9-4b8c-850a-c3ca402103c0",
+        "seq": 5,
+        "timestamp": "2026-09-17T11:26:35.116748Z",
+        "type": "usage",
+        "payload": {
+          "model": "local-evidence",
+          "usage": null
+        }
+      },
+      {
+        "event_id": "4e5e239e-0d29-416c-8a45-47165742b6b2",
+        "request_id": "189d3107-bfe9-4b8c-850a-c3ca402103c0",
+        "seq": 6,
+        "timestamp": "2026-09-17T11:26:35.117097Z",
+        "type": "completed",
+        "payload": {
+          "response": {
+            "request_id": "189d3107-bfe9-4b8c-850a-c3ca402103c0",
+            "session_id": "3a137d8d-b69f-4576-a7de-b332c373b469",
+            "answer": "“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》。",
+            "sources": [
+              {
+                "id": "tju-news-shangxian-20150928",
+                "title": "【120年校庆】泰山孔子石落户北洋园",
+                "snippet": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+                "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+                "campus_id": "beiyangyuan",
+                "published_at": "2015-09-28",
+                "retrieved_at": "2026-09-17"
+              }
+            ],
+            "model": "local-evidence",
+            "usage": null,
+            "elapsed_ms": 16.00000000325963,
+            "actions": []
+          }
+        }
+      }
+    ],
+    "trace": {
+      "status": "success",
+      "local_source_ids": [
+        "poi-beiyangyuan-shangxian-stone",
+        "tju-news-shangxian-20150928"
+      ],
+      "external": null
+    }
+  },
+  {
+    "id": "Q06",
+    "input": "北洋园启用年份，以及图书馆今天几点关门？",
+    "first_body_ms": 43529.675300000235,
+    "completed_ms": 44197.81130000047,
+    "events": [
+      {
+        "event_id": "2af5618d-106f-43e5-a23e-f7db5e8f5c8d",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 1,
+        "timestamp": "2026-09-17T11:26:35.119118Z",
+        "type": "accepted",
+        "payload": {
+          "session_id": "a80a95ce-2c13-4c07-b5b2-ab6792f714aa",
+          "message_id": "3717b6df-4c42-41f5-b569-39bafb05c300",
+          "campus_id": "beiyangyuan",
+          "mode": "campus_qa"
+        }
+      },
+      {
+        "event_id": "cdae0dcf-b8cf-4e11-bd49-5fac5e4332fb",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 2,
+        "timestamp": "2026-09-17T11:26:35.119118Z",
+        "type": "status",
+        "payload": {
+          "stage": "request",
+          "status": "started"
+        }
+      },
+      {
+        "event_id": "ef608c6d-e8eb-4fb5-9dda-9e72ae5e7dff",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 3,
+        "timestamp": "2026-09-17T11:26:35.329188Z",
+        "type": "status",
+        "payload": {
+          "stage": "model",
+          "status": "started"
+        }
+      },
+      {
+        "event_id": "dbc9328f-f149-4c80-b035-7487e3f71b42",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 4,
+        "timestamp": "2026-09-17T11:27:18.646984Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "猫眼石"
+        }
+      },
+      {
+        "event_id": "e856ee86-7e6e-49af-a5ff-9bfdb8bfe3c1",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 5,
+        "timestamp": "2026-09-17T11:27:18.675426Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "，你的目光总是"
+        }
+      },
+      {
+        "event_id": "98c2d602-7d76-41f6-9d17-bccb0fc7180a",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 6,
+        "timestamp": "2026-09-17T11:27:18.690574Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "精准地落在最"
+        }
+      },
+      {
+        "event_id": "92ae83f2-a8af-4ae9-a823-e8881de9ad0c",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 7,
+        "timestamp": "2026-09-17T11:27:18.716055Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "核心的展品"
+        }
+      },
+      {
+        "event_id": "ce640596-6230-48f4-ae74-4eb17fc64943",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 8,
+        "timestamp": "2026-09-17T11:27:18.735884Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "上。根据通用"
+        }
+      },
+      {
+        "event_id": "4c59e46e-4e3e-4128-84b2-48944dddc97f",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 9,
+        "timestamp": "2026-09-17T11:27:18.757666Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "校史记载，"
+        }
+      },
+      {
+        "event_id": "b1573287-f216-43b8-82f9-e013a3a8772a",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 10,
+        "timestamp": "2026-09-17T11:27:18.779731Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "北洋"
+        }
+      },
+      {
+        "event_id": "820e74ce-5be0-4322-9acf-1a12df2b7b83",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 11,
+        "timestamp": "2026-09-17T11:27:18.803961Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "园校区于201"
+        }
+      },
+      {
+        "event_id": "f7b532a3-49c6-465c-a0cd-90eea569c841",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 12,
+        "timestamp": "2026-09-17T11:27:18.822944Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "5年正式启用"
+        }
+      },
+      {
+        "event_id": "69167cdd-ed76-449f-854b-3989a11e6737",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 13,
+        "timestamp": "2026-09-17T11:27:18.844327Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "，但"
+        }
+      },
+      {
+        "event_id": "7ffac906-7477-4f77-a937-fbec38938771",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 14,
+        "timestamp": "2026-09-17T11:27:18.867628Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "当前资料暂缺"
+        }
+      },
+      {
+        "event_id": "6f834042-3ebc-41a9-aa5d-25d7b6173905",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 15,
+        "timestamp": "2026-09-17T11:27:18.889047Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "，此年份"
+        }
+      },
+      {
+        "event_id": "c19770b5-e497-40b4-8ea3-07cfe158459d",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 16,
+        "timestamp": "2026-09-17T11:27:18.910470Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "未经本次检索"
+        }
+      },
+      {
+        "event_id": "0753da16-e43d-4e37-9bb9-70d83898a449",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 17,
+        "timestamp": "2026-09-17T11:27:18.933149Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "核验。至于"
+        }
+      },
+      {
+        "event_id": "7f09c41c-2d9c-4a6d-a4e3-62777138ca9b",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 18,
+        "timestamp": "2026-09-17T11:27:18.955802Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "今天图书馆的"
+        }
+      },
+      {
+        "event_id": "45425d5b-cb37-486a-a9e8-f9a67170fa14",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 19,
+        "timestamp": "2026-09-17T11:27:18.977528Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "闭馆时间，"
+        }
+      },
+      {
+        "event_id": "b005c552-e562-4371-8d8b-38b3c6cdd0f8",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 20,
+        "timestamp": "2026-09-17T11:27:18.999318Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "就像一场尚未公布"
+        }
+      },
+      {
+        "event_id": "2fce4599-82eb-4631-bf13-e3da9562ac99",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 21,
+        "timestamp": "2026-09-17T11:27:19.022406Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "压轴"
+        }
+      },
+      {
+        "event_id": "a68366be-3ec4-4c31-8018-c2ad5afc3b3a",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 22,
+        "timestamp": "2026-09-17T11:27:19.044039Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "舞曲的晚"
+        }
+      },
+      {
+        "event_id": "9f7892f0-9994-4fe8-b86b-73dddcf7c1e1",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 23,
+        "timestamp": "2026-09-17T11:27:19.064548Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "宴，我无法"
+        }
+      },
+      {
+        "event_id": "c597402e-a269-4f2a-b546-3442aeda725f",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 24,
+        "timestamp": "2026-09-17T11:27:19.088889Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "为你提供2026"
+        }
+      },
+      {
+        "event_id": "3a765b78-0d5b-425c-a3ce-da5b21d6661b",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 25,
+        "timestamp": "2026-09-17T11:27:19.110125Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "年9月17"
+        }
+      },
+      {
+        "event_id": "b7102932-f9fe-4033-a6f9-7524bfdf8615",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 26,
+        "timestamp": "2026-09-17T11:27:19.131505Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "日的确切时刻表"
+        }
+      },
+      {
+        "event_id": "e57b357e-0bb5-4e53-8c66-d4e92d097ace",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 27,
+        "timestamp": "2026-09-17T11:27:19.153638Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "，也绝"
+        }
+      },
+      {
+        "event_id": "753547f9-c2ae-4e04-b628-cd613d3abab1",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 28,
+        "timestamp": "2026-09-17T11:27:19.174143Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "不能用往昔的"
+        }
+      },
+      {
+        "event_id": "a985bf0b-66ec-40d5-a624-f4f5d411517c",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 29,
+        "timestamp": "2026-09-17T11:27:19.197883Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "常规时段来冒"
+        }
+      },
+      {
+        "event_id": "906d0bcd-efd7-4e8e-899c-4b06daf7445c",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 30,
+        "timestamp": "2026-09-17T11:27:19.219489Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "充今日的承诺"
+        }
+      },
+      {
+        "event_id": "8a2229b6-d06e-4709-bcb2-a0ba30a94382",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 31,
+        "timestamp": "2026-09-17T11:27:19.241388Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "。建议直接"
+        }
+      },
+      {
+        "event_id": "7f7b72ce-5a53-43dd-9ba2-c4f93ccc19ba",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 32,
+        "timestamp": "2026-09-17T11:27:19.262893Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "查阅天津大学"
+        }
+      },
+      {
+        "event_id": "a7a3f393-7aa2-4825-8858-b3260f12537e",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 33,
+        "timestamp": "2026-09-17T11:27:19.286029Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "图书馆官方渠道"
+        }
+      },
+      {
+        "event_id": "f28750b0-c9fa-406b-8e04-015f1a2faf09",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 34,
+        "timestamp": "2026-09-17T11:27:19.307060Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "，获取最准确的"
+        }
+      },
+      {
+        "event_id": "ae1608e2-ed79-4c7a-88d4-360b05c23f9a",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 35,
+        "timestamp": "2026-09-17T11:27:19.308070Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "落幕时间。"
+        }
+      },
+      {
+        "event_id": "8c84c10b-a4f9-4a66-8453-ac164e183456",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 36,
+        "timestamp": "2026-09-17T11:27:19.312157Z",
+        "type": "usage",
+        "payload": {
+          "model": "glm-51-fp8",
+          "usage": {
+            "prompt_tokens": 643,
+            "completion_tokens": 1571,
+            "total_tokens": 2214
+          }
+        }
+      },
+      {
+        "event_id": "7f2298e9-88e8-454f-9859-42544a9c7df7",
+        "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+        "seq": 37,
+        "timestamp": "2026-09-17T11:27:19.313163Z",
+        "type": "completed",
+        "payload": {
+          "response": {
+            "request_id": "376e9644-8af1-4e6b-b3f6-e1ea35585586",
+            "session_id": "a80a95ce-2c13-4c07-b5b2-ab6792f714aa",
+            "answer": "猫眼石，你的目光总是精准地落在最核心的展品上。根据通用校史记载，北洋园校区于2015年正式启用，但当前资料暂缺，此年份未经本次检索核验。至于今天图书馆的闭馆时间，就像一场尚未公布压轴舞曲的晚宴，我无法为你提供2026年9月17日的确切时刻表，也绝不能用往昔的常规时段来冒充今日的承诺。建议直接查阅天津大学图书馆官方渠道，获取最准确的落幕时间。",
+            "sources": [],
+            "model": "glm-51-fp8",
+            "usage": {
+              "prompt_tokens": 643,
+              "completion_tokens": 1571,
+              "total_tokens": 2214
+            },
+            "elapsed_ms": 44186.99999999808,
+            "actions": []
+          }
+        }
+      }
+    ],
+    "trace": {
+      "status": "unavailable",
+      "local_source_ids": [],
+      "external": {
+        "status": "unavailable",
+        "evidence": [],
+        "scope": [
+          "tju-main",
+          "tju-news"
+        ],
+        "trace": [
+          {
+            "url": "https://news.tju.edu.cn/",
+            "elapsed_ms": 109.0
+          },
+          {
+            "url": "https://www.tju.edu.cn/",
+            "elapsed_ms": 125.0
+          },
+          {
+            "url": "https://www.tju.edu.cn/xywh/xyfg.htm",
+            "elapsed_ms": 62.0
+          },
+          {
+            "url": "https://www.tju.edu.cn/info/4472/76562.htm",
+            "elapsed_ms": 78.0
+          },
+          {
+            "status": "unavailable",
+            "scope": [
+              "tju-main",
+              "tju-news"
+            ],
+            "coverage": "registered pages only; no search provider configured",
+            "page_calls": 4
+          }
+        ],
+        "page_calls": 4,
+        "search_calls": 0,
+        "cache_hit": false
+      },
+      "parts": {
+        "stable": "no_evidence",
+        "current": "unavailable"
+      }
+    }
+  }
+]

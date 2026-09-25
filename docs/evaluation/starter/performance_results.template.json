@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "status": "NOT_RUN",
+  "note": "Blank recording template; targets in prompts are not measured results.",
+  "baseline_build_id": null,
+  "candidate_build_id": null,
+  "measurements": [
+    {
+      "id": "P01",
+      "metric": "poi_click_to_visible_introduction",
+      "clock": "browser_performance",
+      "setup": "Same Datong/Zhengdong/Shangxian POIs and same data version",
+      "baseline": {
+        "status": "NOT_RUN",
+        "external_calls": {},
+        "evidence": [],
+        "cold_samples": [],
+        "warm_samples": [],
+        "medians_ms": {
+          "cold": null,
+          "warm": null
+        }
+      },
+      "candidate": {
+        "status": "NOT_RUN",
+        "external_calls": {},
+        "evidence": [],
+        "cold_samples": [],
+        "warm_samples": [],
+        "medians_ms": {
+          "cold": null,
+          "warm": null
+        }
+      },
+      "same_inputs_and_quality_verified": null,
+      "latency_names": [
+        "visible_introduction_ms"
+      ]
+    },
+    {
+      "id": "P02",
+      "metric": "poi_click_to_current_image_loaded",
+      "clock": "browser_performance",
+      "setup": "Same existing Datong/Zhengdong image URLs and viewport",
+      "baseline": {
+        "status": "NOT_RUN",
+        "external_calls": {},
+        "evidence": [],
+        "cold_samples": [],
+        "warm_samples": [],
+        "medians_ms": {
+          "cold": null,
+          "warm": null
+        }
+      },
+      "candidate": {
+        "status": "NOT_RUN",
+        "external_calls": {},
+        "evidence": [],
+        "cold_samples": [],
+        "warm_samples": [],
+        "medians_ms": {
+          "cold": null,
+          "warm": null
+        }
+      },
+      "same_inputs_and_quality_verified": null,
+      "latency_names": [
+        "image_loaded_ms"
+      ]
+    },
+    {
+      "id": "P03",
+      "metric": "play_click_to_first_audio_progress",
+      "clock": "browser_performance",
+      "setup": "Same text, voice, speed; distinguish cold synthesis and audio cache",
+      "baseline": {
+        "status": "NOT_RUN",
+        "external_calls": {},
+        "evidence": [],
+        "cold_samples": [],
+        "warm_samples": [],
+        "medians_ms": {
+          "cold": null,
+          "warm": null
+        }
+      },
+      "candidate": {
+        "status": "NOT_RUN",
+        "external_calls": {},
+        "evidence": [],
+        "cold_samples": [],
+        "warm_samples": [],
+        "medians_ms": {
+          "cold": null,
+          "warm": null
+        }
+      },
+      "same_inputs_and_quality_verified": null,
+      "latency_names": [
+        "first_audio_progress_ms"
+      ]
+    },
+    {
+      "id": "P04",
+      "metric": "question_to_first_meaningful_answer_and_completion",
+      "clock": "browser_performance",
+      "setup": "Record the two timestamps separately; status events excluded",
+      "baseline": {
+        "status": "NOT_RUN",
+        "external_calls": {},
+        "evidence": [],
+        "cold_samples": [],
+        "warm_samples": [],
+        "medians_ms": {
+          "cold": null,
+          "warm": null
+        }
+      },
+      "candidate": {
+        "status": "NOT_RUN",
+        "external_calls": {},
+        "evidence": [],
+        "cold_samples": [],
+        "warm_samples": [],
+        "medians_ms": {
+          "cold": null,
+          "warm": null
+        }
+      },
+      "same_inputs_and_quality_verified": null,
+      "latency_names": [
+        "first_meaningful_answer_visible_ms",
+        "answer_completed_ms"
+      ]
+    },
+    {
+      "id": "P05",
+      "metric": "plan_to_draft_and_map_application",
+      "clock": "browser_performance",
+      "setup": "Same confirmed origin, stopIds, constraints and route service; separate draft/map timestamps",
+      "baseline": {
+        "status": "NOT_RUN",
+        "external_calls": {},
+        "evidence": [],
+        "cold_samples": [],
+        "warm_samples": [],
+        "medians_ms": {
+          "cold": null,
+          "warm": null
+        }
+      },
+      "candidate": {
+        "status": "NOT_RUN",
+        "external_calls": {},
+        "evidence": [],
+        "cold_samples": [],
+        "warm_samples": [],
+        "medians_ms": {
+          "cold": null,
+          "warm": null
+        }
+      },
+      "same_inputs_and_quality_verified": null,
+      "latency_names": [
+        "usable_draft_visible_ms",
+        "real_route_applied_to_map_ms"
+      ]
+    },
+    {
+      "id": "P06",
+      "metric": "record_stop_to_editable_transcript",
+      "clock": "browser_performance",
+      "setup": "Same Mandarin audio clip; real microphone scenario additionally labelled",
+      "baseline": {
+        "status": "NOT_RUN",
+        "external_calls": {},
+        "evidence": [],
+        "cold_samples": [],
+        "warm_samples": [],
+        "medians_ms": {
+          "cold": null,
+          "warm": null
+        }
+      },
+      "candidate": {
+        "status": "NOT_RUN",
+        "external_calls": {},
+        "evidence": [],
+        "cold_samples": [],
+        "warm_samples": [],
+        "medians_ms": {
+          "cold": null,
+          "warm": null
+        }
+      },
+      "same_inputs_and_quality_verified": null,
+      "latency_names": [
+        "editable_transcript_ms"
+      ]
+    }
+  ],
+  "sample_shape": {
+    "run": "integer",
+    "latencies_ms": {
+      "metric_name": "number_or_null"
+    },
+    "status": "PASS/FAIL/BLOCKED",
+    "notes": "string"
+  }
+}

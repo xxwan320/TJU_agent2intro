@@ -7,7 +7,7 @@ if (Test-Path -LiteralPath $receiptPath) {
  $prior=Get-Content -LiteralPath $receiptPath -Raw | ConvertFrom-Json
  foreach ($item in $prior.processes) {
   $process=Get-Process -Id $item.pid -ErrorAction SilentlyContinue
-  if ($process -and $process.StartTime.ToUniversalTime().Ticks.ToString() -eq $item.started_ticks) { throw 'This checkout is already running. Use scripts/stop.ps1 first.' }
+  if ($process -and $process.StartTime.ToUniversalTime().Ticks.ToString() -eq $item.started_ticks) { throw 'This project is already running. Use scripts/stop.ps1 first.' }
  }
 }
 $ports=if ($Mode -eq 'dev') { @($ApiPort,$WebPort) } else { @($ApiPort) }
@@ -35,6 +35,14 @@ function Record-Process([int]$ProcessId,[string]$Role) {
  $process=Get-Process -Id $ProcessId -ErrorAction SilentlyContinue
  if ($process) { $records.Add([pscustomobject]@{pid=$process.Id;started_ticks=$process.StartTime.ToUniversalTime().Ticks.ToString();role=$Role}); Save-Receipt }
 }
+# Start the optional local Mandarin recognizer only when the backend points to it.
+# Remote ASR configurations are left to their existing service.
+$localAsr=& (Join-Path $root '.venv/Scripts/python.exe') -c "from backend.common.config import get_settings; s=get_settings(); print(s.asr_model.removeprefix('whisper-') if s.asr_url.rstrip('/') == 'http://127.0.0.1:8010/v1' else '')"
+if ($localAsr -and -not (Get-NetTCPConnection -LocalPort 8010 -State Listen -ErrorAction SilentlyContinue)) {
+ $env:HF_HOME=Join-Path $runtime 'huggingface'
+ $asr=Start-Process -FilePath (Join-Path $root '.venv/Scripts/python.exe') -ArgumentList @('scripts/local-asr-server.py','--model',$localAsr.Trim(),'--port','8010') -WorkingDirectory $root -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $logs 'asr.stdout.log') -RedirectStandardError (Join-Path $logs 'asr.stderr.log')
+ Record-Process $asr.Id 'asr-launcher'
+}
 $api=Start-Process -FilePath (Join-Path $root '.venv/Scripts/python.exe') -ArgumentList @('-m','uvicorn','backend.app:app','--host','127.0.0.1','--port',[string]$ApiPort,'--no-access-log') -WorkingDirectory $root -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $logs 'api.stdout.log') -RedirectStandardError (Join-Path $logs 'api.stderr.log')
 Record-Process $api.Id 'api-launcher'
 if ($Mode -eq 'dev') {
@@ -51,7 +59,7 @@ for ($attempt=0; $attempt -lt 20; $attempt++) {
   $webReady=$true
   if ($Mode -eq 'dev') { $null=Invoke-WebRequest -UseBasicParsing -Uri "http://127.0.0.1:$WebPort/" -TimeoutSec 2 }
   if ($health.status -eq 'ok' -and $webReady) { break }
- } catch { if ($attempt -eq 19) { throw 'Startup check failed. Inspect this checkout .runtime/logs; stop.ps1 stops only recorded processes.' }; Start-Sleep -Milliseconds 500 }
+ } catch { if ($attempt -eq 19) { throw 'Startup check failed. Inspect this project .runtime/logs; stop.ps1 stops only recorded processes.' }; Start-Sleep -Milliseconds 500 }
 }
 Save-Receipt
 $url=if ($Mode -eq 'dev') { "http://127.0.0.1:$WebPort" } else { "http://127.0.0.1:$ApiPort" }

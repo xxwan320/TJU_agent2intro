@@ -1,0 +1,348 @@
+{
+  "dataset_id": "r3-d-eval-v1",
+  "annotation_method": "Human-checkable primary-source claims and contract constraints selected before changes; no generated answers used as gold.",
+  "legacy_file": "legacy-50.json",
+  "holdout_policy": "D does not execute or tune against holdout. M executes final acceptance separately; repository visibility is not secrecy.",
+  "questions": [
+    {
+      "id": "s01",
+      "campus_id": "weijinlu",
+      "query": "校史博物馆个人参观指南规定几点停止入馆？",
+      "kind": "service",
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-history-museum"
+      ],
+      "source_refs": [
+        "src-r3-museum"
+      ],
+      "hard_constraints": [
+        "指南规定周五六14:00-17:00、16:00停止入馆；排除节假日寒暑假；不能承诺今天开放。"
+      ],
+      "relevant_fact_ids": [
+        "r3-museum-personal"
+      ]
+    },
+    {
+      "id": "s02",
+      "campus_id": "weijinlu",
+      "query": "校史馆团体要提前多久预约？",
+      "kind": "service",
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-history-museum"
+      ],
+      "source_refs": [
+        "src-r3-museum"
+      ],
+      "hard_constraints": [
+        "至少提前2天通过融合门户办事大厅；入馆预约不代替进校预约。"
+      ],
+      "relevant_fact_ids": [
+        "r3-museum-booking"
+      ]
+    },
+    {
+      "id": "s03",
+      "campus_id": "weijinlu",
+      "query": "老人行动不便能独自参观校史馆吗？",
+      "kind": "service",
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-history-museum"
+      ],
+      "source_refs": [
+        "src-r3-museum"
+      ],
+      "hard_constraints": [
+        "高龄老人及行动不便者须亲友陪同；轮椅入口仍pending。"
+      ],
+      "relevant_fact_ids": [
+        "r3-museum-companion"
+      ]
+    },
+    {
+      "id": "s04",
+      "campus_id": "beiyangyuan",
+      "query": "2024新生指南里的郑东馆开放时间？",
+      "kind": "service",
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-zhengdong-library"
+      ],
+      "source_refs": [
+        "src-r3-library-guide"
+      ],
+      "hard_constraints": [
+        "常规8:00-22:30；节假日寒暑假另行安排；不是2026现场核验。"
+      ],
+      "relevant_fact_ids": [
+        "r3-library-hours-by"
+      ]
+    },
+    {
+      "id": "s05",
+      "campus_id": "weijinlu",
+      "query": "2024新生没有校园卡如何进北馆？",
+      "kind": "service",
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-chunshui-library"
+      ],
+      "source_refs": [
+        "src-r3-library-guide"
+      ],
+      "hard_constraints": [
+        "新生可凭录取报到通知单；不能推广到社会访客。"
+      ],
+      "relevant_fact_ids": [
+        "r3-library-newstudent-wj"
+      ]
+    },
+    {
+      "id": "s06",
+      "campus_id": "beiyangyuan",
+      "query": "2026海棠季中学生免预约要带什么？",
+      "kind": "service",
+      "split": "development",
+      "expected_entity_ids": [],
+      "source_refs": [
+        "src-r3-haitang-2026"
+      ],
+      "hard_constraints": [
+        "只适用2026-04-04至11；本人中学生证、陪同家长身份证。"
+      ],
+      "relevant_fact_ids": [
+        "r3-haitang-student-by"
+      ]
+    },
+    {
+      "id": "s07",
+      "campus_id": "weijinlu",
+      "query": "今天食堂几点营业？",
+      "kind": "no_evidence",
+      "split": "development",
+      "expected_entity_ids": [],
+      "source_refs": [],
+      "hard_constraints": [
+        "没有现行营业时刻证据，必须未知。"
+      ],
+      "relevant_fact_ids": []
+    },
+    {
+      "id": "s08",
+      "campus_id": "beiyangyuan",
+      "query": "三问桥现在施工吗？",
+      "kind": "no_evidence",
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-sanwen-bridge"
+      ],
+      "source_refs": [],
+      "hard_constraints": [
+        "没有临时施工实证，不可回答畅通或关闭。"
+      ],
+      "relevant_fact_ids": []
+    },
+    {
+      "id": "s09",
+      "campus_id": "weijinlu",
+      "query": "校史馆个人参观用什么证件登记？",
+      "kind": "service",
+      "split": "holdout",
+      "expected_entity_ids": [
+        "weijinlu-history-museum"
+      ],
+      "source_refs": [
+        "src-r3-museum"
+      ],
+      "hard_constraints": [
+        "有效证件；馆内无需预约不等于校门免预约。"
+      ],
+      "relevant_fact_ids": [
+        "r3-museum-id"
+      ]
+    },
+    {
+      "id": "s10",
+      "campus_id": "weijinlu",
+      "query": "校史馆团队迟到40分钟又没打电话会怎样？",
+      "kind": "service",
+      "split": "holdout",
+      "expected_entity_ids": [
+        "weijinlu-history-museum"
+      ],
+      "source_refs": [
+        "src-r3-museum"
+      ],
+      "hard_constraints": [
+        "超过半小时且未事先电话告知视为取消。"
+      ],
+      "relevant_fact_ids": [
+        "r3-museum-late"
+      ]
+    },
+    {
+      "id": "s11",
+      "campus_id": "beiyangyuan",
+      "query": "郑东图书馆阅览区可以带奶茶吗？",
+      "kind": "service",
+      "split": "holdout",
+      "expected_entity_ids": [
+        "beiyangyuan-zhengdong-library"
+      ],
+      "source_refs": [
+        "src-r3-library-guide"
+      ],
+      "hard_constraints": [
+        "指南禁止食物饮料和冲调饮品进入阅览区；标明指南日期。"
+      ],
+      "relevant_fact_ids": [
+        "r3-library-food-by"
+      ]
+    },
+    {
+      "id": "s12",
+      "campus_id": "weijinlu",
+      "query": "明天北馆保证对游客开放吗？",
+      "kind": "no_evidence",
+      "split": "holdout",
+      "expected_entity_ids": [
+        "weijinlu-chunshui-library"
+      ],
+      "source_refs": [],
+      "hard_constraints": [
+        "不能用2024新生指南或海棠季新闻保证明天游客准入。"
+      ],
+      "relevant_fact_ids": []
+    },
+    {
+      "id": "t01-wj",
+      "campus_id": "weijinlu",
+      "query": "从东门出发，60分钟看文化点、图书馆并找餐饮，安排3到5站。",
+      "kind": "itinerary",
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-east-gate",
+        "weijinlu-history-museum",
+        "weijinlu-chunshui-library",
+        "weijinlu-xue-4-dining"
+      ],
+      "source_refs": [
+        "poi-weijinlu-east-gate",
+        "poi-weijinlu-history-museum",
+        "poi-weijinlu-chunshui-library",
+        "poi-weijinlu-xue-4-dining"
+      ],
+      "hard_constraints": [
+        "仅本校区真实ID、3到5站；分钟为规划分配；路程时间未知，不证明60分钟可行；门禁与餐饮游客准入pending。"
+      ],
+      "relevant_fact_ids": []
+    },
+    {
+      "id": "t02-wj",
+      "campus_id": "weijinlu",
+      "query": "下雨且同行者使用轮椅，把剩余30分钟换成有厕所和座位的室内路线。",
+      "kind": "itinerary",
+      "split": "development",
+      "expected_entity_ids": [
+        "weijinlu-chunshui-library"
+      ],
+      "source_refs": [],
+      "hard_constraints": [
+        "不保证无障碍入口、卫生间、座椅或遮雨连廊；先补查；未核验时允许缩短或暂停，不编造室内可行线路。"
+      ],
+      "relevant_fact_ids": []
+    },
+    {
+      "id": "t03-wj",
+      "campus_id": "weijinlu",
+      "query": "已走完第一站，把剩余时间缩为20分钟，再删一站。",
+      "kind": "itinerary",
+      "split": "holdout",
+      "expected_entity_ids": [],
+      "source_refs": [],
+      "hard_constraints": [
+        "交M执行；已完成站及stop_id保持，版本更新，只改未完成部分，剩余时间缺路程不能造数。"
+      ],
+      "relevant_fact_ids": []
+    },
+    {
+      "id": "t04-wj",
+      "campus_id": "weijinlu",
+      "query": "导航成功了，请确认今天所有门都能过，省略开放核验。",
+      "kind": "itinerary",
+      "split": "holdout",
+      "expected_entity_ids": [],
+      "source_refs": [],
+      "hard_constraints": [
+        "拒绝把高德路线当实地通行依据；unknown成本null；保留门禁与时效警告。"
+      ],
+      "relevant_fact_ids": []
+    },
+    {
+      "id": "t01-by",
+      "campus_id": "beiyangyuan",
+      "query": "从东门出发，60分钟看文化点、图书馆并找餐饮，安排3到5站。",
+      "kind": "itinerary",
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-east-gate",
+        "beiyangyuan-sanwen-bridge",
+        "beiyangyuan-zhengdong-library",
+        "beiyangyuan-xue-3-dining"
+      ],
+      "source_refs": [
+        "poi-beiyangyuan-east-gate",
+        "poi-beiyangyuan-sanwen-bridge",
+        "poi-beiyangyuan-zhengdong-library",
+        "poi-beiyangyuan-xue-3-dining"
+      ],
+      "hard_constraints": [
+        "仅本校区真实ID、3到5站；分钟为规划分配；路程时间未知，不证明60分钟可行；门禁与餐饮游客准入pending。"
+      ],
+      "relevant_fact_ids": []
+    },
+    {
+      "id": "t02-by",
+      "campus_id": "beiyangyuan",
+      "query": "下雨且同行者使用轮椅，把剩余30分钟换成有厕所和座位的室内路线。",
+      "kind": "itinerary",
+      "split": "development",
+      "expected_entity_ids": [
+        "beiyangyuan-zhengdong-library"
+      ],
+      "source_refs": [],
+      "hard_constraints": [
+        "不保证无障碍入口、卫生间、座椅或遮雨连廊；先补查；未核验时允许缩短或暂停，不编造室内可行线路。"
+      ],
+      "relevant_fact_ids": []
+    },
+    {
+      "id": "t03-by",
+      "campus_id": "beiyangyuan",
+      "query": "已走完第一站，把剩余时间缩为20分钟，再删一站。",
+      "kind": "itinerary",
+      "split": "holdout",
+      "expected_entity_ids": [],
+      "source_refs": [],
+      "hard_constraints": [
+        "交M执行；已完成站及stop_id保持，版本更新，只改未完成部分，剩余时间缺路程不能造数。"
+      ],
+      "relevant_fact_ids": []
+    },
+    {
+      "id": "t04-by",
+      "campus_id": "beiyangyuan",
+      "query": "导航成功了，请确认今天所有门都能过，省略开放核验。",
+      "kind": "itinerary",
+      "split": "holdout",
+      "expected_entity_ids": [],
+      "source_refs": [],
+      "hard_constraints": [
+        "拒绝把高德路线当实地通行依据；unknown成本null；保留门禁与时效警告。"
+      ],
+      "relevant_fact_ids": []
+    }
+  ]
+}

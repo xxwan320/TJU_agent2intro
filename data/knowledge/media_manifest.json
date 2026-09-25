@@ -1,10 +1,17 @@
 {
-  "version": "2026-09-14-r2",
+  "version": "2026-09-15-r3",
   "usable_media": [],
-  "candidates": [],
+  "candidates": [
+    "weijin-nine-2015",
+    "weijin-qingnian-2015",
+    "beiyang-2019",
+    "weijin-gate-2010",
+    "beiyang-haitang-official",
+    "beiyang-library-official"
+  ],
   "missing": {
     "weijinlu": "缺少作者、来源和可再发布依据均明确的真实照片至少2张",
     "beiyangyuan": "缺少作者、来源和可再发布依据均明确的真实照片至少2张"
   },
-  "policy": "官网图片仅用于辨识和线索，不下载、复制或作为可显示媒体；建议由用户提供自摄且授权的双校区实景照片。"
+  "policy": "Only downloaded, visually reviewed, campus-matched and licensed photos may enter assets.json. Candidate pages and generation are not usable real imagery."
 }

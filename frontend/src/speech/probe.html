@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8"><title>B-R2 speech probe</title><style>body{font:16px sans-serif;margin:20px}button{margin:4px;padding:8px}#avatar{width:360px;height:420px;background:#eef}pre{white-space:pre-wrap}</style></head>
+<head><meta charset="UTF-8"><title>B speech playback probe</title><style>body{font:16px sans-serif;margin:20px}button{margin:4px;padding:8px}#avatar{width:360px;height:420px;background:#eef}pre{white-space:pre-wrap}</style></head>
 <body>
-  <h1>B-R2 真实播放探针</h1>
+  <h1>B 真实播放与 amplitude 嘴形探针</h1>
   <p id="state" data-status="new_session">新页面：尚未激活语音</p>
   <button id="precheck">未激活检查</button><button id="activate">点击开启/恢复语音</button><button id="five">连续播报 5 次</button><button id="long">长段</button><button id="pause">暂停</button><button id="resume">继续</button><button id="campus">切校区打断</button><button id="failure">TTS 失败</button><button id="stop">停止播报</button>
   <div id="avatar"></div><pre id="result"></pre>
@@ -15,6 +15,7 @@
     await avatar.mount(document.querySelector('#avatar'));
     const progress = [];
     const controller = createSpeechController();
+    controller.getAdapter().subscribeAudioLevel(level => avatar.setAudioLevel(level));
     controller.subscribe((event) => {
       progress.push({...event, at: performance.now()});
       state.dataset.status = event.status;
@@ -32,7 +33,7 @@
     document.querySelector('#five').onclick = async () => {
       const started=performance.now();
       window.__speechProbe.fiveStarted=started;
-      try { for(let i=1;i<=5;i++){const r=run(i);const waiting=waitIdle(r.generation_id);await controller.playSegment(r,`这是珂莱塔第${i}次中文播放测试。本段只检查声音，不陈述校园事实。`,`answer-${i}`);await waiting;} state.dataset.status='five_complete'; state.textContent='连续 5 次播放完成'; result.dataset.elapsed=String(performance.now()-started); result.dataset.firstSpeaking=String(progress.find((event)=>event.status==='speaking'&&event.at>=started)?.at-started); }
+      try { for(let i=1;i<=5;i++){const r=run(i);const waiting=waitIdle(r.generation_id);await controller.playSegment(r,`这是海小棠第${i}次中文播放测试。本段只检查声音，不陈述校园事实。`,`answer-${i}`);await waiting;} state.dataset.status='five_complete'; state.textContent='连续 5 次播放完成'; result.dataset.elapsed=String(performance.now()-started); result.dataset.firstSpeaking=String(progress.find((event)=>event.status==='speaking'&&event.at>=started)?.at-started); }
       catch(error){state.dataset.status='failed';state.textContent=`播放失败：${error.message}`;}
     };
     document.querySelector('#stop').onclick = () => controller.stop('user');

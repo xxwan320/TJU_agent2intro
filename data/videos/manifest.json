@@ -1,0 +1,16 @@
+[
+  {
+    "id": "zhengdong-photo-tour-v1",
+    "poi_id": "beiyangyuan-zhengdong-library",
+    "campus_id": "beiyangyuan",
+    "file": "beiyangyuan-zhengdong-library-1.mp4",
+    "title": "郑东图书馆 · 实景照片导览片",
+    "kind": "photo_film",
+    "keywords": ["郑东图书馆", "建筑", "外观", "介绍"],
+    "description": "由本项目用户提供的三张郑东图书馆照片编排，非实拍视频；不用于说明实时开放状态。",
+    "poster": "/assets/campus/photos/beiyangyuan-zhengdong-library-1.jpg",
+    "source": "data/reference_photos/manifest.csv 中郑东图书馆的三张用户照片",
+    "usage_basis": "沿用原照片的本机导览使用范围",
+    "available": true
+  }
+]

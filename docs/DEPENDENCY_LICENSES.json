@@ -178,15 +178,6 @@
   },
   {
     "ecosystem": "python",
-    "name": "pytest",
-    "version": "9.1.1",
-    "license": "MIT",
-    "license_files": [
-      "docs\\licenses\\pytest\\licenses__LICENSE"
-    ]
-  },
-  {
-    "ecosystem": "python",
     "name": "pydantic",
     "version": "2.13.5",
     "license": "MIT",

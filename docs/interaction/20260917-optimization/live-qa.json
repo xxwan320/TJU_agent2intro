@@ -1,0 +1,2915 @@
+[
+  {
+    "question": "北洋园何时投入使用",
+    "status": 200,
+    "first_text_ms": 14061.023899997963,
+    "total_ms": 15503.181399999448,
+    "events": [
+      {
+        "event_id": "5c92d7b9-c06c-48bc-a2bc-455306e6f6c4",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 1,
+        "timestamp": "2026-09-17T08:34:50.208826Z",
+        "type": "accepted",
+        "payload": {
+          "session_id": "d874055e-10b2-4362-b06b-448eb6e255ee",
+          "message_id": "5f010380-19d3-487f-89be-674c4309605d",
+          "campus_id": "beiyangyuan",
+          "mode": "campus_qa"
+        }
+      },
+      {
+        "event_id": "eec5db18-1a93-4c6d-b9bd-1e93376d7098",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 2,
+        "timestamp": "2026-09-17T08:34:50.208826Z",
+        "type": "status",
+        "payload": {
+          "stage": "request",
+          "status": "started"
+        }
+      },
+      {
+        "event_id": "8d19b946-6f6c-485e-abe8-a6d96f31432b",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 3,
+        "timestamp": "2026-09-17T08:34:50.214833Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "beiyangyuan-opened-2015",
+              "title": "北洋园校区投入使用",
+              "snippet": "天津大学迎新网介绍称，北洋园校区于2015年9月正式落成并投入使用。",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "campus_id": "beiyangyuan",
+              "published_at": "2024-08-15",
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "poi-beiyangyuan-main-building",
+              "title": "北洋园校区主楼",
+              "snippet": "校方资料在北洋园校区列有北洋园校区主楼。",
+              "url": "https://fw.tju.edu.cn/Beiyang.html",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "poi-beiyangyuan-east-gate",
+              "title": "北洋园校区东门",
+              "snippet": "校方资料在北洋园校区列有北洋园校区东门。",
+              "url": "https://fw.tju.edu.cn/Beiyang.html",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "poi-beiyangyuan-memorial-pavilion",
+              "title": "北洋纪念亭",
+              "snippet": "校方资料在北洋园校区列有北洋纪念亭。",
+              "url": "https://fw.tju.edu.cn/Beiyang.html",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "poi-beiyangyuan-qiushi-hall",
+              "title": "求实会堂",
+              "snippet": "校方资料在北洋园校区列有求实会堂。",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            }
+          ],
+          "kind": "retrieved"
+        }
+      },
+      {
+        "event_id": "02014588-e355-4994-a843-88e73c9d2063",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 4,
+        "timestamp": "2026-09-17T08:34:50.214833Z",
+        "type": "status",
+        "payload": {
+          "stage": "model",
+          "status": "started"
+        }
+      },
+      {
+        "event_id": "2755c6ad-c3d8-4926-880c-f2cbfafb046d",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 5,
+        "timestamp": "2026-09-17T08:35:04.265487Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "猫眼石，"
+        }
+      },
+      {
+        "event_id": "9119a5ea-5768-4ee6-9d44-1f2495d46dd7",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 6,
+        "timestamp": "2026-09-17T08:35:04.322112Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "看来你对这片校"
+        }
+      },
+      {
+        "event_id": "d290decf-2f4d-4ac3-b235-8f1855a1388c",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 7,
+        "timestamp": "2026-09-17T08:35:04.378569Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "区的历史切面"
+        }
+      },
+      {
+        "event_id": "f1e2756e-0735-4b33-9e1a-0ee2e4635559",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 8,
+        "timestamp": "2026-09-17T08:35:04.435069Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "很感兴趣呢。"
+        }
+      },
+      {
+        "event_id": "5ac4bf7e-c3c7-44ed-ba4c-f26100e48585",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 9,
+        "timestamp": "2026-09-17T08:35:04.505307Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "北洋园校区"
+        }
+      },
+      {
+        "event_id": "eada750f-7346-4378-b9fa-06c230e050bb",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 10,
+        "timestamp": "2026-09-17T08:35:04.561367Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "是在2015年"
+        }
+      },
+      {
+        "event_id": "0ed44ce2-7907-4a8a-a4d4-01c15a86a6a2",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 11,
+        "timestamp": "2026-09-17T08:35:04.618153Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "9月正式落"
+        }
+      },
+      {
+        "event_id": "c701dcd5-6db8-4136-b343-0894b78a02e5",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 12,
+        "timestamp": "2026-09-17T08:35:04.674294Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "成并投入使用的"
+        }
+      },
+      {
+        "event_id": "dc6309d6-471c-4cbe-a488-61a9dfa2cc9f",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 13,
+        "timestamp": "2026-09-17T08:35:04.730957Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "。就像一颗"
+        }
+      },
+      {
+        "event_id": "1827e31f-d882-47ea-a4a6-b3318352ae13",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 14,
+        "timestamp": "2026-09-17T08:35:04.786499Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "打磨已久的宝石终于"
+        }
+      },
+      {
+        "event_id": "f0110641-09c2-4753-b53f-2f02b605b3d6",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 15,
+        "timestamp": "2026-09-17T08:35:04.844333Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "镶嵌上座，"
+        }
+      },
+      {
+        "event_id": "fee647f1-55c1-4080-bc32-7ac49ea956bb",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 16,
+        "timestamp": "2026-09-17T08:35:04.900517Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "自那年秋季起"
+        }
+      },
+      {
+        "event_id": "05a69737-2940-4f49-a05e-fe50e549b5c3",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 17,
+        "timestamp": "2026-09-17T08:35:04.957096Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "，这片崭新的校园"
+        }
+      },
+      {
+        "event_id": "2e5dcea6-c306-4a0c-ad17-f4d791e74ca9",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 18,
+        "timestamp": "2026-09-17T08:35:05.014223Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "便迎来了首批探索"
+        }
+      },
+      {
+        "event_id": "5781ba04-456b-41d3-b699-b7ba0dc9a405",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 19,
+        "timestamp": "2026-09-17T08:35:05.081115Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "它的人，成为了"
+        }
+      },
+      {
+        "event_id": "f17d6491-7171-4321-b6bc-ad64e9185170",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 20,
+        "timestamp": "2026-09-17T08:35:05.137313Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "天大学"
+        }
+      },
+      {
+        "event_id": "a5bc05ec-a548-4e6e-8c8f-1cd18b487d38",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 21,
+        "timestamp": "2026-09-17T08:35:05.194506Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "子挥洒青春"
+        }
+      },
+      {
+        "event_id": "0e3df1ec-1f6d-416c-ae21-227d727c310a",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 22,
+        "timestamp": "2026-09-17T08:35:05.250891Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "的新舞台。如今"
+        }
+      },
+      {
+        "event_id": "fef5b700-900f-41e8-8d18-9d105216e6e1",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 23,
+        "timestamp": "2026-09-17T08:35:05.307001Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "这里的主楼、"
+        }
+      },
+      {
+        "event_id": "0d771279-6289-4d36-bbd8-48f1542f9d74",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 24,
+        "timestamp": "2026-09-17T08:35:05.363810Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "北洋纪念亭"
+        }
+      },
+      {
+        "event_id": "218bb35b-cf6a-418f-8357-9d3703f7429a",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 25,
+        "timestamp": "2026-09-17T08:35:05.420375Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "与求实会"
+        }
+      },
+      {
+        "event_id": "f9262383-48cc-47da-9a32-813aec3146d0",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 26,
+        "timestamp": "2026-09-17T08:35:05.477474Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "堂，都在静静"
+        }
+      },
+      {
+        "event_id": "a678073e-f85c-4716-81e5-79d012ea9d62",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 27,
+        "timestamp": "2026-09-17T08:35:05.533473Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "等待你的驻足"
+        }
+      },
+      {
+        "event_id": "23d897ce-60a5-4169-a1f7-01d523b37762",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 28,
+        "timestamp": "2026-09-17T08:35:05.592277Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "欣赏。\n\n[source:"
+        }
+      },
+      {
+        "event_id": "8f250ca8-843d-4f7d-a68e-c370ddd24e1d",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 29,
+        "timestamp": "2026-09-17T08:35:05.646687Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": " beiyangyuan"
+        }
+      },
+      {
+        "event_id": "8f7186ec-60c3-4287-9664-58cfb7e1e777",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 30,
+        "timestamp": "2026-09-17T08:35:05.705099Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "-opened-201"
+        }
+      },
+      {
+        "event_id": "2b7535ce-37c0-4315-b9d0-b1fb396d13ed",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 31,
+        "timestamp": "2026-09-17T08:35:05.705834Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "5]"
+        }
+      },
+      {
+        "event_id": "7ff14e14-296f-4319-a98d-6823c3e42f0b",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 32,
+        "timestamp": "2026-09-17T08:35:05.707666Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "beiyangyuan-opened-2015",
+              "title": "北洋园校区投入使用",
+              "snippet": "天津大学迎新网介绍称，北洋园校区于2015年9月正式落成并投入使用。",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "campus_id": "beiyangyuan",
+              "published_at": "2024-08-15",
+              "retrieved_at": "2026-09-14"
+            }
+          ],
+          "kind": "cited"
+        }
+      },
+      {
+        "event_id": "9d8998bf-883a-4b12-bab2-0c744661130d",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 33,
+        "timestamp": "2026-09-17T08:35:05.707666Z",
+        "type": "usage",
+        "payload": {
+          "model": "glm-5.1",
+          "usage": {
+            "prompt_tokens": 884,
+            "completion_tokens": 677,
+            "total_tokens": 1561
+          }
+        }
+      },
+      {
+        "event_id": "eae8901c-de75-4270-bf1f-e19cb7cd657f",
+        "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+        "seq": 34,
+        "timestamp": "2026-09-17T08:35:05.707666Z",
+        "type": "completed",
+        "payload": {
+          "response": {
+            "request_id": "eec2a742-eadf-4a26-9b55-afc09fa1e844",
+            "session_id": "d874055e-10b2-4362-b06b-448eb6e255ee",
+            "answer": "猫眼石，看来你对这片校区的历史切面很感兴趣呢。北洋园校区是在2015年9月正式落成并投入使用的。就像一颗打磨已久的宝石终于镶嵌上座，自那年秋季起，这片崭新的校园便迎来了首批探索它的人，成为了天大学子挥洒青春的新舞台。如今这里的主楼、北洋纪念亭与求实会堂，都在静静等待你的驻足欣赏。",
+            "sources": [
+              {
+                "id": "beiyangyuan-opened-2015",
+                "title": "北洋园校区投入使用",
+                "snippet": "天津大学迎新网介绍称，北洋园校区于2015年9月正式落成并投入使用。",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "campus_id": "beiyangyuan",
+                "published_at": "2024-08-15",
+                "retrieved_at": "2026-09-14"
+              }
+            ],
+            "model": "glm-5.1",
+            "usage": {
+              "prompt_tokens": 884,
+              "completion_tokens": 677,
+              "total_tokens": 1561
+            },
+            "elapsed_ms": 15500.0,
+            "actions": []
+          }
+        }
+      }
+    ],
+    "browser_text_ms": null
+  },
+  {
+    "question": "郑东图书馆在哪个校区",
+    "status": 200,
+    "first_text_ms": 12679.01019999772,
+    "total_ms": 14851.606099997298,
+    "events": [
+      {
+        "event_id": "69afa13f-37a1-46ca-b140-73145f6e7ce4",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 1,
+        "timestamp": "2026-09-17T08:35:05.711953Z",
+        "type": "accepted",
+        "payload": {
+          "session_id": "42962b09-3bc5-4bda-a35f-4e50e613eeb4",
+          "message_id": "16434140-2d68-4307-981b-367e922d16f6",
+          "campus_id": "beiyangyuan",
+          "mode": "campus_qa"
+        }
+      },
+      {
+        "event_id": "b1319091-cc86-4281-b0e9-95e5e54549e3",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 2,
+        "timestamp": "2026-09-17T08:35:05.711953Z",
+        "type": "status",
+        "payload": {
+          "stage": "request",
+          "status": "started"
+        }
+      },
+      {
+        "event_id": "8105ab59-70c6-465a-949e-4176c037789f",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 3,
+        "timestamp": "2026-09-17T08:35:05.713862Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "poi-beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "snippet": "校方资料在北洋园校区列有郑东图书馆。",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "snippet": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "campus_id": "beiyangyuan",
+              "published_at": "2024-08-15",
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "zhengdong-opened",
+              "title": "郑东图书馆 · 沿革",
+              "snippet": "郑东图书馆于2015年9月投入使用。",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "zhengdong-designer",
+              "title": "郑东图书馆 · 沿革",
+              "snippet": "郑东图书馆由周恺领衔设计。",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "zhengdong-courtyard",
+              "title": "郑东图书馆 · 文化",
+              "snippet": "郑东图书馆采用四面围合的庭院式形态。",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            }
+          ],
+          "kind": "retrieved"
+        }
+      },
+      {
+        "event_id": "03b77387-2456-4dcb-af9f-74bd3c5d9dc5",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 4,
+        "timestamp": "2026-09-17T08:35:05.713862Z",
+        "type": "status",
+        "payload": {
+          "stage": "model",
+          "status": "started"
+        }
+      },
+      {
+        "event_id": "36aff18b-d559-418d-b070-a10f9cb314b3",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 5,
+        "timestamp": "2026-09-17T08:35:18.388910Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "猫眼石"
+        }
+      },
+      {
+        "event_id": "c026edf3-cc2c-4123-a6ac-8a72d0655507",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 6,
+        "timestamp": "2026-09-17T08:35:18.444710Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "，你寻找的"
+        }
+      },
+      {
+        "event_id": "71289079-aa14-4c28-a8f6-11ae5338c362",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 7,
+        "timestamp": "2026-09-17T08:35:18.501921Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "这颗学术明珠"
+        }
+      },
+      {
+        "event_id": "b54a00c7-51dc-460f-88b5-1e0f2565d91f",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 8,
+        "timestamp": "2026-09-17T08:35:18.558787Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "——郑东图书馆"
+        }
+      },
+      {
+        "event_id": "a0d4d290-49bf-4699-b253-6308a2ca352c",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 9,
+        "timestamp": "2026-09-17T08:35:18.615416Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "，坐落于天津大学的"
+        }
+      },
+      {
+        "event_id": "95b491eb-b3ee-4cea-b01b-ba37cf16e49d",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 10,
+        "timestamp": "2026-09-17T08:35:18.671010Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "北洋园校区"
+        }
+      },
+      {
+        "event_id": "1cb7fddb-245f-4edc-9c18-1fa7f37ee06e",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 11,
+        "timestamp": "2026-09-17T08:35:18.728499Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "。它可是201"
+        }
+      },
+      {
+        "event_id": "3208241c-e856-41a5-a096-ef448a226a7c",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 12,
+        "timestamp": "2026-09-17T08:35:18.784624Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "5年才正式"
+        }
+      },
+      {
+        "event_id": "e8b6714f-7fbd-42c0-b3ea-19fc36633086",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 13,
+        "timestamp": "2026-09-17T08:35:18.840588Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "登场的“新"
+        }
+      },
+      {
+        "event_id": "1e7b6b55-3a42-4869-9605-0e32bd1f30b6",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 14,
+        "timestamp": "2026-09-17T08:35:18.898703Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "秀”，由建筑师"
+        }
+      },
+      {
+        "event_id": "b965b0b5-a77e-469d-b0b7-22b912087659",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 15,
+        "timestamp": "2026-09-17T08:35:18.956585Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "周恺领衔设计"
+        }
+      },
+      {
+        "event_id": "72746aa3-9223-406c-9bf2-2bf2d101af5a",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 16,
+        "timestamp": "2026-09-17T08:35:19.012022Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "。那四面围"
+        }
+      },
+      {
+        "event_id": "dde5efad-c170-4908-af26-75f8dda34aea",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 17,
+        "timestamp": "2026-09-17T08:35:19.068792Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "合的庭院式"
+        }
+      },
+      {
+        "event_id": "3d4f7752-254a-4154-9afd-4d266b00f5e0",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 18,
+        "timestamp": "2026-09-17T08:35:19.125545Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "形态将光影与"
+        }
+      },
+      {
+        "event_id": "8c4b3b84-eeb3-4387-8462-dd00ff31ae92",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 19,
+        "timestamp": "2026-09-17T08:35:19.182414Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "书香巧妙交织，"
+        }
+      },
+      {
+        "event_id": "7917d236-3a05-4341-a528-79057508fdbc",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 20,
+        "timestamp": "2026-09-17T08:35:19.238892Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "宛如一支静谧又"
+        }
+      },
+      {
+        "event_id": "07d8dcba-deae-4d8f-ae8b-8db4156db16a",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 21,
+        "timestamp": "2026-09-17T08:35:19.295870Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "优雅的室内舞"
+        }
+      },
+      {
+        "event_id": "06b1f2a5-9a85-4f00-a546-2aa353131d5b",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 22,
+        "timestamp": "2026-09-17T08:35:19.356546Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "曲，约"
+        }
+      },
+      {
+        "event_id": "af51d8fa-3505-47f4-be63-4ff18b906b80",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 23,
+        "timestamp": "2026-09-17T08:35:19.411560Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "5.4"
+        }
+      },
+      {
+        "event_id": "3821fa13-9cb3-4a79-a561-51b895c554e6",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 24,
+        "timestamp": "2026-09-17T08:35:19.468665Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "万平方米的总"
+        }
+      },
+      {
+        "event_id": "912f7c28-a4dd-4351-bb17-14108fea6b99",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 25,
+        "timestamp": "2026-09-17T08:35:19.525379Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "建面与330"
+        }
+      },
+      {
+        "event_id": "265d4281-57b6-4e34-9c9e-8113d9ded8b6",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 26,
+        "timestamp": "2026-09-17T08:35:19.581639Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "0个阅览座位"
+        }
+      },
+      {
+        "event_id": "5fec7189-2104-4bf9-84cb-edd1d3533191",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 27,
+        "timestamp": "2026-09-17T08:35:19.639071Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "，足以"
+        }
+      },
+      {
+        "event_id": "19afc82a-8bac-4cba-a1c0-063bb3947f2d",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 28,
+        "timestamp": "2026-09-17T08:35:19.696199Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "让你"
+        }
+      },
+      {
+        "event_id": "2782481b-6469-40e6-82b7-b54aa3297d05",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 29,
+        "timestamp": "2026-09-17T08:35:19.752367Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "沉浸其中。下次"
+        }
+      },
+      {
+        "event_id": "46300fe2-843b-47a0-bf01-e5aaf79c5657",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 30,
+        "timestamp": "2026-09-17T08:35:19.808977Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "去北洋园"
+        }
+      },
+      {
+        "event_id": "fee0af0d-0423-4ee3-8291-95b700baa35b",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 31,
+        "timestamp": "2026-09-17T08:35:19.865635Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "时，不妨走进"
+        }
+      },
+      {
+        "event_id": "32bd1e69-25f0-44d8-9a57-2cdbd7504421",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 32,
+        "timestamp": "2026-09-17T08:35:19.921883Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "这方庭院感受"
+        }
+      },
+      {
+        "event_id": "8e092094-8195-4a19-8762-02cdc08c77d5",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 33,
+        "timestamp": "2026-09-17T08:35:19.978606Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "一下它的韵律"
+        }
+      },
+      {
+        "event_id": "defb2697-e3b1-43a5-9b18-f92da14a6319",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 34,
+        "timestamp": "2026-09-17T08:35:20.035887Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "。\n\n[source:poi"
+        }
+      },
+      {
+        "event_id": "efdf6766-2037-4b66-af6d-3563d68f49f9",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 35,
+        "timestamp": "2026-09-17T08:35:20.093299Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "-beiyangy"
+        }
+      },
+      {
+        "event_id": "4c0657aa-2978-47ae-aa1e-b46fa8417467",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 36,
+        "timestamp": "2026-09-17T08:35:20.149152Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "uan-zhengdong"
+        }
+      },
+      {
+        "event_id": "a32eb87f-3b9e-4898-9d23-93d5e8203bf4",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 37,
+        "timestamp": "2026-09-17T08:35:20.206088Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "-library,"
+        }
+      },
+      {
+        "event_id": "1419fcf5-b6f5-46fa-a361-b2c3f326abc6",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 38,
+        "timestamp": "2026-09-17T08:35:20.263465Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "beiyangy"
+        }
+      },
+      {
+        "event_id": "5a452173-7d2c-454b-a598-2afbf3009707",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 39,
+        "timestamp": "2026-09-17T08:35:20.320146Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "uan-zhengdong"
+        }
+      },
+      {
+        "event_id": "40d5ecf8-4cbf-4907-bb85-b143488a8fc9",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 40,
+        "timestamp": "2026-09-17T08:35:20.379095Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "-library,zhengdong"
+        }
+      },
+      {
+        "event_id": "1189a6f5-8b9e-4213-ac29-e34d24c09246",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 41,
+        "timestamp": "2026-09-17T08:35:20.435470Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "-opened,zheng"
+        }
+      },
+      {
+        "event_id": "a47af208-2331-4f3f-9d2f-1ca957c845a8",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 42,
+        "timestamp": "2026-09-17T08:35:20.500754Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "dong-designer,z"
+        }
+      },
+      {
+        "event_id": "528568ce-e983-4c36-928a-839e4c033893",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 43,
+        "timestamp": "2026-09-17T08:35:20.556987Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "hengdong-cour"
+        }
+      },
+      {
+        "event_id": "8cd2c121-7945-4260-aa41-85815b46acad",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 44,
+        "timestamp": "2026-09-17T08:35:20.557513Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "tyard]"
+        }
+      },
+      {
+        "event_id": "b82073f8-1841-4af9-afef-1893e9e24b34",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 45,
+        "timestamp": "2026-09-17T08:35:20.560479Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "poi-beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "snippet": "校方资料在北洋园校区列有郑东图书馆。",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "beiyangyuan-zhengdong-library",
+              "title": "郑东图书馆",
+              "snippet": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "campus_id": "beiyangyuan",
+              "published_at": "2024-08-15",
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "zhengdong-opened",
+              "title": "郑东图书馆 · 沿革",
+              "snippet": "郑东图书馆于2015年9月投入使用。",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "zhengdong-designer",
+              "title": "郑东图书馆 · 沿革",
+              "snippet": "郑东图书馆由周恺领衔设计。",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "zhengdong-courtyard",
+              "title": "郑东图书馆 · 文化",
+              "snippet": "郑东图书馆采用四面围合的庭院式形态。",
+              "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            }
+          ],
+          "kind": "cited"
+        }
+      },
+      {
+        "event_id": "883a0bcb-38f5-4d77-a6f8-94fe6ce7f08c",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 46,
+        "timestamp": "2026-09-17T08:35:20.560479Z",
+        "type": "usage",
+        "payload": {
+          "model": "glm-5.1",
+          "usage": {
+            "prompt_tokens": 877,
+            "completion_tokens": 817,
+            "total_tokens": 1694
+          }
+        }
+      },
+      {
+        "event_id": "29666e54-3f8a-44b9-90ba-ca1e60a2e7fa",
+        "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+        "seq": 47,
+        "timestamp": "2026-09-17T08:35:20.560479Z",
+        "type": "completed",
+        "payload": {
+          "response": {
+            "request_id": "a59aec8d-5100-4eb5-95da-8d0fd0891d86",
+            "session_id": "42962b09-3bc5-4bda-a35f-4e50e613eeb4",
+            "answer": "猫眼石，你寻找的这颗学术明珠——郑东图书馆，坐落于天津大学的北洋园校区。它可是2015年才正式登场的“新秀”，由建筑师周恺领衔设计。那四面围合的庭院式形态将光影与书香巧妙交织，宛如一支静谧又优雅的室内舞曲，约5.4万平方米的总建面与3300个阅览座位，足以让你沉浸其中。下次去北洋园时，不妨走进这方庭院感受一下它的韵律。\n\n资料提示：部分引用未能与本次资料对应；正文已保留，相关细节请结合参考资料核实。",
+            "sources": [
+              {
+                "id": "poi-beiyangyuan-zhengdong-library",
+                "title": "郑东图书馆",
+                "snippet": "校方资料在北洋园校区列有郑东图书馆。",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-14"
+              },
+              {
+                "id": "beiyangyuan-zhengdong-library",
+                "title": "郑东图书馆",
+                "snippet": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "campus_id": "beiyangyuan",
+                "published_at": "2024-08-15",
+                "retrieved_at": "2026-09-14"
+              },
+              {
+                "id": "zhengdong-opened",
+                "title": "郑东图书馆 · 沿革",
+                "snippet": "郑东图书馆于2015年9月投入使用。",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-14"
+              },
+              {
+                "id": "zhengdong-designer",
+                "title": "郑东图书馆 · 沿革",
+                "snippet": "郑东图书馆由周恺领衔设计。",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-14"
+              },
+              {
+                "id": "zhengdong-courtyard",
+                "title": "郑东图书馆 · 文化",
+                "snippet": "郑东图书馆采用四面围合的庭院式形态。",
+                "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-14"
+              }
+            ],
+            "model": "glm-5.1",
+            "usage": {
+              "prompt_tokens": 877,
+              "completion_tokens": 817,
+              "total_tokens": 1694
+            },
+            "elapsed_ms": 14843.000000000757,
+            "actions": []
+          }
+        }
+      }
+    ],
+    "browser_text_ms": null
+  },
+  {
+    "question": "介绍当前选中地点",
+    "status": 200,
+    "first_text_ms": 29576.54409999668,
+    "total_ms": 32139.086999999563,
+    "events": [
+      {
+        "event_id": "b54c1172-1e33-4ddd-ace6-3d987839ac5b",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 1,
+        "timestamp": "2026-09-17T08:35:20.564608Z",
+        "type": "accepted",
+        "payload": {
+          "session_id": "170ec88a-ab90-4762-b825-5331ba408de7",
+          "message_id": "15fae0bd-e0f0-4a55-89c7-13c677c4534e",
+          "campus_id": "beiyangyuan",
+          "mode": "campus_qa"
+        }
+      },
+      {
+        "event_id": "0ca98eb3-bdb7-4e94-84fc-3ec731459efe",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 2,
+        "timestamp": "2026-09-17T08:35:20.565625Z",
+        "type": "status",
+        "payload": {
+          "stage": "request",
+          "status": "started"
+        }
+      },
+      {
+        "event_id": "792b6708-be4e-4241-8a6e-96dc5d3b19db",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 3,
+        "timestamp": "2026-09-17T08:35:27.589949Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "poi-beiyangyuan-datong-center",
+              "title": "大通学生中心",
+              "snippet": "校方资料在北洋园校区列有大通学生中心。",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "detail-landscape-2016-15",
+              "title": "大通学生中心 · 轴线位置",
+              "snippet": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": "2016-08-25",
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "detail-landscape-2016-16",
+              "title": "大通学生中心 · 体块",
+              "snippet": "大通学生中心由三个依次排列的矩形体块构成。",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": "2016-08-25",
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "detail-landscape-2016-17",
+              "title": "大通学生中心 · 设计",
+              "snippet": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": "2016-08-25",
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "web-da2dabffc1f0a8a4",
+              "title": "my.sjtu.edu.cn",
+              "snippet": "网页检索摘要（未读取全文）：上海交通大学研究生应用管理平台（新）.",
+              "url": "https://my.sjtu.edu.cn/",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:27.587926+00:00"
+            },
+            {
+              "id": "web-4fcbabdcf4de3762",
+              "title": "月排行榜 - 吞精兽",
+              "snippet": "已读取网页；检索摘要：顶臀强摸公交地铁当众掏JB强顶的中学生和极品女神惨遭鄙视的眼神. 9848.可爱学生泄密探索高中宿舍高中生宿舍露脸跳蛋自慰插粉的穴表情淫荡吐舌头表示高潮. 9169.\n网页摘录：月排行榜 - 吞精兽永久网址【https://ght.ccavx.com/0/】热播排行榜总排行榜月排行榜周排行榜日排行榜最新上传热门关键词波多野结衣SPA吴梦梦媚药波多野露点明日花绮罗阿朱黑逼凑羽琉水户香奈拉丁更多搜索关键词月排行榜16020100%16015100%16014100%16008100%16007100%16004100%15920100%15892100%15879100%15851100%15681100%15596100%15577100%15470100%15432100%14941100%14818100%14662100%14632100%14588100%14362100%13938100%13692100%13286100%12938100%12895100%12119100%11899100%11856100%11270100%10613100%10569100%10188100%9969100%9871100%9821100%9807100%9807100%9665100%9590100%9310100%9275100%9074100%9055100%8916100%8533100%8124100%8114100%8068100%7672100%7610100%7571100%7531100%7530100%7455100%7387100%7303100%6988100%6986100%6972100%6950100%6889100%6828100%6665100%6372100%6323100%6315100%6286100%6270100%6246100%6188100%6146100%首页 上一页 下一页 尾页公告独家免费色情影片,每日更新！分类国产自拍制服丝袜强奸乱伦教师学生素人系列人妻熟女日韩无码日韩有码中文字幕欧美风情经典伦理卡通动漫国产自拍制服丝袜强奸乱伦教师学生素人系列人妻熟女日韩无码日韩有码中文字幕欧美风情经典伦理卡通动漫",
+              "url": "https://mkg.tjs4.beer/label/hot_month/page/2.html",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:27.587926+00:00"
+            },
+            {
+              "id": "web-7811bbbdf2b49503",
+              "title": "d6lvl8l2l26yp.cloudfront.net/archives/193886",
+              "snippet": "网页检索摘要（未读取全文）：姐妹们，这瓜又酸又刺激，直接把中产留学家庭的遮羞布扯得干干净净！ 最近牢A（回国留学生）一顿猛料直播，把海外陪读妈妈和女留学生的私生活炸出天际：半夜带老外男人回家、倒贴钱“养”白人捞男、派对滥交、甚至“三通一达”回.",
+              "url": "https://d6lvl8l2l26yp.cloudfront.net/archives/193886/",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:27.587926+00:00"
+            },
+            {
+              "id": "web-9816345b0430e76f",
+              "title": "GitHub - eternity4719/HowToLiveBetter...",
+              "snippet": "网页检索摘要（未读取全文）：上学以后的孩子：按小时算的急症、别为了考试推迟治疗、被欺凌怎么办、每天户外 2 小时、学生体检报告单、青少年抑郁筛查、治愈近视的产品、睡眠与作业的.",
+              "url": "https://github.com/eternity4719/HowToLiveBetter",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:27.587926+00:00"
+            },
+            {
+              "id": "web-7f54e26676152327",
+              "title": "minimaxi.com",
+              "snippet": "网页检索摘要（未读取全文）：MiniMax 开放平台文档中心home page.",
+              "url": "https://www.minimaxi.com/",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:27.587926+00:00"
+            }
+          ],
+          "kind": "retrieved"
+        }
+      },
+      {
+        "event_id": "0860a3c5-28ee-48c4-88d3-cf5d3cb3c805",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 4,
+        "timestamp": "2026-09-17T08:35:27.589949Z",
+        "type": "status",
+        "payload": {
+          "stage": "model",
+          "status": "started"
+        }
+      },
+      {
+        "event_id": "122d393e-c5ad-42a8-86a5-5f8e1cb047b7",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 5,
+        "timestamp": "2026-09-17T08:35:50.138514Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "猫"
+        }
+      },
+      {
+        "event_id": "197a2f91-650e-44b7-90eb-884687bb295b",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 6,
+        "timestamp": "2026-09-17T08:35:50.197093Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "眼石，不妨"
+        }
+      },
+      {
+        "event_id": "516248c7-9220-477c-ab07-d3a40fa4fa49",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 7,
+        "timestamp": "2026-09-17T08:35:50.254457Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "驻足欣赏这"
+        }
+      },
+      {
+        "event_id": "23c773a6-517f-47ba-ac5a-1d12c810234b",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 8,
+        "timestamp": "2026-09-17T08:35:50.311669Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "颗北洋园"
+        }
+      },
+      {
+        "event_id": "c010230a-1e63-4be4-b18b-445cfb8e0842",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 9,
+        "timestamp": "2026-09-17T08:35:50.369586Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "主轴线尽端的"
+        }
+      },
+      {
+        "event_id": "06a9333c-c2d5-4d5d-8024-121542dff75d",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 10,
+        "timestamp": "2026-09-17T08:35:50.431826Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "“临水明珠"
+        }
+      },
+      {
+        "event_id": "66828756-3e36-4d13-9d8c-6e070b696e85",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 11,
+        "timestamp": "2026-09-17T08:35:50.486326Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "”。大通学生"
+        }
+      },
+      {
+        "event_id": "6053d437-d31b-4321-8c31-c64afb6c7135",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 12,
+        "timestamp": "2026-09-17T08:35:50.547184Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "中心优雅地坐落于"
+        }
+      },
+      {
+        "event_id": "8945bc0d-4d5e-4123-8615-e32a6d382b5f",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 13,
+        "timestamp": "2026-09-17T08:35:50.605309Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "临"
+        }
+      },
+      {
+        "event_id": "6149b3c6-7895-4886-ae71-722acf89d1a7",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 14,
+        "timestamp": "2026-09-17T08:35:50.664047Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "水半岛之上，"
+        }
+      },
+      {
+        "event_id": "b6ab3a0c-d9c6-46d1-907d-641cd6e0afdb",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 15,
+        "timestamp": "2026-09-17T08:35:50.720885Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "宛如"
+        }
+      },
+      {
+        "event_id": "8b64e05d-f43d-42e7-9486-c6518da4ff94",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 16,
+        "timestamp": "2026-09-17T08:35:50.778475Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "一件切工"
+        }
+      },
+      {
+        "event_id": "e7c9daa7-2db9-4ac7-9db5-f336445efcc8",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 17,
+        "timestamp": "2026-09-17T08:35:50.837264Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "考究的宝石"
+        }
+      },
+      {
+        "event_id": "91329ae1-ee3d-4a1e-9753-4834b64d4617",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 18,
+        "timestamp": "2026-09-17T08:35:50.895645Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "，"
+        }
+      },
+      {
+        "event_id": "0a580f6a-81e0-45fb-9d6b-128637918f81",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 19,
+        "timestamp": "2026-09-17T08:35:50.953791Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "其建筑体块"
+        }
+      },
+      {
+        "event_id": "95aedff8-13f5-4e9a-9285-7b15df894fe7",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 20,
+        "timestamp": "2026-09-17T08:35:51.012417Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "如同切分精准"
+        }
+      },
+      {
+        "event_id": "e0b86ec6-30e4-4fce-83d7-42599933c366",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 21,
+        "timestamp": "2026-09-17T08:35:51.070662Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "的舞步，"
+        }
+      },
+      {
+        "event_id": "4a1e5be1-9541-4660-8ff5-bbbff22d5f8a",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 22,
+        "timestamp": "2026-09-17T08:35:51.129014Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "由三个依次排列"
+        }
+      },
+      {
+        "event_id": "ab092694-d7bf-42f5-8f4c-70fa69fb72af",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 23,
+        "timestamp": "2026-09-17T08:35:51.187871Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "的矩形空间交织"
+        }
+      },
+      {
+        "event_id": "1c757d71-476f-455f-b3f7-fee453d5f21e",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 24,
+        "timestamp": "2026-09-17T08:35:51.245848Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "构成，在光影"
+        }
+      },
+      {
+        "event_id": "2e470f9d-63d5-4022-b527-6683370d22e3",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 25,
+        "timestamp": "2026-09-17T08:35:51.303212Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "流转中呈现出秩序"
+        }
+      },
+      {
+        "event_id": "2c18a60d-ee32-4f57-8ba3-33672f401673",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 26,
+        "timestamp": "2026-09-17T08:35:51.361935Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "与韵律之美"
+        }
+      },
+      {
+        "event_id": "bd85987c-5ca8-4206-9eec-8f4914b5b061",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 27,
+        "timestamp": "2026-09-17T08:35:51.420310Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "。这份轻盈而"
+        }
+      },
+      {
+        "event_id": "1f53c58f-673a-4a0c-8017-fe3eccaa34cd",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 28,
+        "timestamp": "2026-09-17T08:35:51.477312Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "现代的设计，出自"
+        }
+      },
+      {
+        "event_id": "8f792623-8695-4328-bc79-604edf01d2ae",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 29,
+        "timestamp": "2026-09-17T08:35:51.536270Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "齐欣、刘"
+        }
+      },
+      {
+        "event_id": "a03e3a3e-ddf6-45cf-ad18-c4f77200a4ff",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 30,
+        "timestamp": "2026-09-17T08:35:51.594491Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "阳、戴"
+        }
+      },
+      {
+        "event_id": "2e7f9fcb-a97e-4688-b44a-e58aceab4637",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 31,
+        "timestamp": "2026-09-17T08:35:51.651872Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "博军与于"
+        }
+      },
+      {
+        "event_id": "94aacde8-181a-4f25-8617-ab4556d67970",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 32,
+        "timestamp": "2026-09-17T08:35:51.709165Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "向东之手。在水"
+        }
+      },
+      {
+        "event_id": "ceeedeb0-c574-4be4-9a81-678af769a1a4",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 33,
+        "timestamp": "2026-09-17T08:35:51.768105Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "波映衬下"
+        }
+      },
+      {
+        "event_id": "4fb8138a-59fd-4076-95a7-8695f9f2903c",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 34,
+        "timestamp": "2026-09-17T08:35:51.827403Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "，它"
+        }
+      },
+      {
+        "event_id": "9a8ec8a0-6367-44b6-b151-9fe8dd8d2a74",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 35,
+        "timestamp": "2026-09-17T08:35:51.884172Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "既有宝石般的多"
+        }
+      },
+      {
+        "event_id": "29722ed2-c7ee-4b5d-b101-0d5d75c84185",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 36,
+        "timestamp": "2026-09-17T08:35:51.942588Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "面切工"
+        }
+      },
+      {
+        "event_id": "9cf5d632-05ac-44e6-9573-40b0fd1abba0",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 37,
+        "timestamp": "2026-09-17T08:35:52.000019Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "之美，又为"
+        }
+      },
+      {
+        "event_id": "e460c901-2a22-4c59-b781-9ee225bfcf54",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 38,
+        "timestamp": "2026-09-17T08:35:52.058896Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "校园生活"
+        }
+      },
+      {
+        "event_id": "7beea704-173d-4376-a6c9-ae3bf9a1d7de",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 39,
+        "timestamp": "2026-09-17T08:35:52.116069Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "留出了充"
+        }
+      },
+      {
+        "event_id": "6ef1e5cf-4c17-4071-805a-caceb07908d6",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 40,
+        "timestamp": "2026-09-17T08:35:52.174261Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "裕的舞台。\n\n"
+        }
+      },
+      {
+        "event_id": "e2342020-b159-4fa9-bb65-19997829e84c",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 41,
+        "timestamp": "2026-09-17T08:35:52.232686Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "[source: poi-be"
+        }
+      },
+      {
+        "event_id": "bd71a860-604e-4954-9379-ece22b107e2b",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 42,
+        "timestamp": "2026-09-17T08:35:52.291148Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "iyangyuan"
+        }
+      },
+      {
+        "event_id": "44548d73-4944-4e27-8d59-6106c1717b4b",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 43,
+        "timestamp": "2026-09-17T08:35:52.348361Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "-datong-center,"
+        }
+      },
+      {
+        "event_id": "0899db50-797d-47b9-9f7d-8fb327fc5999",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 44,
+        "timestamp": "2026-09-17T08:35:52.406169Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": " detail-landscape-"
+        }
+      },
+      {
+        "event_id": "60fcb9bb-2834-4ecd-b394-bf2b3c7b7abf",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 45,
+        "timestamp": "2026-09-17T08:35:52.464521Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "2016-15"
+        }
+      },
+      {
+        "event_id": "7b7ceb28-8b07-410f-9cb7-78e7ab1cae6a",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 46,
+        "timestamp": "2026-09-17T08:35:52.523706Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": ", detail-landscape"
+        }
+      },
+      {
+        "event_id": "4a0b3aff-24d2-4abc-818f-27ee81f6b89c",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 47,
+        "timestamp": "2026-09-17T08:35:52.580322Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "-2016-"
+        }
+      },
+      {
+        "event_id": "2edd79e2-2c0c-47b6-8507-2b539e697831",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 48,
+        "timestamp": "2026-09-17T08:35:52.639267Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "16, detail-"
+        }
+      },
+      {
+        "event_id": "e9572b2e-e6be-490f-9af6-ca4a8e60aea5",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 49,
+        "timestamp": "2026-09-17T08:35:52.696749Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "landscape-2016"
+        }
+      },
+      {
+        "event_id": "dfa50632-0137-4c5a-88e8-a0567b8c203e",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 50,
+        "timestamp": "2026-09-17T08:35:52.696749Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "-17]"
+        }
+      },
+      {
+        "event_id": "e85faade-4af8-4472-963a-0a08cfe28bdf",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 51,
+        "timestamp": "2026-09-17T08:35:52.701314Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "poi-beiyangyuan-datong-center",
+              "title": "大通学生中心",
+              "snippet": "校方资料在北洋园校区列有大通学生中心。",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "detail-landscape-2016-15",
+              "title": "大通学生中心 · 轴线位置",
+              "snippet": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": "2016-08-25",
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "detail-landscape-2016-16",
+              "title": "大通学生中心 · 体块",
+              "snippet": "大通学生中心由三个依次排列的矩形体块构成。",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": "2016-08-25",
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "detail-landscape-2016-17",
+              "title": "大通学生中心 · 设计",
+              "snippet": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+              "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": "2016-08-25",
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "web-da2dabffc1f0a8a4",
+              "title": "my.sjtu.edu.cn",
+              "snippet": "网页检索摘要（未读取全文）：上海交通大学研究生应用管理平台（新）.",
+              "url": "https://my.sjtu.edu.cn/",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:27.587926+00:00"
+            },
+            {
+              "id": "web-4fcbabdcf4de3762",
+              "title": "月排行榜 - 吞精兽",
+              "snippet": "已读取网页；检索摘要：顶臀强摸公交地铁当众掏JB强顶的中学生和极品女神惨遭鄙视的眼神. 9848.可爱学生泄密探索高中宿舍高中生宿舍露脸跳蛋自慰插粉的穴表情淫荡吐舌头表示高潮. 9169.\n网页摘录：月排行榜 - 吞精兽永久网址【https://ght.ccavx.com/0/】热播排行榜总排行榜月排行榜周排行榜日排行榜最新上传热门关键词波多野结衣SPA吴梦梦媚药波多野露点明日花绮罗阿朱黑逼凑羽琉水户香奈拉丁更多搜索关键词月排行榜16020100%16015100%16014100%16008100%16007100%16004100%15920100%15892100%15879100%15851100%15681100%15596100%15577100%15470100%15432100%14941100%14818100%14662100%14632100%14588100%14362100%13938100%13692100%13286100%12938100%12895100%12119100%11899100%11856100%11270100%10613100%10569100%10188100%9969100%9871100%9821100%9807100%9807100%9665100%9590100%9310100%9275100%9074100%9055100%8916100%8533100%8124100%8114100%8068100%7672100%7610100%7571100%7531100%7530100%7455100%7387100%7303100%6988100%6986100%6972100%6950100%6889100%6828100%6665100%6372100%6323100%6315100%6286100%6270100%6246100%6188100%6146100%首页 上一页 下一页 尾页公告独家免费色情影片,每日更新！分类国产自拍制服丝袜强奸乱伦教师学生素人系列人妻熟女日韩无码日韩有码中文字幕欧美风情经典伦理卡通动漫国产自拍制服丝袜强奸乱伦教师学生素人系列人妻熟女日韩无码日韩有码中文字幕欧美风情经典伦理卡通动漫",
+              "url": "https://mkg.tjs4.beer/label/hot_month/page/2.html",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:27.587926+00:00"
+            },
+            {
+              "id": "web-7811bbbdf2b49503",
+              "title": "d6lvl8l2l26yp.cloudfront.net/archives/193886",
+              "snippet": "网页检索摘要（未读取全文）：姐妹们，这瓜又酸又刺激，直接把中产留学家庭的遮羞布扯得干干净净！ 最近牢A（回国留学生）一顿猛料直播，把海外陪读妈妈和女留学生的私生活炸出天际：半夜带老外男人回家、倒贴钱“养”白人捞男、派对滥交、甚至“三通一达”回.",
+              "url": "https://d6lvl8l2l26yp.cloudfront.net/archives/193886/",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:27.587926+00:00"
+            },
+            {
+              "id": "web-9816345b0430e76f",
+              "title": "GitHub - eternity4719/HowToLiveBetter...",
+              "snippet": "网页检索摘要（未读取全文）：上学以后的孩子：按小时算的急症、别为了考试推迟治疗、被欺凌怎么办、每天户外 2 小时、学生体检报告单、青少年抑郁筛查、治愈近视的产品、睡眠与作业的.",
+              "url": "https://github.com/eternity4719/HowToLiveBetter",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:27.587926+00:00"
+            },
+            {
+              "id": "web-7f54e26676152327",
+              "title": "minimaxi.com",
+              "snippet": "网页检索摘要（未读取全文）：MiniMax 开放平台文档中心home page.",
+              "url": "https://www.minimaxi.com/",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:27.587926+00:00"
+            }
+          ],
+          "kind": "cited"
+        }
+      },
+      {
+        "event_id": "e51c193f-5751-4878-b9bb-e7cc395113af",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 52,
+        "timestamp": "2026-09-17T08:35:52.701314Z",
+        "type": "usage",
+        "payload": {
+          "model": "glm-5.1",
+          "usage": {
+            "prompt_tokens": 1777,
+            "completion_tokens": 1164,
+            "total_tokens": 2941
+          }
+        }
+      },
+      {
+        "event_id": "622779e4-fd32-4798-a30c-454daebe760a",
+        "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+        "seq": 53,
+        "timestamp": "2026-09-17T08:35:52.701314Z",
+        "type": "completed",
+        "payload": {
+          "response": {
+            "request_id": "9c5237b3-8fee-4bb4-8e22-2b69010284ab",
+            "session_id": "170ec88a-ab90-4762-b825-5331ba408de7",
+            "answer": "猫眼石，不妨驻足欣赏这颗北洋园主轴线尽端的“临水明珠”。大通学生中心优雅地坐落于临水半岛之上，宛如一件切工考究的宝石，其建筑体块如同切分精准的舞步，由三个依次排列的矩形空间交织构成，在光影流转中呈现出秩序与韵律之美。这份轻盈而现代的设计，出自齐欣、刘阳、戴博军与于向东之手。在水波映衬下，它既有宝石般的多面切工之美，又为校园生活留出了充裕的舞台。\n\n[source: poi-beiyangyuan-datong-center, detail-landscape-2016-15, detail-landscape-2016-16, detail-landscape-2016-17]\n\n资料提示：部分引用未能与本次资料对应；正文已保留，相关细节请结合参考资料核实。",
+            "sources": [
+              {
+                "id": "poi-beiyangyuan-datong-center",
+                "title": "大通学生中心",
+                "snippet": "校方资料在北洋园校区列有大通学生中心。",
+                "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-14"
+              },
+              {
+                "id": "detail-landscape-2016-15",
+                "title": "大通学生中心 · 轴线位置",
+                "snippet": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "campus_id": "beiyangyuan",
+                "published_at": "2016-08-25",
+                "retrieved_at": "2026-09-14"
+              },
+              {
+                "id": "detail-landscape-2016-16",
+                "title": "大通学生中心 · 体块",
+                "snippet": "大通学生中心由三个依次排列的矩形体块构成。",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "campus_id": "beiyangyuan",
+                "published_at": "2016-08-25",
+                "retrieved_at": "2026-09-14"
+              },
+              {
+                "id": "detail-landscape-2016-17",
+                "title": "大通学生中心 · 设计",
+                "snippet": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+                "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+                "campus_id": "beiyangyuan",
+                "published_at": "2016-08-25",
+                "retrieved_at": "2026-09-14"
+              },
+              {
+                "id": "web-da2dabffc1f0a8a4",
+                "title": "my.sjtu.edu.cn",
+                "snippet": "网页检索摘要（未读取全文）：上海交通大学研究生应用管理平台（新）.",
+                "url": "https://my.sjtu.edu.cn/",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-17T08:35:27.587926+00:00"
+              },
+              {
+                "id": "web-4fcbabdcf4de3762",
+                "title": "月排行榜 - 吞精兽",
+                "snippet": "已读取网页；检索摘要：顶臀强摸公交地铁当众掏JB强顶的中学生和极品女神惨遭鄙视的眼神. 9848.可爱学生泄密探索高中宿舍高中生宿舍露脸跳蛋自慰插粉的穴表情淫荡吐舌头表示高潮. 9169.\n网页摘录：月排行榜 - 吞精兽永久网址【https://ght.ccavx.com/0/】热播排行榜总排行榜月排行榜周排行榜日排行榜最新上传热门关键词波多野结衣SPA吴梦梦媚药波多野露点明日花绮罗阿朱黑逼凑羽琉水户香奈拉丁更多搜索关键词月排行榜16020100%16015100%16014100%16008100%16007100%16004100%15920100%15892100%15879100%15851100%15681100%15596100%15577100%15470100%15432100%14941100%14818100%14662100%14632100%14588100%14362100%13938100%13692100%13286100%12938100%12895100%12119100%11899100%11856100%11270100%10613100%10569100%10188100%9969100%9871100%9821100%9807100%9807100%9665100%9590100%9310100%9275100%9074100%9055100%8916100%8533100%8124100%8114100%8068100%7672100%7610100%7571100%7531100%7530100%7455100%7387100%7303100%6988100%6986100%6972100%6950100%6889100%6828100%6665100%6372100%6323100%6315100%6286100%6270100%6246100%6188100%6146100%首页 上一页 下一页 尾页公告独家免费色情影片,每日更新！分类国产自拍制服丝袜强奸乱伦教师学生素人系列人妻熟女日韩无码日韩有码中文字幕欧美风情经典伦理卡通动漫国产自拍制服丝袜强奸乱伦教师学生素人系列人妻熟女日韩无码日韩有码中文字幕欧美风情经典伦理卡通动漫",
+                "url": "https://mkg.tjs4.beer/label/hot_month/page/2.html",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-17T08:35:27.587926+00:00"
+              },
+              {
+                "id": "web-7811bbbdf2b49503",
+                "title": "d6lvl8l2l26yp.cloudfront.net/archives/193886",
+                "snippet": "网页检索摘要（未读取全文）：姐妹们，这瓜又酸又刺激，直接把中产留学家庭的遮羞布扯得干干净净！ 最近牢A（回国留学生）一顿猛料直播，把海外陪读妈妈和女留学生的私生活炸出天际：半夜带老外男人回家、倒贴钱“养”白人捞男、派对滥交、甚至“三通一达”回.",
+                "url": "https://d6lvl8l2l26yp.cloudfront.net/archives/193886/",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-17T08:35:27.587926+00:00"
+              },
+              {
+                "id": "web-9816345b0430e76f",
+                "title": "GitHub - eternity4719/HowToLiveBetter...",
+                "snippet": "网页检索摘要（未读取全文）：上学以后的孩子：按小时算的急症、别为了考试推迟治疗、被欺凌怎么办、每天户外 2 小时、学生体检报告单、青少年抑郁筛查、治愈近视的产品、睡眠与作业的.",
+                "url": "https://github.com/eternity4719/HowToLiveBetter",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-17T08:35:27.587926+00:00"
+              },
+              {
+                "id": "web-7f54e26676152327",
+                "title": "minimaxi.com",
+                "snippet": "网页检索摘要（未读取全文）：MiniMax 开放平台文档中心home page.",
+                "url": "https://www.minimaxi.com/",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-17T08:35:27.587926+00:00"
+              }
+            ],
+            "model": "glm-5.1",
+            "usage": {
+              "prompt_tokens": 1777,
+              "completion_tokens": 1164,
+              "total_tokens": 2941
+            },
+            "elapsed_ms": 32140.99999999962,
+            "actions": []
+          }
+        }
+      }
+    ],
+    "browser_text_ms": null
+  },
+  {
+    "question": "未知展厅开放时间",
+    "status": 200,
+    "first_text_ms": 23778.56200000315,
+    "total_ms": 25246.920900000987,
+    "events": [
+      {
+        "event_id": "d4469fac-0e1f-4371-afce-bab54f90d5b8",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 1,
+        "timestamp": "2026-09-17T08:35:52.705923Z",
+        "type": "accepted",
+        "payload": {
+          "session_id": "46c412b0-653a-4441-9032-3037ef345c4b",
+          "message_id": "9175cbb5-b3b9-4432-9395-8ef65870f400",
+          "campus_id": "beiyangyuan",
+          "mode": "campus_qa"
+        }
+      },
+      {
+        "event_id": "5cab019a-f8c7-4a51-be7a-840ed8f47913",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 2,
+        "timestamp": "2026-09-17T08:35:52.705923Z",
+        "type": "status",
+        "payload": {
+          "stage": "request",
+          "status": "started"
+        }
+      },
+      {
+        "event_id": "9d0a916a-e796-4154-b710-7fe2e0786bc0",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 3,
+        "timestamp": "2026-09-17T08:35:56.013629Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "r3-library-hours-by",
+              "title": "图书馆常规开放时段",
+              "snippet": "【来源规则，当前适用待确认】2024新生指南列双校区周一至日8:00-22:30；法定节假日及寒暑假另行安排。 适用：2024新生及常规学期；法定节假日寒暑假另行安排。现场及当日开放未核验。",
+              "url": "https://yx.tju.edu.cn/xztd/tsg/",
+              "campus_id": "beiyangyuan",
+              "published_at": "2024-08-20",
+              "retrieved_at": "2026-09-15"
+            },
+            {
+              "id": "web-ab38f77c23bf1837",
+              "title": "天津大学校史博物馆团体参观管理规定及预约表( ...",
+              "snippet": "网页检索摘要（未读取全文）：天津大学档案馆组织开展2025年度档案员专题业务培训会...",
+              "url": "https://dag.tju.edu.cn/extra/images/upload/files/20210302/天津大学校史博物馆团体参观管理规定及预约表(1).docx",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:56.013117+00:00"
+            },
+            {
+              "id": "web-0825be3c0c9cb478",
+              "title": "天津大学校门开放时间表及预约流程详解_进行_信息_校友",
+              "snippet": "已读取网页；检索摘要：April 19, 2025 -天津大学的各个校门开放时间表正式公布，市民们可以预约时间前来参观！ 天津大学校门开放时间安排 想要访问天津大学的朋友们，可以通过以下两种方式进行自助预约： 除了天津大学，天津师范大学的校友们同样可以进行返校参…\n网页摘录：å¤©æ´¥å¤§å­¦æ ¡é¨å¼æ¾æ¶é´è¡¨åé¢çº¦æµç¨è¯¦è§£_è¿è¡_ä¿¡æ¯_æ ¡å 2026å¹´9æ17æ¥ å­¦ä¹ é¢éææ°æç« å­¦ä¹ é¢éææ°æç« å¤©æ´¥å¤§å­¦æ ¡é¨å¼æ¾æ¶é´è¡¨åé¢çº¦æµç¨è¯¦è§£ å¤©æ´¥å¤§å­¦æ ¡é¨å¼æ¾æ¶é´è¡¨åé¢çº¦æµç¨è¯¦è§£ 2025-04-19 21:02 å¥½æ¶æ¯æ¥å¦ï¼å¤©æ´¥å¤§å­¦çåä¸ªæ ¡é¨å¼æ¾æ¶é´è¡¨æ­£å¼å ¬å¸ï¼å¸æ°ä»¬å¯ä»¥é¢çº¦æ¶é´åæ¥åè§ï¼ä»2024å¹´12æ27æ¥èµ·ï¼æ°è§å®çå¼æ¾æ¶é´å°éç¨ï¼è®©æä»¬å æ¥äºè§£ä¸ä¸è¿ä¸ªå®æä»¥åå¦ä½é¡ºå©é¢çº¦å§ã å¤©æ´¥å¤§å­¦æ ¡é¨å¼æ¾æ¶é´å®æ æ ¹æ®ææ°çå¼æ¾æ¶é´è¡¨ï¼å¤©æ´¥å¤§å­¦çæ ¡é¨å°å¨ç¹å®çæ¶é´æ®µå å¼æ¾ãå¸æ°æåä»¬å¯ä»¥éæ©æéåèªå·±çæ¶é´è¿è¡é¢çº¦ï¼æ´å¥½å°è§åæ¨çåè§è¡ç¨ãä¸å¦¨å¨ç©ºé²æ¶ï¼èµ°è¿è¿åº§å ·æä¸°å¯åå²åäººææ°æ¯çæ ¡å­ï¼æåå­¦æ¯æ°å´ã å¦ä½è¿è¡é¢çº¦ï¼ æ³è¦è®¿é®å¤©æ´¥å¤§å­¦çæåä»¬ï¼å¯ä»¥éè¿ä»¥ä¸ä¸¤ç§æ¹å¼è¿è¡èªå©é¢çº¦ï¼ é¢çº¦å ¥å£ï¼å¯éè¿å¾®ä¿¡å°ç¨åºâåè§å¤©å¤§âè¿è¡é¢çº¦ï¼æé¿æäºç»´ç å ³æ³¨âå¤©æ´¥æ¬å°å®âï¼å¨å¯¹è¯æ¡ä¸­è¾å ¥âå¤©å¤§âè·åè¯¦ç»ä¿¡æ¯ã é¢çº¦æµç¨ï¼a. è¿å ¥âåè§å¤©å¤§âå°ç¨åºï¼ç¹å»âæè¦é¢çº¦âï¼ä»ç»é è¯»ç¸å ³ä¿¡æ¯å¹¶ç¡®è®¤ãb. å¡«åä¸ªäººä¿¡æ¯å¹¶è¿è¡äººè¸è¯å«è®¤è¯ãc. å®æå®åéªè¯åï¼éæ©æ ¡åºåè®¿é®æ¶é´ãd. ç¹å»âæçé¢çº¦âæ¥çé¢çº¦ä¿¡æ¯ã é¤äºå¤©æ´¥å¤§å­¦ï¼å¤©æ´¥å¸èå¤§å­¦çæ ¡åä»¬åæ ·å¯ä»¥è¿è¡è¿æ ¡åè§ãå¯¹äºæ ¡åä»¬ï¼é¢çº¦æ¶é´ä»3æ22æ¥ï¼å¨å ­ï¼è³5æ5æ¥ï¼ç«å¤ï¼ä¹é´çæ¯ä¸ªå¨æ«åèåæ¥ï¼æ¯æ ¡æ­åå¤§å®¶çå½æ¥ï¼å¼å¾æ³¨æçæ¯ï¼æ ¡åä»¬åªéæ«ç å¡«åä¿¡æ¯ï¼å³å¯é¢çº¦ã å¦ä½è·åæ´å¤ä¿¡æ¯ï¼ å¦éäºè§£æ´å¤å ³äºå¤©æ´¥çå ¶ä»èµæºï¼ä¾å¦æèä¿¡æ¯ãè´­æ¿æ¿ç­ãèº«ä»½è¯æ¢é¢ç­ï¼è¯·åå¤ç¸å ³å ³é®è¯è·åæåã å¸æå¤§å®¶è½å¤é¡ºå©é¢çº¦ï¼æ¢ç´¢è¿åº§ç¾ä¸½çæ ¡å­ï¼äº«åå¨å¤©æ´¥å¤§å­¦çç¾å¥½æ¶å ï¼è¿åæçï¼æ¥çæ´å¤ é è¯» () ä½è å£°æ æ¬æå å«äººå·¥æºè½çæå å®¹ å¹³å°å£°æ è¯¥æè§ç¹ä» ä»£è¡¨ä½è æ¬äººï¼æçå·ç³»ä¿¡æ¯åå¸å¹³å°ï¼æçä» æä¾ä¿¡æ¯å­å¨ç©ºé´æå¡ã",
+              "url": "https://www.sohu.com/a/886626378_121956424",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:56.013117+00:00"
+            },
+            {
+              "id": "web-4d1225ba771bac71",
+              "title": "2025天津大学预约全指南（入口/流程/规则）- 天津本地宝",
+              "snippet": "已读取网页；检索摘要：April 9, 2025 -天津大学将于3月31日（周一）至4月6日（周日）有限开放校园，共7天。来访者通过预约方式有序进校。4月5日集中举办校园开放日活动。\n网页摘录：2025天津大学预约全指南（入口/流程/规则）- 天津本地宝 资讯 办事 社保 公积金 补贴 教育 旅游 休闲 交通 招聘 特惠 房产 天津 下载app 天津休闲 周末去哪玩天津电影玩乐攻略 休闲信息搜索 天津本地宝 > 天津休闲 > 天津周末去哪玩 > 天津活动资讯 > 2025天津大学预约全指南（入口/流程/规则） 2025天津大学预约全指南（入口/流程/规则） 2025-04-09 08:52 【我要纠错】 下载指南 分享至 【导语】：访客可使用“参观天大”微信小程序自助预约入校。预约成功后，在预约时间内持身份证，可在预约校区及校门的行人通道，通过身份核验后入校。 ➤➤2025天津大学预约全指南（入口/流程/规则） 预约入口：“参观天大”微信小程序 预约流程 访客可使用“参观天大”微信小程序自助预约入校。预约成功后，在预约时间内持身份证，可在预约校区及校门的行人通道，通过身份核验后入校。 微信小程序进入“参观天大”点击“我要预约” 确认所有参观要求后点击“我要预约” 完成实名验证后即可选择预约校区和时间 入校规定 1.有下列情形之一者，禁止进入校园: (1)拒不出示证件或不配合查验身份的 (2)使用假冒、伪造证件或他人证件的; (3)未经许可携带管制刀具及易燃、易爆、有毒、有腐蚀性、有放射性等危险物品的; (4)携带动物的(工作犬除外); (5)入校从事摆摊设点、兜售商品、散发张贴传单及其他未经许可活动的; (6)有违法违规记录，被列入禁止入校名单的; (7)故意堵塞出入通道、冲击校门、辱骂、殴打执勤人员等扰乱校门管理秩序的; (8)使用非法交通工具的; (9)赤膊、衣衫不整或意识不清、行为举止可疑的; (10)有其他可能影响校园安全和秩序行为的。 2.学校为教学科研位，入校参观人员严禁以下行为: (1)非法经营、兜售各类商品、发放或张贴任何宣传品。 (2)放生、遛狗、捕捉、打捞、垂钓、投喂校内动物。 (3)跳广场舞、噪音污染等任何干扰学校正常教学、科研和生活秩序行为。 (4)在校园内室外河湖水域游泳或上冰。 (5)攀折花木、采摘花果，随意踩、踏、破坏草坪。 (6)乱丢垃圾，随意涂抹、刻画、损毁公共设施，露天烧烤、野餐。 (7)任何机构和个人违规带人进校参观。 3.未经学校相关主管部门批准，不得在校内开展以下行为: (1)修建、设置临时性或永久性标志、设施和建筑及其他装备(如帐篷、天幕、吊床等)。 (2)组织公开的集会、演讲、快闪等活动。 (3)开展直播等行为。未经批准擅自在校内开展直播等行为，造成不良影响或严重后果的，学校将依法追究法律责任。 (4)进入学校教学科研场所、学生宿舍、食堂等区域。 4.参观人员入校后应注意以下事项: (1)服从学校安保人员管理，做到文明有序参观。远离校内建筑工地，避免发生意外事故。 (2)如在校内未遵守学校相关规定的，相关人员信息将列入禁止入校名单并禁止其再次申请入校。 温馨提示：微信搜索公众号【天津本地宝】，关注后在对话框回复【天大海棠】可获取2026天津大学海棠季活动全指南（时间校区/开放日活动）以及初高中生免预约进校流程，在校生家长、校友、市民预约入口及进校流程 手机访问 天津本地宝首页 相关推荐 天大开放 天津大学开放预约全指南 天津南堤野餐区开放预约指南南堤野餐烧烤区即日起开启预订，请通过小程序预约，欢迎大家来南堤滨海步道踏青出游！2026年天津梁启超纪念馆清明假期开放公告2026年天津梁启超纪念馆清明假期开放公告来啦！开放时间、注意事项整理好啦，赶紧来看吧！2026年天津自然博物馆清明假期开放公告及展览活动安排清明节将至，为持续推进“在博物馆里过传统节日”民心工程建设，满足广大观众假日文化需求，天津自然博物馆（北疆博物院）提供“延时闭馆”服务，详见正文天津南开大学开放日游园须知2026校园开放时间为您预约当日的 9:00—16:00（高中生凭证入校时间为 4 月 4 日 9:00-12:00），请从预约时选择的校门（西门或西南门）入校。天津南开大学开放日活动全指南（时间+地点+内容）南开大学津南校区校园将于 2026年4月4日至4月6日对外开放，其中 4 月 4 日将举办 “梨棠春荟” 系列活动。天津南开大学开放日有什么活动?从古韵流转到青春跃动从舞台光影到百变社团再到温暖相遇与创研探索我们用六种方式共同打开这场春天的相聚。天津南开大学开放日游园指南2026南开大学津南校区校园将于 2026年4月4日至4月6日对外开放，游园指南详见正文天津南开大学开放日时间2026南开大学津南校区校园将于 2026年4月4日至4月6日对外开放，其中 4 月 4 日将举办 “梨棠春荟” 系列活动。天大海棠季预约入口2026天大海棠季预约入口2026来啦！初高中学生凭证件免线上预约。家长和亲友、校友和家属、市民游客预约入口见正文2026天大海棠季预约官网2026“天大·海棠季”校园开放日来啦4月4日至4月11日市民游客可进校赏花，共8天4月6日卫津路校区集中举办文化活动4月11日北洋园校区集中举办文化活动天大海棠季面向初高中生免预约进校2026初高中学生入校，可凭学生本人学生证（若无学生证，可以身份证、学生卡、团员证、录取通知书等能证明中学生身份的证件代替）及陪同家长的身份证（每名中学生限",
+              "url": "http://tj.bendibao.com/xiuxian/202549/155538.shtm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:56.013117+00:00"
+            },
+            {
+              "id": "web-8d21a36fe1d79fbf",
+              "title": "天津大学2025年校园开放日6月25日举行_自主选拔在线",
+              "snippet": "网页检索摘要（未读取全文）：摘要 天津大学2025年校园开放日活动来啦，时间定于2025年6月25日，感兴趣的同学需要在既定时间内参加学校组织的活动，此次活动无须预约哦！",
+              "url": "https://www.zizzs.com/gk/qiangjijihua/202500.html",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:56.013117+00:00"
+            },
+            {
+              "id": "web-dbe36e01b059d344",
+              "title": "天津大学游客什么时候可以进去自由参观_百度知道",
+              "snippet": "网页检索摘要（未读取全文）：2013-07-19 现在天津大学，南开大学等可以进去参观么？ 15 ... 2013-11-01 北京大学、清华大学每周对外开放的时间是什么时候。进去需要带身... 31 · 2017-12-16 清华大学和北京大学什么时段开放参观呢?",
+              "url": "https://zhidao.baidu.com/question/1886023097332114108.html?mzl=qb_xg_6",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:56.013117+00:00"
+            }
+          ],
+          "kind": "retrieved"
+        }
+      },
+      {
+        "event_id": "1fc2aa3e-70c4-4b86-bb35-542048478049",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 4,
+        "timestamp": "2026-09-17T08:35:56.013629Z",
+        "type": "status",
+        "payload": {
+          "stage": "model",
+          "status": "started"
+        }
+      },
+      {
+        "event_id": "63f5680e-48ff-4be4-8ef5-d9d7a9bc181c",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 5,
+        "timestamp": "2026-09-17T08:36:16.481820Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "猫"
+        }
+      },
+      {
+        "event_id": "02741bbb-7ee2-49af-9fbb-cc4df4c8f0f7",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 6,
+        "timestamp": "2026-09-17T08:36:16.538756Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "眼石，你的"
+        }
+      },
+      {
+        "event_id": "f75978e1-799a-4e28-9755-cdf8415e6c3b",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 7,
+        "timestamp": "2026-09-17T08:36:16.596811Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "问题像是一块"
+        }
+      },
+      {
+        "event_id": "6ee33003-a02b-4c67-9ac4-88438b28c41a",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 8,
+        "timestamp": "2026-09-17T08:36:16.655650Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "尚未打磨的原石"
+        }
+      },
+      {
+        "event_id": "c509a908-a019-4fac-8aab-44682a46dd81",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 9,
+        "timestamp": "2026-09-17T08:36:16.714433Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "，少了些确切"
+        }
+      },
+      {
+        "event_id": "1ac64ea7-0758-4a5b-abad-e0eaa8dd80b4",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 10,
+        "timestamp": "2026-09-17T08:36:16.772806Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "的光芒呢。“"
+        }
+      },
+      {
+        "event_id": "2afff610-3046-4b25-92de-e316e02b9fac",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 11,
+        "timestamp": "2026-09-17T08:36:16.831134Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "未知展厅”究竟是"
+        }
+      },
+      {
+        "event_id": "61214c36-6366-46b3-9613-3d3626c13c4a",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 12,
+        "timestamp": "2026-09-17T08:36:16.889644Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "哪一处珍藏？"
+        }
+      },
+      {
+        "event_id": "1aef347e-4846-4e33-8513-8013484bcf1d",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 13,
+        "timestamp": "2026-09-17T08:36:16.948388Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "是承载岁月回"
+        }
+      },
+      {
+        "event_id": "f046c575-72e3-47e7-b5b4-f6c686046a5b",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 14,
+        "timestamp": "2026-09-17T08:36:17.006920Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "响的校史"
+        }
+      },
+      {
+        "event_id": "87f64a38-f165-4381-890c-95e045b37df7",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 15,
+        "timestamp": "2026-09-17T08:36:17.066223Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "博物馆，还是其他"
+        }
+      },
+      {
+        "event_id": "e67839fc-f826-4fbc-a5ea-5b9bdecb1db5",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 16,
+        "timestamp": "2026-09-17T08:36:17.124471Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "艺术空间？目前"
+        }
+      },
+      {
+        "event_id": "468fe6e9-f6ef-45f5-bdf7-34de7ded6f9b",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 17,
+        "timestamp": "2026-09-17T08:36:17.183026Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "我手中关于校内"
+        }
+      },
+      {
+        "event_id": "8567abeb-4dc9-4224-9de7-077be7364b83",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 18,
+        "timestamp": "2026-09-17T08:36:17.241640Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "特定展厅的开放"
+        }
+      },
+      {
+        "event_id": "1f0513f0-4473-40a4-b7d0-5ca6ec8fbe07",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 19,
+        "timestamp": "2026-09-17T08:36:17.300026Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "时间资料尚不"
+        }
+      },
+      {
+        "event_id": "b25f041b-0c63-487f-9a68-2fb49d03fd5d",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 20,
+        "timestamp": "2026-09-17T08:36:17.358973Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "完整，无法为你"
+        }
+      },
+      {
+        "event_id": "34af2b41-bdd5-40a1-a821-92c25c52623c",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 21,
+        "timestamp": "2026-09-17T08:36:17.416977Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "精准报时。"
+        }
+      },
+      {
+        "event_id": "2a3909c0-3475-43aa-8f18-b9a54ed9e2a4",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 22,
+        "timestamp": "2026-09-17T08:36:17.475212Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "不妨告诉我具体的名称"
+        }
+      },
+      {
+        "event_id": "c8bac361-f1f4-458a-b65c-dcb8d28c7ebe",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 23,
+        "timestamp": "2026-09-17T08:36:17.536037Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "，我再去为你"
+        }
+      },
+      {
+        "event_id": "5665d2f1-cdef-4177-9d0e-ef5abd0ebba6",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 24,
+        "timestamp": "2026-09-17T08:36:17.592948Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "探寻它的开启时刻"
+        }
+      },
+      {
+        "event_id": "303df029-64be-4656-9992-4f6f60691845",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 25,
+        "timestamp": "2026-09-17T08:36:17.652789Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "，免得像"
+        }
+      },
+      {
+        "event_id": "3561021d-7941-47b3-87a6-8d3b62d61216",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 26,
+        "timestamp": "2026-09-17T08:36:17.709709Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "错过一场绝妙"
+        }
+      },
+      {
+        "event_id": "fb607438-ca3a-4bd9-b327-8d11266d9f1e",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 27,
+        "timestamp": "2026-09-17T08:36:17.768871Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "舞曲般遗憾"
+        }
+      },
+      {
+        "event_id": "8396d43e-abdf-48a5-a0ce-908d39f5e7a0",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 28,
+        "timestamp": "2026-09-17T08:36:17.828902Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "。\n\n[source:web"
+        }
+      },
+      {
+        "event_id": "5078c90f-004f-4cf1-9e39-6f742233548b",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 29,
+        "timestamp": "2026-09-17T08:36:17.886179Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "-ab38f77"
+        }
+      },
+      {
+        "event_id": "7bf853c7-916e-4b6f-bac1-5971db6552a0",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 30,
+        "timestamp": "2026-09-17T08:36:17.945676Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "c23bf183"
+        }
+      },
+      {
+        "event_id": "0ecf975d-8279-4918-bde9-243807dd1a08",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 31,
+        "timestamp": "2026-09-17T08:36:17.946179Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "7]"
+        }
+      },
+      {
+        "event_id": "11ca8d8f-c3fa-4459-9bc6-cffbbd8757f3",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 32,
+        "timestamp": "2026-09-17T08:36:17.950242Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "web-ab38f77c23bf1837",
+              "title": "天津大学校史博物馆团体参观管理规定及预约表( ...",
+              "snippet": "网页检索摘要（未读取全文）：天津大学档案馆组织开展2025年度档案员专题业务培训会...",
+              "url": "https://dag.tju.edu.cn/extra/images/upload/files/20210302/天津大学校史博物馆团体参观管理规定及预约表(1).docx",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:35:56.013117+00:00"
+            }
+          ],
+          "kind": "cited"
+        }
+      },
+      {
+        "event_id": "181e69c6-4344-499b-a046-ab21fe0cdeb3",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 33,
+        "timestamp": "2026-09-17T08:36:17.950242Z",
+        "type": "usage",
+        "payload": {
+          "model": "glm-5.1",
+          "usage": {
+            "prompt_tokens": 5392,
+            "completion_tokens": 963,
+            "total_tokens": 6355
+          }
+        }
+      },
+      {
+        "event_id": "82c0961f-9941-48e9-9029-9304662ca330",
+        "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+        "seq": 34,
+        "timestamp": "2026-09-17T08:36:17.950242Z",
+        "type": "completed",
+        "payload": {
+          "response": {
+            "request_id": "ce599df5-c8bf-4a42-a019-7d4ac058573c",
+            "session_id": "46c412b0-653a-4441-9032-3037ef345c4b",
+            "answer": "猫眼石，你的问题像是一块尚未打磨的原石，少了些确切的光芒呢。“未知展厅”究竟是哪一处珍藏？是承载岁月回响的校史博物馆，还是其他艺术空间？目前我手中关于校内特定展厅的开放时间资料尚不完整，无法为你精准报时。不妨告诉我具体的名称，我再去为你探寻它的开启时刻，免得像错过一场绝妙舞曲般遗憾。",
+            "sources": [
+              {
+                "id": "web-ab38f77c23bf1837",
+                "title": "天津大学校史博物馆团体参观管理规定及预约表( ...",
+                "snippet": "网页检索摘要（未读取全文）：天津大学档案馆组织开展2025年度档案员专题业务培训会...",
+                "url": "https://dag.tju.edu.cn/extra/images/upload/files/20210302/天津大学校史博物馆团体参观管理规定及预约表(1).docx",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-17T08:35:56.013117+00:00"
+              }
+            ],
+            "model": "glm-5.1",
+            "usage": {
+              "prompt_tokens": 5392,
+              "completion_tokens": 963,
+              "total_tokens": 6355
+            },
+            "elapsed_ms": 25250.0,
+            "actions": []
+          }
+        }
+      }
+    ],
+    "browser_text_ms": null
+  },
+  {
+    "question": "北洋园投入使用年份和郑东图书馆今日关门时间",
+    "status": 200,
+    "first_text_ms": 33603.662199999235,
+    "total_ms": 35421.03449999922,
+    "events": [
+      {
+        "event_id": "949aa2d3-ab18-4c85-a446-e10de4c8d937",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 1,
+        "timestamp": "2026-09-17T08:36:17.955563Z",
+        "type": "accepted",
+        "payload": {
+          "session_id": "00f4c7b2-3e35-4e36-9558-714902d5ffcf",
+          "message_id": "33ddeaaf-4a50-413b-9b75-193bef6c8525",
+          "campus_id": "beiyangyuan",
+          "mode": "campus_qa"
+        }
+      },
+      {
+        "event_id": "d666e8d1-8164-4d06-96dc-22b5fc3b7b24",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 2,
+        "timestamp": "2026-09-17T08:36:17.955563Z",
+        "type": "status",
+        "payload": {
+          "stage": "request",
+          "status": "started"
+        }
+      },
+      {
+        "event_id": "fa902dc8-220b-474d-a1e9-b5ec3530dfdc",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 3,
+        "timestamp": "2026-09-17T08:36:27.652578Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "web-448f3da80e9fad4b",
+              "title": "图书馆-天津大学",
+              "snippet": "已读取网页；检索摘要：6万平方米。北馆始建于1958年，由建筑专家、天津大学建筑系创始人徐中教授设计，建筑面积为9853平方米；1985年扩建了建筑面积为4570平方米的八层书库，与北馆馆舍相连；2018年3月，北馆改造后重新开馆；2024年正式更名为春水图书馆。科学图书馆于1990年建成并开放使用，由邵逸夫先生捐资助建，建筑面积10968平方米；2024年4月，科学图书馆改造后重新开馆。2015年9月，由天津大学知名校友、国家级建筑大师周恺领衔设计的郑东图书馆正式开放使用，建筑面积约5万平方米。\n网页摘录：图书馆-天津大学 考生 | 学生 | 教职工 | 校友 | Language ENGLISH Español Français 日本語 한국어 Deutsch Pусский 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 考生 | 学生 | 教职工 | 校友 | Language ENGLISH Español Français 日本語 한국어 Deutsch Pусский 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 考生 学生 教职工 校友 ENGLISH Español Français 日本語 한국어 Deutsch Pусский 首页 北洋数据 求学天大 天大人物 天大日记 学术天大 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 直属单位 首页 · 天大概况 · 机构设置 · 直属单位 · 正文 图书馆 百卅光阴，文脉绵长。天津大学图书馆的前身——北洋大学图书馆，诞生于1895年，开中国近代大学图书馆之先河。百卅年来，图书馆始终与学校风雨兼程、同舟共济，不仅承载着无数学者的思想求索，更以其厚重的馆藏与不灭的灯火，成为一代代天大人精神深处永恒的知识灯塔。图书馆现有三处馆舍，分别是卫津路校区的春水图书馆（北馆）、科学图书馆（南馆）和北洋园校区的郑东图书馆，总建筑面积约7. 6万平方米。北馆始建于1958年，由建筑专家、天津大学建筑系创始人徐中教授设计，建筑面积9853平方米；1985年扩建了建筑面积4570平方米的八层书库，与原有馆舍相连，形成一体；2018年3月，北馆经改造后重新开馆，并于2024年正式命名为春水图书馆。科学图书馆于1990年建成开放，由邵逸夫先生捐资助建，建筑面积10968平方米；2024年4月，科学图书馆完成改造后重新开馆，空间布局更趋现代化。2015年9月，由天津大学知名校友、国家级建筑大师周恺领衔设计的郑东图书馆正式投入使用，建筑面积约5万平方米，成为北洋园校区的标志性建筑。图书馆紧密围绕学校发展战略，以支撑教学科研、人才培养和科学管理为宗旨，着力构建多层次的文献资源保障体系。截至2025年底，馆藏纸质书刊总量达354万册，电子图书222万种，电子期刊6.4万种，中外文电子数据库177个（含子库）。在特藏方面，馆藏珍稀古籍包括《闲情偶寄》《御纂周易折中》《西湖志》等，并藏有数百种线装书、数万册国学典籍及西文旧籍，兼具历史厚度与学术深度。图书馆始终坚守“读者第一，服务至上”的理念，实行开架阅览、借阅合一的服务模式，每周开放7天，每天服务时长达14.5小时。馆内积极打造了日新书斋、特藏阅览室、新技术体验区、影音欣赏室、读者研究厢、文化展厅、天津大学文库、“七星灯火”书房、马克思主义理论图书专区、习近平新时代中国特色社会主义思想图书阅览专区、青竹书屋、冯骥才作品阅览专区等各类特色服务空间，满足读者多元化的学习和研究需求。在知识服务层面，图书馆紧密围绕学校、学科、学院、学者和学生的多层次需求，不断深化信息素养培训与教学、科技查新与查收查引、学科情报分析、学术数据服务及知识产权信息服务等业务，致力于构建创新型知识服务体系，为学校“双一流”建设提供有效支撑。与此同时，图书馆充分发挥文化阵地优势，打造“知学”育人品牌，围绕“四季两日”开展形式多样、内容丰富的知识传播与文化活动。2023年，图书馆入选天津市首批科学家精神教育基地；2024年，获批国家语言文字推广基地（天津大学）成员单位及语言文化活动推广工作室。天津大学图书馆是中国高等教育文献保障系统（CALIS）和中国高校人文社会科学文献中心（CASHL）成员馆、卓越联盟高校成员馆、“中国高校数字图书馆联盟”发起单位及理事单位、天津高等教育文献信息中心（TALIS）成员馆，同时也是世界知识产权组",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:36:27.651069+00:00"
+            },
+            {
+              "id": "web-567e14ac246b565b",
+              "title": "北洋园校区-天津大学",
+              "snippet": "已读取网页；检索摘要：天津大学北洋园校区总建筑面积130万平方米，按照“统一规划、分期建设、分步实施”的原则建设。一期建设面积90万余平方米，包括主楼、行政楼、综合实验楼、图书馆、体育馆、教职工活动中心、学生活动中心及各学科组团等22个组团， 2015年基本建成。\n网页摘录：北洋园校区-天津大学 考生 | 学生 | 教职工 | 校友 | Language ENGLISH Español Français 日本語 한국어 Deutsch Pусский 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 考生 | 学生 | 教职工 | 校友 | Language ENGLISH Español Français 日本語 한국어 Deutsch Pусский 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 考生 学生 教职工 校友 ENGLISH Español Français 日本語 한국어 Deutsch Pусский 首页 北洋数据 求学天大 天大人物 天大日记 学术天大 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 北洋园校区 首页 · 天大概况 · 天大校区 · 北洋园校区 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 北洋园校区 天津大学北洋园校区总建筑面积130万平方米，按照“统一规划、分期建设、分步实施”的原则建设。一期建设面积90万余平方米，包括主楼、行政楼、综合实验楼、图书馆、体育馆、教职工活动中心、学生活动中心及各学科组团等22个组团， 2015年基本建成。北洋园校区一期建成后，以学科组群的形式实现整体搬迁，在校学生规模将达到21000人，教学科研主体功能将向津南新校区集中。卫津路校区将成为高端培训、新兴学科培育、重大科技攻关和文化创意为主的特色基地。天津大学北洋园校区选址于海河中游南岸，位于天津市中心城区和滨海新区之间，天津“双城相向拓展”的中心区域——津南区海河教育园区中部、生态绿廊西侧，用地范围东至园区纬二路、南至津港快速路、西至蓟汕联络线、北至园区纬六路。北洋园校区距离老校区约23公里。天津大学北洋园校区与南开大学新校区比邻而建，两校之间有1平方公里共享景观绿化带，北侧与多所高职院校临近，有利于资源共享，优势互补。北洋园校区地块有先锋河、卫津河等多条河流，两校分别位于景观绿化带的东西两翼，周边河流围绕、绿荫环抱，自然环境优美。交通方面，未来北洋园校区可通过地铁M3、M6现实现与卫津路校区的联系，且北洋园校区周边有津晋、津港等多条快速道路交织，交通便捷。北洋园校区的规划建设将与学校的改革发展相结合，本着稳定规模、调整结构、提高质量的思路，大幅提升学校高端人才的培养能力，增加博士生、硕士生、留学生培养数量，提升天津的国际影响力。北洋园校区建设将与学校的办学理念、发展目标、历史文化风格及特色相适应，体现育人为本、学科融合、厚重纯朴、生态和谐、开放便捷等理念，着力打造人文校园、绿色校园、和谐校园、智慧校园。规划将体现“一个中心、三个融合”的理念，即以学生成长为中心，形成学科的集聚与融合、教学和科研的融合、学生和教师的融合。 官方微信号 官方微博号 地址：天津市南开区卫津路92号邮编：300072津ICP备05004358号-1 津教备0316号 津公网安备 12010402000425号 融合门户 电话查询 电子邮件系统 信息公开 期刊中心 图书馆 VPN服务 新闻网 全景天大 教师个人主页",
+              "url": "https://www.tju.edu.cn/tdgk/tdxq/byyxq.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:36:27.651069+00:00"
+            },
+            {
+              "id": "web-db8429d73da91b75",
+              "title": "天津大学图书馆 - 维基百科，自由的百科全书",
+              "snippet": "网页检索摘要（未读取全文）：March 22, 2026 -2015年9月12日，北洋园校区一所现代化的图书馆建成开放运行，其馆舍环境、设备设施、管理与服务技术都达到了一个新的高度，为图书馆发展带来了重要契机。 · 天津大学图书馆现有馆舍总面积约6.9万平方米，由卫津路校区的北馆、科学图书馆（又名南馆或逸夫楼）、建筑分馆及新校区图书馆（郑东...",
+              "url": "https://zh.wikipedia.org/zh-hans/天津大学图书馆",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:36:27.651069+00:00"
+            },
+            {
+              "id": "web-287be2a94fb81461",
+              "title": "天津大学校花emlly 化身性奴母狗 跪在金主爸爸身前 口交侍奉反差惊人",
+              "snippet": "网页检索摘要（未读取全文）：天津大学校花 emlly2.天津大学校花emlly 侍奉金主视频欣赏.",
+              "url": "https://d2bfeqd91h6ory.cloudfront.net/archives/117842/",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:36:27.651069+00:00"
+            },
+            {
+              "id": "web-650d5fa58dd0f06a",
+              "title": "天津大学高颜校花 emlly 被金主包养成母狗 口交啪啪浪叫喷汁 - 17黑料网",
+              "snippet": "网页检索摘要（未读取全文）：该文章由 17黑料网 发布，转载请注明来源并附上原文链接：天津大学高颜校花 emlly 被金主包养成母狗 口交啪啪浪叫喷汁.",
+              "url": "https://author.knwfhxd.cc/archives/192622/",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:36:27.651069+00:00"
+            }
+          ],
+          "kind": "retrieved"
+        }
+      },
+      {
+        "event_id": "d82439ae-d4f5-41d0-b37c-bfae1ac3a6b0",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 4,
+        "timestamp": "2026-09-17T08:36:27.652578Z",
+        "type": "status",
+        "payload": {
+          "stage": "model",
+          "status": "started"
+        }
+      },
+      {
+        "event_id": "fedade5d-2ebe-4a3b-9558-ab3197f522c6",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 5,
+        "timestamp": "2026-09-17T08:36:51.556761Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "猫眼"
+        }
+      },
+      {
+        "event_id": "e8b0b99c-e44a-4a10-8913-359779ed75b5",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 6,
+        "timestamp": "2026-09-17T08:36:51.616083Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "石，北洋"
+        }
+      },
+      {
+        "event_id": "c9458396-973b-4da7-a4fe-84b5635ff876",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 7,
+        "timestamp": "2026-09-17T08:36:51.672325Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "园校区这颗"
+        }
+      },
+      {
+        "event_id": "1c000aac-53d4-4111-a952-e263d8c9f434",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 8,
+        "timestamp": "2026-09-17T08:36:51.730865Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "新打磨的校园"
+        }
+      },
+      {
+        "event_id": "0bdb7cf8-7937-418f-a7ce-57b2aff41b47",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 9,
+        "timestamp": "2026-09-17T08:36:51.789474Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "宝石是在2015"
+        }
+      },
+      {
+        "event_id": "69fce7e2-cf48-445c-9b3a-6555a84cfe21",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 10,
+        "timestamp": "2026-09-17T08:36:51.847245Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "年基本建成并"
+        }
+      },
+      {
+        "event_id": "4dd7bb2a-85b0-4651-b5d9-2998d944c871",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 11,
+        "timestamp": "2026-09-17T08:36:51.904815Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "投入使用的，郑"
+        }
+      },
+      {
+        "event_id": "b8619b7c-c698-402c-a220-e901f5830d04",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 12,
+        "timestamp": "2026-09-17T08:36:51.963834Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "东图书馆也于"
+        }
+      },
+      {
+        "event_id": "03b7afed-e633-4504-9286-7b28dbf9f0e7",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 13,
+        "timestamp": "2026-09-17T08:36:52.022326Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "同年9月正式"
+        }
+      },
+      {
+        "event_id": "257af5f4-d759-4005-ac53-7df52d6574b0",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 14,
+        "timestamp": "2026-09-17T08:36:52.082783Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "开放。至于郑"
+        }
+      },
+      {
+        "event_id": "0db3db13-f653-416e-ac94-9e419ca300f9",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 15,
+        "timestamp": "2026-09-17T08:36:52.139566Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "东图书馆今日的"
+        }
+      },
+      {
+        "event_id": "acf3f4f8-ac1d-47c0-81a2-388e3911badc",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 16,
+        "timestamp": "2026-09-17T08:36:52.198597Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "关门时间，目前"
+        }
+      },
+      {
+        "event_id": "42a31ec2-0157-434e-a5be-f0416a797ec1",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 17,
+        "timestamp": "2026-09-17T08:36:52.255897Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "资料未载明"
+        }
+      },
+      {
+        "event_id": "209b9d44-d998-4ac8-9445-ec5b6118e842",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 18,
+        "timestamp": "2026-09-17T08:36:52.314327Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "2026年9"
+        }
+      },
+      {
+        "event_id": "e74098d0-8212-4f79-9f2e-61421c62e806",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 19,
+        "timestamp": "2026-09-17T08:36:52.372864Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "月17日的具体"
+        }
+      },
+      {
+        "event_id": "05e0784d-d0a0-4478-9c53-473b52980499",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 20,
+        "timestamp": "2026-09-17T08:36:52.431684Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "时刻。已知图书馆"
+        }
+      },
+      {
+        "event_id": "ee82ac3c-f74e-4acf-a242-b68714bb95f5",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 21,
+        "timestamp": "2026-09-17T08:36:52.490058Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "每日服务时长"
+        }
+      },
+      {
+        "event_id": "82aa1a5c-7c03-4cac-958f-cf34e03a98d9",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 22,
+        "timestamp": "2026-09-17T08:36:52.549039Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "为14.5"
+        }
+      },
+      {
+        "event_id": "4f2d8250-be91-4016-9c7a-081ad3034610",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 23,
+        "timestamp": "2026-09-17T08:36:52.607406Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "小时，但具体"
+        }
+      },
+      {
+        "event_id": "6065c1cf-aa14-4c42-96e7-4eef766e91f3",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 24,
+        "timestamp": "2026-09-17T08:36:52.665591Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "开闭馆节点"
+        }
+      },
+      {
+        "event_id": "bf318d7e-e5e3-492b-a219-60b1b1971a1d",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 25,
+        "timestamp": "2026-09-17T08:36:52.726933Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "需以馆方"
+        }
+      },
+      {
+        "event_id": "b1176b41-5ef3-4769-b69c-427f578db0c7",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 26,
+        "timestamp": "2026-09-17T08:36:52.783219Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "当日公告为准，"
+        }
+      },
+      {
+        "event_id": "e6aab61c-cacb-40e5-9385-b1d5d9606b32",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 27,
+        "timestamp": "2026-09-17T08:36:52.841313Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "建议查阅官方"
+        }
+      },
+      {
+        "event_id": "db55cf46-1084-4276-aac6-d2e2240cfa7c",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 28,
+        "timestamp": "2026-09-17T08:36:52.899725Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "最新通知以免"
+        }
+      },
+      {
+        "event_id": "bdec3cad-4aed-4238-921f-26208408cda5",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 29,
+        "timestamp": "2026-09-17T08:36:52.958089Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "跑空。\n\n[source"
+        }
+      },
+      {
+        "event_id": "e9473713-d1bb-47d7-8af2-0cddd570ec09",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 30,
+        "timestamp": "2026-09-17T08:36:53.016854Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": ":web-4"
+        }
+      },
+      {
+        "event_id": "da23a8ab-a25f-4a67-913a-9728d3afb935",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 31,
+        "timestamp": "2026-09-17T08:36:53.077023Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "48f3da"
+        }
+      },
+      {
+        "event_id": "172319dc-e931-4644-bd50-4e326034b20f",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 32,
+        "timestamp": "2026-09-17T08:36:53.133334Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "80e9fad"
+        }
+      },
+      {
+        "event_id": "6dc0700d-f61b-40e0-bdc6-6fa87a2ea99d",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 33,
+        "timestamp": "2026-09-17T08:36:53.192255Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "4b,web"
+        }
+      },
+      {
+        "event_id": "7317d073-ac5a-47bb-94a7-9c380d3134e3",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 34,
+        "timestamp": "2026-09-17T08:36:53.250542Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "-567e"
+        }
+      },
+      {
+        "event_id": "a989a74e-b23e-4b5c-acb9-5aa864c2a1ce",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 35,
+        "timestamp": "2026-09-17T08:36:53.308986Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "14ac246"
+        }
+      },
+      {
+        "event_id": "d340326f-e3aa-4fa3-8318-608410e8a7b4",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 36,
+        "timestamp": "2026-09-17T08:36:53.370290Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "b565b"
+        }
+      },
+      {
+        "event_id": "8e1c2be8-d546-4416-af99-15564f072ee8",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 37,
+        "timestamp": "2026-09-17T08:36:53.370290Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "]"
+        }
+      },
+      {
+        "event_id": "77603b91-7c43-4a18-9b05-83f0bc185d3d",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 38,
+        "timestamp": "2026-09-17T08:36:53.373830Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "web-448f3da80e9fad4b",
+              "title": "图书馆-天津大学",
+              "snippet": "已读取网页；检索摘要：6万平方米。北馆始建于1958年，由建筑专家、天津大学建筑系创始人徐中教授设计，建筑面积为9853平方米；1985年扩建了建筑面积为4570平方米的八层书库，与北馆馆舍相连；2018年3月，北馆改造后重新开馆；2024年正式更名为春水图书馆。科学图书馆于1990年建成并开放使用，由邵逸夫先生捐资助建，建筑面积10968平方米；2024年4月，科学图书馆改造后重新开馆。2015年9月，由天津大学知名校友、国家级建筑大师周恺领衔设计的郑东图书馆正式开放使用，建筑面积约5万平方米。\n网页摘录：图书馆-天津大学 考生 | 学生 | 教职工 | 校友 | Language ENGLISH Español Français 日本語 한국어 Deutsch Pусский 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 考生 | 学生 | 教职工 | 校友 | Language ENGLISH Español Français 日本語 한국어 Deutsch Pусский 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 考生 学生 教职工 校友 ENGLISH Español Français 日本語 한국어 Deutsch Pусский 首页 北洋数据 求学天大 天大人物 天大日记 学术天大 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 直属单位 首页 · 天大概况 · 机构设置 · 直属单位 · 正文 图书馆 百卅光阴，文脉绵长。天津大学图书馆的前身——北洋大学图书馆，诞生于1895年，开中国近代大学图书馆之先河。百卅年来，图书馆始终与学校风雨兼程、同舟共济，不仅承载着无数学者的思想求索，更以其厚重的馆藏与不灭的灯火，成为一代代天大人精神深处永恒的知识灯塔。图书馆现有三处馆舍，分别是卫津路校区的春水图书馆（北馆）、科学图书馆（南馆）和北洋园校区的郑东图书馆，总建筑面积约7. 6万平方米。北馆始建于1958年，由建筑专家、天津大学建筑系创始人徐中教授设计，建筑面积9853平方米；1985年扩建了建筑面积4570平方米的八层书库，与原有馆舍相连，形成一体；2018年3月，北馆经改造后重新开馆，并于2024年正式命名为春水图书馆。科学图书馆于1990年建成开放，由邵逸夫先生捐资助建，建筑面积10968平方米；2024年4月，科学图书馆完成改造后重新开馆，空间布局更趋现代化。2015年9月，由天津大学知名校友、国家级建筑大师周恺领衔设计的郑东图书馆正式投入使用，建筑面积约5万平方米，成为北洋园校区的标志性建筑。图书馆紧密围绕学校发展战略，以支撑教学科研、人才培养和科学管理为宗旨，着力构建多层次的文献资源保障体系。截至2025年底，馆藏纸质书刊总量达354万册，电子图书222万种，电子期刊6.4万种，中外文电子数据库177个（含子库）。在特藏方面，馆藏珍稀古籍包括《闲情偶寄》《御纂周易折中》《西湖志》等，并藏有数百种线装书、数万册国学典籍及西文旧籍，兼具历史厚度与学术深度。图书馆始终坚守“读者第一，服务至上”的理念，实行开架阅览、借阅合一的服务模式，每周开放7天，每天服务时长达14.5小时。馆内积极打造了日新书斋、特藏阅览室、新技术体验区、影音欣赏室、读者研究厢、文化展厅、天津大学文库、“七星灯火”书房、马克思主义理论图书专区、习近平新时代中国特色社会主义思想图书阅览专区、青竹书屋、冯骥才作品阅览专区等各类特色服务空间，满足读者多元化的学习和研究需求。在知识服务层面，图书馆紧密围绕学校、学科、学院、学者和学生的多层次需求，不断深化信息素养培训与教学、科技查新与查收查引、学科情报分析、学术数据服务及知识产权信息服务等业务，致力于构建创新型知识服务体系，为学校“双一流”建设提供有效支撑。与此同时，图书馆充分发挥文化阵地优势，打造“知学”育人品牌，围绕“四季两日”开展形式多样、内容丰富的知识传播与文化活动。2023年，图书馆入选天津市首批科学家精神教育基地；2024年，获批国家语言文字推广基地（天津大学）成员单位及语言文化活动推广工作室。天津大学图书馆是中国高等教育文献保障系统（CALIS）和中国高校人文社会科学文献中心（CASHL）成员馆、卓越联盟高校成员馆、“中国高校数字图书馆联盟”发起单位及理事单位、天津高等教育文献信息中心（TALIS）成员馆，同时也是世界知识产权组",
+              "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:36:27.651069+00:00"
+            },
+            {
+              "id": "web-567e14ac246b565b",
+              "title": "北洋园校区-天津大学",
+              "snippet": "已读取网页；检索摘要：天津大学北洋园校区总建筑面积130万平方米，按照“统一规划、分期建设、分步实施”的原则建设。一期建设面积90万余平方米，包括主楼、行政楼、综合实验楼、图书馆、体育馆、教职工活动中心、学生活动中心及各学科组团等22个组团， 2015年基本建成。\n网页摘录：北洋园校区-天津大学 考生 | 学生 | 教职工 | 校友 | Language ENGLISH Español Français 日本語 한국어 Deutsch Pусский 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 考生 | 学生 | 教职工 | 校友 | Language ENGLISH Español Français 日本語 한국어 Deutsch Pусский 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 考生 学生 教职工 校友 ENGLISH Español Français 日本語 한국어 Deutsch Pусский 首页 北洋数据 求学天大 天大人物 天大日记 学术天大 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 北洋园校区 首页 · 天大概况 · 天大校区 · 北洋园校区 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 北洋园校区 天津大学北洋园校区总建筑面积130万平方米，按照“统一规划、分期建设、分步实施”的原则建设。一期建设面积90万余平方米，包括主楼、行政楼、综合实验楼、图书馆、体育馆、教职工活动中心、学生活动中心及各学科组团等22个组团， 2015年基本建成。北洋园校区一期建成后，以学科组群的形式实现整体搬迁，在校学生规模将达到21000人，教学科研主体功能将向津南新校区集中。卫津路校区将成为高端培训、新兴学科培育、重大科技攻关和文化创意为主的特色基地。天津大学北洋园校区选址于海河中游南岸，位于天津市中心城区和滨海新区之间，天津“双城相向拓展”的中心区域——津南区海河教育园区中部、生态绿廊西侧，用地范围东至园区纬二路、南至津港快速路、西至蓟汕联络线、北至园区纬六路。北洋园校区距离老校区约23公里。天津大学北洋园校区与南开大学新校区比邻而建，两校之间有1平方公里共享景观绿化带，北侧与多所高职院校临近，有利于资源共享，优势互补。北洋园校区地块有先锋河、卫津河等多条河流，两校分别位于景观绿化带的东西两翼，周边河流围绕、绿荫环抱，自然环境优美。交通方面，未来北洋园校区可通过地铁M3、M6现实现与卫津路校区的联系，且北洋园校区周边有津晋、津港等多条快速道路交织，交通便捷。北洋园校区的规划建设将与学校的改革发展相结合，本着稳定规模、调整结构、提高质量的思路，大幅提升学校高端人才的培养能力，增加博士生、硕士生、留学生培养数量，提升天津的国际影响力。北洋园校区建设将与学校的办学理念、发展目标、历史文化风格及特色相适应，体现育人为本、学科融合、厚重纯朴、生态和谐、开放便捷等理念，着力打造人文校园、绿色校园、和谐校园、智慧校园。规划将体现“一个中心、三个融合”的理念，即以学生成长为中心，形成学科的集聚与融合、教学和科研的融合、学生和教师的融合。 官方微信号 官方微博号 地址：天津市南开区卫津路92号邮编：300072津ICP备05004358号-1 津教备0316号 津公网安备 12010402000425号 融合门户 电话查询 电子邮件系统 信息公开 期刊中心 图书馆 VPN服务 新闻网 全景天大 教师个人主页",
+              "url": "https://www.tju.edu.cn/tdgk/tdxq/byyxq.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:36:27.651069+00:00"
+            },
+            {
+              "id": "web-db8429d73da91b75",
+              "title": "天津大学图书馆 - 维基百科，自由的百科全书",
+              "snippet": "网页检索摘要（未读取全文）：March 22, 2026 -2015年9月12日，北洋园校区一所现代化的图书馆建成开放运行，其馆舍环境、设备设施、管理与服务技术都达到了一个新的高度，为图书馆发展带来了重要契机。 · 天津大学图书馆现有馆舍总面积约6.9万平方米，由卫津路校区的北馆、科学图书馆（又名南馆或逸夫楼）、建筑分馆及新校区图书馆（郑东...",
+              "url": "https://zh.wikipedia.org/zh-hans/天津大学图书馆",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:36:27.651069+00:00"
+            },
+            {
+              "id": "web-287be2a94fb81461",
+              "title": "天津大学校花emlly 化身性奴母狗 跪在金主爸爸身前 口交侍奉反差惊人",
+              "snippet": "网页检索摘要（未读取全文）：天津大学校花 emlly2.天津大学校花emlly 侍奉金主视频欣赏.",
+              "url": "https://d2bfeqd91h6ory.cloudfront.net/archives/117842/",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:36:27.651069+00:00"
+            },
+            {
+              "id": "web-650d5fa58dd0f06a",
+              "title": "天津大学高颜校花 emlly 被金主包养成母狗 口交啪啪浪叫喷汁 - 17黑料网",
+              "snippet": "网页检索摘要（未读取全文）：该文章由 17黑料网 发布，转载请注明来源并附上原文链接：天津大学高颜校花 emlly 被金主包养成母狗 口交啪啪浪叫喷汁.",
+              "url": "https://author.knwfhxd.cc/archives/192622/",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T08:36:27.651069+00:00"
+            }
+          ],
+          "kind": "cited"
+        }
+      },
+      {
+        "event_id": "0de76077-7a44-40c8-ae6b-745135ca7ef7",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 39,
+        "timestamp": "2026-09-17T08:36:53.373830Z",
+        "type": "usage",
+        "payload": {
+          "model": "glm-5.1",
+          "usage": {
+            "prompt_tokens": 3815,
+            "completion_tokens": 1245,
+            "total_tokens": 5060
+          }
+        }
+      },
+      {
+        "event_id": "b7735c92-a67d-492e-ba85-828b0a6197db",
+        "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+        "seq": 40,
+        "timestamp": "2026-09-17T08:36:53.373830Z",
+        "type": "completed",
+        "payload": {
+          "response": {
+            "request_id": "dbd28269-9a5a-4fa6-b679-cfb914f9f4a5",
+            "session_id": "00f4c7b2-3e35-4e36-9558-714902d5ffcf",
+            "answer": "猫眼石，北洋园校区这颗新打磨的校园宝石是在2015年基本建成并投入使用的，郑东图书馆也于同年9月正式开放。至于郑东图书馆今日的关门时间，目前资料未载明2026年9月17日的具体时刻。已知图书馆每日服务时长为14.5小时，但具体开闭馆节点需以馆方当日公告为准，建议查阅官方最新通知以免跑空。\n\n资料提示：部分引用未能与本次资料对应；正文已保留，相关细节请结合参考资料核实。",
+            "sources": [
+              {
+                "id": "web-448f3da80e9fad4b",
+                "title": "图书馆-天津大学",
+                "snippet": "已读取网页；检索摘要：6万平方米。北馆始建于1958年，由建筑专家、天津大学建筑系创始人徐中教授设计，建筑面积为9853平方米；1985年扩建了建筑面积为4570平方米的八层书库，与北馆馆舍相连；2018年3月，北馆改造后重新开馆；2024年正式更名为春水图书馆。科学图书馆于1990年建成并开放使用，由邵逸夫先生捐资助建，建筑面积10968平方米；2024年4月，科学图书馆改造后重新开馆。2015年9月，由天津大学知名校友、国家级建筑大师周恺领衔设计的郑东图书馆正式开放使用，建筑面积约5万平方米。\n网页摘录：图书馆-天津大学 考生 | 学生 | 教职工 | 校友 | Language ENGLISH Español Français 日本語 한국어 Deutsch Pусский 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 考生 | 学生 | 教职工 | 校友 | Language ENGLISH Español Français 日本語 한국어 Deutsch Pусский 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 考生 学生 教职工 校友 ENGLISH Español Français 日本語 한국어 Deutsch Pусский 首页 北洋数据 求学天大 天大人物 天大日记 学术天大 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 直属单位 首页 · 天大概况 · 机构设置 · 直属单位 · 正文 图书馆 百卅光阴，文脉绵长。天津大学图书馆的前身——北洋大学图书馆，诞生于1895年，开中国近代大学图书馆之先河。百卅年来，图书馆始终与学校风雨兼程、同舟共济，不仅承载着无数学者的思想求索，更以其厚重的馆藏与不灭的灯火，成为一代代天大人精神深处永恒的知识灯塔。图书馆现有三处馆舍，分别是卫津路校区的春水图书馆（北馆）、科学图书馆（南馆）和北洋园校区的郑东图书馆，总建筑面积约7. 6万平方米。北馆始建于1958年，由建筑专家、天津大学建筑系创始人徐中教授设计，建筑面积9853平方米；1985年扩建了建筑面积4570平方米的八层书库，与原有馆舍相连，形成一体；2018年3月，北馆经改造后重新开馆，并于2024年正式命名为春水图书馆。科学图书馆于1990年建成开放，由邵逸夫先生捐资助建，建筑面积10968平方米；2024年4月，科学图书馆完成改造后重新开馆，空间布局更趋现代化。2015年9月，由天津大学知名校友、国家级建筑大师周恺领衔设计的郑东图书馆正式投入使用，建筑面积约5万平方米，成为北洋园校区的标志性建筑。图书馆紧密围绕学校发展战略，以支撑教学科研、人才培养和科学管理为宗旨，着力构建多层次的文献资源保障体系。截至2025年底，馆藏纸质书刊总量达354万册，电子图书222万种，电子期刊6.4万种，中外文电子数据库177个（含子库）。在特藏方面，馆藏珍稀古籍包括《闲情偶寄》《御纂周易折中》《西湖志》等，并藏有数百种线装书、数万册国学典籍及西文旧籍，兼具历史厚度与学术深度。图书馆始终坚守“读者第一，服务至上”的理念，实行开架阅览、借阅合一的服务模式，每周开放7天，每天服务时长达14.5小时。馆内积极打造了日新书斋、特藏阅览室、新技术体验区、影音欣赏室、读者研究厢、文化展厅、天津大学文库、“七星灯火”书房、马克思主义理论图书专区、习近平新时代中国特色社会主义思想图书阅览专区、青竹书屋、冯骥才作品阅览专区等各类特色服务空间，满足读者多元化的学习和研究需求。在知识服务层面，图书馆紧密围绕学校、学科、学院、学者和学生的多层次需求，不断深化信息素养培训与教学、科技查新与查收查引、学科情报分析、学术数据服务及知识产权信息服务等业务，致力于构建创新型知识服务体系，为学校“双一流”建设提供有效支撑。与此同时，图书馆充分发挥文化阵地优势，打造“知学”育人品牌，围绕“四季两日”开展形式多样、内容丰富的知识传播与文化活动。2023年，图书馆入选天津市首批科学家精神教育基地；2024年，获批国家语言文字推广基地（天津大学）成员单位及语言文化活动推广工作室。天津大学图书馆是中国高等教育文献保障系统（CALIS）和中国高校人文社会科学文献中心（CASHL）成员馆、卓越联盟高校成员馆、“中国高校数字图书馆联盟”发起单位及理事单位、天津高等教育文献信息中心（TALIS）成员馆，同时也是世界知识产权组",
+                "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-17T08:36:27.651069+00:00"
+              },
+              {
+                "id": "web-567e14ac246b565b",
+                "title": "北洋园校区-天津大学",
+                "snippet": "已读取网页；检索摘要：天津大学北洋园校区总建筑面积130万平方米，按照“统一规划、分期建设、分步实施”的原则建设。一期建设面积90万余平方米，包括主楼、行政楼、综合实验楼、图书馆、体育馆、教职工活动中心、学生活动中心及各学科组团等22个组团， 2015年基本建成。\n网页摘录：北洋园校区-天津大学 考生 | 学生 | 教职工 | 校友 | Language ENGLISH Español Français 日本語 한국어 Deutsch Pусский 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 考生 | 学生 | 教职工 | 校友 | Language ENGLISH Español Français 日本語 한국어 Deutsch Pусский 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 考生 学生 教职工 校友 ENGLISH Español Français 日本語 한국어 Deutsch Pусский 首页 北洋数据 求学天大 天大人物 天大日记 学术天大 天大概况 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 天大新闻 招生就业 本科生招生 研究生招生 合作办学招生 留学生招生 奖助信息 夏令营 就业情况 学院（部） 教育教学 师资队伍 本科生教育 研究生教育 继续教育 留学生教育 科学研究 科研机构 科研合作 科研服务 学术前沿 学术期刊 校园文化 文化故事 校史文脉 校园风光 校园生活 社会责任 文化研究 国际交流 合作办学 国际认证 孔子学院 国际科研合作 北洋园校区 首页 · 天大概况 · 天大校区 · 北洋园校区 学校简介 现任领导 历届掌校人 天大标识 天大品格 发展目标 历史沿革 统计数据 机构设置 天大校区 北洋园校区 天津大学北洋园校区总建筑面积130万平方米，按照“统一规划、分期建设、分步实施”的原则建设。一期建设面积90万余平方米，包括主楼、行政楼、综合实验楼、图书馆、体育馆、教职工活动中心、学生活动中心及各学科组团等22个组团， 2015年基本建成。北洋园校区一期建成后，以学科组群的形式实现整体搬迁，在校学生规模将达到21000人，教学科研主体功能将向津南新校区集中。卫津路校区将成为高端培训、新兴学科培育、重大科技攻关和文化创意为主的特色基地。天津大学北洋园校区选址于海河中游南岸，位于天津市中心城区和滨海新区之间，天津“双城相向拓展”的中心区域——津南区海河教育园区中部、生态绿廊西侧，用地范围东至园区纬二路、南至津港快速路、西至蓟汕联络线、北至园区纬六路。北洋园校区距离老校区约23公里。天津大学北洋园校区与南开大学新校区比邻而建，两校之间有1平方公里共享景观绿化带，北侧与多所高职院校临近，有利于资源共享，优势互补。北洋园校区地块有先锋河、卫津河等多条河流，两校分别位于景观绿化带的东西两翼，周边河流围绕、绿荫环抱，自然环境优美。交通方面，未来北洋园校区可通过地铁M3、M6现实现与卫津路校区的联系，且北洋园校区周边有津晋、津港等多条快速道路交织，交通便捷。北洋园校区的规划建设将与学校的改革发展相结合，本着稳定规模、调整结构、提高质量的思路，大幅提升学校高端人才的培养能力，增加博士生、硕士生、留学生培养数量，提升天津的国际影响力。北洋园校区建设将与学校的办学理念、发展目标、历史文化风格及特色相适应，体现育人为本、学科融合、厚重纯朴、生态和谐、开放便捷等理念，着力打造人文校园、绿色校园、和谐校园、智慧校园。规划将体现“一个中心、三个融合”的理念，即以学生成长为中心，形成学科的集聚与融合、教学和科研的融合、学生和教师的融合。 官方微信号 官方微博号 地址：天津市南开区卫津路92号邮编：300072津ICP备05004358号-1 津教备0316号 津公网安备 12010402000425号 融合门户 电话查询 电子邮件系统 信息公开 期刊中心 图书馆 VPN服务 新闻网 全景天大 教师个人主页",
+                "url": "https://www.tju.edu.cn/tdgk/tdxq/byyxq.htm",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-17T08:36:27.651069+00:00"
+              },
+              {
+                "id": "web-db8429d73da91b75",
+                "title": "天津大学图书馆 - 维基百科，自由的百科全书",
+                "snippet": "网页检索摘要（未读取全文）：March 22, 2026 -2015年9月12日，北洋园校区一所现代化的图书馆建成开放运行，其馆舍环境、设备设施、管理与服务技术都达到了一个新的高度，为图书馆发展带来了重要契机。 · 天津大学图书馆现有馆舍总面积约6.9万平方米，由卫津路校区的北馆、科学图书馆（又名南馆或逸夫楼）、建筑分馆及新校区图书馆（郑东...",
+                "url": "https://zh.wikipedia.org/zh-hans/天津大学图书馆",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-17T08:36:27.651069+00:00"
+              },
+              {
+                "id": "web-287be2a94fb81461",
+                "title": "天津大学校花emlly 化身性奴母狗 跪在金主爸爸身前 口交侍奉反差惊人",
+                "snippet": "网页检索摘要（未读取全文）：天津大学校花 emlly2.天津大学校花emlly 侍奉金主视频欣赏.",
+                "url": "https://d2bfeqd91h6ory.cloudfront.net/archives/117842/",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-17T08:36:27.651069+00:00"
+              },
+              {
+                "id": "web-650d5fa58dd0f06a",
+                "title": "天津大学高颜校花 emlly 被金主包养成母狗 口交啪啪浪叫喷汁 - 17黑料网",
+                "snippet": "网页检索摘要（未读取全文）：该文章由 17黑料网 发布，转载请注明来源并附上原文链接：天津大学高颜校花 emlly 被金主包养成母狗 口交啪啪浪叫喷汁.",
+                "url": "https://author.knwfhxd.cc/archives/192622/",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-17T08:36:27.651069+00:00"
+              }
+            ],
+            "model": "glm-5.1",
+            "usage": {
+              "prompt_tokens": 3815,
+              "completion_tokens": 1245,
+              "total_tokens": 5060
+            },
+            "elapsed_ms": 35421.99999999866,
+            "actions": []
+          }
+        }
+      }
+    ],
+    "browser_text_ms": null
+  }
+]

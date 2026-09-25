@@ -1,0 +1,13 @@
+✔ late successful or failed ASR responses after campus stop cannot emit text or errors (55.7788ms)
+✔ real player events and measured RMS drive mouth; pause/mute/end/cancel close immediately (2.9431ms)
+✔ manual interruption stops player/queue and notifies A; stale callbacks retain old context (7.9934ms)
+✔ unconfigured ASR emits contract-safe error without requesting the microphone (0.5929ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 412.093
+

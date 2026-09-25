@@ -1,4 +1,4 @@
-// M-owned shared guard. Counts application initiations, never vendor quota debits.
+// Counts application initiations, never vendor quota debits.
 export type MapOperation = 'map_load'|'geolocation'|'poi_search'|'walking_route';
 export type MapCounters = {initiated:number;completed:number;failed:number;cancelled:number;blocked:number};
 export type MapLimits = Record<MapOperation,number>;
@@ -38,6 +38,20 @@ export class MapBudget {
   }
  }
  snapshot(){return {origin:'frontend' as const,kind:'application_operations' as const,platform_quota_debit:null,counters:structuredClone(this.counters),limits:{...this.limits}};}
+ async waitForSlot(kind:MapOperation,signal:AbortSignal):Promise<void>{
+  // Queue locally before reservation; waiting/cancellation makes no provider call.
+  for(;;){
+   if(signal.aborted)throw new MapCallError('cancelled');
+   const now=this.now(),recent=this.starts[kind].filter(t=>now-t<60000);
+   const delay=this.active.size?100:Math.max(0,(recent.at(-1)??-Infinity)+5000-now,recent.length>=6?recent[0]+60000-now:0);
+   if(delay<=0)return;
+   await new Promise<void>((resolve,reject)=>{
+    const abort=()=>{clearTimeout(timer);reject(new MapCallError('cancelled'));};
+    const timer=setTimeout(()=>{signal.removeEventListener('abort',abort);resolve();},delay);
+    signal.addEventListener('abort',abort,{once:true});if(signal.aborted)abort();
+   });
+  }
+ }
  private save(){if(this.storage)try{this.storage.setItem(this.storageKey,JSON.stringify(this.counters));}catch{throw new MapCallError('budget_storage_unavailable');}}
  async run<T>(kind:MapOperation,operationId:string,userInitiated:boolean,signal:AbortSignal,invoke:()=>Promise<T>):Promise<T>{
   const key=kind+':'+operationId;

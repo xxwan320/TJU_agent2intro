@@ -1,4 +1,4 @@
-// M-owned same-origin interface; A consumes stream records and owns UI state.
+// Same-origin streaming interface.
 import { api } from './api';
 import type {CampusId} from '../../../shared/contracts';
 import type {R2ChatRequest,POICategory,POIPage,POI,Coverage,CampusAssets,MapStatus,MapPublicConfig,ExternalNavigation,GenerationRendered,RenderReceipt,RouteRequest,RouteResponse,RouteCancelResponse} from '../../../shared/r2';

@@ -11,9 +11,19 @@
     "width": 1500,
     "height": 1000,
     "description": "天津大学第九教学楼；文件归类卫津路校区，与校方建筑身份相符。",
-    "status": "download_blocked_429",
+    "status": "download_blocked_403",
     "local_path": null,
-    "visually_reviewed": false
+    "visually_reviewed": false,
+    "r3_download_http_status": 403,
+    "last_checked_at": "2026-09-15",
+    "display_eligible": false,
+    "permission_status": "license_metadata_confirmed",
+    "poi_id": "weijinlu-09-teaching",
+    "pending_items": [
+      "取得实际原文件并核对尺寸与图像",
+      "人工看图确认主体与校区",
+      "显示时保留作者、原页面、许可及改动说明"
+    ]
   },
   {
     "id": "weijin-qingnian-2015",
@@ -29,7 +39,17 @@
     "description": "文件说明明确为天津大学卫津路校区青年湖。",
     "status": "file_page_fetch_403_cached_description_read",
     "local_path": null,
-    "visually_reviewed": false
+    "visually_reviewed": false,
+    "display_eligible": false,
+    "last_checked_at": "2026-09-15",
+    "permission_status": "license_metadata_confirmed",
+    "poi_id": "weijinlu-youth-lake",
+    "pending_items": [
+      "取得实际原文件并核对尺寸与图像",
+      "人工看图确认主体与校区",
+      "显示时保留作者、原页面、许可及改动说明"
+    ],
+    "r3_page_status": "web_fetch_cache_miss; original 2026-09-14 metadata retained"
   },
   {
     "id": "beiyang-2019",
@@ -43,8 +63,93 @@
     "width": 4032,
     "height": 3024,
     "description": "文件说明为天津大学北洋园校区；拍摄元数据位于该校区范围，但不把相机坐标当POI经纬度。",
-    "status": "download_blocked_429",
+    "status": "download_blocked_403",
     "local_path": null,
-    "visually_reviewed": false
+    "visually_reviewed": false,
+    "r3_download_http_status": 403,
+    "last_checked_at": "2026-09-15",
+    "display_eligible": false,
+    "permission_status": "license_metadata_confirmed",
+    "poi_id": null,
+    "pending_items": [
+      "取得实际原文件并核对尺寸与图像",
+      "人工看图确认主体与校区",
+      "显示时保留作者、原页面、许可及改动说明"
+    ]
+  },
+  {
+    "id": "weijin-gate-2010",
+    "campus_id": "weijinlu",
+    "poi_id": "weijinlu-east-gate",
+    "source_url": "https://commons.wikimedia.org/wiki/File:TJU_Gate.JPG",
+    "download_url": null,
+    "creator": "Flsxx; current file revision uploaded by Yaohua2k7",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "taken_at": "2010-10-17",
+    "width": 2048,
+    "height": 1536,
+    "description": "文件说明为卫津路天津大学校门；具体与现有东门POI的对应仍需看图复核。",
+    "status": "candidate_pending_download_and_identity",
+    "permission_status": "license_metadata_confirmed",
+    "local_path": null,
+    "visually_reviewed": false,
+    "display_eligible": false,
+    "last_checked_at": "2026-09-15",
+    "pending_items": [
+      "下载域本轮403后停止；后续正常网络取得原件",
+      "核查具体校门身份及当前文件改动署名",
+      "不把相机坐标当入口GPS"
+    ]
+  },
+  {
+    "id": "beiyang-haitang-official",
+    "campus_id": "beiyangyuan",
+    "poi_id": "beiyangyuan-haitang-bank",
+    "source_url": "https://news.tju.edu.cn/info/1005/590619.htm",
+    "download_url": null,
+    "creator": "页面摄影署名戴涛、孙立伟；单张对应作者未确认",
+    "license": null,
+    "license_url": null,
+    "taken_at": null,
+    "width": null,
+    "height": null,
+    "description": "校方转载报道提及海棠堤并含照片；单张对应主体未确认，仅采集线索。",
+    "status": "candidate_pending_permission_and_identity",
+    "permission_status": "pending",
+    "local_path": null,
+    "visually_reviewed": false,
+    "display_eligible": false,
+    "last_checked_at": "2026-09-15",
+    "pending_items": [
+      "向权利人确认具体照片作者、原文件及再发布授权",
+      "逐张确认是否实拍目标核心点；若非对应主体剔除",
+      "未经授权及看图不下载至public、不作为可显示实景"
+    ]
+  },
+  {
+    "id": "beiyang-library-official",
+    "campus_id": "beiyangyuan",
+    "poi_id": "beiyangyuan-zhengdong-library",
+    "source_url": "https://news.tju.edu.cn/info/1005/590619.htm",
+    "download_url": null,
+    "creator": "页面摄影署名戴涛、孙立伟；单张对应作者未确认",
+    "license": null,
+    "license_url": null,
+    "taken_at": null,
+    "width": null,
+    "height": null,
+    "description": "校方转载报道提及郑东图书馆庭院并含照片；单张对应主体未确认，仅采集线索。",
+    "status": "candidate_pending_permission_and_identity",
+    "permission_status": "pending",
+    "local_path": null,
+    "visually_reviewed": false,
+    "display_eligible": false,
+    "last_checked_at": "2026-09-15",
+    "pending_items": [
+      "向权利人确认具体照片作者、原文件及再发布授权",
+      "逐张确认是否实拍目标核心点；若非对应主体剔除",
+      "未经授权及看图不下载至public、不作为可显示实景"
+    ]
   }
 ]

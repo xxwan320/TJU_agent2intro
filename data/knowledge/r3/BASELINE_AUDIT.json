@@ -1,0 +1,15 @@
+{
+  "base_commit": "0bf2e4bc8f49a9697878eaf0db614a1017ace5c1",
+  "frozen_runtime_version": "sha256:d75f2e7e8ac0",
+  "git_blob_lf_version": "sha256:a5e0678c385d",
+  "checkout_file_line_endings": {
+    "documents.json": "LF",
+    "buildings.json": "LF",
+    "pois.json": "CRLF",
+    "assets.json": "CRLF",
+    "facts.json": "CRLF",
+    "SOURCE_REGISTRY.json": "CRLF",
+    "evaluation.json": "LF"
+  },
+  "explanation": "Same Git content; previous version was raw-byte and differed with checkout line endings. R3 now hashes canonical JSON including metadata. Frozen score was not relabeled."
+}

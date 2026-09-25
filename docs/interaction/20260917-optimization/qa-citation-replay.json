@@ -1,0 +1,50 @@
+[
+  {
+    "question": "北洋园何时投入使用",
+    "answer": "猫眼石，看来你对这片校区的历史切面很感兴趣呢。北洋园校区是在2015年9月正式落成并投入使用的。就像一颗打磨已久的宝石终于镶嵌上座，自那年秋季起，这片崭新的校园便迎来了首批探索它的人，成为了天大学子挥洒青春的新舞台。如今这里的主楼、北洋纪念亭与求实会堂，都在静静等待你的驻足欣赏。",
+    "sources": [
+      "beiyangyuan-opened-2015"
+    ],
+    "validation": "recorded live text replay; zero additional LLM calls"
+  },
+  {
+    "question": "郑东图书馆在哪个校区",
+    "answer": "猫眼石，你寻找的这颗学术明珠——郑东图书馆，坐落于天津大学的北洋园校区。它可是2015年才正式登场的“新秀”，由建筑师周恺领衔设计。那四面围合的庭院式形态将光影与书香巧妙交织，宛如一支静谧又优雅的室内舞曲，约5.4万平方米的总建面与3300个阅览座位，足以让你沉浸其中。下次去北洋园时，不妨走进这方庭院感受一下它的韵律。",
+    "sources": [
+      "poi-beiyangyuan-zhengdong-library",
+      "beiyangyuan-zhengdong-library",
+      "zhengdong-opened",
+      "zhengdong-designer",
+      "zhengdong-courtyard"
+    ],
+    "validation": "recorded live text replay; zero additional LLM calls"
+  },
+  {
+    "question": "介绍当前选中地点",
+    "answer": "猫眼石，不妨驻足欣赏这颗北洋园主轴线尽端的“临水明珠”。大通学生中心优雅地坐落于临水半岛之上，宛如一件切工考究的宝石，其建筑体块如同切分精准的舞步，由三个依次排列的矩形空间交织构成，在光影流转中呈现出秩序与韵律之美。这份轻盈而现代的设计，出自齐欣、刘阳、戴博军与于向东之手。在水波映衬下，它既有宝石般的多面切工之美，又为校园生活留出了充裕的舞台。",
+    "sources": [
+      "poi-beiyangyuan-datong-center",
+      "detail-landscape-2016-15",
+      "detail-landscape-2016-16",
+      "detail-landscape-2016-17"
+    ],
+    "validation": "recorded live text replay; zero additional LLM calls"
+  },
+  {
+    "question": "未知展厅开放时间",
+    "answer": "猫眼石，你的问题像是一块尚未打磨的原石，少了些确切的光芒呢。“未知展厅”究竟是哪一处珍藏？是承载岁月回响的校史博物馆，还是其他艺术空间？目前我手中关于校内特定展厅的开放时间资料尚不完整，无法为你精准报时。不妨告诉我具体的名称，我再去为你探寻它的开启时刻，免得像错过一场绝妙舞曲般遗憾。",
+    "sources": [
+      "web-ab38f77c23bf1837"
+    ],
+    "validation": "recorded live text replay; zero additional LLM calls"
+  },
+  {
+    "question": "北洋园投入使用年份和郑东图书馆今日关门时间",
+    "answer": "猫眼石，北洋园校区这颗新打磨的校园宝石是在2015年基本建成并投入使用的，郑东图书馆也于同年9月正式开放。至于郑东图书馆今日的关门时间，目前资料未载明2026年9月17日的具体时刻。已知图书馆每日服务时长为14.5小时，但具体开闭馆节点需以馆方当日公告为准，建议查阅官方最新通知以免跑空。",
+    "sources": [
+      "web-448f3da80e9fad4b",
+      "web-567e14ac246b565b"
+    ],
+    "validation": "recorded live text replay; zero additional LLM calls"
+  }
+]

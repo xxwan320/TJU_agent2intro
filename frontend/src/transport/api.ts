@@ -1,11 +1,11 @@
-// M-owned same-origin transport; contains no key or upstream URL.
+// Same-origin transport; contains no key or upstream URL.
 import type { ChatRequest, ChatResponse, EventPage, Health, KnowledgeStatus, CancelResponse, SceneAck, SceneAckResponse, ClientEventInput, RuntimeEvent, SpeechStopResponse, SearchResponse, BuildingList, Building, CampusId } from '../../../shared/contracts';
 export async function api<T>(path:string, options?:RequestInit):Promise<T> {
   const controller=new AbortController();
   const external=options?.signal;
   const abort=()=>controller.abort(external?.reason);
   if(external?.aborted)abort();else external?.addEventListener('abort',abort,{once:true});
-  const timeout=setTimeout(()=>controller.abort(new Error('transport_timeout')),path==='/chat'?125000:15000);
+  const timeout=setTimeout(()=>controller.abort(new Error('transport_timeout')),(path==='/chat'||path==='/tours'||path.startsWith('/tours/'))?125000:15000);
   try {
     const response=await fetch('/api'+path,{...options,signal:controller.signal});
     let body:unknown;

@@ -14,7 +14,7 @@ def pois(campus_id:CampusId,category:Category|None=None,query:str=Query("",max_l
 @router.get("/pois/{poi_id}",response_model=POI)
 def poi(poi_id:str):
     result=knowledge.get_poi(poi_id)
-    if result is None:
+    if result is None or not knowledge.is_frontend_visible(poi_id):
         raise DomainError("poi_not_found","点位 ID 不存在",404)
     return result
 @router.get("/coverage",response_model=Coverage)

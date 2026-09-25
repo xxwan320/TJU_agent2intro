@@ -1,0 +1,13 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "--test-name-pattern=late successful|real player events|manual interruption|unconfigured ASR",
+    "docs/diagnostics/20260917-150656/speech.test.mjs"
+  ],
+  "validation": "simulation_only",
+  "elapsed_ms": 469.98609999999996,
+  "exit_code": 0,
+  "error": null,
+  "external_calls": 0
+}

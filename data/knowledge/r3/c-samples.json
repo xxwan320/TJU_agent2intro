@@ -1,0 +1,235 @@
+[
+  {
+    "campus_id": "weijinlu",
+    "proposed_poi_ids": [
+      "weijinlu-east-gate",
+      "weijinlu-09-teaching",
+      "weijinlu-chunshui-library",
+      "weijinlu-history-museum",
+      "weijinlu-xue-4-dining"
+    ],
+    "status": "draft",
+    "order_basis": "editorial_candidate_order_not_walk_verified",
+    "duration_minutes": 60,
+    "duration_basis": "user_budget_not_feasibility_proof",
+    "stops": [
+      {
+        "poi_id": "weijinlu-east-gate",
+        "evidence_ids": [
+          "poi-weijinlu-east-gate"
+        ]
+      },
+      {
+        "poi_id": "weijinlu-09-teaching",
+        "evidence_ids": [
+          "poi-weijinlu-09-teaching"
+        ]
+      },
+      {
+        "poi_id": "weijinlu-chunshui-library",
+        "evidence_ids": [
+          "poi-weijinlu-chunshui-library"
+        ]
+      },
+      {
+        "poi_id": "weijinlu-history-museum",
+        "evidence_ids": [
+          "poi-weijinlu-history-museum"
+        ]
+      },
+      {
+        "poi_id": "weijinlu-xue-4-dining",
+        "evidence_ids": [
+          "poi-weijinlu-xue-4-dining"
+        ]
+      }
+    ],
+    "legs": [
+      {
+        "from_poi_id": "weijinlu-east-gate",
+        "to_poi_id": "weijinlu-09-teaching",
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "campus_access": "unverified",
+        "reason": "No current road/entrance/field cost evidence"
+      },
+      {
+        "from_poi_id": "weijinlu-09-teaching",
+        "to_poi_id": "weijinlu-chunshui-library",
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "campus_access": "unverified",
+        "reason": "No current road/entrance/field cost evidence"
+      },
+      {
+        "from_poi_id": "weijinlu-chunshui-library",
+        "to_poi_id": "weijinlu-history-museum",
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "campus_access": "unverified",
+        "reason": "No current road/entrance/field cost evidence"
+      },
+      {
+        "from_poi_id": "weijinlu-history-museum",
+        "to_poi_id": "weijinlu-xue-4-dining",
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "campus_access": "unverified",
+        "reason": "No current road/entrance/field cost evidence"
+      }
+    ],
+    "warnings": [
+      "门禁与公众入口待核验",
+      "食堂访客资格及支付待核验",
+      "历史示意图不能提供GPS或路程成本",
+      "60分钟可行性未证明；开始前须用户确认"
+    ],
+    "service_rule_ids": [
+      "rule-museum-personal",
+      "rule-museum-group",
+      "rule-museum-booking",
+      "rule-museum-id",
+      "rule-museum-late",
+      "rule-museum-companion",
+      "rule-museum-food",
+      "rule-museum-photo",
+      "rule-museum-closure",
+      "rule-museum-contact",
+      "rule-library-hours",
+      "rule-library-entry",
+      "rule-library-newstudent",
+      "rule-library-account",
+      "rule-library-seat",
+      "rule-library-food",
+      "rule-library-notice",
+      "rule-haitang-student",
+      "rule-haitang-public",
+      "rule-haitang-family",
+      "rule-haitang-transport",
+      "rule-dining-halal-wj",
+      "rule-summer-student",
+      "rule-museum-summer",
+      "rule-driving-august",
+      "rule-venue-contact-wj"
+    ]
+  },
+  {
+    "campus_id": "beiyangyuan",
+    "proposed_poi_ids": [
+      "beiyangyuan-east-gate",
+      "beiyangyuan-qiushi-avenue",
+      "beiyangyuan-sanwen-bridge",
+      "beiyangyuan-zhengdong-library",
+      "beiyangyuan-xue-3-dining"
+    ],
+    "status": "draft",
+    "order_basis": "editorial_candidate_order_not_walk_verified",
+    "duration_minutes": 60,
+    "duration_basis": "user_budget_not_feasibility_proof",
+    "stops": [
+      {
+        "poi_id": "beiyangyuan-east-gate",
+        "evidence_ids": [
+          "poi-beiyangyuan-east-gate"
+        ]
+      },
+      {
+        "poi_id": "beiyangyuan-qiushi-avenue",
+        "evidence_ids": [
+          "poi-beiyangyuan-qiushi-avenue"
+        ]
+      },
+      {
+        "poi_id": "beiyangyuan-sanwen-bridge",
+        "evidence_ids": [
+          "poi-beiyangyuan-sanwen-bridge"
+        ]
+      },
+      {
+        "poi_id": "beiyangyuan-zhengdong-library",
+        "evidence_ids": [
+          "poi-beiyangyuan-zhengdong-library"
+        ]
+      },
+      {
+        "poi_id": "beiyangyuan-xue-3-dining",
+        "evidence_ids": [
+          "poi-beiyangyuan-xue-3-dining"
+        ]
+      }
+    ],
+    "legs": [
+      {
+        "from_poi_id": "beiyangyuan-east-gate",
+        "to_poi_id": "beiyangyuan-qiushi-avenue",
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "campus_access": "unverified",
+        "reason": "No current road/entrance/field cost evidence"
+      },
+      {
+        "from_poi_id": "beiyangyuan-qiushi-avenue",
+        "to_poi_id": "beiyangyuan-sanwen-bridge",
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "campus_access": "unverified",
+        "reason": "No current road/entrance/field cost evidence"
+      },
+      {
+        "from_poi_id": "beiyangyuan-sanwen-bridge",
+        "to_poi_id": "beiyangyuan-zhengdong-library",
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "campus_access": "unverified",
+        "reason": "No current road/entrance/field cost evidence"
+      },
+      {
+        "from_poi_id": "beiyangyuan-zhengdong-library",
+        "to_poi_id": "beiyangyuan-xue-3-dining",
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "campus_access": "unverified",
+        "reason": "No current road/entrance/field cost evidence"
+      }
+    ],
+    "warnings": [
+      "门禁与公众入口待核验",
+      "食堂访客资格及支付待核验",
+      "历史示意图不能提供GPS或路程成本",
+      "60分钟可行性未证明；开始前须用户确认"
+    ],
+    "service_rule_ids": [
+      "rule-library-hours",
+      "rule-library-entry",
+      "rule-library-newstudent",
+      "rule-library-account",
+      "rule-library-seat",
+      "rule-library-food",
+      "rule-library-notice",
+      "rule-haitang-student",
+      "rule-haitang-public",
+      "rule-haitang-family",
+      "rule-haitang-transport",
+      "rule-dining-halal-by",
+      "rule-summer-student",
+      "rule-driving-august",
+      "rule-venue-contact-by"
+    ]
+  }
+]

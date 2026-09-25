@@ -1,0 +1,65 @@
+[
+  {
+    "request_id": "05c64102-8881-490f-8a76-c243adfc6e57",
+    "input": "北洋园启用年份，以及图书馆今天几点关门？",
+    "answer": {
+      "request_id": "05c64102-8881-490f-8a76-c243adfc6e57",
+      "session_id": "d51f1ec3-6f93-4387-94dd-25c95fed2b26",
+      "answer": "北洋园校区于2015年9月正式落成并投入使用。关于今天（2026年9月17日）图书馆的具体闭馆时间，目前资料未载明该时段数据，无法提供准确时间，建议查阅天津大学图书馆官方公告获取最新安排。",
+      "sources": [
+        {
+          "id": "beiyangyuan-opened-2015",
+          "title": "北洋园校区投入使用",
+          "snippet": "天津大学迎新网介绍称，北洋园校区于2015年9月正式落成并投入使用。",
+          "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+          "campus_id": "beiyangyuan",
+          "published_at": "2024-08-15",
+          "retrieved_at": "2026-09-14"
+        }
+      ],
+      "model": "glm-5.1",
+      "usage": {
+        "prompt_tokens": 957,
+        "completion_tokens": 744,
+        "total_tokens": 1701
+      },
+      "elapsed_ms": 18813.00000000192,
+      "actions": []
+    },
+    "trace": {
+      "status": "unavailable",
+      "local_source_ids": [
+        "beiyangyuan-opened-2015",
+        "poi-beiyangyuan-main-building",
+        "poi-beiyangyuan-east-gate"
+      ],
+      "external": {
+        "status": "unavailable",
+        "evidence": [],
+        "scope": [],
+        "trace": [
+          {
+            "evidence_type": "recorded_replay",
+            "reason": "No applicable current library evidence; registered library adapter disabled"
+          }
+        ],
+        "page_calls": 0,
+        "search_calls": 0,
+        "cache_hit": false
+      },
+      "parts": {
+        "stable": "success",
+        "current": "unavailable"
+      },
+      "context_source_ids": [
+        "beiyangyuan-opened-2015",
+        "poi-beiyangyuan-main-building",
+        "poi-beiyangyuan-east-gate"
+      ],
+      "context_chars": 582
+    },
+    "elapsed_ms": 18813.00000000192,
+    "model_evidence": "live_http",
+    "page_evidence": "recorded_replay"
+  }
+]

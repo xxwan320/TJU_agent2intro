@@ -1,0 +1,526 @@
+{
+  "ToolContext": {
+    "additionalProperties": true,
+    "properties": {
+      "sessionId": {
+        "maxLength": 128,
+        "minLength": 1,
+        "title": "Sessionid",
+        "type": "string"
+      },
+      "campusId": {
+        "enum": [
+          "weijinlu",
+          "beiyangyuan"
+        ],
+        "title": "Campusid",
+        "type": "string"
+      },
+      "channel": {
+        "maxLength": 40,
+        "minLength": 1,
+        "title": "Channel",
+        "type": "string"
+      },
+      "generation": {
+        "minimum": 0,
+        "title": "Generation",
+        "type": "integer"
+      },
+      "deviceId": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Deviceid"
+      },
+      "poiId": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Poiid"
+      }
+    },
+    "required": [
+      "sessionId",
+      "campusId",
+      "channel",
+      "generation"
+    ],
+    "title": "ToolContext",
+    "type": "object"
+  },
+  "ToolRequest": {
+    "$defs": {
+      "ToolContext": {
+        "additionalProperties": true,
+        "properties": {
+          "sessionId": {
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Sessionid",
+            "type": "string"
+          },
+          "campusId": {
+            "enum": [
+              "weijinlu",
+              "beiyangyuan"
+            ],
+            "title": "Campusid",
+            "type": "string"
+          },
+          "channel": {
+            "maxLength": 40,
+            "minLength": 1,
+            "title": "Channel",
+            "type": "string"
+          },
+          "generation": {
+            "minimum": 0,
+            "title": "Generation",
+            "type": "integer"
+          },
+          "deviceId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Deviceid"
+          },
+          "poiId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Poiid"
+          }
+        },
+        "required": [
+          "sessionId",
+          "campusId",
+          "channel",
+          "generation"
+        ],
+        "title": "ToolContext",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "schemaVersion": {
+        "const": "1.0",
+        "default": "1.0",
+        "title": "Schemaversion",
+        "type": "string"
+      },
+      "runId": {
+        "maxLength": 128,
+        "minLength": 1,
+        "title": "Runid",
+        "type": "string"
+      },
+      "toolCallId": {
+        "maxLength": 128,
+        "minLength": 1,
+        "title": "Toolcallid",
+        "type": "string"
+      },
+      "toolName": {
+        "maxLength": 80,
+        "minLength": 1,
+        "title": "Toolname",
+        "type": "string"
+      },
+      "input": {
+        "additionalProperties": true,
+        "title": "Input",
+        "type": "object"
+      },
+      "context": {
+        "$ref": "#/$defs/ToolContext"
+      },
+      "deadlineAt": {
+        "format": "date-time",
+        "title": "Deadlineat",
+        "type": "string"
+      },
+      "cancelToken": {
+        "maxLength": 128,
+        "minLength": 1,
+        "title": "Canceltoken",
+        "type": "string"
+      },
+      "idempotencyKey": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Idempotencykey"
+      }
+    },
+    "required": [
+      "runId",
+      "toolCallId",
+      "toolName",
+      "input",
+      "context",
+      "deadlineAt",
+      "cancelToken"
+    ],
+    "title": "ToolRequest",
+    "type": "object"
+  },
+  "ToolResult": {
+    "$defs": {
+      "Evidence": {
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "title": "Type",
+            "type": "string"
+          },
+          "observed": {
+            "title": "Observed"
+          },
+          "traceRef": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Traceref"
+          }
+        },
+        "required": [
+          "type",
+          "observed"
+        ],
+        "title": "Evidence",
+        "type": "object"
+      },
+      "SourceEvidence": {
+        "additionalProperties": false,
+        "properties": {
+          "registryId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Registryid"
+          },
+          "sourceId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Sourceid"
+          },
+          "title": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Title"
+          },
+          "url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Url"
+          },
+          "localRef": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Localref"
+          },
+          "excerpt": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Excerpt"
+          },
+          "publishedAt": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Publishedat"
+          },
+          "fetchedAt": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Fetchedat"
+          }
+        },
+        "title": "SourceEvidence",
+        "type": "object"
+      },
+      "ToolError": {
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "title": "Code",
+            "type": "string"
+          },
+          "message": {
+            "title": "Message",
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "ToolError",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "schemaVersion": {
+        "const": "1.0",
+        "default": "1.0",
+        "title": "Schemaversion",
+        "type": "string"
+      },
+      "toolCallId": {
+        "title": "Toolcallid",
+        "type": "string"
+      },
+      "status": {
+        "enum": [
+          "completed",
+          "pending_user_action",
+          "failed",
+          "cancelled"
+        ],
+        "title": "Status",
+        "type": "string"
+      },
+      "data": {
+        "default": null,
+        "title": "Data"
+      },
+      "sources": {
+        "items": {
+          "$ref": "#/$defs/SourceEvidence"
+        },
+        "title": "Sources",
+        "type": "array"
+      },
+      "error": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/ToolError"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null
+      },
+      "observedAt": {
+        "format": "date-time",
+        "title": "Observedat",
+        "type": "string"
+      },
+      "evidence": {
+        "items": {
+          "$ref": "#/$defs/Evidence"
+        },
+        "title": "Evidence",
+        "type": "array"
+      }
+    },
+    "required": [
+      "toolCallId",
+      "status"
+    ],
+    "title": "ToolResult",
+    "type": "object"
+  },
+  "Capability": {
+    "$defs": {
+      "ToolError": {
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "title": "Code",
+            "type": "string"
+          },
+          "message": {
+            "title": "Message",
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "ToolError",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "toolName": {
+        "title": "Toolname",
+        "type": "string"
+      },
+      "status": {
+        "enum": [
+          "available",
+          "unavailable",
+          "needs_permission"
+        ],
+        "title": "Status",
+        "type": "string"
+      },
+      "inputSchema": {
+        "additionalProperties": true,
+        "title": "Inputschema",
+        "type": "object"
+      },
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "Outputschema",
+        "type": "object"
+      },
+      "executionLocation": {
+        "default": "backend",
+        "enum": [
+          "backend",
+          "frontend",
+          "device",
+          "external"
+        ],
+        "title": "Executionlocation",
+        "type": "string"
+      },
+      "cancellable": {
+        "default": true,
+        "title": "Cancellable",
+        "type": "boolean"
+      },
+      "conditions": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Conditions",
+        "type": "array"
+      },
+      "error": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/ToolError"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null
+      },
+      "sideEffect": {
+        "default": false,
+        "title": "Sideeffect",
+        "type": "boolean"
+      },
+      "timeoutMs": {
+        "default": 3500,
+        "exclusiveMinimum": 0,
+        "maximum": 45000,
+        "title": "Timeoutms",
+        "type": "integer"
+      },
+      "maxResultBytes": {
+        "default": 24000,
+        "exclusiveMinimum": 0,
+        "maximum": 262144,
+        "title": "Maxresultbytes",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "toolName",
+      "status"
+    ],
+    "title": "Capability",
+    "type": "object"
+  }
+}

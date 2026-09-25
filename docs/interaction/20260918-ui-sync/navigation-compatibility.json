@@ -1,0 +1,63 @@
+{
+  "map": "SDK ready and origin control enabled",
+  "mapCanvas": 1,
+  "navigation": "步行方案 · 127 米 · 约 2 分钟\n\n路线起点：地图手动选点。 路线已显示。\n\n校内通行请以现场指引为准。\n\n第 1 / 3 步\n\n沿敬业道向东步行48米左转 · 48 米\n\n上一步下一步查看整条路线\n沿敬业道向东步行48米左转 · 48 米\n沿花堤路向北步行53米右转 · 53 米\n向东步行26米到达目的地 · 26 米\n朗读实际路线\n\n偏航时请确认起点，手动重新规划；不会自动判断到达。\n\n确认偏航并重新规划",
+  "screenshots": [
+    {
+      "width": 1440,
+      "body": 1440,
+      "cardHeight": 1081,
+      "cardScroll": 1081,
+      "videoWidth": 960,
+      "media": [
+        {
+          "transferSize": 306296,
+          "duration": 30.200000001117587
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "body": 1366,
+      "cardHeight": 1081,
+      "cardScroll": 1081,
+      "videoWidth": 960,
+      "media": [
+        {
+          "transferSize": 306296,
+          "duration": 8.600000001490116
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "body": 390,
+      "cardHeight": 1244,
+      "cardScroll": 1244,
+      "videoWidth": 960,
+      "media": [
+        {
+          "transferSize": 306296,
+          "duration": 9.600000001490116
+        }
+      ]
+    }
+  ],
+  "live2d": {
+    "canvas": 1,
+    "core": "object"
+  },
+  "errors": [],
+  "failedRequests": [
+    {
+      "origin": "http://127.0.0.1:8000",
+      "path": "/api/maps/amap/_AMapService/v3/log/init",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "origin": "http://127.0.0.1:8000",
+      "path": "/api/maps/amap/_AMapService/v3/log/init",
+      "error": "net::ERR_ABORTED"
+    }
+  ]
+}

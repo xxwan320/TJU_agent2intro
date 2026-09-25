@@ -1,0 +1,111 @@
+{
+  "evidence": "browser + synthetic audio fixture; no external TTS/model/map calls",
+  "build": "/assets/index-DVOvmffu.js",
+  "servedMatchesDist": true,
+  "sha256": "65b3daa584c973ac69b742366bfb0c7550e5e3e352fa7f4e9eb63d5f3289dcc6",
+  "images": [
+    {
+      "name": "大通学生中心",
+      "poiId": "beiyangyuan-datong-center",
+      "images": [
+        {
+          "src": "/assets/campus/photos/beiyangyuan-datong-center-1.jpg",
+          "width": 640
+        }
+      ]
+    },
+    {
+      "name": "郑东图书馆",
+      "poiId": "beiyangyuan-zhengdong-library",
+      "images": [
+        {
+          "src": "/assets/campus/photos/beiyangyuan-zhengdong-library-1.jpg",
+          "width": 474
+        }
+      ]
+    },
+    {
+      "name": "大通学生中心",
+      "poiId": "beiyangyuan-datong-center",
+      "images": [
+        {
+          "src": "/assets/campus/photos/beiyangyuan-datong-center-1.jpg",
+          "width": 640
+        }
+      ]
+    }
+  ],
+  "switchStopped": true,
+  "stopPaused": true,
+  "permissionRecoveryVisible": true,
+  "recovered": true,
+  "events": [
+    {
+      "event": "playing",
+      "time": 0,
+      "at": 2257.7000000029802
+    },
+    {
+      "event": "timeupdate",
+      "time": 0,
+      "at": 2597.39999999851
+    },
+    {
+      "event": "playing",
+      "time": 0,
+      "at": 2892.10000000149
+    },
+    {
+      "event": "timeupdate",
+      "time": 0,
+      "at": 2920.7999999970198
+    },
+    {
+      "event": "playing",
+      "time": 0.01197,
+      "at": 3296.2000000029802
+    },
+    {
+      "event": "playing",
+      "time": 0.011979,
+      "at": 3296.2000000029802
+    },
+    {
+      "event": "timeupdate",
+      "time": 0,
+      "at": 3332.10000000149
+    },
+    {
+      "event": "timeupdate",
+      "time": 0,
+      "at": 3332.10000000149
+    }
+  ],
+  "tts": [
+    {
+      "text": "大通学生中心。大通学生中心位于北洋园主轴线尽端的临水半岛；",
+      "voice": "edge:zh-CN-XiaoxiaoNeural",
+      "requestId": "3e055e0b-bd57-42f0-a270-9f6d72822078"
+    },
+    {
+      "text": "2016校方设计介绍与2017图面“学生活动中心”位置相互印证，图面仅为历史相对示意。",
+      "voice": "edge:zh-CN-XiaoxiaoNeural",
+      "requestId": "3e055e0b-bd57-42f0-a270-9f6d72822078"
+    },
+    {
+      "text": "郑东图书馆。北洋园校区图书馆，2015年9月投入使用。",
+      "voice": "edge:zh-CN-XiaoxiaoNeural",
+      "requestId": "6a7ba5d9-8250-4be5-8371-471ce510936b"
+    },
+    {
+      "text": "尚贤石。尚贤石于2015年落户天津大学北洋园校区。石上的“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》；",
+      "voice": "edge:zh-CN-XiaoxiaoNeural",
+      "requestId": "395cb247-bc16-4f1a-89af-579c25352c0c"
+    },
+    {
+      "text": "这块石头也被称为“泰山孔子石”。参观时可以留意石上的题字。",
+      "voice": "edge:zh-CN-XiaoxiaoNeural",
+      "requestId": "395cb247-bc16-4f1a-89af-579c25352c0c"
+    }
+  ]
+}

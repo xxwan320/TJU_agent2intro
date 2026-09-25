@@ -1,0 +1,1300 @@
+{
+  "backend/app.py": {
+    "sha256": "0564e11254b8ad4febb426e79a5c7ed9690357229a8573f06c32e9c9d2bcd095",
+    "symbols": [
+      {
+        "line": 30,
+        "text": "def error_response(code, message, status, request_id=None, retryable=False):"
+      },
+      {
+        "line": 34,
+        "text": "async def body_limit(request: Request, call_next):"
+      },
+      {
+        "line": 45,
+        "text": "async def domain_error(request, error):"
+      },
+      {
+        "line": 50,
+        "text": "async def validation_error(request, error):"
+      },
+      {
+        "line": 54,
+        "text": "async def http_error(request, error):"
+      },
+      {
+        "line": 57,
+        "text": "async def internal_error(request, error):"
+      },
+      {
+        "line": 60,
+        "text": "def health():"
+      },
+      {
+        "line": 86,
+        "text": "    def frontend(path: str):"
+      }
+    ]
+  },
+  "backend/model/service.py": {
+    "sha256": "e56b55242b235ac69e352604db2aa8c97bd1d7c4cd90d395d1dda3505fe3061f",
+    "symbols": [
+      {
+        "line": 38,
+        "text": "class ModelAdapter(Protocol):"
+      },
+      {
+        "line": 39,
+        "text": " async def generate(self,request:ChatRequest)->ChatResponse: ..."
+      },
+      {
+        "line": 40,
+        "text": " def commit(self,request:ChatRequest,response:ChatResponse)->None: ..."
+      },
+      {
+        "line": 42,
+        "text": "class ConnectivityState:"
+      },
+      {
+        "line": 45,
+        "text": "class _Session:"
+      },
+      {
+        "line": 47,
+        "text": "class HistoryStore:"
+      },
+      {
+        "line": 48,
+        "text": " def __init__(self,max_sessions=1000,ttl_seconds=3600): self.max_sessions=max_sessions; self.ttl_seconds=ttl_seconds; self._sessions=OrderedDict()"
+      },
+      {
+        "line": 49,
+        "text": " def _expire(self):"
+      },
+      {
+        "line": 53,
+        "text": " def messages_for(self,sid,current_chars):"
+      },
+      {
+        "line": 62,
+        "text": " def commit(self,sid,user,assistant):"
+      },
+      {
+        "line": 72,
+        "text": "def create_client(settings,**kwargs):"
+      },
+      {
+        "line": 78,
+        "text": "def _usage(raw):"
+      },
+      {
+        "line": 82,
+        "text": "def map_provider_error(e,rid):"
+      },
+      {
+        "line": 92,
+        "text": "def _model_ok(requested,returned): return isinstance(returned,str) and returned in _ALIASES.get(requested,{requested})"
+      },
+      {
+        "line": 94,
+        "text": "class StreamFailure(DomainError):"
+      },
+      {
+        "line": 95,
+        "text": " def __init__(self,code,message,rid,reason,retryable=False):"
+      },
+      {
+        "line": 101,
+        "text": "class Prepared:"
+      },
+      {
+        "line": 103,
+        "text": " def messages(self): return [{\"role\":\"system\",\"content\":SYSTEM_PROMPT},*self.history,{\"role\":\"user\",\"content\":_user_payload(self)}]"
+      },
+      {
+        "line": 104,
+        "text": "class WorkflowState(TypedDict,total=False):"
+      },
+      {
+        "line": 107,
+        "text": "class OpenAICompatibleProvider:"
+      },
+      {
+        "line": 108,
+        "text": " def __init__(self,settings,client=None,total_timeout=120.0,idle_timeout=60.0):"
+      },
+      {
+        "line": 110,
+        "text": " def _get_client(self):"
+      },
+      {
+        "line": 113,
+        "text": " async def complete(self,rid,messages):"
+      },
+      {
+        "line": 140,
+        "text": " async def stream(self,rid,messages):"
+      },
+      {
+        "line": 214,
+        "text": "class CampusModelService:"
+      },
+      {
+        "line": 215,
+        "text": " def __init__(self,settings=None,provider=None,history=None):"
+      },
+      {
+        "line": 219,
+        "text": " async def _intent_stage(self,state):"
+      },
+      {
+        "line": 230,
+        "text": " async def _retrieval_stage(self,state):"
+      },
+      {
+        "line": 267,
+        "text": " def _published_rule_hits(self,request,initial):"
+      },
+      {
+        "line": 290,
+        "text": " def _visit_plan_hits(self,request,initial):"
+      },
+      {
+        "line": 295,
+        "text": "  def add(entity):"
+      },
+      {
+        "line": 321,
+        "text": " def _prepared(self,state):"
+      },
+      {
+        "line": 323,
+        "text": " async def prepare(self,request):"
+      },
+      {
+        "line": 327,
+        "text": " async def _answer_stage(self,state):"
+      },
+      {
+        "line": 335,
+        "text": " async def _action_stage(self,state):return {\"actions\":self.actions(self._prepared(state))}"
+      },
+      {
+        "line": 336,
+        "text": " async def generate(self,request):"
+      },
+      {
+        "line": 340,
+        "text": " def actions(self,p):"
+      },
+      {
+        "line": 344,
+        "text": " def commit(self,request,response):self.history.commit(request.session_id,request.message,response.answer)"
+      },
+      {
+        "line": 346,
+        "text": "def _private_request(request):"
+      },
+      {
+        "line": 363,
+        "text": "def _get_entity(eid):"
+      },
+      {
+        "line": 369,
+        "text": "def _user_payload(p):"
+      },
+      {
+        "line": 380,
+        "text": "def _citations(answer,hits,strict,rid):"
+      }
+    ]
+  },
+  "backend/model/stream_routes.py": {
+    "sha256": "a15211f1660c1872b1939dd5bf851451006b587679e5a265295ecd716147636d",
+    "symbols": [
+      {
+        "line": 16,
+        "text": "def _sse(request_id,seq,event_type,payload):"
+      },
+      {
+        "line": 21,
+        "text": "def _reason(error):"
+      },
+      {
+        "line": 31,
+        "text": "async def stream_chat(body:R2ChatRequest):"
+      },
+      {
+        "line": 37,
+        "text": " async def events():"
+      },
+      {
+        "line": 39,
+        "text": "  def emit(kind,payload):"
+      },
+      {
+        "line": 92,
+        "text": "async def generation_rendered(body:GenerationRendered):"
+      }
+    ]
+  },
+  "backend/model/tour_planner.py": {
+    "sha256": "ca3be07091856d32315de07cb7b0e2115dc05ac59bf4c0141c60576c97514786",
+    "symbols": [
+      {
+        "line": 13,
+        "text": "class Requirements:"
+      },
+      {
+        "line": 35,
+        "text": "def understand(text, directory=catalog, campus='weijinlu'):"
+      },
+      {
+        "line": 62,
+        "text": "class Planner:"
+      },
+      {
+        "line": 63,
+        "text": "    def __init__(self, directory=catalog, costs=None, model_service=None):"
+      },
+      {
+        "line": 69,
+        "text": "    def stop(self, poi_id, campus, minutes=8):"
+      },
+      {
+        "line": 77,
+        "text": "    def _interest_score(poi, terms, text):"
+      },
+      {
+        "line": 92,
+        "text": "    def _diversify(selected, required, previous_ids, pool_ids, avoid):"
+      },
+      {
+        "line": 108,
+        "text": "    async def create(self, body, metrics, previous_plans=None):"
+      },
+      {
+        "line": 197,
+        "text": "    async def check(self, plan, minutes, rid, remaining_ids=None):"
+      },
+      {
+        "line": 238,
+        "text": "    def schedule(self, plan):"
+      }
+    ]
+  },
+  "backend/knowledge/service.py": {
+    "sha256": "4a840e98b8f9c2595311c03190872ef3f7a8755f349d8c233bde7166685334bb",
+    "symbols": [
+      {
+        "line": 34,
+        "text": "class KnowledgeAdapter(Protocol):"
+      },
+      {
+        "line": 35,
+        "text": "    def search(self, query: str, campus_id: CampusId, limit: int) -> list[Source]: ..."
+      },
+      {
+        "line": 36,
+        "text": "    def get_status(self) -> KnowledgeStatus: ..."
+      },
+      {
+        "line": 37,
+        "text": "    def list_buildings(self, campus_id: CampusId) -> list[Building]: ..."
+      },
+      {
+        "line": 38,
+        "text": "    def get_building(self, id: str) -> Building | None: ..."
+      },
+      {
+        "line": 39,
+        "text": "    def list_pois(self, campus_id: CampusId, category: str | None, query: str, limit: int, cursor: str | None) -> POIPage: ..."
+      },
+      {
+        "line": 40,
+        "text": "    def get_poi(self, id: str) -> POI | None: ..."
+      },
+      {
+        "line": 41,
+        "text": "    def get_coverage(self) -> Coverage: ..."
+      },
+      {
+        "line": 42,
+        "text": "    def get_campus_assets(self, campus_id: CampusId) -> CampusAssets: ..."
+      },
+      {
+        "line": 43,
+        "text": "    def resolve_entities(self, query: str, campus_id: CampusId) -> list[str]: ..."
+      },
+      {
+        "line": 44,
+        "text": "    def get_evidence_record(self, reference: str) -> dict | None: ..."
+      },
+      {
+        "line": 45,
+        "text": "    def get_service_rules(self, campus_id: CampusId, poi_id: str | None = None) -> list[dict]: ..."
+      },
+      {
+        "line": 46,
+        "text": "    def get_core_bundle(self, campus_id: CampusId) -> dict: ..."
+      },
+      {
+        "line": 50,
+        "text": "class _Document:"
+      },
+      {
+        "line": 57,
+        "text": "def _tokens(value: str) -> set[str]:"
+      },
+      {
+        "line": 68,
+        "text": "def _load_array(path: Path) -> list[dict[str, Any]]:"
+      },
+      {
+        "line": 76,
+        "text": "class LocalKnowledge:"
+      },
+      {
+        "line": 79,
+        "text": "    def __init__(self, data_directory: Path = DATA_DIRECTORY):"
+      },
+      {
+        "line": 96,
+        "text": "    def get_tour_context(self, poi_id, campus_id, visit_date=None):"
+      },
+      {
+        "line": 100,
+        "text": "    def get_tour_route_costs(self, request):"
+      },
+      {
+        "line": 104,
+        "text": "    def _load(self) -> None:"
+      },
+      {
+        "line": 193,
+        "text": "    def get_status(self) -> KnowledgeStatus:"
+      },
+      {
+        "line": 203,
+        "text": "    def list_buildings(self, campus_id: CampusId) -> list[Building]:"
+      },
+      {
+        "line": 206,
+        "text": "    def get_building(self, id: str) -> Building | None:"
+      },
+      {
+        "line": 209,
+        "text": "    def _filter_digest(self, campus_id, category, query):"
+      },
+      {
+        "line": 212,
+        "text": "    def _cursor(self, campus_id: CampusId, category: str | None, query: str, offset: int) -> str:"
+      },
+      {
+        "line": 217,
+        "text": "    def _parse_cursor(self, cursor: str, campus_id: CampusId, category: str | None, query: str) -> int:"
+      },
+      {
+        "line": 232,
+        "text": "    def list_pois(self, campus_id: CampusId, category: str | None, query: str, limit: int, cursor: str | None) -> POIPage:"
+      },
+      {
+        "line": 247,
+        "text": "    def get_poi(self, id: str) -> POI | None:"
+      },
+      {
+        "line": 250,
+        "text": "    def get_coverage(self) -> Coverage:"
+      },
+      {
+        "line": 266,
+        "text": "    def get_campus_assets(self, campus_id: CampusId) -> CampusAssets:"
+      },
+      {
+        "line": 270,
+        "text": "    def get_assets(self, campus_id: CampusId) -> CampusAssets:"
+      },
+      {
+        "line": 273,
+        "text": "    def _score(self, document: _Document, query: str, query_tokens: set[str]) -> int:"
+      },
+      {
+        "line": 296,
+        "text": "    def _normalize(text: str) -> str:"
+      },
+      {
+        "line": 299,
+        "text": "    def _campus_conflict(self, query: str, campus_id: CampusId) -> bool:"
+      },
+      {
+        "line": 309,
+        "text": "    def resolve_entities(self, query: str, campus_id: CampusId) -> list[str]:"
+      },
+      {
+        "line": 334,
+        "text": "    def get_evidence_record(self, reference: str) -> dict | None:"
+      },
+      {
+        "line": 346,
+        "text": "    def get_service_rules(self, campus_id: CampusId, poi_id: str | None = None) -> list[dict]:"
+      },
+      {
+        "line": 350,
+        "text": "    def get_core_bundle(self, campus_id: CampusId) -> dict:"
+      },
+      {
+        "line": 359,
+        "text": "    def search(self, query: str, campus_id: CampusId, limit: int) -> list[Source]:"
+      },
+      {
+        "line": 408,
+        "text": "class UnavailableKnowledge(LocalKnowledge):"
+      },
+      {
+        "line": 409,
+        "text": "    def __init__(self):"
+      }
+    ]
+  },
+  "backend/knowledge/web_search.py": {
+    "sha256": "1792f3faf6b735fa26f9ec49f0e15b5ff9baed4d8d1814f81d4f1a1417ffd53f",
+    "symbols": [
+      {
+        "line": 21,
+        "text": "def public_url(value: str) -> bool:"
+      },
+      {
+        "line": 36,
+        "text": "def search_query(message: str, title: str | None, campus: str) -> str:"
+      },
+      {
+        "line": 48,
+        "text": "class WebSearch:"
+      },
+      {
+        "line": 49,
+        "text": "    def __init__(self):"
+      },
+      {
+        "line": 53,
+        "text": "    async def _page(self, client, url):"
+      },
+      {
+        "line": 77,
+        "text": "    async def search(self, query, campus, settings):"
+      },
+      {
+        "line": 85,
+        "text": "        async def retrieve():"
+      }
+    ]
+  },
+  "backend/maps/service.py": {
+    "sha256": "3eb20ee68eba56004acaa11f0c415eb95fc907e3f8268312d3ab86e69f23e625",
+    "symbols": [
+      {
+        "line": 27,
+        "text": "def _validate_proxy(params,allowed,js):"
+      },
+      {
+        "line": 54,
+        "text": "def _proxy_payload(response,callback):"
+      },
+      {
+        "line": 66,
+        "text": "def _poi(pid):"
+      },
+      {
+        "line": 73,
+        "text": "def _verified_location(loc):"
+      },
+      {
+        "line": 75,
+        "text": "def _location(poi,entrance_id=None):"
+      },
+      {
+        "line": 85,
+        "text": "class MapService:"
+      },
+      {
+        "line": 86,
+        "text": " def __init__(self,settings,client=None):"
+      },
+      {
+        "line": 91,
+        "text": " def trace(self,action,status,request_id=None,elapsed_ms=None,code=None):"
+      },
+      {
+        "line": 96,
+        "text": " async def proxy(self,path,params):"
+      },
+      {
+        "line": 131,
+        "text": " def external(self,pid):"
+      },
+      {
+        "line": 144,
+        "text": " def reserve(self,body):"
+      },
+      {
+        "line": 152,
+        "text": " async def route(self,body):"
+      },
+      {
+        "line": 193,
+        "text": " def cancel(self,rid,sid):"
+      }
+    ]
+  },
+  "backend/maps/routes.py": {
+    "sha256": "84aa30f876d0d03de5662976ee9ecc0b7d90f04216b2fc04be61e94187d14cfc",
+    "symbols": [
+      {
+        "line": 13,
+        "text": "def status():"
+      },
+      {
+        "line": 14,
+        "text": " def exists(asset):"
+      },
+      {
+        "line": 31,
+        "text": "def public_config():return MapPublicConfig(js_key=settings.amap_js_key or None,service_host=\"/api/maps/amap/_AMapService\",route_backend=\"js_api\",status=status())"
+      },
+      {
+        "line": 33,
+        "text": "def external_navigation(poi_id:str):return maps.external(poi_id)"
+      },
+      {
+        "line": 35,
+        "text": "async def proxy(path:str,request:Request):"
+      },
+      {
+        "line": 42,
+        "text": "async def plan_route(body:RouteRequest):return await maps.route(body)"
+      },
+      {
+        "line": 44,
+        "text": "async def cancel_route(route_id:UUID,body:RouteCancelRequest):"
+      }
+    ]
+  },
+  "backend/speech/service.py": {
+    "sha256": "4e2f91d32b55b27ac6c7a4aeaaf30dbd45c337de17358c6a856c50f613ba9ed2",
+    "symbols": [
+      {
+        "line": 40,
+        "text": "class Operation:"
+      },
+      {
+        "line": 48,
+        "text": "class AudioFile:"
+      },
+      {
+        "line": 55,
+        "text": "class SpeechProvider(Protocol):"
+      },
+      {
+        "line": 56,
+        "text": "    async def transcribe(self, request: AsrRequest) -> AsrResponse: ..."
+      },
+      {
+        "line": 57,
+        "text": "    async def synthesize(self, request: TtsRequest) -> TtsResponse: ..."
+      },
+      {
+        "line": 58,
+        "text": "    async def list_voices(self) -> list[Voice]: ..."
+      },
+      {
+        "line": 59,
+        "text": "    async def stop(self, request: SpeechContext): ..."
+      },
+      {
+        "line": 60,
+        "text": "    def take_audio(self, token: str) -> tuple[bytes, str]: ..."
+      },
+      {
+        "line": 63,
+        "text": "def prepare_edge_tts(text: str, voice: str) -> edge_tts.Communicate:"
+      },
+      {
+        "line": 67,
+        "text": "def prepare_asr_client(url: str, key: str) -> AsyncOpenAI:"
+      },
+      {
+        "line": 71,
+        "text": "def decode_pcm16_wav(request: AsrRequest) -> bytes:"
+      },
+      {
+        "line": 98,
+        "text": "class CampusSpeechService:"
+      },
+      {
+        "line": 99,
+        "text": "    def __init__(self, settings: Settings | None = None, audio_root: Path | None = None):"
+      },
+      {
+        "line": 110,
+        "text": "    async def list_voices(self) -> list[Voice]:"
+      },
+      {
+        "line": 135,
+        "text": "    async def transcribe(self, request: AsrRequest) -> AsrResponse:"
+      },
+      {
+        "line": 183,
+        "text": "    async def synthesize(self, request: TtsRequest) -> TtsResponse:"
+      },
+      {
+        "line": 229,
+        "text": "    async def stop(self, request: SpeechContext):"
+      },
+      {
+        "line": 255,
+        "text": "    def take_audio(self, token: str) -> tuple[bytes, str]:"
+      },
+      {
+        "line": 267,
+        "text": "    def _begin(self, request_id: UUID, session_id: UUID) -> Operation:"
+      },
+      {
+        "line": 289,
+        "text": "    def _finish(self, request_id: UUID, operation: Operation) -> None:"
+      },
+      {
+        "line": 293,
+        "text": "    def _cleanup_audio(self) -> None:"
+      },
+      {
+        "line": 305,
+        "text": "    def _recover_audio_files(self) -> None:"
+      }
+    ]
+  },
+  "frontend/src/ui/App.tsx": {
+    "sha256": "b5bec7ef9a795823eff1324e593172cee569f7c7eedbe87c37538a38119305e8",
+    "symbols": [
+      {
+        "line": 34,
+        "text": "function weatherLabel(code: number | undefined): string { return WEATHER_LABELS[code ?? -1] ?? '天气'; }"
+      },
+      {
+        "line": 38,
+        "text": "function readPreferences(): Preferences {"
+      },
+      {
+        "line": 45,
+        "text": "function safeInline(text: string) {"
+      },
+      {
+        "line": 55,
+        "text": "function MicIcon() {"
+      },
+      {
+        "line": 58,
+        "text": "function StopIcon() {"
+      },
+      {
+        "line": 61,
+        "text": "function SendIcon() {"
+      },
+      {
+        "line": 65,
+        "text": "function RichText({ text, onReadParagraph }: { text: string; onReadParagraph?: (text: string, index: number) => void }) {"
+      },
+      {
+        "line": 70,
+        "text": "function SourceDetails({ sources, final }: { sources: Source[]; final: boolean }) {"
+      },
+      {
+        "line": 75,
+        "text": "function TaskStatus({ task }: { task: TaskRecord }) {"
+      },
+      {
+        "line": 83,
+        "text": "function TaskCard({ task, currentCampus, canStop, onStop, onRetry, onLogs, onCopy, onExport, onRead, onReadFull, onContinue, onMap }: TaskCardProps) {"
+      },
+      {
+        "line": 99,
+        "text": "export function App() {"
+      },
+      {
+        "line": 188,
+        "text": "  function focusMap(poiId:string|null){mapFocusRef.current?.(poiId);}"
+      },
+      {
+        "line": 189,
+        "text": "  function currentSession(lane: Lane, campus = prefs.campus) { return tourMemoryRef.current[campus]?.session?.session_id ?? sessionsRef.current[lane][campus]; }"
+      },
+      {
+        "line": 190,
+        "text": "  function setTasks(lane: Lane, update: (current: TaskRecord[]) => TaskRecord[]) { if (lane === 'chat') setChatTasks(update); else setGenerationTasks(update); }"
+      },
+      {
+        "line": 191,
+        "text": "  function setRunning(lane: Lane, value: boolean) { runningRef.current[lane] = value; setLaneBusy((current) => ({ ...current, [lane]: value })); }"
+      },
+      {
+        "line": 192,
+        "text": "  function isCurrent(lane: Lane, generation: number, requestId: string) { return laneGenerationRef.current[lane] === generation && requestRef.current[lane] === requestId; }"
+      },
+      {
+        "line": 193,
+        "text": "  function pollRuntime(requestId: string, lane: Lane, generation: number) {"
+      },
+      {
+        "line": 199,
+        "text": "  function bindPlayback(run:SpeechRun){"
+      },
+      {
+        "line": 205,
+        "text": "  async function beginSpeech(task: TaskRecord, generationId: string): Promise<boolean> {"
+      },
+      {
+        "line": 211,
+        "text": "  async function handleSceneEvent(event: Extract<StreamEvent, { type: 'poi_action' }>, task: TaskRecord, laneGeneration: number) {"
+      },
+      {
+        "line": 222,
+        "text": "  async function runTask(lane: Lane, prompt: string, mode: Mode, options: GenerationOptions | null, relatedRequestId: string | null = null, poi = selectedPoiRef.current, poiIdOverride: string | null = null) {"
+      },
+      {
+        "line": 260,
+        "text": "  async function cancelLane(lane: Lane, reason: 'user' | 'campus_change' | 'clear' = 'user') {"
+      },
+      {
+        "line": 268,
+        "text": "  async function enableSpeech() {"
+      },
+      {
+        "line": 272,
+        "text": "  async function playTask(task: TaskRecord, text: string, segmentId?: string) {"
+      },
+      {
+        "line": 278,
+        "text": "  async function continueSpeech(){"
+      },
+      {
+        "line": 286,
+        "text": "  async function submitTourText(text:string){"
+      },
+      {
+        "line": 290,
+        "text": "  async function startListening() {"
+      },
+      {
+        "line": 314,
+        "text": "  function handleInteraction(event:SpeechInteractionEvent){"
+      },
+      {
+        "line": 330,
+        "text": "  async function stopListening() { interactionContext.current=null;await interactionRef.current?.stop('user'); const id = asrRequestRef.current; asrRequestRef.current = null; ++asrGenerationRef.current; asrAbortRef.current?.abort(); asrAbortRef.current = null; setAsrBusy(false); setAvatarState('idle'); if (id) await asrRef.current?.stop(id); }"
+      },
+      {
+        "line": 331,
+        "text": "  function copyTask(task: TaskRecord) { if (!task.answer.trim()) return; void navigator.clipboard.writeText(privateText(task.answer)).then(() => setNotice('内容已复制。')).catch(() => setNotice('浏览器未允许复制，请手动选择正文。')); }"
+      },
+      {
+        "line": 332,
+        "text": "  function exportTask(task: TaskRecord) { const blob = exportGeneratedText({...task,answer:privateText(task.answer)}); if (!blob) { setNotice('正文为空，无法导出。'); return; } const url = URL.createObjectURL(blob); const anchor = document.createElement('a'); anchor.href = url; anchor.download = `tju-${task.generation?.type ?? 'content'}-${task.requestId.slice(0, 8)}.txt`; anchor.click(); URL.revokeObjectUR"
+      },
+      {
+        "line": 333,
+        "text": "  function retryTask(task: TaskRecord) { if (task.lane === 'generation') void runTask('generation', task.prompt, 'content_generation', task.generation, task.requestId, task.poiId === selectedPoi?.id ? selectedPoi : null, task.poiId); else void runTask('chat', task.prompt, task.mode, null, task.requestId, task.poiId === selectedPoi?.id ? selectedPoi : null, task.poiId); }"
+      },
+      {
+        "line": 334,
+        "text": "  function submitGeneration() { const error = validateGenerationDraft(draft); if (error) { setGenerationValidation(error); return; } void runTask('generation', draft.prompt, 'content_generation', { type: draft.type, requirements: draft.requirements, length: draft.length, style: draft.style }); }"
+      },
+      {
+        "line": 335,
+        "text": "  function clearChat() { void stopListening(); void speechControllerRef.current?.stop('clear'); void cancelLane('chat', 'clear'); sessionsRef.current.chat[prefs.campus] = freshUuid(sessionsRef.current.chat[prefs.campus]); setChatTasks((current) => current.filter((task) => task.campus !== prefs.campus)); setChatValidation(''); }"
+      },
+      {
+        "line": 336,
+        "text": "  function onMessageScroll() { const node = messageListRef.current; if (!node) return; const atBottom = shouldFollowLatest(node.scrollTop, node.scrollHeight, node.clientHeight); autoFollowRef.current = atBottom; setShowLatest(!atBottom); }"
+      },
+      {
+        "line": 337,
+        "text": "  function goLatest() { const node = messageListRef.current; if (!node) return; autoFollowRef.current = true; node.scrollTop = node.scrollHeight; setShowLatest(false); }"
+      },
+      {
+        "line": 338,
+        "text": "  function resizeStart(event: React.PointerEvent<HTMLDivElement>) { if (window.innerWidth < 900) return; const startX = event.clientX; const startWidth = prefs.panelWidth; const move = (next: PointerEvent) => setPrefs((current) => ({ ...current, panelWidth: Math.min(760, Math.max(420, startWidth + startX - next.clientX)) })); const up = () => { window.removeEventListener('pointermove', move); wind"
+      },
+      {
+        "line": 339,
+        "text": "  function showLogs(requestId?: string) { setLogRequest(requestId ?? null); setLogsOpen(true); }"
+      },
+      {
+        "line": 351,
+        "text": "      onReadRoute={route=>{const task:TaskRecord={...newTask(freshUuid(),freshUuid()),lane:'chat',prompt:'路线讲解',mode:'campus_qa',campus:prefs.campus,poiId:null,generation:null};void playTask(task,privateText(routeNarration(route)));}}"
+      }
+    ]
+  },
+  "frontend/src/ui/CampusExplorer.tsx": {
+    "sha256": "b3d4649e170f756ab46a0752b6a173ceaf600a4f4d89ebc774ca3b140ebdf99e",
+    "symbols": [
+      {
+        "line": 21,
+        "text": "function operationError(error:unknown):string {"
+      },
+      {
+        "line": 66,
+        "text": "function followDistanceMeters(from:UserPosition,to:UserPosition):number{"
+      },
+      {
+        "line": 71,
+        "text": "export function CampusExplorer({campus,sessionId,focusPoiId,focusRevision,onSelect,onAssets,onAsk,onReadRoute,tourSession,onInstruction,resetEpoch}:Props) {"
+      },
+      {
+        "line": 97,
+        "text": "  const clearRoute=useCallback(()=>{routeScope.current.cancel();routeBusyRef.current=false;setRouteBusy(false);setDestinationBusy(false);setRoute(null);setActiveStep(0);setRouteError('');onlineRef.current?.clearRoute();},[]);"
+      },
+      {
+        "line": 98,
+        "text": "  const choose=useCallback((poi:POI|null)=>{pendingDestinationRoute.current=false;selectedRef.current=poi;setSelected(poi);setExternalNav(null);setDestinations([]);setDestination(null);setPickingStart(false);onlineRef.current?.pickStart(null);onlineRef.current?.showDestination(null);clearRoute();},[clearRoute]);"
+      },
+      {
+        "line": 284,
+        "text": "  async function loadMore(){"
+      },
+      {
+        "line": 290,
+        "text": "  async function beginLocation(continuous=false,ipOnly=false){"
+      },
+      {
+        "line": 295,
+        "text": "    async function update(){"
+      },
+      {
+        "line": 314,
+        "text": "  function stopLocation(){locationScope.current.cancel();if(locationTimer.current)clearTimeout(locationTimer.current);setLocating(false);setTracking(false);setLocationMessage('定位已停止。');}"
+      },
+      {
+        "line": 315,
+        "text": "  function applyManualStart(){"
+      },
+      {
+        "line": 322,
+        "text": "  function pickMapStart(){"
+      },
+      {
+        "line": 327,
+        "text": "  async function viewOnMap(){"
+      },
+      {
+        "line": 340,
+        "text": "  function confirmDestination(match:MapDestination){const resume=pendingDestinationRoute.current;pendingDestinationRoute.current=false;clearRoute();setDestination(match);setView('online');onlineRef.current?.showDestination(match);if(resume)void planRoute(match);}"
+      },
+      {
+        "line": 341,
+        "text": "  async function planRoute(confirmed?:MapDestination,originOverride?:UserPosition){"
+      }
+    ]
+  },
+  "frontend/src/ui/TourWorkspace.tsx": {
+    "sha256": "63f3548be76a3107a1b919467e313f27fbd82ae7f6b3ed4cf1767517fc95c4d2",
+    "symbols": [
+      {
+        "line": 33,
+        "text": "export function TourWorkspace({campus,voice,caption,narration,onStop,onExplain,onCampus,onReadRoute,memory,onMemory,registerCancel,registerText,registerMapFocus,onSelectPoi,panelOpen,onPanelClose}:Props){"
+      },
+      {
+        "line": 57,
+        "text": "  async function load(){try{let cursor:string|undefined;const all:POI[]=[];do{const page=await r2Transport.pois(campus,{limit:100,...(cursor?{cursor}:{})});if(!live)return;all.push(...page.items.filter(p=>p.campus_id===campus));cursor=page.next_cursor??undefined;}while(cursor);setPois(all);}catch{if(live)setPoiError(true);}}"
+      },
+      {
+        "line": 78,
+        "text": " async function perform(call:(id:string,sid:string,signal:AbortSignal)=>ReturnType<typeof r3Transport.create>,restore=false,sid=session?.session_id??initialSession.current){"
+      },
+      {
+        "line": 96,
+        "text": " async function command(action:TourCommand['action']){"
+      },
+      {
+        "line": 109,
+        "text": " async function revise(operation:PlanRevision['operation'],stopId?:string,minutes=Number(remaining)){"
+      },
+      {
+        "line": 116,
+        "text": " async function create(reuseSessionId?:string){"
+      },
+      {
+        "line": 141,
+        "text": " async function replan(){"
+      },
+      {
+        "line": 154,
+        "text": " async function restore(s:TourSession){"
+      },
+      {
+        "line": 201,
+        "text": "   <CampusExplorer resetEpoch={navigationEpoch} campus={campus} sessionId={session?.session_id??initialSession.current} focusPoiId={mapFocus} focusRevision={mapRevision} tourSession={session} onInstruction={setInstruction} onSelect={onSelectPoi??(()=>undefined)} onAssets={setAssets} onReadRoute={onReadRoute} onAsk={(_,poi)=>{const stop=session?.plan.stops.find(s=>s.poi_id===poi.id);if(stop)onExpla"
+      }
+    ]
+  },
+  "frontend/src/ui/tour-model.ts": {
+    "sha256": "dea3a1797f6157f5ad643a6a2237ea1b3dd66bf4df596c49c6615e5e8e0c20bd",
+    "symbols": [
+      {
+        "line": 7,
+        "text": "export function privateText(text:string):string {"
+      },
+      {
+        "line": 14,
+        "text": "export function savedSnapshot(s:TourSession):TourSession {"
+      },
+      {
+        "line": 27,
+        "text": "export function listSaved(storage:Pick<Storage,'length'|'key'|'getItem'>):TourSession[] {"
+      },
+      {
+        "line": 35,
+        "text": "export function storeSaved(storage:Pick<Storage,'setItem'|'removeItem'>,s:TourSession){"
+      },
+      {
+        "line": 41,
+        "text": "export function speechEventCurrent(e:SpeechInteractionEvent,c:SpeechInteractionContext):boolean{"
+      },
+      {
+        "line": 51,
+        "text": "export class TourLifecycle {"
+      },
+      {
+        "line": 75,
+        "text": "export function tourCommand(s:TourSession,id:string,action:TourCommand['action'],acceptUnverified=false):TourCommand {"
+      },
+      {
+        "line": 81,
+        "text": "export function remainingTimeIntent(text:string):number|null {"
+      }
+    ]
+  },
+  "frontend/src/ui/navigation-model.ts": {
+    "sha256": "b20450f5589ae04e5c829d7a1ae0b7306496f7369783f14fdebfe61a7bfb4132",
+    "symbols": [
+      {
+        "line": 4,
+        "text": "export function navigationFor(nav:ExternalNavigation|null, poi:POI|null):string|null {"
+      },
+      {
+        "line": 8,
+        "text": "export function routeFor(route:RouteResponse|null, poi:POI|null):RouteResponse|null {"
+      },
+      {
+        "line": 11,
+        "text": "export class OperationScope {"
+      },
+      {
+        "line": 19,
+        "text": "export function classifyAmapLocation(result: any): LocatedPosition | Error {"
+      }
+    ]
+  },
+  "frontend/src/transport/amap-navigation.ts": {
+    "sha256": "640323cd9301eb7342c3c5cab47c1a59a669fb0d8fffd1b8aee08fb19f33599e",
+    "symbols": [
+      {
+        "line": 11,
+        "text": "export class DestinationSelectionRequired extends MapCallError{"
+      },
+      {
+        "line": 29,
+        "text": "function pair(value:unknown):Pair {"
+      },
+      {
+        "line": 36,
+        "text": "function providerPoint(value:unknown):Pair{"
+      },
+      {
+        "line": 41,
+        "text": "function meters(value:unknown):number{"
+      },
+      {
+        "line": 46,
+        "text": "function callbackResult<T>(signal:AbortSignal,invoke:(done:Callback)=>void,parse:(value:unknown)=>T,cleanup:()=>void=()=>{},timeoutMs=15000):Promise<T>{"
+      },
+      {
+        "line": 62,
+        "text": "export class AmapNavigation {"
+      },
+      {
+        "line": 154,
+        "text": " async navigate(request:InternalRouteRequest,poi:POI,signal:AbortSignal,matched?:MapDestination):Promise<{route:RouteResponse;origin:UserPosition;destination?:MapDestination}>{"
+      },
+      {
+        "line": 168,
+        "text": " async walk(request:RouteRequest,poi:POI,signal:AbortSignal,matched?:MapDestination):Promise<RouteResponse>{"
+      },
+      {
+        "line": 210,
+        "text": "export function routeNarration(route:RouteResponse):string {"
+      },
+      {
+        "line": 213,
+        "text": "export async function speakRoute(controller:SpeechController,run:SpeechRun,route:RouteResponse){"
+      }
+    ]
+  },
+  "frontend/src/scene/amap.ts": {
+    "sha256": "0cdaa25dec1e407f44d5ad9bede2589605ad13ef6c87698e5c1ac339eb144232",
+    "symbols": [
+      {
+        "line": 38,
+        "text": "export async function createOnlineMap(host: HTMLElement, config: MapPublicConfig, budget: MapBudget, operationId: string, signal: AbortSignal, onSelect: (poiId: string) => void, view: { center: [number, number]; zoom: number }): Promise<OnlineMapHandle> {"
+      },
+      {
+        "line": 59,
+        "text": "  function clearRoute() { if (routeLines.length) map.remove(routeLines); routeLines=[];if(activeStep)map.remove(activeStep);activeStep=null; }"
+      },
+      {
+        "line": 60,
+        "text": "  function highlightStep(path:[number,number][]){"
+      },
+      {
+        "line": 66,
+        "text": "  function setPois(pois: POI[], selectedId: string | null) {"
+      },
+      {
+        "line": 74,
+        "text": "  function showPosition(position:UserPosition) {"
+      },
+      {
+        "line": 86,
+        "text": "  function showRoute(lines:[number,number][][]) {"
+      },
+      {
+        "line": 91,
+        "text": "  function showTourStops(stops:TourStopMarker[]){"
+      },
+      {
+        "line": 98,
+        "text": "  function showDestination(destination:MapDestination|null){"
+      }
+    ]
+  },
+  "frontend/src/speech/controller.ts": {
+    "sha256": "0ee6f660969ae224e4f17d155c3306eec65386cada745a5c288d60913185a580",
+    "symbols": [
+      {
+        "line": 31,
+        "text": "function cleanLines(text: string): string {"
+      },
+      {
+        "line": 54,
+        "text": "export function sanitizeSpeechText(raw: string, final = true): Sanitized {"
+      },
+      {
+        "line": 128,
+        "text": "export function sanitizeExplicitUrlSpeechText(raw: string): string {"
+      },
+      {
+        "line": 140,
+        "text": "function sentenceEnds(text: string, from: number): number[] {"
+      },
+      {
+        "line": 148,
+        "text": "function splitBounded(text: string): string[] {"
+      },
+      {
+        "line": 165,
+        "text": "export class IncrementalSpeechSanitizer {"
+      },
+      {
+        "line": 186,
+        "text": "  private take(text: string, final: boolean): string[] {"
+      },
+      {
+        "line": 236,
+        "text": "export class CampusSpeechController implements SpeechController {"
+      },
+      {
+        "line": 246,
+        "text": "  private pumping = false;"
+      },
+      {
+        "line": 283,
+        "text": "  async begin(run: SpeechRun): Promise<AdapterResult> {"
+      },
+      {
+        "line": 319,
+        "text": "  async playSegment(run: SpeechRun, text: string, segmentId: string): Promise<AdapterResult> {"
+      },
+      {
+        "line": 331,
+        "text": "  async playFull(run: SpeechRun, text: string): Promise<AdapterResult> {"
+      },
+      {
+        "line": 341,
+        "text": "  async stop(reason: 'user' | 'new_request' | 'clear' | 'campus_change' | 'cancel'): Promise<void> {"
+      },
+      {
+        "line": 417,
+        "text": "  async playVerbatimUrl(run: SpeechRun, text: string, segmentId: string, explicitRequest: boolean): Promise<AdapterResult> {"
+      },
+      {
+        "line": 551,
+        "text": "function errorCode(error: unknown): string { return error instanceof Error ? error.message : 'speech_failed'; }"
+      },
+      {
+        "line": 552,
+        "text": "export function createSpeechController(options?: SpeechControllerOptions): CampusSpeechController { return new CampusSpeechController(options); }"
+      }
+    ]
+  },
+  "frontend/src/speech/adapter.ts": {
+    "sha256": "baafad3937e71b6bff4010eaee108bde88bfdb2540340c75f7a2f0933c08b0c8",
+    "symbols": [
+      {
+        "line": 120,
+        "text": "export async function loadVadModule() {"
+      },
+      {
+        "line": 124,
+        "text": "function safeErrorCode(response: Response, fallback: string): Promise<string> {"
+      },
+      {
+        "line": 130,
+        "text": "function browserRecognitionConstructor(): BrowserRecognitionConstructor | undefined {"
+      },
+      {
+        "line": 136,
+        "text": "function browserTtsAvailable(): boolean {"
+      },
+      {
+        "line": 142,
+        "text": "function now(): number {"
+      },
+      {
+        "line": 146,
+        "text": "function elapsed(startedAt: number): number {"
+      },
+      {
+        "line": 151,
+        "text": "function abortable<T>(pending: Promise<T>, signal: AbortSignal): Promise<T> {"
+      },
+      {
+        "line": 160,
+        "text": "function permissionCode(error: unknown): string {"
+      },
+      {
+        "line": 167,
+        "text": "async function waitForBrowserVoices(): Promise<SpeechSynthesisVoice[]> {"
+      },
+      {
+        "line": 182,
+        "text": "export class CampusSpeechAdapter implements SpeechAdapter {"
+      },
+      {
+        "line": 292,
+        "text": "  async stop(requestId: string) {"
+      },
+      {
+        "line": 368,
+        "text": "  async playPreparedSpeech(prepared: PreparedSpeech, callbacks: SpeechCallbacks): Promise<AdapterResult> {"
+      },
+      {
+        "line": 693,
+        "text": "  private async playPreparedServerSpeech(prepared: PreparedSpeech, callbacks: SpeechCallbacks): Promise<AdapterResult> {"
+      },
+      {
+        "line": 708,
+        "text": "        audio.onplaying = null;"
+      },
+      {
+        "line": 748,
+        "text": "    audio.onplaying = () => {"
+      },
+      {
+        "line": 896,
+        "text": "  private async stopCapture(): Promise<void> {"
+      },
+      {
+        "line": 986,
+        "text": "export function createSpeechAdapter(options?: SpeechAdapterOptions): SpeechAdapter {"
+      }
+    ]
+  },
+  "frontend/src/avatar/adapter.ts": {
+    "sha256": "378152de5cfcff4c283bc253a50fda6851da399319169f5d5b6cca0eb2a74e25",
+    "symbols": [
+      {
+        "line": 19,
+        "text": "function loadCubismCore(url: string): Promise<void> {"
+      },
+      {
+        "line": 44,
+        "text": "export async function loadRendererModules(coreUrl = kelaitaManifest.core_url) {"
+      },
+      {
+        "line": 54,
+        "text": "export class KelaitaAvatarAdapter implements AvatarAdapter {"
+      },
+      {
+        "line": 66,
+        "text": "  async mount(host: HTMLElement): Promise<AdapterResult> {"
+      },
+      {
+        "line": 223,
+        "text": "export function createAvatarAdapter(): AvatarAdapter {"
+      }
+    ]
+  },
+  "frontend/src/avatar/vrm/flag.ts": {
+    "sha256": "4d9ebcb4a9a56617e8d5d3cf465bfebcbcab0ffd4068aa46d89ddcb379319f75",
+    "symbols": [
+      {
+        "line": 7,
+        "text": "export function vrmAvatarEnabled(): boolean {"
+      },
+      {
+        "line": 37,
+        "text": "export function installAvatarSwitch(): void {"
+      }
+    ]
+  },
+  "frontend/src/avatar/vrm/roam.ts": {
+    "sha256": "fe893cf836b8016d7f3a338bed4daf28e17b6dc87a416ac9e618d4626bdaab5f",
+    "symbols": [
+      {
+        "line": 3,
+        "text": "export function roamEnabled(): boolean {"
+      },
+      {
+        "line": 14,
+        "text": "export function setRoamEnabled(enabled: boolean): void {"
+      },
+      {
+        "line": 26,
+        "text": "export class RoamController {"
+      },
+      {
+        "line": 136,
+        "text": "  private greet(): void {"
+      }
+    ]
+  },
+  "frontend/src/avatar/vrm/renderer.ts": {
+    "sha256": "f45a37a904c6bfe85081240438ae65467c9a2b6070d820ff6ae42a9c93040b3a",
+    "symbols": [
+      {
+        "line": 14,
+        "text": "function clamp(value: number, min: number, max: number): number {"
+      },
+      {
+        "line": 18,
+        "text": "export class VrmRenderer {"
+      },
+      {
+        "line": 33,
+        "text": "  private greetUntil = 0;"
+      },
+      {
+        "line": 43,
+        "text": "  async mount(host: HTMLElement): Promise<AdapterResult> {"
+      }
+    ]
+  }
+}

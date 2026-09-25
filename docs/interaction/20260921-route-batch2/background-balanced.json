@@ -1,0 +1,39 @@
+{
+  "background": "blur(10px)",
+  "panels": [
+    {
+      "selector": ".tour-input",
+      "background": "rgba(255, 255, 255, 0.6)",
+      "color": "rgb(16, 43, 69)"
+    },
+    {
+      "selector": ".explorer",
+      "background": "rgba(255, 255, 255, 0.6)",
+      "color": "rgb(16, 43, 69)"
+    },
+    {
+      "selector": ".location-panel",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(25, 59, 80)"
+    },
+    {
+      "selector": ".poi-directory",
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(16, 43, 69)"
+    },
+    {
+      "selector": ".tour-constraint-group",
+      "background": "rgba(255, 255, 255, 0.28)",
+      "color": "rgb(16, 43, 69)"
+    },
+    {
+      "selector": ".tour-input select",
+      "background": "rgba(255, 255, 255, 0.92)",
+      "color": "rgb(25, 59, 80)"
+    }
+  ],
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390
+  }
+}

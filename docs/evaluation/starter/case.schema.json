@@ -1,0 +1,224 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI4TJU evaluation case v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "category",
+    "split",
+    "input",
+    "gold",
+    "setup",
+    "expected_tools",
+    "execution"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^[A-Z][0-9]{2}$"
+    },
+    "category": {
+      "enum": [
+        "knowledge",
+        "entity",
+        "uncertainty",
+        "route",
+        "image",
+        "speech",
+        "retrieval"
+      ]
+    },
+    "split": {
+      "enum": [
+        "development",
+        "holdout"
+      ]
+    },
+    "input": {
+      "type": "object",
+      "required": [
+        "modality",
+        "prompt",
+        "turns",
+        "campus_id",
+        "asset_id",
+        "app_url",
+        "local_path"
+      ],
+      "properties": {
+        "modality": {
+          "enum": [
+            "text",
+            "integration",
+            "interaction",
+            "asset",
+            "image_metadata",
+            "image_visual",
+            "audio"
+          ]
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "turns": {
+          "type": "array"
+        },
+        "campus_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "asset_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "app_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "local_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "gold": {
+      "type": "object",
+      "required": [
+        "status",
+        "answer_example",
+        "required",
+        "forbidden",
+        "evidence_refs",
+        "binding_required"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "probe_report_asserted",
+            "behavior_contract",
+            "needs_local_binding",
+            "recorded_fixture",
+            "tool_derived",
+            "locally_verified"
+          ]
+        },
+        "answer_example": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "forbidden": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "binding_required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "setup": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_tools": {
+      "type": "object",
+      "required": [
+        "web_policy"
+      ],
+      "properties": {
+        "web_policy": {
+          "enum": [
+            "conditional",
+            "must_not_call_when_local_sufficient",
+            "not_applicable"
+          ]
+        }
+      }
+    },
+    "execution": {
+      "type": "object",
+      "required": [
+        "status",
+        "evidence_type",
+        "observed",
+        "error",
+        "metrics",
+        "evidence"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "NOT_RUN",
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "SKIP"
+          ]
+        },
+        "evidence_type": {
+          "enum": [
+            null,
+            "static",
+            "simulated",
+            "real_component",
+            "real_e2e",
+            "manual"
+          ]
+        },
+        "observed": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "error": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "metrics": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

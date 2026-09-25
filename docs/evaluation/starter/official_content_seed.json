@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-09-17",
+  "timezone": "Asia/Shanghai",
+  "purpose": "Small official content seed for existing AI4TJU schema adaptation; not a full knowledge database or live status feed.",
+  "execution_status": "Content read from official sources; application integration and UI/audio tests NOT_RUN.",
+  "records": [
+    {
+      "id": "seed-shangxian-intro",
+      "kind": "stable_poi_introduction",
+      "poi_id": "beiyangyuan-shangxian-stone",
+      "campus_name": "北洋园",
+      "bind_existing_id_before_import": true,
+      "display_text": "尚贤石于2015年落户天津大学北洋园校区。石上题字出自书法家赵冷月，取意于《墨子·尚贤篇》；这块石头也被称作泰山孔子石。",
+      "speech_text": "你现在看到的是尚贤石，它于2015年落户天津大学北洋园校区。石上的尚贤二字由书法家赵冷月题写，取自墨子的尚贤篇。这块石头也被称作泰山孔子石。参观时，可以留意石上的题字。",
+      "source_ids": [
+        "tju-news-shangxian-20150928",
+        "tju-alumni-shangxian-20240124"
+      ],
+      "published_at": "2015-09-28",
+      "valid_from": null,
+      "valid_until": null,
+      "navigation_coordinates": null,
+      "image_policy": "Reuse the existing local mapping. No new image is bundled.",
+      "limitations": [
+        "Historical content, not evidence of current access or opening hours.",
+        "The last sentence in speech_text is a suggested viewing activity."
+      ]
+    },
+    {
+      "id": "seed-vr-history-news",
+      "kind": "recent_news",
+      "poi_id": null,
+      "scope": "online museum; do not assign to the current physical campus automatically",
+      "display_text": "出发前可以先线上了解校史。档案馆发布了网上校史馆上线消息，可作为线上参观入口。",
+      "published_at": "2026-09-07",
+      "published_at_basis": "Official archive homepage announcement listing; article body has no explicit publication date field in retrieved text.",
+      "source_ids": [
+        "tju-archive-vr-news",
+        "tju-archive-index"
+      ],
+      "valid_from": null,
+      "valid_until": null,
+      "limitations": [
+        "Label as recent news dated September 7, not today's September 17 news.",
+        "Does not establish physical museum opening or campus admission permission."
+      ]
+    },
+    {
+      "id": "seed-museum-guide-reference",
+      "kind": "general_visit_guide",
+      "poi_id": null,
+      "published_at": null,
+      "display_text": "校史博物馆官网提供个人与团体参观指南。入馆安排与入校规则分别核对，临时调整需结合当天有关通知。",
+      "source_ids": [
+        "tju-archive-museum-guide"
+      ],
+      "valid_from": null,
+      "valid_until": null,
+      "limitations": [
+        "No publication date found in retrieved page text.",
+        "This record does not assert today's hours, admission status or current route relevance."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "tju-news-shangxian-20150928",
+      "title": "【120年校庆】泰山孔子石落户北洋园",
+      "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+      "published_at": "2015-09-28",
+      "registry_id": "tju-news"
+    },
+    {
+      "id": "tju-alumni-shangxian-20240124",
+      "title": "尚贤石—天津大学校友网",
+      "url": "https://alumni.tju.edu.cn/info/1137/3357.htm",
+      "published_at": "2024-01-24",
+      "registry_id": "tju-alumni-beiyang"
+    },
+    {
+      "id": "tju-archive-vr-news",
+      "title": "天津大学网上校史馆正式上线啦",
+      "url": "https://dag.tju.edu.cn/web/news/info/231147/237592.htmlx",
+      "published_at": "2026-09-07",
+      "date_source_id": "tju-archive-index",
+      "registry_id": "tju-archives"
+    },
+    {
+      "id": "tju-archive-index",
+      "title": "天津大学档案馆首页公告列表",
+      "url": "https://dag.tju.edu.cn/",
+      "published_at": null,
+      "registry_id": "tju-archives"
+    },
+    {
+      "id": "tju-archive-museum-guide",
+      "title": "天津大学校史博物馆参观指南",
+      "url": "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+      "published_at": null,
+      "registry_id": "tju-archives"
+    }
+  ],
+  "implementation_references": [
+    {
+      "title": "智谱联网搜索：域名筛选、来源与日期等能力，以当前实际接口为准",
+      "url": "https://docs.bigmodel.cn/cn/guide/tools/web-search"
+    },
+    {
+      "title": "LangGraph overview：需要框架时可选，不是本轮前置依赖",
+      "url": "https://docs.langchain.com/oss/python/langgraph/overview"
+    }
+  ],
+  "source_registry_file": "source_registry.json",
+  "retrieval_policy_file": "retrieval_policy.json"
+}

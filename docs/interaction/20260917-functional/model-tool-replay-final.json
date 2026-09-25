@@ -1,0 +1,82 @@
+[
+  {
+    "input": "请联网介绍尚贤石，使用注册的资料工具。",
+    "error": "JSONDecodeError",
+    "code": null
+  },
+  {
+    "request_id": "0c4dd408-0441-4b8d-b218-507d837bb374",
+    "input": "北洋园启用年份，以及图书馆今天几点关门？",
+    "answer": {
+      "request_id": "0c4dd408-0441-4b8d-b218-507d837bb374",
+      "session_id": "cc651a61-a8c1-4aba-b7a1-a3a198c96638",
+      "answer": "本次检索资料未载明北洋园校区的启用年份，也未包含图书馆今日（9月17日）的关门时间。关于启用年份，通用记载多为2015年，但本次未核验，具体请以校方校史资料为准；图书馆闭馆时间因校区与日期安排而异，无法用常规时段推算，建议直接查阅天津大学图书馆官方当日通知确认。",
+      "sources": [
+        {
+          "id": "poi-beiyangyuan-main-building",
+          "title": "北洋园校区主楼",
+          "snippet": "校方资料在北洋园校区列有北洋园校区主楼。",
+          "url": "https://fw.tju.edu.cn/Beiyang.html",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "poi-beiyangyuan-east-gate",
+          "title": "北洋园校区东门",
+          "snippet": "校方资料在北洋园校区列有北洋园校区东门。",
+          "url": "https://fw.tju.edu.cn/Beiyang.html",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "poi-beiyangyuan-memorial-pavilion",
+          "title": "北洋纪念亭",
+          "snippet": "校方资料在北洋园校区列有北洋纪念亭。",
+          "url": "https://fw.tju.edu.cn/Beiyang.html",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        }
+      ],
+      "model": "glm-5.1",
+      "usage": {
+        "prompt_tokens": 940,
+        "completion_tokens": 1042,
+        "total_tokens": 1982
+      },
+      "elapsed_ms": 24235.000000000582,
+      "actions": []
+    },
+    "trace": {
+      "status": "unavailable",
+      "local_source_ids": [
+        "poi-beiyangyuan-main-building",
+        "poi-beiyangyuan-east-gate",
+        "poi-beiyangyuan-memorial-pavilion"
+      ],
+      "external": {
+        "status": "unavailable",
+        "evidence": [],
+        "scope": [],
+        "trace": [
+          {
+            "evidence_type": "recorded_replay",
+            "reason": "No applicable current library evidence; registered library adapter disabled"
+          }
+        ],
+        "page_calls": 0,
+        "search_calls": 0,
+        "cache_hit": false
+      },
+      "parts": {
+        "stable": "success",
+        "current": "unavailable"
+      }
+    },
+    "elapsed_ms": 24235.000000000582,
+    "model_evidence": "live_http",
+    "page_evidence": "recorded_replay"
+  }
+]

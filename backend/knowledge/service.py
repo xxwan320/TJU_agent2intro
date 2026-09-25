@@ -15,6 +15,8 @@ from hashlib import sha256
 import json
 from pathlib import Path
 import re
+import unicodedata
+from copy import deepcopy
 from typing import Any, Protocol
 
 from backend.contracts import Building, CampusId, KnowledgeStatus, Source
@@ -36,8 +38,14 @@ class KnowledgeAdapter(Protocol):
     def get_building(self, id: str) -> Building | None: ...
     def list_pois(self, campus_id: CampusId, category: str | None, query: str, limit: int, cursor: str | None) -> POIPage: ...
     def get_poi(self, id: str) -> POI | None: ...
+    def is_map_searchable(self, id: str) -> bool: ...
+    def is_frontend_visible(self, id: str) -> bool: ...
     def get_coverage(self) -> Coverage: ...
     def get_campus_assets(self, campus_id: CampusId) -> CampusAssets: ...
+    def resolve_entities(self, query: str, campus_id: CampusId) -> list[str]: ...
+    def get_evidence_record(self, reference: str) -> dict | None: ...
+    def get_service_rules(self, campus_id: CampusId, poi_id: str | None = None) -> list[dict]: ...
+    def get_core_bundle(self, campus_id: CampusId) -> dict: ...
 
 
 @dataclass(frozen=True)
@@ -79,9 +87,23 @@ class LocalKnowledge:
         self._assets: dict[str, CampusAssets] = {}
         self._facts: list[KnowledgeRecord] = []
         self._registry: dict[str, dict] = {}
+        self._evidence_metadata: dict[str, dict] = {}
+        self._service_rules: list[dict] = []
+        self._core_routes: list[dict] = []
+        self._map_searchable: set[str] | None = None
+        self._frontend_hidden: set[str] = set()
+        self._conflicts: dict[str, dict] = {}
         self._version: str | None = None
         self._updated_at: str | None = None
         self._load()
+
+    def get_tour_context(self, poi_id, campus_id, visit_date=None):
+        from .tour_projection import context
+        return context(self, poi_id, campus_id, visit_date)
+
+    def get_tour_route_costs(self, request):
+        from .tour_projection import route_costs
+        return route_costs(self, request)
 
     def _load(self) -> None:
         documents_path = self.data_directory / DOCUMENTS_FILE.name
@@ -93,6 +115,17 @@ class LocalKnowledge:
         raw_pois = _load_array(pois_path)
         raw_assets = _load_array(assets_path)
         self._registry = {row["id"]: row for row in _load_array(self.data_directory / "SOURCE_REGISTRY.json") if isinstance(row, dict) and "id" in row}
+        self._evidence_metadata = {r['fact_id']: r for r in _load_array(self.data_directory / 'evidence_metadata.json')}
+        self._service_rules = _load_array(self.data_directory / 'service_rules.json')
+        self._core_routes = _load_array(self.data_directory / 'core_routes.json')
+        searchability_path = self.data_directory / 'map_searchability.json'
+        searchability = _load_array(searchability_path)
+        if searchability_path.is_file() and searchability:
+            self._map_searchable = {str(row['poi_id']) for row in searchability
+                                    if row.get('status') == 'searchable' and row.get('provider') == 'amap'}
+            self._frontend_hidden = {str(row['poi_id']) for row in searchability
+                                     if row.get('frontend_visible') is False}
+        self._conflicts = {r['id']: r for r in _load_array(self.data_directory / 'r3/conflicts.json')}
         for row in raw_buildings:
             if not isinstance(row, dict):
                 continue
@@ -155,13 +188,15 @@ class LocalKnowledge:
                 self._building_aliases[poi.id] = tuple(poi.aliases)
         if not self._documents and not self._buildings and not self._pois:
             return
-        payload = b""
-        for path in (documents_path, buildings_path, pois_path, assets_path, self.data_directory / "facts.json", self.data_directory / "SOURCE_REGISTRY.json"):
-            try:
-                payload += path.read_bytes()
-            except OSError:
-                pass
-        self._version = f"sha256:{sha256(payload).hexdigest()[:12]}"
+        # Canonical JSON is portable across LF/CRLF. Evidence changes also
+        # invalidate the public version and all bound pagination cursors.
+        names = ("documents.json", "buildings.json", "pois.json", "map_searchability.json", "assets.json",
+                 "facts.json", "SOURCE_REGISTRY.json", "evidence_metadata.json",
+                 "service_rules.json", "core_routes.json", "r3/conflicts.json")
+        payload = {name: _load_array(self.data_directory / name) for name in names}
+        encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
+        self._version = f"sha256:{sha256(encoded).hexdigest()[:12]}"
+
         dates = [document.source.retrieved_at for document in self._documents]
         dates.extend(building.retrieved_at for building in self._buildings.values())
         self._updated_at = max(dates, default=None)
@@ -208,10 +243,15 @@ class LocalKnowledge:
     def list_pois(self, campus_id: CampusId, category: str | None, query: str, limit: int, cursor: str | None) -> POIPage:
         query = query.strip().lower()
         offset = self._parse_cursor(cursor, campus_id, category, query) if cursor else 0
-        candidates = [p for p in self._pois.values() if p.campus_id == campus_id and (category is None or p.category == category)]
+        candidates = [p for p in self._pois.values() if p.campus_id == campus_id and self.is_map_searchable(p.id)
+                      and self.is_frontend_visible(p.id)
+                      and (category is None or p.category == category)]
         if query:
-            direct = [p for p in candidates if any(query in x.lower() for x in (p.id,p.name,*p.aliases))]
+            resolved = set(self.resolve_entities(query, campus_id))
+            direct = [p for p in candidates if p.id in resolved or any(query in x.lower() for x in (p.id,p.name,*p.aliases))]
             candidates = direct or [p for p in candidates if len(_tokens(query) & _tokens(" ".join((p.name,*p.aliases,p.description)))) >= 2]
+        if query and self._campus_conflict(query, campus_id):
+            candidates = []
         candidates.sort(key=lambda p: (0 if query and query in [p.name.lower(),*[x.lower() for x in p.aliases]] else 1,p.id))
         page = candidates[offset:offset + limit]
         following = offset + len(page)
@@ -220,10 +260,19 @@ class LocalKnowledge:
     def get_poi(self, id: str) -> POI | None:
         return self._pois.get(id)
 
+    def is_map_searchable(self, id: str) -> bool:
+        """Whether the latest provider audit found a usable in-campus destination."""
+        return id in self._pois and (self._map_searchable is None or id in self._map_searchable)
+
+    def is_frontend_visible(self, id: str) -> bool:
+        """Whether a retained knowledge record may appear in public UI projections."""
+        return id in self._pois and id not in self._frontend_hidden
+
     def get_coverage(self) -> Coverage:
         campuses = []
         for campus in ("weijinlu","beiyangyuan"):
-            pois = [p for p in self._pois.values() if p.campus_id == campus]
+            pois = [p for p in self._pois.values() if p.campus_id == campus and self.is_map_searchable(p.id)
+                    and self.is_frontend_visible(p.id)]
             verified = [p for p in pois if p.location and p.location.quality != "pending"
                         and p.location.verified_at and p.location.coordinate_source
                         and p.verification_status == "verified"]
@@ -265,18 +314,117 @@ class LocalKnowledge:
                     score += 8
         return score
 
+    @staticmethod
+    def _normalize(text: str) -> str:
+        return re.sub(r"\s+", "", unicodedata.normalize("NFKC", text).casefold())
+
+    def _campus_conflict(self, query: str, campus_id: CampusId) -> bool:
+        labels = {"weijinlu": ("卫津路", "老校区", "七里台"),
+                  "beiyangyuan": ("北洋园", "新校区")}
+        local = any(x in query for x in labels[campus_id])
+        foreign = any(x in query for c, names in labels.items() if c != campus_id for x in names)
+        if foreign and not local:
+            return True
+        return bool(self.resolve_entities(query, "beiyangyuan" if campus_id == "weijinlu" else "weijinlu")
+                    and not self.resolve_entities(query, campus_id))
+
+    def resolve_entities(self, query: str, campus_id: CampusId) -> list[str]:
+        """Resolve longest alias spans while preserving multiple candidates."""
+        query = self._normalize(query).replace("海棠季", "")
+        matches = []
+        for poi in self._pois.values():
+            if poi.campus_id != campus_id:
+                continue
+            names = (poi.id, poi.name, *poi.aliases, *re.split(r"[（()）]", poi.name))
+            for name in names:
+                name = self._normalize(name)
+                if len(name) < 2 or name in ("图书馆", "食堂"):
+                    continue
+                for match in re.finditer(re.escape(name), query):
+                    if name[0].isdigit() and match.start() and query[match.start()-1].isdigit():
+                        continue
+                    matches.append((match.start(), match.end(), poi.id))
+        retained = [m for m in matches if not any(a <= m[0] and b >= m[1] and b-a > m[1]-m[0]
+                                                 for a,b,_ in matches)]
+        ids = {pid for _,_,pid in retained}
+        named_categories = {self._pois[pid].category for pid in ids}
+        for word, category in (("图书馆", "library"), ("食堂", "dining")):
+            if word in query and category not in named_categories:
+                ids.update(p.id for p in self._pois.values() if p.campus_id == campus_id and p.category == category)
+        return sorted(ids)
+
+    def get_evidence_record(self, reference: str) -> dict | None:
+        """Local read helper for C; source existence is not claim support."""
+        fact = next((f for f in self._facts if f.id == reference), None)
+        if fact:
+            metadata = self._evidence_metadata.get(reference, {})
+            return deepcopy({"kind": "fact", "record": fact.model_dump(), "metadata": metadata,
+                             "conflicts": [self._conflicts[c] for c in metadata.get("conflict_ids", []) if c in self._conflicts],
+                             "data_version": self._version})
+        if reference in self._registry:
+            return deepcopy({"kind": "source", "record": self._registry[reference], "data_version": self._version})
+        return None
+
+    def get_service_rules(self, campus_id: CampusId, poi_id: str | None = None) -> list[dict]:
+        return deepcopy([r for r in self._service_rules if campus_id in r["campus_ids"]
+                         and (poi_id is None or poi_id in r["entity_ids"])])
+
+    def get_core_bundle(self, campus_id: CampusId) -> dict:
+        rows = []
+        for row in self._core_routes:
+            poi = self.get_poi(row["poi_id"])
+            if row["campus_id"] == campus_id and poi and poi.campus_id == campus_id:
+                rows.append({"poi": poi.model_dump(), "audit": deepcopy(row)})
+        return {"data_version": self._version, "campus_id": campus_id, "items": rows,
+                "rules": self.get_service_rules(campus_id), "field_verified": False}
+
     def search(self, query: str, campus_id: CampusId, limit: int) -> list[Source]:
+        query = self._normalize(query)
         query_tokens = _tokens(query)
-        if not query_tokens:
+        if not query_tokens or limit <= 0 or self._campus_conflict(query, campus_id):
             return []
-        if any(term in query for term in ("几点", "营业时间", "开放时间", "门禁", "施工", "现在开放")):
+        entities = set(self.resolve_entities(query, campus_id))
+        history = any(x in query for x in ("改造", "重新开放", "始建", "命名", "建成", "扩建", "捐资", "设计", "历史", "哪年", "何年"))
+        service = not history and any(x in query for x in (
+            "几点", "开放", "营业", "门禁", "施工", "预约", "入馆", "进校", "入校", "校园卡",
+            "证件", "陪同", "迟到", "轮椅", "行动不便", "饮料", "奶茶", "饮食", "阅览区", "电话", "咨询", "雨天", "休息", "座位", "清真", "卫生间"))
+        current = any(x in query for x in ("今天", "明天", "后天", "下周", "本周", "现在", "目前", "当前", "今晚", "实时", "当日"))
+        operational = service or any(x in query for x in ("能进", "能去", "能过", "能走", "通行", "施工", "关门"))
+        dated = re.findall(r"20[0-9]{2}(?:[-年][0-9]{1,2}[-月][0-9]{1,2}日?)?", query)
+        explicit_guidance = any(x in query for x in ("指南", "规定", "报道", "通知", "海棠季", "暑期", "2024"))
+        if (current and operational) or (operational and any(len(d) > 4 for d in dated) and not explicit_guidance):
             return []
-        ranked = [
-            (self._score(document, query, query_tokens), index, document.source)
-            for index, document in enumerate(self._documents)
-            if document.source.campus_id == campus_id
-        ]
-        return [source for score, _, source in sorted(ranked, key=lambda row: (-row[0], row[1])) if score >= 2][:limit]
+        if any(x in query for x in ("施工", "卫生间", "厕所", "洗手间", "无障碍通道", "轮椅通行", "遮雨连廊")):
+            return []
+        if operational and not service:
+            return []
+        directory = not service and not history
+        ranked = []
+        for index, document in enumerate(self._documents):
+            if document.source.campus_id != campus_id:
+                continue
+            meta = self._evidence_metadata.get(document.source.id, {})
+            is_rule = meta.get("claim_type") in ("published_rule", "historical_rule")
+            if service != is_rule and (service or is_rule):
+                continue
+            if service and any(x in query for x in ("几点", "开门", "营业时间", "开放时间")):
+                if not any(x in document.source.title for x in ("时段", "开放", "闭馆")):
+                    continue
+            associated = set(meta.get("entity_ids", [])) | ({document.building_id} if document.building_id else set())
+            if entities and associated and not (associated & entities):
+                continue
+            if service and dated and not any(d[:4] in (document.temporal_note or "") for d in dated):
+                continue
+            score = self._score(document, query, query_tokens)
+            if associated & entities:
+                score += 20
+            if score < 2:
+                continue
+            score += 3 * len(query_tokens & _tokens(document.source.title))
+            if directory and document.source.id.startswith("poi-"):
+                score += 12
+            ranked.append((score, index, document.source))
+        return [source for _,_,source in sorted(ranked, key=lambda r: (-r[0],r[1]))][:limit]
 
 
 class UnavailableKnowledge(LocalKnowledge):

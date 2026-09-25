@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "assets": [],
+  "instructions": [
+    "assets为空，因为本轮没有用户的data目录或tour-photos.ts，不能填造图片路径。",
+    "每项建议字段：asset_id(随机稳定ID), local_path(真实路径), app_url(现有页面实际URL), poi_id, campus_id, source_ref, label_verified, label_reviewed_at。",
+    "label_verified仅在人工核对图片和地点后设true；脚本不会自动完成这个核验。",
+    "视觉识别评测时，不能把poi_id、图片文件名、alt和参考答案暴露给模型。"
+  ]
+}

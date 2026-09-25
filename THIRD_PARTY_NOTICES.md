@@ -1,6 +1,6 @@
 # 第三方来源与许可记录
 
-本仓库M0为成熟组件组合，不将OLV-Web UI/hooks用于应用实现（research快照仅作审查证据），不导入OLV/AIRI完整应用。原项目名、版本与来源在docs/OPEN_SOURCE_DECISION.md；安装解析以package-lock.json/uv.lock为准，直接依赖实际许可证清单及原文位于docs/DEPENDENCY_LICENSES.json、docs/licenses/。本文不是给第三方资产重新授权。
+本项目不导入 OLV/AIRI 完整应用。安装解析以 `package-lock.json` 和 `uv.lock` 为准，直接依赖的许可证清单及原文位于 `docs/DEPENDENCY_LICENSES.json` 和 `docs/licenses/`。本文不是给第三方资产重新授权。
 
 ## 实际直接依赖
 
@@ -9,7 +9,7 @@
 - @ricky0123/vad-web 0.0.31：ISC；Silero ONNX模型另为MIT，onnxruntime-web另按其许可证。仅活动检测，不能声称这是ASR。
 - FastAPI、Uvicorn、Pydantic/Pydantic Settings、HTTPX、OpenAI Python SDK、LangGraph按安装包许可证；SDK只用于指定GLM/独立ASR服务适配，不改变供应商。
 - edge-tts 7.2.8：LGPL-3.0，作为未修改的独立Python依赖保留原许可与源码链接：https://github.com/rany2/edge-tts 。M0未打包独立可执行文件或修改该库；后续分发应保留适用材料。
-- LangGraph 1.2.11：MIT；直接运行固定 intent→retrieval→answer→scene_action 工作流，未开启 LangSmith 追踪。测试/dev依赖也列入清单。
+- LangGraph 1.2.11：MIT；直接运行固定 intent→retrieval→answer→scene_action 工作流，未开启 LangSmith 追踪。
 
 ## 独立运行时与素材（本机复制，不进入Git）
 
@@ -17,17 +17,17 @@ Cubism Core取自已审查的上游固定提交，未复制该仓库UI代码：
 https://github.com/Open-LLM-VTuber/Open-LLM-VTuber-Web/blob/d176e7df2366952e3bacbf12cf9a8b18a4315932/src/renderer/WebSDK/Core/live2dcubismcore.min.js
 
 SHA256：942783587666a3a1bddea93afd349e26f798ed19dcd7a52449d0ae3322fcff7c。
-独立原文docs/research/olv-web-src_renderer_WebSDK_Core_LICENSE.md；Framework原文也保留在research中。Core保留原版权头，属于Live2D专有条款，不能统一标MIT。只准备本机运行资源，B 已验证 Live2D 兼容性；M1 的 HTTP/哈希验证通过，合并后现场画面仍待浏览器验收。
+Core 保留原版权头，属于 Live2D 专有条款，不能统一标 MIT。相关运行资源只在有权使用的本机环境中准备。
 
 kelaita源目录：
 C:\Users\ASUS\Desktop\desktop-pet\Open-LLM-VTuber\live2d-models\kelaita
-由用户选定，仅复制这9个素材文件及README。原角色为鸣潮珂莱塔/BongoCat风格，作为本产品首版珂莱塔展示角色；不冒称原创素材。保留README、水印、文件相对引用；不复制整个桌宠，不运行其程序。未核验人物再分发/商用权利，不导入本地克隆音色。详细清单docs/ASSET_INVENTORY.md。
+由用户选定，仅复制必要素材文件及 README。原角色为鸣潮珂莱塔/BongoCat 风格，作为本产品首版展示角色；不冒称原创素材。保留 README、水印、文件相对引用；不复制整个桌宠，不运行其程序。未核验人物再分发/商用权利，不导入本地克隆音色。
 
-本机归档在.runtime/asset-source，工作树各复制到frontend/public/assets/kelaita及frontend/public/vendor，均被Git忽略。素材可替换，不成为LLM或知识模块依赖。源码依用户授权推送 GitHub；人物/Core 原文件保持忽略，未部署云应用。
+本机归档在 `.runtime/asset-source`，运行素材复制到 `frontend/public/assets/kelaita` 及 `frontend/public/vendor`，均被 Git 忽略。素材可替换，不成为 LLM 或知识模块依赖。人物/Core 原文件保持忽略，未部署云应用。
 
 ## 审查但未采用源码
 
-OLV后端MIT、OLV-Web附加条件许可、AIRI MIT、TalkingHead MIT、three-vrm MIT、FastAPI模板MIT。其README/源码只读审查不计作本项目实际源码复用。开源对照与固定提交见OPEN_SOURCE_DECISION；不将各自MIT覆盖到第三方模型/SDK。
+OLV 后端 MIT、OLV-Web 附加条件许可、AIRI MIT、TalkingHead MIT、three-vrm MIT、FastAPI 模板 MIT。其 README/源码只读审查不计作本项目实际源码复用，不将各自 MIT 覆盖到第三方模型或 SDK。
 
 ## R2新增直接依赖
 

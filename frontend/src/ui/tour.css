@@ -1,0 +1,318 @@
+.hidden-for-tour{display:none!important}.experience-switch{display:flex;gap:8px;padding:12px 24px;background:#f6f8f5;border-bottom:1px solid #dce4dc}.experience-switch button[aria-pressed=true]{background:#155b50;color:white}.r2-shell:has(.tour-workspace){height:auto;min-height:100dvh;overflow:visible;background:#f5f7f2;color:#1d3934}.tour-workspace{max-width:1680px;margin:auto;padding:28px 36px 20px;width:100%;box-sizing:border-box}.tour-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:0 0 24px}.tour-heading small{font-size:12px;letter-spacing:.14em;color:#526e65}.tour-heading h1{font-size:clamp(24px,3vw,36px);line-height:1.4;margin:8px 0}.tour-heading p{color:#546c62;margin:0}.tour-workspace label{display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600}.tour-workspace input,.tour-workspace select,.tour-workspace textarea{border:1px solid #c9d5cb;border-radius:10px;padding:11px 12px;background:#fff;color:#163c32;min-width:0;width:100%;box-sizing:border-box;font:inherit;font-size:16px}.tour-workspace button,.tour-workspace a,.experience-switch button{min-height:44px;border:1px solid #c9d5cb;border-radius:10px;padding:10px 14px;font:inherit;cursor:pointer;white-space:normal}.tour-workspace button:disabled{opacity:.5;cursor:not-allowed}.tour-workspace :focus-visible,.experience-switch :focus-visible{outline:3px solid #df953f;outline-offset:3px}.tour-columns{display:grid;grid-template-columns:minmax(360px,480px) minmax(0,1fr);gap:26px;align-items:start}.tour-planning,.tour-map{min-width:0}.tour-input,.tour-plan,.saved-tours,.tour-photo{background:#fff;border:1px solid #dce4dc;border-radius:18px;margin:0 0 18px;padding:20px;box-shadow:0 6px 24px #203e3110}.tour-input summary,.tour-technical summary,.tour-narration summary{cursor:pointer;min-height:32px;font-weight:600}.tour-input form{display:grid;gap:16px;padding-top:18px}.tour-form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tour-workspace .tour-check{flex-direction:row;align-items:center;font-weight:400}.tour-check input{width:20px;height:20px;flex:none}.tour-workspace .tour-primary{background:#155b50;color:white;border-color:#155b50;font-weight:600}.tour-plan header{display:flex;align-items:center;justify-content:space-between;gap:14px}.tour-plan h2{font-size:23px;margin:6px 0 14px}.tour-total{line-height:1.9;color:#325e51;background:#f0f6ef;padding:14px;border-radius:12px}.tour-warnings{margin:16px 0;padding:14px;border-left:3px solid #ca943e;background:#fff9ec;color:#6b531d;font-size:14px;line-height:1.7}.tour-warnings h3{margin:0}.tour-warnings p{margin:6px 0}.tour-stops{padding:0;margin:20px 0;list-style:none}.tour-stops li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:12px;position:relative;padding:0 0 24px}.tour-stops li:not(:last-child):before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:1px;background:#c9d5cb}.tour-number{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#edf3eb;color:#356852;font-weight:700}.tour-stops li[aria-current=step] .tour-number{background:#155b50;color:white}.tour-stops h3{margin:4px 0 8px;font-size:19px}.tour-stops p{font-size:14px;line-height:1.7;margin:8px 0;color:#587066}.tour-stops small{font-size:12px;color:#587066}.tour-actions,.tour-voice{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.tour-shorten,.tour-replace{display:flex;gap:8px;align-items:end;margin:12px 0}.tour-shorten label,.tour-replace label{flex:1;min-width:0}.tour-technical{font-size:12px;margin-top:20px;color:#60736b;overflow-wrap:anywhere}.tour-guide-dock{position:sticky;bottom:0;z-index:12;background:#fffffffa;border:1px solid #b8cec2;border-radius:18px;padding:18px;margin-top:22px;box-shadow:0 -8px 30px #1b433019;max-height:60dvh;overflow:auto;backdrop-filter:blur(10px)}.tour-current{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:12px}.tour-current strong{font-size:21px}.tour-current small,.tour-current span{font-size:13px;color:#587066}.tour-voice{margin-top:12px}.tour-voice select{width:auto}.tour-speech-input{flex:1 1 230px}.tour-caption{margin:8px 0;font-size:14px;color:#315d4f}.tour-narration{margin-top:10px;font-size:14px}.tour-narration p{max-height:130px;overflow:auto;white-space:pre-wrap;line-height:1.8}.tour-alert,.fixture-banner{border-radius:12px;background:#fff0d6;padding:14px;line-height:1.7;overflow-wrap:anywhere}.fixture-banner{border:2px dashed #b07826;font-weight:700}.saved-tours article{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:12px 0}.tour-photo{padding:0;overflow:hidden}.tour-photo img{display:block;width:100%;max-height:240px;object-fit:cover}.tour-photo figcaption{padding:12px;font-size:12px;color:#657a6e}.tour-map .map-directory{grid-template-columns:minmax(0,1fr)}.tour-map .poi-directory{max-height:200px}.tour-map .online-map-host{height:420px}.tour-map .explorer{background:white;border-radius:18px;overflow:hidden}.tour-map .explorer-toolbar{flex-wrap:wrap}.tour-map .location-panel{font-size:13px}.tour-map .location-panel details{max-width:100%}.tour-map .route-step-guide{position:sticky;top:0;z-index:2;background:#edf5ea;padding:14px}.tour-map .poi-card{overflow-wrap:anywhere}.tour-workspace p,.tour-workspace h3{overflow-wrap:anywhere}.task-technical{font-size:12px;overflow-wrap:anywhere;color:#6a7987}.system-status summary{cursor:pointer}.legacy-workspace{min-height:0;flex:1;display:flex;flex-direction:column}.tour-workspace .map-budget{font-size:12px}
+@media(max-width:899px){.tour-workspace{padding:20px 16px 8px}.tour-columns{grid-template-columns:1fr}.tour-heading{align-items:start;gap:12px}.tour-heading label{max-width:135px}.tour-heading h1{font-size:25px}.tour-workspace.walking .tour-map{grid-row:1}.tour-workspace.walking .tour-planning{grid-row:2}.tour-guide-dock{bottom:0;margin-left:-8px;margin-right:-8px;border-radius:16px 16px 0 0;padding:14px 12px calc(12px + env(safe-area-inset-bottom));max-height:56dvh}.tour-current{gap:5px 12px}.tour-current small{flex-basis:100%}.tour-current strong{font-size:18px}.tour-workspace .tour-actions button{flex:1 1 auto}.tour-voice select{flex:1;min-width:165px}.tour-input,.tour-plan{padding:16px}.tour-map .online-map-host{height:340px}.tour-map .poi-directory{max-height:160px}.tour-map .location-actions{display:flex;flex-wrap:wrap}.tour-map .map-directory{display:block}.tour-workspace .explorer-toolbar form{width:100%;min-width:0}.tour-workspace .explorer-toolbar input{min-width:0}.tour-workspace .location-panel details input{width:100%;max-width:100%}.tour-workspace .map-kind-tabs{flex-wrap:wrap}.tour-form-row{grid-template-columns:1fr}.experience-switch{padding:10px 12px}.experience-switch button{font-size:13px;flex:1}.r2-shell:has(.tour-workspace) .topbar .speech-controls{display:none}.tour-narration:not([open]){display:block}}
+@media(prefers-reduced-motion:reduce){.tour-workspace *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+.guide-character{display:flex;align-items:center;gap:16px;background:#edf3eb;padding:0 32px;min-height:100px}.guide-character-host{width:110px;height:110px;position:relative;flex:none;overflow:hidden}.guide-character-host canvas{max-width:100%;max-height:100%}.guide-character>span{font-size:14px;color:#345e50}.tour-next-step{padding:10px 14px;margin:8px 0;background:#edf5ea;border-radius:10px;font-weight:600;line-height:1.7}@media(max-width:899px){.guide-character{padding:0 16px;min-height:80px}.guide-character-host{height:90px;width:90px}.guide-character>span{font-size:12px}}.tour-stop-media{display:grid;grid-template-columns:minmax(150px,240px) minmax(0,1fr);gap:14px;align-items:stretch;margin:10px 0}.tour-workspace .tour-stop-photo{display:block;margin:0;padding:0;border:1px solid #dce4dc;border-radius:12px;overflow:hidden;background:#fff;cursor:zoom-in;width:100%;text-align:left;min-height:0}.tour-workspace .tour-stop-photo img{display:block;width:100%;height:150px;object-fit:cover}.tour-workspace .tour-stop-photo span{display:block;padding:7px 10px;font-size:12px;color:#587066;background:#f4f8f4}.tour-stop-description{border:1px solid #dce4dc;border-radius:12px;padding:12px 14px;background:#f8faf7}.tour-stop-description h4{margin:0 0 8px;color:#155b50}.tour-stops .tour-stop-description p{margin:5px 0;line-height:1.65}.tour-photo-viewer{position:fixed;inset:0;z-index:60;display:grid;place-items:center;background:#0b1f1a99;padding:24px;backdrop-filter:blur(3px)}.tour-photo-viewer figure{margin:0;background:#fff;border-radius:16px;overflow:hidden;max-width:min(920px,94vw);max-height:90dvh;display:flex;flex-direction:column;position:relative}.tour-photo-viewer img{display:block;width:100%;height:auto;max-height:72dvh;object-fit:contain;background:#0e1b17}.tour-photo-viewer figcaption{padding:12px 16px;font-size:13px;color:#4e675c;display:flex;gap:10px;flex-wrap:wrap;align-items:center}.tour-photo-viewer figcaption a{color:#155b50}.tour-workspace .tour-photo-close{position:absolute;top:8px;right:8px;min-height:36px;width:36px;padding:0;border-radius:50%;background:#ffffffeb;border:1px solid #c9d5cb;font-size:18px;line-height:1;cursor:pointer}
+@media(max-width:899px){.tour-stop-media{grid-template-columns:1fr}.tour-workspace .tour-stop-photo{width:100%}.tour-photo-viewer{padding:12px}}
+/* Theme unification: brand tokens replace the legacy green accents. */
+.r2-shell:has(.tour-workspace){background:var(--canvas);color:var(--ink)}
+.tour-workspace label{color:var(--ink)}
+.tour-workspace input,.tour-workspace select,.tour-workspace textarea{border-color:var(--line-strong);color:var(--ink)}
+.tour-workspace button,.experience-switch button{border-color:var(--line-strong);border-radius:var(--radius-sm)}
+.tour-workspace button:hover:not(:disabled),.experience-switch button:hover:not([aria-pressed=true]){border-color:#9fb9cc}
+.tour-workspace :focus-visible,.experience-switch :focus-visible{outline:3px solid rgba(37,167,192,.35);outline-offset:3px}
+.experience-switch{background:var(--paper);border-bottom:1px solid var(--line)}
+.experience-switch button[aria-pressed=true]{background:var(--brand);color:#fff;border-color:var(--brand)}
+.tour-input,.tour-plan,.saved-tours,.tour-photo{border-color:var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-1)}
+.tour-workspace .tour-primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.tour-workspace .tour-primary:hover:not(:disabled){background:var(--brand-deep);border-color:var(--brand-deep)}
+.tour-workspace .tour-danger{color:var(--danger);border-color:#efd1cc;background:var(--danger-soft)}
+.tour-workspace .tour-ghost{border-color:transparent;background:transparent;color:var(--muted)}
+.tour-total{color:var(--ink);background:var(--brand-soft)}
+.tour-number{background:var(--brand-soft);color:var(--brand)}
+.tour-stops li[aria-current=step] .tour-number{background:var(--brand);color:#fff}
+.tour-stops li:not(:last-child):before{background:var(--line)}
+.tour-stops p,.tour-stops small,.tour-heading small,.tour-heading p,.tour-current small,.tour-current span,.tour-technical,.tour-photo figcaption{color:var(--muted)}
+.tour-guide-dock{border-color:var(--line-strong);box-shadow:var(--shadow-2)}
+.tour-next-step{background:var(--brand-soft)}
+.tour-map .route-step-guide{background:var(--brand-soft)}
+.tour-caption{color:var(--ink)}
+.guide-character{background:var(--canvas)}
+.guide-character>span{color:var(--muted)}
+.tour-photo-viewer figcaption a{color:var(--brand)}
+/* Dock input group */
+.tour-dock-input{display:flex;gap:8px;align-items:flex-end;width:100%}
+.tour-dock-input .tour-speech-input{flex:1 1 auto;min-width:0}
+.tour-dock-input .tour-speech-input textarea{min-height:64px}
+.tour-dock-actions{display:flex;gap:8px;flex:none}
+.tour-voice-more{font-size:12px;color:var(--muted);max-width:100%}
+.tour-voice-more>summary{cursor:pointer;min-height:24px;font-weight:600;color:var(--muted)}
+.tour-voice-more>div{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding-top:8px}
+/* Desktop map column: sticky and viewport-adaptive so it never leaves a tall blank area. */
+@media(min-width:900px){
+  .tour-map{position:sticky;top:16px;height:auto;min-height:0;max-height:calc(100dvh - var(--tour-dock-height, 268px) - 24px);display:flex;flex-direction:column}
+  .tour-map .explorer{flex:1;min-height:0;display:flex;flex-direction:column;overflow:auto}
+  .tour-map .map-directory{flex:1 1 auto;min-height:auto;margin-top:10px;grid-template-rows:1fr auto}
+  .tour-map .map-budget{flex:none}
+  .tour-map .map-surface{display:flex;flex-direction:column;min-height:auto}
+  .tour-map .schematic-viewport{flex:1 1 120px;min-height:120px}
+  .tour-map .online-map-wrap{flex:1 1 120px;min-height:120px;display:flex;flex-direction:column}
+  .tour-map .online-map-host{height:auto;flex:1;min-height:80px}
+  .tour-map .poi-directory{height:auto;max-height:200px;min-height:120px}
+  .tour-map .location-panel{flex:none;max-height:none;overflow:visible;padding:8px 10px}
+  .tour-map .location-panel button{min-height:32px;padding:5px 9px;font-size:12px}
+  .tour-map .location-panel .location-actions{margin-top:6px;gap:6px}
+  .tour-map .location-panel details{margin-top:6px}
+}
+
+/* Top POI photo carousel */
+.tour-carousel{position:relative;height:clamp(180px,26vh,300px);margin:0 0 20px;border-radius:18px;overflow:hidden;background:linear-gradient(145deg,#dce8f2,#c9dbe8);touch-action:pan-y}
+.tour-carousel-image{width:100%;height:100%;object-fit:cover;display:block;user-select:none;-webkit-user-drag:none;animation:tour-carousel-fade .55s ease}
+@keyframes tour-carousel-fade{from{opacity:.35}to{opacity:1}}
+.tour-carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.7);background:rgba(9,41,68,.42);color:#fff;font-size:22px;line-height:1;display:grid;place-items:center;backdrop-filter:blur(4px)}
+.tour-carousel-arrow:hover{background:rgba(9,41,68,.62)}
+.tour-carousel-arrow.prev{left:12px}.tour-carousel-arrow.next{right:12px}
+.tour-carousel-caption{position:absolute;left:14px;bottom:12px;display:flex;align-items:baseline;gap:8px;padding:6px 10px;border-radius:10px;background:rgba(255,255,255,.9);color:var(--ink);font-size:12px;box-shadow:var(--shadow-1)}
+.tour-carousel-caption strong{font-size:14px}
+.tour-carousel-caption span{color:var(--muted);font-size:11px}
+
+/* Campus chat merged into the tour dock */
+.tour-chat-toolbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tour-chat-toolbar button{min-height:32px}
+.tour-chat-history{max-height:30vh;overflow:auto;padding:8px 2px;border-bottom:1px solid var(--line)}
+.tour-chat-history .task-card{margin-bottom:10px}
+.tour-chat-history .task-body{max-height:220px;overflow:auto}
+.tour-chat-empty{margin:4px 2px;font-size:12px;color:var(--muted)}
+
+.tour-chat-toolbar .tour-chat-title{font-size:13px;color:var(--ink);margin:0}
+
+/* Hero: carousel with heading overlaid (suggestion 4) */
+.tour-hero{position:relative;margin:0 0 20px}
+.tour-hero .tour-carousel{margin:0;height:clamp(160px,22vh,220px)}
+.tour-hero .tour-heading{position:absolute;left:0;right:0;bottom:0;margin:0;padding:18px 20px 14px;align-items:flex-end;background:linear-gradient(180deg,rgba(6,29,48,0),rgba(6,29,48,.62));border-radius:0 0 18px 18px}
+.tour-hero .tour-heading small{color:rgba(255,255,255,.78)}
+.tour-hero .tour-heading h1{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.35);font-size:clamp(20px,2.4vw,30px);margin:2px 0}
+.tour-hero .tour-heading p{color:rgba(255,255,255,.88)}
+.tour-hero .tour-heading label{color:#fff}
+.tour-hero .tour-heading select{background:rgba(255,255,255,.94);border-color:transparent}
+.tour-carousel-caption{top:12px;bottom:auto}
+
+/* Dock chat: input first, history collapsed (suggestion 1) */
+.tour-chat-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:6px 2px 0;font-size:12px;color:var(--muted)}
+.tour-chat-meta .tour-chat-title{font-size:13px;color:var(--ink)}
+.tour-chat-meta>button{margin-left:auto;border:1px solid var(--line);background:var(--paper);border-radius:var(--radius-sm);padding:4px 8px;font-size:12px;color:var(--muted)}
+.tour-chat-meta .context-chip{font-size:11px}
+.tour-chat-count{font-size:11px;color:var(--muted)}
+.tour-chat-log{margin:4px 0 6px;font-size:12px}
+.tour-chat-log>summary{cursor:pointer;color:var(--muted);font-weight:600;padding:4px 0}
+.tour-chat-log .tour-chat-history{max-height:26vh;overflow:auto;padding:8px 2px;border-bottom:1px solid var(--line);border-top:1px solid var(--line)}
+
+/* Shorter viewports: keep the dock from covering the map (suggestion 2) */
+@media (max-height:900px){.tour-guide-dock{max-height:38dvh}}
+
+/* Button scale: 36px panels, 44px primary actions (suggestion 6) */
+.tour-workspace button{min-height:36px;padding:8px 12px;font-size:13px}
+.tour-workspace .tour-primary,.tour-workspace .generate-button{min-height:44px;padding:10px 16px;font-size:14px}
+
+/* Hero overlay must not swallow carousel arrows/swipe (only its own controls stay interactive). */
+.tour-hero .tour-heading{pointer-events:none}
+.tour-hero .tour-heading label,.tour-hero .tour-heading select,.tour-hero .tour-heading button,.tour-hero .tour-heading a{pointer-events:auto}
+.tour-carousel-arrow{z-index:5}
+.tour-carousel-caption{z-index:4}
+
+/* Carousel arrows: compact pair at top-right, clear of the overlayed heading text. */
+.tour-carousel-arrow{top:12px;transform:none;width:34px;height:34px;font-size:18px}
+.tour-carousel-arrow.prev{left:auto;right:56px}
+.tour-carousel-arrow.next{right:12px}
+
+/* Keep carousel controls clickable even when the roaming avatar passes over them. */
+.tour-carousel-arrow{z-index:24}
+.tour-carousel-caption{z-index:24}
+
+/* Suggestion 2: fewer nested frames inside the map card */
+.tour-map .location-panel{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;margin-top:6px}
+.tour-map .poi-directory{border:0;border-top:1px solid var(--line);border-radius:0}
+.tour-map .poi-list{padding:6px;display:flex;flex-direction:column;gap:2px}
+.tour-map .poi-list>button{border-bottom:0;border-radius:8px;padding:8px 10px}
+
+/* Suggestion 3: one step up in type scale for readability */
+.tour-workspace label{font-size:15px}
+.tour-workspace button{font-size:14px}
+.tour-workspace p{line-height:1.65}
+.tour-workspace small,.tour-stops small,.directory-summary span,.location-panel span,.location-panel details,.tour-caption{font-size:12px}
+
+/* Compact map window (previous small-window form); directory stays below it. */
+.tour-map .map-directory{flex:0 0 auto;min-height:auto;grid-template-rows:none}
+.tour-map .schematic-viewport,.tour-map .online-map-wrap{flex:none;height:340px;min-height:180px}
+.tour-map .online-map-host{height:auto;flex:1;min-height:120px}
+.tour-map .poi-directory{height:220px;max-height:220px;min-height:140px}
+
+/* Hide the avatar strip when no renderer is mounted there (VRM roam mode). */
+.guide-character:has(.guide-character-host:empty){display:none}
+.tour-workspace{padding-top:18px}
+
+/* Balanced topbar: time + weather left, voice + logs right */
+.topbar{gap:12px}
+.topbar-left,.topbar-right{display:flex;align-items:center;gap:8px;min-width:0}
+.topbar-left{margin-right:auto}
+.topbar-pill{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 12px;border:1px solid var(--line);border-radius:999px;background:#f9fbfc;font-size:12px;color:var(--muted);white-space:nowrap}
+.topbar-pill strong{font-size:14px;color:var(--ink)}
+.topbar-clock span{font-size:11px}
+.speech-menu{position:relative}
+.speech-menu>summary{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 12px;border:1px solid var(--line);border-radius:999px;background:#f9fbfc;font-size:12px;color:var(--muted);cursor:pointer;list-style:none}
+.speech-menu>summary::-webkit-details-marker{display:none}
+.speech-menu>summary small{font-size:11px;color:var(--brand)}
+.speech-menu[open]>summary{border-color:var(--brand);background:#fff}
+.speech-menu-body{position:absolute;right:0;top:46px;z-index:45;display:flex;flex-wrap:wrap;gap:8px;align-items:center;max-width:min(560px,90vw);padding:10px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-2)}
+.guide-character{cursor:pointer}
+
+/* Tour side panel replacing the bottom dock */
+.tour-panel{position:fixed;top:64px;bottom:0;right:0;width:min(400px,92vw);z-index:30;display:flex;flex-direction:column;background:#fff;border-left:1px solid var(--line);box-shadow:-18px 0 48px rgba(15,43,65,.14);transform:translateX(105%);visibility:hidden;transition:transform .28s cubic-bezier(.2,.8,.2,1),visibility .28s}
+.tour-panel.open{transform:translateX(0);visibility:visible}
+.tour-panel-head{display:flex;align-items:flex-start;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.tour-panel-head>div{display:flex;flex-direction:column;gap:2px;min-width:0}
+.tour-panel-head small{font-size:11px;color:var(--muted)}
+.tour-panel-head strong{font-size:17px;line-height:1.35}
+.tour-panel-head span{font-size:12px;color:var(--muted)}
+.tour-panel-head>button{margin-left:auto;flex:none;width:34px;height:34px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:18px;line-height:1;color:var(--muted)}
+.tour-panel-body{flex:1;min-height:0;display:flex;flex-direction:column;gap:10px;padding:12px 16px 16px;overflow:hidden}
+.tour-panel .tour-actions{flex:none;max-height:38%;overflow:auto}
+.tour-panel .tour-voice{flex:1;min-height:0;display:flex;flex-direction:column;gap:8px}
+.tour-panel .tour-chat-history{flex:1;min-height:120px;max-height:none;border:0;padding:0}
+.tour-panel .tour-chat-meta{padding:0}
+.tour-panel .tour-dock-input{flex:none}
+.tour-panel .tour-caption,.tour-panel .tour-narration,.tour-panel .tour-next-step{margin:0;flex:none}
+@media(prefers-reduced-motion:reduce){.tour-panel{transition:none}}
+
+/* Map column no longer reserves dock height */
+@media(min-width:900px){.tour-map{top:84px;max-height:calc(100dvh - 100px)}}
+@media(max-width:899px){.speech-menu{display:none}}
+
+/* Composer: one wide input with icons inside (mic left, send/cancel right) */
+.tour-composer{position:relative;display:flex;align-items:flex-end;min-height:64px;border:1px solid var(--line);border-radius:14px;background:#fff;padding:10px 54px 10px 50px}
+.tour-composer:focus-within{border-color:var(--brand);box-shadow:0 0 0 3px rgba(37,167,192,.14)}
+.tour-composer-input{flex:1;min-width:0;border:0;outline:0;resize:none;min-height:44px;max-height:132px;padding:11px 0;font:inherit;font-size:15px;line-height:1.5;background:transparent}
+.composer-icon{position:absolute;bottom:8px;width:36px;height:36px;display:grid;place-items:center;border:0;border-radius:10px;background:transparent;color:var(--brand);cursor:pointer}
+.composer-icon.mic{left:6px}
+.composer-icon.recording{background:var(--danger-soft);color:var(--danger)}
+.composer-icon.send{right:6px;background:var(--brand);color:#fff}
+.composer-icon.send:disabled{opacity:.4;cursor:not-allowed}
+.composer-icon.send.cancel{background:var(--danger-soft);color:var(--danger)}
+.tour-composer-foot{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.tour-composer-foot .tour-chat-note{font-size:11px;color:var(--muted)}
+.tour-composer-foot .tour-voice-more{margin-left:auto}
+.tour-chat-clear{border:1px solid var(--line);background:#fff;border-radius:8px;padding:3px 8px;font-size:12px;color:var(--muted)}
+.tour-chat-clear:hover{color:var(--danger);border-color:var(--danger)}
+
+/* Composer icon buttons: strip legacy button chrome, keep icons centered */
+.tour-workspace .composer-icon{border:0;padding:0;min-height:0;display:grid;place-items:center;background:transparent}
+.tour-workspace .composer-icon svg{display:block}
+.tour-workspace .composer-icon.mic:hover{background:var(--brand-tint)}
+.tour-workspace .composer-icon.send{border-radius:50%;background:var(--brand);color:#fff}
+.tour-workspace .composer-icon.send:disabled{opacity:.4}
+.tour-workspace .composer-icon.send.cancel{border-radius:50%;background:var(--danger-soft);color:var(--danger)}
+.tour-chat-clear:disabled{opacity:.45;cursor:not-allowed}
+.context-chip.empty{color:var(--muted)}
+
+/* Composer card: single border, label top-left, text from top-left, actions at bottom corners */
+.tour-workspace .tour-composer{flex-direction:column;align-items:stretch;gap:6px;min-height:136px;padding:10px 12px 10px}
+.tour-composer-label{font-size:12px;font-weight:600;color:var(--muted)}
+.tour-workspace .tour-composer-input{width:100%;min-height:48px;max-height:160px;padding:0;font-size:15px;line-height:1.6}
+.tour-composer-actions{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.tour-workspace .composer-icon{position:static;width:44px;height:44px}
+.tour-workspace .composer-icon.mic{border-radius:12px}
+
+.tour-panel .tour-voice{align-items:stretch}
+
+/* The card itself is the input: no nested textarea chrome, placeholder hint top-left */
+.tour-workspace .tour-composer{cursor:text;padding:12px 12px 8px}
+.tour-workspace .tour-composer-input{flex:1;width:100%;min-height:56px;max-height:none;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;font-size:15px;line-height:1.7}
+.tour-workspace .tour-composer-input:focus{outline:none;box-shadow:none}
+.tour-composer-input::placeholder{color:#9aa9b6}
+.tour-composer-input:focus::placeholder{color:transparent}
+.tour-composer-actions{margin-top:auto}
+
+.tour-workspace .composer-icon.send{width:38px;height:38px}
+.tour-workspace .composer-icon.mic{width:42px;height:42px}
+
+/* Chip above the input, compressed footer row */
+.tour-panel .context-chip{margin:0 0 6px;align-self:flex-start}
+.tour-composer-foot .tour-voice-more{margin-left:0}
+.tour-workspace .tour-chat-clear{border:0;background:transparent;padding:0;font-size:12px;font-weight:600;color:var(--muted)}
+.tour-workspace .tour-chat-clear:hover{color:var(--brand);text-decoration:underline}
+.tour-workspace .tour-chat-clear:disabled{opacity:.5;text-decoration:none}
+/* POI directory items must not shrink (content was clipped) */
+.tour-map .poi-list>button{flex:none}
+
+/* Footer alignment: 语音设置 left, 清空对话 right, identical typography */
+.tour-composer-foot{align-items:center}
+.tour-composer-foot .tour-voice-more>summary{display:inline-flex;align-items:center;min-height:24px;line-height:24px}
+.tour-workspace .tour-chat-clear{margin-left:auto;display:inline-flex;align-items:center;min-height:24px;line-height:24px}
+.tour-workspace .tour-chat-clear:disabled{opacity:1;color:var(--muted);cursor:not-allowed}
+
+/* Left planner and map card share the same top and bottom edges */
+.tour-columns{align-items:stretch}
+.tour-planning{display:flex;flex-direction:column}
+.tour-planning>*:last-child{flex:1;margin-bottom:0}
+.tour-input[open]{display:flex;flex-direction:column}
+.tour-input[open]>summary{flex:none}
+.tour-input[open]>form{flex:1;display:flex;flex-direction:column;gap:16px}
+.tour-input[open]>form>.tour-primary{margin-top:auto}
+
+/* Voice settings popover: floats above the footer so 清空对话 stays aligned */
+.tour-voice-more{position:relative}
+.tour-voice-more>div.tour-voice-menu{position:absolute;bottom:calc(100% + 8px);left:0;z-index:6;display:flex;flex-direction:column;gap:10px;min-width:252px;padding:12px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow-2)}
+.tour-voice-field{display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--muted)}
+.tour-voice-field select{height:34px;border:1px solid var(--line);border-radius:8px;padding:0 8px;font-size:13px;background:#fff}
+.tour-voice-buttons{display:flex;gap:8px}
+.tour-workspace .tour-voice-action{flex:1;min-height:34px;padding:0 10px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:12px;color:var(--brand);white-space:nowrap}
+.tour-workspace .tour-voice-action:hover{background:var(--brand-tint)}
+.tour-workspace .tour-voice-action.danger{color:var(--danger);border-color:#e6c9c6}
+.tour-workspace .tour-voice-action.danger:hover{background:var(--danger-soft)}
+
+/* Location actions share one row; give the directory more room */
+.tour-map .location-actions{gap:6px}
+.tour-map .poi-directory{height:260px;max-height:260px}
+/* Planner textareas resize vertically only, never past the card edge */
+.tour-input textarea{resize:vertical;max-width:100%}
+.tour-input input,.tour-input select{max-width:100%}
+
+.tour-map .location-actions .live-follow{margin-top:0}
+
+/* Explicit numbered constraint slots avoid platform-specific Ctrl/Command multi-select. */
+.tour-constraint-group{min-width:0;margin:0;padding:12px;border:1px solid var(--line);border-radius:12px;background:#fbfcfd}
+.tour-constraint-group legend{padding:0 5px;font-size:14px;font-weight:600;color:var(--ink)}
+.tour-constraint-group>small{display:block;margin-bottom:8px;color:var(--muted)}
+.tour-constraint-list{display:grid;gap:7px}
+.tour-workspace .tour-constraint-row{display:grid;grid-template-columns:24px minmax(0,1fr);align-items:center;gap:5px;font-weight:400}
+.tour-constraint-row>span{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+.tour-workspace .tour-constraint-row select{padding:8px 9px;font-size:14px}
+.tour-constraint-row select:disabled{opacity:.55;cursor:not-allowed}
+
+.poi-card {display:block;overflow:hidden;border-radius:18px;background:#fff}
+.poi-profile {display:grid;grid-template-columns:minmax(180px,32%) minmax(0,1fr);gap:24px}
+.poi-profile:not(:has(figure)) {grid-template-columns:1fr}
+.poi-profile figure {margin:0;position:relative;min-height:200px}
+.poi-profile figure img {width:100%;height:100%;max-height:340px;object-fit:cover;border-radius:12px}
+.poi-profile figcaption {position:absolute;bottom:8px;left:10px;background:#163c32cc;color:white;border-radius:6px;padding:4px 8px;font-size:12px}
+.poi-profile-kicker {font-size:12px;letter-spacing:.08em;color:#527367}
+.poi-profile h3 {font-size:26px;margin:8px 0 14px}
+.poi-profile-intro,.poi-profile-stories p {line-height:1.9}
+.poi-profile-aliases {font-size:13px;color:#61736b}
+.poi-profile-stories {margin-top:20px;border-top:1px solid #e0e9df;padding-top:14px}
+.poi-profile-stories h4 {margin:0 0 10px;color:#155b50}
+.poi-profile-stories a {font-size:12px;padding:0;min-height:auto;border:0;color:#155b50}
+.poi-card .poi-actions {margin-top:20px;flex-wrap:wrap}
+@media(max-width:640px) {.poi-profile{grid-template-columns:1fr}.poi-profile figure{min-height:0;height:180px}}
+
+/* Let the artwork show through large surfaces; keep controls and maps crisp. */
+.r2-shell:has(.tour-workspace){position:relative;isolation:isolate;background:transparent;--muted:#435d70}
+.r2-shell:has(.tour-workspace)::before{content:"";position:fixed;inset:-22px;z-index:-1;pointer-events:none;background:linear-gradient(#ffffff14,#ffffff24),url('/assets/campus/background.jpg') center bottom/cover no-repeat;filter:blur(10px)}
+.r2-shell:has(.tour-workspace) .topbar{background:rgba(255,255,255,.74);backdrop-filter:blur(12px)}
+.tour-workspace .tour-input,.tour-workspace .tour-plan,.tour-workspace .saved-tours,.tour-map .explorer{background:rgba(255,255,255,.60);border-color:rgba(255,255,255,.82);box-shadow:0 8px 28px #2643570c;backdrop-filter:blur(5px)}
+.tour-map .explorer-toolbar,.tour-map .location-panel,.tour-map .poi-directory,.tour-map .directory-summary,.tour-map .map-budget{background:transparent}
+.tour-map .poi-list>button{background:rgba(255,255,255,.25);border-bottom-color:#6a81951c;color:var(--ink)}
+.tour-map .poi-list>button:hover,.tour-map .poi-list>button.selected{background:#e5f3f9ed}
+.tour-workspace .tour-constraint-group{background:rgba(255,255,255,.28);border-color:#607e9638}
+.tour-workspace .poi-card,.tour-workspace .route-result{background:rgba(255,255,255,.76)}
+.tour-workspace input,.tour-workspace select,.tour-workspace textarea{background:rgba(255,255,255,.92);color:#193b50;border-color:#94aebe}
+.tour-workspace .tour-composer-input{background:transparent}
+.tour-workspace .location-panel,.tour-workspace .directory-summary,.tour-workspace .tour-input>summary{color:#193b50}
+.tour-workspace .location-panel span,.tour-workspace .poi-card p{color:#435d70}
+@media(max-width:640px){.tour-workspace .tour-input,.tour-workspace .tour-plan,.tour-workspace .saved-tours,.tour-map .explorer{background:rgba(255,255,255,.70)}}
+.common-origin{display:flex;gap:8px;min-width:180px;max-width:100%;margin-top:10px}
+.common-origin select{min-width:0;max-width:100%;padding:9px;border:1px solid var(--line-strong);border-radius:8px;background:white;color:var(--ink)}
+@media(max-width:640px){
+ .r2-shell .tour-workspace .tour-input[open]>form{display:flex;flex-direction:column;gap:16px}
+ .r2-shell .tour-workspace .tour-input .tour-form-row{grid-template-columns:minmax(0,1fr)}
+}

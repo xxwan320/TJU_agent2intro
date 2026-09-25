@@ -1,4 +1,4 @@
-// M-owned. CONTRACT_VERSION=1.1.0. Mirror backend/contracts.py; changes require coordination commit.
+// CONTRACT_VERSION mirrors backend/contracts.py.
 export const CONTRACT_VERSION = '1.1.0';
 export type CampusId = 'weijinlu' | 'beiyangyuan';
 export type Mode = 'campus_qa' | 'content_generation' | 'general_chat';
@@ -6,7 +6,7 @@ export type AvatarState = 'idle' | 'listening' | 'thinking' | 'speaking' | 'erro
 export interface AvatarCapabilities { renderer: boolean; lip_sync: 'none'|'amplitude'|'viseme'; expressions: string[]; motions: string[]; customization: ('scale'|'background')[]; is_3d: boolean; face_morph: boolean }
 export interface AvatarManifest { id: string; display_name: string; source_character: string; renderer: 'live2d'|'image'|'vrm'; model_url: string; core_url?: string; capabilities: AvatarCapabilities }
 export interface AdapterResult { status: 'ready'|'not_implemented'|'failed'; error_code?: string }
-export interface AvatarAdapter { readonly manifest: AvatarManifest; mount(host: HTMLElement): Promise<AdapterResult>; setState(state: AvatarState): void; dispose(): void }
+export interface AvatarAdapter { readonly manifest: AvatarManifest; mount(host: HTMLElement): Promise<AdapterResult>; setState(state: AvatarState): void; setAudioLevel?(level:number):void; setCompanionVideo?(video: {src:string; mime?:string; caption?:string} | null):void; setPresentationHost?(host:HTMLElement|null):void; dispose(): void }
 export interface SpeechContext { request_id: string; session_id: string; signal: AbortSignal }
 export interface AudioPayload { encoding: 'base64'; mime_type: 'audio/wav'; sample_rate_hz: 16000; channels: 1; audio_base64: string }
 export interface SpeechCallbacks { onText(text: string, is_final: boolean): void; onStart(utterance_id: string): void; onEnd(utterance_id: string): void; onFailure(utterance_id: string, code: string): void }
@@ -33,8 +33,6 @@ export interface SceneAck { request_id:string; session_id:string; action_id:stri
 export interface SceneAckResponse { request_id:string; action_id:string; status:'recorded'|'duplicate' }
 export interface ClientEventInput { event_id:string; request_id:string; session_id:string; stage:'speech'|'avatar'; status:'started'|'completed'|'failed'|'cancelled'; duration_ms:number|null; data:{code?:'not_implemented'|'playback_failed'|'permission_denied'|'stopped'} }
 export interface Health { status:'ok'; contract_version:string; model:{configured:boolean;verified:boolean}; capabilities:{chat:boolean;asr:boolean;tts:boolean;knowledge:boolean;scene_3d:boolean} }
-export interface SceneAdapter { readonly kind:'2d'|'3d'; execute(action:SceneAction):Promise<{status:'completed'|'failed';error_code?:'execution_failed'|'unsupported'}> }
-
 export interface SpeechStopResponse { request_id:string; local_stopped:boolean; upstream_stop:'not_started'|'unconfirmed'|'confirmed' }
 export interface SearchResponse { hits:Source[]; status:KnowledgeStatus }
 export interface BuildingList { buildings:Building[] }

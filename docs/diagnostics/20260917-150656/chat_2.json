@@ -1,0 +1,740 @@
+{
+  "input": {
+    "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+    "session_id": "901ad2be-d7fe-4441-9b2c-3c3ea2d9526e",
+    "message_id": "4a1622c7-fd10-4024-ba1e-c28c6bd33841",
+    "campus_id": "beiyangyuan",
+    "mode": "campus_qa",
+    "message": "北洋园的大通在哪里？请用不超过80字回答；有歧义就澄清。",
+    "selected_building_id": null
+  },
+  "time": "2026-09-17T15:10:39.671350+08:00",
+  "validation": "real_http",
+  "events": [
+    {
+      "client_ms": 20.10819999850355,
+      "event": {
+        "event_id": "5766f4c8-0778-408e-a9f2-debd516f49e2",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 1,
+        "timestamp": "2026-09-17T07:10:39.814034Z",
+        "type": "accepted",
+        "payload": {
+          "session_id": "901ad2be-d7fe-4441-9b2c-3c3ea2d9526e",
+          "message_id": "4a1622c7-fd10-4024-ba1e-c28c6bd33841",
+          "campus_id": "beiyangyuan",
+          "mode": "campus_qa"
+        }
+      }
+    },
+    {
+      "client_ms": 22.161500000947854,
+      "event": {
+        "event_id": "fa992c37-3a13-4385-b429-b8f4bcc7131a",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 2,
+        "timestamp": "2026-09-17T07:10:39.815051Z",
+        "type": "status",
+        "payload": {
+          "stage": "request",
+          "status": "started"
+        }
+      }
+    },
+    {
+      "client_ms": 6576.8108000011125,
+      "event": {
+        "event_id": "4b084e80-a0b5-447a-844e-8d5bb15fc484",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 3,
+        "timestamp": "2026-09-17T07:10:46.371535Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "poi-beiyangyuan-main-building",
+              "title": "北洋园校区主楼",
+              "snippet": "校方资料在北洋园校区列有北洋园校区主楼。",
+              "url": "https://fw.tju.edu.cn/Beiyang.html",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "poi-beiyangyuan-east-gate",
+              "title": "北洋园校区东门",
+              "snippet": "校方资料在北洋园校区列有北洋园校区东门。",
+              "url": "https://fw.tju.edu.cn/Beiyang.html",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "poi-beiyangyuan-datong-center",
+              "title": "大通学生中心",
+              "snippet": "校方资料在北洋园校区列有大通学生中心。",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "poi-beiyangyuan-memorial-pavilion",
+              "title": "北洋纪念亭",
+              "snippet": "校方资料在北洋园校区列有北洋纪念亭。",
+              "url": "https://fw.tju.edu.cn/Beiyang.html",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "poi-beiyangyuan-qiushi-hall",
+              "title": "求实会堂",
+              "snippet": "校方资料在北洋园校区列有求实会堂。",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            },
+            {
+              "id": "web-c85b05c793098bc2",
+              "title": "天津北洋园校区-今日头条",
+              "snippet": "已读取网页；检索摘要：天津广播.天津大学北洋园校区连夜开展全员核酸检测.天津大学北洋园校区献血方舱投用图片.\n网页摘录：å¤©æ´¥åæ´å­æ ¡åº-ä»æ¥å¤´æ¡ å¤©æ´¥åæ´å­æ ¡åºæç´¢èµè®¯å¤©æ´¥å¤§å­¦åæ´å­æ ¡åºå­¦çå®¿èæ¬è¿æ­£å¼æå¼å¸·å¹å¤©æ´¥å¤§å­¦å­¦çå®¿èæ¬è¿æ­£å¼å¯å¨ å¤©æ´¥åæ¹ç½è®¯:8æ10æ¥æ©ä¸ä¸ç¹ï¼27è¾æ¬è¿è½¦éä¾æ¬¡é©¶åºå¤©æ´¥å¤§å­¦æ ¡å­ï¼è¿æå³çå¤©æ´¥å¤§å­¦åæ´å­æ ¡åºå­¦çå®¿èæ¬è¿å·¥ä½æ­£å¼æå¼å¸·å¹ãæ´¥äºå¤©æ´¥å¤§å­¦âåæ´å­âæ ¡åºè¿æ¥é¦æ¹å­¦çå ¥ä½å¤©æ´¥å¹¿æ­ç½9æ4æ¥æ¶æ¯ï¼å¤©æ´¥å¤§å­¦âåæ´å­âæ ¡åºæ¨å¤©è¿æ¥äºé¦æ¹å ¥ä½çå­¦çï¼éçæ¬æä¸­æ¬æ°å­¦æå¼å­¦ï¼å°æè¶ è¿2ä¸åå­¦çéç»­å ¥ä½æ°æ ¡åºãå¤©æ´¥å¹¿æ­å¤©æ´¥å¤§å­¦åæ´å­æ ¡åºè¿å¤å¼å±å ¨åæ ¸é ¸æ£æµå¤©æ´¥å¸8æ¥æ·±å¤å¬å¼æ°å ç æ¯èºçç«æ é²æ§å·¥ä½æ°é»åå¸ä¼ï¼å¤©æ´¥å¸æ¿åºå¯ç§ä¹¦é¿ãå¸å«çå¥åº·å§ä¸»ä»»é¡¾æ¸ ä»ç»ï¼ç»éç¹äººç¾¤ç­æ¥ï¼æªè³21æ¶ï¼å¤©æ´¥å¸å¨å¯åæ¥è§¦è ä¸­åæ£åº18ä¾æ°å ç æ¯ææè ï¼åå·²è½¬è¿è³å®ç¹å»é¢å®æ½éç¦»ææ²»ãç¯çç½12è¯è®ºãå¤©æ´¥å¤§å­¦åæ´å­æ ¡åºè§åå»ºè®¾å®å½ãå¾ä¹¦é¦åæ¨å»ºç­åä½è®ºå10æ2æ¥ä¸åï¼ãåæ¢¦æ°æ ¡åº å¯èªæ°ç²å­ââå¤©æ´¥å¤§å­¦åæ´å­æ ¡åºè§åå»ºè®¾å®å½ãå¾ä¹¦é¦åä»ªå¼æ¨å»ºç­åä½è®ºåå¨åæ´å­æ ¡åºæå­¦é¢æ¥åå ééä¸¾è¡ãå¤©æ´¥å¤§å­¦å¤©æ´¥å¤§å­¦åæ´å­æ ¡åºè¿è¡å ¨åæ ¸é ¸æ£æµç®åå·²åå®æ´¥ååºä»¥æµ·æ²³ãå¤ç¯åè·¯ãæ´¥æ¸¯é«éãåæ´¥é«éãåæ¡¥æ²³å´ååºåä¸ºé²èåºã2022 å¹´1æ8 æ¥17:00 å¼å§ãã å¤© æ´¥ å¤§ å­¦ æ° åª ä½ ä¸­ å¿ ãå¤©æ´¥å¤§å­¦19è¯è®ºå½å é¦ä¸ªï¼å¤©æ´¥å¤§å­¦åæ´å­æ ¡åºç®è¡æ¹è±æç¨å¤©æ´¥å¤§å­¦åæ´å­æ ¡åºç®è¡æ¹è±æ»é¢ç§¯40ä½å¹³æ¹ç±³ï¼éç¨èªå¤©ææå¶ä½ï¼ä¿æ¸©æ§è½å¥½ï¼è±å æä¸­å¤®ç©ºè°å¾ªç¯ç³»ç»ãå¯è°èæ²ååæ çº¿ç½ç»ï¼å é¨åçååä¸ºç»è®°åºãå¿«æ£åºãç­å¾ åºãéè¡åºç­4ä¸ªåè½åºï¼å¯æ»¡è¶³4äººåæ¶éè¡ãå æç½å¤©æ´¥å¤§å­¦åæ´å­æ ¡åºç ç©¶çå ¬å¯é¡¹ç®ä¸¾è¡å°é¡¶ä»ªå¼å¤©æ´¥å¤§å­¦æ ¡é¿å©çãåå¤åºå»ºé¨é¨é¿åç§å½ï¼åå¤åºå»ºé¨å å§ä¹¦è®°æ±ªè²ï¼å å§å¯ä¹¦è®°ãå¯é¨é¿é«å¿çº¢ï¼å¯é¨é¿æå¼ºï¼å¤©æ´¥å¤§å­¦å­¦å·¥é¨å¯é¨é¿çä½éï¼å®£æå­¦é¢å¯é¢é¿å¼ ç³ï¼å¤",
+              "url": "https://www.toutiao.com/topic/7488542008475338815/",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T07:10:46.368684+00:00"
+            },
+            {
+              "id": "web-4fcbabdcf4de3762",
+              "title": "月排行榜 - 吞精兽",
+              "snippet": "已读取网页；检索摘要：101假期事件初中女孩60元5部事件楚门醉酒女强奸外卖哥陕西工业学院体育场辽宁理工大学树林.\n网页摘录：月排行榜 - 吞精兽永久网址【https://ght.ccavx.com/0/】热播排行榜总排行榜月排行榜周排行榜日排行榜最新上传热门关键词良家出轨校花艳照门大胸星宫一花超市星野情深叉芭蕾黑珍珠巨乳人妻更多搜索关键词月排行榜15901100%15898100%15896100%15887100%15886100%15885100%15811100%15782100%15773100%15739100%15579100%15491100%15480100%15362100%15191100%14885100%14768100%14522100%14501100%14475100%14300100%13853100%13635100%13211100%12863100%12853100%12039100%11850100%11787100%11159100%10544100%10494100%10124100%9921100%9821100%9752100%9737100%9720100%9598100%9530100%9268100%9226100%9023100%8984100%8868100%8468100%8077100%8060100%8010100%7623100%7549100%7517100%7483100%7479100%7414100%7339100%7261100%6946100%6946100%6933100%6920100%6854100%6784100%6636100%6336100%6282100%6253100%6245100%6229100%6212100%6156100%6110100%首页 上一页 下一页 尾页公告独家免费色情影片,每日更新！分类国产自拍制服丝袜强奸乱伦教师学生素人系列人妻熟女日韩无码日韩有码中文字幕欧美风情经典伦理卡通动漫国产自拍制服丝袜强奸乱伦教师学生素人系列人妻熟女日韩无码日韩有码中文字幕欧美风情经典伦理卡通动漫",
+              "url": "https://mkg.tjs4.beer/label/hot_month/page/2.html",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T07:10:46.368684+00:00"
+            },
+            {
+              "id": "web-a1c029c7bb388602",
+              "title": "用我的手指来扰乱吧。～在打烊后仅剩两人的沙龙…～ - AGE动漫",
+              "snippet": "网页检索摘要（未读取全文）：用我的手指来扰乱吧。～在打烊后仅剩两人的沙龙…～. 地区：日本. 动画种类：TV. 原版名称：俺の指で乱れろ。 〜閉店後二人きりのサロンで…〜 其他名称：暂无. 原作：neco. 播放状态：完结. 首播时间：2020-04-05. 剧情类型：恋爱. 制作公司：Magic Bus. 官方网...",
+              "url": "https://www.agedm.io/play/20200172/1/1",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T07:10:46.368684+00:00"
+            },
+            {
+              "id": "web-386ee22956ee25df",
+              "title": "Link to map.baidu.com",
+              "snippet": "网页检索摘要（未读取全文）：The site owner hides the web page description.",
+              "url": "http://map.baidu.com/",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T07:10:46.368684+00:00"
+            },
+            {
+              "id": "web-02eb0194824c3d03",
+              "title": "美国 黑人为什么犯罪率高 - YouTube",
+              "snippet": "网页检索摘要（未读取全文）：美国黑人 为什么犯罪率高？ 美国黑人从非洲被贩卖到美洲成为奴隶，生活在没有自由没有人权的大监狱。 解放奴隶的南北战争后，黑人自由了。 政府把一部分土地分给黑人，黑人有了自己的家园。",
+              "url": "https://www.youtube.com/watch?v=aaCoSF_aBa8",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-17T07:10:46.368684+00:00"
+            }
+          ],
+          "kind": "retrieved"
+        }
+      }
+    },
+    {
+      "client_ms": 6576.921600000787,
+      "event": {
+        "event_id": "f90e4a49-6c3a-4535-a63b-f6efe59d25ef",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 4,
+        "timestamp": "2026-09-17T07:10:46.371535Z",
+        "type": "status",
+        "payload": {
+          "stage": "model",
+          "status": "started"
+        }
+      }
+    },
+    {
+      "client_ms": 29392.251000001124,
+      "event": {
+        "event_id": "c1bb1ca0-9af5-4c3d-9935-b59766005282",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 5,
+        "timestamp": "2026-09-17T07:11:09.187351Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "猫眼"
+        }
+      }
+    },
+    {
+      "client_ms": 29450.257299999066,
+      "event": {
+        "event_id": "5d6d4c7c-81c6-4e3f-8fb9-c785ce8e841a",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 6,
+        "timestamp": "2026-09-17T07:11:09.245601Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "石，你说的"
+        }
+      }
+    },
+    {
+      "client_ms": 29508.309600001667,
+      "event": {
+        "event_id": "e9ac507a-dfa2-47a9-8847-fda1b29065e0",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 7,
+        "timestamp": "2026-09-17T07:11:09.303594Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "“大通"
+        }
+      }
+    },
+    {
+      "client_ms": 29566.100600000937,
+      "event": {
+        "event_id": "14a756fc-5833-45ca-951d-323da93d4df9",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 8,
+        "timestamp": "2026-09-17T07:11:09.361361Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "”是指“大"
+        }
+      }
+    },
+    {
+      "client_ms": 29624.15790000159,
+      "event": {
+        "event_id": "47346b20-eda8-4f8f-9fa4-e0b6f5ba962d",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 9,
+        "timestamp": "2026-09-17T07:11:09.419462Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "通学生中心”"
+        }
+      }
+    },
+    {
+      "client_ms": 29684.439600001497,
+      "event": {
+        "event_id": "0f0b6477-3924-4403-a721-fbd07d90de3c",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 10,
+        "timestamp": "2026-09-17T07:11:09.479775Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "吧？它坐落于"
+        }
+      }
+    },
+    {
+      "client_ms": 29741.2742000015,
+      "event": {
+        "event_id": "041b942e-90b0-4b2e-b42c-99e8d40f75eb",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 11,
+        "timestamp": "2026-09-17T07:11:09.536533Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "北洋园校区"
+        }
+      }
+    },
+    {
+      "client_ms": 29799.95780000172,
+      "event": {
+        "event_id": "c75a39b9-0c32-4c83-9f47-e8b4910c4ef0",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 12,
+        "timestamp": "2026-09-17T07:11:09.595410Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "内，是师生"
+        }
+      }
+    },
+    {
+      "client_ms": 29858.170999999857,
+      "event": {
+        "event_id": "abb3efef-84d1-4f9e-8e31-810271ff2e45",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 13,
+        "timestamp": "2026-09-17T07:11:09.653124Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "文化活动的璀璨舞台"
+        }
+      }
+    },
+    {
+      "client_ms": 29921.740999998292,
+      "event": {
+        "event_id": "0f9672c4-1b77-4c5d-bfba-83cc8803160d",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 14,
+        "timestamp": "2026-09-17T07:11:09.716883Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "。未核验"
+        }
+      }
+    },
+    {
+      "client_ms": 29981.08819999834,
+      "event": {
+        "event_id": "9a54504c-a364-4675-b4ad-ef12b4c403f4",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 15,
+        "timestamp": "2026-09-17T07:11:09.776259Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "其精确方位，"
+        }
+      }
+    },
+    {
+      "client_ms": 30042.493100001593,
+      "event": {
+        "event_id": "9e5df23c-366b-400c-81a6-46139f306cec",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 16,
+        "timestamp": "2026-09-17T07:11:09.837958Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "入校后请"
+        }
+      }
+    },
+    {
+      "client_ms": 30101.425500000914,
+      "event": {
+        "event_id": "2a728d8d-5d51-4015-adf4-9b023d1e235a",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 17,
+        "timestamp": "2026-09-17T07:11:09.896786Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "顺指示牌寻觅"
+        }
+      }
+    },
+    {
+      "client_ms": 30161.64619999836,
+      "event": {
+        "event_id": "ae7d7a8e-bbc8-4f0e-bc42-51d86ccfaf57",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 18,
+        "timestamp": "2026-09-17T07:11:09.956891Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "吧。\n\n[source:"
+        }
+      }
+    },
+    {
+      "client_ms": 30208.388800001558,
+      "event": {
+        "event_id": "fe9aa2a0-8f84-4b4b-84a1-1a373823f1c9",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 19,
+        "timestamp": "2026-09-17T07:11:10.003826Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "poi-beiyang"
+        }
+      }
+    },
+    {
+      "client_ms": 30268.807699998433,
+      "event": {
+        "event_id": "c8f32b2f-964c-49c0-b95e-3c6d2ba0d85d",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 20,
+        "timestamp": "2026-09-17T07:11:10.064320Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "yuan-datong"
+        }
+      }
+    },
+    {
+      "client_ms": 30269.081800001004,
+      "event": {
+        "event_id": "8eb0e1f1-0f74-4e60-a8ae-3bc7d76202fd",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 21,
+        "timestamp": "2026-09-17T07:11:10.064320Z",
+        "type": "answer_delta",
+        "payload": {
+          "text": "-center]"
+        }
+      }
+    },
+    {
+      "client_ms": 30272.99629999834,
+      "event": {
+        "event_id": "bba29aba-3370-42cc-b01a-37d24fdcc704",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 22,
+        "timestamp": "2026-09-17T07:11:10.068065Z",
+        "type": "sources",
+        "payload": {
+          "sources": [
+            {
+              "id": "poi-beiyangyuan-datong-center",
+              "title": "大通学生中心",
+              "snippet": "校方资料在北洋园校区列有大通学生中心。",
+              "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+              "campus_id": "beiyangyuan",
+              "published_at": null,
+              "retrieved_at": "2026-09-14"
+            }
+          ],
+          "kind": "cited"
+        }
+      }
+    },
+    {
+      "client_ms": 30273.078900001565,
+      "event": {
+        "event_id": "0cd79bb1-086a-4f05-8e89-3fa4b5ecc53c",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 23,
+        "timestamp": "2026-09-17T07:11:10.068065Z",
+        "type": "usage",
+        "payload": {
+          "model": "glm-5.1",
+          "usage": {
+            "prompt_tokens": 4516,
+            "completion_tokens": 1140,
+            "total_tokens": 5656
+          }
+        }
+      }
+    },
+    {
+      "client_ms": 30273.340499999904,
+      "event": {
+        "event_id": "4b60e662-7c86-4f5a-b0ab-bafab85add8e",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 24,
+        "timestamp": "2026-09-17T07:11:10.068065Z",
+        "type": "completed",
+        "payload": {
+          "response": {
+            "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+            "session_id": "901ad2be-d7fe-4441-9b2c-3c3ea2d9526e",
+            "answer": "猫眼石，你说的“大通”是指“大通学生中心”吧？它坐落于北洋园校区内，是师生文化活动的璀璨舞台。未核验其精确方位，入校后请顺指示牌寻觅吧。",
+            "sources": [
+              {
+                "id": "poi-beiyangyuan-datong-center",
+                "title": "大通学生中心",
+                "snippet": "校方资料在北洋园校区列有大通学生中心。",
+                "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+                "campus_id": "beiyangyuan",
+                "published_at": null,
+                "retrieved_at": "2026-09-14"
+              }
+            ],
+            "model": "glm-5.1",
+            "usage": {
+              "prompt_tokens": 4516,
+              "completion_tokens": 1140,
+              "total_tokens": 5656
+            },
+            "elapsed_ms": 30250.0,
+            "actions": []
+          }
+        }
+      }
+    }
+  ],
+  "first_answer_ms": 29392.251000001124,
+  "complete_ms": 30273.340499999904,
+  "first_display_ms": null,
+  "first_audio_play_ms": null,
+  "error": null,
+  "request_budget_reserved": 1,
+  "http_status": 200,
+  "client_end_ms": 30273.69660000113,
+  "runtime": {
+    "events": [
+      {
+        "event_id": "f13fbe64-b423-4955-a45a-6e3169ed8eb6",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 37,
+        "timestamp": "2026-09-17T07:10:39.814034+00:00",
+        "origin": "backend",
+        "stage": "request",
+        "status": "started",
+        "duration_ms": null,
+        "data": {
+          "code": null,
+          "action_id": null,
+          "building_id": null,
+          "count": null,
+          "model": null
+        }
+      },
+      {
+        "event_id": "4f7cc66f-2b28-4488-84ed-f015ec175369",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 38,
+        "timestamp": "2026-09-17T07:10:39.815051+00:00",
+        "origin": "backend",
+        "stage": "knowledge",
+        "status": "started",
+        "duration_ms": null,
+        "data": {
+          "code": null,
+          "action_id": null,
+          "building_id": null,
+          "count": null,
+          "model": null
+        }
+      },
+      {
+        "event_id": "67cbae00-11c9-434f-a3bd-f36ba2455f60",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 39,
+        "timestamp": "2026-09-17T07:10:39.817048+00:00",
+        "origin": "backend",
+        "stage": "knowledge",
+        "status": "completed",
+        "duration_ms": 0.0,
+        "data": {
+          "code": null,
+          "action_id": null,
+          "building_id": null,
+          "count": 5,
+          "model": null
+        }
+      },
+      {
+        "event_id": "94009471-cea1-4ec7-bf37-82e1390d9f17",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 40,
+        "timestamp": "2026-09-17T07:10:39.817048+00:00",
+        "origin": "backend",
+        "stage": "knowledge",
+        "status": "started",
+        "duration_ms": null,
+        "data": {
+          "code": "WEB_SEARCH_STARTED",
+          "action_id": null,
+          "building_id": null,
+          "count": null,
+          "model": null
+        }
+      },
+      {
+        "event_id": "ba3722f2-828d-4f1a-9dce-bf55f9683788",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 41,
+        "timestamp": "2026-09-17T07:10:46.370193+00:00",
+        "origin": "backend",
+        "stage": "knowledge",
+        "status": "completed",
+        "duration_ms": 6562.999999998283,
+        "data": {
+          "code": "WEB_SEARCH_COMPLETED",
+          "action_id": null,
+          "building_id": null,
+          "count": 5,
+          "model": null
+        }
+      },
+      {
+        "event_id": "79b8cdb2-42f2-4927-8576-0da2d3ef9f9b",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 42,
+        "timestamp": "2026-09-17T07:10:46.376866+00:00",
+        "origin": "backend",
+        "stage": "model",
+        "status": "started",
+        "duration_ms": null,
+        "data": {
+          "code": null,
+          "action_id": null,
+          "building_id": null,
+          "count": null,
+          "model": "glm-5.1"
+        }
+      },
+      {
+        "event_id": "a349f218-1ce0-45be-818a-73c27743ee4c",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 43,
+        "timestamp": "2026-09-17T07:11:10.067508+00:00",
+        "origin": "backend",
+        "stage": "model",
+        "status": "completed",
+        "duration_ms": 23687.000000001717,
+        "data": {
+          "code": null,
+          "action_id": null,
+          "building_id": null,
+          "count": null,
+          "model": "glm-5.1"
+        }
+      },
+      {
+        "event_id": "30f42359-066d-4016-9f20-2a6b973d9d51",
+        "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+        "seq": 44,
+        "timestamp": "2026-09-17T07:11:10.068065+00:00",
+        "origin": "backend",
+        "stage": "request",
+        "status": "completed",
+        "duration_ms": 30250.0,
+        "data": {
+          "code": null,
+          "action_id": null,
+          "building_id": null,
+          "count": null,
+          "model": null
+        }
+      }
+    ],
+    "next_cursor": 44,
+    "truncated": false
+  },
+  "trace": [
+    {
+      "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+      "action": "route",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "request",
+      "status": "started",
+      "monotonic_ms": 24392593.0,
+      "elapsed_ms": null,
+      "upstream_http_status": null,
+      "finish_reason": null,
+      "body_chars": null,
+      "usage": null,
+      "content_type": null
+    },
+    {
+      "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+      "action": "retrieval",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "knowledge",
+      "status": "started",
+      "monotonic_ms": 24392593.0,
+      "elapsed_ms": null,
+      "upstream_http_status": null,
+      "finish_reason": null,
+      "body_chars": null,
+      "usage": null,
+      "content_type": null
+    },
+    {
+      "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+      "action": "web_search.completed",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "knowledge",
+      "status": "completed",
+      "monotonic_ms": 24399156.0,
+      "elapsed_ms": 6562.999999998283,
+      "upstream_http_status": null,
+      "finish_reason": null,
+      "body_chars": 3496,
+      "usage": null,
+      "content_type": null
+    },
+    {
+      "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+      "action": "stream",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "model",
+      "status": "started",
+      "monotonic_ms": 24399156.0,
+      "elapsed_ms": null,
+      "upstream_http_status": null,
+      "finish_reason": null,
+      "body_chars": null,
+      "usage": null,
+      "content_type": null
+    },
+    {
+      "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+      "action": "stream",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "upstream_connected",
+      "status": "completed",
+      "monotonic_ms": 24400125.0,
+      "elapsed_ms": 969.0000000009604,
+      "upstream_http_status": 200,
+      "finish_reason": null,
+      "body_chars": null,
+      "usage": null,
+      "content_type": "text/event-stream"
+    },
+    {
+      "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+      "action": "stream",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "first_event",
+      "status": "completed",
+      "monotonic_ms": 24400125.0,
+      "elapsed_ms": 969.0000000009604,
+      "upstream_http_status": null,
+      "finish_reason": null,
+      "body_chars": null,
+      "usage": null,
+      "content_type": null
+    },
+    {
+      "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+      "action": "stream",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "first_content",
+      "status": "completed",
+      "monotonic_ms": 24421968.0,
+      "elapsed_ms": 22812.000000001717,
+      "upstream_http_status": null,
+      "finish_reason": null,
+      "body_chars": null,
+      "usage": null,
+      "content_type": null
+    },
+    {
+      "request_id": "3d95edc2-2b6d-4d87-98c0-053592c75f7e",
+      "action": "stream",
+      "generation_type": null,
+      "attempt": 1,
+      "stage": "model",
+      "status": "completed",
+      "monotonic_ms": 24422843.0,
+      "elapsed_ms": 23687.000000001717,
+      "upstream_http_status": 200,
+      "finish_reason": "stop",
+      "body_chars": 108,
+      "usage": {
+        "prompt_tokens": 4516,
+        "completion_tokens": 1140,
+        "total_tokens": 5656
+      },
+      "content_type": null
+    }
+  ],
+  "llm_calls_observed": 1
+}

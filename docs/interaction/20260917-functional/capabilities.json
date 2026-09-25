@@ -1,0 +1,16 @@
+{
+  "tool_calls": true,
+  "model": "glm-5.1",
+  "llm_calls": 1,
+  "asr_configured": false,
+  "search_provider": "not configured; registered pages available",
+  "returned_calls": [
+    {
+      "name": "get_poi",
+      "arguments": {
+        "campusId": "beiyangyuan",
+        "poiId": "beiyangyuan-shangxian-stone"
+      }
+    }
+  ]
+}

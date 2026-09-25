@@ -1,5 +1,7 @@
-# 珂莱塔校园导游
-天津大学双校区数字人工作台，沿用 React/Vite、FastAPI、Live2D 和 LangGraph。角色为用户指定的 kelaita（珂莱塔），素材来源只用于形象，产品是校园导游。
+# 海小棠校园导游
+天津大学双校区数字人工作台，沿用 React/Vite、FastAPI、Live2D 和 LangGraph。校园导游名为海小棠；形象素材沿用用户指定的 kelaita（珂莱塔），素材来源只用于形象。
+
+2026-09-17 功能更新：地点讲解显式开启/停止、选项式必去/避开、两站起行自动画真实路线、注册来源检索与缓存、出发前提示、短录音转写确认流程已接入。真实浏览器已验证音频播放事件和地图画线；真实 ASR 仍缺独立服务配置，人工听音待验。当前验收以 [本轮交付报告](docs/interaction/20260917-functional/REPORT.md) 为准（下方为历史记录）。[标准问题集](docs/evaluation/starter/questions.md) · [扩展40题](docs/evaluation/starter/cases.jsonl) · [来源注册表](docs/evaluation/starter/source_registry.json) · [检索政策](docs/evaluation/starter/retrieval_policy.json)。
 
 2026-09-15 更新：应用内步行支持自动 IP 起点、过期位置更新和未核验目的地的高德匹配，同名候选选择后自动继续。已真实验证“无起点→IP→目的地匹配→步行”服务链路。保留自动联网问答、末尾参考资料及四种导览语音。配置、行为及限制见 [联网与地图说明](docs/WEB_SEARCH_AND_MAPS.md)，测试范围见 [验收记录](docs/WEB_SEARCH_VALIDATION.md)。下方 R2 部分保留此前验收记录，地图当前状态以本机 `/api/maps/status` 为准。
 
@@ -26,3 +28,7 @@ cd E:\AI4TJU
 `scripts/start-dev.ps1` 为5173/8000开发模式；`scripts/check-r2.ps1` 为统一离线回归。前端所有模型请求只走自有后端。根.env和运行日志忽略，不复制到工作树。原integration/m0和四个work分支保留，审核政策见[REVIEW_POLICY](docs/REVIEW_POLICY.md)。
 
 [开源选型](docs/OPEN_SOURCE_DECISION.md) · [第三方使用与许可](THIRD_PARTY_NOTICES.md) · [后续比赛能力](docs/NEXT_PHASE.md)。成熟组件直接依赖与设计参考明确分开，角色/SDK授权不随代码许可证自动改变。
+
+## R3 多窗口准备
+
+R3首轮围绕60分钟参观的结构化行程、执行与多轮调整、中文语音往返和基础嘴形。当前仅M0共享准备，不表示业务已完成。五窗实际路径、共同基线和启动条件见 [R3基线](docs/R3/BASELINE.md) 与 [并行启动](docs/R3/PARALLEL_RUN.md)，接口见 [R3契约](docs/R3/CONTRACTS.md)，独立验收见 [矩阵](docs/R3/ACCEPTANCE_MATRIX.md)。保留当前高德同源JS代理、IP粗略起点、目的地匹配和应用内步行。统一离线检查：scripts/check-r3.ps1。

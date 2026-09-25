@@ -1,0 +1,223 @@
+{
+  "browser": "153.0.8010.48",
+  "results": [
+    {
+      "name": "roaming avatar cannot intercept composer clicks",
+      "pass": true,
+      "layer": "real hit testing; avatar position forced to cross input"
+    },
+    {
+      "name": "broad introduction answers in chat without selecting any place",
+      "pass": true,
+      "layer": "real model stream",
+      "answer": "天津大学是中国著名高等学府，卫津路校区是其极具底蕴的校区之一。1952年，学校由西沽迁往七里台另建新校舍，即现在的卫津路校区。目前卫津路校区内设有校史博物馆，其东门由北京校友会捐资建设，学校现行校歌创作于1935年。此外，天大前身为1895年创立的北洋大学，是中国第一所现代大学（此为通用校史，本次资料未载明）。若你想在校区内漫步游览，可以随时告诉我。\n\n读这一段"
+    },
+    {
+      "name": "ordinary point question establishes context; follow-up introduces with matching video",
+      "pass": true,
+      "layer": "real context and real TTS/local photo film"
+    },
+    {
+      "name": "typing and IME stay usable during narration; controls and next draft survive",
+      "pass": true,
+      "layer": "real input; composition events simulated, not a human IME session"
+    },
+    {
+      "name": "a broad topic clears the old selected-point context for further explanation",
+      "pass": true,
+      "layer": "real request identity, no old library video"
+    },
+    {
+      "name": "hung answer and cancel endpoints cannot lock a replacement question",
+      "pass": true,
+      "replacementMs": 38,
+      "responseMs": 72,
+      "streamCount": 2,
+      "cancelCount": 2,
+      "layer": "injected hung HTTP endpoints"
+    },
+    {
+      "name": "40-message history remains bounded and all controls fit at five viewport sizes",
+      "pass": true,
+      "sizes": [
+        {
+          "top": 609,
+          "bottom": 667,
+          "panelBottom": 814,
+          "viewport": 900,
+          "body": 1440,
+          "width": 1440,
+          "hit": true,
+          "controls": [
+            {
+              "name": "对导游说",
+              "left": 1010,
+              "right": 1411,
+              "bottom": 667,
+              "inside": true,
+              "hit": true
+            },
+            {
+              "name": "语音输入",
+              "left": 1010,
+              "right": 1052,
+              "bottom": 715,
+              "inside": true,
+              "hit": true
+            },
+            {
+              "name": "发送",
+              "left": 1373,
+              "right": 1411,
+              "bottom": 713,
+              "inside": true,
+              "hit": true
+            }
+          ]
+        },
+        {
+          "top": 477,
+          "bottom": 535,
+          "panelBottom": 682,
+          "viewport": 768,
+          "body": 1366,
+          "width": 1366,
+          "hit": true,
+          "controls": [
+            {
+              "name": "对导游说",
+              "left": 936,
+              "right": 1337,
+              "bottom": 535,
+              "inside": true,
+              "hit": true
+            },
+            {
+              "name": "语音输入",
+              "left": 936,
+              "right": 978,
+              "bottom": 583,
+              "inside": true,
+              "hit": true
+            },
+            {
+              "name": "发送",
+              "left": 1299,
+              "right": 1337,
+              "bottom": 581,
+              "inside": true,
+              "hit": true
+            }
+          ]
+        },
+        {
+          "top": 563,
+          "bottom": 621,
+          "panelBottom": 768,
+          "viewport": 844,
+          "body": 390,
+          "width": 390,
+          "hit": true,
+          "controls": [
+            {
+              "name": "对导游说",
+              "left": 42,
+              "right": 349,
+              "bottom": 621,
+              "inside": true,
+              "hit": true
+            },
+            {
+              "name": "语音输入",
+              "left": 42,
+              "right": 84,
+              "bottom": 669,
+              "inside": true,
+              "hit": true
+            },
+            {
+              "name": "发送",
+              "left": 311,
+              "right": 349,
+              "bottom": 667,
+              "inside": true,
+              "hit": true
+            }
+          ]
+        },
+        {
+          "top": 219,
+          "bottom": 277,
+          "panelBottom": 424,
+          "viewport": 500,
+          "body": 390,
+          "width": 390,
+          "hit": true,
+          "controls": [
+            {
+              "name": "对导游说",
+              "left": 42,
+              "right": 349,
+              "bottom": 277,
+              "inside": true,
+              "hit": true
+            },
+            {
+              "name": "语音输入",
+              "left": 42,
+              "right": 84,
+              "bottom": 325,
+              "inside": true,
+              "hit": true
+            },
+            {
+              "name": "发送",
+              "left": 311,
+              "right": 349,
+              "bottom": 323,
+              "inside": true,
+              "hit": true
+            }
+          ]
+        },
+        {
+          "top": 287,
+          "bottom": 345,
+          "panelBottom": 492,
+          "viewport": 568,
+          "body": 320,
+          "width": 320,
+          "hit": true,
+          "controls": [
+            {
+              "name": "对导游说",
+              "left": 42,
+              "right": 279,
+              "bottom": 345,
+              "inside": true,
+              "hit": true
+            },
+            {
+              "name": "语音输入",
+              "left": 42,
+              "right": 84,
+              "bottom": 393,
+              "inside": true,
+              "hit": true
+            },
+            {
+              "name": "发送",
+              "left": 241,
+              "right": 279,
+              "bottom": 391,
+              "inside": true,
+              "hit": true
+            }
+          ]
+        }
+      ],
+      "count": 40
+    }
+  ],
+  "errors": []
+}

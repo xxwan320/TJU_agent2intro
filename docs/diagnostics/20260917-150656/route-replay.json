@@ -1,0 +1,101 @@
+{
+  "validation": "recorded_real_response_replay_not_browser",
+  "external_calls": 0,
+  "route": {
+    "route_id": "replay-route",
+    "destination_poi_id": "beiyangyuan-zhengdong-library",
+    "provider": "amap",
+    "crs": "GCJ02",
+    "distance_m": 286,
+    "duration_s": 229,
+    "steps": [
+      {
+        "instruction": "向东步行35米右转",
+        "distance_m": 35,
+        "polyline": [
+          [
+            117.310673,
+            38.997496
+          ],
+          [
+            117.31079,
+            38.997569
+          ],
+          [
+            117.310937,
+            38.997578
+          ],
+          [
+            117.310937,
+            38.997578
+          ],
+          [
+            117.311059,
+            38.997578
+          ]
+        ]
+      },
+      {
+        "instruction": "向东南步行30米左转",
+        "distance_m": 30,
+        "polyline": [
+          [
+            117.311059,
+            38.997578
+          ],
+          [
+            117.311246,
+            38.997352
+          ]
+        ]
+      },
+      {
+        "instruction": "向东步行221米到达目的地",
+        "distance_m": 221,
+        "polyline": [
+          [
+            117.311246,
+            38.997348
+          ],
+          [
+            117.311623,
+            38.997348
+          ],
+          [
+            117.311623,
+            38.997348
+          ],
+          [
+            117.31194,
+            38.997344
+          ],
+          [
+            117.31194,
+            38.997344
+          ],
+          [
+            117.31201,
+            38.997344
+          ],
+          [
+            117.313099,
+            38.997313
+          ],
+          [
+            117.313099,
+            38.997313
+          ],
+          [
+            117.313819,
+            38.997318
+          ]
+        ]
+      }
+    ],
+    "campus_access": "unverified",
+    "access_source_refs": []
+  },
+  "narration": "步行路线，全程约286米。\n第1步，向东步行35米右转\n第2步，向东南步行30米左转\n第3步，向东步行221米到达目的地\n校园入口、门禁和道路实际通行情况尚待核验。",
+  "map_applied_ms": null,
+  "note": "Fixture POI coordinate eligibility is only for parser replay, not evidence that corpus coordinates are verified."
+}

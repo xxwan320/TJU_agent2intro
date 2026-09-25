@@ -12,13 +12,8 @@ dependencies = [
   "httpx==0.28.1",
   "ddgs==9.11.4",
   "lxml==6.1.3",
+  "pypdf>=6.19.0",
+  "pillow==10.4.0",
 ]
-[dependency-groups]
-dev = ["pytest==9.1.1"]
 [tool.uv]
 package = false
-[tool.pytest.ini_options]
-addopts = "--import-mode=importlib"
-testpaths = ["tests"]
-norecursedirs = [".worktrees", ".venv", ".tools", "node_modules", "dist"]
-pythonpath = ["."]

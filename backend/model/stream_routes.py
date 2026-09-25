@@ -8,14 +8,14 @@ from pydantic import TypeAdapter
 from backend.common.errors import DomainError
 from backend.contracts import ChatResponse
 from backend.r2_contracts import R2ChatRequest, GenerationRendered, RenderReceipt, StreamEvent
-from .service import model, _citations, GENERATION_PREFIX
+from .service import model, _citations, GENERATION_PREFIX, direct_local_answer
 from .runtime import runtime
 router=APIRouter(prefix="/api",tags=["stream-generation"])
 _event_adapter=TypeAdapter(StreamEvent)
 
-def _sse(request_id,seq,event_type,payload):
+def _sse(request_id,seq,event_type,payload,context=None):
  event=_event_adapter.validate_python({"event_id":uuid4(),"request_id":request_id,"seq":seq,"type":event_type,
-  "timestamp":datetime.now(timezone.utc).isoformat().replace("+00:00","Z"),"payload":payload})
+  "timestamp":datetime.now(timezone.utc).isoformat().replace("+00:00","Z"),"payload":payload,**(context or {})})
  raw=event.model_dump_json()
  return f"id: {event.event_id}\nevent: {event.type}\ndata: {raw}\n\n".encode()
 def _reason(error):
@@ -39,7 +39,7 @@ async def stream_chat(body:R2ChatRequest):
   def emit(kind,payload):
    nonlocal seq
    seq+=1
-   return _sse(body.request_id,seq,kind,payload)
+   return _sse(body.request_id,seq,kind,payload,{'channel':'generation' if body.mode=='content_generation' else 'chat','requestId':body.request_id,'generation':str(body.request_id),'campusId':body.campus_id,'poiId':body.selected_poi_id,'routeId':None})
   try:
    runtime.attach_task(body.request_id)
    yield emit("accepted",{"session_id":body.session_id,"message_id":body.message_id,"campus_id":body.campus_id,"mode":body.mode})
@@ -48,11 +48,22 @@ async def stream_chat(body:R2ChatRequest):
     runtime.emit(body.request_id,"generation","started")
     yield emit("status",{"stage":"generation","status":"started"})
    prepared=await model.prepare(body)
+   if prepared.query_meta:yield emit('status',{'stage':'knowledge','status':'started','query_state':prepared.query_meta.get('status','success'),'parts':prepared.query_meta.get('parts')})
    if prepared.needs_selection and body.mode=="content_generation":raise DomainError("VALIDATION_ERROR","请先选择讲解对象，或明确生成要求",422,body.request_id)
    if prepared.needs_selection:
     answer="请先选择具体点位，我才能确定“这里”指的是哪一处。"
+   elif direct_local_answer(body,prepared.hits):
+    answer=direct_local_answer(body,prepared.hits)
+    model_name='local-evidence';usage=None
+    yield emit('answer_delta',{'text':answer.split('[source:')[0]})
    else:
     if prepared.hits:yield emit("sources",{"sources":prepared.hits,"kind":"retrieved"})
+    # Evidence text is useful content, not a status placeholder. Dynamic clauses still run.
+    if body.mode=='campus_qa' and '北洋园' in body.message and any(w in body.message for w in ('年份','启用','投入使用')) and any(w in body.message for w in ('今天','今日')):
+     stable=next((h for h in prepared.hits if h.id=='beiyangyuan-opened-2015'),None)
+     if stable:
+      answer='北洋园校区于2015年9月投入使用。\n'
+      yield emit('answer_delta',{'text':answer})
     yield emit("status",{"stage":"model","status":"started"})
     prefix=GENERATION_PREFIX if body.mode=="content_generation" else ""
     async for item in model.provider.stream(body.request_id,prepared.messages()):

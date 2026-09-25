@@ -11,11 +11,30 @@ def test_all_pois_have_same_identity_in_legacy_projection():
     k=LocalKnowledge()
     for campus in ("weijinlu","beiyangyuan"):
         page=k.list_pois(campus,None,"",100,None)
-        assert {p.id for p in page.items}=={b.id for b in k.list_buildings(campus)}
+        assert {p.id for p in page.items}<={b.id for b in k.list_buildings(campus)}
+        assert all(k.is_map_searchable(p.id) for p in page.items)
         assert all(k.get_building(p.id).campus_id==campus for p in page.items)
     assert k.get_poi("beiyangyuan-zhengdong-library") is not None
     assert k.search("三问桥","beiyangyuan",5)
     assert k.search("春水图书馆","weijinlu",5)
+
+def test_amap_audit_removes_unusable_destinations_from_directory():
+    k=LocalKnowledge(); rows=json.loads((DATA_DIRECTORY/"map_searchability.json").read_text(encoding="utf-8"))
+    assert len(rows)==106 and {row["status"] for row in rows}=={"searchable","not_found"}
+    expected={campus:sum(1 for row in rows if row["status"]=="searchable" and row.get("frontend_visible",True)
+                         and row["poi_id"].startswith(campus))
+              for campus in ("weijinlu","beiyangyuan")}
+    assert {campus:len(k.list_pois(campus,None,"",100,None).items) for campus in ("weijinlu","beiyangyuan")}==expected
+    assert not k.is_map_searchable("beiyangyuan-bowen-road")
+    assert k.get_poi("beiyangyuan-bowen-road") is not None
+
+def test_frontend_hidden_pois_remain_in_the_knowledge_store():
+    k=LocalKnowledge(); hidden={"beiyangyuan-she-garden","beiyangyuan-yu-garden"}
+    visible={p.id for p in k.list_pois("beiyangyuan",None,"",100,None).items}
+    assert hidden.isdisjoint(visible)
+    assert all(k.get_poi(poi_id) is not None for poi_id in hidden)
+    assert all(k.is_map_searchable(poi_id) for poi_id in hidden)
+    assert all(not k.is_frontend_visible(poi_id) for poi_id in hidden)
 
 def test_long_chinese_query_round_trip_all_pages():
     c=TestClient(app); params=dict(campus_id="beiyangyuan",query="天津大学北洋园校区图书馆和食堂的相对位置在哪里",limit=1)
@@ -41,9 +60,9 @@ def test_coverage_counts_records_not_legacy_summaries():
     k=LocalKnowledge(); facts=json.loads((DATA_DIRECTORY/"facts.json").read_text(encoding="utf-8"))
     assert k.get_coverage().fact_count==len(facts)
     assert len(facts)>=200
-    assert len({f["fact"] for f in facts})==len(facts)
+    assert len({(f["campus_id"], f["fact"]) for f in facts})==len(facts)
     assert k.get_coverage().fact_count==sum(c.facts for c in k.get_coverage().campuses)
-    assert k.get_coverage().source_pages==15
+    assert k.get_coverage().source_pages==23
     assert sum(c.verified_coordinates for c in k.get_coverage().campuses)==0
 
 def test_historical_maps_are_local_relative_only():
@@ -52,13 +71,15 @@ def test_historical_maps_are_local_relative_only():
         assets=k.get_campus_assets(campus)
         assert len(assets.maps)==1 and not assets.maps[0].supports_precise_navigation
         points=[p for p in k.list_pois(campus,None,"",100,None).items if p.schematic_position]
-        assert len(points)>=10
+        assert len(points)>=4
         assert all(p.schematic_position.map_id==assets.maps[0].id and p.location is None for p in points)
         assert all(p.schematic_position.source_ref=="src-maps-2017" for p in points)
 
 def _copy_bundle(destination):
     destination.mkdir()
-    for name in importer.MANAGED:shutil.copy2(DATA_DIRECTORY/name,destination/name)
+    for name in importer.MANAGED:
+        (destination/name).parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(DATA_DIRECTORY/name,destination/name)
 
 def test_import_rejects_orphan_before_mutating(tmp_path):
     staging=tmp_path/"staging"; active=tmp_path/"active"

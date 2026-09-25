@@ -1,0 +1,55 @@
+{
+  "time": "2026-09-17T15:30:30.507413+08:00",
+  "assets": [
+    {
+      "path": "/assets/avatar/vrm/kelaita.vrm",
+      "status": 404,
+      "content_length": "119",
+      "public_exists": false
+    },
+    {
+      "path": "/assets/avatar/vrm/AliciaSolid_vrm-0.51.vrm",
+      "status": 200,
+      "content_length": "7878712",
+      "public_exists": true
+    },
+    {
+      "path": "/assets/kelaita/runtime/kelaita.model3.json",
+      "status": 200,
+      "content_length": "621",
+      "public_exists": true
+    },
+    {
+      "path": "/vendor/live2dcubismcore.min.js",
+      "status": 200,
+      "content_length": "206492",
+      "public_exists": true
+    }
+  ],
+  "tours_status": {
+    "contract_version": "1.2.0",
+    "implementation": "implemented",
+    "fixture": false
+  },
+  "health_after": {
+    "status": "ok",
+    "contract_version": "1.1.0",
+    "model": {
+      "configured": true,
+      "verified": true
+    },
+    "capabilities": {
+      "chat": true,
+      "asr": false,
+      "tts": true,
+      "knowledge": true,
+      "scene_3d": false
+    }
+  },
+  "frontend_asset": {
+    "path": "/assets/index-DRRXrrh4.js",
+    "status": 200,
+    "sha256": "c5dd17ae3586d74a014c38df6d713de48472d4d915204b81f21ca471eaa762f9",
+    "matches_disk": true
+  }
+}

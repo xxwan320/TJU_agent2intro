@@ -1,0 +1,31 @@
+{
+  "input": {
+    "request_id": "5a40db3e-f080-4c96-bba7-fb8bcda6006c",
+    "session_id": "5c54fd77-9cf6-4202-836b-cd05ce6c74dd",
+    "utterance_id": "d545eadb-8288-43b8-ac70-9e5b41f52b83",
+    "text": "欢迎来到天津大学北洋园校区。",
+    "voice_id": "edge:zh-CN-XiaoxiaoNeural"
+  },
+  "time": "2026-09-17T15:17:51.457882+08:00",
+  "tts_calls": null,
+  "browser_play_ms": null,
+  "asr_ms": null,
+  "asr_calls": 0,
+  "asr_blocker": "live health asr=false; no known campus-name test audio",
+  "status": 200,
+  "tts_ms": 1763.8194999999541,
+  "response": {
+    "request_id": "5a40db3e-f080-4c96-bba7-fb8bcda6006c",
+    "utterance_id": "d545eadb-8288-43b8-ac70-9e5b41f52b83",
+    "audio_url": "/api/speech/audio/a765902117f24fb48adf4450a09d4e92",
+    "mime_type": "audio/mpeg",
+    "timestamps": "none"
+  },
+  "audio_bytes": 20592,
+  "audio_status": 200,
+  "audio_sha256": "d7bb64377c608936041f8c48a1dcee36a67f473aa60e0f6628b32f5c31e3d80b",
+  "audio_magic_hex": "fff364c40000000348000000",
+  "tts_application_invocations": 1,
+  "provider_attempts": null,
+  "provider_attempts_note": "edge_tts.stream handles HTTP403 with one retry; attempts not exposed in service traces."
+}

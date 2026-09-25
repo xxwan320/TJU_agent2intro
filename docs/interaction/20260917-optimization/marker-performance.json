@@ -1,0 +1,68 @@
+[
+  {
+    "label": "before",
+    "repeat": 0,
+    "update_ms": 0.24729999999999563,
+    "markers": 500,
+    "centers": 0,
+    "fits": 100,
+    "removed": 99,
+    "iterations": 100,
+    "validation": "offline_sdk_fixture"
+  },
+  {
+    "label": "before",
+    "repeat": 1,
+    "update_ms": 0.12770000000000437,
+    "markers": 500,
+    "centers": 0,
+    "fits": 100,
+    "removed": 99,
+    "iterations": 100,
+    "validation": "offline_sdk_fixture"
+  },
+  {
+    "label": "before",
+    "repeat": 2,
+    "update_ms": 0.10490000000001487,
+    "markers": 500,
+    "centers": 0,
+    "fits": 100,
+    "removed": 99,
+    "iterations": 100,
+    "validation": "offline_sdk_fixture"
+  },
+  {
+    "label": "after",
+    "repeat": 0,
+    "update_ms": 0.07129999999997949,
+    "markers": 5,
+    "centers": 0,
+    "fits": 0,
+    "removed": 0,
+    "iterations": 100,
+    "validation": "offline_sdk_fixture"
+  },
+  {
+    "label": "after",
+    "repeat": 1,
+    "update_ms": 0.055899999999979855,
+    "markers": 5,
+    "centers": 0,
+    "fits": 0,
+    "removed": 0,
+    "iterations": 100,
+    "validation": "offline_sdk_fixture"
+  },
+  {
+    "label": "after",
+    "repeat": 2,
+    "update_ms": 0.08860000000001378,
+    "markers": 5,
+    "centers": 0,
+    "fits": 0,
+    "removed": 0,
+    "iterations": 100,
+    "validation": "offline_sdk_fixture"
+  }
+]

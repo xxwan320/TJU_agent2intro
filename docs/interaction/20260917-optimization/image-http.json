@@ -1,0 +1,56 @@
+[
+  {
+    "id": "beiyangyuan-datong-center",
+    "repeat": 0,
+    "http_ms": 1.579300002049422,
+    "status": 200,
+    "bytes": 24373,
+    "etag": "\"3594ac8f43386631f8e2c86682d3a4b6\"",
+    "note": "HTTP retrieval only; no browser decode/cache/click timing"
+  },
+  {
+    "id": "beiyangyuan-zhengdong-library",
+    "repeat": 0,
+    "http_ms": 3.5238999989815056,
+    "status": 200,
+    "bytes": 22463,
+    "etag": "\"4d2ccd46b2061a13475e02d838ebc2dd\"",
+    "note": "HTTP retrieval only; no browser decode/cache/click timing"
+  },
+  {
+    "id": "beiyangyuan-datong-center",
+    "repeat": 1,
+    "http_ms": 1.5733000000182074,
+    "status": 200,
+    "bytes": 24373,
+    "etag": "\"3594ac8f43386631f8e2c86682d3a4b6\"",
+    "note": "HTTP retrieval only; no browser decode/cache/click timing"
+  },
+  {
+    "id": "beiyangyuan-zhengdong-library",
+    "repeat": 1,
+    "http_ms": 2.159899999242043,
+    "status": 200,
+    "bytes": 22463,
+    "etag": "\"4d2ccd46b2061a13475e02d838ebc2dd\"",
+    "note": "HTTP retrieval only; no browser decode/cache/click timing"
+  },
+  {
+    "id": "beiyangyuan-datong-center",
+    "repeat": 2,
+    "http_ms": 1.5929000001051463,
+    "status": 200,
+    "bytes": 24373,
+    "etag": "\"3594ac8f43386631f8e2c86682d3a4b6\"",
+    "note": "HTTP retrieval only; no browser decode/cache/click timing"
+  },
+  {
+    "id": "beiyangyuan-zhengdong-library",
+    "repeat": 2,
+    "http_ms": 1.4535999980580527,
+    "status": 200,
+    "bytes": 22463,
+    "etag": "\"4d2ccd46b2061a13475e02d838ebc2dd\"",
+    "note": "HTTP retrieval only; no browser decode/cache/click timing"
+  }
+]

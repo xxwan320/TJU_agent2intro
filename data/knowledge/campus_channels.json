@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "note": "参考校内信源目录抽取的检索元数据；不改变现有校园事实库。",
+  "channels": [
+    {"name":"天津大学","category":"校机关部处","tier":1,"focus":["学校要闻","重要通知","招生","大型活动"],"site":"https://www.tju.edu.cn/"},
+    {"name":"天津大学教务处","category":"校机关部处","tier":1,"focus":["选课","考试安排","学籍","培养方案","校历","学分","转专业","辅修"],"site":"https://oaa.tju.edu.cn/"},
+    {"name":"天津大学研究生招生网","category":"校机关部处","tier":1,"focus":["推免","硕士招生","博士招生","复试","录取"],"site":"https://yzb.tju.edu.cn/"},
+    {"name":"天津大学国际处暨港澳台办","category":"校机关部处","tier":2,"focus":["交换项目","暑校","国际交流","公派出国"],"site":"https://ico.tju.edu.cn/"},
+    {"name":"天津大学精仪学院","category":"学院学部","tier":1,"focus":["学院通知","推免实施细则","评奖评优","研究生招生"],"site":"https://jyxy.tju.edu.cn/cn/index.shtml"},
+    {"name":"天津大学机械工程学院","category":"学院学部","tier":2,"focus":["学院通知","研究生招生","学术活动"],"site":"https://me.tju.edu.cn/"},
+    {"name":"天津大学电气自动化与信息工程学院","category":"学院学部","tier":2,"focus":["学院通知","研究生招生","学术活动"],"site":"https://seea.tju.edu.cn/"},
+    {"name":"天津大学智能与计算学部","category":"学院学部","tier":2,"focus":["学院通知","推免","研究生招生","人工智能","计算机"],"site":"https://cic.tju.edu.cn/"},
+    {"name":"天津大学微电子学院","category":"学院学部","tier":2,"focus":["学院通知","研究生招生","集成电路"],"site":"https://sme.tju.edu.cn/"},
+    {"name":"天津大学管理与经济学部","category":"学院学部","tier":2,"focus":["学院通知","研究生招生","MBA","学术活动"],"site":"https://come.tju.edu.cn/"},
+    {"name":"天津大学建筑学院","category":"学院学部","tier":3,"focus":["学院通知","学术活动","设计竞赛"],"site":"https://arch.tju.edu.cn/"},
+    {"name":"天津大学材料科学与工程学院","category":"学院学部","tier":3,"focus":["学院通知","学术活动"],"site":"https://mse.tju.edu.cn/"},
+    {"name":"天津大学理学院","category":"学院学部","tier":3,"focus":["学院通知","基础课程","学术活动"],"site":"https://science.tju.edu.cn/"},
+    {"name":"天津大学数学学院","category":"学院学部","tier":3,"focus":["学院通知","学术报告","竞赛"],"site":"https://math.tju.edu.cn/"},
+    {"name":"天津大学图书馆","category":"校园服务","tier":1,"focus":["开馆时间","座位预约","借阅","数据库","查重","研讨间"],"site":"https://lib.tju.edu.cn/"},
+    {"name":"天大体育","category":"校园服务","tier":2,"focus":["体育课","体测","免修","运动会","场馆"],"site":"https://tyb.tju.edu.cn/"},
+    {"name":"天津大学档案馆","category":"校园服务","tier":3,"focus":["档案","成绩单","证明","校史"],"site":"https://dag.tju.edu.cn/"},
+    {"name":"天津大学新媒体与传播学院","category":"学院学部","tier":3,"focus":["学院通知","媒体实践"],"site":"https://snmc.tju.edu.cn/"}
+  ]
+}

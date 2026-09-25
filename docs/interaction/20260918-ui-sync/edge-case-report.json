@@ -1,0 +1,130 @@
+{
+  "browser": "153.0.8010.48",
+  "results": [
+    {
+      "name": "real missing clip uses matching photo while real TTS plays",
+      "pass": true,
+      "layer": "real API returns no media; real TTS"
+    },
+    {
+      "name": "404 clip falls back without interrupting real TTS",
+      "pass": true,
+      "layer": "injected HTTP 404, real remaining services"
+    },
+    {
+      "name": "slow video buffer ends loading in 8 seconds and ignores late completion",
+      "pass": true,
+      "layer": "injected 10.5 second video response delay"
+    },
+    {
+      "name": "rapid switch cannot let late media overwrite the second place",
+      "pass": true,
+      "layer": "delayed old metadata, actual new TTS",
+      "traces": [
+        {
+          "event": "card.visible",
+          "at": 137.5,
+          "poi": "beiyangyuan-zhengdong-library",
+          "campus": "beiyangyuan"
+        },
+        {
+          "event": "introduction.request",
+          "at": 235.59999999962747,
+          "id": "0068bd1b-3fa0-40e3-bedd-792971109cbc",
+          "poi": "beiyangyuan-zhengdong-library",
+          "campus": "beiyangyuan"
+        },
+        {
+          "event": "speech.buffering",
+          "at": 239,
+          "id": "0068bd1b-3fa0-40e3-bedd-792971109cbc",
+          "utterance": null
+        },
+        {
+          "event": "speech.buffering",
+          "at": 241.19999999925494,
+          "id": "0068bd1b-3fa0-40e3-bedd-792971109cbc",
+          "utterance": "81dcb8d1-24cd-473f-b84f-e50f13cb5bf9"
+        },
+        {
+          "event": "speech.buffering",
+          "at": 242,
+          "id": "0068bd1b-3fa0-40e3-bedd-792971109cbc",
+          "utterance": "23b8f672-90ae-44e9-8201-e080d2c547ba"
+        },
+        {
+          "event": "session.stop",
+          "at": 264,
+          "id": "0068bd1b-3fa0-40e3-bedd-792971109cbc"
+        },
+        {
+          "event": "card.visible",
+          "at": 265.80000000074506,
+          "poi": "beiyangyuan-datong-center",
+          "campus": "beiyangyuan"
+        },
+        {
+          "event": "introduction.request",
+          "at": 294.90000000037253,
+          "id": "6256eb7f-2d91-461f-b1ce-aa803582f2b3",
+          "poi": "beiyangyuan-datong-center",
+          "campus": "beiyangyuan"
+        },
+        {
+          "event": "speech.buffering",
+          "at": 297.09999999962747,
+          "id": "6256eb7f-2d91-461f-b1ce-aa803582f2b3",
+          "utterance": null
+        },
+        {
+          "event": "speech.buffering",
+          "at": 298.09999999962747,
+          "id": "6256eb7f-2d91-461f-b1ce-aa803582f2b3",
+          "utterance": "726ac792-7eb8-47d8-b981-8d4fe4a95fa2"
+        },
+        {
+          "event": "speech.buffering",
+          "at": 298.5,
+          "id": "6256eb7f-2d91-461f-b1ce-aa803582f2b3",
+          "utterance": "790d5c0e-6b23-4714-892b-dadbe3da4178"
+        },
+        {
+          "event": "speech.buffering",
+          "at": 298.80000000074506,
+          "id": "6256eb7f-2d91-461f-b1ce-aa803582f2b3",
+          "utterance": "ca38a33f-6a08-4f43-8c23-7de0ec3e955b"
+        },
+        {
+          "event": "speech.buffering",
+          "at": 298.80000000074506,
+          "id": "6256eb7f-2d91-461f-b1ce-aa803582f2b3",
+          "utterance": "e6e4e3ee-2fe6-4154-9dbd-fc2cf560cb8e"
+        },
+        {
+          "event": "speech.buffering",
+          "at": 298.80000000074506,
+          "id": "6256eb7f-2d91-461f-b1ce-aa803582f2b3",
+          "utterance": "2977251e-391a-4e16-8114-6c4a069308bd"
+        },
+        {
+          "event": "speech.speaking",
+          "at": 1899.199999999255,
+          "id": "6256eb7f-2d91-461f-b1ce-aa803582f2b3",
+          "utterance": "726ac792-7eb8-47d8-b981-8d4fe4a95fa2"
+        }
+      ]
+    },
+    {
+      "name": "collapsing and expanding keeps one video and its current time",
+      "pass": true,
+      "before": 0.116923,
+      "after": 0.161045
+    },
+    {
+      "name": "synthetic Mandarin travels through Chrome recorder, real ASR, confirmation and same introduction session",
+      "pass": true,
+      "recognized": "介绍一下这里。",
+      "layer": "Chrome fake capture of TTS WAV → MediaRecorder → real faster-whisper CPU → confirmed UI send → real TTS/video. No human microphone or speaker-acoustic claim."
+    }
+  ]
+}

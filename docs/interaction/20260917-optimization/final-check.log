@@ -1,0 +1,113 @@
+npm notice run ai4tju-guide@0.0.1 build
+npm notice run tsc --noEmit && vite build
+vite v8.3.0 building client environment for production...
+transforming...
+✓ 167 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                             0.47 kB │ gzip:   0.35 kB
+dist/assets/index-CdkOZLcP.css             49.39 kB │ gzip:  10.61 kB
+dist/assets/rolldown-runtime-DkW27tQK.js    1.19 kB │ gzip:   0.67 kB
+dist/assets/dist-BhNQyHkr.js                4.94 kB │ gzip:   1.58 kB
+dist/assets/cubism4.es-wPRUm0AM.js        117.67 kB │ gzip:  29.29 kB
+dist/assets/pixi-3-Wr4OcN.js              238.74 kB │ gzip:  65.79 kB
+dist/assets/display-RG8akvZS.js           262.39 kB │ gzip:  75.65 kB
+dist/assets/index-BMfdpvF1.js             401.35 kB │ gzip: 126.78 kB
+dist/assets/dist-CQAIfyHl.js              427.89 kB │ gzip: 115.43 kB
+dist/assets/renderer-Dhd2vZOo.js          756.11 kB │ gzip: 188.07 kB
+
+✓ built in 273ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+........................................................................ [ 66%]
+....................................                                     [100%]
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:53
+  E:\AI4TJU\.venv\Lib\site-packages\starlette\testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+108 passed, 1 warning in 3.07s
+R3 schema/types checked
+R3 knowledge schema/types checked
+✔ fixed five samples reuse the supplied image registry with two photos and three placeholders (2.156ms)
+✔ reject bus stops, wrong universities/campuses and distant names; replay previous real provider responses (1.1488ms)
+✔ coarse IP and stale/inaccurate device positions cannot enter the page route flow (2.4983ms)
+✔ A→B→A delayed callbacks and clear invalidate prior generations independently of a valid route (0.3707ms)
+✔ multi-stop routes preserve real segment paths, origin chaining, totals, identity and cancellation (1.0302ms)
+✔ provider candidate caching removes repeated A/B/A queries without trusting user-forged candidates (1.6257ms)
+✔ uncached selections wait locally for cooldown and abort without provider reservations (0.5464ms)
+✔ map markers reverse-sync, picking resets, tracking does not recenter, and repeated selection reuses markers (1.3049ms)
+✔ record before/after marker update CPU values: synthetic SDK, not browser timings (2.9698ms)
+✔ I01-I05 selected ID, directory/card/photo identity, reverse-sync and late B invalidation (21.7164ms)
+✔ I06-I08 map/manual origin, route retention, late route cancellation, missing location (10.5861ms)
+✔ all origin buttons: denied GPS, continuous IP update/stop, coarse route rejection, follow toggle and cleanup (6.3746ms)
+✔ chat target and draft itinerary automatically apply paths after origin confirmation, without a second map form (3.5749ms)
+✔ a late focus detail lookup cannot undo a newer directory selection (1.495ms)
+✔ each operation has separate counters and no claimed vendor debit (1ms)
+✔ consent and pre-aborted requests invoke zero SDK operations (0.6672ms)
+✔ default smoke budget blocks POI search and a second route (0.2215ms)
+✔ duplicate clicks and in-flight overlap do not call provider twice (0.1812ms)
+✔ five-second cooldown applies before starting another request (0.139ms)
+✔ failed or cancelled calls retain reservations and never retry (0.2219ms)
+✔ refresh keeps test reservations; corrupt storage fails closed (1.1639ms)
+✔ map and location use SDK while walking parses same-origin provider results (2.6064ms)
+✔ wrong campus and stale device origin spend zero direct route calls (0.2277ms)
+✔ cancelled HTTP route ignores a late response and counts only cancellation (3.6463ms)
+✔ IP location can plan a route while retaining unknown accuracy (0.752ms)
+✔ city IP lookup displays a coarse center and respects cancellation (0.2877ms)
+✔ route narration delegates actual step text to the existing speech controller (0.1644ms)
+✔ provider permission and timeout failures expose only safe codes (0.3691ms)
+✔ manual origins remain explicit and do not invent GPS accuracy (0.2183ms)
+✔ live place matches enable walking for a directory POI without coordinates (0.6826ms)
+✔ cancelled or empty place searches do not fabricate destination coordinates (0.9828ms)
+✔ proxy failures preserve safe codes without leaking messages or credentials (0.391ms)
+✔ manual start is rounded to six decimals and no SDK service plugins are required (0.2883ms)
+✔ malformed or empty route data never becomes a successful internal route (0.2238ms)
+✔ one action obtains IP and resolves missing, approximate and unverified destinations (0.6454ms)
+✔ stale IP is refreshed automatically and old manual points remain usable (0.8667ms)
+✔ ambiguous destinations request selection and resume using the selected live match (0.8433ms)
+✔ an IP with no returned region cannot silently become an invented origin (0.1405ms)
+✔ M R3 real museum query avoids duplicated university and campus names (0.2576ms)
+✔ continuous server recognition accepts five Chinese segments with one microphone (89.4312ms)
+✔ default speaker guard discards a whole contaminated segment and ignores a VAD misfire (29.6198ms)
+✔ headset auto barge-in requires sustained probability, RMS and echo cancellation (1.6952ms)
+✔ permission denial returns a safe code and releases capture (0.8342ms)
+✔ ASR timeout aborts fetch and releases microphone (42.4158ms)
+✔ late successful or failed ASR responses after campus stop cannot emit text or errors (61.3255ms)
+✔ late microphone permission after stop stops tracks and cannot resurrect capture (31.2005ms)
+✔ concurrent starts cannot replace the latest microphone (0.6553ms)
+✔ real player events and measured RMS drive mouth; pause/mute/end/cancel close immediately (2.3401ms)
+✔ R3 bridge shares queue, lets A choose confirm/auto send, and guards five changing contexts (3591.4517ms)
+✔ manual interruption stops player/queue and notifies A; stale callbacks retain old context (15.8654ms)
+✔ unconfigured ASR emits contract-safe error without requesting the microphone (0.4135ms)
+✔ capture model-load timeout settles even when the import promise never resolves (14.7188ms)
+✔ late ASR success that ignores abort cannot escape the recognition deadline (61.6868ms)
+✔ ASR service failure releases tracks and never includes provider details (14.8988ms)
+✔ assembly uses existing queue and never starts capture on connection (0.7305ms)
+✔ assembly rejects and disposes a second queue or missing bind/interrupt hooks (0.5782ms)
+✔ late, foreign-campus, wrong-request and stale-state responses are rejected (0.7396ms)
+✔ tour transport preserves cancellation and does not replay POST automatically (0.6822ms)
+✔ T12 delayed create cannot overwrite the latest response; cancellation is sent remotely (3.0993ms)
+✔ T12 late responses after cancel/campus switch and foreign contexts are ignored (0.7088ms)
+✔ T11 both versions are monotonic; restore can replace tour ID (0.3443ms)
+✔ T12 a delayed GET cannot overwrite a later mutation (0.2075ms)
+✔ T10 only explicit saves survive refresh; forget and malformed records are handled (1.6607ms)
+✔ N03 snapshot projects known fields and strips free-text coordinates (0.4856ms)
+✔ S02 B events must match every context dimension; partial and final share the same guard (0.3056ms)
+✔ T04/T08/T10 command payload includes stop_id only for stop actions (0.3446ms)
+✔ FIXTURE HTTP: 3 stops to second stop, revise, pause/resume, save/restore and forget (704.7852ms)
+✔ N01 view changes retain M concurrency and rate guards (18.0782ms)
+✔ M integration saves formal constraints and interprets only explicit remaining time (0.3716ms)
+✔ tour stop photos: unmapped stops keep a clearly marked placeholder slot (0.1325ms)
+ℹ tests 70
+ℹ suites 0
+ℹ pass 70
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4368.0301

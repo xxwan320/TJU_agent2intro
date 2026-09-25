@@ -111,7 +111,8 @@ export async function consumeR2Stream(
   const parser = createParser({ maxBufferSize: 262144, onError: () => { parserError = new StreamTaskError('STREAM_PROTOCOL_ERROR', '响应流格式不完整。', Boolean(answer), answer, 'disconnect'); }, onEvent: (record) => {
     try {
       const event = JSON.parse(record.data) as StreamEvent;
-      if (!event || event.request_id !== requestId || typeof event.event_id !== 'string' || typeof event.seq !== 'number' || event.type !== record.event || (record.id && record.id !== event.event_id)) throw new Error('envelope');
+        if (!event || event.request_id !== requestId || typeof event.event_id !== 'string' || typeof event.seq !== 'number' || event.type !== record.event || (record.id && record.id !== event.event_id)) throw new Error('envelope');
+        if(event.requestId&&event.requestId!==requestId||event.generation&&event.generation!==requestId||event.campusId&&options.expected&&event.campusId!==options.expected.campusId)throw new Error('stale_channel');
       if (seen.has(event.event_id)) return;
       if (terminalSeen) throw new Error('event_after_terminal');
       if (!['accepted','status','answer_delta','sources','poi_action','usage','completed','error','cancelled'].includes(event.type)) throw new Error('unknown_event');

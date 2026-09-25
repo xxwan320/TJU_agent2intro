@@ -11,7 +11,8 @@ from backend.contracts import Source, Building
 from backend.r2_contracts import POI, KnowledgeRecord, CampusAssets
 from .service import DATA_DIRECTORY
 
-MANAGED = ("documents.json","buildings.json","pois.json","assets.json","SOURCE_REGISTRY.json","facts.json")
+MANAGED = ("documents.json","buildings.json","pois.json","map_searchability.json","assets.json","SOURCE_REGISTRY.json","facts.json",
+           "evidence_metadata.json","service_rules.json","core_routes.json","r3/conflicts.json")
 def _rows(directory, name):
     value=json.loads((directory/name).read_text(encoding="utf-8"))
     if not isinstance(value,list) or any(not isinstance(x,dict) for x in value):
@@ -21,7 +22,9 @@ def _rows(directory, name):
 def inspect(directory: Path) -> dict[str,int]:
     rows={name:_rows(directory,name) for name in MANAGED}
     for name,data in rows.items():
-        ids=[x.get("id") for x in data] if name!="assets.json" else [x.get("campus_id") for x in data]
+        identity = {"assets.json": "campus_id", "evidence_metadata.json": "fact_id", "core_routes.json": "poi_id",
+                    "map_searchability.json": "poi_id"}.get(name, "id")
+        ids = [x.get(identity) for x in data]
         if len(ids)!=len(set(ids)) or any(x is None for x in ids):raise ValueError(f"{name}: invalid/duplicate identity")
     registry={x["id"]:x for x in rows["SOURCE_REGISTRY.json"]}
     for row in registry.values():
@@ -29,6 +32,13 @@ def inspect(directory: Path) -> dict[str,int]:
     pois={x["id"]:POI.model_validate(x) for x in rows["pois.json"]}
     for poi in pois.values():
         if not poi.source_refs or not set(poi.source_refs)<=registry.keys():raise ValueError("orphan POI source")
+    searchability = rows["map_searchability.json"]
+    if {row["poi_id"] for row in searchability} != set(pois):
+        raise ValueError("map searchability must cover exactly all POIs")
+    if any(row.get("provider") != "amap" or row.get("status") not in {"searchable", "not_found"}
+           or not row.get("checked_at") or ("frontend_visible" in row and type(row["frontend_visible"]) is not bool)
+           for row in searchability):
+        raise ValueError("invalid map searchability")
     for row in rows["documents.json"]:
         copy=dict(row)
         for extra in ("aliases","building_id","temporal_note"):copy.pop(extra,None)
@@ -53,6 +63,51 @@ def inspect(directory: Path) -> dict[str,int]:
     for poi in pois.values():
         pos=poi.schematic_position
         if pos and (pos.map_id not in maps or maps[pos.map_id].campus_id!=poi.campus_id or pos.source_ref not in registry):raise ValueError("invalid schematic reference")
+    facts = {f["id"]: f for f in rows["facts.json"]}
+    metadata = {r["fact_id"]: r for r in rows["evidence_metadata.json"]}
+    rules = {r["id"]: r for r in rows["service_rules.json"]}
+    conflicts = {r["id"]: r for r in rows["r3/conflicts.json"]}
+    if set(metadata) != set(facts):
+        raise ValueError("evidence metadata must cover exactly all facts")
+    for meta in metadata.values():
+        fact = facts[meta["fact_id"]]
+        if set(meta["source_refs"]) != {s["id"] for s in fact["sources"]}:
+            raise ValueError("metadata source mismatch")
+        if not set(meta["conflict_ids"]) <= conflicts.keys():
+            raise ValueError("orphan conflict")
+        if any(e not in pois or pois[e].campus_id != fact["campus_id"] for e in meta["entity_ids"]):
+            raise ValueError("cross-campus evidence metadata")
+        if meta.get("service_rule_id") and meta["service_rule_id"] not in rules:
+            raise ValueError("orphan service rule")
+        if meta.get("valid_from") and meta.get("valid_until") and meta["valid_until"] < meta["valid_from"]:
+            raise ValueError("invalid evidence time range")
+    for rule in rules.values():
+        if not rule["fact_ids"] or not set(rule["fact_ids"]) <= facts.keys():
+            raise ValueError("orphan service evidence")
+        if not set(rule["source_refs"]) <= registry.keys():
+            raise ValueError("orphan service source")
+        if not set(rule["conflict_ids"]) <= conflicts.keys():
+            raise ValueError("orphan rule conflict")
+        for fid in rule["fact_ids"]:
+            if metadata[fid].get("service_rule_id") != rule["id"] or facts[fid]["campus_id"] not in rule["campus_ids"]:
+                raise ValueError("invalid service projection")
+        if set(rule["entity_ids"]) != {e for fid in rule["fact_ids"] for e in metadata[fid]["entity_ids"]}:
+            raise ValueError("service entity mismatch")
+    for row in rows["core_routes.json"]:
+        if row["poi_id"] not in pois or pois[row["poi_id"]].campus_id != row["campus_id"]:
+            raise ValueError("invalid core identity")
+        if not set(row["name_evidence_ids"]) <= facts.keys() or not set(row["service_rule_ids"]) <= rules.keys():
+            raise ValueError("invalid core evidence")
+        for fid in row["name_evidence_ids"]:
+            if facts[fid]["entity_id"] != row["poi_id"]:
+                raise ValueError("core name evidence mismatch")
+        if not set(row["road_source_refs"] + row["entrance_source_refs"]) <= registry.keys():
+            raise ValueError("orphan core source")
+        if row["road_access"] == "verified" and not row["field_checked_at"]:
+            raise ValueError("road verification needs field check")
+    for conflict in conflicts.values():
+        if not set(conflict["source_refs"]) <= registry.keys():
+            raise ValueError("orphan conflict source")
     return {name:len(value) for name,value in rows.items()}
 
 def replace_from_staging(staging:Path,dry_run:bool,destination:Path=DATA_DIRECTORY)->dict[str,int]:
@@ -67,11 +122,16 @@ def replace_from_staging(staging:Path,dry_run:bool,destination:Path=DATA_DIRECTO
     backup.mkdir(parents=True)
     existed={name:(destination/name).exists() for name in MANAGED}
     for name,present in existed.items():
-        if present:shutil.copy2(destination/name,backup/name)
+        if present:
+            (backup/name).parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(destination/name,backup/name)
     temporary=Path(tempfile.mkdtemp(prefix=".import-",dir=destination))
     changed=[]
     try:
-        for name in MANAGED:shutil.copy2(staging/name,temporary/name)
+        for name in MANAGED:
+            (temporary/name).parent.mkdir(parents=True, exist_ok=True)
+            (destination/name).parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(staging/name,temporary/name)
         for name in MANAGED:
             os.replace(temporary/name,destination/name);changed.append(name)
     except BaseException:

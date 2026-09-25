@@ -1,10 +1,19 @@
-"""M-owned schema export. No configuration or model calls."""
+"""Refresh the existing R2 JSON schema bundle from server types."""
+import json
+import sys
 from pathlib import Path
-import json,sys
 from pydantic import TypeAdapter
-root=Path(__file__).resolve().parents[1];sys.path.insert(0,str(root))
+
+root=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(root))
 from backend import r2_contracts as r2
-names=["R2ChatRequest","POI","POIPage","KnowledgeRecord","CampusMedia","CampusMap","CampusAssets","ProviderCrosswalk","Coverage","MapStatus","MapPublicConfig","ExternalNavigation","StreamEvent","GenerationRendered","RenderReceipt","UserPosition","RouteRequest","RouteResponse","RouteCancelResponse"]
-schemas={name:TypeAdapter(getattr(r2,name)).json_schema() for name in names}
-(root/"shared/r2.schema.json").write_text(json.dumps({"contract_version":"1.1.0","schemas":schemas},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-print("Exported R2 schemas:",len(schemas))
+
+path=root/'shared/r2.schema.json'
+bundle=json.loads(path.read_text('utf-8'))
+bundle['schemas']={name:TypeAdapter(getattr(r2,name)).json_schema() for name in bundle['schemas']}
+output=json.dumps(bundle,ensure_ascii=False,indent=2)+'\n'
+if '--check' in sys.argv:
+    assert path.read_text('utf-8')==output,'R2 schema drift'
+else:
+    path.write_text(output,encoding='utf-8')
+print('R2 schema checked' if '--check' in sys.argv else 'R2 schema exported')

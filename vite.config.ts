@@ -24,8 +24,8 @@ export default defineConfig({
   server: {
     port: Number(process.env.AI4TJU_WEB_PORT ?? 5173), strictPort: true,
     host: '127.0.0.1',
-    fs: { allow: [frontend, shared], deny: ['**/.env*', frontend.replaceAll('\\', '/') + '/**/.worktrees/**', shared.replaceAll('\\', '/') + '/**/.worktrees/**', '**/.runtime/**'] },
-    watch: { ignored: [frontend.replaceAll('\\', '/') + '/**/.worktrees/**', shared.replaceAll('\\', '/') + '/**/.worktrees/**', '**/.venv/**', '**/.tools/**', '**/.runtime/**'] },
+    fs: { allow: [frontend, shared], deny: ['**/.env*', '**/.runtime/**'] },
+    watch: { ignored: ['**/.venv/**', '**/.tools/**', '**/.runtime/**'] },
     proxy: { '/api': { target: 'http://127.0.0.1:' + (process.env.AI4TJU_API_PORT ?? '8000') } }
   }
 });

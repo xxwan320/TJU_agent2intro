@@ -1,0 +1,182 @@
+[
+  {
+    "question": "北洋园何时投入使用",
+    "retrieval_ms": 53.43670000002021,
+    "hits": [
+      {
+        "id": "beiyangyuan-opened-2015",
+        "snippet": "天津大学迎新网介绍称，北洋园校区于2015年9月正式落成并投入使用。"
+      },
+      {
+        "id": "poi-beiyangyuan-main-building",
+        "snippet": "校方资料在北洋园校区列有北洋园校区主楼。"
+      },
+      {
+        "id": "poi-beiyangyuan-east-gate",
+        "snippet": "校方资料在北洋园校区列有北洋园校区东门。"
+      },
+      {
+        "id": "poi-beiyangyuan-memorial-pavilion",
+        "snippet": "校方资料在北洋园校区列有北洋纪念亭。"
+      },
+      {
+        "id": "poi-beiyangyuan-qiushi-hall",
+        "snippet": "校方资料在北洋园校区列有求实会堂。"
+      }
+    ],
+    "llm_calls": 0,
+    "web_actions": [
+      "web_search.unavailable"
+    ]
+  },
+  {
+    "question": "郑东图书馆在哪个校区",
+    "retrieval_ms": 30.106800000794465,
+    "hits": [
+      {
+        "id": "poi-beiyangyuan-zhengdong-library",
+        "snippet": "校方资料在北洋园校区列有郑东图书馆。"
+      },
+      {
+        "id": "beiyangyuan-zhengdong-library",
+        "snippet": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。"
+      },
+      {
+        "id": "zhengdong-opened",
+        "snippet": "郑东图书馆于2015年9月投入使用。"
+      },
+      {
+        "id": "zhengdong-designer",
+        "snippet": "郑东图书馆由周恺领衔设计。"
+      },
+      {
+        "id": "zhengdong-courtyard",
+        "snippet": "郑东图书馆采用四面围合的庭院式形态。"
+      }
+    ],
+    "llm_calls": 0,
+    "web_actions": [
+      "web_search.unavailable"
+    ]
+  },
+  {
+    "question": "北洋园何时投入使用",
+    "retrieval_ms": 40.34990000218386,
+    "hits": [
+      {
+        "id": "beiyangyuan-opened-2015",
+        "snippet": "天津大学迎新网介绍称，北洋园校区于2015年9月正式落成并投入使用。"
+      },
+      {
+        "id": "poi-beiyangyuan-main-building",
+        "snippet": "校方资料在北洋园校区列有北洋园校区主楼。"
+      },
+      {
+        "id": "poi-beiyangyuan-east-gate",
+        "snippet": "校方资料在北洋园校区列有北洋园校区东门。"
+      },
+      {
+        "id": "poi-beiyangyuan-memorial-pavilion",
+        "snippet": "校方资料在北洋园校区列有北洋纪念亭。"
+      },
+      {
+        "id": "poi-beiyangyuan-qiushi-hall",
+        "snippet": "校方资料在北洋园校区列有求实会堂。"
+      }
+    ],
+    "llm_calls": 0,
+    "web_actions": [
+      "web_search.unavailable"
+    ]
+  },
+  {
+    "question": "郑东图书馆在哪个校区",
+    "retrieval_ms": 9.891199999401579,
+    "hits": [
+      {
+        "id": "poi-beiyangyuan-zhengdong-library",
+        "snippet": "校方资料在北洋园校区列有郑东图书馆。"
+      },
+      {
+        "id": "beiyangyuan-zhengdong-library",
+        "snippet": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。"
+      },
+      {
+        "id": "zhengdong-opened",
+        "snippet": "郑东图书馆于2015年9月投入使用。"
+      },
+      {
+        "id": "zhengdong-designer",
+        "snippet": "郑东图书馆由周恺领衔设计。"
+      },
+      {
+        "id": "zhengdong-courtyard",
+        "snippet": "郑东图书馆采用四面围合的庭院式形态。"
+      }
+    ],
+    "llm_calls": 0,
+    "web_actions": [
+      "web_search.unavailable"
+    ]
+  },
+  {
+    "question": "北洋园何时投入使用",
+    "retrieval_ms": 7.592500001919689,
+    "hits": [
+      {
+        "id": "beiyangyuan-opened-2015",
+        "snippet": "天津大学迎新网介绍称，北洋园校区于2015年9月正式落成并投入使用。"
+      },
+      {
+        "id": "poi-beiyangyuan-main-building",
+        "snippet": "校方资料在北洋园校区列有北洋园校区主楼。"
+      },
+      {
+        "id": "poi-beiyangyuan-east-gate",
+        "snippet": "校方资料在北洋园校区列有北洋园校区东门。"
+      },
+      {
+        "id": "poi-beiyangyuan-memorial-pavilion",
+        "snippet": "校方资料在北洋园校区列有北洋纪念亭。"
+      },
+      {
+        "id": "poi-beiyangyuan-qiushi-hall",
+        "snippet": "校方资料在北洋园校区列有求实会堂。"
+      }
+    ],
+    "llm_calls": 0,
+    "web_actions": [
+      "web_search.unavailable"
+    ]
+  },
+  {
+    "question": "郑东图书馆在哪个校区",
+    "retrieval_ms": 20.411100002093008,
+    "hits": [
+      {
+        "id": "poi-beiyangyuan-zhengdong-library",
+        "snippet": "校方资料在北洋园校区列有郑东图书馆。"
+      },
+      {
+        "id": "beiyangyuan-zhengdong-library",
+        "snippet": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。"
+      },
+      {
+        "id": "zhengdong-opened",
+        "snippet": "郑东图书馆于2015年9月投入使用。"
+      },
+      {
+        "id": "zhengdong-designer",
+        "snippet": "郑东图书馆由周恺领衔设计。"
+      },
+      {
+        "id": "zhengdong-courtyard",
+        "snippet": "郑东图书馆采用四面围合的庭院式形态。"
+      }
+    ],
+    "llm_calls": 0,
+    "web_actions": [
+      "web_search.unavailable"
+    ]
+  }
+]

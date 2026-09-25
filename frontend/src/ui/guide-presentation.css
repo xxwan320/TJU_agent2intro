@@ -1,0 +1,69 @@
+/* Content determines card height. Only the directory scrolls inside its bounds. */
+.tour-workspace .tour-columns{display:block}
+.tour-workspace .tour-planning{display:block}
+.tour-workspace .tour-planning .tour-input{margin-bottom:16px}
+.tour-workspace .tour-input[open]>form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.tour-workspace .tour-map{position:static;display:block;height:auto;max-height:none;min-height:0}
+.tour-workspace .tour-map .explorer{display:block;height:auto;max-height:none;overflow:visible;padding:18px}
+.tour-workspace .explorer>.poi-card{display:block;flex:none;min-height:0;height:auto;overflow:visible;padding:20px;margin:16px 0 20px;background:#fff;border-color:var(--line)}
+.tour-workspace .poi-profile{display:grid;grid-template-columns:minmax(180px,32%) minmax(0,1fr);gap:22px;width:100%;height:auto}
+.tour-workspace .poi-profile>figure{min-width:0;min-height:210px;max-height:300px;margin:0}
+.tour-workspace .poi-profile figure img{height:100%;max-height:300px;min-height:210px;width:100%;object-fit:cover}
+.tour-workspace .poi-profile-copy{min-width:0}
+.tour-workspace .poi-profile h3{font-size:25px;line-height:1.35;margin:7px 0 12px}
+.tour-workspace .poi-profile p{font-size:14px;line-height:1.85}
+.tour-workspace .poi-card .poi-actions{min-width:0;justify-content:flex-start;height:auto;margin-top:18px;gap:8px}
+.tour-workspace .poi-card .poi-actions>button:first-child{background:var(--brand);color:#fff;border-color:var(--brand)}
+.place-cover{height:100%;min-height:210px;border-radius:12px;padding:22px;display:flex;flex-direction:column;justify-content:center;gap:18px;background:linear-gradient(145deg,#e2eef4,#cadfdc);color:#174958;text-align:left}
+.place-cover strong{font-size:24px;line-height:1.45}.place-cover span,.place-cover small{font-size:12px;letter-spacing:.08em}
+.tour-workspace .tour-map .map-directory{display:grid;grid-template-columns:minmax(0,1fr) 230px;grid-template-rows:auto;gap:14px;flex:none;min-height:0}
+.tour-workspace .tour-map .map-surface{display:block;min-height:0}
+.tour-workspace .tour-map .schematic-viewport,.tour-workspace .tour-map .online-map-wrap{height:280px;min-height:280px;display:block;position:relative;flex:none}
+.tour-workspace .tour-map .online-map-host{height:100%;min-height:0}
+.tour-workspace .tour-map [hidden]{display:none!important}
+.tour-workspace .tour-map .poi-directory{height:390px;min-height:0;max-height:390px;margin:0}
+.tour-workspace .explorer-toolbar .poi-quick-select{max-width:260px;min-width:140px}
+.tour-workspace .poi-list{min-height:0;overscroll-behavior:contain}
+.tour-workspace .poi-list>button{flex:none;min-height:58px}
+.tour-workspace .location-panel{max-width:100%;margin-bottom:8px}
+.tour-workspace .map-budget{margin-top:12px}
+.map-selection-status{font-size:13px;padding:8px 0}
+.intro-candidates{display:flex;gap:8px;flex-wrap:wrap;margin:12px 36px}
+.open-guide{position:fixed;bottom:18px;right:22px;z-index:10010;border:0;border-radius:24px;padding:13px 20px;background:#126093;color:white;box-shadow:0 5px 18px #173d5326;cursor:pointer}
+.tour-workspace .tour-panel{bottom:72px;max-height:calc(100dvh - 150px)}
+.tour-workspace .tour-panel{z-index:12000;width:min(460px,calc(100vw - 24px));isolation:isolate}
+.open-guide{z-index:12001}
+.tour-workspace .tour-panel-body,.tour-workspace .tour-panel .tour-voice{min-height:0}
+.tour-workspace .tour-panel .tour-voice{flex-wrap:nowrap;min-width:0}
+.tour-workspace .tour-panel .tour-voice>*{min-width:0;max-width:100%}
+.tour-workspace .tour-panel .tour-composer-foot{flex:none}
+.tour-workspace .tour-panel .tour-chat-history{min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+.tour-workspace .tour-panel .tour-composer{flex:none;min-height:0;margin:0}
+.tour-workspace .tour-panel .tour-composer-input{min-height:58px;max-height:120px;resize:vertical;overflow-y:auto}
+.tour-workspace .tour-panel .tour-composer-actions{justify-content:flex-start}
+.tour-workspace .tour-panel .composer-icon.send{margin-left:auto;font-size:24px;flex:none}
+.composer-key-hint{font-size:10px;color:var(--muted)}
+.tour-workspace .tour-panel .context-chip{flex:none;max-width:100%;font-size:12px}
+.tour-workspace .tour-panel .tour-caption{max-height:44px;overflow:auto;font-size:12px}
+.tour-workspace .tour-panel .tour-voice-more{position:relative}
+.tour-workspace .tour-panel .tour-voice-menu{position:absolute;bottom:32px;left:0;width:280px;max-height:240px;overflow:auto;background:white;z-index:3;box-shadow:0 5px 24px #18394d30;padding:14px;border-radius:12px}
+.tour-chat-history>.task-card{content-visibility:auto;contain-intrinsic-size:auto 240px}
+.dialog-candidates{display:flex;flex-wrap:wrap;gap:6px;padding:10px 0}
+.dialog-narration-controls{display:flex;gap:6px;flex-wrap:wrap;padding:8px 0;font-size:12px}
+.guide-presentation{margin-top:20px;padding:16px;border-radius:14px;background:#eef5f8;border:1px solid #d3e4eb}
+.guide-presentation>header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.guide-presentation>header>div{display:flex;flex-direction:column;gap:5px}.guide-presentation>header small{color:#4f6d7f}
+.narration-stage{position:relative;max-width:800px;min-height:0;padding-bottom:calc(260px - var(--palm-y,145px) + 5px);margin:20px auto 8px;isolation:isolate}
+.narration-visual{position:relative;margin-left:calc(var(--palm-x,145px) - 12px);width:min(560px,calc(100% - 180px));aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#dce9ed;z-index:2;box-shadow:0 8px 20px #12364c20}
+.narration-visual video,.narration-visual img{width:100%;height:100%;object-fit:contain;display:block;background:#dce9ed}
+.narration-visual .place-cover{min-height:0;border-radius:0;padding:12px;gap:8px}.narration-visual .place-cover strong{font-size:20px}
+.media-caption{position:absolute;bottom:8px;left:8px;font-size:11px;padding:3px 7px;background:#ffffffed;border-radius:6px;color:#234d60}
+.tour-workspace .media-arrow{position:absolute;top:50%;translate:0 -50%;z-index:3;width:34px;min-height:42px;padding:0;border:0;border-radius:0 9px 9px 0;background:#ffffffd9;color:#17495e;font-size:28px;line-height:1}.tour-workspace .media-arrow.prev{left:0}.tour-workspace .media-arrow.next{right:0;border-radius:9px 0 0 9px}.media-dots{position:absolute;left:50%;bottom:10px;translate:-50% 0;display:flex;gap:6px;z-index:3}.tour-workspace .media-dots button{width:8px;height:8px;min-height:0;padding:0;border:1px solid #fff;border-radius:50%;background:#315b6b99;box-shadow:0 1px 3px #0004}.tour-workspace .media-dots button.active{width:20px;border-radius:8px;background:#fff}
+.tour-workspace .media-expand{position:absolute;right:8px;top:8px;min-height:28px;padding:4px 8px;font-size:12px;background:#ffffffed}
+.narration-subtitle{font-size:15px!important;color:#214b5e!important;line-height:1.8!important;max-height:110px;overflow:auto;padding:12px;background:#fff;border-radius:9px}
+.narration-controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px}.narration-controls>span{font-size:12px}
+.guide-presentation.expanded .narration-visual{margin-left:0;width:100%}.guide-presentation.expanded .narration-stage{padding-bottom:260px}
+.guide-presentation.adjacent .narration-visual{margin-left:0;width:100%}.guide-presentation.adjacent .narration-stage{padding-bottom:0}
+.tour-workspace .destination-matches{padding:12px}.tour-workspace .destination-matches button{min-height:44px}
+@media(max-width:1100px){.tour-workspace .tour-columns{grid-template-columns:240px minmax(0,1fr)}.tour-workspace .tour-map .map-directory{grid-template-columns:1fr}.tour-workspace .tour-map .poi-directory{height:200px;max-height:200px}.tour-workspace .poi-profile{grid-template-columns:1fr}.tour-workspace .poi-profile>figure{height:210px}}
+@media(max-width:899px){.tour-workspace .tour-columns{display:flex;flex-direction:column;gap:16px}.tour-workspace .tour-planning,.tour-workspace .tour-map{width:100%}.tour-workspace .tour-map .explorer{padding:12px}.tour-workspace .explorer>.poi-card{padding:14px}.tour-workspace .tour-panel{width:calc(100% - 24px);right:12px;bottom:72px;max-height:calc(100dvh - 140px)}.tour-workspace .tour-panel-head>div{min-width:0}.open-guide{right:14px;bottom:14px}.tour-workspace .tour-map .map-directory{grid-template-columns:1fr}.narration-stage{padding-bottom:160px;min-height:0}.narration-stage [data-avatar-roam]{transform:scale(.62)!important;transform-origin:bottom left}.narration-visual{position:relative;margin-left:0;width:100%}.guide-presentation.expanded .narration-stage{padding-bottom:160px}.guide-presentation{padding:10px}.narration-subtitle{max-height:130px}.tour-workspace .poi-profile{grid-template-columns:1fr;gap:16px}.tour-workspace .poi-profile>figure{height:210px}.intro-candidates{margin:12px 16px}}

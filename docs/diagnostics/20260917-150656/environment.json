@@ -1,0 +1,64 @@
+﻿{
+    "time":  "2026-09-17T15:21:27.5252614+08:00",
+    "receipt":  {
+                    "root":  "E:\\AI4TJU",
+                    "mode":  "app",
+                    "api_port":  8000,
+                    "web_port":  8000,
+                    "processes":  [
+                                      {
+                                          "pid":  35312,
+                                          "started_ticks":  "639252216313901526",
+                                          "role":  "api-launcher"
+                                      },
+                                      {
+                                          "pid":  42496,
+                                          "started_ticks":  "639252216317614008",
+                                          "role":  "child"
+                                      },
+                                      {
+                                          "pid":  40832,
+                                          "started_ticks":  "639252216317974979",
+                                          "role":  "child"
+                                      }
+                                  ]
+                },
+    "listener":  {
+                     "LocalAddress":  "127.0.0.1",
+                     "LocalPort":  8000,
+                     "OwningProcess":  40832
+                 },
+    "processes":  [
+                      {
+                          "Id":  35312,
+                          "ProcessName":  "python",
+                          "StartTime":  "\/Date(1789624831390)\/"
+                      },
+                      {
+                          "Id":  42496,
+                          "ProcessName":  "conhost",
+                          "StartTime":  "\/Date(1789624831761)\/"
+                      },
+                      {
+                          "Id":  40832,
+                          "ProcessName":  "python",
+                          "StartTime":  "\/Date(1789624831797)\/"
+                      }
+                  ],
+    "started_by_probe":  [
+
+                         ],
+    "browser_inventory":  {
+                              "browsers":  [
+
+                                           ],
+                              "apps":  [
+
+                                       ]
+                          },
+    "initial_status":  "?? .worktrees/",
+    "applicable_AGENTS":  [
+
+                          ],
+    "missing_readme_link":  "docs/R2/LOCAL_TEST_GUIDE.md"
+}

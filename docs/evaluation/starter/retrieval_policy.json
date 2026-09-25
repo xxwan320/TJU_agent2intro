@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0",
+  "implementation_status": "design_only_not_integrated",
+  "source_registry_file": "source_registry.json",
+  "timezone": "Asia/Shanghai",
+  "limits": {
+    "retrieval_total_ms": 3500,
+    "deadline_scope": "search_page_fetch_extraction_across_all_retrieval_rounds",
+    "reset_deadline_on_fallback": false,
+    "per_source_timeout_ms": 1500,
+    "max_rounds": 2,
+    "max_search_requests": 2,
+    "max_page_fetches": 4,
+    "max_concurrency": 3,
+    "per_host_concurrency": 2,
+    "application_retry_count": 0,
+    "failed_external_attempts_count_toward_budget": true,
+    "answer_total_ms": 45000,
+    "answer_deadline_is_latency_target": false,
+    "no_answer_text_feedback_after_ms": 8000,
+    "feedback_action": "show_supported_local_content_if_any_and_separate_query_status_with_cancel",
+    "status_events_count_as_answer_text": false,
+    "answer_total_deadline_includes_retrieval": true,
+    "per_source_deadline_is_min_of_remaining_budgets": true,
+    "answer_total_scope": "query_answer_only; audio playback, recording and map tasks have their own measured lifecycles",
+    "retrieval_deadline_starts_at": "external_retrieval_phase_start",
+    "retrieval_deadline_bound": "min(external_retrieval_phase_start + retrieval_total_ms, request_start + answer_total_ms)"
+  },
+  "model": {
+    "normal_max_generation_calls": 1,
+    "tool_selection_path_max_total_calls": 2,
+    "require_gateway_capability_verification": true,
+    "unsupported_tool_calls_fallback": "backend_routing_then_one_generation",
+    "allow_unregistered_tools_or_sources": false,
+    "allow_per_stop_serial_generation": false,
+    "sufficient_local_poi_selection_llm_calls": 0,
+    "sufficient_local_poi_selection_web_calls": 0,
+    "sufficient_local_fixed_narration_llm_calls": 0,
+    "sufficient_local_fixed_narration_web_calls": 0,
+    "max_context_chunks_initial": 6,
+    "max_context_characters_initial": 6000,
+    "context_must_preserve_negation_dates_and_sources": true,
+    "default_routing": "backend_intent_routing_then_one_generation",
+    "optional_tool_selection_timing": "before_external_retrieval_phase_only",
+    "llm_calls_between_retrieval_rounds": 0
+  },
+  "source_policy": {
+    "local_first": true,
+    "official_first": true,
+    "community_allowed_intents": [
+      "stable_history_or_introduction",
+      "visitor_experience"
+    ],
+    "community_requires_explicit_attribution": true,
+    "current_rules_require_applicable_official_evidence": true,
+    "validate_final_redirect_source": true,
+    "treat_web_content_as_untrusted_data": true,
+    "reposts_are_independent_corroboration": false,
+    "unverified_coordinates_or_poi_ids_allowed": false,
+    "index_crawl_date_can_replace_publication_date": false,
+    "supplemental_tier_fallback_intents": [
+      "stable_history_or_introduction",
+      "visitor_experience"
+    ],
+    "official_same_tier_fallback_intents": [
+      "stable_history_or_introduction",
+      "current_access_or_opening",
+      "recent_news"
+    ]
+  },
+  "cache": {
+    "ttl_seconds": {
+      "stable": 86400,
+      "news": 300,
+      "current_rule": 60
+    },
+    "key_fields": [
+      "campusId",
+      "poiId",
+      "intent",
+      "asOfLocalDate",
+      "normalizedQuery",
+      "normalizedConstraints",
+      "sourceScope",
+      "dataVersion"
+    ],
+    "canonicalize_constraint_id_arrays": true,
+    "serve_expired_dynamic_as_current_verified": false,
+    "failed_request_cooldown_seconds": 15,
+    "store_failures_as_no_evidence": false,
+    "successful_no_evidence_ttl_seconds": 30,
+    "negative_cache_requires_completed_scoped_query": true,
+    "singleflight": true,
+    "abort_shared_upstream_only_after_last_consumer_cancel": true,
+    "preserve_order_for_route_stop_arrays": true,
+    "personalized_answer_cache_requires_full_context": true
+  },
+  "state_contract": {
+    "event_required_fields": [
+      "channel",
+      "requestId",
+      "generation",
+      "seq",
+      "campusId",
+      "poiId",
+      "routeId",
+      "type"
+    ],
+    "nullable_event_fields": [
+      "poiId",
+      "routeId"
+    ],
+    "accept_only_active_request_and_generation": true,
+    "sequence_must_increase": true,
+    "query_states": [
+      "success",
+      "partial",
+      "no_evidence",
+      "timeout",
+      "unavailable",
+      "cancelled",
+      "error"
+    ],
+    "itinerary_states": [
+      "draft",
+      "route_pending",
+      "ready",
+      "partial",
+      "failed"
+    ],
+    "itinerary_ready_requires": [
+      "validated_constraints_satisfied",
+      "required_real_routes_available",
+      "current_frontend_map_application_acknowledged"
+    ],
+    "time_budget_satisfied_requires_complete_costs": true,
+    "compound_answers_report_per_part_status": true,
+    "ordinary_poi_selection_clears_valid_route": false,
+    "new_network_content_autoplays": false,
+    "channels": [
+      "poi",
+      "chat",
+      "route",
+      "asr"
+    ],
+    "generation_scope": "per_channel",
+    "poi_selection_aborts_route_channel": false,
+    "route_generation_invalidated_by": [
+      "replan",
+      "clear_route",
+      "campus_change",
+      "origin_change_that_invalidates_request"
+    ]
+  },
+  "evidence": {
+    "required_fields": [
+      "sourceId",
+      "registryId",
+      "title",
+      "url",
+      "finalUrl",
+      "publishedAt",
+      "validFrom",
+      "validTo",
+      "fetchedAt",
+      "provenance",
+      "poiIds",
+      "campusId"
+    ],
+    "unknown_dates_are_null": true,
+    "provenance_fields": [
+      "publisher",
+      "sourceTier",
+      "retrievalMethod",
+      "repostOf"
+    ],
+    "citations_must_reference_observed_evidence": true,
+    "registryId_is_distinct_from_document_sourceId": true
+  },
+  "verification": {
+    "preserve_questions_md_acceptance": true,
+    "actual_audio_events_and_human_listening_are_distinct": true,
+    "http_success_equals_browser_success": false,
+    "cold_and_warm_cache_measured_separately": true,
+    "first_meaningful_answer_excludes_status_and_placeholders": true,
+    "small_sample_report": "raw_values_and_median_no_p95_claim"
+  }
+}

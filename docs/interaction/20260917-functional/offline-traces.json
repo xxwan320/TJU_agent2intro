@@ -1,0 +1,352 @@
+[
+  {
+    "scenario": "official",
+    "evidence_type": "mock",
+    "elapsed_ms": 0.0,
+    "result": {
+      "status": "success",
+      "evidence": [
+        {
+          "sourceId": "web-349d6b2506fb1c5b",
+          "registryId": "tju-news",
+          "title": "尚贤石",
+          "text": "北洋园尚贤石的校园文化介绍，题字为赵冷月。北洋园尚贤石的校园文化介绍，题字为赵冷月。北洋园尚贤石的校园文化介绍，题字为赵冷月。北洋园尚贤石的校园文化介绍，题字为赵冷月。北洋园尚贤石的校园文化介绍，题字为赵冷月。北洋园尚贤石的校园文化介绍，题字为赵冷月。北洋园尚贤石的校园文化介绍，题字为赵冷月。北洋园尚贤石的校园文化介绍，题字为赵冷月。",
+          "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+          "finalUrl": "https://news.tju.edu.cn/info/1003/89019.htm",
+          "publishedAt": "2015-09-28",
+          "validFrom": null,
+          "validTo": null,
+          "fetchedAt": "2026-09-17T19:52:37.579016+08:00",
+          "campusId": "beiyangyuan",
+          "poiIds": [],
+          "provenance": {
+            "publisher": "天津大学新闻网",
+            "sourceTier": "official",
+            "retrievalMethod": "registered_page",
+            "repostOf": null
+          },
+          "currentApplicable": false
+        }
+      ],
+      "scope": [
+        "tju-news"
+      ],
+      "trace": [
+        {
+          "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+          "elapsed_ms": 0.0
+        },
+        {
+          "status": "success",
+          "scope": [
+            "tju-news"
+          ],
+          "coverage": "registered pages only; no search provider configured",
+          "page_calls": 1
+        }
+      ],
+      "page_calls": 1,
+      "search_calls": 0,
+      "cache_hit": false
+    }
+  },
+  {
+    "scenario": "community",
+    "evidence_type": "mock",
+    "elapsed_ms": 0.0,
+    "result": {
+      "status": "partial",
+      "evidence": [
+        {
+          "sourceId": "web-34e7dd9ac6376ec7",
+          "registryId": "beiyang-wiki",
+          "title": "尚贤石",
+          "text": "北洋园尚贤石的校园文化介绍，题字为赵冷月。北洋园尚贤石的校园文化介绍，题字为赵冷月。北洋园尚贤石的校园文化介绍，题字为赵冷月。北洋园尚贤石的校园文化介绍，题字为赵冷月。北洋园尚贤石的校园文化介绍，题字为赵冷月。北洋园尚贤石的校园文化介绍，题字为赵冷月。北洋园尚贤石的校园文化介绍，题字为赵冷月。北洋园尚贤石的校园文化介绍，题字为赵冷月。",
+          "url": "https://wiki.tjubot.cn/category/campus-attractions/",
+          "finalUrl": "https://wiki.tjubot.cn/category/campus-attractions/",
+          "publishedAt": null,
+          "validFrom": null,
+          "validTo": null,
+          "fetchedAt": "2026-09-17T19:52:37.580016+08:00",
+          "campusId": "beiyangyuan",
+          "poiIds": [],
+          "provenance": {
+            "publisher": "北洋维基（社区补充来源）",
+            "sourceTier": "community",
+            "retrievalMethod": "registered_page",
+            "repostOf": null
+          },
+          "currentApplicable": false
+        }
+      ],
+      "scope": [
+        "tju-news",
+        "beiyang-wiki"
+      ],
+      "trace": [
+        {
+          "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+          "elapsed_ms": 0.0
+        },
+        {
+          "url": "https://wiki.tjubot.cn/category/campus-attractions/",
+          "elapsed_ms": 0.0
+        },
+        {
+          "status": "partial",
+          "scope": [
+            "tju-news",
+            "beiyang-wiki"
+          ],
+          "coverage": "registered pages only; no search provider configured",
+          "page_calls": 2
+        }
+      ],
+      "page_calls": 2,
+      "search_calls": 0,
+      "cache_hit": false
+    }
+  },
+  {
+    "scenario": "timeout",
+    "evidence_type": "mock",
+    "elapsed_ms": 62.000000005355105,
+    "result": {
+      "status": "timeout",
+      "evidence": [],
+      "scope": [],
+      "trace": [
+        {
+          "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+          "elapsed_ms": 62.0
+        }
+      ],
+      "page_calls": 1,
+      "search_calls": 0,
+      "cache_hit": false
+    }
+  },
+  {
+    "scenario": "old_notice",
+    "evidence_type": "mock",
+    "elapsed_ms": 0.0,
+    "result": {
+      "status": "partial",
+      "evidence": [
+        {
+          "sourceId": "web-349d6b2506fb1c5b",
+          "registryId": "tju-news",
+          "title": "尚贤石",
+          "text": "北洋园尚贤石区域不开放，临时封闭，有效期2025-09-01至2025-09-30。北洋园尚贤石区域不开放，临时封闭，有效期2025-09-01至2025-09-30。北洋园尚贤石区域不开放，临时封闭，有效期2025-09-01至2025-09-30。北洋园尚贤石区域不开放，临时封闭，有效期2025-09-01至2025-09-30。北洋园尚贤石区域不开放，临时封闭，有效期2025-09-01至2025-09-30。北洋园尚贤石区域不开放，临时封闭，有效期2025-09-01至2025-09-30。",
+          "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+          "finalUrl": "https://news.tju.edu.cn/info/1003/89019.htm",
+          "publishedAt": "2015-09-28",
+          "validFrom": "2025-09-01",
+          "validTo": "2025-09-30",
+          "fetchedAt": "2026-09-17T19:52:37.647428+08:00",
+          "campusId": "beiyangyuan",
+          "poiIds": [],
+          "provenance": {
+            "publisher": "天津大学新闻网",
+            "sourceTier": "official",
+            "retrievalMethod": "registered_page",
+            "repostOf": null
+          },
+          "currentApplicable": false
+        }
+      ],
+      "scope": [
+        "tju-news"
+      ],
+      "trace": [
+        {
+          "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+          "elapsed_ms": 0.0
+        },
+        {
+          "status": "partial",
+          "scope": [
+            "tju-news"
+          ],
+          "coverage": "registered pages only; no search provider configured",
+          "page_calls": 1
+        }
+      ],
+      "page_calls": 1,
+      "search_calls": 0,
+      "cache_hit": false
+    }
+  },
+  {
+    "scenario": "empty_library",
+    "evidence_type": "mock",
+    "elapsed_ms": 0.0,
+    "result": {
+      "status": "unavailable",
+      "evidence": [],
+      "scope": [
+        "tju-main",
+        "tju-news"
+      ],
+      "trace": [
+        {
+          "url": "https://www.tju.edu.cn/",
+          "elapsed_ms": 0.0
+        },
+        {
+          "url": "https://news.tju.edu.cn/",
+          "elapsed_ms": 0.0
+        },
+        {
+          "status": "unavailable",
+          "scope": [
+            "tju-main",
+            "tju-news"
+          ],
+          "coverage": "registered pages only; no search provider configured",
+          "page_calls": 2
+        }
+      ],
+      "page_calls": 2,
+      "search_calls": 0,
+      "cache_hit": false
+    }
+  },
+  {
+    "scenario": "validated_tool_execution",
+    "evidence_type": "mock tool proposal + actual local executor",
+    "trace": {
+      "status": "success",
+      "local_source_ids": [
+        "poi-beiyangyuan-shangxian-stone",
+        "tju-news-shangxian-20150928",
+        "beiyangyuan-opened-2015",
+        "beiyangyuan-roads"
+      ],
+      "external": null,
+      "tool_messages": [
+        {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "fixture-tool",
+              "type": "function",
+              "function": {
+                "name": "search_local",
+                "arguments": "{\"campusId\": \"beiyangyuan\", \"query\": \"\\u5c1a\\u8d24\\u77f3\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "fixture-tool",
+          "content": "{\"status\": \"success\", \"result_in_evidence_context\": true}"
+        }
+      ],
+      "tool_calls": [
+        {
+          "name": "search_local",
+          "arguments": {
+            "campusId": "beiyangyuan",
+            "query": "尚贤石"
+          }
+        }
+      ]
+    },
+    "source_ids": [
+      "poi-beiyangyuan-shangxian-stone",
+      "tju-news-shangxian-20150928",
+      "beiyangyuan-opened-2015",
+      "beiyangyuan-roads",
+      "poi-beiyangyuan-shangxian-stone",
+      "tju-news-shangxian-20150928"
+    ]
+  },
+  {
+    "scenario": "trip_brief",
+    "campus": "beiyangyuan",
+    "evidence_type": "local seeded records",
+    "result": {
+      "status": "partial",
+      "asOf": "2026-09-17",
+      "stopIds": [],
+      "advice": "按兴趣留意建筑外观和校园文化细节；建议停留时间由行程分配。",
+      "items": [
+        {
+          "text": "出发前可以先线上了解校史。档案馆发布了网上校史馆上线消息，可作为线上参观入口。",
+          "publishedAt": "2026-09-07",
+          "source": {
+            "id": "tju-archive-vr-news",
+            "title": "天津大学网上校史馆正式上线啦",
+            "url": "https://dag.tju.edu.cn/web/news/info/231147/237592.htmlx",
+            "published_at": "2026-09-07",
+            "date_source_id": "tju-archive-index",
+            "registry_id": "tju-archives"
+          },
+          "currentVerified": false,
+          "label": "已收录的近期消息"
+        },
+        {
+          "text": "校史博物馆官网提供个人与团体参观指南。入馆安排与入校规则分别核对，临时调整需结合当天有关通知。",
+          "publishedAt": null,
+          "source": {
+            "id": "tju-archive-museum-guide",
+            "title": "天津大学校史博物馆参观指南",
+            "url": "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+            "published_at": null,
+            "registry_id": "tju-archives"
+          },
+          "currentVerified": false,
+          "label": "一般指南"
+        }
+      ],
+      "pending": [
+        "入馆与入校规则需分别确认；收录资料不代表当天开放。"
+      ]
+    }
+  },
+  {
+    "scenario": "trip_brief",
+    "campus": "weijinlu",
+    "evidence_type": "local seeded records",
+    "result": {
+      "status": "partial",
+      "asOf": "2026-09-17",
+      "stopIds": [],
+      "advice": "按兴趣留意建筑外观和校园文化细节；建议停留时间由行程分配。",
+      "items": [
+        {
+          "text": "出发前可以先线上了解校史。档案馆发布了网上校史馆上线消息，可作为线上参观入口。",
+          "publishedAt": "2026-09-07",
+          "source": {
+            "id": "tju-archive-vr-news",
+            "title": "天津大学网上校史馆正式上线啦",
+            "url": "https://dag.tju.edu.cn/web/news/info/231147/237592.htmlx",
+            "published_at": "2026-09-07",
+            "date_source_id": "tju-archive-index",
+            "registry_id": "tju-archives"
+          },
+          "currentVerified": false,
+          "label": "已收录的近期消息"
+        },
+        {
+          "text": "校史博物馆官网提供个人与团体参观指南。入馆安排与入校规则分别核对，临时调整需结合当天有关通知。",
+          "publishedAt": null,
+          "source": {
+            "id": "tju-archive-museum-guide",
+            "title": "天津大学校史博物馆参观指南",
+            "url": "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+            "published_at": null,
+            "registry_id": "tju-archives"
+          },
+          "currentVerified": false,
+          "label": "一般指南"
+        }
+      ],
+      "pending": [
+        "入馆与入校规则需分别确认；收录资料不代表当天开放。"
+      ]
+    }
+  }
+]

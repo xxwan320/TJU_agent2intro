@@ -1,0 +1,10 @@
+{
+  "freeze_commit": "5bcd28e",
+  "method": "sha256 of UTF-8 text normalized to LF; original raw-byte hashes remain in freeze.json",
+  "sha256_lf": {
+    "legacy-50.json": "c743b518141a408c50015cee8a6e8e3463c577ddff2be2d8c6b6cfc5c9473ba1",
+    "evaluation-v1.json": "140095524d6bc8d32ae6fe7c6f767a0a6697bcb07d398d37bb1305d34cb2bd0a",
+    "freeze.json": "08f757cad8a292643a7262ced7c8812881d339221963068ce0371deb80002348"
+  },
+  "note": "Current runtime version separately uses canonical JSON; old runtime d75f2e7e8ac0 raw-byte baseline is retained without substitution."
+}

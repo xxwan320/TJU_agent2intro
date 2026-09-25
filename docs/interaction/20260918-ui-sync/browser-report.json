@@ -1,0 +1,378 @@
+{
+  "browser": "153.0.8010.48",
+  "mode": "real Chrome, real backend, real TTS, local photo film",
+  "scenarios": [
+    {
+      "name": "named introduction switches to correct campus and automatically plays matching film",
+      "pass": true,
+      "startupDeltaMs": 5,
+      "origin": "audio onplaying to video playing; local film, first browser load",
+      "dimensions": {
+        "viewport": 1440,
+        "body": 1440,
+        "card": {
+          "width": 1330,
+          "height": 1084.46875,
+          "client": 1082,
+          "scroll": 1082
+        },
+        "children": [
+          {
+            "name": "poi-profile",
+            "x": 76,
+            "y": 496,
+            "width": 1288,
+            "height": 273.421875,
+            "top": 496,
+            "right": 1364,
+            "bottom": 769.421875,
+            "left": 76
+          },
+          {
+            "name": "poi-actions",
+            "x": 76,
+            "y": 787.421875,
+            "width": 1288,
+            "height": 44,
+            "top": 787.421875,
+            "right": 1364,
+            "bottom": 831.421875,
+            "left": 76
+          }
+        ],
+        "video": [
+          {
+            "width": 960,
+            "height": 540,
+            "paused": false,
+            "time": 0.491577,
+            "muted": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "pause and resume preserve both audio and video positions",
+      "pass": true,
+      "pauseResponseMs": 5.400000000372529,
+      "pausedPosition": 0.513478,
+      "resumedPosition": 0.53775
+    },
+    {
+      "name": "audio segment changes retain one video load",
+      "pass": true,
+      "mediaEvents": [
+        {
+          "event": "playing",
+          "tag": "VIDEO",
+          "at": 4711.800000000745,
+          "time": 0.000246,
+          "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+          "muted": true
+        },
+        {
+          "event": "playing",
+          "tag": "VIDEO",
+          "at": 4905.10000000149,
+          "time": 0.183108,
+          "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+          "muted": true
+        },
+        {
+          "event": "pause",
+          "tag": "VIDEO",
+          "at": 5239.300000000745,
+          "time": 0.513478,
+          "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+          "muted": true
+        },
+        {
+          "event": "playing",
+          "tag": "VIDEO",
+          "at": 5893.200000001118,
+          "time": 0.513649,
+          "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+          "muted": true
+        },
+        {
+          "event": "pause",
+          "tag": "VIDEO",
+          "at": 16159,
+          "time": 10.779285,
+          "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+          "muted": true
+        },
+        {
+          "event": "playing",
+          "tag": "VIDEO",
+          "at": 16165.700000001118,
+          "time": 10.779459,
+          "src": "http://127.0.0.1:8000/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+          "muted": true
+        }
+      ]
+    },
+    {
+      "name": "stop pauses visual within the session and returns stable frame",
+      "pass": true,
+      "stopResponseMs": 5.799999998882413
+    },
+    {
+      "name": "here introduction uses current selection and cached local video",
+      "pass": true,
+      "cachedStartupDeltaMs": 17
+    },
+    {
+      "name": "selecting and navigating do not start narration",
+      "pass": true,
+      "narrations": 2
+    },
+    {
+      "name": "layout 1440x900",
+      "pass": true,
+      "dimensions": {
+        "viewport": 1440,
+        "body": 1440,
+        "card": {
+          "width": 1330,
+          "height": 377.421875,
+          "client": 375,
+          "scroll": 375
+        },
+        "children": [
+          {
+            "name": "poi-profile",
+            "x": 76,
+            "y": 496,
+            "width": 1288,
+            "height": 273.421875,
+            "top": 496,
+            "right": 1364,
+            "bottom": 769.421875,
+            "left": 76
+          },
+          {
+            "name": "poi-actions",
+            "x": 76,
+            "y": 787.421875,
+            "width": 1288,
+            "height": 44,
+            "top": 787.421875,
+            "right": 1364,
+            "bottom": 831.421875,
+            "left": 76
+          }
+        ],
+        "video": []
+      },
+      "playing": {
+        "viewport": 1440,
+        "body": 1440,
+        "card": {
+          "width": 1330,
+          "height": 1084.59375,
+          "client": 1083,
+          "scroll": 1083
+        },
+        "children": [
+          {
+            "name": "poi-profile",
+            "x": 76,
+            "y": 496,
+            "width": 1288,
+            "height": 273.421875,
+            "top": 496,
+            "right": 1364,
+            "bottom": 769.421875,
+            "left": 76
+          },
+          {
+            "name": "poi-actions",
+            "x": 76,
+            "y": 787.421875,
+            "width": 1288,
+            "height": 44,
+            "top": 787.421875,
+            "right": 1364,
+            "bottom": 831.421875,
+            "left": 76
+          }
+        ],
+        "video": [
+          {
+            "width": 960,
+            "height": 540,
+            "paused": false,
+            "time": 0.381043,
+            "muted": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "layout 1366x768",
+      "pass": true,
+      "dimensions": {
+        "viewport": 1366,
+        "body": 1366,
+        "card": {
+          "width": 1256,
+          "height": 377.421875,
+          "client": 375,
+          "scroll": 375
+        },
+        "children": [
+          {
+            "name": "poi-profile",
+            "x": 76,
+            "y": 466.953125,
+            "width": 1214,
+            "height": 273.421875,
+            "top": 466.953125,
+            "right": 1290,
+            "bottom": 740.375,
+            "left": 76
+          },
+          {
+            "name": "poi-actions",
+            "x": 76,
+            "y": 758.375,
+            "width": 1214,
+            "height": 44,
+            "top": 758.375,
+            "right": 1290,
+            "bottom": 802.375,
+            "left": 76
+          }
+        ],
+        "video": []
+      },
+      "playing": {
+        "viewport": 1366,
+        "body": 1366,
+        "card": {
+          "width": 1256,
+          "height": 1084.609375,
+          "client": 1083,
+          "scroll": 1083
+        },
+        "children": [
+          {
+            "name": "poi-profile",
+            "x": 76,
+            "y": 466.953125,
+            "width": 1214,
+            "height": 273.421875,
+            "top": 466.953125,
+            "right": 1290,
+            "bottom": 740.375,
+            "left": 76
+          },
+          {
+            "name": "poi-actions",
+            "x": 76,
+            "y": 758.375,
+            "width": 1214,
+            "height": 44,
+            "top": 758.375,
+            "right": 1290,
+            "bottom": 802.375,
+            "left": 76
+          }
+        ],
+        "video": [
+          {
+            "width": 960,
+            "height": 540,
+            "paused": false,
+            "time": 0.432279,
+            "muted": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "layout 390x844",
+      "pass": true,
+      "dimensions": {
+        "viewport": 390,
+        "body": 390,
+        "card": {
+          "width": 332,
+          "height": 661.3125,
+          "client": 659,
+          "scroll": 659
+        },
+        "children": [
+          {
+            "name": "poi-profile",
+            "x": 44,
+            "y": 565.671875,
+            "width": 302,
+            "height": 525.3125,
+            "top": 565.671875,
+            "right": 346,
+            "bottom": 1090.984375,
+            "left": 44
+          },
+          {
+            "name": "poi-actions",
+            "x": 44,
+            "y": 1108.984375,
+            "width": 302,
+            "height": 88,
+            "top": 1108.984375,
+            "right": 346,
+            "bottom": 1196.984375,
+            "left": 44
+          }
+        ],
+        "video": []
+      },
+      "playing": {
+        "viewport": 390,
+        "body": 390,
+        "card": {
+          "width": 332,
+          "height": 1245.8125,
+          "client": 1244,
+          "scroll": 1244
+        },
+        "children": [
+          {
+            "name": "poi-profile",
+            "x": 44,
+            "y": 565.671875,
+            "width": 302,
+            "height": 525.3125,
+            "top": 565.671875,
+            "right": 346,
+            "bottom": 1090.984375,
+            "left": 44
+          },
+          {
+            "name": "poi-actions",
+            "x": 44,
+            "y": 1108.984375,
+            "width": 302,
+            "height": 88,
+            "top": 1108.984375,
+            "right": 346,
+            "bottom": 1196.984375,
+            "left": 44
+          }
+        ],
+        "video": [
+          {
+            "width": 960,
+            "height": 540,
+            "paused": false,
+            "time": 0.233283,
+            "muted": true
+          }
+        ]
+      }
+    }
+  ],
+  "errors": []
+}

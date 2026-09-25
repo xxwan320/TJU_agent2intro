@@ -1,0 +1,365 @@
+{
+  "fixture": true,
+  "label": "TEST ONLY - synthetic fields, no real route costs or campus facts",
+  "TourRequest": {
+    "request_id": "743b2d4b-18b3-4bad-9777-33ea52b06d6b",
+    "session_id": "fdf2d086-3be8-426f-9707-1f5eba469c03",
+    "campus_id": "weijinlu",
+    "duration_minutes": 60,
+    "interests": [
+      "TEST ONLY: fixture interests"
+    ],
+    "start": {
+      "kind": "unspecified",
+      "poi_id": null
+    },
+    "end": {
+      "kind": "unspecified",
+      "poi_id": null
+    },
+    "accessibility": "standard"
+  },
+  "TourSession": {
+    "tour_id": "fc455f75-a297-4af8-a6df-ac38d705b97c",
+    "session_id": "fdf2d086-3be8-426f-9707-1f5eba469c03",
+    "state_version": 1,
+    "status": "draft",
+    "plan": {
+      "plan_id": "d07f620c-8b2f-4567-9f5c-cd61440300fb",
+      "version": 1,
+      "campus_id": "weijinlu",
+      "status": "draft",
+      "request": {
+        "request_id": "743b2d4b-18b3-4bad-9777-33ea52b06d6b",
+        "session_id": "fdf2d086-3be8-426f-9707-1f5eba469c03",
+        "campus_id": "weijinlu",
+        "duration_minutes": 60,
+        "interests": [
+          "TEST ONLY: fixture interests"
+        ],
+        "start": {
+          "kind": "unspecified",
+          "poi_id": null
+        },
+        "end": {
+          "kind": "unspecified",
+          "poi_id": null
+        },
+        "accessibility": "standard"
+      },
+      "stops": [
+        {
+          "stop_id": "7bbeb054-24c6-4e5e-a428-f46facb74bb2",
+          "poi_id": "fixture-stop-0",
+          "title": "TEST ONLY 0",
+          "visit_minutes": 10,
+          "visit_time_source": "planner_allocation",
+          "purpose": "Synthetic contract fixture",
+          "evidence_ids": []
+        },
+        {
+          "stop_id": "22abfe56-1153-40be-a8c9-23dfaabd0950",
+          "poi_id": "fixture-stop-1",
+          "title": "TEST ONLY 1",
+          "visit_minutes": 10,
+          "visit_time_source": "planner_allocation",
+          "purpose": "Synthetic contract fixture",
+          "evidence_ids": []
+        },
+        {
+          "stop_id": "7940b6ea-e127-433a-b7af-124e28b4127b",
+          "poi_id": "fixture-stop-2",
+          "title": "TEST ONLY 2",
+          "visit_minutes": 10,
+          "visit_time_source": "planner_allocation",
+          "purpose": "Synthetic contract fixture",
+          "evidence_ids": []
+        }
+      ],
+      "legs": [],
+      "evidence": [],
+      "warnings": [
+        "TEST ONLY — no real campus facts or route costs"
+      ],
+      "created_at": "2026-09-15T01:56:26.714929+00:00"
+    },
+    "progress": [
+      {
+        "stop_id": "7bbeb054-24c6-4e5e-a428-f46facb74bb2",
+        "state": "pending"
+      },
+      {
+        "stop_id": "22abfe56-1153-40be-a8c9-23dfaabd0950",
+        "state": "pending"
+      },
+      {
+        "stop_id": "7940b6ea-e127-433a-b7af-124e28b4127b",
+        "state": "pending"
+      }
+    ],
+    "current_stop_id": null,
+    "remaining_minutes": 60,
+    "saved": true,
+    "updated_at": "2026-09-15T01:56:26.714929+00:00"
+  },
+  "TourResult": {
+    "contract_version": "1.2.0",
+    "request_id": "743b2d4b-18b3-4bad-9777-33ea52b06d6b",
+    "session": {
+      "tour_id": "fc455f75-a297-4af8-a6df-ac38d705b97c",
+      "session_id": "fdf2d086-3be8-426f-9707-1f5eba469c03",
+      "state_version": 1,
+      "status": "draft",
+      "plan": {
+        "plan_id": "d07f620c-8b2f-4567-9f5c-cd61440300fb",
+        "version": 1,
+        "campus_id": "weijinlu",
+        "status": "draft",
+        "request": {
+          "request_id": "743b2d4b-18b3-4bad-9777-33ea52b06d6b",
+          "session_id": "fdf2d086-3be8-426f-9707-1f5eba469c03",
+          "campus_id": "weijinlu",
+          "duration_minutes": 60,
+          "interests": [
+            "TEST ONLY: fixture interests"
+          ],
+          "start": {
+            "kind": "unspecified",
+            "poi_id": null
+          },
+          "end": {
+            "kind": "unspecified",
+            "poi_id": null
+          },
+          "accessibility": "standard"
+        },
+        "stops": [
+          {
+            "stop_id": "7bbeb054-24c6-4e5e-a428-f46facb74bb2",
+            "poi_id": "fixture-stop-0",
+            "title": "TEST ONLY 0",
+            "visit_minutes": 10,
+            "visit_time_source": "planner_allocation",
+            "purpose": "Synthetic contract fixture",
+            "evidence_ids": []
+          },
+          {
+            "stop_id": "22abfe56-1153-40be-a8c9-23dfaabd0950",
+            "poi_id": "fixture-stop-1",
+            "title": "TEST ONLY 1",
+            "visit_minutes": 10,
+            "visit_time_source": "planner_allocation",
+            "purpose": "Synthetic contract fixture",
+            "evidence_ids": []
+          },
+          {
+            "stop_id": "7940b6ea-e127-433a-b7af-124e28b4127b",
+            "poi_id": "fixture-stop-2",
+            "title": "TEST ONLY 2",
+            "visit_minutes": 10,
+            "visit_time_source": "planner_allocation",
+            "purpose": "Synthetic contract fixture",
+            "evidence_ids": []
+          }
+        ],
+        "legs": [],
+        "evidence": [],
+        "warnings": [
+          "TEST ONLY — no real campus facts or route costs"
+        ],
+        "created_at": "2026-09-15T01:56:26.714929+00:00"
+      },
+      "progress": [
+        {
+          "stop_id": "7bbeb054-24c6-4e5e-a428-f46facb74bb2",
+          "state": "pending"
+        },
+        {
+          "stop_id": "22abfe56-1153-40be-a8c9-23dfaabd0950",
+          "state": "pending"
+        },
+        {
+          "stop_id": "7940b6ea-e127-433a-b7af-124e28b4127b",
+          "state": "pending"
+        }
+      ],
+      "current_stop_id": null,
+      "remaining_minutes": 60,
+      "saved": true,
+      "updated_at": "2026-09-15T01:56:26.714929+00:00"
+    },
+    "replayed": false,
+    "usage": null
+  },
+  "PlanRevision": {
+    "request_id": "f8697357-ccfd-4020-a57f-2888bd410b9f",
+    "session_id": "fdf2d086-3be8-426f-9707-1f5eba469c03",
+    "expected_version": 1,
+    "expected_state_version": 1,
+    "operation": "set_remaining_time",
+    "remaining_minutes": 30
+  },
+  "TourCommand": {
+    "request_id": "9ca1d5aa-aeb1-4d2c-8692-c287ac657c90",
+    "session_id": "fdf2d086-3be8-426f-9707-1f5eba469c03",
+    "expected_version": 1,
+    "expected_state_version": 1,
+    "action": "check"
+  },
+  "TourRestore": {
+    "request_id": "da4579cb-cfc6-49ca-a595-059ac06a7a26",
+    "session_id": "fdf2d086-3be8-426f-9707-1f5eba469c03",
+    "snapshot": {
+      "tour_id": "fc455f75-a297-4af8-a6df-ac38d705b97c",
+      "session_id": "fdf2d086-3be8-426f-9707-1f5eba469c03",
+      "state_version": 1,
+      "status": "draft",
+      "plan": {
+        "plan_id": "d07f620c-8b2f-4567-9f5c-cd61440300fb",
+        "version": 1,
+        "campus_id": "weijinlu",
+        "status": "draft",
+        "request": {
+          "request_id": "743b2d4b-18b3-4bad-9777-33ea52b06d6b",
+          "session_id": "fdf2d086-3be8-426f-9707-1f5eba469c03",
+          "campus_id": "weijinlu",
+          "duration_minutes": 60,
+          "interests": [
+            "TEST ONLY: fixture interests"
+          ],
+          "start": {
+            "kind": "unspecified",
+            "poi_id": null
+          },
+          "end": {
+            "kind": "unspecified",
+            "poi_id": null
+          },
+          "accessibility": "standard"
+        },
+        "stops": [
+          {
+            "stop_id": "7bbeb054-24c6-4e5e-a428-f46facb74bb2",
+            "poi_id": "fixture-stop-0",
+            "title": "TEST ONLY 0",
+            "visit_minutes": 10,
+            "visit_time_source": "planner_allocation",
+            "purpose": "Synthetic contract fixture",
+            "evidence_ids": []
+          },
+          {
+            "stop_id": "22abfe56-1153-40be-a8c9-23dfaabd0950",
+            "poi_id": "fixture-stop-1",
+            "title": "TEST ONLY 1",
+            "visit_minutes": 10,
+            "visit_time_source": "planner_allocation",
+            "purpose": "Synthetic contract fixture",
+            "evidence_ids": []
+          },
+          {
+            "stop_id": "7940b6ea-e127-433a-b7af-124e28b4127b",
+            "poi_id": "fixture-stop-2",
+            "title": "TEST ONLY 2",
+            "visit_minutes": 10,
+            "visit_time_source": "planner_allocation",
+            "purpose": "Synthetic contract fixture",
+            "evidence_ids": []
+          }
+        ],
+        "legs": [],
+        "evidence": [],
+        "warnings": [
+          "TEST ONLY — no real campus facts or route costs"
+        ],
+        "created_at": "2026-09-15T01:56:26.714929+00:00"
+      },
+      "progress": [
+        {
+          "stop_id": "7bbeb054-24c6-4e5e-a428-f46facb74bb2",
+          "state": "pending"
+        },
+        {
+          "stop_id": "22abfe56-1153-40be-a8c9-23dfaabd0950",
+          "state": "pending"
+        },
+        {
+          "stop_id": "7940b6ea-e127-433a-b7af-124e28b4127b",
+          "state": "pending"
+        }
+      ],
+      "current_stop_id": null,
+      "remaining_minutes": 60,
+      "saved": true,
+      "updated_at": "2026-09-15T01:56:26.714929+00:00"
+    }
+  },
+  "Evidence": {
+    "evidence_id": "fixture-source",
+    "source_ref": "fixture-only",
+    "claim": "Synthetic evidence shape, not a campus claim",
+    "relation": "retrieved",
+    "verification": "unverified",
+    "checked_at": null
+  },
+  "RouteCostRequest": {
+    "request_id": "a4080316-5f17-4811-a7d5-d23744d67cd7",
+    "session_id": "fdf2d086-3be8-426f-9707-1f5eba469c03",
+    "campus_id": "weijinlu",
+    "places": [
+      {
+        "kind": "poi",
+        "poi_id": "fixture-stop-0"
+      },
+      {
+        "kind": "poi",
+        "poi_id": "fixture-stop-1"
+      }
+    ]
+  },
+  "RouteCostResult": {
+    "from_ref": {
+      "kind": "poi",
+      "poi_id": "fixture-stop-0"
+    },
+    "to_ref": {
+      "kind": "poi",
+      "poi_id": "fixture-stop-1"
+    },
+    "distance_m": null,
+    "duration_s": null,
+    "source": "unknown",
+    "verification": "unverified",
+    "checked_at": null,
+    "campus_access": "unverified",
+    "reason": "missing_data"
+  },
+  "SpeechInteractionEvent": {
+    "event_id": "8dd1f03b-59a1-490c-9a1b-7f29f60b9211",
+    "interaction_id": "3f1b6b04-b6d1-450c-b018-43e87b9d3557",
+    "session_id": "fdf2d086-3be8-426f-9707-1f5eba469c03",
+    "campus_id": "weijinlu",
+    "generation_id": "16b9eef1-c6d7-4b44-8165-9d2ce68fc3e5",
+    "request_id": null,
+    "type": "recognition.final",
+    "timestamp": "2026-09-15T01:56:26.714929+00:00",
+    "text": "测试文本：只剩三十分钟"
+  },
+  "EvaluationRecord": {
+    "evaluation_id": "935c19cc-a538-4dd2-a380-827f8b1bd6aa",
+    "case_id": "fixture-only",
+    "dataset_version": "fixture-v1",
+    "build_commit": "4e488899ecd505f44954930026fdc7abb9821c96",
+    "kind": "fixture",
+    "outcome": "not_tested",
+    "task_completed": null,
+    "constraint_passed": null,
+    "evidence_supported": null,
+    "evidence_total": null,
+    "elapsed_ms": null,
+    "model_calls": null,
+    "usage_status": "unknown",
+    "usage": null,
+    "unknown_usage_calls": 1,
+    "map_operations": null
+  }
+}

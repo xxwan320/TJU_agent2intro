@@ -1,0 +1,41 @@
+{
+  "results": [
+    {
+      "id": "U08-fixture",
+      "stopToEditableMs": 98.82799999999997,
+      "text": "我想去郑东图书馆，请帮我规划路线。",
+      "evidence": "browser + mock ASR; fake microphone"
+    },
+    {
+      "id": "edited-send",
+      "answer": "北洋园校区于2015年9月正式落成并投入使用。\n\n读这一段",
+      "evidence": "browser + local answer; no model call"
+    },
+    {
+      "id": "cancel-late",
+      "retained": "取消后保留的新输入"
+    },
+    {
+      "id": "real-asr-config",
+      "status": "BLOCKED",
+      "message": "真实ASR尚未配置：请在后端设置 CAMPUS_ASR_URL、CAMPUS_ASR_MODEL 和 CAMPUS_ASR_API_KEY。",
+      "evidence": "live_http; fake microphone"
+    }
+  ],
+  "requests": [
+    {
+      "encoding": "base64",
+      "mime": "audio/wav",
+      "sampleRate": 16000,
+      "channels": 1,
+      "bytes": 21164
+    },
+    {
+      "encoding": "base64",
+      "mime": "audio/wav",
+      "sampleRate": 16000,
+      "channels": 1,
+      "bytes": 23084
+    }
+  ]
+}

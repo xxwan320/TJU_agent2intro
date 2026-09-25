@@ -1,0 +1,15 @@
+{
+  "json_valid": true,
+  "case_count": 8,
+  "missing_evidence": [],
+  "local_secret_value_leaks": [],
+  "credential_url_files": [],
+  "data_counts": {
+    "poi_count": 106,
+    "with_location": 0,
+    "with_entrances": 0
+  },
+  "source_changed": [],
+  "diagnostic_files": 58,
+  "business_change_check": "tracked SHA256 plus git diff/status; user preexisting untracked worktrees untouched"
+}

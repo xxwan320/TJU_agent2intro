@@ -1,0 +1,324 @@
+{
+  "validation": "real_service_only; no browser map application",
+  "poi": [
+    {
+      "id": "beiyangyuan-datong-center",
+      "ms": 129.8986,
+      "matches": [
+        {
+          "poiId": "beiyangyuan-datong-center",
+          "providerId": "B0FFGJ1TQV",
+          "name": "天津大学北洋园校区大通学生中心",
+          "address": "雅观路135号",
+          "lng": 117.310599,
+          "lat": 38.997576,
+          "matchedAt": 1789634145629
+        }
+      ]
+    },
+    {
+      "id": "beiyangyuan-zhengdong-library",
+      "ms": 109.02359999999953,
+      "matches": [
+        {
+          "poiId": "beiyangyuan-zhengdong-library",
+          "providerId": "B0H04DD3W7",
+          "name": "天津大学北洋园校区郑东图书馆",
+          "address": "海河教育园区雅观路135号",
+          "lng": 117.313812,
+          "lat": 38.997751,
+          "matchedAt": 1789634150853
+        }
+      ]
+    },
+    {
+      "id": "beiyangyuan-alumni-forest",
+      "ms": 104.70359999999891,
+      "error": "destination_not_found"
+    },
+    {
+      "id": "beiyangyuan-bowen-road",
+      "ms": 216.617400000001,
+      "error": "destination_not_found"
+    },
+    {
+      "id": "beiyangyuan-chunhui-garden",
+      "ms": 179.02859999999782,
+      "error": "destination_not_found"
+    }
+  ],
+  "routes": [
+    {
+      "id": "beiyangyuan-zhengdong-library",
+      "ms": 65.84440000000177,
+      "route": {
+        "route_id": "b5d85263-9ef8-4df7-a3f6-53e9056cc80c",
+        "destination_poi_id": "beiyangyuan-zhengdong-library",
+        "provider": "amap",
+        "crs": "GCJ02",
+        "distance_m": 286,
+        "duration_s": 229,
+        "steps": [
+          {
+            "instruction": "向东步行35米右转",
+            "distance_m": 35,
+            "polyline": [
+              [
+                117.310673,
+                38.997496
+              ],
+              [
+                117.31079,
+                38.997569
+              ],
+              [
+                117.310937,
+                38.997578
+              ],
+              [
+                117.310937,
+                38.997578
+              ],
+              [
+                117.311059,
+                38.997578
+              ]
+            ]
+          },
+          {
+            "instruction": "向东南步行30米左转",
+            "distance_m": 30,
+            "polyline": [
+              [
+                117.311059,
+                38.997578
+              ],
+              [
+                117.311246,
+                38.997352
+              ]
+            ]
+          },
+          {
+            "instruction": "向东步行221米到达目的地",
+            "distance_m": 221,
+            "polyline": [
+              [
+                117.311246,
+                38.997348
+              ],
+              [
+                117.311623,
+                38.997348
+              ],
+              [
+                117.311623,
+                38.997348
+              ],
+              [
+                117.31194,
+                38.997344
+              ],
+              [
+                117.31194,
+                38.997344
+              ],
+              [
+                117.31201,
+                38.997344
+              ],
+              [
+                117.313099,
+                38.997313
+              ],
+              [
+                117.313099,
+                38.997313
+              ],
+              [
+                117.313819,
+                38.997318
+              ]
+            ]
+          }
+        ],
+        "campus_access": "unverified",
+        "access_source_refs": []
+      },
+      "origin": {
+        "lng": 117.310599,
+        "lat": 38.997576,
+        "crs": "GCJ02",
+        "source": "manual",
+        "accuracy_m": null,
+        "timestamp": "2026-09-17T08:36:06.678Z"
+      },
+      "destination": {
+        "poiId": "beiyangyuan-zhengdong-library",
+        "providerId": "B0H04DD3W7",
+        "name": "天津大学北洋园校区郑东图书馆",
+        "address": "海河教育园区雅观路135号",
+        "lng": 117.313812,
+        "lat": 38.997751,
+        "matchedAt": 1789634150853
+      }
+    },
+    {
+      "id": "beiyangyuan-datong-center",
+      "ms": 72.36000000000058,
+      "route": {
+        "route_id": "5cf0f120-c418-4e93-95b9-95a0a0447ab5",
+        "destination_poi_id": "beiyangyuan-datong-center",
+        "provider": "amap",
+        "crs": "GCJ02",
+        "distance_m": 285,
+        "duration_s": 228,
+        "steps": [
+          {
+            "instruction": "向西步行220米右转",
+            "distance_m": 220,
+            "polyline": [
+              [
+                117.313815,
+                38.997318
+              ],
+              [
+                117.313103,
+                38.997313
+              ],
+              [
+                117.313103,
+                38.997313
+              ],
+              [
+                117.312014,
+                38.997339
+              ],
+              [
+                117.311944,
+                38.997339
+              ],
+              [
+                117.311944,
+                38.997339
+              ],
+              [
+                117.311628,
+                38.997344
+              ],
+              [
+                117.311628,
+                38.997344
+              ],
+              [
+                117.31125,
+                38.997348
+              ]
+            ]
+          },
+          {
+            "instruction": "向西北步行30米左转",
+            "distance_m": 30,
+            "polyline": [
+              [
+                117.311246,
+                38.997348
+              ],
+              [
+                117.311063,
+                38.997578
+              ]
+            ]
+          },
+          {
+            "instruction": "向西步行35米到达目的地",
+            "distance_m": 35,
+            "polyline": [
+              [
+                117.311059,
+                38.997578
+              ],
+              [
+                117.310942,
+                38.997578
+              ],
+              [
+                117.310942,
+                38.997578
+              ],
+              [
+                117.310794,
+                38.997574
+              ],
+              [
+                117.310677,
+                38.9975
+              ]
+            ]
+          }
+        ],
+        "campus_access": "unverified",
+        "access_source_refs": []
+      },
+      "origin": {
+        "lng": 117.313819,
+        "lat": 38.997318,
+        "crs": "GCJ02",
+        "source": "manual",
+        "accuracy_m": null,
+        "timestamp": "2026-09-17T08:36:06.678Z"
+      },
+      "destination": {
+        "poiId": "beiyangyuan-datong-center",
+        "providerId": "B0FFGJ1TQV",
+        "name": "天津大学北洋园校区大通学生中心",
+        "address": "雅观路135号",
+        "lng": 117.310599,
+        "lat": 38.997576,
+        "matchedAt": 1789634145629
+      }
+    }
+  ],
+  "origin_source": "public campus point from previous recorded Amap result; manual test fixture, not device GPS",
+  "budget": {
+    "origin": "frontend",
+    "kind": "application_operations",
+    "platform_quota_debit": null,
+    "counters": {
+      "map_load": {
+        "initiated": 0,
+        "completed": 0,
+        "failed": 0,
+        "cancelled": 0,
+        "blocked": 0
+      },
+      "geolocation": {
+        "initiated": 0,
+        "completed": 0,
+        "failed": 0,
+        "cancelled": 0,
+        "blocked": 0
+      },
+      "poi_search": {
+        "initiated": 5,
+        "completed": 2,
+        "failed": 3,
+        "cancelled": 0,
+        "blocked": 0
+      },
+      "walking_route": {
+        "initiated": 2,
+        "completed": 2,
+        "failed": 0,
+        "cancelled": 0,
+        "blocked": 0
+      }
+    },
+    "limits": {
+      "map_load": 0,
+      "geolocation": 0,
+      "poi_search": 6,
+      "walking_route": 2
+    }
+  }
+}

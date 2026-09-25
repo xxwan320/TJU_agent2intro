@@ -1,0 +1,17 @@
+{
+  "status": 200,
+  "synthesis_ms": 2126.886599999125,
+  "response": {
+    "request_id": "5d94743b-71a3-4ad5-91b3-8f93138d7b6d",
+    "utterance_id": "502d0ba5-a041-4f7b-b3c5-2a11371f9b2a",
+    "audio_url": "/api/speech/audio/614a5726b9c14d70958b525766c92331",
+    "mime_type": "audio/mpeg",
+    "timestamps": "none"
+  },
+  "audio_playing": null,
+  "human_listening": null,
+  "avatar_observed": null,
+  "audio_status": 200,
+  "audio_bytes": 92016,
+  "sha256": "33be0655842cecb782058f14cba0d50e91f19e81af92ec0b7bc55be43cb927f0"
+}

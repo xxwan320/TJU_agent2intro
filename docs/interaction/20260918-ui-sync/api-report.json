@@ -1,0 +1,26 @@
+{
+  "catalog": {
+    "weijinlu": 22,
+    "beiyangyuan": 22
+  },
+  "video": {
+    "video": {
+      "id": "zhengdong-photo-tour-v1",
+      "poi_id": "beiyangyuan-zhengdong-library",
+      "campus_id": "beiyangyuan",
+      "src": "/api/knowledge/videos/file/beiyangyuan-zhengdong-library-1.mp4",
+      "mime": "video/mp4",
+      "caption": "郑东图书馆 · 实景照片导览片",
+      "kind": "photo_film",
+      "poster": "/assets/campus/photos/beiyangyuan-zhengdong-library-1.jpg",
+      "source": "data/reference_photos/manifest.csv 中郑东图书馆的三张用户照片"
+    }
+  },
+  "range": {
+    "status": 206,
+    "mime": "video/mp4",
+    "content_range": "bytes 0-1023/305996",
+    "bytes": 1024
+  },
+  "served_schema_matches": true
+}

@@ -4,7 +4,7 @@ from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_prefix="CAMPUS_", extra="ignore")
-    llm_url: str = "http://111.32.22.35:32592/mgate/v1/chat/completions"
+    llm_url: str = "https://111.32.22.35:32592/mgate/v1/chat/completions"
     llm_model: str = "glm-5.1"
     llm_api_key: SecretStr = SecretStr("")
     asr_url: str = ""
@@ -18,6 +18,7 @@ class Settings(BaseSettings):
     web_search_enabled: bool = True
     web_search_timeout: float = 12.0
     web_search_backend: str = "bing,duckduckgo,brave"
+    tour_model_suggestions: bool = False
     @property
     def sdk_base_url(self) -> str:
         suffix = "/chat/completions"

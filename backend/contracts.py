@@ -1,4 +1,4 @@
-"""M-owned wire schema v1.1.0. UTC ISO-8601 dates; no client system prompt/history."""
+"""Wire schema v1.1.0 using UTC ISO-8601 dates."""
 from typing import Literal
 from uuid import UUID
 from pydantic import BaseModel, ConfigDict, Field

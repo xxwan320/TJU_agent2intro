@@ -64,6 +64,10 @@ def _proxy_payload(response,callback):
  except (ValueError,TypeError):raise DomainError("UPSTREAM_PROTOCOL_ERROR","高德响应格式无效",503) from None
 
 def _poi(pid):
+ searchable=getattr(knowledge,"is_map_searchable",None)
+ if searchable and not searchable(pid):return None
+ visible=getattr(knowledge,"is_frontend_visible",None)
+ if visible and not visible(pid):return None
  getter=getattr(knowledge,"get_poi",None)
  if getter:
   try:return getter(pid)

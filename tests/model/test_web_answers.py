@@ -99,3 +99,14 @@ def test_empty_local_corpus_still_calls_model_and_stream_completes(monkeypatch):
     assert events[-1]["type"]=="completed" and "通用参观建议" in events[-1]["payload"]["response"]["answer"]
     assert events[-1]["payload"]["response"]["model"]=="glm-5.1"
     asyncio.run(http.aclose())
+
+def test_padded_source_markers_link_existing_evidence_without_leaking_marker():
+    answer, refs = _citations("规则已注明适用期。 [source: one ]", [source()], True, uuid4())
+    assert answer == "规则已注明适用期。"
+    assert [r.id for r in refs] == ["one"]
+
+def test_grouped_source_ids_from_live_response_do_not_leak_into_text():
+    answer, refs = _citations('当前地点介绍。\n[source: one, one, unknown]', [source()], True, uuid4())
+    assert '[source:' not in answer
+    assert answer.startswith('当前地点介绍。')
+    assert [r.id for r in refs] == ['one']

@@ -1,0 +1,55 @@
+{
+  "provenance": "用户上传的源码读取＋轻量运行探针报告；本会话未复跑，未收到chat_1..3.json等原始证据",
+  "report_date": "2026-09-17",
+  "head": "c413c1c4493a6dc327477a83aba04f3eff742ff7",
+  "branch": "fix/ip-route-autoplanning",
+  "knowledge_version": "sha256:d05f72a518c3",
+  "reported_cases": [
+    {
+      "case_id": "K01",
+      "first_effective_answer_ms": 16586.46,
+      "complete_ms": 16695.39,
+      "web_stage_ms": 12015,
+      "local_retrieval_ms": 16,
+      "upstream_first_body_stage_ms": 4407,
+      "result_summary": "日期2015年9月正确，来源对应；联网超时后回本地",
+      "raw_model_answer": null
+    },
+    {
+      "case_id": "E01",
+      "first_effective_answer_ms": 29624.16,
+      "complete_ms": 30273.34,
+      "web_stage_ms": 6563,
+      "prompt_tokens": 4516,
+      "result_summary": "检索污染；没有证据据此声称已发生事实幻觉",
+      "raw_model_answer": null
+    },
+    {
+      "case_id": "U01",
+      "first_effective_answer_ms": 22321.3,
+      "complete_ms": 23962.27,
+      "web_stage_ms": 6437,
+      "prompt_tokens": 4077,
+      "result_summary": "未编造展厅时间票价，引用不匹配",
+      "raw_model_answer": null
+    }
+  ],
+  "route_snapshot": {
+    "distance_m": 286,
+    "duration_s": 229,
+    "step_count": 3,
+    "proxy_elapsed_ms": 92.09,
+    "map_applied_ms": null,
+    "purpose": "仅绑定录制回放，不作为未来实时路线gold"
+  },
+  "tts_snapshot": {
+    "application_elapsed_ms": 1763.82,
+    "size_bytes": 20592,
+    "sample_rate_hz": 24000,
+    "duration_s": 3.432,
+    "browser_playing_ms": null,
+    "supplier_attempts": null
+  },
+  "new_runtime_tests_in_this_session": 0,
+  "data_images_received_in_this_session": 0
+}
