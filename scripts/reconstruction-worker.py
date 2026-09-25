@@ -5,7 +5,7 @@ root=Path(__file__).resolve().parents[1];home=root/'.reconstruction'
 sys.path[:0]=[str(home/'compat'),str(home/'TripoSR')]
 os.environ['HF_HUB_DISABLE_TELEMETRY']='1'
 jobfile=Path(sys.argv[1]);job=json.loads(jobfile.read_text());folder=jobfile.parent
-start=time.time();times={}
+start=time.time();times={};fast=job.get('quality','fast')=='fast';resolution=128 if fast else 256
 def phase(name):
  if (folder/'cancel').exists():raise InterruptedError('cancelled')
  (folder/'phase.json').write_text(json.dumps({'stage':name,'elapsedSeconds':time.time()-start}));times[name]=time.time()-start
@@ -15,26 +15,25 @@ try:
  import torch,numpy as np,trimesh
  from PIL import Image,ImageOps
  from tsr.system import TSR
- from tsr.utils import resize_foreground
+ from reconstruction_preprocess import prepare_image
  assert torch.cuda.is_available(),'CUDA unavailable'
  probe=torch.randn(64,64,device='cuda');assert torch.isfinite(probe@probe).all().item()
  torch.cuda.reset_peak_memory_stats()
  im=ImageOps.exif_transpose(Image.open(job['imagePath'])).convert('RGBA')
- # Preserve supplied alpha. Background removal is optional; original remains untouched.
- if job.get('removeBackground',True) and im.getextrema()[3]==(255,255):
+ def remove_background(image):
   import rembg
-  im=rembg.remove(im,session=rembg.new_session('u2net',providers=['CPUExecutionProvider']))
- alpha=np.asarray(im)[:,:,3];coverage=float((alpha>127).mean())
- if coverage<.03:raise ValueError('Foreground mask removed the subject; use the original-image profile or crop manually')
- im=resize_foreground(im,.9);a=np.asarray(im).astype(np.float32)/255
- rgb=a[:,:,:3]*a[:,:,3:4]+.5*(1-a[:,:,3:4]);im=Image.fromarray((rgb*255).astype(np.uint8));im.save(folder/'processed.png')
+  return rembg.remove(image,session=rembg.new_session('u2netp' if fast else 'u2net',providers=['CPUExecutionProvider']))
+ im,preprocessing=prepare_image(im,job.get('removeBackground',True),remove_background,'u2netp' if fast else 'u2net')
+ coverage=preprocessing['foregroundCoverage'];im.save(folder/'processed.png')
+ (folder/'preprocessing.json').write_text(json.dumps(preprocessing,ensure_ascii=False),encoding='utf-8')
  phase('loading')
  weights=json.loads((home/'weights.json').read_text());model=TSR.from_pretrained(weights['path'],config_name='config.yaml',weight_name='model.ckpt')
  model.renderer.set_chunk_size(4096);model.to('cuda')
  phase('reconstructing')
- with torch.no_grad():codes=model([im],device='cuda')
+ with torch.no_grad(),torch.autocast(device_type='cuda',dtype=torch.float16,enabled=fast):codes=model([im],device='cuda')
  torch.cuda.synchronize();phase('exporting')
- meshes=model.extract_mesh(codes,True,resolution=256);mesh=meshes[0]
+ with torch.no_grad(),torch.autocast(device_type='cuda',dtype=torch.float16,enabled=fast):meshes=model.extract_mesh(codes,True,resolution=resolution)
+ mesh=meshes[0]
  # skimage and torchmcubes use opposite face winding. Repair each component;
  # otherwise a valid GLB renders its inner faces and appears dark or perforated.
  mesh.fix_normals(multibody=True)
@@ -54,7 +53,7 @@ try:
   assert (m.extents>1e-5).all()
   assert m.visual.kind in ('vertex','texture','face')
  peak=torch.cuda.max_memory_allocated();phase('succeeded')
- data={'stage':'succeeded','inputSha256':digest(job['imagePath']),'sha256':digest(folder/'model.glb'),'bytes':(folder/'model.glb').stat().st_size,'bounds':scene.bounds.tolist(),'extents':scene.extents.tolist(),'vertices':sum(len(m.vertices) for m in parts),'faces':sum(len(m.faces) for m in parts),'colors':True,'upAxis':'Y','foregroundCoverage':coverage,'timings':times,'totalSeconds':time.time()-start,'peakCudaBytes':peak,'environment':{'python':platform.python_version(),'torch':torch.__version__,'cuda':torch.version.cuda,'gpu':torch.cuda.get_device_name(),'capability':torch.cuda.get_device_capability(),'marchingCubes':'scikit-image CPU compatibility adapter','source':json.loads((home/'source-version.json').read_text()),'weightsRevision':weights['revision']},'quality':'Generated geometry; visual review required; hidden surfaces inferred'}
+ data={'stage':'succeeded','generator':'triposr','qualityProfile':job.get('quality','fast'),'meshResolution':resolution,'precision':'autocast-fp16' if fast else 'fp32','inputSha256':digest(job['imagePath']),'sha256':digest(folder/'model.glb'),'bytes':(folder/'model.glb').stat().st_size,'bounds':scene.bounds.tolist(),'extents':scene.extents.tolist(),'vertices':sum(len(m.vertices) for m in parts),'faces':sum(len(m.faces) for m in parts),'colors':True,'upAxis':'Y','foregroundCoverage':coverage,'preprocessing':preprocessing,'timings':times,'totalSeconds':time.time()-start,'peakCudaBytes':peak,'environment':{'python':platform.python_version(),'torch':torch.__version__,'cuda':torch.version.cuda,'gpu':torch.cuda.get_device_name(),'capability':torch.cuda.get_device_capability(),'marchingCubes':'scikit-image CPU compatibility adapter','source':json.loads((home/'source-version.json').read_text()),'weightsRevision':weights['revision']},'quality':'图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。'}
  (folder/'result.json').write_text(json.dumps(data,indent=2))
 except BaseException as e:
  import traceback;traceback.print_exc()

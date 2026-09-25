@@ -21,3 +21,6 @@ data/user_knowledge/
 # Local reconstruction environment and private generated assets
 .reconstruction/
 .runtime/
+
+# Isolated local visual-description weights and dependencies
+.vision/
