@@ -16,3 +16,4 @@
 /* Keep the active reconstruction workspace clear; restore the roaming guide when it leaves view. */
 body.reconstruction-focused [data-avatar-roam]{visibility:hidden!important;pointer-events:none!important}
 body.reconstruction-focused .open-guide{top:12px;bottom:auto;right:12px;padding:8px 12px;font-size:12px}
+.model-mask-editor{margin:1rem 0;padding:1rem;border:1px solid #a8c5bd;border-radius:12px;background:#f7faf9}.model-mask-editor p{font-size:.9rem;color:#52635f}.model-mask-canvas{display:block;width:100%;max-height:65vh;object-fit:contain;touch-action:none;background:repeating-conic-gradient(#ddd 0% 25%,white 0% 50%) 50%/18px 18px;cursor:crosshair}.model-mask-tools{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:.75rem}.model-mask-tools label{display:flex;align-items:center;gap:.4rem}.model-mask-tools input[type=range]{width:100px}

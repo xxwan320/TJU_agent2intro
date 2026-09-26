@@ -58,9 +58,53 @@ def project_visible_colors(mesh,image,folder):
     w,h=image.size;z=zbuffer(xy,p[:,2],mesh.faces,w,h)
     coord=np.round(xy).astype('int32');inside=(coord[:,0]>=0)&(coord[:,0]<w)&(coord[:,1]>=0)&(coord[:,1]<h)
     safe=coord.copy();safe[:,0]=safe[:,0].clip(0,w-1);safe[:,1]=safe[:,1].clip(0,h-1)
-    tolerance=max(np.ptp(v,axis=0))*.01
+    tolerance=max(mesh.extents)*.01
     visible=inside & (p[:,2]>=z[safe[:,1],safe[:,0]]-tolerance) & alpha[safe[:,1],safe[:,0]] & ((mesh.vertex_normals@basis[:,2])>0)
     colors=np.tile([170,178,188,255],(len(v),1)).astype('uint8');colors[visible,:3]=rgba[safe[visible,1],safe[visible,0],:3]
     mesh.visual.vertex_colors=colors
     overlay=rgba[:,:,:3].copy();boundary=np.zeros((h,w),'uint8');cv2.drawContours(boundary,[cv2.convexHull(np.round(xy).astype('int32'))],-1,255,2);overlay[boundary>0]=[255,0,150];Image.fromarray(overlay).save(folder/'projection-overlay.png')
-    return {'method':'orthographic silhouette camera fit plus z-buffer visible-only vertex colors','cameraAzimuthDeg':az,'cameraElevationDeg':el,'pixelsPerModelUnit':float(scale),'convexSilhouetteIoU':float(iou),'observedVertexFraction':float(visible.mean()),'hiddenSurfaceColor':'neutral gray','cameraIsMeasured':False,'limitations':'Camera estimated from one silhouette, ambiguous under symmetry; textures and geometry remain unverified.'}
+    report={'method':'orthographic silhouette camera fit plus z-buffer visible-only vertex colors','cameraAzimuthDeg':az,'cameraElevationDeg':el,'pixelsPerModelUnit':float(scale),'convexSilhouetteIoU':float(iou),'observedVertexFraction':float(visible.mean()),'hiddenSurfaceColor':'neutral gray','cameraIsMeasured':False,'limitations':'Camera estimated from one silhouette, ambiguous under symmetry; hidden textures and geometry remain unverified.'}
+    fit={'basis':basis,'projectedVertices':p,'imageCoordinates':xy,'azimuth':az,'elevation':el,'iou':iou}
+    return report,fit,z
+
+def bake_visible_texture(mesh,image,folder,fit,depth_map):
+    """Bake the observed camera view into UV coordinates; keep unseen faces neutral gray."""
+    import cv2, trimesh
+    from trimesh.visual.material import SimpleMaterial
+    from trimesh.visual.texture import TextureVisuals
+    rgba=np.asarray(image.convert('RGBA'));alpha=rgba[:,:,3]>127;ys,xs=np.nonzero(alpha)
+    if not len(xs):raise ValueError('Cannot bake a texture from an empty foreground mask')
+    vertices=mesh.vertices;faces=mesh.faces
+    basis=fit['basis'];p=fit['projectedVertices'];xy=fit['imageCoordinates'];az=fit['azimuth'];el=fit['elevation'];iou=fit['iou']
+    h,w=alpha.shape
+    tri_xy=xy[faces];centers=tri_xy.mean(axis=1);tri_depth=p[faces,2].mean(axis=1)
+    coords=np.round(centers).astype('int32');inside=(coords[:,0]>=0)&(coords[:,0]<w)&(coords[:,1]>=0)&(coords[:,1]<h)
+    safe=coords.copy();safe[:,0]=safe[:,0].clip(0,w-1);safe[:,1]=safe[:,1].clip(0,h-1)
+    face_normals=mesh.face_normals
+    tolerance=max(mesh.extents)*.01
+    visible=inside&(tri_depth>=depth_map[safe[:,1],safe[:,0]]-tolerance)&alpha[safe[:,1],safe[:,0]]&((face_normals@basis[:,2])>0)
+    # Composite transparent background pixels before baking. RGB values beneath
+    # alpha=0 are commonly black; GPU texture filtering can otherwise bleed that
+    # black into the silhouette edge even when the face center is foreground.
+    pad=8
+    neutral=Image.new('RGBA',(w,h),(170,178,188,255))
+    neutral.alpha_composite(image.convert('RGBA'))
+    atlas=Image.new('RGB',(w+pad*2,h+pad*2),(170,178,188))
+    atlas.paste(neutral.convert('RGB'),(pad,pad))
+    atlas_path=folder/'texture-atlas.png';atlas.save(atlas_path,optimize=True)
+    # Share vertices within the observed and unobserved regions; duplicate only at
+    # their boundary instead of tripling every face's geometry.
+    corner_mode=np.repeat(visible.astype(np.int64),3)
+    unique_keys,inverse=np.unique(faces.reshape(-1)*2+corner_mode,return_inverse=True)
+    source_indices=unique_keys//2;observed_corners=(unique_keys%2)==1
+    split_vertices=vertices[source_indices];split_normals=mesh.vertex_normals[source_indices]
+    split_uv=np.empty((len(source_indices),2),dtype=np.float32)
+    split_uv[:]=[(w+pad+pad/2)/(w+2*pad),1-(h+pad+pad/2)/(h+2*pad)]
+    if observed_corners.any():
+        sample=np.clip(xy[source_indices[observed_corners]],[[0,0]],[w-1,h-1])
+        split_uv[observed_corners,0]=(sample[:,0]+pad)/(w+2*pad)
+        split_uv[observed_corners,1]=1-(sample[:,1]+pad)/(h+2*pad)
+    split_faces=inverse.reshape(-1,3)
+    material=SimpleMaterial(image=atlas,diffuse=[255,255,255,255],glossiness=1.0)
+    textured=trimesh.Trimesh(vertices=split_vertices,faces=split_faces,vertex_normals=split_normals,visual=TextureVisuals(uv=split_uv,material=material),process=False)
+    return textured,{'method':'single-view camera projection baked to UV texture','textureSize':[atlas.width,atlas.height],'textureFile':'embedded in model.glb','observedFaceFraction':float(visible.mean()),'hiddenSurfaceColor':'neutral gray','cameraAzimuthDeg':az,'cameraElevationDeg':el,'silhouetteIoU':float(iou),'limitations':'Only faces visible in the input photograph receive photo texture; hidden and occluded surfaces remain neutral gray.'}

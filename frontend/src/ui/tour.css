@@ -193,6 +193,9 @@
 .tour-composer-foot .tour-voice-more{margin-left:auto}
 .tour-chat-clear{border:1px solid var(--line);background:#fff;border-radius:8px;padding:3px 8px;font-size:12px;color:var(--muted)}
 .tour-chat-clear:hover{color:var(--danger);border-color:var(--danger)}
+.document-pick-button{border:0;background:transparent;padding:0 4px;min-height:24px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer}
+.document-pick-button:hover:not(:disabled){color:var(--brand);text-decoration:underline}
+.document-pick-button:disabled{opacity:.5;cursor:not-allowed}
 
 /* Composer icon buttons: strip legacy button chrome, keep icons centered */
 .tour-workspace .composer-icon{border:0;padding:0;min-height:0;display:grid;place-items:center;background:transparent}

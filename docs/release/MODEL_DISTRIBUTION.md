@@ -55,6 +55,8 @@ Shap-E相关权重合计约3.10GB，按需获取可保留文字概念能力并�
 - `scripts/install-reconstruction.py`：现有基础重建环境和TripoSR。
 - `scripts/install-reconstruction-extras.py`：现有可选文字生成与图像描述依赖。
 - `scripts/install-reconstruction-hunyuan.py`：Hunyuan mini；`--full`选择完整模型。
+- Hunyuan 单图 GLB 将输入照片烘焙为嵌入式 UV 纹理，只给相机可见面贴图；未观测面保留中性灰。纹理提升不代表几何更准确，多角度输入仍是覆盖不同立面的必要条件。
+- Hunyuan 安装器仅在源码、依赖与权重全部就绪后写入本地 `ready.json`，用于显示可选提供器；安装完成不代表某个输入的模型质量已经通过审核。单图自动默认仍为 TripoSR。
 - `scripts/install-reconstruction-da3.py`：固定 DA3-SMALL 源码及权重，独立环境；复用已安装的基础重建依赖，不更改 Web 环境。安装本身不等于通过真实推理或自动创建质量验收记录。
 
 准备阶段不执行这些下载或安装入口。最终发布前需要核对可选组件分离及LFS指针检测，避免仅为使用视觉描述而被迫下载Shap-E，也避免仅凭占位指针创建ready记录。

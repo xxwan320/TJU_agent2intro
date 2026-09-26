@@ -2,7 +2,7 @@
 from PIL import Image, ImageOps
 import numpy as np
 
-def prepare_image(original, remove_background=True, remover=None, profile_name="u2net"):
+def prepare_image(original, remove_background=True, remover=None, profile_name="u2net", return_foreground=False):
     original = ImageOps.exif_transpose(original).convert('RGBA')
     if original.width < 2 or original.height < 2:
         raise ValueError('图片至少需要2×2像素')
@@ -37,4 +37,5 @@ def prepare_image(original, remove_background=True, remover=None, profile_name="
     canvas = Image.new('RGBA', (side, side), (128,128,128,0))
     canvas.paste(im, ((side-im.width)//2, (side-im.height)//2))
     background = Image.new('RGBA', canvas.size, (128,128,128,255))
-    return Image.alpha_composite(background,canvas).convert('RGB'), info
+    prepared=Image.alpha_composite(background,canvas).convert('RGB')
+    return (prepared,info,canvas) if return_foreground else (prepared,info)

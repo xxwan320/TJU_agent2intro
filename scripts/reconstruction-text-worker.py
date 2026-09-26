@@ -29,6 +29,11 @@ try:
  with torch.no_grad():decoded=decoder.renderer.render_views(AttrDict(cameras=cam),params=decoder.bottleneck_to_params(latents[0][None]),options=AttrDict(rendering_mode='stf',render_with_direction=False))
  meshdata=decoded.raw_meshes[0].tri_mesh();colors=np.stack([meshdata.vertex_channels[k] for k in 'RGB'],axis=-1)
  mesh=trimesh.Trimesh(vertices=meshdata.verts,faces=meshdata.faces,vertex_colors=(colors.clip(0,1)*255).astype(np.uint8),process=False)
+ # Shap-E meshes can have small, high-frequency bumps from voxel decoding.
+ # A short Taubin pass suppresses those ripples while limiting the shrinkage
+ # of ordinary Laplacian smoothing. Keep colors and topology unchanged.
+ smooth_passes=6
+ trimesh.smoothing.filter_taubin(mesh,lamb=.45,nu=.47,iterations=smooth_passes)
  mesh.fix_normals(multibody=True);mesh.apply_transform(trimesh.transformations.rotation_matrix(-np.pi/2,[1,0,0]))
  def material(tree):
   tree['materials']=[{'pbrMetallicRoughness':{'baseColorFactor':[1,1,1,1],'metallicFactor':0,'roughnessFactor':1}}]
@@ -39,7 +44,7 @@ try:
  for part in parts:
   assert len(part.vertices)>3 and len(part.faces)>3 and np.isfinite(part.vertices).all() and (part.extents>1e-5).all()
   assert part.faces.min()>=0 and part.faces.max()<len(part.vertices) and part.visual.kind in ('vertex','texture','face')
- result={'stage':'succeeded','generator':'shap-e-text','conditionPrompt':job['prompt'],'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'bytes':path.stat().st_size,'bounds':scene.bounds.tolist(),'extents':scene.extents.tolist(),'vertices':sum(len(p.vertices) for p in parts),'faces':sum(len(p.faces) for p in parts),'colors':True,'upAxis':'Y','timings':times,'totalSeconds':time.monotonic()-started,'peakCudaBytes':torch.cuda.max_memory_allocated(),'environment':{'torch':torch.__version__,'gpu':torch.cuda.get_device_name(),'source':json.loads((root/'.reconstruction/shap-e-version.json').read_text())},'quality':'根据自然语言条件生成的概念模型；非测绘还原，未见结构为推断。'}
+ result={'stage':'succeeded','generator':'shap-e-text','conditionPrompt':job['prompt'],'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'bytes':path.stat().st_size,'bounds':scene.bounds.tolist(),'extents':scene.extents.tolist(),'vertices':sum(len(p.vertices) for p in parts),'faces':sum(len(p.faces) for p in parts),'colors':True,'surfacePolish':{'method':'Taubin smoothing','passes':smooth_passes,'note':'Reduces small mesh ripples; does not add texture detail.'},'upAxis':'Y','timings':times,'totalSeconds':time.monotonic()-started,'peakCudaBytes':torch.cuda.max_memory_allocated(),'environment':{'torch':torch.__version__,'gpu':torch.cuda.get_device_name(),'source':json.loads((root/'.reconstruction/shap-e-version.json').read_text())},'quality':'根据自然语言条件生成的概念模型；非测绘还原，未见结构为推断。'}
  (folder/'result.json').write_text(json.dumps(result,ensure_ascii=False),encoding='utf-8')
 except BaseException as exc:
  import traceback;traceback.print_exc();(folder/'result.json').write_text(json.dumps({'stage':'cancelled' if isinstance(exc,InterruptedError) else 'failed','error':str(exc),'errorType':type(exc).__name__}),encoding='utf-8');sys.exit(2)

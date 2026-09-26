@@ -24,7 +24,7 @@ try:
  def remove_background(image):
   import rembg
   return rembg.remove(image,session=rembg.new_session('u2netp' if fast else 'u2net',providers=['CPUExecutionProvider']))
- im,preprocessing=prepare_image(im,job.get('removeBackground',True),remove_background,'u2netp' if fast else 'u2net')
+ im,preprocessing,texture_source=prepare_image(im,job.get('removeBackground',True),remove_background,'u2netp' if fast else 'u2net',return_foreground=True)
  coverage=preprocessing['foregroundCoverage'];im.save(folder/'processed.png')
  (folder/'preprocessing.json').write_text(json.dumps(preprocessing,ensure_ascii=False),encoding='utf-8')
  phase('loading')
@@ -41,11 +41,22 @@ try:
  # TripoSR Z-up -> glTF Y-up, preserve orientation for separately calibrated heading.
  mesh.apply_transform(trimesh.transformations.rotation_matrix(-np.pi/2,[1,0,0]))
  mesh.apply_transform(trimesh.transformations.rotation_matrix(np.pi/2,[0,1,0]))
+ phase('projecting')
+ from hunyuan_mesh_review import bake_visible_texture,project_visible_colors
+ original_vertex_colors=mesh.visual.vertex_colors.copy()
+ projection,projection_fit,depth_map=project_visible_colors(mesh,texture_source,folder)
+ textured_mesh,texture_report=bake_visible_texture(mesh,texture_source,folder,projection_fit,depth_map)
+ projection['texture']=texture_report
  def material(tree):
   tree['materials']=[{'name':'Reconstructed vertex colors','pbrMetallicRoughness':{'baseColorFactor':[1,1,1,1],'metallicFactor':0,'roughnessFactor':1}}]
   for m in tree['meshes']:
    for primitive in m['primitives']:primitive['material']=0
- (folder/'model.glb').write_bytes(trimesh.exchange.gltf.export_glb(mesh.scene(),tree_postprocessor=material))
+ if texture_report['observedFaceFraction']>=.005:
+  textured_mesh.export(folder/'model.glb')
+ else:
+  mesh.visual.vertex_colors=original_vertex_colors
+  projection['texture']['fallback']='Too few faces aligned with the visible foreground; retained TripoSR vertex colors.'
+  (folder/'model.glb').write_bytes(trimesh.exchange.gltf.export_glb(mesh.scene(),tree_postprocessor=material))
  phase('validating')
  scene=trimesh.load(folder/'model.glb',force='scene');parts=list(scene.geometry.values());assert parts
  for m in parts:
@@ -54,7 +65,7 @@ try:
   assert (m.extents>1e-5).all()
   assert m.visual.kind in ('vertex','texture','face')
  peak=torch.cuda.max_memory_allocated();phase('succeeded')
- data={'stage':'succeeded','generator':'triposr','qualityProfile':job.get('quality','fast'),'meshResolution':resolution,'precision':'autocast-fp16' if fast else 'fp32','inputSha256':digest(job['imagePath']),'sha256':digest(folder/'model.glb'),'bytes':(folder/'model.glb').stat().st_size,'bounds':scene.bounds.tolist(),'extents':scene.extents.tolist(),'vertices':sum(len(m.vertices) for m in parts),'faces':sum(len(m.faces) for m in parts),'colors':True,'upAxis':'Y','foregroundCoverage':coverage,'preprocessing':preprocessing,'timings':times,'totalSeconds':time.time()-start,'peakCudaBytes':peak,'environment':{'python':platform.python_version(),'torch':torch.__version__,'cuda':torch.version.cuda,'gpu':torch.cuda.get_device_name(),'capability':torch.cuda.get_device_capability(),'marchingCubes':'scikit-image CPU compatibility adapter','source':json.loads((home/'source-version.json').read_text()),'weightsRevision':weights['revision']},'quality':'图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。'}
+ data={'stage':'succeeded','generator':'triposr','qualityProfile':job.get('quality','fast'),'meshResolution':resolution,'precision':'autocast-fp16' if fast else 'fp32','inputSha256':digest(job['imagePath']),'sha256':digest(folder/'model.glb'),'bytes':(folder/'model.glb').stat().st_size,'bounds':scene.bounds.tolist(),'extents':scene.extents.tolist(),'vertices':sum(len(m.vertices) for m in parts),'faces':sum(len(m.faces) for m in parts),'colors':True,'upAxis':'Y','foregroundCoverage':coverage,'preprocessing':preprocessing,'projection':projection,'timings':times,'totalSeconds':time.time()-start,'peakCudaBytes':peak,'environment':{'python':platform.python_version(),'torch':torch.__version__,'cuda':torch.version.cuda,'gpu':torch.cuda.get_device_name(),'capability':torch.cuda.get_device_capability(),'marchingCubes':'scikit-image CPU compatibility adapter','source':json.loads((home/'source-version.json').read_text()),'weightsRevision':weights['revision']},'quality':'Single-view image-conditioned candidate with photo texture projected onto visible faces; hidden geometry and texture are inferred. Check the result against the source image.'}
  (folder/'result.json').write_text(json.dumps(data,indent=2))
 except BaseException as e:
  import traceback;traceback.print_exc()

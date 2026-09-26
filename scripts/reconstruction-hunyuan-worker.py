@@ -25,7 +25,7 @@ def main(jobfile):
     import cv2, numpy as np, torch, trimesh
     from PIL import Image, ImageOps
     from hy3dgen.shapegen import Hunyuan3DDiTFlowMatchingPipeline
-    from hunyuan_mesh_review import project_visible_colors, render_review
+    from hunyuan_mesh_review import bake_visible_texture, project_visible_colors, render_review
     folder=jobfile.parent;job=json.loads(jobfile.read_text('utf-8'))
     started=time.monotonic();times={};params={};generator=job.get('provider','hunyuan3d-2mini')
     def phase(stage,**extra):
@@ -34,7 +34,8 @@ def main(jobfile):
         (folder/'phase.json').write_text(json.dumps({'stage':stage,'elapsedSeconds':times[stage],**extra}),encoding='utf-8')
         print(stage,round(times[stage],2),extra,flush=True)
     try:
-        if generator not in ('hunyuan3d-2mini','hunyuan3d-2'):raise ValueError('Unsupported Hunyuan shape provider')
+        turbo=generator=='hunyuan3d-2mini-turbo'
+        if generator not in ('hunyuan3d-2mini','hunyuan3d-2','hunyuan3d-2mini-turbo'):raise ValueError('Unsupported Hunyuan shape provider')
         phase('preprocessing')
         original=ImageOps.exif_transpose(Image.open(job['imagePath'])).convert('RGBA')
         original.thumbnail((1536,1536))
@@ -69,11 +70,17 @@ def main(jobfile):
         torch.set_num_threads(4);torch.cuda.reset_peak_memory_stats()
         free,total=torch.cuda.mem_get_info()
         if free<3.5*1024**3:raise RuntimeError('Insufficient free CUDA memory for staged image reconstruction')
-        weights=json.loads((HOME/('weights-full.json' if generator=='hunyuan3d-2' else 'weights.json')).read_text('utf-8'))
+        weights=json.loads((HOME/('weights-full.json' if generator=='hunyuan3d-2' else 'weights-turbo.json' if turbo else 'weights.json')).read_text('utf-8'))
         source=json.loads((HOME/'source-version.json').read_text('utf-8'))
         modeldir=Path(weights['path'])/weights['subfolder']
-        pipeline=Hunyuan3DDiTFlowMatchingPipeline.from_single_file(str(modeldir/'model.fp16.safetensors'),str(modeldir/'config.yaml'),device='cpu',dtype=torch.float16,use_safetensors=True)
-        volume_decoder=job.get('volumeDecoder','hierarchical')
+        if turbo:os.environ['HY3DGEN_MODELS']=str(HOME/'model-cache')
+        pipeline=Hunyuan3DDiTFlowMatchingPipeline.from_single_file(str(modeldir/'model.fp16.safetensors'),str(modeldir/'config.yaml'),device='cpu',dtype=torch.float16,use_safetensors=True,from_pretrained_kwargs={'model_path':'tencent/Hunyuan3D-2mini','subfolder':weights['subfolder'],'use_safetensors':True})
+        if turbo:
+            phase('enabling_flashvdm')
+            pipeline.enable_flashvdm()
+        # The hierarchical decoder can produce empty r257 batches on valid
+        # shapes (then torch.cat raises). Vanilla decoding is slower but robust.
+        volume_decoder=job.get('volumeDecoder','vanilla')
         if volume_decoder=='hierarchical':
             from hy3dgen.shapegen.models.autoencoders import HierarchicalVolumeDecoding
             pipeline.vae.volume_decoder=HierarchicalVolumeDecoding()
@@ -97,13 +104,13 @@ def main(jobfile):
         processed=pipeline.image_processor(masked,to_tensor=False)
         Image.fromarray(processed['image']).save(folder/'processed.png')
         Image.fromarray(processed['mask'].squeeze()).save(folder/'processed-mask.png')
-        quality=job.get('quality','fast');steps=int(job.get('steps',30 if quality=='fast' else 50));resolution=int(job.get('resolution',256 if quality=='fast' else 384))
-        params={'steps':steps,'octreeResolution':resolution,'guidanceScale':5.0,'seed':42,'numChunks':4096,'precision':'fp16','memoryPolicy':'conditioner/model/vae sequential CUDA','surfaceExtractor':'upstream marching cubes','texture':'source-photo orthographic visible-surface projection, unobserved surfaces gray'}
+        quality=job.get('quality','fast');steps=int(job.get('steps',5 if turbo else 30 if quality=='fast' else 50));resolution=int(job.get('resolution',384 if turbo and quality=='standard' else 256 if quality=='fast' else 384))
+        params={'steps':steps,'octreeResolution':resolution,'guidanceScale':5.0,'seed':42,'numChunks':4096,'precision':'fp16','memoryPolicy':'conditioner/model/vae sequential CUDA','surfaceExtractor':'upstream marching cubes','texture':'source-photo visible-surface UV bake; unobserved faces neutral gray','turbo':turbo,'flashVDM':turbo}
         params['volumeDecoder']=volume_decoder
         phase('reconstructing')
         def callback(i,t,outputs):phase('reconstructing',step=i+1,totalSteps=steps)
         with torch.inference_mode():
-            mesh=pipeline(image=masked,num_inference_steps=steps,guidance_scale=5.0,generator=torch.Generator(device='cuda').manual_seed(42),octree_resolution=resolution,num_chunks=4096,callback=callback,callback_steps=5,enable_pbar=False)[0]
+            mesh=pipeline(image=masked,num_inference_steps=steps,guidance_scale=5.0,generator=torch.Generator(device='cuda').manual_seed(42),octree_resolution=resolution,num_chunks=4096,callback=callback,callback_steps=1 if turbo else 5,enable_pbar=False)[0]
         peak=torch.cuda.max_memory_allocated()
         del pipeline;gc.collect();torch.cuda.empty_cache()
         if mesh is None or len(mesh.vertices)<4:raise ValueError('Shape model returned no geometry')
@@ -111,15 +118,20 @@ def main(jobfile):
         # Official Hunyuan shapes use Y-up. Preserve axes and record fitted camera separately.
         mesh.export(folder/'shape.glb')
         phase('projecting')
-        projection=project_visible_colors(mesh,masked,folder)
-        mesh.export(folder/'model.glb')
+        projection,projection_fit,depth_map=project_visible_colors(mesh,masked,folder)
+        textured_mesh,texture_report=bake_visible_texture(mesh,masked,folder,projection_fit,depth_map)
+        projection['texture']=texture_report
+        if texture_report['observedFaceFraction']<0.005:
+            projection['texture']['fallback']='Too few faces aligned with the visible foreground; retained the original vertex-color GLB.'
+            mesh.export(folder/'model.glb')
+        else:textured_mesh.export(folder/'model.glb')
         phase('validating')
         loaded=trimesh.load(folder/'model.glb',force='scene');parts=list(loaded.geometry.values())
         if not parts:raise ValueError('Empty exported scene')
         for p in parts:
             if len(p.faces)<4 or not np.isfinite(p.vertices).all() or np.min(p.extents)<1e-5:raise ValueError('Invalid exported geometry')
         render_review(mesh,folder/'review-views.png')
-        result={'stage':'succeeded','generator':'hunyuan3d-2mini','version':'hunyuan-image-shape-v1','qualityProfile':quality,'sourceCommit':source['commit'],'weightsRevision':weights['revision'],'weightsSha256':weights['weightSha256'],'preprocessVersion':PREPROCESS_VERSION,'parameters':params,'inputSha256':digest(job['imagePath']),'sha256':digest(folder/'model.glb'),'bytes':(folder/'model.glb').stat().st_size,'bounds':loaded.bounds.tolist(),'extents':loaded.extents.tolist(),'vertices':sum(len(p.vertices) for p in parts),'faces':sum(len(p.faces) for p in parts),'colors':True,'upAxis':'Y','foregroundCoverage':info['foregroundCoverage'],'preprocessing':info,'projection':projection,'timings':times,'totalSeconds':time.monotonic()-started,'peakCudaBytes':peak,'environment':{'torch':torch.__version__,'cuda':torch.version.cuda,'gpu':torch.cuda.get_device_name()},'quality':'Image-conditioned candidate; single-view hidden geometry is inferred. Visible colors are projected from source; gray surfaces have no source observation. Silhouette agreement is not proof of architectural accuracy.','qualityAssessment':{'status':'unreviewed','accepted':False,'requires':['compare source and at least six render views','inspect roof/major volumes/openings','independent view evidence for hidden geometry']}}
+        result={'stage':'succeeded','generator':'hunyuan3d-2mini','version':'hunyuan-image-uv-texture-v2','qualityProfile':quality,'sourceCommit':source['commit'],'weightsRevision':weights['revision'],'weightsSha256':weights['weightSha256'],'preprocessVersion':PREPROCESS_VERSION,'parameters':params,'inputSha256':digest(job['imagePath']),'sha256':digest(folder/'model.glb'),'bytes':(folder/'model.glb').stat().st_size,'bounds':loaded.bounds.tolist(),'extents':loaded.extents.tolist(),'vertices':sum(len(p.vertices) for p in parts),'faces':sum(len(p.faces) for p in parts),'colors':True,'upAxis':'Y','foregroundCoverage':info['foregroundCoverage'],'preprocessing':info,'projection':projection,'timings':times,'totalSeconds':time.monotonic()-started,'peakCudaBytes':peak,'environment':{'torch':torch.__version__,'cuda':torch.version.cuda,'gpu':torch.cuda.get_device_name()},'quality':'Image-conditioned candidate; single-view hidden geometry is inferred. Photo detail is baked into UV textures only on camera-visible faces; hidden faces remain neutral gray. Silhouette agreement is not proof of architectural accuracy.','qualityAssessment':{'status':'unreviewed','accepted':False,'requires':['compare source and at least six render views','inspect roof/major volumes/openings','independent view evidence for hidden geometry']}}
         result['generator']=generator
         hull_volume=float(mesh.convex_hull.volume)
         result['geometryAudit']={'watertight':bool(mesh.is_watertight),'connectedComponents':len(mesh.split(only_watertight=False)),'convexHullVolume':hull_volume,'orientedVolume':float(mesh.volume),'volumeToConvexHullRatio':abs(float(mesh.volume))/hull_volume if hull_volume>0 else None,'note':'Thin/open geometry may be legitimate for some objects; these diagnostics require image context and are not acceptance scores.'}

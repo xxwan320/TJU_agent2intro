@@ -17,7 +17,7 @@ const CATEGORY_LABELS: Record<POICategory|'all',string>={all:'全部',teaching:'
 interface Props {
   onRouteApplied?(route:RouteResponse|null):void;
   speechStatus?: import('react').ReactNode; presentation?: import('react').ReactNode; explainLabel?:string;
-  selected:POI|null; routeTarget:{poiId:string;revision:number}|null; onRouteChange():void; onStop():Promise<void>;
+  selected:POI|null; routeTarget:{poiId:string;revision:number;onBlocked?:(message:string)=>void}|null; onRouteChange():void; onStop():Promise<void>;
   resetEpoch?:number; tourSession?:TourSession|null; onInstruction?(text:string):void;
   campus:CampusId; sessionId:string; focusPoiId:string|null; focusRevision:number;
   onSelect(poi:POI|null):void; onAssets(assets:CampusAssets|null):void;
@@ -254,14 +254,14 @@ export function CampusExplorer({campus,sessionId,focusPoiId,focusRevision,onSele
   useEffect(()=>{if(position)onlineRef.current?.showPosition(position,!tracking);},[position,onlineReady,tracking]);
   // Plan versions, not selection/chat renders, own route replacement.
   useEffect(()=>{
-    if(!onlineReady)return;
+    if(!onlineReady){if(routeTarget)routeTarget.onBlocked?.('在线地图尚未就绪，暂时无法规划路线；请打开在线地图、确认起点后重试。');return;}
     const session=tourSession;
     if(session?.status==='paused'&&!routeTarget){autoRouteKey.current='';clearRoute();return;}
     const key=routeTarget?`chat:${routeTarget.revision}`:session?`${session.tour_id}:${session.plan.version}`:'';
     if(session&&['cancelled','completed','infeasible'].includes(session.status)&&!routeTarget){clearRoute();onlineRef.current?.showTourStops([]);autoRouteKey.current=key;return;}
     if(!key||autoRouteKey.current===key)return;
     if(routeTarget){
-      if(!preciseOrigin(position)){clearRoute();setRouteError('请先在地图选择起点、选择常用点位或定位；IP 城市位置需要确认。');return;}
+      if(!preciseOrigin(position)){routeTarget.onBlocked?.('请先在地图中选择步行起点，或完成设备定位，然后重新发送路线请求。');clearRoute();setRouteError('请先在地图选择起点、选择常用点位或定位；IP 城市位置需要确认。');return;}
       autoRouteKey.current=key;void routeToId(routeTarget.poiId);return;
     }
     if(session){autoRouteKey.current=key;void planItinerary(session,position);}

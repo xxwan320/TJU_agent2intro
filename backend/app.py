@@ -37,9 +37,15 @@ def error_response(code, message, status, request_id=None, retryable=False):
 async def body_limit(request: Request, call_next):
     size = 0
     chunks = []
+    upload_paths = ("/api/reconstruction/images",)
+    is_reconstruction_upload = request.url.path in upload_paths or (
+        request.url.path.startswith("/api/reconstruction/images/")
+        and request.url.path.endswith("/apply-mask")
+    )
+    limit = 2097152 if request.url.path in ("/api/speech/asr", "/api/harness/uploads") else 12001000 if is_reconstruction_upload else 65536
     async for chunk in request.stream():
         size += len(chunk)
-        if size > (2097152 if request.url.path in ("/api/speech/asr", "/api/harness/uploads") else 12001000 if request.url.path == "/api/reconstruction/images" else 65536):
+        if size > limit:
             return error_response("payload_too_large", "请求体超过该端点的大小上限", 413)
         chunks.append(chunk)
     request._body = b"".join(chunks)
