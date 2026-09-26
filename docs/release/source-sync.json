@@ -1,0 +1,790 @@
+{
+  "status": "FILES_SYNCED_NOT_COMMITTED",
+  "sourceHead": "1f235cba2e792ca147e397487d8d2e8a093ac7be",
+  "at": "2026-09-26T04:37:57.015606+00:00",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 660,
+      "sha256": "d7bc160ed51d617e60bce46a165fc2de0c72472d16843e0b1f434be8ee79c724",
+      "releaseSha256": "5474a03c74b08813d456504cf746ca27e88254f21e994151f95a09429ef1ba74"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12064,
+      "sha256": "d26eb82e8382d4d29faabe70354dced88818076d9cfcb24e689f693348a56e17",
+      "releaseSha256": "d26eb82e8382d4d29faabe70354dced88818076d9cfcb24e689f693348a56e17"
+    },
+    {
+      "path": "backend/harness_routes.py",
+      "bytes": 5983,
+      "sha256": "dd57fbe8e59d3e9af18e730eff2598a10f2a4bb64092eae65e8ec871d87d8ba8",
+      "releaseSha256": "dd57fbe8e59d3e9af18e730eff2598a10f2a4bb64092eae65e8ec871d87d8ba8"
+    },
+    {
+      "path": "backend/model/reconstruction_workflow.py",
+      "bytes": 40875,
+      "sha256": "9f54b3a8467a910dfea061a4071d04ef30f3d71e8870d406912ccae5c5290f43",
+      "releaseSha256": "9f54b3a8467a910dfea061a4071d04ef30f3d71e8870d406912ccae5c5290f43"
+    },
+    {
+      "path": "backend/reconstruction.py",
+      "bytes": 34761,
+      "sha256": "7dd9a6feaf8fa4f28d77a6be6988eb70e8cf1a56ad8ae146818bfc237e34ccdf",
+      "releaseSha256": "7dd9a6feaf8fa4f28d77a6be6988eb70e8cf1a56ad8ae146818bfc237e34ccdf"
+    },
+    {
+      "path": "backend/reconstruction_evidence.py",
+      "bytes": 6702,
+      "sha256": "f227138055661234de977d9b42862b2f35f095b21fd41ac5cc75362381a05184",
+      "releaseSha256": "f227138055661234de977d9b42862b2f35f095b21fd41ac5cc75362381a05184"
+    },
+    {
+      "path": "backend/tests/test_reconstruction.py",
+      "bytes": 11225,
+      "sha256": "276e31a77ea3e8dede807c5c0646cf0135f07a32f219766aaf42f1f5217430be",
+      "releaseSha256": "276e31a77ea3e8dede807c5c0646cf0135f07a32f219766aaf42f1f5217430be"
+    },
+    {
+      "path": "backend/tests/test_reconstruction_multiview.py",
+      "bytes": 8727,
+      "sha256": "d4cf20231d06d2cb2373742730d4f78d7439ee0e6fe26e3892bc040b55287f6e",
+      "releaseSha256": "d4cf20231d06d2cb2373742730d4f78d7439ee0e6fe26e3892bc040b55287f6e"
+    },
+    {
+      "path": "backend/tests/test_reconstruction_workflow_evidence.py",
+      "bytes": 15668,
+      "sha256": "e192a1229d83b82649c62ad031c4fca407eb074de3812ecad0742d97112b560d",
+      "releaseSha256": "e192a1229d83b82649c62ad031c4fca407eb074de3812ecad0742d97112b560d"
+    },
+    {
+      "path": "data/knowledge/reconstruction_demo_sources.json",
+      "bytes": 4478,
+      "sha256": "759e8b95f44306d115d817bc9c0133f5988079d674f384af194a207fb9258d2a",
+      "releaseSha256": "759e8b95f44306d115d817bc9c0133f5988079d674f384af194a207fb9258d2a"
+    },
+    {
+      "path": "data/knowledge/reconstruction_image_annotations.json",
+      "bytes": 1120,
+      "sha256": "6f07847b431f8de97760a6bf307d9714af21280c0cd12b8bd354bd7ab5820442",
+      "releaseSha256": "6f07847b431f8de97760a6bf307d9714af21280c0cd12b8bd354bd7ab5820442"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/DEMO_REPORT.md",
+      "bytes": 4587,
+      "sha256": "b7c28ebcaefc1da3cf9c6b8b8fd5fc977011b8adda8d29a668bd692beab9a8e1",
+      "releaseSha256": "b7c28ebcaefc1da3cf9c6b8b8fd5fc977011b8adda8d29a668bd692beab9a8e1"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/baseline.json",
+      "bytes": 252,
+      "sha256": "979fbe537d9309bb3e941dfb48f3ef45754eee22c4b82c6d16efcf763a82c82c",
+      "releaseSha256": "979fbe537d9309bb3e941dfb48f3ef45754eee22c4b82c6d16efcf763a82c82c"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/demo-measurements.json",
+      "bytes": 1206,
+      "sha256": "fe6cd2087497c8da90903feb6b97631ebbe1588f0c5ad1b6d4bbdba4e80a3141",
+      "releaseSha256": "fe6cd2087497c8da90903feb6b97631ebbe1588f0c5ad1b6d4bbdba4e80a3141"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/fusion-demo/api-input-inspection.json",
+      "bytes": 747,
+      "sha256": "79506abf597cca7c44f5e5ab2e6bae7d53f2a8cda7a9ca319d9c36ac46326121",
+      "releaseSha256": "79506abf597cca7c44f5e5ab2e6bae7d53f2a8cda7a9ca319d9c36ac46326121"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/fusion-demo/api-live.json",
+      "bytes": 23432,
+      "sha256": "61609613a3b17489b3f60acc45c4ccc6d9aff49565e5c69cd7fd3183e29f1865",
+      "releaseSha256": "61609613a3b17489b3f60acc45c4ccc6d9aff49565e5c69cd7fd3183e29f1865"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/fusion-demo/result.json",
+      "bytes": 11396,
+      "sha256": "2264490cf53c345de52db129b0c5ddafec59cf871641a2f8e8e0816412320e30",
+      "releaseSha256": "2264490cf53c345de52db129b0c5ddafec59cf871641a2f8e8e0816412320e30"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/model-bc3e9f62843d56cca68744d3-before.png",
+      "bytes": 158061,
+      "sha256": "d4719f901d99c47f5af4d171fe135da80030cdc2fd90178f733bbbe3ad10010e",
+      "releaseSha256": "d4719f901d99c47f5af4d171fe135da80030cdc2fd90178f733bbbe3ad10010e"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/model-c42ac6562544e3602191d783-before.png",
+      "bytes": 229158,
+      "sha256": "70272d1d59d3f6895bd56c6683b50c7c414613e5ba609905101db4f9c3277136",
+      "releaseSha256": "70272d1d59d3f6895bd56c6683b50c7c414613e5ba609905101db4f9c3277136"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/model-download-manifest.json",
+      "bytes": 883,
+      "sha256": "98b4fd929f311e8d632bd25acca8ee933bf88522e0d671bea4f271fa01a18534",
+      "releaseSha256": "98b4fd929f311e8d632bd25acca8ee933bf88522e0d671bea4f271fa01a18534"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/model-eb21b83fbd9b4273187f9746-before.png",
+      "bytes": 212106,
+      "sha256": "f841f65de816266f1a5a048866daa307a35a43526cdc59fb347bab6924139fba",
+      "releaseSha256": "f841f65de816266f1a5a048866daa307a35a43526cdc59fb347bab6924139fba"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/photo-inputs.json",
+      "bytes": 939,
+      "sha256": "658cf8bc82715318d371c049b6dcb2dd38abed780553e3596c54b5dd0655ad83",
+      "releaseSha256": "658cf8bc82715318d371c049b6dcb2dd38abed780553e3596c54b5dd0655ad83"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/regression-during-reconstruction.json",
+      "bytes": 1067,
+      "sha256": "8e4a12a50e6f02560ce250b2125f93077923e24159ac30f68dd9e87cd3dc3a80",
+      "releaseSha256": "8e4a12a50e6f02560ce250b2125f93077923e24159ac30f68dd9e87cd3dc3a80"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/source-contact-sheet.jpg",
+      "bytes": 106253,
+      "sha256": "d5068a4841dd8fcbb7c57747528fae28f5a02977bebef5646a5b18594dbad5ca",
+      "releaseSha256": "d5068a4841dd8fcbb7c57747528fae28f5a02977bebef5646a5b18594dbad5ca"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/text-demo/live.json",
+      "bytes": 91851,
+      "sha256": "fbc59a008206d326db3ebd8828eef51d7109b7a20e34fdbbbdf188d2d57a78d1",
+      "releaseSha256": "fbc59a008206d326db3ebd8828eef51d7109b7a20e34fdbbbdf188d2d57a78d1"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/text-demo/quality-review.json",
+      "bytes": 870,
+      "sha256": "45d0b28a9aab011f1847be4e64020c61c17c5939d41b487942adc42239697182",
+      "releaseSha256": "45d0b28a9aab011f1847be4e64020c61c17c5939d41b487942adc42239697182"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/text-demo/review-views.png",
+      "bytes": 509692,
+      "sha256": "55c690ef1d6d0cdc1248bfefd063261f56a442bf3f8e070941a08935337f6e9c",
+      "releaseSha256": "55c690ef1d6d0cdc1248bfefd063261f56a442bf3f8e070941a08935337f6e9c"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui-baseline.json",
+      "bytes": 2849,
+      "sha256": "e85270719aabe9d4b18a6cc2e4decbcf3f62050054234f1ab9fd57498f8e11ef",
+      "releaseSha256": "e85270719aabe9d4b18a6cc2e4decbcf3f62050054234f1ab9fd57498f8e11ef"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui-baseline.png",
+      "bytes": 644321,
+      "sha256": "c3a5b0198e27ae66cc33465c5c19dfac62cba80ecf7b005217543fb517a20868",
+      "releaseSha256": "c3a5b0198e27ae66cc33465c5c19dfac62cba80ecf7b005217543fb517a20868"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/beiyangyuan-datong-center-download.glb",
+      "bytes": 560824,
+      "sha256": "bcb167430394ca3fe547f042f26d6c3eaa32937b52289afd27596108a375451d",
+      "releaseSha256": "bcb167430394ca3fe547f042f26d6c3eaa32937b52289afd27596108a375451d"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/beiyangyuan-datong-center-侧面.png",
+      "bytes": 22265,
+      "sha256": "6b0fd1684fff636bd59b67d2687782c94325d4f1b41e1fb0e169a34533dfa6c6",
+      "releaseSha256": "6b0fd1684fff636bd59b67d2687782c94325d4f1b41e1fb0e169a34533dfa6c6"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/beiyangyuan-datong-center-复位.png",
+      "bytes": 31104,
+      "sha256": "6196b46e053047292184c580d3bfb8248d5f44610efed45adaf46902621d13a0",
+      "releaseSha256": "6196b46e053047292184c580d3bfb8248d5f44610efed45adaf46902621d13a0"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/beiyangyuan-datong-center-正面.png",
+      "bytes": 38617,
+      "sha256": "88d63abdc46567b7f4daab5f2fff890e02deffc3b94c8f5458c810cf5acaefe0",
+      "releaseSha256": "88d63abdc46567b7f4daab5f2fff890e02deffc3b94c8f5458c810cf5acaefe0"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/beiyangyuan-datong-center-背面.png",
+      "bytes": 34707,
+      "sha256": "d9f1ef3099bf8de5d10dd00526390101a3d9edf51336cc9c81e329ace6499c98",
+      "releaseSha256": "d9f1ef3099bf8de5d10dd00526390101a3d9edf51336cc9c81e329ace6499c98"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/beiyangyuan-zhengdong-library-download.glb",
+      "bytes": 384168,
+      "sha256": "06723e60138f951b5c67d97760db0011fe82feea6edadc3cfee4a9c8d56a08db",
+      "releaseSha256": "06723e60138f951b5c67d97760db0011fe82feea6edadc3cfee4a9c8d56a08db"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/beiyangyuan-zhengdong-library-侧面.png",
+      "bytes": 21859,
+      "sha256": "1acdc16484235d8ca0e901ef43df5d39f99cdfe0d221ea548720ad5a01dffc68",
+      "releaseSha256": "1acdc16484235d8ca0e901ef43df5d39f99cdfe0d221ea548720ad5a01dffc68"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/beiyangyuan-zhengdong-library-复位.png",
+      "bytes": 20663,
+      "sha256": "7b1b9c8b5c39d60398e1fdbe0f0294bb37f02cd2d10acff684c2cea5f1419673",
+      "releaseSha256": "7b1b9c8b5c39d60398e1fdbe0f0294bb37f02cd2d10acff684c2cea5f1419673"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/beiyangyuan-zhengdong-library-正面.png",
+      "bytes": 24618,
+      "sha256": "252f6cac021b9220757902a4843b2c24b69c31244024a4494db34ae6bacd6fa0",
+      "releaseSha256": "252f6cac021b9220757902a4843b2c24b69c31244024a4494db34ae6bacd6fa0"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/beiyangyuan-zhengdong-library-背面.png",
+      "bytes": 25436,
+      "sha256": "13beb6175d3b3b83dc9cab12da88a5a824c49c23261b1153550432d8a80ff353",
+      "releaseSha256": "13beb6175d3b3b83dc9cab12da88a5a824c49c23261b1153550432d8a80ff353"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/demo-example-Agent任务.png",
+      "bytes": 52899,
+      "sha256": "98a09def4b48c23a3d5c3ced259d198efbabac3444581b5c70b35bf0be217a9c",
+      "releaseSha256": "98a09def4b48c23a3d5c3ced259d198efbabac3444581b5c70b35bf0be217a9c"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/demo-example-文字构思.png",
+      "bytes": 42511,
+      "sha256": "fad614287107e15d7436e4da65a3f9903a8112713b65888726591ff8095726ca",
+      "releaseSha256": "fad614287107e15d7436e4da65a3f9903a8112713b65888726591ff8095726ca"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/desktop-mode-Agent任务.png",
+      "bytes": 101481,
+      "sha256": "4e3b6c40f3e205bebe6b0f97d5c847f867cada40236808e37887c5a0bf1a32f9",
+      "releaseSha256": "4e3b6c40f3e205bebe6b0f97d5c847f867cada40236808e37887c5a0bf1a32f9"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/desktop-mode-上传图片.png",
+      "bytes": 103658,
+      "sha256": "fb804f4eef223f498626de04bfee2297960c26009659969cc2720ae87eaea5a3",
+      "releaseSha256": "fb804f4eef223f498626de04bfee2297960c26009659969cc2720ae87eaea5a3"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/desktop-mode-文字构思.png",
+      "bytes": 88751,
+      "sha256": "de5246260edc33564f16e69847295c178a046cf5bb2be7922343e0ad1de0fd7a",
+      "releaseSha256": "de5246260edc33564f16e69847295c178a046cf5bb2be7922343e0ad1de0fd7a"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/desktop-mode-校园照片.png",
+      "bytes": 216502,
+      "sha256": "d976e078da9711ed6169a37a757e367b76cf6bfc28714038de6e064179baa488",
+      "releaseSha256": "d976e078da9711ed6169a37a757e367b76cf6bfc28714038de6e064179baa488"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/footprint-capture.json",
+      "bytes": 685,
+      "sha256": "b8b9a817235f89e49b25b090383cdcfb46bc23f9e77833f2075b46bbadee0f67",
+      "releaseSha256": "b8b9a817235f89e49b25b090383cdcfb46bc23f9e77833f2075b46bbadee0f67"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/footprint-datong-satellite.png",
+      "bytes": 1279154,
+      "sha256": "604acb7ae299956f785d436b0f6de3f378ff133bc4116033d02494f27a93dac4",
+      "releaseSha256": "604acb7ae299956f785d436b0f6de3f378ff133bc4116033d02494f27a93dac4"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/footprint-datong-vector.png",
+      "bytes": 11530,
+      "sha256": "d280f161348ef602ef34720fea0586eaf575dfef4c8da20ef0482ab2926bd73f",
+      "releaseSha256": "d280f161348ef602ef34720fea0586eaf575dfef4c8da20ef0482ab2926bd73f"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/footprint-datong-z18-satellite.png",
+      "bytes": 1895917,
+      "sha256": "716e6ba0e5a894dbc415156237c5e86891116cdfa9fd28c778187a6b773c1e1f",
+      "releaseSha256": "716e6ba0e5a894dbc415156237c5e86891116cdfa9fd28c778187a6b773c1e1f"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/footprint-datong-z18-vector.png",
+      "bytes": 145676,
+      "sha256": "bf9bff11d2070169562d6304dcc2e09863b30439c895c83101fc05557a95821e",
+      "releaseSha256": "bf9bff11d2070169562d6304dcc2e09863b30439c895c83101fc05557a95821e"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/footprint-zhengdong-satellite.png",
+      "bytes": 1373349,
+      "sha256": "1c1ec3ada40481276fa85205c264ac24ca53460b6e455d0767505332465de386",
+      "releaseSha256": "1c1ec3ada40481276fa85205c264ac24ca53460b6e455d0767505332465de386"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/footprint-zhengdong-vector.png",
+      "bytes": 30186,
+      "sha256": "be3864077d6991116089245b70a6705181cab23872afca2b81b8fdab70c5d871",
+      "releaseSha256": "be3864077d6991116089245b70a6705181cab23872afca2b81b8fdab70c5d871"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/footprint-zhengdong-z18-satellite.png",
+      "bytes": 2016256,
+      "sha256": "451e7e0bb15b1b8511116ae9a54bfce86160a3055e7a01badab2f62744524c51",
+      "releaseSha256": "451e7e0bb15b1b8511116ae9a54bfce86160a3055e7a01badab2f62744524c51"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/footprint-zhengdong-z18-vector.png",
+      "bytes": 161246,
+      "sha256": "d97cc6790556d907d86cecec9b5657d91b28e5fb9c34b19cd91cb79487cd5c60",
+      "releaseSha256": "d97cc6790556d907d86cecec9b5657d91b28e5fb9c34b19cd91cb79487cd5c60"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/fusion-demo-browser.json",
+      "bytes": 3735,
+      "sha256": "b7c41ab4030f27405913817320dd05983f8591d14f537fb4854eef1772bfb06c",
+      "releaseSha256": "b7c41ab4030f27405913817320dd05983f8591d14f537fb4854eef1772bfb06c"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/fusion-demo-cameras.png",
+      "bytes": 22672,
+      "sha256": "aa174d8b7040f828290225b27fd42e5af135f2679ae5e04c4b54122471ac5b26",
+      "releaseSha256": "aa174d8b7040f828290225b27fd42e5af135f2679ae5e04c4b54122471ac5b26"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/fusion-demo-desktop.png",
+      "bytes": 332048,
+      "sha256": "582c3d928e16af6040c312c30b9f79e60e6b0d9e21ecda05c49deef55948ea07",
+      "releaseSha256": "582c3d928e16af6040c312c30b9f79e60e6b0d9e21ecda05c49deef55948ea07"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/fusion-demo-downloaded.glb",
+      "bytes": 977796,
+      "sha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f",
+      "releaseSha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/fusion-demo-first-camera.png",
+      "bytes": 108833,
+      "sha256": "544fe06d2171c12557a0939d404f8c8823a84eb54c85e549210878bda01155d5",
+      "releaseSha256": "544fe06d2171c12557a0939d404f8c8823a84eb54c85e549210878bda01155d5"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/fusion-demo-mobile.png",
+      "bytes": 308229,
+      "sha256": "6bbe71a7c00bf176197e52723c0c4a99a235b017ea05124b3641c4122251c074",
+      "releaseSha256": "6bbe71a7c00bf176197e52723c0c4a99a235b017ea05124b3641c4122251c074"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/fusion-demo-侧面.png",
+      "bytes": 15658,
+      "sha256": "7dd3408859cbdebcfa9768eb1f456cd58490c62ec67fa47595142f8a6b1fd77f",
+      "releaseSha256": "7dd3408859cbdebcfa9768eb1f456cd58490c62ec67fa47595142f8a6b1fd77f"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/fusion-demo-复位.png",
+      "bytes": 108833,
+      "sha256": "544fe06d2171c12557a0939d404f8c8823a84eb54c85e549210878bda01155d5",
+      "releaseSha256": "544fe06d2171c12557a0939d404f8c8823a84eb54c85e549210878bda01155d5"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/fusion-demo-正面.png",
+      "bytes": 21845,
+      "sha256": "4df81037d9f4aa1213b4e121d7143b9a5bb768e6e12365eac9d8640563d8375d",
+      "releaseSha256": "4df81037d9f4aa1213b4e121d7143b9a5bb768e6e12365eac9d8640563d8375d"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/fusion-demo-背面.png",
+      "bytes": 10804,
+      "sha256": "667e7562d5830c5b243be29a4d29de4138a52f6e30a5777a5955159cedea46f6",
+      "releaseSha256": "667e7562d5830c5b243be29a4d29de4138a52f6e30a5777a5955159cedea46f6"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/map-axis-probe.json",
+      "bytes": 869,
+      "sha256": "60daa2ff0014f9e98c0ba9a93fa99033c960b97d44070ff5908fcbdb899c3446",
+      "releaseSha256": "60daa2ff0014f9e98c0ba9a93fa99033c960b97d44070ff5908fcbdb899c3446"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/map-axis-probe.png",
+      "bytes": 51036,
+      "sha256": "a2463eafad8ca22603f20b9909b9138a75b259b59b3e21967e5957c5bee22c99",
+      "releaseSha256": "a2463eafad8ca22603f20b9909b9138a75b259b59b3e21967e5957c5bee22c99"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/map-rotation.json",
+      "bytes": 2824,
+      "sha256": "4278e258bf738bd097bb024948f812c3b09c2e66d64b05b849c26e98eb0e0fd9",
+      "releaseSha256": "4278e258bf738bd097bb024948f812c3b09c2e66d64b05b849c26e98eb0e0fd9"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/mobile-empty.png",
+      "bytes": 223438,
+      "sha256": "f5c3cd5f6f2183ca8a76a02d0cf6c2dc6aee4b9550f7e8a0b2effc0e025dd1eb",
+      "releaseSha256": "f5c3cd5f6f2183ca8a76a02d0cf6c2dc6aee4b9550f7e8a0b2effc0e025dd1eb"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/real-controls.json",
+      "bytes": 5390,
+      "sha256": "169014f3030200aae16bbc179e2f3d513a0f46d30afdaa3da953cb7334c201b1",
+      "releaseSha256": "169014f3030200aae16bbc179e2f3d513a0f46d30afdaa3da953cb7334c201b1"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/real-desktop-final.png",
+      "bytes": 416837,
+      "sha256": "6f3335a8c979542385b90dc80992e7a30b9c99f5e662e3a887ddf3565a0522af",
+      "releaseSha256": "6f3335a8c979542385b90dc80992e7a30b9c99f5e662e3a887ddf3565a0522af"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/real-desktop-model.png",
+      "bytes": 431544,
+      "sha256": "3bf4f7ee649921a6438616adfe9d093da093a90ce006013825ada62f94f93e2c",
+      "releaseSha256": "3bf4f7ee649921a6438616adfe9d093da093a90ce006013825ada62f94f93e2c"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/real-library-map.png",
+      "bytes": 121710,
+      "sha256": "51705bee5ca19fac88d22dee2e91698439a8d533a4ebc1e6fb692a2fe98f2fc5",
+      "releaseSha256": "51705bee5ca19fac88d22dee2e91698439a8d533a4ebc1e6fb692a2fe98f2fc5"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/real-map-both.png",
+      "bytes": 162837,
+      "sha256": "0162fb049c278514faa839b65a86cab2e26e146737d70566ea8d04f998ddf9f1",
+      "releaseSha256": "0162fb049c278514faa839b65a86cab2e26e146737d70566ea8d04f998ddf9f1"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/real-map-俯视/倾斜地图.png",
+      "bytes": 142432,
+      "sha256": "586a8c5e73b97a88863fdf4cd25f9abdd3e508005f34810f8b8caaa1844f8d50",
+      "releaseSha256": "586a8c5e73b97a88863fdf4cd25f9abdd3e508005f34810f8b8caaa1844f8d50"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/real-map-平移地图.png",
+      "bytes": 163045,
+      "sha256": "0f93fcd4e401ec118951f39360d42fab890f5fd274543a3d2002ff4c8688adf1",
+      "releaseSha256": "0f93fcd4e401ec118951f39360d42fab890f5fd274543a3d2002ff4c8688adf1"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/real-map-放大地图.png",
+      "bytes": 130664,
+      "sha256": "7a93651cc0f60470f7dcaf1946ce668ad0a7b44518563ba39be85be48736e741",
+      "releaseSha256": "7a93651cc0f60470f7dcaf1946ce668ad0a7b44518563ba39be85be48736e741"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/real-map-旋转地图45°.png",
+      "bytes": 156718,
+      "sha256": "3d2d2518f13cb8a25674ac2e1ce5e62cf1e7b44fd4283e33e1edc3a7f05289de",
+      "releaseSha256": "3d2d2518f13cb8a25674ac2e1ce5e62cf1e7b44fd4283e33e1edc3a7f05289de"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/real-mobile-final.png",
+      "bytes": 374331,
+      "sha256": "c892582fffc7359a9420aed610b43a06262d2e6b2eaebb6482960814739adf19",
+      "releaseSha256": "c892582fffc7359a9420aed610b43a06262d2e6b2eaebb6482960814739adf19"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/real-mobile-model.png",
+      "bytes": 359357,
+      "sha256": "8bb1acd3c753395d005edc82a7019ba297dadd55ca771c573b060854c3306a14",
+      "releaseSha256": "8bb1acd3c753395d005edc82a7019ba297dadd55ca771c573b060854c3306a14"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/real-stage1-failure.png",
+      "bytes": 1329506,
+      "sha256": "ec1687e84e7ca2e1f00395f2fe682113109bdb711cbd29e7c8fc7283bf7438f3",
+      "releaseSha256": "ec1687e84e7ca2e1f00395f2fe682113109bdb711cbd29e7c8fc7283bf7438f3"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/real-stage1.json",
+      "bytes": 5093,
+      "sha256": "98588b04e271da635d616557956a9a34d452be024fd5697e29e2271ab4cad86f",
+      "releaseSha256": "98588b04e271da635d616557956a9a34d452be024fd5697e29e2271ab4cad86f"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/text-demo-desktop.png",
+      "bytes": 104549,
+      "sha256": "fc8f37c13d3c6cbd78710d4710ddfa54125e169ab0f24f0da11b46a316d69ec6",
+      "releaseSha256": "fc8f37c13d3c6cbd78710d4710ddfa54125e169ab0f24f0da11b46a316d69ec6"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/text-demo-downloaded.glb",
+      "bytes": 4834236,
+      "sha256": "10d6d725216aedf77a0ba70e57145a55b164cd32e541fa30dd1998d5bbfc8f84",
+      "releaseSha256": "10d6d725216aedf77a0ba70e57145a55b164cd32e541fa30dd1998d5bbfc8f84"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/text-demo-mobile.png",
+      "bytes": 100383,
+      "sha256": "fde953ba4a6e733f689988623af463a67c854739829543683fc48ff62039f9e9",
+      "releaseSha256": "fde953ba4a6e733f689988623af463a67c854739829543683fc48ff62039f9e9"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/text-demo-侧面.png",
+      "bytes": 36465,
+      "sha256": "3b953253f593733bb720cbff165181448743276b603d074042e5677e9f6f4a9c",
+      "releaseSha256": "3b953253f593733bb720cbff165181448743276b603d074042e5677e9f6f4a9c"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/text-demo-复位.png",
+      "bytes": 49940,
+      "sha256": "6f7c3d40a27ed839d494498b6fd9438bec531bd7a7b3e4bfe05a084ea86a89fc",
+      "releaseSha256": "6f7c3d40a27ed839d494498b6fd9438bec531bd7a7b3e4bfe05a084ea86a89fc"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/text-demo-正面.png",
+      "bytes": 40835,
+      "sha256": "45d21c5948423ef5ab0d3ef19194ef69535d73380f9e2c2b0fe5e84b89c6a334",
+      "releaseSha256": "45d21c5948423ef5ab0d3ef19194ef69535d73380f9e2c2b0fe5e84b89c6a334"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/text-demo-背面.png",
+      "bytes": 36140,
+      "sha256": "05c3da4ae31b038c68a4f989e2fb969b108bbadd5328af8796637c24c1ec9157",
+      "releaseSha256": "05c3da4ae31b038c68a4f989e2fb969b108bbadd5328af8796637c24c1ec9157"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/ui/ui-smoke.json",
+      "bytes": 1562,
+      "sha256": "5ca8575c6e6b96e2f776e5f85b8200a311ffe7e9c0a3952d51e32c86e4e9d97e",
+      "releaseSha256": "5ca8575c6e6b96e2f776e5f85b8200a311ffe7e9c0a3952d51e32c86e4e9d97e"
+    },
+    {
+      "path": "docs/diagnostics/3d-agent-completion/20260926-strict/zhengdong-demo/source-manifest.json",
+      "bytes": 4324,
+      "sha256": "0868ee89182db3b36559c384f5374afaffa39d3ea06257715e98037d0804e6f6",
+      "releaseSha256": "0868ee89182db3b36559c384f5374afaffa39d3ea06257715e98037d0804e6f6"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/fusion-demo/cameras.json",
+      "bytes": 1785,
+      "sha256": "5b74e741812b2f679e0e979659aa5c9f0469c5c67b32d43d68ce633a9342e48f",
+      "releaseSha256": "5b74e741812b2f679e0e979659aa5c9f0469c5c67b32d43d68ce633a9342e48f"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/fusion-demo/fusion.json",
+      "bytes": 2391,
+      "sha256": "c8ed579ba235a7548f97f137464a1815ca3e296194863c61f31e6558cd5ded65",
+      "releaseSha256": "c8ed579ba235a7548f97f137464a1815ca3e296194863c61f31e6558cd5ded65"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/fusion-demo/input-1.png",
+      "bytes": 1091690,
+      "sha256": "ea78c3b872b1e8b27de48cadf1d4a692cd42ddf5f72fcab78e2be2937935fb79",
+      "releaseSha256": "ea78c3b872b1e8b27de48cadf1d4a692cd42ddf5f72fcab78e2be2937935fb79"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/fusion-demo/input-2.png",
+      "bytes": 1134666,
+      "sha256": "c91a69d4e050e75e3760fbacda18a452b9abcf3065e6d6bd940b4a99d48f7982",
+      "releaseSha256": "c91a69d4e050e75e3760fbacda18a452b9abcf3065e6d6bd940b4a99d48f7982"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/fusion-demo/model.glb",
+      "bytes": 977796,
+      "sha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f",
+      "releaseSha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/fusion-demo/pair-geometry.json",
+      "bytes": 258,
+      "sha256": "d4bfb78cfed60c29c34298412e9bc9fbe3fe4debd7befff0c963a781d8e4ec3f",
+      "releaseSha256": "d4bfb78cfed60c29c34298412e9bc9fbe3fe4debd7befff0c963a781d8e4ec3f"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/fusion-demo/result.json",
+      "bytes": 11396,
+      "sha256": "2264490cf53c345de52db129b0c5ddafec59cf871641a2f8e8e0816412320e30",
+      "releaseSha256": "2264490cf53c345de52db129b0c5ddafec59cf871641a2f8e8e0816412320e30"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/fusion-demo/review-views.png",
+      "bytes": 144395,
+      "sha256": "bbc03a4635a2b05072438460f99da11c06df576019c4f2f8145d82f307ee1d62",
+      "releaseSha256": "bbc03a4635a2b05072438460f99da11c06df576019c4f2f8145d82f307ee1d62"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/fusion-demo/source-reprojection-metrics.json",
+      "bytes": 1091,
+      "sha256": "e82974a821d6541038d881c800c011009f2c07e8511dc392d249e5f11d3cd4e5",
+      "releaseSha256": "e82974a821d6541038d881c800c011009f2c07e8511dc392d249e5f11d3cd4e5"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/fusion-demo/source-reprojection-review.jpg",
+      "bytes": 149749,
+      "sha256": "1983c5ca0cf0d18c32424f73380f587fc028d2afdb236ab5cda37cc375be21c6",
+      "releaseSha256": "1983c5ca0cf0d18c32424f73380f587fc028d2afdb236ab5cda37cc375be21c6"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/text-demo/model.glb",
+      "bytes": 4834236,
+      "sha256": "10d6d725216aedf77a0ba70e57145a55b164cd32e541fa30dd1998d5bbfc8f84",
+      "releaseSha256": "10d6d725216aedf77a0ba70e57145a55b164cd32e541fa30dd1998d5bbfc8f84"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/text-demo/result.json",
+      "bytes": 3047,
+      "sha256": "6a57c0a895fa9d74a466cb8d42e124081e7dc4a9c7e4fb070f9b66cbe3278ee4",
+      "releaseSha256": "6a57c0a895fa9d74a466cb8d42e124081e7dc4a9c7e4fb070f9b66cbe3278ee4"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/text-demo/review-views.png",
+      "bytes": 509692,
+      "sha256": "55c690ef1d6d0cdc1248bfefd063261f56a442bf3f8e070941a08935337f6e9c",
+      "releaseSha256": "55c690ef1d6d0cdc1248bfefd063261f56a442bf3f8e070941a08935337f6e9c"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/zhengdong-demo/entrance-1.jpg",
+      "bytes": 762048,
+      "sha256": "f2559181b0d6e52d4440e9e64cdab56493642e1db9bc0fb124bb3cd77290ee9f",
+      "releaseSha256": "f2559181b0d6e52d4440e9e64cdab56493642e1db9bc0fb124bb3cd77290ee9f"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/zhengdong-demo/entrance-2.jpg",
+      "bytes": 218123,
+      "sha256": "4ae0f602c4fb5d1c4f40d0866466bae40f3e545ff37c8d0875052e1a52eb64ee",
+      "releaseSha256": "4ae0f602c4fb5d1c4f40d0866466bae40f3e545ff37c8d0875052e1a52eb64ee"
+    },
+    {
+      "path": "frontend/public/assets/reconstruction/zhengdong-demo/entrance-3.jpg",
+      "bytes": 480934,
+      "sha256": "2198f232ddcea0dfbef1cf02cda033bb32314353bff31f620af8f995603c8c13",
+      "releaseSha256": "2198f232ddcea0dfbef1cf02cda033bb32314353bff31f620af8f995603c8c13"
+    },
+    {
+      "path": "frontend/src/scene/reconstruction-map.ts",
+      "bytes": 12484,
+      "sha256": "5c38e8fbeed244e53fb20460442d71e14753b529e7159ac8e7a268a682c4b5c1",
+      "releaseSha256": "5c38e8fbeed244e53fb20460442d71e14753b529e7159ac8e7a268a682c4b5c1"
+    },
+    {
+      "path": "frontend/src/transport/reconstruction.ts",
+      "bytes": 5869,
+      "sha256": "89651a8b825faa4489ae774c214c423d078c4c58e2b590eaee934fec56520466",
+      "releaseSha256": "89651a8b825faa4489ae774c214c423d078c4c58e2b590eaee934fec56520466"
+    },
+    {
+      "path": "frontend/src/ui/App.tsx",
+      "bytes": 73615,
+      "sha256": "1657ec579bd206cc9f51d1bf400acb8beb54db7c0ac3740e4a41317b45548c33",
+      "releaseSha256": "1657ec579bd206cc9f51d1bf400acb8beb54db7c0ac3740e4a41317b45548c33"
+    },
+    {
+      "path": "frontend/src/ui/ReconstructionMultiView.tsx",
+      "bytes": 9832,
+      "sha256": "ba443dcc22b19e4d99159ce65fc3809f27783f96597eab5d358a5e5c63404c2e",
+      "releaseSha256": "ba443dcc22b19e4d99159ce65fc3809f27783f96597eab5d358a5e5c63404c2e"
+    },
+    {
+      "path": "frontend/src/ui/ReconstructionPanel.tsx",
+      "bytes": 39657,
+      "sha256": "2ee06232713eae75b68dcdaf2b819540b22e32d80850f363be3bc81eda568f39",
+      "releaseSha256": "2ee06232713eae75b68dcdaf2b819540b22e32d80850f363be3bc81eda568f39"
+    },
+    {
+      "path": "frontend/src/ui/reconstruction.css",
+      "bytes": 12650,
+      "sha256": "6eb248ccf5eccc2898c32c1aa6e21713e2596508b03d824fe9c0db6786020a06",
+      "releaseSha256": "6eb248ccf5eccc2898c32c1aa6e21713e2596508b03d824fe9c0db6786020a06"
+    },
+    {
+      "path": "scripts/hunyuan_mesh_review.py",
+      "bytes": 4988,
+      "sha256": "aeb11abae96f606a0cabf5d8e09284da7712ffc0d0b93deeaf33ad64ca9d59aa",
+      "releaseSha256": "aeb11abae96f606a0cabf5d8e09284da7712ffc0d0b93deeaf33ad64ca9d59aa"
+    },
+    {
+      "path": "scripts/install-reconstruction-da3.py",
+      "bytes": 5064,
+      "sha256": "296c5658bb57c951ba1618d563565504f2d49f63c339d2ee2e1b66f8a6849ea0",
+      "releaseSha256": "296c5658bb57c951ba1618d563565504f2d49f63c339d2ee2e1b66f8a6849ea0"
+    },
+    {
+      "path": "scripts/install-reconstruction-depth.py",
+      "bytes": 1370,
+      "sha256": "c919ede98eda8a78bedcdf481699181be1189da3b2fd98796f3f938ca5841187",
+      "releaseSha256": "c919ede98eda8a78bedcdf481699181be1189da3b2fd98796f3f938ca5841187"
+    },
+    {
+      "path": "scripts/install-reconstruction-hunyuan.py",
+      "bytes": 5893,
+      "sha256": "61ab1e10fd9e1bafef73b1571b0ccc50ee1d60a3bcc6951fd3561ec9e6721f96",
+      "releaseSha256": "61ab1e10fd9e1bafef73b1571b0ccc50ee1d60a3bcc6951fd3561ec9e6721f96"
+    },
+    {
+      "path": "scripts/reconstruction-depth-worker.py",
+      "bytes": 6630,
+      "sha256": "e1dd51b2829a7f713cff51bc136ad550f279fcd0ee390e85e696dc1dff94aa7c",
+      "releaseSha256": "e1dd51b2829a7f713cff51bc136ad550f279fcd0ee390e85e696dc1dff94aa7c"
+    },
+    {
+      "path": "scripts/reconstruction-hunyuan-worker.py",
+      "bytes": 10525,
+      "sha256": "02742f5654b6003f9dfc5b167ef005d0430ae73b633507e90b60df901c8e6a0c",
+      "releaseSha256": "02742f5654b6003f9dfc5b167ef005d0430ae73b633507e90b60df901c8e6a0c"
+    },
+    {
+      "path": "scripts/reconstruction-multiview-worker.py",
+      "bytes": 17669,
+      "sha256": "cf45a88cc6736a3a6d17fd53cfc588c800e97c1c7ac22c599bb725afe0cd0611",
+      "releaseSha256": "cf45a88cc6736a3a6d17fd53cfc588c800e97c1c7ac22c599bb725afe0cd0611"
+    },
+    {
+      "path": "scripts/reconstruction-vision.py",
+      "bytes": 2243,
+      "sha256": "8ef09281cd37e380e7bc73e5916c291a939471291132defecd88c646cc7b2e76",
+      "releaseSha256": "8ef09281cd37e380e7bc73e5916c291a939471291132defecd88c646cc7b2e76"
+    },
+    {
+      "path": "scripts/reconstruction_tsdf.py",
+      "bytes": 9491,
+      "sha256": "18cd28832129011fd55fa301467021f0460be0b354164efdff0d608378fd7287",
+      "releaseSha256": "18cd28832129011fd55fa301467021f0460be0b354164efdff0d608378fd7287"
+    },
+    {
+      "path": "scripts/reconstruction_views.py",
+      "bytes": 6710,
+      "sha256": "df1f3d1e0643ded5f0feeb0b1bee6e11aa3c63ea98fbf2003644855d0b249f62",
+      "releaseSha256": "df1f3d1e0643ded5f0feeb0b1bee6e11aa3c63ea98fbf2003644855d0b249f62"
+    },
+    {
+      "path": "scripts/review-reconstruction-fusion.py",
+      "bytes": 3081,
+      "sha256": "7a87dcb81f2de9d98e690041b08d64ce50e3b187c7197ae24a5ff114436d044e",
+      "releaseSha256": "7a87dcb81f2de9d98e690041b08d64ce50e3b187c7197ae24a5ff114436d044e"
+    },
+    {
+      "path": "scripts/verify-fusion-demo.mjs",
+      "bytes": 9722,
+      "sha256": "c342d4e36d35a4dbeb41da3593b97d0352b391d26fc2ab266c5f49dab74f70c5",
+      "releaseSha256": "c342d4e36d35a4dbeb41da3593b97d0352b391d26fc2ab266c5f49dab74f70c5"
+    },
+    {
+      "path": "scripts/verify-reconstruction-da3.py",
+      "bytes": 2852,
+      "sha256": "f855b05a8db4137bcc6f3fa387077aaa2a1d1608a9faed7ee078408d8c1c0ff2",
+      "releaseSha256": "f855b05a8db4137bcc6f3fa387077aaa2a1d1608a9faed7ee078408d8c1c0ff2"
+    },
+    {
+      "path": "scripts/verify-reconstruction-inputs.mjs",
+      "bytes": 3560,
+      "sha256": "50ce50a4a4e7242c06e671bcfa7b8860d65fcd6ac45df57b1a447bed0d21b9fa",
+      "releaseSha256": "50ce50a4a4e7242c06e671bcfa7b8860d65fcd6ac45df57b1a447bed0d21b9fa"
+    },
+    {
+      "path": "scripts/verify-reconstruction-map-axis.mjs",
+      "bytes": 2644,
+      "sha256": "b16dec7cc5d48ab9fa44e44241a27f2831ed56cc9aee70b1aaedd1a4f9bab820",
+      "releaseSha256": "b16dec7cc5d48ab9fa44e44241a27f2831ed56cc9aee70b1aaedd1a4f9bab820"
+    },
+    {
+      "path": "scripts/verify-reconstruction-map-rotation.mjs",
+      "bytes": 1782,
+      "sha256": "c7435c51263881a6ac7becf8477080e74c2c14bd0af71aad8dd079cb72989534",
+      "releaseSha256": "c7435c51263881a6ac7becf8477080e74c2c14bd0af71aad8dd079cb72989534"
+    },
+    {
+      "path": "scripts/verify-reconstruction-ui.mjs",
+      "bytes": 7959,
+      "sha256": "6b018eb592b56d5ace6f86bd13a25fde682bbb3d341b9345745a35d8199f0d92",
+      "releaseSha256": "6b018eb592b56d5ace6f86bd13a25fde682bbb3d341b9345745a35d8199f0d92"
+    }
+  ],
+  "excluded": [
+    ".worktrees/publish"
+  ],
+  "rootModified": false,
+  "oldPublishImported": false,
+  "commitCreated": false,
+  "pushed": false,
+  "sensitiveFindings": [],
+  "totalBytes": 32602100
+}

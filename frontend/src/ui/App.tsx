@@ -1,5 +1,5 @@
 import {ReconstructionPanel} from './ReconstructionPanel';
-import {isCompoundIntent,isReconstructionIntent,startReconstructionTask} from '../transport/reconstruction';
+import {reconstructionApi,isCompoundIntent,isReconstructionIntent,startReconstructionTask} from '../transport/reconstruction';
 import {createDeviceExecutor,type DeviceRequest,type DeviceResult} from '../device/a-device';
 import {HarnessClient,observed,failed,waitObserved,downloadHarness} from '../transport/harness';
 import type {ToolRequest,ToolResult} from '../../../shared/harness';
@@ -108,7 +108,7 @@ function TaskCard({ task, currentCampus, canStop, onStop, onRetry, onLogs, onCop
 const MemoTaskCard=memo(TaskCard,(a,b)=>a.task===b.task&&a.currentCampus===b.currentCampus&&a.canStop===b.canStop);
 
 export function App() {
-  const [prefs, setPrefs] = useState(readPreferences); const [health, setHealth] = useState<Health | null>(null); const [serviceError, setServiceError] = useState(false);
+  const [prefs, setPrefs] = useState(() => { const initial = readPreferences(); if (new URLSearchParams(location.search).get('demo') === 'zhengdong') initial.campus = 'beiyangyuan'; return initial; }); const [health, setHealth] = useState<Health | null>(null); const [serviceError, setServiceError] = useState(false);
   const tourTextRef=useRef<((text:string)=>Promise<boolean>)|null>(null);
   const harnessClient=useRef(new HarnessClient());
   const harnessDeviceId=useRef(freshUuid());
@@ -166,15 +166,46 @@ export function App() {
     }catch(e){return failed(request,e);}finally{harnessExecuting.current=false;}
   }
   async function runHarness(message:string,direct?:{toolName:string;input:Record<string,unknown>},sessionId?:string){
+    const receiptResults:ToolResult[]=[];let receiptText='';let receiptError='';
     deviceExecutor.current?.disconnect();deviceExecutor.current=null;setPanelOpen(true);const epoch=++harnessEpoch.current;setHarnessBusy(true);setHarnessText('正在处理…');setHarnessResults([]);
     harnessClient.current.onContext=context=>{harnessClient.current.deviceCapabilities=ensureDevice().list_capabilities(context as Parameters<ReturnType<typeof createDeviceExecutor>['list_capabilities']>[0]);};
     try{await harnessClient.current.run({deviceId:harnessDeviceId.current,uploadId:selectedUpload.current[campusRef.current]??null,sessionId:sessionId??currentSession('chat'),campusId:campusRef.current,channel:'harness',tourId:tourMemoryRef.current[campusRef.current]?.session?.tour_id??null,tourSessionId:tourMemoryRef.current[campusRef.current]?.session?.session_id??null,poiId:selectedPoiRef.current?.id??null},message,direct,(event,token)=>{
       if(epoch!==harnessEpoch.current)return;
-      if(event.text)setHarnessText(event.text);
-      if(event.result)setHarnessResults(items=>[...items,{result:event.result!,token}]);
-    },executeHarness);}catch(e){if(epoch===harnessEpoch.current)setHarnessText(e instanceof Error?e.message:'工具请求未完成');}
+      if(event.text){receiptText=event.text;setHarnessText(event.text);}
+      if(event.result){receiptResults.push(event.result);setHarnessResults(items=>[...items,{result:event.result!,token}]);}
+    },executeHarness);}catch(e){receiptError=e instanceof Error?e.message:'工具请求未完成';if(epoch===harnessEpoch.current)setHarnessText(receiptError);}
     finally{if(epoch===harnessEpoch.current)setHarnessBusy(false);}
+    return {results:receiptResults,text:receiptText,error:receiptError};
   }
+
+  const reconstructionCommands=useRef(new Map<string,Promise<unknown>>());
+  const reconstructionReceipts=useRef(new Map<string,ToolResult>());
+  const reconstructionBridge=useRef<(command:any)=>Promise<unknown>>(async()=>{});
+  reconstructionBridge.current=async command=>{
+    const allowed=['knowledge_search','narration_control','route_plan','itinerary_export'];
+    if(!allowed.includes(command.toolName))throw Error('建模任务请求的校园工具不受支持');
+    const key=command.runId+'/'+command.toolCallId;
+    const cached=reconstructionReceipts.current.get(key);
+    if(cached)return reconstructionApi(`/runs/${command.runId}/client-ack`,{toolCallId:command.toolCallId,status:cached.status,result:cached});
+    const result=await runHarness('',{toolName:command.toolName,input:command.input});
+    const child=result.results.at(-1);
+    const receipt:ToolResult=child?{...child,toolCallId:command.toolCallId,evidence:[...(child.evidence??[]),{type:'runtime',observed:{childToolCallId:child.toolCallId,execution:'existing campus harness'}}]}:{toolCallId:command.toolCallId,status:'failed',error:{code:'NO_CLIENT_RECEIPT',message:result.error||'校园工具没有返回执行回执'},data:null,sources:[],observedAt:new Date().toISOString(),evidence:[]};
+    reconstructionReceipts.current.set(key,receipt);
+    return reconstructionApi(`/runs/${command.runId}/client-ack`,{toolCallId:command.toolCallId,status:receipt.status,result:receipt});
+  };
+  useEffect(()=>{
+    const context=(event:Event)=>{const detail=(event as CustomEvent).detail;const tour=tourMemoryRef.current[campusRef.current]?.session;detail.context={sessionId:currentSession('chat'),tourId:tour?.tour_id??null,tourSessionId:tour?.session_id??null,poiId:selectedPoiRef.current?.id??null};};
+    const command=(event:Event)=>{
+      const value=(event as CustomEvent).detail,key=value.runId+'/'+value.toolCallId;
+      if(reconstructionCommands.current.has(key))return;
+      const work=reconstructionBridge.current(value).catch(e=>{reconstructionCommands.current.delete(key);setNotice(e instanceof Error?e.message:'校园工具回执未能送达');});
+      reconstructionCommands.current.set(key,work);
+    };
+    window.addEventListener('reconstruction-context-request',context);
+    window.addEventListener('reconstruction-command',command);
+    return()=>{window.removeEventListener('reconstruction-context-request',context);window.removeEventListener('reconstruction-command',command);};
+  },[]);
+
 
   const tourMemoryRef=useRef<Partial<Record<CampusId,TourMemory>>>({});const mapFocusRef=useRef<((poiId:string|null)=>void)|null>(null);const tourCancelRef=useRef<(()=>void)|null>(null);
   const [voiceSend,setVoiceSend]=useState<'confirm'|'auto'>('confirm');

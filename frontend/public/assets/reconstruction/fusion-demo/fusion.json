@@ -1,0 +1,79 @@
+{
+  "method": "confidence-weighted projective TSDF with masked marching cubes",
+  "version": "cpu-tsdf-observed-v2",
+  "coordinateFrame": "OpenCV world",
+  "resolutionRequested": 256,
+  "gridShape": [
+    256,
+    52,
+    184
+  ],
+  "voxelSizeRelative": 0.005687215815144923,
+  "truncationRelative": 0.02274886326057969,
+  "boundsPercentiles": [
+    0.25,
+    99.75
+  ],
+  "observedVoxels": 291203,
+  "nearSurfaceVoxels": 63548,
+  "fusedVoxelsObservedBy2OrMore": 19665,
+  "fusedVoxelsObservedBy2+": 19665,
+  "multiViewNarrowBandFraction": 0.30945112356014354,
+  "extractionMaskVoxels": 291203,
+  "perView": [
+    {
+      "view": 0,
+      "confidentPixels": 62554,
+      "confidenceThreshold": 1.05,
+      "farClip98Percentile": 1.3610180377960206,
+      "integratedVoxels": 207958,
+      "nearSurfaceVoxels": 40286
+    },
+    {
+      "view": 1,
+      "confidentPixels": 64108,
+      "confidenceThreshold": 1.05,
+      "farClip98Percentile": 1.3975775194168092,
+      "integratedVoxels": 230143,
+      "nearSurfaceVoxels": 42927
+    }
+  ],
+  "views": [
+    {
+      "view": 0,
+      "confidentPixels": 62554,
+      "confidenceThreshold": 1.05,
+      "farClip98Percentile": 1.3610180377960206,
+      "integratedVoxels": 207958,
+      "nearSurfaceVoxels": 40286
+    },
+    {
+      "view": 1,
+      "confidentPixels": 64108,
+      "confidenceThreshold": 1.05,
+      "farClip98Percentile": 1.3975775194168092,
+      "integratedVoxels": 230143,
+      "nearSurfaceVoxels": 42927
+    }
+  ],
+  "vertices": 26370,
+  "faces": 46239,
+  "watertight": false,
+  "holeFilling": false,
+  "hiddenGeometry": "none",
+  "unknownBoundaryCapping": false,
+  "absoluteScaleKnown": false,
+  "seconds": 0.6100000000005821,
+  "limitations": [
+    "Camera poses and depth are predicted, not measured.",
+    "Fusion covers confident observed surfaces only.",
+    "TSDF merging is not an independent camera registration or appearance quality certificate."
+  ],
+  "depthSampling": "bilinear with four valid source neighbours",
+  "extractionSupport": "eight observed corners per grid cell",
+  "validExtractionCells": 245342,
+  "exportCoordinateFrame": "first-camera glTF Y-up",
+  "sha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f",
+  "bytes": 977796,
+  "output": ".runtime\\da3-evaluation\\official-soh-tsdf\\model.glb"
+}

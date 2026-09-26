@@ -1,0 +1,55 @@
+{
+  "scope": "real AMap customCoords axis/metre/camera probe; no building quality acceptance",
+  "errors": [],
+  "probe": {
+    "origin": [
+      117.3138,
+      38.9978
+    ],
+    "positions": [
+      [
+        0,
+        0
+      ],
+      [
+        12.867195583879948,
+        0
+      ],
+      [
+        0,
+        12.867203750647604
+      ]
+    ],
+    "eastDelta": [
+      12.867195583879948,
+      0
+    ],
+    "northDelta": [
+      0,
+      12.867203750647604
+    ],
+    "camera": {
+      "fov": 37.99999999999999,
+      "near": 81.51167736829767,
+      "far": 40755.83868414884,
+      "position": [
+        0,
+        -576.3745981301472,
+        576.3745981301332
+      ],
+      "lookAt": [
+        0,
+        0,
+        0
+      ],
+      "up": {
+        "0": 0,
+        "1": 1,
+        "2": 0
+      }
+    },
+    "zoom": 18,
+    "pitch": 45,
+    "rotation": 0
+  }
+}

@@ -24,3 +24,13 @@ data/user_knowledge/
 
 # Isolated local visual-description weights and dependencies
 .vision/
+
+# Isolated Hunyuan dependencies and pinned local weight downloads
+.reconstruction-hunyuan/
+
+/.reconstruction-depth/
+
+/.reconstruction-da3/
+
+# Local worktrees are not release content.
+/.worktrees/

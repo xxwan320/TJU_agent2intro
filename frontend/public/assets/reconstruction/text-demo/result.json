@@ -1,0 +1,83 @@
+{
+  "stage": "succeeded",
+  "generator": "shap-e-text",
+  "conditionPrompt": "Rustic minimal cabin house with simple rectangular walls and a steep pitched gable shingle roof. Features a centered front entrance door topped by a triangular gable pediment, flanked by small windows on each side.",
+  "sha256": "10d6d725216aedf77a0ba70e57145a55b164cd32e541fa30dd1998d5bbfc8f84",
+  "bytes": 4834236,
+  "bounds": [
+    [
+      -0.8785330057144165,
+      -0.9578720331192017,
+      -0.9916250705718994
+    ],
+    [
+      0.8752316236495972,
+      0.9413525462150574,
+      0.9886182546615601
+    ]
+  ],
+  "extents": [
+    1.7537646293640137,
+    1.899224579334259,
+    1.9802433252334595
+  ],
+  "vertices": 120782,
+  "faces": 241716,
+  "colors": true,
+  "upAxis": "Y",
+  "timings": {
+    "loading": 0.0,
+    "reconstructing": 9.438000000000102,
+    "exporting": 38.90600000000086,
+    "validating": 53.89099999999962
+  },
+  "totalSeconds": 53.95299999999952,
+  "peakCudaBytes": 3468570112,
+  "environment": {
+    "torch": "2.7.1+cu128",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "source": {
+      "commit": "50131012ee11c9d2617f3886c10f000d3c7a3b43",
+      "cache": "E:\\AI4TJU\\.reconstruction\\shap-e-weights"
+    }
+  },
+  "quality": "根据自然语言条件生成的概念模型；非测绘还原，未见结构为推断。",
+  "status": "succeeded",
+  "title": "坡屋顶小屋 · 文字构思 Demo",
+  "sceneName": "坡屋顶小屋概念",
+  "scope": "由文字条件生成的小屋概念；非真实建筑重建。",
+  "inputMode": "text",
+  "representationKind": "text_concept",
+  "qualityReview": {
+    "status": "passed",
+    "assetSha256": "10d6d725216aedf77a0ba70e57145a55b164cd32e541fa30dd1998d5bbfc8f84",
+    "reviewer": "Codex concept geometry review",
+    "method": "Inspected six actual mesh renders against the requested cabin concept: pitched roof, enclosed main body and readable house silhouette. This checks conceptual recognizability, not correspondence to a real building.",
+    "reviewedAt": "2026-09-26T04:16:07.694720+00:00",
+    "evidence": [
+      "docs/diagnostics/3d-agent-completion/20260926-strict/text-demo/review-views.png"
+    ],
+    "checks": {
+      "identity": true,
+      "mainStructure": true,
+      "nonCollapsed": true,
+      "appearance": true
+    },
+    "scope": "text_concept",
+    "limitations": [
+      "文字生成的小屋概念，不能作为真实建筑还原。",
+      "门窗等局部细节不精确，没有真实建筑尺寸。"
+    ]
+  },
+  "generatedAt": "2026-09-26T04:16:07.694720+00:00",
+  "sourceImages": [],
+  "originalPrompt": "用文字构思生成一座带坡屋顶和正面入口的小屋概念模型，展示结果并提供 GLB 下载。",
+  "runEvidence": {
+    "runId": "run-678207dc286964f619344a5b",
+    "orchestrationModelCalls": 4,
+    "toolCalls": 4,
+    "textConditioningModelCalls": 1,
+    "generationModel": "Shap-E text300M + decoder",
+    "workerSeconds": 53.95299999999952
+  }
+}

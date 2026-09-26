@@ -1,0 +1,128 @@
+{
+  "scope": "Anonymous browser opens actual public fused result. No reconstruction jobs or model calls submitted by this UI verification.",
+  "cases": [
+    {
+      "name": "direct link shows the actual named fused scene",
+      "status": "PASS_REAL",
+      "evidence": {
+        "heading": "悉尼歌剧院"
+      }
+    },
+    {
+      "name": "all input photographs and recovered cameras are present",
+      "status": "PASS_REAL",
+      "evidence": {
+        "imageCount": 2,
+        "cameraCount": 2
+      }
+    },
+    {
+      "name": "public GLB download matches the delivered fusion result",
+      "status": "PASS_REAL",
+      "evidence": {
+        "bytes": 977796,
+        "sha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f",
+        "meshCount": 1
+      }
+    },
+    {
+      "name": "fusion camera controls rotate the actual geometry",
+      "status": "PASS_REAL",
+      "evidence": {
+        "distinctViews": 4
+      }
+    },
+    {
+      "name": "verified pair imports as two real unbound images without starting inference",
+      "status": "PASS_REAL",
+      "evidence": {
+        "imported": 2,
+        "poiId": null,
+        "inferenceSubmitted": false
+      }
+    },
+    {
+      "name": "text and Agent examples are placeholders and filling does not execute",
+      "status": "PASS_REAL",
+      "evidence": {
+        "examples": 2,
+        "submissions": 0
+      }
+    },
+    {
+      "name": "mobile fused viewer stays inside viewport",
+      "status": "PASS_REAL",
+      "evidence": {
+        "scrollWidth": 364,
+        "clientWidth": 364,
+        "pageWidth": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "text direct link opens the actual saved concept",
+      "status": "PASS_REAL",
+      "evidence": {
+        "sceneName": "坡屋顶小屋概念",
+        "sha256": "10d6d725216aedf77a0ba70e57145a55b164cd32e541fa30dd1998d5bbfc8f84"
+      }
+    },
+    {
+      "name": "text concept camera controls rotate actual geometry",
+      "status": "PASS_REAL",
+      "evidence": {
+        "distinctViews": 4
+      }
+    },
+    {
+      "name": "text concept download has exact reviewed hash",
+      "status": "PASS_REAL",
+      "evidence": {
+        "bytes": 4834236,
+        "sha256": "10d6d725216aedf77a0ba70e57145a55b164cd32e541fa30dd1998d5bbfc8f84"
+      }
+    },
+    {
+      "name": "Agent tab opens the same saved concept without auto submission",
+      "status": "PASS_REAL",
+      "evidence": {
+        "submissions": 0
+      }
+    },
+    {
+      "name": "mobile text concept stays inside viewport",
+      "status": "PASS_REAL",
+      "evidence": {
+        "scrollWidth": 364,
+        "clientWidth": 364,
+        "pageWidth": 390,
+        "viewport": 390
+      }
+    }
+  ],
+  "errors": [],
+  "mutations": [],
+  "artifact": {
+    "sceneName": "悉尼歌剧院",
+    "sha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f",
+    "viewCount": 2,
+    "feedback": {
+      "registeredViews": 2,
+      "geometricallySupportedViews": 2,
+      "totalViews": 2,
+      "coverage": "observed_surfaces",
+      "coordinateScale": "relative",
+      "warnings": [
+        "仅覆盖照片中的已观测表面，未补造背面。",
+        "相机和深度为模型估计；绝对尺度及地图朝向未标定。"
+      ],
+      "crossViewDepthAgreement": 0.9682148893951642,
+      "geometricallyConsistent": true,
+      "geometryConsistent": true,
+      "predictedCameraCount": 2,
+      "fusionMethod": "confidence-weighted TSDF",
+      "fusedVoxelsObservedBy2OrMore": 19665
+    },
+    "scope": "两张真实照片覆盖的歌剧院外部表面；相机与深度由模型联合估计，再融合为同一个三角网格。背面未重建，绝对尺度未知。"
+  }
+}

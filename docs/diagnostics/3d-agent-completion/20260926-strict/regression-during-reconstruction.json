@@ -1,0 +1,36 @@
+{
+  "scope": "real local service during independent Hunyuan GPU reconstruction; recorded Mandarin audio, not a physical microphone test",
+  "at": 1790392645.3991365,
+  "cases": [
+    {
+      "path": "/api/health",
+      "statusCode": 200,
+      "seconds": 0.016000000000531145,
+      "bytes": 172
+    },
+    {
+      "path": "/api/speech/voices",
+      "statusCode": 200,
+      "seconds": 0.014999999999417923,
+      "bytes": 399
+    },
+    {
+      "path": "/api/reconstruction/catalog/beiyangyuan",
+      "statusCode": 200,
+      "seconds": 0.016000000000531145,
+      "bytes": 17042
+    },
+    {
+      "case": "Mandarin existing recording through public ASR endpoint",
+      "statusCode": 200,
+      "seconds": 8.92199999999957,
+      "duration": 5.848,
+      "result": {
+        "request_id": "95f5e55e-5e20-4f17-b376-b2e0f2152066",
+        "text": "介绍一下这里。",
+        "is_final": true
+      }
+    }
+  ],
+  "gpu": "name, memory.used [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 5060 Laptop GPU, 2679 MiB, 100 %\n"
+}

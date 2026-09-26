@@ -1,0 +1,66 @@
+"""CPU geometry review and bounded source projection; no generated image edits."""
+import numpy as np
+from PIL import Image, ImageDraw
+
+def camera(az,el):
+    az,el=np.radians([az,el]);eye=np.array([np.sin(az)*np.cos(el),np.sin(el),np.cos(az)*np.cos(el)])
+    right=np.array([np.cos(az),0,-np.sin(az)]);up=np.cross(eye,right)
+    return np.column_stack([right,up,eye])
+
+def render_review(mesh,path):
+    vertices=mesh.vertices.copy();vertices-=(vertices.min(0)+vertices.max(0))/2;vertices/=max(np.ptp(vertices,axis=0))
+    output=Image.new('RGB',(1440,960),'white')
+    colors=mesh.visual.vertex_colors[:,:3] if hasattr(mesh.visual,'vertex_colors') else np.tile([180,185,195],(len(vertices),1))
+    color=colors[mesh.faces].mean(axis=1);shade=.4+.6*np.abs(mesh.face_normals@np.array([.3,.7,.65]));color=(color*shade[:,None]).clip(0,255).astype('uint8')
+    for index,(az,el) in enumerate([(0,0),(90,0),(180,0),(270,0),(45,25),(225,25)]):
+        projected=vertices@camera(az,el);xy=projected[:,:2]*np.array([360,-360])+240
+        view=Image.new('RGB',(480,480),(245,246,249));draw=ImageDraw.Draw(view)
+        for f in np.argsort(projected[mesh.faces,2].mean(axis=1)):draw.polygon([tuple(p) for p in xy[mesh.faces[f]]],fill=tuple(color[f]))
+        draw.text((10,10),f'azimuth {az}, elevation {el}',fill='black');output.paste(view,((index%3)*480,(index//3)*480))
+    output.save(path)
+
+def project_visible_colors(mesh,image,folder):
+    import cv2
+    from numba import njit
+    rgba=np.asarray(image);alpha=rgba[:,:,3]>127;ys,xs=np.nonzero(alpha)
+    target_box=np.array([xs.min(),ys.min(),xs.max(),ys.max()],dtype=float)
+    target_size=target_box[2:]-target_box[:2];target_center=(target_box[:2]+target_box[2:])/2
+    vertices=mesh.vertices;center=(vertices.min(0)+vertices.max(0))/2;v=vertices-center
+    target=cv2.resize(alpha.astype('uint8'),(128,128),interpolation=cv2.INTER_NEAREST)
+    best=None
+    # Camera is fit against observed foreground only; repeated symmetries remain ambiguous.
+    for az in range(0,360,5):
+        for el in range(-10,41,5):
+            basis=camera(az,el);p=v@basis;p[:,1]*=-1
+            lo=p[:,:2].min(0);hi=p[:,:2].max(0);scale=min(target_size/(hi-lo));offset=target_center-(lo+hi)/2*scale
+            xy=(p[:,:2]*scale+offset)/np.array(image.size)*128
+            hull=cv2.convexHull(np.round(xy).astype('int32'));mask=np.zeros((128,128),'uint8');cv2.fillConvexPoly(mask,hull,1)
+            intersection=np.count_nonzero(mask&target);union=np.count_nonzero(mask|target);iou=intersection/max(union,1)
+            if best is None or iou>best[0]:best=(iou,az,el,scale,offset,basis)
+    iou,az,el,scale,offset,basis=best;p=v@basis;p[:,1]*=-1;xy=p[:,:2]*scale+offset
+    @njit(cache=False)
+    def zbuffer(xy,z,faces,width,height):
+        buffer=np.full((height,width),-1e10)
+        for face in faces:
+            a,b,c=xy[face[0]],xy[face[1]],xy[face[2]];za,zb,zc=z[face[0]],z[face[1]],z[face[2]]
+            lo_x=max(0,int(np.floor(min(a[0],b[0],c[0]))));hi_x=min(width-1,int(np.ceil(max(a[0],b[0],c[0]))))
+            lo_y=max(0,int(np.floor(min(a[1],b[1],c[1]))));hi_y=min(height-1,int(np.ceil(max(a[1],b[1],c[1]))))
+            denominator=(b[1]-c[1])*(a[0]-c[0])+(c[0]-b[0])*(a[1]-c[1])
+            if abs(denominator)<1e-10:continue
+            for y in range(lo_y,hi_y+1):
+                for x in range(lo_x,hi_x+1):
+                    u=((b[1]-c[1])*(x-c[0])+(c[0]-b[0])*(y-c[1]))/denominator
+                    w=((c[1]-a[1])*(x-c[0])+(a[0]-c[0])*(y-c[1]))/denominator
+                    if u>=-.001 and w>=-.001 and u+w<=1.001:
+                        depth=u*za+w*zb+(1-u-w)*zc
+                        if depth>buffer[y,x]:buffer[y,x]=depth
+        return buffer
+    w,h=image.size;z=zbuffer(xy,p[:,2],mesh.faces,w,h)
+    coord=np.round(xy).astype('int32');inside=(coord[:,0]>=0)&(coord[:,0]<w)&(coord[:,1]>=0)&(coord[:,1]<h)
+    safe=coord.copy();safe[:,0]=safe[:,0].clip(0,w-1);safe[:,1]=safe[:,1].clip(0,h-1)
+    tolerance=max(np.ptp(v,axis=0))*.01
+    visible=inside & (p[:,2]>=z[safe[:,1],safe[:,0]]-tolerance) & alpha[safe[:,1],safe[:,0]] & ((mesh.vertex_normals@basis[:,2])>0)
+    colors=np.tile([170,178,188,255],(len(v),1)).astype('uint8');colors[visible,:3]=rgba[safe[visible,1],safe[visible,0],:3]
+    mesh.visual.vertex_colors=colors
+    overlay=rgba[:,:,:3].copy();boundary=np.zeros((h,w),'uint8');cv2.drawContours(boundary,[cv2.convexHull(np.round(xy).astype('int32'))],-1,255,2);overlay[boundary>0]=[255,0,150];Image.fromarray(overlay).save(folder/'projection-overlay.png')
+    return {'method':'orthographic silhouette camera fit plus z-buffer visible-only vertex colors','cameraAzimuthDeg':az,'cameraElevationDeg':el,'pixelsPerModelUnit':float(scale),'convexSilhouetteIoU':float(iou),'observedVertexFraction':float(visible.mean()),'hiddenSurfaceColor':'neutral gray','cameraIsMeasured':False,'limitations':'Camera estimated from one silhouette, ambiguous under symmetry; textures and geometry remain unverified.'}
