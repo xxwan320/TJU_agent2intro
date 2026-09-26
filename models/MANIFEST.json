@@ -1,0 +1,3002 @@
+{
+  "formatVersion": 1,
+  "note": "Portable model bundle. GLB outputs are reconstructions/concepts, not survey-accurate geometry. TripoSR model weights declare MIT; SmolVLM declares Apache-2.0. Shap-E source code is MIT but the weight license is unclear and the upstream model card advises against commercial use. See README.md.",
+  "models": [
+    {
+      "id": "model-c4eed389ea044bacd36aa2ea",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-zhengdong-library",
+      "generator": null,
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 37538,
+      "faces": 75076,
+      "extents": [
+        0.5642869472503662,
+        0.5069805383682251,
+        1.0864936113357544
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-c4eed389ea044bacd36aa2ea.glb",
+      "bytes": 1502544,
+      "sha256": "f4e7d6494396081d4900a36cf76c4a6f90fc52b7d7ee09f734859de3c66adbd7"
+    },
+    {
+      "id": "model-db08e363f4aa7f019e7b029a",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-datong-center",
+      "generator": null,
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 52271,
+      "faces": 104586,
+      "extents": [
+        0.4563804268836975,
+        0.29816508293151855,
+        0.9869219064712524
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-db08e363f4aa7f019e7b029a.glb",
+      "bytes": 2092396,
+      "sha256": "468b1d093ab03c3748b599c2910a6fc2446815f2e31045bff7c63638b17808bc"
+    },
+    {
+      "id": "model-893da88f81d5a87514dc13f2",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-zhengdong-library",
+      "generator": null,
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 37538,
+      "faces": 75076,
+      "extents": [
+        1.0864936113357544,
+        0.5069805383682251,
+        0.5642869472503662
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-893da88f81d5a87514dc13f2.glb",
+      "bytes": 1502704,
+      "sha256": "53640bfb8f97a37e5f7f20d5c7dfb569bbc06667458797214148582648028553"
+    },
+    {
+      "id": "model-ae0da6b347819b39ffab912a",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-datong-center",
+      "generator": null,
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 52271,
+      "faces": 104586,
+      "extents": [
+        0.9869219064712524,
+        0.29816508293151855,
+        0.4563804268836975
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-ae0da6b347819b39ffab912a.glb",
+      "bytes": 2092552,
+      "sha256": "e2e300acf3b1b766735309421b06cf2ddc897ff50efe4f4b4af649d6e5580994"
+    },
+    {
+      "id": "model-adbdb25eacdb8021f8180872",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-zhengdong-library",
+      "generator": null,
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 37538,
+      "faces": 75076,
+      "extents": [
+        1.0864936113357544,
+        0.5069805383682251,
+        0.5642869472503662
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-adbdb25eacdb8021f8180872.glb",
+      "bytes": 1502704,
+      "sha256": "53640bfb8f97a37e5f7f20d5c7dfb569bbc06667458797214148582648028553"
+    },
+    {
+      "id": "model-455aa2825398074ec1ffef97",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-datong-center",
+      "generator": null,
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 58307,
+      "faces": 116614,
+      "extents": [
+        1.0169314742088318,
+        0.6066853404045105,
+        0.5067212581634521
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-455aa2825398074ec1ffef97.glb",
+      "bytes": 2333460,
+      "sha256": "da0ceb0f614d8841e1eeaec34282c48794ba55ef2cb996a41e27220c85f5b3ce"
+    },
+    {
+      "id": "model-189f703216f9b0e75b62cd37",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-datong-center",
+      "generator": null,
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 45891,
+      "faces": 91750,
+      "extents": [
+        0.9402890205383301,
+        0.21804577112197876,
+        0.8931274116039276
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-189f703216f9b0e75b62cd37.glb",
+      "bytes": 1836440,
+      "sha256": "301b575b1ce8a13c43a3b9e4dda9d748fe6f14d6b47b792c2e651b7317fe1875"
+    },
+    {
+      "id": "model-71314dbc61b58b9b8f8bb93f",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-zhengdong-library",
+      "generator": null,
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 39340,
+      "faces": 78676,
+      "extents": [
+        1.1130247116088867,
+        0.5081990361213684,
+        0.5911461710929871
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-71314dbc61b58b9b8f8bb93f.glb",
+      "bytes": 1574736,
+      "sha256": "bca17a434970e25356bd0165367e8e9de36603505f4670d3478a591c890feb69"
+    },
+    {
+      "id": "model-80e0c06815475c19762bc2a1",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-zhengdong-library",
+      "generator": null,
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 78719,
+      "faces": 157402,
+      "extents": [
+        0.8651265501976013,
+        0.8555428981781006,
+        0.6025537848472595
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-80e0c06815475c19762bc2a1.glb",
+      "bytes": 3149512,
+      "sha256": "3180671dfef712315a6241d5ab7253f2fc5bd9bc3ed4d6dd070f003b94ed12d6"
+    },
+    {
+      "id": "model-f370f1a53851d0cdb888d028",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-zhengdong-library",
+      "generator": null,
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 36832,
+      "faces": 73660,
+      "extents": [
+        0.9558248817920685,
+        0.6361250281333923,
+        0.496448278427124
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-f370f1a53851d0cdb888d028.glb",
+      "bytes": 1474412,
+      "sha256": "c0c3f56d2a453c91dceaed2484e5fb49a43c2a8e1880e700a0213dd78ac0c520"
+    },
+    {
+      "id": "model-37bc2c20e2afc2bb9029347f",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": null,
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 46048,
+      "faces": 92096,
+      "extents": [
+        0.5756927728652954,
+        1.0142728984355927,
+        0.6229830384254456
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-37bc2c20e2afc2bb9029347f.glb",
+      "bytes": 1843104,
+      "sha256": "ae69047c61b2fae49324be7b1e215881833cf31c58dc696cf27691c8b14e4d3a"
+    },
+    {
+      "id": "model-9529792bc426b7bacca3bbef",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": null,
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 48865,
+      "faces": 97722,
+      "extents": [
+        0.8493105173110962,
+        0.7211945652961731,
+        0.6418781280517578
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-9529792bc426b7bacca3bbef.glb",
+      "bytes": 1955684,
+      "sha256": "00a1419a5f63030bd99d5d7eccb9fdf47d7c4b96ecdf5b68b47bf32ebd8cbf33"
+    },
+    {
+      "id": "model-dad87669f55d5408082f83a3",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": null,
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 71448,
+      "faces": 142878,
+      "extents": [
+        0.8860325515270233,
+        0.9270051419734955,
+        0.7144269347190857
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-dad87669f55d5408082f83a3.glb",
+      "bytes": 2858888,
+      "sha256": "c39defd1cf64137f1ef491134b8044acd329c2de81a500dcfb8960b7d07fd363"
+    },
+    {
+      "id": "model-2d49b441e1ab0c1611a2daa5",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": null,
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 59661,
+      "faces": 119318,
+      "extents": [
+        0.9578061103820801,
+        0.5045191049575806,
+        0.9426884651184082
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-2d49b441e1ab0c1611a2daa5.glb",
+      "bytes": 2387572,
+      "sha256": "a6f863114483eda6b68ea88208496defb4b4bc2cf6c3b63186b7e43de0092dec"
+    },
+    {
+      "id": "model-c42ac6562544e3602191d783",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-datong-center",
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 13990,
+      "faces": 27984,
+      "extents": [
+        1.0256357192993164,
+        0.6152533888816833,
+        0.5098481178283691
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-c42ac6562544e3602191d783.glb",
+      "bytes": 560824,
+      "sha256": "bcb167430394ca3fe547f042f26d6c3eaa32937b52289afd27596108a375451d"
+    },
+    {
+      "id": "model-8d9641cc3a5be54731343e1a",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-datong-center",
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 8194,
+      "faces": 16368,
+      "extents": [
+        0.8890408575534821,
+        0.2171986699104309,
+        0.8095621764659882
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-8d9641cc3a5be54731343e1a.glb",
+      "bytes": 328696,
+      "sha256": "9428b202ff9a3295d2f5c560631cede22d377b3ed869c1e186cde8aec7e02cac"
+    },
+    {
+      "id": "model-eb21b83fbd9b4273187f9746",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-zhengdong-library",
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 9576,
+      "faces": 19148,
+      "extents": [
+        0.9935814142227173,
+        0.43692725896835327,
+        0.5026516318321228
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-eb21b83fbd9b4273187f9746.glb",
+      "bytes": 384168,
+      "sha256": "06723e60138f951b5c67d97760db0011fe82feea6edadc3cfee4a9c8d56a08db"
+    },
+    {
+      "id": "model-4ecda1c26a04a76a68da2984",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-zhengdong-library",
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 4056,
+      "faces": 8104,
+      "extents": [
+        0.4073317050933838,
+        0.4824255704879761,
+        0.5262008309364319
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-4ecda1c26a04a76a68da2984.glb",
+      "bytes": 163320,
+      "sha256": "530cd235dbe3e5ffb3f279fceba6885f23dc0767d4ff43a34283dc798bf5b22c"
+    },
+    {
+      "id": "model-867136ed0d86e43fde933710",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-zhengdong-library",
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 10288,
+      "faces": 20572,
+      "extents": [
+        1.0217572450637817,
+        0.6958177089691162,
+        0.1498723030090332
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-867136ed0d86e43fde933710.glb",
+      "bytes": 412648,
+      "sha256": "86523e424459499c88d428a4fd56a6d89fa7e2a162cffe92356bc4d38be00496"
+    },
+    {
+      "id": "model-400c3d3d333c516c7d047aa3",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 11220,
+      "faces": 22440,
+      "extents": [
+        0.5798241496086121,
+        1.0232719779014587,
+        0.6237054467201233
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-400c3d3d333c516c7d047aa3.glb",
+      "bytes": 449976,
+      "sha256": "89f310f3fe61314b3d223e1f095362867613209273ad5f6c401b4e80d63c5120"
+    },
+    {
+      "id": "model-e47a15fbc5d636463299339b",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 11493,
+      "faces": 22998,
+      "extents": [
+        0.8573924899101257,
+        0.7513446807861328,
+        0.6289672255516052
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-e47a15fbc5d636463299339b.glb",
+      "bytes": 461040,
+      "sha256": "64b6fa8f6f075396f7107e7f4299d60a758ea4856af79958720b7078689814d2"
+    },
+    {
+      "id": "model-6d6874bec96e64158e6ea2aa",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 17347,
+      "faces": 34670,
+      "extents": [
+        0.8870409429073334,
+        0.9361134171485901,
+        0.7158300876617432
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-6d6874bec96e64158e6ea2aa.glb",
+      "bytes": 694772,
+      "sha256": "56dc3c06f667519f12a26281b1eb091da62319297ff2789deb893f583f11ee88"
+    },
+    {
+      "id": "model-39b44e8ac6b4951ab141fd5e",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 14217,
+      "faces": 28426,
+      "extents": [
+        0.9619958400726318,
+        0.5150470733642578,
+        0.9434190094470978
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-39b44e8ac6b4951ab141fd5e.glb",
+      "bytes": 569760,
+      "sha256": "6c5c0197326435a22e9786d4105c6126151c0e88b000beae6a48f2a05fbd5bb0"
+    },
+    {
+      "id": "model-5fab3006d53659d4c3f87d8c",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-datong-center",
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 13990,
+      "faces": 27984,
+      "extents": [
+        1.0256357192993164,
+        0.6152533888816833,
+        0.5098481178283691
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-5fab3006d53659d4c3f87d8c.glb",
+      "bytes": 560824,
+      "sha256": "bcb167430394ca3fe547f042f26d6c3eaa32937b52289afd27596108a375451d"
+    },
+    {
+      "id": "model-bc3e9f62843d56cca68744d3",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-datong-center",
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 8194,
+      "faces": 16368,
+      "extents": [
+        0.8890408575534821,
+        0.2171986699104309,
+        0.8095621764659882
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-bc3e9f62843d56cca68744d3.glb",
+      "bytes": 328696,
+      "sha256": "9428b202ff9a3295d2f5c560631cede22d377b3ed869c1e186cde8aec7e02cac"
+    },
+    {
+      "id": "model-dbed59244f5f10608dc9de6d",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 13990,
+      "faces": 27984,
+      "extents": [
+        1.0256357192993164,
+        0.6152533888816833,
+        0.5098481178283691
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-dbed59244f5f10608dc9de6d.glb",
+      "bytes": 560824,
+      "sha256": "bcb167430394ca3fe547f042f26d6c3eaa32937b52289afd27596108a375451d"
+    },
+    {
+      "id": "model-52b85606d337e972b876ec93",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 8194,
+      "faces": 16368,
+      "extents": [
+        0.8890408575534821,
+        0.2171986699104309,
+        0.8095621764659882
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-52b85606d337e972b876ec93.glb",
+      "bytes": 328696,
+      "sha256": "9428b202ff9a3295d2f5c560631cede22d377b3ed869c1e186cde8aec7e02cac"
+    },
+    {
+      "id": "model-0b194993f964893355e34cbe",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 11276,
+      "faces": 22548,
+      "extents": [
+        1.0061808228492737,
+        0.7744352221488953,
+        0.1496737003326416
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-0b194993f964893355e34cbe.glb",
+      "bytes": 452172,
+      "sha256": "cd9b327566b98fa76470efe5c4d14a6c97f2559ffa6b2407d917432571bf6139"
+    },
+    {
+      "id": "model-11ef30e8531dd4219f66b490",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 5946,
+      "faces": 11892,
+      "extents": [
+        0.8681715726852417,
+        0.667428731918335,
+        0.34350109100341797
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-11ef30e8531dd4219f66b490.glb",
+      "bytes": 239020,
+      "sha256": "b9b517b08b2e6b6708551ee1e0913f2ff7859500d33d8c31a1c8f360391d9f0f"
+    },
+    {
+      "id": "model-6ecff36bb9b31c3b83a86187",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 20410,
+      "faces": 40796,
+      "extents": [
+        1.0191835165023804,
+        0.7761916816234589,
+        0.5797812938690186
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-6ecff36bb9b31c3b83a86187.glb",
+      "bytes": 817288,
+      "sha256": "955d6aaee646975f696c80db28475d3de3fdf46773cafb0ef1c4c9ca7926c42a"
+    },
+    {
+      "id": "model-fd1b287f720fbc554b5d0809",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 18004,
+      "faces": 35948,
+      "extents": [
+        0.9593190252780914,
+        0.9674905240535736,
+        0.4467563033103943
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-fd1b287f720fbc554b5d0809.glb",
+      "bytes": 720616,
+      "sha256": "67ed82952f62ba60beea496e4a1517c6e3ec013442df342d0836cd0ac612ef11"
+    },
+    {
+      "id": "model-136d76b592b2662c83573c36",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 2936,
+      "faces": 5864,
+      "extents": [
+        0.6538088321685791,
+        0.32464534044265747,
+        0.21096956729888916
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-136d76b592b2662c83573c36.glb",
+      "bytes": 118520,
+      "sha256": "6ae5f22bc52da55820caccd9cd5178e5673b4fdf63252d074746768918f2d7a3"
+    },
+    {
+      "id": "model-ee24a5b7aca14df9f48b7cc2",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 9988,
+      "faces": 19972,
+      "extents": [
+        0.9999167025089264,
+        0.7650793492794037,
+        0.08729445934295654
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-ee24a5b7aca14df9f48b7cc2.glb",
+      "bytes": 400644,
+      "sha256": "8b341aeb969a07014903f300db652771ea023d6a55ef70506fe93d6f845452f5"
+    },
+    {
+      "id": "model-a52a89ca24ccfa896463539d",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 814,
+      "faces": 1624,
+      "extents": [
+        0.15963661670684814,
+        0.21497422456741333,
+        0.24546021223068237
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-a52a89ca24ccfa896463539d.glb",
+      "bytes": 33680,
+      "sha256": "7e5dd21540ed4808308b415ebf8a5a0743241a5addaf9d8172a611da0f371fa6"
+    },
+    {
+      "id": "model-b7d155e290a8c255322e717d",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 10270,
+      "faces": 20536,
+      "extents": [
+        1.0096458792686462,
+        0.7753442227840424,
+        0.08514237403869629
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-b7d155e290a8c255322e717d.glb",
+      "bytes": 411928,
+      "sha256": "ad8692b9346d4999cb54d9a6af1110332829f3a5847ad21b6bb85d02b96776a4"
+    },
+    {
+      "id": "model-e7d8d7685a96fdd6100529ea",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 11673,
+      "faces": 23346,
+      "extents": [
+        0.9073117673397064,
+        0.41652339696884155,
+        0.8059172928333282
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-e7d8d7685a96fdd6100529ea.glb",
+      "bytes": 468096,
+      "sha256": "982981c0b5337f6179badf169102c91b1f5cc7abcc2e36ced165e550692c1b7c"
+    },
+    {
+      "id": "model-19956b53bb5da70905f2aa95",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 12958,
+      "faces": 25856,
+      "extents": [
+        1.0169477462768555,
+        0.7183263301849365,
+        0.597318708896637
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-19956b53bb5da70905f2aa95.glb",
+      "bytes": 518776,
+      "sha256": "aadff3f9c9ff7a5fdb6d3411f85eee6569b5105dbc88c79e5e163733fe58d6f0"
+    },
+    {
+      "id": "model-75ba4c0d7766da7aa23edec5",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 13854,
+      "faces": 27688,
+      "extents": [
+        1.1544103622436523,
+        0.5609322190284729,
+        0.5939546227455139
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-75ba4c0d7766da7aa23edec5.glb",
+      "bytes": 555096,
+      "sha256": "41f880e7da4d35a401060ff1385837bb2b59da13480441b0e45826ab52cde723"
+    },
+    {
+      "id": "model-ede041f73c8d9914873d2cca",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 2744,
+      "faces": 5476,
+      "extents": [
+        0.9240401983261108,
+        0.23281025886535645,
+        0.24522459506988525
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-ede041f73c8d9914873d2cca.glb",
+      "bytes": 110792,
+      "sha256": "1107d8f6057f2ad6f2324ddfb201454c1813f25518cd58407f714b73a19f005f"
+    },
+    {
+      "id": "model-f235f1c5862a887a1c72a82a",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 4260,
+      "faces": 8512,
+      "extents": [
+        0.7991049587726593,
+        0.13600313663482666,
+        0.7988530397415161
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-f235f1c5862a887a1c72a82a.glb",
+      "bytes": 171476,
+      "sha256": "0a8818ee3aa5dd1a62cb23ae3b95c64b35a2be863c3bf8f8a0eecf00683afd56"
+    },
+    {
+      "id": "model-f3f1e7e2223f6aef0a65fc10",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 5242,
+      "faces": 10508,
+      "extents": [
+        0.8085031509399414,
+        0.2819526195526123,
+        0.6455022096633911
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-f3f1e7e2223f6aef0a65fc10.glb",
+      "bytes": 211148,
+      "sha256": "592d872beacd8148cdbdd2ab712d7a65cab5ff44ef4c2004117247de7f432cd5"
+    },
+    {
+      "id": "model-0d25479cc8360a64b1d86569",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 5018,
+      "faces": 10024,
+      "extents": [
+        0.6531192660331726,
+        0.36263543367385864,
+        0.5292690396308899
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-0d25479cc8360a64b1d86569.glb",
+      "bytes": 201752,
+      "sha256": "eea51c0f70da99d4a742f92847466c40f88a0a52829ab079634d849ac2a14298"
+    },
+    {
+      "id": "model-2b90043e6aada791131782a0",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 5838,
+      "faces": 11676,
+      "extents": [
+        0.7613793015480042,
+        0.3816535472869873,
+        0.42414116859436035
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-2b90043e6aada791131782a0.glb",
+      "bytes": 234692,
+      "sha256": "e615afaef7aa58fed11ab85913af4be5d380643da4f7cdae3f48c3d9715841f4"
+    },
+    {
+      "id": "model-a73bf72e7577ce2dc27d5e09",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 7478,
+      "faces": 14944,
+      "extents": [
+        0.953054666519165,
+        0.49015551805496216,
+        0.4065803289413452
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-a73bf72e7577ce2dc27d5e09.glb",
+      "bytes": 300152,
+      "sha256": "bf1c0a8890975a323f3dd52203da02e6ad5211e25066b1bd575e7b076123c86e"
+    },
+    {
+      "id": "model-91dbe792f5eea4f82fce61dd",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 11959,
+      "faces": 23938,
+      "extents": [
+        0.8180429339408875,
+        0.581110417842865,
+        0.7306548357009888
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-91dbe792f5eea4f82fce61dd.glb",
+      "bytes": 479776,
+      "sha256": "2e1561257c35915e1c9f84f2a4aec0c75f23ff8a8fc83f31834f8b55e8bbe8df"
+    },
+    {
+      "id": "model-f9d28953deca669e5cfc9116",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 5543,
+      "faces": 11086,
+      "extents": [
+        0.7995929718017578,
+        0.5932835936546326,
+        0.3873417377471924
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-f9d28953deca669e5cfc9116.glb",
+      "bytes": 222896,
+      "sha256": "6aa983d5280f9c54a0cf6f0469679c60bd709fd56cfd1749e28563648b633bfe"
+    },
+    {
+      "id": "model-8fd4347e6331be5d4f5f806a",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 4218,
+      "faces": 8432,
+      "extents": [
+        0.6269109845161438,
+        0.16370654106140137,
+        0.5912156105041504
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-8fd4347e6331be5d4f5f806a.glb",
+      "bytes": 169848,
+      "sha256": "26eae518638da6fd995e3997e5f18619a1f25d69d9d2865f56a74ca70febdcc1"
+    },
+    {
+      "id": "model-fa9613793742e1fd2dbe882c",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 1618,
+      "faces": 3232,
+      "extents": [
+        0.21691471338272095,
+        0.3094028830528259,
+        0.24455004930496216
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-fa9613793742e1fd2dbe882c.glb",
+      "bytes": 65844,
+      "sha256": "c3576c0e5a38d669fba051074498ecd791a1a05f850fe550366238b14cb8fde6"
+    },
+    {
+      "id": "model-e3eddf2939d60b7378852308",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 12014,
+      "faces": 24084,
+      "extents": [
+        0.7257055938243866,
+        0.6217579245567322,
+        0.7645914554595947
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-e3eddf2939d60b7378852308.glb",
+      "bytes": 482412,
+      "sha256": "acb2d68740eaf02b7111d014b6a52f0ab3b446bdd092d89f4560b2c2c7f5c213"
+    },
+    {
+      "id": "model-a722653c91e75ab847d1e1cf",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 5554,
+      "faces": 11120,
+      "extents": [
+        0.9741363525390625,
+        0.3412332534790039,
+        0.36236798763275146
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-a722653c91e75ab847d1e1cf.glb",
+      "bytes": 223480,
+      "sha256": "944a4d21b4c80941bafebb7500940afaa54715e8b8df4eb005bcdef66edb5eb2"
+    },
+    {
+      "id": "model-40fa4de069587ee213e6fb35",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 5178,
+      "faces": 10348,
+      "extents": [
+        0.916345477104187,
+        0.22045284509658813,
+        0.5707365274429321
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-40fa4de069587ee213e6fb35.glb",
+      "bytes": 208196,
+      "sha256": "2b875ab7554df4ffd9f55ffb2ecc3939fd245c30443c63ed996aa60f497dae10"
+    },
+    {
+      "id": "model-c33df11f711285afe5c8af7c",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 4850,
+      "faces": 9696,
+      "extents": [
+        0.7304147481918335,
+        0.4036378264427185,
+        0.3116653561592102
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-c33df11f711285afe5c8af7c.glb",
+      "bytes": 195128,
+      "sha256": "73c3bf94bd10791b7b81e39f37f61c102942f64411926331c6d2ab3d6c9ac0fe"
+    },
+    {
+      "id": "model-953c684d7b90b6f0b7c53030",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 14161,
+      "faces": 28310,
+      "extents": [
+        1.0234236121177673,
+        0.6970694661140442,
+        0.44188350439071655
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-953c684d7b90b6f0b7c53030.glb",
+      "bytes": 567472,
+      "sha256": "d847cd3f051a43970baeffc48c86d1477555943952bc68a4ddf90f2048a10ee7"
+    },
+    {
+      "id": "model-a89378570c173ea97ac77337",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 4712,
+      "faces": 9424,
+      "extents": [
+        0.8444337248802185,
+        0.25742536783218384,
+        0.39624279737472534
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-a89378570c173ea97ac77337.glb",
+      "bytes": 189656,
+      "sha256": "c2a20f01438171104717fd59b40e1b460d212f2061154f08fa5663a308ab024d"
+    },
+    {
+      "id": "model-c3684255d43a39347e6a5979",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 5178,
+      "faces": 10364,
+      "extents": [
+        0.8553747236728668,
+        0.18991416692733765,
+        0.4736584424972534
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-c3684255d43a39347e6a5979.glb",
+      "bytes": 208388,
+      "sha256": "f16ed75af98d82d7f050629fd030d656f1886850980de2c417030d3cfab93938"
+    },
+    {
+      "id": "model-0cdac5f42d48952d4344d7a7",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 4872,
+      "faces": 9732,
+      "extents": [
+        0.5923052430152893,
+        0.6215340495109558,
+        0.468083918094635
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-0cdac5f42d48952d4344d7a7.glb",
+      "bytes": 195912,
+      "sha256": "8e0d5858dd118fe266ed3f1dd033144bd64eb25e79868d7b45b135ab87f1c971"
+    },
+    {
+      "id": "model-3c75dd65fea00ffb26b72a41",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 5290,
+      "faces": 10584,
+      "extents": [
+        0.9451440274715424,
+        0.1614454984664917,
+        0.40667837858200073
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-3c75dd65fea00ffb26b72a41.glb",
+      "bytes": 212824,
+      "sha256": "41417aa04ce167e6d845dafd4c31bb839fff3ef2e8a97715c9fbaec7caab9d82"
+    },
+    {
+      "id": "model-f1c38a3b2e8a16dae5bcf8f4",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 5776,
+      "faces": 11548,
+      "extents": [
+        0.9978817105293274,
+        0.3741685152053833,
+        0.23655545711517334
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-f1c38a3b2e8a16dae5bcf8f4.glb",
+      "bytes": 232168,
+      "sha256": "b1467272c3af77d79229acbbef6ff17ccef3775879bdfb64bba756ac5d61a0f3"
+    },
+    {
+      "id": "model-c2042f04fe106a3738daa5cd",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 11319,
+      "faces": 22626,
+      "extents": [
+        0.9155526757240295,
+        0.7891840636730194,
+        0.4712991714477539
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-c2042f04fe106a3738daa5cd.glb",
+      "bytes": 453796,
+      "sha256": "1a7d3e3d60466d5dd0b5d1b47539594a678e0e9a4ff13653e0ed8fde0181da87"
+    },
+    {
+      "id": "model-c32b7d94c115a1adce1d91cb",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 19464,
+      "faces": 38880,
+      "extents": [
+        1.026444911956787,
+        0.5843876600265503,
+        0.5445677638053894
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-c32b7d94c115a1adce1d91cb.glb",
+      "bytes": 779160,
+      "sha256": "304bbccf7ef199481ff5b2c332682a787fde7ac38e25ae307e2b84e102e401ea"
+    },
+    {
+      "id": "model-5ee78a021b99ebcefaff923b",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 6092,
+      "faces": 12184,
+      "extents": [
+        0.6139572858810425,
+        0.7630823254585266,
+        0.43658679723739624
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-5ee78a021b99ebcefaff923b.glb",
+      "bytes": 244856,
+      "sha256": "e7a2b149c18dfc6be6e264e81aef70091bd9d0af679a2d0b8ecf2c637c0dc8be"
+    },
+    {
+      "id": "model-4c0bbfb0db6efadde819764a",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 9902,
+      "faces": 19800,
+      "extents": [
+        0.9989119172096252,
+        0.7651815712451935,
+        0.09165263175964355
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-4c0bbfb0db6efadde819764a.glb",
+      "bytes": 397208,
+      "sha256": "551bb715cbfb051c8c8cdf5732a88f1718309cb7cc7ae6a7d0ad61325b8b6de8"
+    },
+    {
+      "id": "model-d1e7505d00140e7fca808185",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 20953,
+      "faces": 41758,
+      "extents": [
+        0.994534820318222,
+        0.7525812685489655,
+        0.4765669107437134
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-d1e7505d00140e7fca808185.glb",
+      "bytes": 837520,
+      "sha256": "6eb5ff1b4a4caba9f4a051363dbccb7ef26718ba9c614e4e6413ab8d4e45ca81"
+    },
+    {
+      "id": "model-d21a52174af9c745801884fb",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 19675,
+      "faces": 39294,
+      "extents": [
+        0.9963892102241516,
+        0.7586900889873505,
+        0.5525723099708557
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-d21a52174af9c745801884fb.glb",
+      "bytes": 787504,
+      "sha256": "51447bf59ed839a740a83bc27ca9d966478972e53ec81d0a9d518dd35fc51829"
+    },
+    {
+      "id": "model-da8e9bca9cf2e933e46e969b",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 12245,
+      "faces": 24482,
+      "extents": [
+        0.9699176549911499,
+        0.4099873900413513,
+        0.8872130215167999
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-da8e9bca9cf2e933e46e969b.glb",
+      "bytes": 490884,
+      "sha256": "ff7b3707c9c3211f637398777c4f5f5bfc78bd3e9b248312ec0480b3f92bed03"
+    },
+    {
+      "id": "model-1da6ab23c2f1344031309534",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 9610,
+      "faces": 19212,
+      "extents": [
+        1.0199062824249268,
+        0.6939793229103088,
+        0.2273748517036438
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-1da6ab23c2f1344031309534.glb",
+      "bytes": 385480,
+      "sha256": "1e0063d57764abc2f4d96dd09c70b18f8ee398723b5e5d316b640b87d2063ba6"
+    },
+    {
+      "id": "model-5522ed4da8425b1fb6ec05c3",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 10342,
+      "faces": 20676,
+      "extents": [
+        1.014885127544403,
+        0.41717100143432617,
+        0.526709794998169
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-5522ed4da8425b1fb6ec05c3.glb",
+      "bytes": 414764,
+      "sha256": "50a09fe63e80701ded1a66d1b39b9b45199fd2353f6aef51f990499a7870f198"
+    },
+    {
+      "id": "model-e236c273a75c0fb8868ca2c3",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 9172,
+      "faces": 18284,
+      "extents": [
+        0.750704288482666,
+        0.5703735947608948,
+        0.5622118711471558
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-e236c273a75c0fb8868ca2c3.glb",
+      "bytes": 367332,
+      "sha256": "93fbbf272d59f20763bc7017043d8bd54f267b5d40b1eff490c29d1508a9de6f"
+    },
+    {
+      "id": "model-4dda25dd91d8bc2c468b0182",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 6756,
+      "faces": 13520,
+      "extents": [
+        0.8189939856529236,
+        0.27296382188796997,
+        0.3390020728111267
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-4dda25dd91d8bc2c468b0182.glb",
+      "bytes": 271508,
+      "sha256": "baa9f5ff1634a2b7d6f8aa394114e93949870329bcc097fee670ad5a618853ed"
+    },
+    {
+      "id": "model-976028c20bacaad910dabf47",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 16658,
+      "faces": 33328,
+      "extents": [
+        1.0270102620124817,
+        0.5529958605766296,
+        0.5252630710601807
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-976028c20bacaad910dabf47.glb",
+      "bytes": 667640,
+      "sha256": "547e12084da0cb60ea03005620706656457bbc64f563130ece015bfd978fa7b4"
+    },
+    {
+      "id": "model-26eabbe2d87c71472c94704a",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 6476,
+      "faces": 12972,
+      "extents": [
+        0.5687216520309448,
+        0.4823601245880127,
+        0.7409918308258057
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-26eabbe2d87c71472c94704a.glb",
+      "bytes": 260456,
+      "sha256": "1cd29fd1f65aac338d7356b0573b577d5307640ac0abf783be8621134cb096ce"
+    },
+    {
+      "id": "model-522191129233cffd85c5453a",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 10241,
+      "faces": 20458,
+      "extents": [
+        0.891091525554657,
+        0.4023350477218628,
+        0.5058285593986511
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-522191129233cffd85c5453a.glb",
+      "bytes": 410532,
+      "sha256": "ede4df8bbf9479118979df854ea9cd237120979074d93e5844a3e5da0bd6fec9"
+    },
+    {
+      "id": "model-231282aa00c4bb0bb455bb12",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 23876,
+      "faces": 47684,
+      "extents": [
+        1.0470857620239258,
+        0.8070215582847595,
+        0.595413088798523
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-231282aa00c4bb0bb455bb12.glb",
+      "bytes": 955400,
+      "sha256": "f52fac6bcb81a1f245dc059b2288463ddf23ad5a00e650e00497a717402a0a3d"
+    },
+    {
+      "id": "model-02a475e5529028ed9135d0d8",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 9872,
+      "faces": 19736,
+      "extents": [
+        0.8535197675228119,
+        0.5728380680084229,
+        0.676536500453949
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-02a475e5529028ed9135d0d8.glb",
+      "bytes": 395960,
+      "sha256": "6328111e2c76e117ac497c995beecf1921c20a8b9ff5eb4935c4059597246be2"
+    },
+    {
+      "id": "model-fde73fcf7f3cc32a212eefe9",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 7274,
+      "faces": 14544,
+      "extents": [
+        0.9288756549358368,
+        0.35587841272354126,
+        0.32460081577301025
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-fde73fcf7f3cc32a212eefe9.glb",
+      "bytes": 292092,
+      "sha256": "f0689d0509c91e48f08aff6c18a079f8511ad31437f2324383c67e3d1e14b8dd"
+    },
+    {
+      "id": "model-987bcfc880934a9dbaeec3d2",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 5282,
+      "faces": 10564,
+      "extents": [
+        0.9985841810703278,
+        0.6823602318763733,
+        0.24029850959777832
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-987bcfc880934a9dbaeec3d2.glb",
+      "bytes": 212456,
+      "sha256": "62d5d7d1b00f2940bd454f5a3e1fe79743b1b7e6c6699f2c3b94ca97596f20d1"
+    },
+    {
+      "id": "model-b80d9e6af62a8335f460c365",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 1170,
+      "faces": 2332,
+      "extents": [
+        0.6765316724777222,
+        0.24505293369293213,
+        0.27143001556396484
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-b80d9e6af62a8335f460c365.glb",
+      "bytes": 47872,
+      "sha256": "89dd8cda4c4b5a6cbe5b6040db8251df9095ea98d4f69a8539027e8003063cc5"
+    },
+    {
+      "id": "model-d5cad592e5e5c5334058bbcf",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 4709,
+      "faces": 9398,
+      "extents": [
+        1.048586130142212,
+        0.6126428246498108,
+        0.7724688053131104
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-d5cad592e5e5c5334058bbcf.glb",
+      "bytes": 189292,
+      "sha256": "f7551e39f5d9284da0155fc273277bb8a13efaefb1c017635605ad3028cd0253"
+    },
+    {
+      "id": "model-84fe7571c4385fc5edb41c6b",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 8736,
+      "faces": 17468,
+      "extents": [
+        1.0249150395393372,
+        0.628013551235199,
+        0.07294082641601562
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-84fe7571c4385fc5edb41c6b.glb",
+      "bytes": 350564,
+      "sha256": "e2900d704aea4885a179d921a58fa3dc38f37561d5030d8d3d1b92c3c606b063"
+    },
+    {
+      "id": "model-c46498c65478d3218d26d8e1",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 13470,
+      "faces": 26932,
+      "extents": [
+        1.0665754079818726,
+        0.5746222138404846,
+        0.6839073300361633
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-c46498c65478d3218d26d8e1.glb",
+      "bytes": 539880,
+      "sha256": "ee5a62b58965e76470428194bd133b9c2063945ed186c1b19f4fb5f17a2c1420"
+    },
+    {
+      "id": "model-ed08ca5f43f0a7d7564b7b38",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 7132,
+      "faces": 14252,
+      "extents": [
+        1.0217059254646301,
+        0.5837860107421875,
+        0.449241042137146
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-ed08ca5f43f0a7d7564b7b38.glb",
+      "bytes": 286312,
+      "sha256": "db369bdaf3b970a9fa4bed92a88c782e8c062b4a3853a19f970a0b3647f7422c"
+    },
+    {
+      "id": "model-ca2aaf2b696f7471dac47c13",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 9576,
+      "faces": 19148,
+      "extents": [
+        0.9935814142227173,
+        0.43692725896835327,
+        0.5026516318321228
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-ca2aaf2b696f7471dac47c13.glb",
+      "bytes": 384168,
+      "sha256": "06723e60138f951b5c67d97760db0011fe82feea6edadc3cfee4a9c8d56a08db"
+    },
+    {
+      "id": "model-0bc2f8bc43a3607d1e648156",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 4056,
+      "faces": 8104,
+      "extents": [
+        0.4073317050933838,
+        0.4824255704879761,
+        0.5262008309364319
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-0bc2f8bc43a3607d1e648156.glb",
+      "bytes": 163320,
+      "sha256": "530cd235dbe3e5ffb3f279fceba6885f23dc0767d4ff43a34283dc798bf5b22c"
+    },
+    {
+      "id": "model-f0b20310b36be5b4e00e4bfe",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 10288,
+      "faces": 20572,
+      "extents": [
+        1.0217572450637817,
+        0.6958177089691162,
+        0.1498723030090332
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-f0b20310b36be5b4e00e4bfe.glb",
+      "bytes": 412648,
+      "sha256": "86523e424459499c88d428a4fd56a6d89fa7e2a162cffe92356bc4d38be00496"
+    },
+    {
+      "id": "model-1026a40ccd8193da103175ed",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 2570,
+      "faces": 5128,
+      "extents": [
+        0.861452728509903,
+        0.25870662927627563,
+        0.35352933406829834
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-1026a40ccd8193da103175ed.glb",
+      "bytes": 103832,
+      "sha256": "2bc07f48edcd3110fed9ee7f372ddf295dc968c6a649d0ac85023232aa6c1b50"
+    },
+    {
+      "id": "model-5ae72dbe435c9b6d6eb54094",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 15096,
+      "faces": 30200,
+      "extents": [
+        1.0052479207515717,
+        0.7668875455856323,
+        0.4613034129142761
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-5ae72dbe435c9b6d6eb54094.glb",
+      "bytes": 605116,
+      "sha256": "228724395c139bc46ea1d64d3f38a37bac48f28d63b666e3372ebd9fbe0675e7"
+    },
+    {
+      "id": "model-3462a683dafd7131deebea21",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 11913,
+      "faces": 23838,
+      "extents": [
+        0.8266385793685913,
+        0.7046493887901306,
+        0.5151750445365906
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-3462a683dafd7131deebea21.glb",
+      "bytes": 477844,
+      "sha256": "82848d97c11a65dbd2db6c36c3ce5372b7775bc3e4be1b1acf17911e57db6a65"
+    },
+    {
+      "id": "model-6a70234eba4c4f1e37eb2529",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 5950,
+      "faces": 11908,
+      "extents": [
+        1.0472715497016907,
+        0.4277351498603821,
+        0.38123011589050293
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-6a70234eba4c4f1e37eb2529.glb",
+      "bytes": 239268,
+      "sha256": "2c1476f2cf9e22e003c2a9e5037a81ab0a27ed3eb7a448300f16fa93c96be789"
+    },
+    {
+      "id": "model-a06b6e5f7d818775064c269a",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 15004,
+      "faces": 30004,
+      "extents": [
+        1.014163076877594,
+        0.7246795892715454,
+        0.5316065549850464
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-a06b6e5f7d818775064c269a.glb",
+      "bytes": 601288,
+      "sha256": "0de38c8b1df377dc2be13d582edeea7467e94b16a7cdaea137dd914aec06dfcb"
+    },
+    {
+      "id": "model-7cf7f2d1dff92b9bd8a922f2",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 8305,
+      "faces": 16606,
+      "extents": [
+        0.9434127509593964,
+        0.32324832677841187,
+        0.3737541437149048
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-7cf7f2d1dff92b9bd8a922f2.glb",
+      "bytes": 333328,
+      "sha256": "a45abea98c9a731cf9d88ca6e6d2303a9381e9af6560edb2fc336063a58f3fcf"
+    },
+    {
+      "id": "model-df323823047a7309b653bb21",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 13878,
+      "faces": 27764,
+      "extents": [
+        1.0024958848953247,
+        0.7636682689189911,
+        0.36839306354522705
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-df323823047a7309b653bb21.glb",
+      "bytes": 556392,
+      "sha256": "4a38437d8fa46aa2993badef14bccd61c5582fcf12fa97c325769f8b2f5f87cf"
+    },
+    {
+      "id": "model-531ba9077282c84648a07815",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 1660,
+      "faces": 3300,
+      "extents": [
+        0.5859787166118622,
+        0.4597877264022827,
+        0.2303919792175293
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-531ba9077282c84648a07815.glb",
+      "bytes": 67332,
+      "sha256": "0fc85eb0bfcca724c30511cc09cd49c683e22d74b0a8626a7f20d6df92c0bffc"
+    },
+    {
+      "id": "model-e8d23898e1fa72f25e6f6943",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 6370,
+      "faces": 12732,
+      "extents": [
+        0.5229656100273132,
+        0.6114153265953064,
+        0.510114312171936
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-e8d23898e1fa72f25e6f6943.glb",
+      "bytes": 255884,
+      "sha256": "c8c2e08fc0d73e2d6317ad21e3ec9a993f5f6702bdef00a11ce6a03616bf6d87"
+    },
+    {
+      "id": "model-4eed742db670b7d5791660c1",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 6469,
+      "faces": 12938,
+      "extents": [
+        0.41775649785995483,
+        0.4220907688140869,
+        0.379289448261261
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-4eed742db670b7d5791660c1.glb",
+      "bytes": 259932,
+      "sha256": "b568136b036098ffd38a1b5ca786f2ca8c24aea62c0405db74dc907adf22b697"
+    },
+    {
+      "id": "model-e38c6919d7b3ce570f22e970",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 15377,
+      "faces": 30710,
+      "extents": [
+        1.0269224643707275,
+        0.5861495733261108,
+        0.5154380798339844
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-e38c6919d7b3ce570f22e970.glb",
+      "bytes": 615728,
+      "sha256": "fbc5c04844e9dd63c6a2f5b07c18703b55965781ea072af603d7e705cf0eedca"
+    },
+    {
+      "id": "model-375bf80af81564ad859bbcea",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 16114,
+      "faces": 32216,
+      "extents": [
+        1.0235202312469482,
+        0.6954770684242249,
+        0.46399831771850586
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-375bf80af81564ad859bbcea.glb",
+      "bytes": 645592,
+      "sha256": "43e9ba78fb957237b03fd8e29f39a35f87939818cb9422fb3ca116088774b72b"
+    },
+    {
+      "id": "model-5e469ffac828486c8f4d4b81",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 15164,
+      "faces": 30316,
+      "extents": [
+        0.9999558925628662,
+        0.7656075656414032,
+        0.43651729822158813
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-5e469ffac828486c8f4d4b81.glb",
+      "bytes": 607592,
+      "sha256": "15d1450e26829342ed301b16c5fda02fd1e3ec073a9e0d253850186c39cd217a"
+    },
+    {
+      "id": "model-c761eea65c8882a66e567695",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "Generated geometry; visual review required; hidden surfaces inferred",
+      "vertices": 13386,
+      "faces": 26768,
+      "extents": [
+        1.0222153663635254,
+        0.6599708795547485,
+        0.4470589756965637
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-c761eea65c8882a66e567695.glb",
+      "bytes": 536568,
+      "sha256": "95515bdb55b65045af8aaad54d81a69e1694128ed18505e38958f0eeb0c90df0"
+    },
+    {
+      "id": "model-983083ae719d5b399b377256",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 3751,
+      "faces": 7482,
+      "extents": [
+        0.6115319728851318,
+        0.183641254901886,
+        0.3983996510505676
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-983083ae719d5b399b377256.glb",
+      "bytes": 150972,
+      "sha256": "ec2cdac4d23f45dd3132b73a52afecf2a198e470e635b053fd094adab6ce18ba"
+    },
+    {
+      "id": "model-3f516cb6e6516262c71d689c",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 11378,
+      "faces": 22752,
+      "extents": [
+        0.9995982944965363,
+        0.7533863484859467,
+        0.2389082908630371
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-3f516cb6e6516262c71d689c.glb",
+      "bytes": 456252,
+      "sha256": "2efd2bc4484ad04fa1314f1d99bfcc428244868fccc67de7f64430985791f5e9"
+    },
+    {
+      "id": "model-70a6f9446aefa84ada4cef90",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 9672,
+      "faces": 19316,
+      "extents": [
+        0.5046695470809937,
+        0.6849506795406342,
+        0.5335225462913513
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-70a6f9446aefa84ada4cef90.glb",
+      "bytes": 387720,
+      "sha256": "0510f9eafb8804b938ad8e58be2194bdb372c4e4f7e0ee045c2e2fb8b292467d"
+    },
+    {
+      "id": "model-7b17bffc12390091b6d9d7d9",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 14674,
+      "faces": 29332,
+      "extents": [
+        1.0081053972244263,
+        0.6863535046577454,
+        0.4266960620880127
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-7b17bffc12390091b6d9d7d9.glb",
+      "bytes": 587944,
+      "sha256": "a1676b4d5b2c43a9fec5e366e45142cc21dad8cbc19dfb6712b05370e4f3dafe"
+    },
+    {
+      "id": "model-392e11e5ff006c00f6caff33",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 8491,
+      "faces": 16982,
+      "extents": [
+        0.7579631805419922,
+        0.9054894149303436,
+        0.45243316888809204
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-392e11e5ff006c00f6caff33.glb",
+      "bytes": 340816,
+      "sha256": "6be4f75336d686293ce124dd67b2740f7afeb1120ab0ce19c70190cf4ad85f82"
+    },
+    {
+      "id": "model-2a90d553b774855f29507f1f",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 11956,
+      "faces": 23908,
+      "extents": [
+        1.008548378944397,
+        0.6837129592895508,
+        0.42964452505111694
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-2a90d553b774855f29507f1f.glb",
+      "bytes": 479368,
+      "sha256": "9bbecfe59f05eb5f3b90e7a5cc87f94e6826e5226ad1fa0b717ee3ea31ae37f9"
+    },
+    {
+      "id": "model-c721b6df96849bf91bd5b0fb",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 4428,
+      "faces": 8836,
+      "extents": [
+        0.9507994651794434,
+        0.6611348390579224,
+        0.18493211269378662
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-c721b6df96849bf91bd5b0fb.glb",
+      "bytes": 178056,
+      "sha256": "7ce5aacb7ec3fb10f302c0ec43865f13cdd62130672b352e697b812c75a42004"
+    },
+    {
+      "id": "model-813c8052793385b69cd42dbf",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 3998,
+      "faces": 7988,
+      "extents": [
+        0.8150829076766968,
+        0.9340565204620361,
+        0.1989118456840515
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-813c8052793385b69cd42dbf.glb",
+      "bytes": 160996,
+      "sha256": "cb4c5ef74fedc11998ebef880b481e59ce385e028b4737533a4b64c0d95586c7"
+    },
+    {
+      "id": "model-c488b521f2d8a0acbac4ad64",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 9716,
+      "faces": 19440,
+      "extents": [
+        0.7437807321548462,
+        0.5299884676933289,
+        0.6073636412620544
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-c488b521f2d8a0acbac4ad64.glb",
+      "bytes": 389912,
+      "sha256": "01fedc27e297458796639a2c5f3dc961c4e2a497666df090f2e6a48c0f649950"
+    },
+    {
+      "id": "model-90b90142d7b987672feb7aba",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 7518,
+      "faces": 15040,
+      "extents": [
+        0.8797159790992737,
+        0.43229836225509644,
+        0.3822254538536072
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-90b90142d7b987672feb7aba.glb",
+      "bytes": 301940,
+      "sha256": "987c4f2fa726c11d0dd3d8105f88e058520e4aa443e24d620ad8d37fe6ada4fb"
+    },
+    {
+      "id": "model-6d382623e5d8b65576b3b3f9",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 3941,
+      "faces": 7870,
+      "extents": [
+        0.6275327205657959,
+        0.2154754400253296,
+        0.4349966049194336
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-6d382623e5d8b65576b3b3f9.glb",
+      "bytes": 158668,
+      "sha256": "962f20450cb3e48f76069caa95bcd3fee4a1e4044866df7c8a0dbd1e33a34bbb"
+    },
+    {
+      "id": "model-81d7b444e67dd063cd9e6284",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 9786,
+      "faces": 19556,
+      "extents": [
+        1.0199854373931885,
+        0.46341997385025024,
+        0.5449725389480591
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-81d7b444e67dd063cd9e6284.glb",
+      "bytes": 392424,
+      "sha256": "bbf1b9ddcbd601c05fafa84a399e699e16379ba4402254ae981ee220a11452c7"
+    },
+    {
+      "id": "model-d791fd8ac3da3683e79f841b",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 7229,
+      "faces": 14478,
+      "extents": [
+        1.0528758764266968,
+        0.3895007371902466,
+        0.4460679292678833
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-d791fd8ac3da3683e79f841b.glb",
+      "bytes": 290572,
+      "sha256": "3c789de1d72e02c43a40fa63695f56a132caa6508ebbd71ba6c0044a08152410"
+    },
+    {
+      "id": "model-36eb275bd42cce1bf89d6c10",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 11092,
+      "faces": 22180,
+      "extents": [
+        1.0110995769500732,
+        0.4508020877838135,
+        0.590949535369873
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-36eb275bd42cce1bf89d6c10.glb",
+      "bytes": 444812,
+      "sha256": "3b9eefaab20f6f693ba39e00c89d8559188a50edbf98e9975965d6962e22fd19"
+    },
+    {
+      "id": "model-c37a6a0b71abb7e710a87650",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 20740,
+      "faces": 41568,
+      "extents": [
+        1.0226727724075317,
+        0.5846423506736755,
+        0.5102612972259521
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-c37a6a0b71abb7e710a87650.glb",
+      "bytes": 831832,
+      "sha256": "19128e85856e91532c5b8cde01bad59c3d310892b72e79eeb30de1ed5a03da17"
+    },
+    {
+      "id": "model-3c28cc40929092c3461f49f4",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 12683,
+      "faces": 25362,
+      "extents": [
+        0.986522912979126,
+        0.7565079033374786,
+        0.3887503147125244
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-3c28cc40929092c3461f49f4.glb",
+      "bytes": 508452,
+      "sha256": "ec9029bc34471b5b9a75842226d0935fd56f97b64ba3abb3cf6757aa92a839ed"
+    },
+    {
+      "id": "model-c2e4bc5483f38a00d0469c2b",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 15202,
+      "faces": 30392,
+      "extents": [
+        1.0234369039535522,
+        0.5729905366897583,
+        0.584168553352356
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-c2e4bc5483f38a00d0469c2b.glb",
+      "bytes": 609108,
+      "sha256": "bc483a78a136b582e9d8df2df573f6163013a5ff621a86bac43b8d85c8868293"
+    },
+    {
+      "id": "model-1c0ef0322a9340ee4656da7c",
+      "campusId": "weijinlu",
+      "poiId": null,
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 4212,
+      "faces": 8424,
+      "extents": [
+        0.3352721929550171,
+        0.8996148705482483,
+        0.3377801179885864
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-1c0ef0322a9340ee4656da7c.glb",
+      "bytes": 169652,
+      "sha256": "e3749b3e0b0f5f13187f23b5927a08588dff340cc8be6d0d7e05004b36e650d8"
+    },
+    {
+      "id": "model-6eac985d915452a355988936",
+      "campusId": "beiyangyuan",
+      "poiId": "beiyangyuan-datong-center",
+      "generator": "triposr",
+      "quality": "图片生成的粗略网格；需对照原图检查，背面及遮挡面为推断。",
+      "vertices": 13990,
+      "faces": 27984,
+      "extents": [
+        1.0256357192993164,
+        0.6152533888816833,
+        0.5098481178283691
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-6eac985d915452a355988936.glb",
+      "bytes": 560824,
+      "sha256": "bcb167430394ca3fe547f042f26d6c3eaa32937b52289afd27596108a375451d"
+    },
+    {
+      "id": "model-26f8132744d8eceab2934566",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "shap-e-text",
+      "quality": "根据自然语言条件生成的概念模型；非测绘还原，未见结构为推断。",
+      "vertices": 34384,
+      "faces": 68772,
+      "extents": [
+        1.055371105670929,
+        1.983975887298584,
+        1.1236906051635742
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-26f8132744d8eceab2934566.glb",
+      "bytes": 1376532,
+      "sha256": "2b6e5de8001a9e4d94066dcf4fdf7c76445117e580a8999554083de6d7c27f4e"
+    },
+    {
+      "id": "model-a66dd5ba1a0a335483017d83",
+      "campusId": "beiyangyuan",
+      "poiId": null,
+      "generator": "shap-e-text",
+      "quality": "根据自然语言条件生成的概念模型；非测绘还原，未见结构为推断。",
+      "vertices": 35998,
+      "faces": 72000,
+      "extents": [
+        1.0586780905723572,
+        1.9839903712272644,
+        1.1995651721954346
+      ],
+      "upAxis": "Y",
+      "path": "models/generated/model-a66dd5ba1a0a335483017d83.glb",
+      "bytes": 1441092,
+      "sha256": "6f8b35a6b6102ae5459f7046b5ebe6e7f2a8ed8dd7f3c465b3a7b0dae996c335"
+    }
+  ],
+  "files": [
+    {
+      "path": "models/weights/triposr/model.ckpt",
+      "bytes": 1677246742,
+      "sha256": "429e2c6b22a0923967459de24d67f05962b235f79cde6b032aa7ed2ffcd970ee",
+      "role": "weights/triposr/model.ckpt"
+    },
+    {
+      "path": "models/weights/triposr/config.yaml",
+      "bytes": 987,
+      "sha256": "74ca708ce086bf68e97709ea6b3d91f14717921c04691e84043f0eb8fcc68e62",
+      "role": "weights/triposr/config.yaml"
+    },
+    {
+      "path": "models/weights/shap-e/vector_decoder.pt",
+      "bytes": 905199688,
+      "sha256": "d7e7ebbfe3780499ae89b2da5e7c1354012dba5a6abfe295bed42f25c3be1b98",
+      "role": "weights/shap-e/vector_decoder.pt"
+    },
+    {
+      "path": "models/weights/shap-e/text_cond.pt",
+      "bytes": 1262868003,
+      "sha256": "e6b4fa599a7b3c3b16c222d5f5fe56f9db9289ff0b6575fbe5c11bc97106aad4",
+      "role": "weights/shap-e/text_cond.pt"
+    },
+    {
+      "path": "models/weights/shap-e/ViT-L-14.pt",
+      "bytes": 932768134,
+      "sha256": "b8cca3fd41ae0c99ba7e8951adf17d267cdb84cd88be6f7c2e0eca1737a03836",
+      "role": "weights/shap-e/ViT-L-14.pt"
+    },
+    {
+      "path": "models/weights/smolvlm/model.safetensors",
+      "bytes": 513028808,
+      "sha256": "74dea5904032e5ae99a2e0eef5179e6ac0f1dedc3ab0c7c2a5d4d387c843203e",
+      "role": "weights/smolvlm/model.safetensors"
+    },
+    {
+      "path": "models/weights/smolvlm/added_tokens.json",
+      "bytes": 4739,
+      "sha256": "74135b8664b56088c0006f1c8e848d79a8eba003411f72ebf1dc2ee96227be3a",
+      "role": "weights/smolvlm/added_tokens.json"
+    },
+    {
+      "path": "models/weights/smolvlm/chat_template.json",
+      "bytes": 429,
+      "sha256": "a68ad1a42681ae44eacd109ff8dd56a840f761c03d72f4ff4c515d092f882168",
+      "role": "weights/smolvlm/chat_template.json"
+    },
+    {
+      "path": "models/weights/smolvlm/config.json",
+      "bytes": 7353,
+      "sha256": "b70fb4bfde88df9eeebc9d8ff523733b8bf70d6c9b06c610325960e06ae9db52",
+      "role": "weights/smolvlm/config.json"
+    },
+    {
+      "path": "models/weights/smolvlm/generation_config.json",
+      "bytes": 136,
+      "sha256": "067a2a54e5f87162ecac6e0e911cc4665fc8f7f3324794ecbac0f76badb56636",
+      "role": "weights/smolvlm/generation_config.json"
+    },
+    {
+      "path": "models/weights/smolvlm/merges.txt",
+      "bytes": 466391,
+      "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+      "role": "weights/smolvlm/merges.txt"
+    },
+    {
+      "path": "models/weights/smolvlm/preprocessor_config.json",
+      "bytes": 486,
+      "sha256": "6cb6e36d6fcb88ca1502c4a26750715dc3e7dedddc9a8f17b27d8d167d1457e7",
+      "role": "weights/smolvlm/preprocessor_config.json"
+    },
+    {
+      "path": "models/weights/smolvlm/processor_config.json",
+      "bytes": 68,
+      "sha256": "e7bff42da73ae9eec9042ef20e066e11f1ee20f025358ff79131e3c0fb549b46",
+      "role": "weights/smolvlm/processor_config.json"
+    },
+    {
+      "path": "models/weights/smolvlm/special_tokens_map.json",
+      "bytes": 1069,
+      "sha256": "aa0ff906077086dfa9734a7f97f68c825877a48f9468807be65504495cdeef09",
+      "role": "weights/smolvlm/special_tokens_map.json"
+    },
+    {
+      "path": "models/weights/smolvlm/tokenizer.json",
+      "bytes": 3548256,
+      "sha256": "5ece781dc8d2b2f3e2f289ca0ae50b17cfc27dd27bfe7971bb8241e0b964331a",
+      "role": "weights/smolvlm/tokenizer.json"
+    },
+    {
+      "path": "models/weights/smolvlm/tokenizer_config.json",
+      "bytes": 28249,
+      "sha256": "36c6fd44d07d10fd8180ee6b46dcccf69fb7c06753968ff0d7e17b8bfe17b777",
+      "role": "weights/smolvlm/tokenizer_config.json"
+    },
+    {
+      "path": "models/weights/smolvlm/vocab.json",
+      "bytes": 800662,
+      "sha256": "82b84012e3add4d01d12ba14442026e49b8cbbaead1f79ecf3d919784f82dc79",
+      "role": "weights/smolvlm/vocab.json"
+    },
+    {
+      "path": "models/weights/shap-e/diffusion_config.yaml",
+      "bytes": 49,
+      "sha256": "efcb2cd7ee545b2d27223979d41857802448143990572a42645cd09c2942ed57",
+      "role": "weights/shap-e/diffusion_config.yaml"
+    },
+    {
+      "path": "models/weights/shap-e/text_cond_config.yaml",
+      "bytes": 282,
+      "sha256": "f290beeea3d3e9ff15db01bde5382b6e549e463060c0744f89c049505be246c1",
+      "role": "weights/shap-e/text_cond_config.yaml"
+    },
+    {
+      "path": "models/weights/shap-e/vector_decoder_config.yaml",
+      "bytes": 820,
+      "sha256": "e6d373649f8e24d85925f4674b9ac41c57aba5f60e42cde6d10f87381326365c",
+      "role": "weights/shap-e/vector_decoder_config.yaml"
+    },
+    {
+      "path": "models/weights/rembg/u2net.onnx",
+      "bytes": 175997641,
+      "sha256": "8d10d2f3bb75ae3b6d527c77944fc5e7dcd94b29809d47a739a7a728a912b491",
+      "role": "weights/rembg/u2net.onnx"
+    },
+    {
+      "path": "models/weights/rembg/u2netp.onnx",
+      "bytes": 4574861,
+      "sha256": "309c8469258dda742793dce0ebea8e6dd393174f89934733ecc8b14c76f4ddd8",
+      "role": "weights/rembg/u2netp.onnx"
+    },
+    {
+      "path": "models/generated/model-c4eed389ea044bacd36aa2ea.glb",
+      "bytes": 1502544,
+      "sha256": "f4e7d6494396081d4900a36cf76c4a6f90fc52b7d7ee09f734859de3c66adbd7",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-db08e363f4aa7f019e7b029a.glb",
+      "bytes": 2092396,
+      "sha256": "468b1d093ab03c3748b599c2910a6fc2446815f2e31045bff7c63638b17808bc",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-893da88f81d5a87514dc13f2.glb",
+      "bytes": 1502704,
+      "sha256": "53640bfb8f97a37e5f7f20d5c7dfb569bbc06667458797214148582648028553",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-ae0da6b347819b39ffab912a.glb",
+      "bytes": 2092552,
+      "sha256": "e2e300acf3b1b766735309421b06cf2ddc897ff50efe4f4b4af649d6e5580994",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-adbdb25eacdb8021f8180872.glb",
+      "bytes": 1502704,
+      "sha256": "53640bfb8f97a37e5f7f20d5c7dfb569bbc06667458797214148582648028553",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-455aa2825398074ec1ffef97.glb",
+      "bytes": 2333460,
+      "sha256": "da0ceb0f614d8841e1eeaec34282c48794ba55ef2cb996a41e27220c85f5b3ce",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-189f703216f9b0e75b62cd37.glb",
+      "bytes": 1836440,
+      "sha256": "301b575b1ce8a13c43a3b9e4dda9d748fe6f14d6b47b792c2e651b7317fe1875",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-71314dbc61b58b9b8f8bb93f.glb",
+      "bytes": 1574736,
+      "sha256": "bca17a434970e25356bd0165367e8e9de36603505f4670d3478a591c890feb69",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-80e0c06815475c19762bc2a1.glb",
+      "bytes": 3149512,
+      "sha256": "3180671dfef712315a6241d5ab7253f2fc5bd9bc3ed4d6dd070f003b94ed12d6",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-f370f1a53851d0cdb888d028.glb",
+      "bytes": 1474412,
+      "sha256": "c0c3f56d2a453c91dceaed2484e5fb49a43c2a8e1880e700a0213dd78ac0c520",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-37bc2c20e2afc2bb9029347f.glb",
+      "bytes": 1843104,
+      "sha256": "ae69047c61b2fae49324be7b1e215881833cf31c58dc696cf27691c8b14e4d3a",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-9529792bc426b7bacca3bbef.glb",
+      "bytes": 1955684,
+      "sha256": "00a1419a5f63030bd99d5d7eccb9fdf47d7c4b96ecdf5b68b47bf32ebd8cbf33",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-dad87669f55d5408082f83a3.glb",
+      "bytes": 2858888,
+      "sha256": "c39defd1cf64137f1ef491134b8044acd329c2de81a500dcfb8960b7d07fd363",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-2d49b441e1ab0c1611a2daa5.glb",
+      "bytes": 2387572,
+      "sha256": "a6f863114483eda6b68ea88208496defb4b4bc2cf6c3b63186b7e43de0092dec",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-c42ac6562544e3602191d783.glb",
+      "bytes": 560824,
+      "sha256": "bcb167430394ca3fe547f042f26d6c3eaa32937b52289afd27596108a375451d",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-8d9641cc3a5be54731343e1a.glb",
+      "bytes": 328696,
+      "sha256": "9428b202ff9a3295d2f5c560631cede22d377b3ed869c1e186cde8aec7e02cac",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-eb21b83fbd9b4273187f9746.glb",
+      "bytes": 384168,
+      "sha256": "06723e60138f951b5c67d97760db0011fe82feea6edadc3cfee4a9c8d56a08db",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-4ecda1c26a04a76a68da2984.glb",
+      "bytes": 163320,
+      "sha256": "530cd235dbe3e5ffb3f279fceba6885f23dc0767d4ff43a34283dc798bf5b22c",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-867136ed0d86e43fde933710.glb",
+      "bytes": 412648,
+      "sha256": "86523e424459499c88d428a4fd56a6d89fa7e2a162cffe92356bc4d38be00496",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-400c3d3d333c516c7d047aa3.glb",
+      "bytes": 449976,
+      "sha256": "89f310f3fe61314b3d223e1f095362867613209273ad5f6c401b4e80d63c5120",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-e47a15fbc5d636463299339b.glb",
+      "bytes": 461040,
+      "sha256": "64b6fa8f6f075396f7107e7f4299d60a758ea4856af79958720b7078689814d2",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-6d6874bec96e64158e6ea2aa.glb",
+      "bytes": 694772,
+      "sha256": "56dc3c06f667519f12a26281b1eb091da62319297ff2789deb893f583f11ee88",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-39b44e8ac6b4951ab141fd5e.glb",
+      "bytes": 569760,
+      "sha256": "6c5c0197326435a22e9786d4105c6126151c0e88b000beae6a48f2a05fbd5bb0",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-5fab3006d53659d4c3f87d8c.glb",
+      "bytes": 560824,
+      "sha256": "bcb167430394ca3fe547f042f26d6c3eaa32937b52289afd27596108a375451d",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-bc3e9f62843d56cca68744d3.glb",
+      "bytes": 328696,
+      "sha256": "9428b202ff9a3295d2f5c560631cede22d377b3ed869c1e186cde8aec7e02cac",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-dbed59244f5f10608dc9de6d.glb",
+      "bytes": 560824,
+      "sha256": "bcb167430394ca3fe547f042f26d6c3eaa32937b52289afd27596108a375451d",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-52b85606d337e972b876ec93.glb",
+      "bytes": 328696,
+      "sha256": "9428b202ff9a3295d2f5c560631cede22d377b3ed869c1e186cde8aec7e02cac",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-0b194993f964893355e34cbe.glb",
+      "bytes": 452172,
+      "sha256": "cd9b327566b98fa76470efe5c4d14a6c97f2559ffa6b2407d917432571bf6139",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-11ef30e8531dd4219f66b490.glb",
+      "bytes": 239020,
+      "sha256": "b9b517b08b2e6b6708551ee1e0913f2ff7859500d33d8c31a1c8f360391d9f0f",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-6ecff36bb9b31c3b83a86187.glb",
+      "bytes": 817288,
+      "sha256": "955d6aaee646975f696c80db28475d3de3fdf46773cafb0ef1c4c9ca7926c42a",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-fd1b287f720fbc554b5d0809.glb",
+      "bytes": 720616,
+      "sha256": "67ed82952f62ba60beea496e4a1517c6e3ec013442df342d0836cd0ac612ef11",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-136d76b592b2662c83573c36.glb",
+      "bytes": 118520,
+      "sha256": "6ae5f22bc52da55820caccd9cd5178e5673b4fdf63252d074746768918f2d7a3",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-ee24a5b7aca14df9f48b7cc2.glb",
+      "bytes": 400644,
+      "sha256": "8b341aeb969a07014903f300db652771ea023d6a55ef70506fe93d6f845452f5",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-a52a89ca24ccfa896463539d.glb",
+      "bytes": 33680,
+      "sha256": "7e5dd21540ed4808308b415ebf8a5a0743241a5addaf9d8172a611da0f371fa6",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-b7d155e290a8c255322e717d.glb",
+      "bytes": 411928,
+      "sha256": "ad8692b9346d4999cb54d9a6af1110332829f3a5847ad21b6bb85d02b96776a4",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-e7d8d7685a96fdd6100529ea.glb",
+      "bytes": 468096,
+      "sha256": "982981c0b5337f6179badf169102c91b1f5cc7abcc2e36ced165e550692c1b7c",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-19956b53bb5da70905f2aa95.glb",
+      "bytes": 518776,
+      "sha256": "aadff3f9c9ff7a5fdb6d3411f85eee6569b5105dbc88c79e5e163733fe58d6f0",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-75ba4c0d7766da7aa23edec5.glb",
+      "bytes": 555096,
+      "sha256": "41f880e7da4d35a401060ff1385837bb2b59da13480441b0e45826ab52cde723",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-ede041f73c8d9914873d2cca.glb",
+      "bytes": 110792,
+      "sha256": "1107d8f6057f2ad6f2324ddfb201454c1813f25518cd58407f714b73a19f005f",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-f235f1c5862a887a1c72a82a.glb",
+      "bytes": 171476,
+      "sha256": "0a8818ee3aa5dd1a62cb23ae3b95c64b35a2be863c3bf8f8a0eecf00683afd56",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-f3f1e7e2223f6aef0a65fc10.glb",
+      "bytes": 211148,
+      "sha256": "592d872beacd8148cdbdd2ab712d7a65cab5ff44ef4c2004117247de7f432cd5",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-0d25479cc8360a64b1d86569.glb",
+      "bytes": 201752,
+      "sha256": "eea51c0f70da99d4a742f92847466c40f88a0a52829ab079634d849ac2a14298",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-2b90043e6aada791131782a0.glb",
+      "bytes": 234692,
+      "sha256": "e615afaef7aa58fed11ab85913af4be5d380643da4f7cdae3f48c3d9715841f4",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-a73bf72e7577ce2dc27d5e09.glb",
+      "bytes": 300152,
+      "sha256": "bf1c0a8890975a323f3dd52203da02e6ad5211e25066b1bd575e7b076123c86e",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-91dbe792f5eea4f82fce61dd.glb",
+      "bytes": 479776,
+      "sha256": "2e1561257c35915e1c9f84f2a4aec0c75f23ff8a8fc83f31834f8b55e8bbe8df",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-f9d28953deca669e5cfc9116.glb",
+      "bytes": 222896,
+      "sha256": "6aa983d5280f9c54a0cf6f0469679c60bd709fd56cfd1749e28563648b633bfe",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-8fd4347e6331be5d4f5f806a.glb",
+      "bytes": 169848,
+      "sha256": "26eae518638da6fd995e3997e5f18619a1f25d69d9d2865f56a74ca70febdcc1",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-fa9613793742e1fd2dbe882c.glb",
+      "bytes": 65844,
+      "sha256": "c3576c0e5a38d669fba051074498ecd791a1a05f850fe550366238b14cb8fde6",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-e3eddf2939d60b7378852308.glb",
+      "bytes": 482412,
+      "sha256": "acb2d68740eaf02b7111d014b6a52f0ab3b446bdd092d89f4560b2c2c7f5c213",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-a722653c91e75ab847d1e1cf.glb",
+      "bytes": 223480,
+      "sha256": "944a4d21b4c80941bafebb7500940afaa54715e8b8df4eb005bcdef66edb5eb2",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-40fa4de069587ee213e6fb35.glb",
+      "bytes": 208196,
+      "sha256": "2b875ab7554df4ffd9f55ffb2ecc3939fd245c30443c63ed996aa60f497dae10",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-c33df11f711285afe5c8af7c.glb",
+      "bytes": 195128,
+      "sha256": "73c3bf94bd10791b7b81e39f37f61c102942f64411926331c6d2ab3d6c9ac0fe",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-953c684d7b90b6f0b7c53030.glb",
+      "bytes": 567472,
+      "sha256": "d847cd3f051a43970baeffc48c86d1477555943952bc68a4ddf90f2048a10ee7",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-a89378570c173ea97ac77337.glb",
+      "bytes": 189656,
+      "sha256": "c2a20f01438171104717fd59b40e1b460d212f2061154f08fa5663a308ab024d",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-c3684255d43a39347e6a5979.glb",
+      "bytes": 208388,
+      "sha256": "f16ed75af98d82d7f050629fd030d656f1886850980de2c417030d3cfab93938",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-0cdac5f42d48952d4344d7a7.glb",
+      "bytes": 195912,
+      "sha256": "8e0d5858dd118fe266ed3f1dd033144bd64eb25e79868d7b45b135ab87f1c971",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-3c75dd65fea00ffb26b72a41.glb",
+      "bytes": 212824,
+      "sha256": "41417aa04ce167e6d845dafd4c31bb839fff3ef2e8a97715c9fbaec7caab9d82",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-f1c38a3b2e8a16dae5bcf8f4.glb",
+      "bytes": 232168,
+      "sha256": "b1467272c3af77d79229acbbef6ff17ccef3775879bdfb64bba756ac5d61a0f3",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-c2042f04fe106a3738daa5cd.glb",
+      "bytes": 453796,
+      "sha256": "1a7d3e3d60466d5dd0b5d1b47539594a678e0e9a4ff13653e0ed8fde0181da87",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-c32b7d94c115a1adce1d91cb.glb",
+      "bytes": 779160,
+      "sha256": "304bbccf7ef199481ff5b2c332682a787fde7ac38e25ae307e2b84e102e401ea",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-5ee78a021b99ebcefaff923b.glb",
+      "bytes": 244856,
+      "sha256": "e7a2b149c18dfc6be6e264e81aef70091bd9d0af679a2d0b8ecf2c637c0dc8be",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-4c0bbfb0db6efadde819764a.glb",
+      "bytes": 397208,
+      "sha256": "551bb715cbfb051c8c8cdf5732a88f1718309cb7cc7ae6a7d0ad61325b8b6de8",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-d1e7505d00140e7fca808185.glb",
+      "bytes": 837520,
+      "sha256": "6eb5ff1b4a4caba9f4a051363dbccb7ef26718ba9c614e4e6413ab8d4e45ca81",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-d21a52174af9c745801884fb.glb",
+      "bytes": 787504,
+      "sha256": "51447bf59ed839a740a83bc27ca9d966478972e53ec81d0a9d518dd35fc51829",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-da8e9bca9cf2e933e46e969b.glb",
+      "bytes": 490884,
+      "sha256": "ff7b3707c9c3211f637398777c4f5f5bfc78bd3e9b248312ec0480b3f92bed03",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-1da6ab23c2f1344031309534.glb",
+      "bytes": 385480,
+      "sha256": "1e0063d57764abc2f4d96dd09c70b18f8ee398723b5e5d316b640b87d2063ba6",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-5522ed4da8425b1fb6ec05c3.glb",
+      "bytes": 414764,
+      "sha256": "50a09fe63e80701ded1a66d1b39b9b45199fd2353f6aef51f990499a7870f198",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-e236c273a75c0fb8868ca2c3.glb",
+      "bytes": 367332,
+      "sha256": "93fbbf272d59f20763bc7017043d8bd54f267b5d40b1eff490c29d1508a9de6f",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-4dda25dd91d8bc2c468b0182.glb",
+      "bytes": 271508,
+      "sha256": "baa9f5ff1634a2b7d6f8aa394114e93949870329bcc097fee670ad5a618853ed",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-976028c20bacaad910dabf47.glb",
+      "bytes": 667640,
+      "sha256": "547e12084da0cb60ea03005620706656457bbc64f563130ece015bfd978fa7b4",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-26eabbe2d87c71472c94704a.glb",
+      "bytes": 260456,
+      "sha256": "1cd29fd1f65aac338d7356b0573b577d5307640ac0abf783be8621134cb096ce",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-522191129233cffd85c5453a.glb",
+      "bytes": 410532,
+      "sha256": "ede4df8bbf9479118979df854ea9cd237120979074d93e5844a3e5da0bd6fec9",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-231282aa00c4bb0bb455bb12.glb",
+      "bytes": 955400,
+      "sha256": "f52fac6bcb81a1f245dc059b2288463ddf23ad5a00e650e00497a717402a0a3d",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-02a475e5529028ed9135d0d8.glb",
+      "bytes": 395960,
+      "sha256": "6328111e2c76e117ac497c995beecf1921c20a8b9ff5eb4935c4059597246be2",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-fde73fcf7f3cc32a212eefe9.glb",
+      "bytes": 292092,
+      "sha256": "f0689d0509c91e48f08aff6c18a079f8511ad31437f2324383c67e3d1e14b8dd",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-987bcfc880934a9dbaeec3d2.glb",
+      "bytes": 212456,
+      "sha256": "62d5d7d1b00f2940bd454f5a3e1fe79743b1b7e6c6699f2c3b94ca97596f20d1",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-b80d9e6af62a8335f460c365.glb",
+      "bytes": 47872,
+      "sha256": "89dd8cda4c4b5a6cbe5b6040db8251df9095ea98d4f69a8539027e8003063cc5",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-d5cad592e5e5c5334058bbcf.glb",
+      "bytes": 189292,
+      "sha256": "f7551e39f5d9284da0155fc273277bb8a13efaefb1c017635605ad3028cd0253",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-84fe7571c4385fc5edb41c6b.glb",
+      "bytes": 350564,
+      "sha256": "e2900d704aea4885a179d921a58fa3dc38f37561d5030d8d3d1b92c3c606b063",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-c46498c65478d3218d26d8e1.glb",
+      "bytes": 539880,
+      "sha256": "ee5a62b58965e76470428194bd133b9c2063945ed186c1b19f4fb5f17a2c1420",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-ed08ca5f43f0a7d7564b7b38.glb",
+      "bytes": 286312,
+      "sha256": "db369bdaf3b970a9fa4bed92a88c782e8c062b4a3853a19f970a0b3647f7422c",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-ca2aaf2b696f7471dac47c13.glb",
+      "bytes": 384168,
+      "sha256": "06723e60138f951b5c67d97760db0011fe82feea6edadc3cfee4a9c8d56a08db",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-0bc2f8bc43a3607d1e648156.glb",
+      "bytes": 163320,
+      "sha256": "530cd235dbe3e5ffb3f279fceba6885f23dc0767d4ff43a34283dc798bf5b22c",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-f0b20310b36be5b4e00e4bfe.glb",
+      "bytes": 412648,
+      "sha256": "86523e424459499c88d428a4fd56a6d89fa7e2a162cffe92356bc4d38be00496",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-1026a40ccd8193da103175ed.glb",
+      "bytes": 103832,
+      "sha256": "2bc07f48edcd3110fed9ee7f372ddf295dc968c6a649d0ac85023232aa6c1b50",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-5ae72dbe435c9b6d6eb54094.glb",
+      "bytes": 605116,
+      "sha256": "228724395c139bc46ea1d64d3f38a37bac48f28d63b666e3372ebd9fbe0675e7",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-3462a683dafd7131deebea21.glb",
+      "bytes": 477844,
+      "sha256": "82848d97c11a65dbd2db6c36c3ce5372b7775bc3e4be1b1acf17911e57db6a65",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-6a70234eba4c4f1e37eb2529.glb",
+      "bytes": 239268,
+      "sha256": "2c1476f2cf9e22e003c2a9e5037a81ab0a27ed3eb7a448300f16fa93c96be789",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-a06b6e5f7d818775064c269a.glb",
+      "bytes": 601288,
+      "sha256": "0de38c8b1df377dc2be13d582edeea7467e94b16a7cdaea137dd914aec06dfcb",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-7cf7f2d1dff92b9bd8a922f2.glb",
+      "bytes": 333328,
+      "sha256": "a45abea98c9a731cf9d88ca6e6d2303a9381e9af6560edb2fc336063a58f3fcf",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-df323823047a7309b653bb21.glb",
+      "bytes": 556392,
+      "sha256": "4a38437d8fa46aa2993badef14bccd61c5582fcf12fa97c325769f8b2f5f87cf",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-531ba9077282c84648a07815.glb",
+      "bytes": 67332,
+      "sha256": "0fc85eb0bfcca724c30511cc09cd49c683e22d74b0a8626a7f20d6df92c0bffc",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-e8d23898e1fa72f25e6f6943.glb",
+      "bytes": 255884,
+      "sha256": "c8c2e08fc0d73e2d6317ad21e3ec9a993f5f6702bdef00a11ce6a03616bf6d87",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-4eed742db670b7d5791660c1.glb",
+      "bytes": 259932,
+      "sha256": "b568136b036098ffd38a1b5ca786f2ca8c24aea62c0405db74dc907adf22b697",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-e38c6919d7b3ce570f22e970.glb",
+      "bytes": 615728,
+      "sha256": "fbc5c04844e9dd63c6a2f5b07c18703b55965781ea072af603d7e705cf0eedca",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-375bf80af81564ad859bbcea.glb",
+      "bytes": 645592,
+      "sha256": "43e9ba78fb957237b03fd8e29f39a35f87939818cb9422fb3ca116088774b72b",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-5e469ffac828486c8f4d4b81.glb",
+      "bytes": 607592,
+      "sha256": "15d1450e26829342ed301b16c5fda02fd1e3ec073a9e0d253850186c39cd217a",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-c761eea65c8882a66e567695.glb",
+      "bytes": 536568,
+      "sha256": "95515bdb55b65045af8aaad54d81a69e1694128ed18505e38958f0eeb0c90df0",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-983083ae719d5b399b377256.glb",
+      "bytes": 150972,
+      "sha256": "ec2cdac4d23f45dd3132b73a52afecf2a198e470e635b053fd094adab6ce18ba",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-3f516cb6e6516262c71d689c.glb",
+      "bytes": 456252,
+      "sha256": "2efd2bc4484ad04fa1314f1d99bfcc428244868fccc67de7f64430985791f5e9",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-70a6f9446aefa84ada4cef90.glb",
+      "bytes": 387720,
+      "sha256": "0510f9eafb8804b938ad8e58be2194bdb372c4e4f7e0ee045c2e2fb8b292467d",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-7b17bffc12390091b6d9d7d9.glb",
+      "bytes": 587944,
+      "sha256": "a1676b4d5b2c43a9fec5e366e45142cc21dad8cbc19dfb6712b05370e4f3dafe",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-392e11e5ff006c00f6caff33.glb",
+      "bytes": 340816,
+      "sha256": "6be4f75336d686293ce124dd67b2740f7afeb1120ab0ce19c70190cf4ad85f82",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-2a90d553b774855f29507f1f.glb",
+      "bytes": 479368,
+      "sha256": "9bbecfe59f05eb5f3b90e7a5cc87f94e6826e5226ad1fa0b717ee3ea31ae37f9",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-c721b6df96849bf91bd5b0fb.glb",
+      "bytes": 178056,
+      "sha256": "7ce5aacb7ec3fb10f302c0ec43865f13cdd62130672b352e697b812c75a42004",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-813c8052793385b69cd42dbf.glb",
+      "bytes": 160996,
+      "sha256": "cb4c5ef74fedc11998ebef880b481e59ce385e028b4737533a4b64c0d95586c7",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-c488b521f2d8a0acbac4ad64.glb",
+      "bytes": 389912,
+      "sha256": "01fedc27e297458796639a2c5f3dc961c4e2a497666df090f2e6a48c0f649950",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-90b90142d7b987672feb7aba.glb",
+      "bytes": 301940,
+      "sha256": "987c4f2fa726c11d0dd3d8105f88e058520e4aa443e24d620ad8d37fe6ada4fb",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-6d382623e5d8b65576b3b3f9.glb",
+      "bytes": 158668,
+      "sha256": "962f20450cb3e48f76069caa95bcd3fee4a1e4044866df7c8a0dbd1e33a34bbb",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-81d7b444e67dd063cd9e6284.glb",
+      "bytes": 392424,
+      "sha256": "bbf1b9ddcbd601c05fafa84a399e699e16379ba4402254ae981ee220a11452c7",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-d791fd8ac3da3683e79f841b.glb",
+      "bytes": 290572,
+      "sha256": "3c789de1d72e02c43a40fa63695f56a132caa6508ebbd71ba6c0044a08152410",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-36eb275bd42cce1bf89d6c10.glb",
+      "bytes": 444812,
+      "sha256": "3b9eefaab20f6f693ba39e00c89d8559188a50edbf98e9975965d6962e22fd19",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-c37a6a0b71abb7e710a87650.glb",
+      "bytes": 831832,
+      "sha256": "19128e85856e91532c5b8cde01bad59c3d310892b72e79eeb30de1ed5a03da17",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-3c28cc40929092c3461f49f4.glb",
+      "bytes": 508452,
+      "sha256": "ec9029bc34471b5b9a75842226d0935fd56f97b64ba3abb3cf6757aa92a839ed",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-c2e4bc5483f38a00d0469c2b.glb",
+      "bytes": 609108,
+      "sha256": "bc483a78a136b582e9d8df2df573f6163013a5ff621a86bac43b8d85c8868293",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-1c0ef0322a9340ee4656da7c.glb",
+      "bytes": 169652,
+      "sha256": "e3749b3e0b0f5f13187f23b5927a08588dff340cc8be6d0d7e05004b36e650d8",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-6eac985d915452a355988936.glb",
+      "bytes": 560824,
+      "sha256": "bcb167430394ca3fe547f042f26d6c3eaa32937b52289afd27596108a375451d",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-26f8132744d8eceab2934566.glb",
+      "bytes": 1376532,
+      "sha256": "2b6e5de8001a9e4d94066dcf4fdf7c76445117e580a8999554083de6d7c27f4e",
+      "role": "generated-glb"
+    },
+    {
+      "path": "models/generated/model-a66dd5ba1a0a335483017d83.glb",
+      "bytes": 1441092,
+      "sha256": "6f8b35a6b6102ae5459f7046b5ebe6e7f2a8ed8dd7f3c465b3a7b0dae996c335",
+      "role": "generated-glb"
+    }
+  ],
+  "sourceCommits": {
+    "triposr": "107cefdc244c39106fa830359024f6a2f1c78871",
+    "shap-e": "50131012ee11c9d2617f3886c10f000d3c7a3b43",
+    "clip": "d05afc436d78f1c48dc0dbf8e5980a9d471f35f6",
+    "smolvlm": "7e3e67edbbed1bf9888184d9df282b700a323964"
+  }
+}

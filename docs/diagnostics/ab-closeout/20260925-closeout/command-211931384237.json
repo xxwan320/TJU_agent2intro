@@ -1,0 +1,12 @@
+{
+  "args": [
+    "rg",
+    "-n",
+    "@router|/api/maps|fetch\\(",
+    "backend/maps/routes.py",
+    "frontend/src/transport/amap-navigation.ts"
+  ],
+  "code": 0,
+  "stdout": "backend/maps/routes.py:10:router=APIRouter(prefix=\"/api/maps\",tags=[\"maps\"])\nbackend/maps/routes.py:12:@router.get(\"/status\",response_model=MapStatus)\nbackend/maps/routes.py:32:@router.get(\"/config\",response_model=MapPublicConfig)\nbackend/maps/routes.py:33:def public_config():return MapPublicConfig(js_key=settings.amap_js_key or None,service_host=\"/api/maps/amap/_AMapService\",route_backend=\"js_api\",status=status())\nbackend/maps/routes.py:34:@router.get(\"/external-navigation/{poi_id}\",response_model=ExternalNavigation)\nbackend/maps/routes.py:36:@router.get(\"/amap/_AMapService/{path:path}\")\nbackend/maps/routes.py:43:@router.post(\"/routes\",response_model=RouteResponse)\nbackend/maps/routes.py:45:@router.post(\"/routes/{route_id}/cancel\",response_model=RouteCancelResponse)\n",
+  "stderr": ""
+}

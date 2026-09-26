@@ -1,0 +1,11 @@
+[
+  {
+    "a": 0,
+    "b": 1,
+    "matches": 150,
+    "fundamentalInliers": 118,
+    "medianPredictedReprojectionErrorPx": 4.657285546133057,
+    "p90PredictedReprojectionErrorPx": 9.54154355663816,
+    "within12pxFraction": 0.940677966101695
+  }
+]

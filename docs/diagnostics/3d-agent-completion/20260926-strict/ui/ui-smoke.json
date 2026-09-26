@@ -1,0 +1,64 @@
+{
+  "errors": [],
+  "checks": [
+    {
+      "name": "history absent from new default session",
+      "status": "PASS_REAL"
+    },
+    {
+      "name": "mode 校园照片",
+      "status": "PASS_REAL",
+      "buttons": [
+        "图片建模与三维地图从照片生成 · 检查外形 · 地图标定收起",
+        "用此照片生成",
+        "检查图片内容"
+      ]
+    },
+    {
+      "name": "mode 上传图片",
+      "status": "PASS_REAL",
+      "buttons": [
+        "图片建模与三维地图从照片生成 · 检查外形 · 地图标定收起",
+        "",
+        "生成上传图片的模型",
+        "检查图片内容"
+      ]
+    },
+    {
+      "name": "mode 文字构思",
+      "status": "PASS_REAL",
+      "buttons": [
+        "图片建模与三维地图从照片生成 · 检查外形 · 地图标定收起",
+        "生成概念模型"
+      ]
+    },
+    {
+      "name": "mode Agent任务",
+      "status": "PASS_REAL",
+      "buttons": [
+        "图片建模与三维地图从照片生成 · 检查外形 · 地图标定收起",
+        "执行建模任务"
+      ]
+    },
+    {
+      "name": "catalog photos decoded and switchable",
+      "status": "PASS_REAL",
+      "count": 59,
+      "selected": "大通学生中心 · 照片 2"
+    },
+    {
+      "name": "generation settings usable",
+      "status": "PASS_REAL"
+    },
+    {
+      "name": "mobile containment",
+      "status": "PASS_REAL",
+      "metrics": {
+        "scroll": 364,
+        "client": 364,
+        "page": 390,
+        "viewport": 390
+      }
+    }
+  ]
+}

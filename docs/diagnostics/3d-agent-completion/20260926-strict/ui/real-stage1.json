@@ -1,0 +1,183 @@
+{
+  "scope": "Existing real GLB assets for UI file/view/map testing only. Both fail architectural quality; never acceptance of reconstruction quality.",
+  "errors": [],
+  "assets": [
+    "大通学生中心 · 质量未通过 · 91d783",
+    "郑东图书馆 · 质量未通过 · 7f9746"
+  ],
+  "layouts": [
+    {
+      "assetId": "model-eb21b83fbd9b4273187f9746",
+      "poiId": "beiyangyuan-zhengdong-library",
+      "campusId": "beiyangyuan",
+      "anchorLngLat": [
+        117.313951,
+        38.997797
+      ],
+      "crs": "GCJ02",
+      "anchorSource": "复用既有高德地图人工确认锚点",
+      "headingDeg": 0,
+      "headingSource": "user calibration; clockwise from north",
+      "metersPerModelUnit": 117.07143303500457,
+      "upAxis": "Y",
+      "pivot": "bottom-center",
+      "localOrigin": [
+        117.313951,
+        38.997797
+      ],
+      "reference": {
+        "axis": "width",
+        "lengthM": 116.32,
+        "source": "复用已保存的地图量测参考；高德地图郑东图书馆主楼东西向轮廓参考宽度；俯视地图人工选取两端，球面距离估计；高度和深度按单图生成比例推算。",
+        "points": [
+          [
+            117.313308,
+            38.99783
+          ],
+          [
+            117.314654,
+            38.99783
+          ]
+        ],
+        "at": "2026-09-25T16:39:11.523474+00:00"
+      },
+      "dimensionsM": {
+        "width": 116.32,
+        "height": 51.15170033948167,
+        "depth": 58.84614685597014
+      },
+      "dimensionQuality": "reference axis estimated from stated source; other axes inferred from generated mesh",
+      "revision": 1,
+      "calibrationStatus": "reference_supplied",
+      "updatedAt": "2026-09-25T16:39:11.523474+00:00",
+      "assetVersion": "06723e60138f951b5c67d97760db0011fe82feea6edadc3cfee4a9c8d56a08db",
+      "imageId": "image-494342854eadc57ac281f1f6",
+      "modelBounds": [
+        [
+          -0.47185003757476807,
+          -0.22585922479629517,
+          -0.25311052799224854
+        ],
+        [
+          0.5217313766479492,
+          0.2110680341720581,
+          0.24954110383987427
+        ]
+      ],
+      "localBoundsM": [
+        [
+          -58.16,
+          0,
+          -29.42307342798507
+        ],
+        [
+          58.16,
+          51.15170033948167,
+          29.42307342798507
+        ]
+      ]
+    },
+    {
+      "assetId": "model-c42ac6562544e3602191d783",
+      "poiId": "beiyangyuan-datong-center",
+      "campusId": "beiyangyuan",
+      "anchorLngLat": [
+        117.310519,
+        38.99768
+      ],
+      "crs": "GCJ02",
+      "anchorSource": "复用既有高德地图人工确认锚点",
+      "headingDeg": 0,
+      "headingSource": "user calibration; clockwise from north",
+      "metersPerModelUnit": 152.33478813192903,
+      "upAxis": "Y",
+      "pivot": "bottom-center",
+      "localOrigin": [
+        117.310519,
+        38.99768
+      ],
+      "reference": {
+        "axis": "width",
+        "lengthM": 156.24,
+        "source": "复用已保存的地图量测参考；高德地图大通中心建筑轮廓东西向外包宽度，两端在地图人工选取；仅地图估计，单图只覆盖部分立面，模型比例可能失真。",
+        "points": [
+          [
+            117.309617,
+            38.997643
+          ],
+          [
+            117.311425,
+            38.997643
+          ]
+        ],
+        "at": "2026-09-25T16:39:11.535089+00:00"
+      },
+      "dimensionsM": {
+        "width": 156.24,
+        "height": 93.72449464274257,
+        "depth": 77.6676050088474
+      },
+      "dimensionQuality": "reference axis estimated from stated source; other axes inferred from generated mesh",
+      "revision": 1,
+      "calibrationStatus": "reference_supplied",
+      "updatedAt": "2026-09-25T16:39:11.535089+00:00",
+      "assetVersion": "bcb167430394ca3fe547f042f26d6c3eaa32937b52289afd27596108a375451d",
+      "imageId": "image-6505719b3af1b1687954757f",
+      "modelBounds": [
+        [
+          -0.5130904912948608,
+          -0.30749374628067017,
+          -0.26569879055023193
+        ],
+        [
+          0.5125452280044556,
+          0.3077596426010132,
+          0.2441493272781372
+        ]
+      ],
+      "localBoundsM": [
+        [
+          -78.12,
+          0,
+          -38.8338025044237
+        ],
+        [
+          78.12,
+          93.72449464274257,
+          38.8338025044237
+        ]
+      ]
+    }
+  ],
+  "chosen": [
+    {
+      "id": "model-c42ac6562544e3602191d783",
+      "poiId": "beiyangyuan-datong-center",
+      "extents": [
+        1.0256357192993164,
+        0.6152533888816833,
+        0.5098481178283691
+      ],
+      "quality": "failed"
+    },
+    {
+      "id": "model-eb21b83fbd9b4273187f9746",
+      "poiId": "beiyangyuan-zhengdong-library",
+      "extents": [
+        0.9935814142227173,
+        0.43692725896835327,
+        0.5026516318321228
+      ],
+      "quality": "failed"
+    }
+  ],
+  "map": {
+    "x": 56,
+    "y": 411,
+    "width": 1244,
+    "height": 278
+  },
+  "notice": [
+    "已定位地图匹配坐标，请核对建筑中心"
+  ]
+}

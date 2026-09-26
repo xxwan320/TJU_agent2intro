@@ -1,0 +1,360 @@
+[
+  {
+    "caseId": "B01",
+    "relatedCaseIds": [
+      "H01",
+      "H02"
+    ],
+    "input": "当前点讲解、暂停、继续、停止",
+    "preconditions": [
+      "本轮构建与本地后端",
+      "真实/夹具范围见scope"
+    ],
+    "expectedTools": [
+      "narration_control"
+    ],
+    "expectedUI": "实际Chrome音频playing/pause/resume/stop；人工听音未测",
+    "forbiddenActions": [
+      "不得虚报accepted为completed",
+      "不得执行未知工具、任意路径或URL",
+      "不得超出2模型/6工具/45秒",
+      "不得用离线结果冒充真机"
+    ],
+    "ledger": "E:/AI4TJU/docs/diagnostics/harness-b/run-ledger.jsonl",
+    "evidence": [
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-b\\browser-report.json"
+    ],
+    "status": "PASS_REAL",
+    "scope": "实际Chrome音频playing/pause/resume/stop；人工听音未测",
+    "untestedReason": "实际Chrome音频playing/pause/resume/stop；人工听音未测"
+  },
+  {
+    "caseId": "B02",
+    "relatedCaseIds": [
+      "H18"
+    ],
+    "input": "GLM工具闭环；未知工具与非法参数",
+    "preconditions": [
+      "本轮构建与本地后端",
+      "真实/夹具范围见scope"
+    ],
+    "expectedTools": [
+      "document_read"
+    ],
+    "expectedUI": "最终文档闭环2模型/1工具；非法参数零启动另有离线证据；独立echo初次闭环失败保留",
+    "forbiddenActions": [
+      "不得虚报accepted为completed",
+      "不得执行未知工具、任意路径或URL",
+      "不得超出2模型/6工具/45秒",
+      "不得用离线结果冒充真机"
+    ],
+    "ledger": "E:/AI4TJU/docs/diagnostics/harness-b/run-ledger.jsonl",
+    "evidence": [
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-b\\document-final.json",
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-b\\run-ledger.jsonl",
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-b\\capabilities.json"
+    ],
+    "status": "PASS_REAL",
+    "scope": "最终文档闭环2模型/1工具；非法参数零启动另有离线证据；独立echo初次闭环失败保留",
+    "untestedReason": null
+  },
+  {
+    "caseId": "B03",
+    "relatedCaseIds": [
+      "H03",
+      "H06"
+    ],
+    "input": "并行查询、超时和部分成功",
+    "preconditions": [
+      "本轮构建与本地后端",
+      "真实/夹具范围见scope"
+    ],
+    "expectedTools": [
+      "knowledge_search",
+      "official_search"
+    ],
+    "expectedUI": "TEST_PROVIDER并发、失败保留部分结果、截止及第三轮拒绝；A官网实源另列",
+    "forbiddenActions": [
+      "不得虚报accepted为completed",
+      "不得执行未知工具、任意路径或URL",
+      "不得超出2模型/6工具/45秒",
+      "不得用离线结果冒充真机"
+    ],
+    "ledger": "E:/AI4TJU/docs/diagnostics/harness-b/run-ledger.jsonl",
+    "evidence": [
+      "E:\\tests\\harness\\test_integration.py",
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-a\\provider-probe.json"
+    ],
+    "status": "PASS_OFFLINE",
+    "scope": "TEST_PROVIDER并发、失败保留部分结果、截止及第三轮拒绝；A官网实源另列",
+    "untestedReason": null
+  },
+  {
+    "caseId": "B04",
+    "relatedCaseIds": [
+      "H04",
+      "H17"
+    ],
+    "input": "上传通知问答与正文注入",
+    "preconditions": [
+      "本轮构建与本地后端",
+      "真实/夹具范围见scope"
+    ],
+    "expectedTools": [
+      "device_pick_document",
+      "document_read"
+    ],
+    "expectedUI": "可信点击选择TXT、上传、GLM回答09:30；正文越权文字未执行",
+    "forbiddenActions": [
+      "不得虚报accepted为completed",
+      "不得执行未知工具、任意路径或URL",
+      "不得超出2模型/6工具/45秒",
+      "不得用离线结果冒充真机"
+    ],
+    "ledger": "E:/AI4TJU/docs/diagnostics/harness-b/run-ledger.jsonl",
+    "evidence": [
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-b\\document-final.json"
+    ],
+    "status": "PASS_REAL",
+    "scope": "可信点击选择TXT、上传、GLM回答09:30；正文越权文字未执行",
+    "untestedReason": null
+  },
+  {
+    "caseId": "B05",
+    "relatedCaseIds": [
+      "H05",
+      "H14"
+    ],
+    "input": "当前行程MD/JSON下载",
+    "preconditions": [
+      "本轮构建与本地后端",
+      "真实/夹具范围见scope"
+    ],
+    "expectedTools": [
+      "itinerary_export"
+    ],
+    "expectedUI": "下载并打开内容对应当前结构化行程；可选ICS未实现/未测",
+    "forbiddenActions": [
+      "不得虚报accepted为completed",
+      "不得执行未知工具、任意路径或URL",
+      "不得超出2模型/6工具/45秒",
+      "不得用离线结果冒充真机"
+    ],
+    "ledger": "E:/AI4TJU/docs/diagnostics/harness-b/run-ledger.jsonl",
+    "evidence": [
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-b\\browser-report.json",
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-b\\tju-itinerary.md",
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-b\\tju-itinerary.json"
+    ],
+    "status": "PASS_REAL",
+    "scope": "下载并打开内容对应当前结构化行程；可选ICS未实现/未测",
+    "untestedReason": "下载并打开内容对应当前结构化行程；可选ICS未实现/未测"
+  },
+  {
+    "caseId": "B06",
+    "relatedCaseIds": [
+      "H09",
+      "H12"
+    ],
+    "input": "A→B→A与迟到结果",
+    "preconditions": [
+      "本轮构建与本地后端",
+      "真实/夹具范围见scope"
+    ],
+    "expectedTools": [
+      "poi_select"
+    ],
+    "expectedUI": "真实连续选点/图片；迟到与切校区隔离为离线回归",
+    "forbiddenActions": [
+      "不得虚报accepted为completed",
+      "不得执行未知工具、任意路径或URL",
+      "不得超出2模型/6工具/45秒",
+      "不得用离线结果冒充真机"
+    ],
+    "ledger": "E:/AI4TJU/docs/diagnostics/harness-b/run-ledger.jsonl",
+    "evidence": [
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-b\\browser-report.json",
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-b\\performance-final.json"
+    ],
+    "status": "PASS_REAL",
+    "scope": "真实连续选点/图片；迟到与切校区隔离为离线回归",
+    "untestedReason": null
+  },
+  {
+    "caseId": "B07",
+    "relatedCaseIds": [
+      "H10",
+      "H19"
+    ],
+    "input": "实际步行路线及普通选点保线",
+    "preconditions": [
+      "本轮构建与本地后端",
+      "真实/夹具范围见scope"
+    ],
+    "expectedTools": [
+      "route_plan"
+    ],
+    "expectedUI": "真实高德walking 1次，画线后回执；切到大通保留routeId",
+    "forbiddenActions": [
+      "不得虚报accepted为completed",
+      "不得执行未知工具、任意路径或URL",
+      "不得超出2模型/6工具/45秒",
+      "不得用离线结果冒充真机"
+    ],
+    "ledger": "E:/AI4TJU/docs/diagnostics/harness-b/run-ledger.jsonl",
+    "evidence": [
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-b\\route-browser.json",
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-b\\route.png"
+    ],
+    "status": "PASS_REAL",
+    "scope": "真实高德walking 1次，画线后回执；切到大通保留routeId",
+    "untestedReason": null
+  },
+  {
+    "caseId": "B08",
+    "relatedCaseIds": [
+      "H11"
+    ],
+    "input": "普通话暂停、权限和失败",
+    "preconditions": [
+      "本轮构建与本地后端",
+      "真实/夹具范围见scope"
+    ],
+    "expectedTools": [
+      "speech_input"
+    ],
+    "expectedUI": "沿用原普通话ASR与唯一adapter；权限/迟到离线通过，物理麦克风NOT_RUN",
+    "forbiddenActions": [
+      "不得虚报accepted为completed",
+      "不得执行未知工具、任意路径或URL",
+      "不得超出2模型/6工具/45秒",
+      "不得用离线结果冒充真机"
+    ],
+    "ledger": "E:/AI4TJU/docs/diagnostics/harness-b/run-ledger.jsonl",
+    "evidence": [
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-a\\mobile-report.md"
+    ],
+    "status": "PASS_OFFLINE",
+    "scope": "沿用原普通话ASR与唯一adapter；权限/迟到离线通过，物理麦克风NOT_RUN",
+    "untestedReason": "沿用原普通话ASR与唯一adapter；权限/迟到离线通过，物理麦克风NOT_RUN"
+  },
+  {
+    "caseId": "B09",
+    "relatedCaseIds": [
+      "H15",
+      "H16",
+      "H20"
+    ],
+    "input": "设备能力、待手势、取消及未安装",
+    "preconditions": [
+      "本轮构建与本地后端",
+      "真实/夹具范围见scope"
+    ],
+    "expectedTools": [
+      "device_capabilities",
+      "device_pick_document"
+    ],
+    "expectedUI": "仅Windows文件选择上传续任务真实通过；系统分享/应用唤起/手机NOT_RUN，异常分支离线通过",
+    "forbiddenActions": [
+      "不得虚报accepted为completed",
+      "不得执行未知工具、任意路径或URL",
+      "不得超出2模型/6工具/45秒",
+      "不得用离线结果冒充真机"
+    ],
+    "ledger": "E:/AI4TJU/docs/diagnostics/harness-b/run-ledger.jsonl",
+    "evidence": [
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-b\\document-final.json",
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-a\\mobile-report.md"
+    ],
+    "status": "PASS_REAL",
+    "scope": "仅Windows文件选择上传续任务真实通过；系统分享/应用唤起/手机NOT_RUN，异常分支离线通过",
+    "untestedReason": "仅Windows文件选择上传续任务真实通过；系统分享/应用唤起/手机NOT_RUN，异常分支离线通过"
+  },
+  {
+    "caseId": "B10",
+    "relatedCaseIds": [
+      "H22",
+      "H23"
+    ],
+    "input": "回执丢失、断线、重复命令",
+    "preconditions": [
+      "本轮构建与本地后端",
+      "真实/夹具范围见scope"
+    ],
+    "expectedTools": [
+      "narration_control"
+    ],
+    "expectedUI": "超时不成功、旧代际拒收、重复不执行；设备断线由A离线验证",
+    "forbiddenActions": [
+      "不得虚报accepted为completed",
+      "不得执行未知工具、任意路径或URL",
+      "不得超出2模型/6工具/45秒",
+      "不得用离线结果冒充真机"
+    ],
+    "ledger": "E:/AI4TJU/docs/diagnostics/harness-b/run-ledger.jsonl",
+    "evidence": [
+      "E:\\tests\\harness\\test_runtime.py",
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-a\\mobile-report.md"
+    ],
+    "status": "PASS_OFFLINE",
+    "scope": "超时不成功、旧代际拒收、重复不执行；设备断线由A离线验证",
+    "untestedReason": null
+  },
+  {
+    "caseId": "B11",
+    "relatedCaseIds": [
+      "H07",
+      "H08",
+      "H13"
+    ],
+    "input": "可选3D首帧聚焦降级",
+    "preconditions": [
+      "本轮构建与本地后端",
+      "真实/夹具范围见scope"
+    ],
+    "expectedTools": [
+      "scene_focus"
+    ],
+    "expectedUI": "用户未选择B5，无校园建筑模型，不启用",
+    "forbiddenActions": [
+      "不得虚报accepted为completed",
+      "不得执行未知工具、任意路径或URL",
+      "不得超出2模型/6工具/45秒",
+      "不得用离线结果冒充真机"
+    ],
+    "ledger": "E:/AI4TJU/docs/diagnostics/harness-b/run-ledger.jsonl",
+    "evidence": [],
+    "status": "NOT_RUN",
+    "scope": "用户未选择B5，无校园建筑模型，不启用",
+    "untestedReason": "用户未选择B5，无校园建筑模型，不启用"
+  },
+  {
+    "caseId": "B12",
+    "relatedCaseIds": [
+      "H24"
+    ],
+    "input": "总取消及可选GUI",
+    "preconditions": [
+      "本轮构建与本地后端",
+      "真实/夹具范围见scope"
+    ],
+    "expectedTools": [
+      "route_plan"
+    ],
+    "expectedUI": "Windows真实取消等待起点的路线任务；零GLM/零walking；模型流取消离线；GUI未启用",
+    "forbiddenActions": [
+      "不得虚报accepted为completed",
+      "不得执行未知工具、任意路径或URL",
+      "不得超出2模型/6工具/45秒",
+      "不得用离线结果冒充真机"
+    ],
+    "ledger": "E:/AI4TJU/docs/diagnostics/harness-b/run-ledger.jsonl",
+    "evidence": [
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-b\\performance-final.json",
+      "E:\\AI4TJU\\docs\\diagnostics\\harness-b\\run-ledger.jsonl"
+    ],
+    "status": "PASS_REAL",
+    "scope": "Windows真实取消等待起点的路线任务；零GLM/零walking；模型流取消离线；GUI未启用",
+    "untestedReason": null
+  }
+]

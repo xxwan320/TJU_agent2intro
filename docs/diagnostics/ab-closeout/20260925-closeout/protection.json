@@ -1,0 +1,68 @@
+[
+  {
+    "capability": "聊天",
+    "status": "PASS_REAL",
+    "evidence": "chat.json",
+    "scope": "一次真实普通问候请求完成；复杂聊天未穷尽"
+  },
+  {
+    "capability": "本地介绍/选点/图片",
+    "status": "PASS_REAL",
+    "evidence": "local-browser.json",
+    "scope": "郑东、大通固定原图及正文；第九教学楼为第三个既有测量点"
+  },
+  {
+    "capability": "讲解",
+    "status": "PASS_REAL",
+    "evidence": "browser-report.json",
+    "scope": "音频事件与控制状态；人工听音NOT_RUN"
+  },
+  {
+    "capability": "普通话输入",
+    "status": "NOT_RUN",
+    "evidence": "device-regression.json",
+    "scope": "既有权限/取消/同入口离线通过；物理麦克风未测"
+  },
+  {
+    "capability": "地图",
+    "status": "PASS_REAL",
+    "evidence": "route-browser.json",
+    "scope": "真实路径与普通选点保线；边界依赖离线测试"
+  },
+  {
+    "capability": "行程/导出",
+    "status": "PASS_REAL",
+    "evidence": "browser-report.json",
+    "scope": "实际创建、MD/JSON下载与解析；完整修改流程离线回归"
+  },
+  {
+    "capability": "RAG/文档",
+    "status": "PASS_REAL",
+    "evidence": "run-ledger.jsonl",
+    "scope": "文档原文进入工具/模型闭环；当前官网规则未测"
+  },
+  {
+    "capability": "生成文本/多轮行程/本地保存",
+    "status": "PASS_OFFLINE",
+    "evidence": "backend-regression.json",
+    "scope": "保留历史已用能力，未全部重复真实模型调用"
+  },
+  {
+    "capability": "普通话权限/设备取消/应用缺失",
+    "status": "PASS_OFFLINE",
+    "evidence": "device-regression.json",
+    "scope": "12项；不代表真设备动作"
+  },
+  {
+    "capability": "角色",
+    "status": "PASS_REAL",
+    "evidence": "route.png",
+    "scope": "现有角色可见，不扩展到嘴形同步通过"
+  },
+  {
+    "capability": "同步视频/可选校园3D",
+    "status": "NOT_RUN",
+    "evidence": "final-build.json",
+    "scope": "未改资产与映射；未做播放/3D专项"
+  }
+]

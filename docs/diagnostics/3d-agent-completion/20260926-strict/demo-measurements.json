@@ -1,0 +1,40 @@
+{
+  "fusion": {
+    "jobId": "job-bef5cbdcaeeef68027f63049",
+    "assetId": "model-eb61f10eb5ebe2494b1022ac",
+    "sha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f",
+    "bytes": 977796,
+    "workerSeconds": 4.936999999999898,
+    "submitToAssetSeconds": 9.254298,
+    "peakCudaMiB": 354.583984375,
+    "vertices": 26370,
+    "faces": 46239
+  },
+  "text": {
+    "jobId": "job-a0bf1176f3f95d5aa80674ac",
+    "assetId": "model-30d01b96b1a83c9d8913d6c0",
+    "sha256": "10d6d725216aedf77a0ba70e57145a55b164cd32e541fa30dd1998d5bbfc8f84",
+    "bytes": 4834236,
+    "workerSeconds": 53.95299999999952,
+    "submitToAssetSeconds": 55.788684,
+    "peakCudaMiB": 3307.88623046875,
+    "vertices": 120782,
+    "faces": 241716
+  },
+  "textAgent": {
+    "runId": "run-678207dc286964f619344a5b",
+    "stage": "succeeded",
+    "modelCalls": 4,
+    "toolCalls": 4,
+    "auxiliaryConditioningCalls": 1
+  },
+  "browserRegression": {
+    "passed": 12,
+    "failed": 0
+  },
+  "backendRegression": {
+    "passed": 202,
+    "failed": 0
+  },
+  "scope": "Recognizable observed-surface fusion and text concept demos; no claim of complete surveyed reconstruction."
+}

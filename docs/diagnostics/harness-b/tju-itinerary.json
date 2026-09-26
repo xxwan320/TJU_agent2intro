@@ -1,0 +1,238 @@
+{
+  "tour_id": "707ca0d5-1b1b-41a0-ad76-2fc92c80f766",
+  "session_id": "f4571d04-036c-4cdf-9601-306bf558893d",
+  "state_version": 1,
+  "status": "draft",
+  "plan": {
+    "plan_id": "5ac73212-19db-4da1-8731-364f7f8c13fb",
+    "version": 1,
+    "campus_id": "weijinlu",
+    "status": "draft",
+    "request": {
+      "request_id": "73b6757f-8795-49cf-a7c6-f53d634218e1",
+      "session_id": "f4571d04-036c-4cdf-9601-306bf558893d",
+      "campus_id": "weijinlu",
+      "duration_minutes": 60,
+      "interests": [
+        "校园历史",
+        "建筑"
+      ],
+      "start": {
+        "kind": "unspecified",
+        "poi_id": null
+      },
+      "end": {
+        "kind": "unspecified",
+        "poi_id": null
+      },
+      "accessibility": "standard",
+      "message": "校园历史、建筑",
+      "must_visit": [],
+      "avoid": [],
+      "visit_date": null,
+      "max_walking_minutes": null
+    },
+    "stops": [
+      {
+        "stop_id": "dd283d99-0205-42d0-bde0-0efa6e762726",
+        "poi_id": "weijinlu-aiwan-lake",
+        "title": "爱晚湖",
+        "visit_minutes": 10,
+        "visit_time_source": "planner_allocation",
+        "purpose": "按兴趣分配停留；开放与入口须现场确认。",
+        "evidence_ids": [
+          "poi-weijinlu-aiwan-lake"
+        ]
+      },
+      {
+        "stop_id": "e53cec86-a0aa-439b-8ac1-6728e50b3298",
+        "poi_id": "weijinlu-beiyang-square",
+        "title": "北洋广场",
+        "visit_minutes": 10,
+        "visit_time_source": "planner_allocation",
+        "purpose": "按兴趣分配停留；开放与入口须现场确认。",
+        "evidence_ids": [
+          "poi-weijinlu-beiyang-square",
+          "detail-landscape-2016-5",
+          "detail-landscape-2016-6",
+          "detail-landscape-2016-7",
+          "detail-landscape-2016-8"
+        ]
+      },
+      {
+        "stop_id": "3bdc69d3-db9a-4195-95e8-037216224460",
+        "poi_id": "weijinlu-feng-jicai",
+        "title": "冯骥才文学艺术研究院",
+        "visit_minutes": 10,
+        "visit_time_source": "planner_allocation",
+        "purpose": "按兴趣分配停留；开放与入口须现场确认。",
+        "evidence_ids": [
+          "poi-weijinlu-feng-jicai"
+        ]
+      }
+    ],
+    "legs": [
+      {
+        "from_ref": {
+          "kind": "unspecified",
+          "poi_id": null
+        },
+        "to_ref": {
+          "kind": "poi",
+          "poi_id": "weijinlu-aiwan-lake"
+        },
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "checked_at": null,
+        "campus_access": "unverified",
+        "evidence_ids": [],
+        "reason": "missing_data"
+      },
+      {
+        "from_ref": {
+          "kind": "poi",
+          "poi_id": "weijinlu-aiwan-lake"
+        },
+        "to_ref": {
+          "kind": "poi",
+          "poi_id": "weijinlu-beiyang-square"
+        },
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "checked_at": null,
+        "campus_access": "unverified",
+        "evidence_ids": [],
+        "reason": "missing_data"
+      },
+      {
+        "from_ref": {
+          "kind": "poi",
+          "poi_id": "weijinlu-beiyang-square"
+        },
+        "to_ref": {
+          "kind": "poi",
+          "poi_id": "weijinlu-feng-jicai"
+        },
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "checked_at": null,
+        "campus_access": "unverified",
+        "evidence_ids": [],
+        "reason": "missing_data"
+      },
+      {
+        "from_ref": {
+          "kind": "poi",
+          "poi_id": "weijinlu-feng-jicai"
+        },
+        "to_ref": {
+          "kind": "unspecified",
+          "poi_id": null
+        },
+        "distance_m": null,
+        "duration_s": null,
+        "source": "unknown",
+        "verification": "unverified",
+        "checked_at": null,
+        "campus_access": "unverified",
+        "evidence_ids": [],
+        "reason": "missing_data"
+      }
+    ],
+    "evidence": [
+      {
+        "evidence_id": "poi-weijinlu-aiwan-lake",
+        "source_ref": "poi-weijinlu-aiwan-lake",
+        "claim": "校方资料在卫津路校区列有爱晚湖。（适用日期未提供）",
+        "relation": "supports",
+        "verification": "verified",
+        "checked_at": "2026-09-14T00:00:00Z",
+        "valid_until": null
+      },
+      {
+        "evidence_id": "poi-weijinlu-beiyang-square",
+        "source_ref": "poi-weijinlu-beiyang-square",
+        "claim": "校方资料在卫津路校区列有北洋广场。（适用日期未提供）",
+        "relation": "supports",
+        "verification": "verified",
+        "checked_at": "2026-09-14T00:00:00Z",
+        "valid_until": null
+      },
+      {
+        "evidence_id": "detail-landscape-2016-5",
+        "source_ref": "detail-landscape-2016-5",
+        "claim": "北洋广场于1985年8月建成。（资料适用：2016-08-25）",
+        "relation": "supports",
+        "verification": "historical",
+        "checked_at": "2026-09-14T00:00:00Z",
+        "valid_until": null
+      },
+      {
+        "evidence_id": "detail-landscape-2016-6",
+        "source_ref": "detail-landscape-2016-6",
+        "claim": "北洋广场原址曾是敬业湖的一部分。（资料适用：2016-08-25）",
+        "relation": "supports",
+        "verification": "historical",
+        "checked_at": "2026-09-14T00:00:00Z",
+        "valid_until": null
+      },
+      {
+        "evidence_id": "detail-landscape-2016-7",
+        "source_ref": "detail-landscape-2016-7",
+        "claim": "2016校报记载北洋广场占地约1公顷。（资料适用：2016-08-25）",
+        "relation": "supports",
+        "verification": "historical",
+        "checked_at": "2026-09-14T00:00:00Z",
+        "valid_until": null
+      },
+      {
+        "evidence_id": "detail-landscape-2016-8",
+        "source_ref": "detail-landscape-2016-8",
+        "claim": "北洋广场中心水景为椭圆形喷水池。（资料适用：2016-08-25）",
+        "relation": "supports",
+        "verification": "historical",
+        "checked_at": "2026-09-14T00:00:00Z",
+        "valid_until": null
+      },
+      {
+        "evidence_id": "poi-weijinlu-feng-jicai",
+        "source_ref": "poi-weijinlu-feng-jicai",
+        "claim": "校方资料在卫津路校区列有冯骥才文学艺术研究院。（适用日期未提供）",
+        "relation": "supports",
+        "verification": "verified",
+        "checked_at": "2026-09-14T00:00:00Z",
+        "valid_until": null
+      }
+    ],
+    "warnings": [
+      "路线：步行时间/距离未知，无法证明总时长可行；计划为待核实草稿，开始前请确认。",
+      "资料：入口、门禁和今日开放尚未核实；历史开放事件不代表今日规则。"
+    ],
+    "created_at": "2026-09-25T12:32:28.977574Z"
+  },
+  "progress": [
+    {
+      "stop_id": "dd283d99-0205-42d0-bde0-0efa6e762726",
+      "state": "pending"
+    },
+    {
+      "stop_id": "e53cec86-a0aa-439b-8ac1-6728e50b3298",
+      "state": "pending"
+    },
+    {
+      "stop_id": "3bdc69d3-db9a-4195-95e8-037216224460",
+      "state": "pending"
+    }
+  ],
+  "current_stop_id": null,
+  "remaining_minutes": 60,
+  "saved": false,
+  "updated_at": "2026-09-25T12:32:28.977574Z",
+  "completion_reason": null
+}

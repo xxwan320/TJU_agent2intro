@@ -55,14 +55,19 @@ def test_job_idempotency_and_session_boundary(isolated,monkeypatch):
     home=isolated/'.reconstruction';home.mkdir()
     (home/'source-version.json').write_text('{"commit":"fixture"}')
     (home/'weights.json').write_text('{"revision":"fixture"}')
-    monkeypatch.setattr(r,'ROOT',isolated);monkeypatch.setattr(r,'ready',lambda:True)
+    monkeypatch.setattr(r,'ROOT',isolated);monkeypatch.setattr(r,'ready',lambda:True);monkeypatch.setattr(r,'providers',lambda:['triposr'])
     (isolated/'input.png').write_bytes(b'fixture pixels')
     r.DB['images']['im']={'path':str(isolated/'input.png'),'id':'im','owner':'one','poiId':'p','campusId':'beiyangyuan','sha256':'abc'}
     first=r.submit('one','im','key');second=r.submit('one','im','key')
     assert first['id']==second['id'] and len(r.DB['jobs'])==1
     with pytest.raises(HTTPException):r.submit('two','im','key')
-    r.DB['jobs'][first['id']]['stage']='succeeded'
+    r.DB['jobs'][first['id']].update(stage='succeeded',assetId='a')
+    asset_path=isolated/'valid.glb';asset_path.write_bytes(b'validated bytes fixture')
+    r.DB['assets']['a']={'path':str(asset_path),'sha256':r.sha(asset_path.read_bytes())}
     assert r.submit('one','im','different')['cacheHit'] is True
+    asset_path.write_bytes(b'corrupted')
+    assert r.submit('one','im','another')['id']!=first['id']
+    with pytest.raises(ValueError,match='相同提交标识'):r.submit('one','im','key',False)
 
 def test_cached_asset_is_counted_without_new_job(isolated):
     r.DB['assets']['a']={'id':'a','owner':'one','campusId':'beiyangyuan','imageId':'im','jobId':'j','poiId':'p'}
@@ -106,7 +111,7 @@ def test_finish_rechecks_artifact_and_requires_scene_receipt(isolated):
     r.DB['jobs']['j']={'stage':'succeeded'}
     run={'owner':'one','items':[{'poiId':'p','jobId':'j','assetId':'a'}],'requiredPoiIds':['p'],'exports':[{'assetId':'a'}],'needsMap':True}
     workflow.finish(run);assert run['stage']=='partial'
-    run['needsMap']=False;workflow.finish(run);assert run['stage']=='succeeded'
+    run['needsMap']=False;workflow.finish(run);assert run['stage']=='partial'  # Unreviewed geometry is not successful reconstruction.
     run['requiredPoiIds'].append('q');workflow.finish(run);assert run['stage']=='partial'
     file.write_bytes(b'corrupt');workflow.finish(run);assert run['stage']=='failed'
 
@@ -123,27 +128,47 @@ def test_inspect_reconciles_cached_submit_item(isolated):
     workflow.run_assets(run,['a'])
     assert run['items'][0]['assetId']=='a' and run['items'][0]['jobId']=='j'
 
-def test_failed_primary_recovery_uses_actual_image_description(isolated,monkeypatch):
+def test_failed_image_reconstruction_never_becomes_text_concept(isolated,monkeypatch):
     monkeypatch.setattr(r,'ROOT',isolated);monkeypatch.setattr(r,'text_ready',lambda:True)
     (isolated/'.vision').mkdir();(isolated/'.vision/weights.json').write_text('{}')
     folder=isolated/'job';folder.mkdir();calls=[]
     def child(j,folder,script,args,output,timeout=600):
         calls.append(script)
-        if script=='reconstruction-worker.py':return {'stage':'failed','error':'test failure'}
-        if script=='reconstruction-vision.py':return {'status':'reviewed','model':'fixture vision','promptEnglish':'A red brick building with a flat roof.'}
-        assert 'A red brick building' in (folder/'job.json').read_text()
-        return {'stage':'succeeded'}
+        assert script=='reconstruction-worker.py'
+        return {'stage':'failed','error':'real shape extraction failed'}
     monkeypatch.setattr(r,'child_job',child)
     j={'removeBackground':True,'cancelRequested':False}
-    result=r.generate(j,folder,{'path':'actual-input.png'})
-    assert result['stage']=='succeeded' and len(calls)==3
-    assert result['recovery']['attempts'][0]['stage']=='failed'
+    result=r.generate(j,folder,{'id':'image','path':'actual-input.png'})
+    assert result['stage']=='failed' and calls==['reconstruction-worker.py']
+    assert j['attempts'][0]['stage']=='failed'
 
 
 def test_separate_exports_preserve_all_requested_assets(isolated):
     for aid in ('a','b'):
-        r.DB['assets'][aid]={'id':aid,'owner':'one','campusId':'beiyangyuan','imageId':aid,'jobId':aid,'poiId':aid,'sha256':aid}
+        path=isolated/(aid+'.glb');path.write_bytes(aid.encode())
+        r.DB['assets'][aid]={'id':aid,'owner':'one','campusId':'beiyangyuan','imageId':aid,'jobId':aid,'poiId':aid,'sha256':r.sha(path.read_bytes()),'path':str(path)}
     run={'owner':'one','campusId':'beiyangyuan','items':[],'cancelled':False,'deadline':10**12}
     for aid in ('a','b','a'):
         asyncio.run(workflow.execute(run,'model_export',{'assetIds':[aid]},aid))
     assert {item['assetId'] for item in run['exports']}=={'a','b'}
+
+
+def test_map_reference_points_cannot_supply_height_or_fictitious_length(isolated):
+    r.DB['assets']['a']={'id':'a','owner':'one','poiId':'p','campusId':'beiyangyuan','sha256':'sha','extents':[2,1,3]}
+    args=dict(assetId='a',anchorLngLat=[117.31,39],headingDeg=0,referenceLengthM=20,referenceAxis='height',referenceSource='map measurement',referenceKind='map_measurement',referenceEvidence=['two observed map endpoints'],referencePoints=[[117.31,39],[117.3102,39]],revision=0,anchorSource='test fixture anchor')
+    with pytest.raises(ValueError,match='高度'):r.set_layout('one',r.Layout(**args))
+    args['referenceAxis']='width';args['referenceLengthM']=500
+    with pytest.raises(ValueError,match='重算距离'):r.set_layout('one',r.Layout(**args))
+
+
+def test_old_free_text_reference_is_preserved_as_unverified(isolated):
+    from backend.reconstruction_evidence import calibration_review
+    r.DB['assets']['a']={'id':'a','owner':'one','poiId':'p','campusId':'beiyangyuan','sha256':'sha','extents':[2,1,3]}
+    layout=r.set_layout('one',r.Layout(assetId='a',anchorLngLat=[117.31,39],headingDeg=0,referenceLengthM=20,referenceAxis='width',referenceSource='looks about right',revision=0,anchorSource='test fixture anchor'))
+    assert layout['calibrationStatus']=='unverified'
+    assert calibration_review(r.DB['assets']['a'],layout)['status']=='unverified'
+
+
+def test_polling_state_excludes_private_or_bulk_trace():
+    value=r.public({'id':'r','trace':[{'model':'large'}],'results':{'c':{}},'messages':['private'],'owner':'owner','path':'private','stage':'planning'})
+    assert value=={'id':'r','stage':'planning'}

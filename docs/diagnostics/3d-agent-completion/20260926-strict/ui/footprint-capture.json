@@ -1,0 +1,32 @@
+{
+  "scope": "Actual AMap vector and satellite imagery for independent building-footprint inspection. No inferred polygons at this stage.",
+  "captures": [
+    {
+      "name": "zhengdong",
+      "center": [
+        117.31398,
+        38.9974
+      ],
+      "zoom": 18,
+      "viewport": {
+        "width": 1440,
+        "height": 1040
+      },
+      "bounds": "117.310118,38.995232;117.317842,38.999568"
+    },
+    {
+      "name": "datong",
+      "center": [
+        117.310519,
+        38.99768
+      ],
+      "zoom": 18,
+      "viewport": {
+        "width": 1440,
+        "height": 1040
+      },
+      "bounds": "117.306657,38.995512;117.314381,38.999848"
+    }
+  ],
+  "errors": []
+}

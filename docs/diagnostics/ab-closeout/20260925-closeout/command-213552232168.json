@@ -1,0 +1,11 @@
+{
+  "args": [
+    "powershell",
+    "-NoProfile",
+    "-Command",
+    "Get-CimInstance Win32_Process | Where-Object { .CommandLine -like '*ab_closeout.py execute powershell*' -or .CommandLine -eq 'powershell -NoProfile -Command \" Set-Location E:\\AI4TJU"
+  ],
+  "code": 1,
+  "stdout": "",
+  "stderr": "The string is missing the terminator: '.\n    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException\n    + FullyQualifiedErrorId : TerminatorExpectedAtEndOfString\n \n"
+}

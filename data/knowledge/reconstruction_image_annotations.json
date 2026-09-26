@@ -1,0 +1,27 @@
+{
+  "beiyangyuan-datong-center:photo:1": {
+    "recommendedForReconstruction": false,
+    "inputReview": "partial_subject",
+    "reviewNote": "右侧建筑超出画面，天空占主要部分；不可代表完整建筑。"
+  },
+  "beiyangyuan-datong-center:photo:2": {
+    "recommendedForReconstruction": true,
+    "inputReview": "best_available_exterior",
+    "reviewNote": "主楼较完整，右侧附属部分仍被画面截断，湖岸与树木需检查。"
+  },
+  "beiyangyuan-zhengdong-library:photo:1": {
+    "recommendedForReconstruction": true,
+    "inputReview": "best_available_exterior",
+    "reviewNote": "外观角视；透视三角轮廓不等于真实屋顶呈三角形。"
+  },
+  "beiyangyuan-zhengdong-library:photo:2": {
+    "recommendedForReconstruction": false,
+    "inputReview": "partial_subject",
+    "reviewNote": "局部立面，不能代表建筑全貌。"
+  },
+  "beiyangyuan-zhengdong-library:photo:3": {
+    "recommendedForReconstruction": false,
+    "inputReview": "interior",
+    "reviewNote": "室内照片，不可用于宣称重建整栋建筑外观。"
+  }
+}

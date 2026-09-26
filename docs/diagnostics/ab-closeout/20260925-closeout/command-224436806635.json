@@ -1,0 +1,11 @@
+{
+  "args": [
+    "powershell",
+    "-NoProfile",
+    "-Command",
+    "Set-Location E:\\AI4TJU; .\\scripts\\stop.ps1; .\\scripts\\start-app.ps1"
+  ],
+  "code": 0,
+  "stdout": "Stopped owned PID 52156 (child)\nStopped owned PID 50356 (child)\nStopped owned PID 48208 (child)\nStopped owned PID 43944 (asr-launcher)\nURL: http://127.0.0.1:8000  API: http://127.0.0.1:8000\n\n  pid role        \n  --- ----        \n 2696 asr-launcher\n53524 api-launcher\n52372 child       \n37580 child       \n42940 child       \n47328 child       \n\n\nModel configured: True; verified in this process: False\n",
+  "stderr": ""
+}

@@ -1,0 +1,15 @@
+{
+  "args": [
+    "E:/AI4TJU/.venv/Scripts/python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/harness",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "code": 0,
+  "stdout": "...........                                                              [100%]\n============================== warnings summary ===============================\n.venv\\Lib\\site-packages\\starlette\\testclient.py:53\n  E:\\AI4TJU\\.venv\\Lib\\site-packages\\starlette\\testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.\n    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n11 passed, 1 warning in 2.59s\n",
+  "stderr": ""
+}

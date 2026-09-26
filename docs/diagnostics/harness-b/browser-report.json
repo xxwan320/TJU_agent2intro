@@ -1,0 +1,103 @@
+{
+  "browser": "153.0.8010.53",
+  "scope": "real Windows Chrome and local backend; no physical microphone or manual listening",
+  "cases": [
+    {
+      "name": "real selected document upload via trusted file picker continuation",
+      "status": "PASS_REAL",
+      "observation": "file chooser selected actual TXT, upload ticket accepted, continuation receipt recorded"
+    },
+    {
+      "name": "document question through actual provider and GLM",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /09:30|9:30|九点半|9点30/. Input:\n\n'所选文档：已完成（限返回证据）'\n"
+    },
+    {
+      "name": "real structured itinerary and Markdown JSON downloads",
+      "status": "PASS_REAL",
+      "outputs": [
+        {
+          "filename": "tju-itinerary.md",
+          "bytes": 1477
+        },
+        {
+          "filename": "tju-itinerary.json",
+          "bytes": 7422
+        }
+      ]
+    },
+    {
+      "name": "point selection actual text and image, A-B-A stale guards",
+      "status": "PASS_REAL",
+      "ids": [
+        "weijinlu-09-teaching",
+        "weijinlu-aiwan-lake",
+        "weijinlu-09-teaching"
+      ]
+    },
+    {
+      "name": "real narration playing pause resume stop events",
+      "status": "PASS_REAL",
+      "media": [
+        {
+          "type": "playing",
+          "tag": "AUDIO",
+          "at": 10509.89999999851,
+          "time": 0
+        },
+        {
+          "type": "pause",
+          "tag": "AUDIO",
+          "at": 10549.19999999553,
+          "time": 0.037333
+        },
+        {
+          "type": "playing",
+          "tag": "AUDIO",
+          "at": 10571.19999999553,
+          "time": 0.037333
+        },
+        {
+          "type": "playing",
+          "tag": "AUDIO",
+          "at": 10571.19999999553,
+          "time": 0.037333
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "performance": [
+    {
+      "metric": "selection-to-card-and-image",
+      "sample": 0,
+      "ms": 50,
+      "cache": "first observation"
+    },
+    {
+      "metric": "selection-to-card-and-image",
+      "sample": 1,
+      "ms": 45,
+      "cache": "warm"
+    },
+    {
+      "metric": "selection-to-card-and-image",
+      "sample": 2,
+      "ms": 30,
+      "cache": "warm"
+    },
+    {
+      "metric": "start-to-observed-playing",
+      "ms": 1723,
+      "cache": "first observation"
+    },
+    {
+      "metric": "stop-to-observed-stopped",
+      "ms": 24
+    }
+  ],
+  "layout": {
+    "viewport": 390,
+    "scrollWidth": 390
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "scope": "Existing real GLB assets for UI file/view/map testing only. Both fail architectural quality; never acceptance of reconstruction quality.",
+  "cases": [
+    {
+      "name": "beiyangyuan-datong-center front/side/back/reset",
+      "status": "PASS_REAL",
+      "evidence": [
+        {
+          "name": "正面",
+          "sha256": "88d63abdc46567b7f4daab5f2fff890e02deffc3b94c8f5458c810cf5acaefe0"
+        },
+        {
+          "name": "侧面",
+          "sha256": "6b0fd1684fff636bd59b67d2687782c94325d4f1b41e1fb0e169a34533dfa6c6"
+        },
+        {
+          "name": "背面",
+          "sha256": "d9f1ef3099bf8de5d10dd00526390101a3d9edf51336cc9c81e329ace6499c98"
+        },
+        {
+          "name": "复位",
+          "sha256": "6196b46e053047292184c580d3bfb8248d5f44610efed45adaf46902621d13a0"
+        }
+      ]
+    },
+    {
+      "name": "beiyangyuan-datong-center download and independent GLB header/hash",
+      "status": "PASS_REAL",
+      "evidence": {
+        "assetId": "model-c42ac6562544e3602191d783",
+        "sha256": "bcb167430394ca3fe547f042f26d6c3eaa32937b52289afd27596108a375451d",
+        "bytes": 560824,
+        "meshCount": 1
+      }
+    },
+    {
+      "name": "beiyangyuan-zhengdong-library front/side/back/reset",
+      "status": "PASS_REAL",
+      "evidence": [
+        {
+          "name": "正面",
+          "sha256": "252f6cac021b9220757902a4843b2c24b69c31244024a4494db34ae6bacd6fa0"
+        },
+        {
+          "name": "侧面",
+          "sha256": "1acdc16484235d8ca0e901ef43df5d39f99cdfe0d221ea548720ad5a01dffc68"
+        },
+        {
+          "name": "背面",
+          "sha256": "13beb6175d3b3b83dc9cab12da88a5a824c49c23261b1153550432d8a80ff353"
+        },
+        {
+          "name": "复位",
+          "sha256": "7b1b9c8b5c39d60398e1fdbe0f0294bb37f02cd2d10acff684c2cea5f1419673"
+        }
+      ]
+    },
+    {
+      "name": "beiyangyuan-zhengdong-library download and independent GLB header/hash",
+      "status": "PASS_REAL",
+      "evidence": {
+        "assetId": "model-eb21b83fbd9b4273187f9746",
+        "sha256": "06723e60138f951b5c67d97760db0011fe82feea6edadc3cfee4a9c8d56a08db",
+        "bytes": 384168,
+        "meshCount": 1
+      }
+    },
+    {
+      "name": "editing then restoring saved calibration preserves all fields",
+      "status": "PASS_REAL",
+      "evidence": {
+        "savedHeading": "0",
+        "invalidSourceBlocked": true,
+        "serverStateNotChanged": true
+      }
+    },
+    {
+      "name": "real map overlay has both asset IDs and nonzero GPU visibility",
+      "status": "PASS_REAL",
+      "evidence": {
+        "ids": "model-c42ac6562544e3602191d783,model-eb21b83fbd9b4273187f9746"
+      }
+    },
+    {
+      "name": "pan rotation pitch and zoom redraw the actual map overlay",
+      "status": "PASS_REAL",
+      "evidence": [
+        {
+          "name": "平移地图",
+          "sha256": "0f93fcd4e401ec118951f39360d42fab890f5fd274543a3d2002ff4c8688adf1",
+          "drawn": "model-c42ac6562544e3602191d783,model-eb21b83fbd9b4273187f9746"
+        },
+        {
+          "name": "旋转地图45°",
+          "sha256": "3d2d2518f13cb8a25674ac2e1ce5e62cf1e7b44fd4283e33e1edc3a7f05289de",
+          "drawn": "model-c42ac6562544e3602191d783,model-eb21b83fbd9b4273187f9746"
+        },
+        {
+          "name": "俯视/倾斜地图",
+          "sha256": "586a8c5e73b97a88863fdf4cd25f9abdd3e508005f34810f8b8caaa1844f8d50",
+          "drawn": "model-c42ac6562544e3602191d783,model-eb21b83fbd9b4273187f9746"
+        },
+        {
+          "name": "放大地图",
+          "sha256": "7a93651cc0f60470f7dcaf1946ce668ad0a7b44518563ba39be85be48736e741",
+          "drawn": "model-c42ac6562544e3602191d783"
+        }
+      ]
+    },
+    {
+      "name": "map point selection can be cancelled and hides visual obstruction",
+      "status": "PASS_REAL",
+      "evidence": {
+        "cancelled": true,
+        "storedCalibrationUntouched": true
+      }
+    },
+    {
+      "name": "reload restores saved revision and dimensions without multiplying scale",
+      "status": "PASS_REAL",
+      "evidence": [
+        {
+          "assetId": "model-eb21b83fbd9b4273187f9746",
+          "revision": 1,
+          "metersPerModelUnit": 117.07143303500457,
+          "dimensionsM": {
+            "width": 116.32,
+            "height": 51.15170033948167,
+            "depth": 58.84614685597014
+          }
+        },
+        {
+          "assetId": "model-c42ac6562544e3602191d783",
+          "revision": 1,
+          "metersPerModelUnit": 152.33478813192903,
+          "dimensionsM": {
+            "width": 156.24,
+            "height": 93.72449464274257,
+            "depth": 77.6676050088474
+          }
+        }
+      ]
+    },
+    {
+      "name": "loaded model mobile layout has no horizontal overflow",
+      "status": "PASS_REAL",
+      "evidence": {
+        "scroll": 364,
+        "client": 364,
+        "documentWidth": 390,
+        "viewport": 390,
+        "viewer": 332
+      }
+    }
+  ],
+  "errors": [],
+  "files": [
+    {
+      "assetId": "model-c42ac6562544e3602191d783",
+      "sha256": "bcb167430394ca3fe547f042f26d6c3eaa32937b52289afd27596108a375451d",
+      "bytes": 560824,
+      "meshCount": 1
+    },
+    {
+      "assetId": "model-eb21b83fbd9b4273187f9746",
+      "sha256": "06723e60138f951b5c67d97760db0011fe82feea6edadc3cfee4a9c8d56a08db",
+      "bytes": 384168,
+      "meshCount": 1
+    }
+  ]
+}

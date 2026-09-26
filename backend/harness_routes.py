@@ -42,7 +42,7 @@ async def capabilities(context:ToolContext,x_harness_session:str=Header(default=
 @router.post('/runs')
 async def start(body:Start,x_harness_session:str=Header(default='')):
     authorized(x_harness_session,body.context)
-    if body.direct and (set(body.direct)!={'toolName','input'} or body.direct['toolName'] not in {'poi_select','narration_control','route_plan','itinerary_export','device_capabilities','device_pick_document','device_share','device_open_app','document_read'}):raise HTTPException(422,'invalid direct tool')
+    if body.direct and (set(body.direct)!={'toolName','input'} or body.direct['toolName'] not in {'poi_select','narration_control','route_plan','itinerary_export','device_capabilities','device_pick_document','device_share','device_open_app','document_read','knowledge_search'}):raise HTTPException(422,'invalid direct tool')
     try:r=harness.begin(body.context)
     except ValueError:raise HTTPException(409,'stale generation or busy') from None
     r.device_caps=body.deviceCapabilities

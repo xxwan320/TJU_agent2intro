@@ -1,0 +1,10 @@
+{
+  "args": [
+    "E:/AI4TJU/.venv/Scripts/python.exe",
+    "scripts/export-r3-knowledge-schema.py",
+    "--check"
+  ],
+  "code": 0,
+  "stdout": "R3 knowledge schema/types checked\n",
+  "stderr": ""
+}

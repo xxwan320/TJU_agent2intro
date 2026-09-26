@@ -1,0 +1,88 @@
+{
+  "baseHead": "f459060bd5e8e1c9d5540ca348d5e08fe9a18e36",
+  "requiresBContract": "backend/harness_contracts.py and shared Harness integration maintained by B",
+  "files": [
+    {
+      "path": "backend/knowledge/harness_provider.py",
+      "sha256": "52b7d53dc10bc16c0edbd48a479b763c29c649fab00abc053bcc9b74f11ac1b7",
+      "bytes": 18094
+    },
+    {
+      "path": "frontend/src/device/a-device.ts",
+      "sha256": "9b5e613b4c950851851c90ec215a054af18a710572f0e1bc078d017a6bbab061",
+      "bytes": 15075
+    },
+    {
+      "path": "tests/knowledge/test_harness_provider.py",
+      "sha256": "9052c20cabd51fc805dca9348de9b511432fe9ed6fbd65702fd5bfeceb37339e",
+      "bytes": 7650
+    },
+    {
+      "path": "tests/interaction/a-device.test.mjs",
+      "sha256": "36d701deccbbbe2d088eaba2fc7605539901a69f1033807768a26ee50f9dcd35",
+      "bytes": 11144
+    },
+    {
+      "path": "scripts/audit-a-assets.py",
+      "sha256": "331e257ce23b9e25d1d51ec7d4b24ce95182751fbe22fab8c856fcfe96630602",
+      "bytes": 16225
+    },
+    {
+      "path": "scripts/verify-a-provider.py",
+      "sha256": "7bcd0b4866cc37f1538f36379161329ec364300144539c03ecb8c87b7164575e",
+      "bytes": 6106
+    },
+    {
+      "path": "data/knowledge/a_asset_inventory.json",
+      "sha256": "f90b9ada1de7c799aac0152644dcf34d3c8fe2e7ba983d0cd2b2d01e5d3f9022",
+      "bytes": 303625
+    },
+    {
+      "path": "data/knowledge/a_fact_samples.json",
+      "sha256": "5300a374f371f4df847bc0f0f65d76bb4772059446d5ab596fd42542922d5f92",
+      "bytes": 25781
+    },
+    {
+      "path": "data/knowledge/a_source_observations.json",
+      "sha256": "480df1dc421fc8fc40f1a18c9158e3b0ca6f1f0623c4636916a606cd06788fa9",
+      "bytes": 4669
+    },
+    {
+      "path": "docs/diagnostics/a-data-device-baseline.md",
+      "sha256": "9d5b9a751e0307953784f256b10fc76b5f0ba89e18bf963ce70dc2583dbca5e1",
+      "bytes": 4871
+    },
+    {
+      "path": "docs/handoff/A_data_device.md",
+      "sha256": "ec64ac701be84fe792583a4088f9d1b1d262deb04adb2384483fba0079b4e746",
+      "bytes": 8731
+    },
+    {
+      "path": "docs/diagnostics/harness-a/baseline.json",
+      "sha256": "ef227a1a23650e5acc5e0435de37289a85c653caab5f2ea4cac279c15c0c22aa",
+      "bytes": 17438
+    },
+    {
+      "path": "docs/diagnostics/harness-a/provider-probe.json",
+      "sha256": "e182dbc4562048292739e30f99bb291e1c4bd91230165a64c0526fbb07546d79",
+      "bytes": 228210
+    },
+    {
+      "path": "docs/diagnostics/harness-a/assets-report.md",
+      "sha256": "5360db91efccdcf82c051d72c0dd3f41197dddf10f6a2daf69b862bc9be86fdf",
+      "bytes": 3841
+    },
+    {
+      "path": "docs/diagnostics/harness-a/mobile-report.md",
+      "sha256": "a0e176838ada7dc0efcea007ddba85cbc198ebbf0a695332c0ed3a1202d63f8f",
+      "bytes": 7157
+    },
+    {
+      "path": "docs/diagnostics/harness-a/acceptance.json",
+      "sha256": "6ed7594d9dc7e64f48cf4d589c55d2a554b9e319bdc78f3d784f981f4f0fd10c",
+      "bytes": 3303
+    }
+  ],
+  "patchSha256": "510f92aa73f8e92c5a6e31aa8506b5758fda549556497cf62b5b24d0a17ab891",
+  "note": "Additive patch for a clean matching baseline; these files already exist in current tree. Do not apply over current files."
+}

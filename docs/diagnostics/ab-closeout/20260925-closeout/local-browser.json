@@ -1,0 +1,92 @@
+{
+  "scope": "real DOM/images; map network intentionally blocked for zero-cost selection tests; session response deliberately delayed",
+  "cases": [
+    {
+      "id": "C01",
+      "status": "PASS_REAL",
+      "scope": "exact current card text and original mapped decoded image; map marker not asserted in this offline-map scenario"
+    },
+    {
+      "id": "C12",
+      "status": "PASS_REAL",
+      "scope": "real browser stop during delayed real session response; zero run submissions",
+      "runs": 0
+    }
+  ],
+  "errors": [],
+  "samples": [
+    {
+      "round": 0,
+      "id": "beiyangyuan-zhengdong-library",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-zhengdong-library-1.jpg",
+      "domMs": 267,
+      "imageMs": 296,
+      "cache": "first pass"
+    },
+    {
+      "round": 0,
+      "id": "beiyangyuan-datong-center",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-datong-center-1.jpg",
+      "domMs": 76,
+      "imageMs": 92,
+      "cache": "first pass"
+    },
+    {
+      "round": 0,
+      "id": "beiyangyuan-zhengdong-library",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-zhengdong-library-1.jpg",
+      "domMs": 15,
+      "imageMs": 33,
+      "cache": "first pass"
+    },
+    {
+      "round": 1,
+      "id": "beiyangyuan-zhengdong-library",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-zhengdong-library-1.jpg",
+      "domMs": 35,
+      "imageMs": 179,
+      "cache": "warm"
+    },
+    {
+      "round": 1,
+      "id": "beiyangyuan-datong-center",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-datong-center-1.jpg",
+      "domMs": 12,
+      "imageMs": 30,
+      "cache": "warm"
+    },
+    {
+      "round": 1,
+      "id": "beiyangyuan-zhengdong-library",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-zhengdong-library-1.jpg",
+      "domMs": 8,
+      "imageMs": 24,
+      "cache": "warm"
+    },
+    {
+      "round": 2,
+      "id": "beiyangyuan-zhengdong-library",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-zhengdong-library-1.jpg",
+      "domMs": 5,
+      "imageMs": 18,
+      "cache": "warm"
+    },
+    {
+      "round": 2,
+      "id": "beiyangyuan-datong-center",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-datong-center-1.jpg",
+      "domMs": 8,
+      "imageMs": 24,
+      "cache": "warm"
+    },
+    {
+      "round": 2,
+      "id": "beiyangyuan-zhengdong-library",
+      "expectedSrc": "/assets/campus/photos/beiyangyuan-zhengdong-library-1.jpg",
+      "domMs": 8,
+      "imageMs": 26,
+      "cache": "warm"
+    }
+  ],
+  "network": []
+}

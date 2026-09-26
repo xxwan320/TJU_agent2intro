@@ -1,0 +1,653 @@
+{
+  "job": {
+    "id": "job-bef5cbdcaeeef68027f63049",
+    "imageId": "image-51520231c0e4f6f670303d9a",
+    "imageIds": [
+      "image-51520231c0e4f6f670303d9a",
+      "image-075db97864788ead64b045d0"
+    ],
+    "viewCount": 2,
+    "inputMode": "multi_view",
+    "reconstructionScope": "observed_surfaces",
+    "feedback": {
+      "registeredViews": 2,
+      "geometricallySupportedViews": 2,
+      "totalViews": 2,
+      "coverage": "observed_surfaces",
+      "coordinateScale": "relative",
+      "warnings": [
+        "Only observed surfaces are reconstructed; unseen faces remain open.",
+        "Scale is relative; north direction, gravity and map placement are not measured."
+      ],
+      "crossViewDepthAgreement": 0.9682148893951642,
+      "geometricallyConsistent": true,
+      "geometryConsistent": true,
+      "predictedCameraCount": 2,
+      "fusedVoxelsObservedBy2OrMore": 19665,
+      "independentlyVerifiedViews": 2
+    },
+    "overlapEvidence": {
+      "status": "connected",
+      "viewCount": 2,
+      "uniqueViewCount": 2,
+      "components": [
+        [
+          "image-51520231c0e4f6f670303d9a",
+          "image-075db97864788ead64b045d0"
+        ]
+      ],
+      "duplicates": [],
+      "pairs": [
+        {
+          "a": "image-51520231c0e4f6f670303d9a",
+          "b": "image-075db97864788ead64b045d0",
+          "matches": 273,
+          "inliers": 250,
+          "inlierRatio": 0.9158,
+          "coverageA": 0.5855,
+          "coverageB": 0.6034,
+          "overlapEvidence": true,
+          "geometry": "epipolar"
+        }
+      ],
+      "warnings": [],
+      "recommendations": [],
+      "method": "mutual SIFT ratio matches + fundamental/homography RANSAC; heuristic overlap evidence only",
+      "version": "sift-overlap-v1",
+      "elapsedSeconds": 0.218
+    },
+    "poiId": null,
+    "campusId": "beiyangyuan",
+    "idempotencyKey": "verified-production-tsdf-demo-v2",
+    "cacheKey": "4ce838e56ab909bea958160109c6a7e2c7190f986a235006fa2721c6946e682f",
+    "generator": "depth-anything-3",
+    "version": {
+      "provider": "depth-anything-3",
+      "model": "DA3-SMALL",
+      "sourceCommit": "3d835ec1a5802d64a8b8b15f817a1ab54809bfe4",
+      "weightsRevision": "e08cab65ca0ec38e7826075418411ab90cab4da3",
+      "weightsSha256": "364492e38a3a06d221ac75da7f6621ada3f2361cd24fde11ba79091e9f40efcf",
+      "preprocessVersion": "da3-official-aspect-resize-alpha-v1",
+      "technicalInferenceVerified": true,
+      "qualityAccepted": false,
+      "maxViews": 2,
+      "verifiedExample": ".runtime\\da3-evaluation\\official-soh-tsdf",
+      "verifiedModelSha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f",
+      "verifiedViewCount": 2,
+      "coordinateScale": "relative",
+      "reconstructionScope": "observed_surfaces",
+      "workerSha256": "cf45a88cc6736a3a6d17fd53cfc588c800e97c1c7ac22c599bb725afe0cd0611",
+      "tsdfSha256": "18cd28832129011fd55fa301467021f0460be0b354164efdff0d608378fd7287"
+    },
+    "codeHashes": {
+      "reconstruction-multiview-worker.py": "cf45a88cc6736a3a6d17fd53cfc588c800e97c1c7ac22c599bb725afe0cd0611",
+      "reconstruction_preprocess.py": "bbdb13f443afbff231f14f2d174b9c194a7d2f2d154f5186af9e4fcc224ad757",
+      "hunyuan_mesh_review.py": "aeb11abae96f606a0cabf5d8e09284da7712ffc0d0b93deeaf33ad64ca9d59aa",
+      "reconstruction_views.py": "df1f3d1e0643ded5f0feeb0b1bee6e11aa3c63ea98fbf2003644855d0b249f62"
+    },
+    "stage": "succeeded",
+    "createdAt": "2026-09-26T04:19:48.240944+00:00",
+    "queuedAt": 1790396388.2409446,
+    "removeBackground": false,
+    "quality": "standard",
+    "cancelRequested": false,
+    "startedAt": "2026-09-26T04:19:48.390704+00:00",
+    "elapsedSeconds": 4,
+    "assetId": "model-eb61f10eb5ebe2494b1022ac",
+    "result": {
+      "id": "model-eb61f10eb5ebe2494b1022ac",
+      "imageId": "image-51520231c0e4f6f670303d9a",
+      "imageIds": [
+        "image-51520231c0e4f6f670303d9a",
+        "image-075db97864788ead64b045d0"
+      ],
+      "viewCount": 2,
+      "inputMode": "multi_view",
+      "poiId": null,
+      "campusId": "beiyangyuan",
+      "jobId": "job-bef5cbdcaeeef68027f63049",
+      "createdAt": "2026-09-26T04:19:57.495242+00:00",
+      "stage": "succeeded",
+      "generator": "depth-anything-3",
+      "version": "da3-observed-tsdf-v2",
+      "model": "DA3-SMALL",
+      "reconstructionScope": "observed_surfaces",
+      "reconstructionMode": "multiview_observed_surface",
+      "inputSha256s": [
+        "ecf04069986d70e9ad642cd76c62cdbc4884a792907ed0cf09a5a9d059e335fb",
+        "357fe310bc5fff546ea506b4bd0c8035e3fbe5a4256562c37014fbb9a620d9e6"
+      ],
+      "sha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f",
+      "bytes": 977796,
+      "bounds": [
+        [
+          -0.7866825258484778,
+          -0.16986109425499954,
+          -1.474544370124916
+        ],
+        [
+          0.663585953882681,
+          0.09163525126550158,
+          -0.4396222057865731
+        ]
+      ],
+      "extents": [
+        1.4502684797311587,
+        0.2614963455205011,
+        1.0349221643383428
+      ],
+      "vertices": 26370,
+      "faces": 46239,
+      "colors": true,
+      "upAxis": "Y",
+      "sourceCommit": "3d835ec1a5802d64a8b8b15f817a1ab54809bfe4",
+      "weightsRevision": "e08cab65ca0ec38e7826075418411ab90cab4da3",
+      "weightsSha256": "364492e38a3a06d221ac75da7f6621ada3f2361cd24fde11ba79091e9f40efcf",
+      "preprocessVersion": "da3-official-aspect-resize-alpha-v1",
+      "parameters": {
+        "processResolution": 504,
+        "poseMethod": "official camera decoder",
+        "attention": "torch SDPA",
+        "confidencePercentile": 40,
+        "fusion": {
+          "views": [
+            {
+              "view": 0,
+              "confidentPixels": 15584,
+              "retainedPixels": 15535,
+              "comparedPixels": 13604,
+              "supportedPixels": 13213,
+              "conflictingPixels": 49,
+              "confidenceThreshold": 1.05,
+              "relativeFarClip98Percentile": 1.362231907844543
+            },
+            {
+              "view": 1,
+              "confidentPixels": 15959,
+              "retainedPixels": 15891,
+              "comparedPixels": 13610,
+              "supportedPixels": 13136,
+              "conflictingPixels": 68,
+              "confidenceThreshold": 1.05,
+              "relativeFarClip98Percentile": 1.408214702606201
+            }
+          ],
+          "pairs": [
+            {
+              "a": 0,
+              "b": 1,
+              "comparedPixels": 13604,
+              "supportedPixels": 13213,
+              "supportFraction": 0.97125845339606,
+              "baselineToMedianDepth": 0.22920921444892883
+            },
+            {
+              "a": 1,
+              "b": 0,
+              "comparedPixels": 13610,
+              "supportedPixels": 13136,
+              "supportFraction": 0.9651726671565025,
+              "baselineToMedianDepth": 0.22270189225673676
+            }
+          ],
+          "pixelStride": 2,
+          "relativeVoxelSize": 0.0022763699293136598,
+          "mergedVertexSamples": 526,
+          "depthAgreementRelativeTolerance": 0.08,
+          "freeSpaceConflictTolerance": 0.15,
+          "hiddenGeometry": "none",
+          "holeFilling": false,
+          "method": "projective confidence-weighted TSDF, shared zero-level surface",
+          "tsdf": {
+            "method": "confidence-weighted projective TSDF with masked marching cubes",
+            "version": "cpu-tsdf-observed-v2",
+            "coordinateFrame": "OpenCV world",
+            "resolutionRequested": 256,
+            "gridShape": [
+              256,
+              52,
+              184
+            ],
+            "voxelSizeRelative": 0.005687215815144923,
+            "truncationRelative": 0.02274886326057969,
+            "boundsPercentiles": [
+              0.25,
+              99.75
+            ],
+            "observedVoxels": 291203,
+            "nearSurfaceVoxels": 63548,
+            "fusedVoxelsObservedBy2OrMore": 19665,
+            "fusedVoxelsObservedBy2+": 19665,
+            "multiViewNarrowBandFraction": 0.30945112356014354,
+            "extractionMaskVoxels": 291203,
+            "perView": [
+              {
+                "view": 0,
+                "confidentPixels": 62554,
+                "confidenceThreshold": 1.05,
+                "farClip98Percentile": 1.3610180377960206,
+                "integratedVoxels": 207958,
+                "nearSurfaceVoxels": 40286
+              },
+              {
+                "view": 1,
+                "confidentPixels": 64108,
+                "confidenceThreshold": 1.05,
+                "farClip98Percentile": 1.3975775194168092,
+                "integratedVoxels": 230143,
+                "nearSurfaceVoxels": 42927
+              }
+            ],
+            "views": [
+              {
+                "view": 0,
+                "confidentPixels": 62554,
+                "confidenceThreshold": 1.05,
+                "farClip98Percentile": 1.3610180377960206,
+                "integratedVoxels": 207958,
+                "nearSurfaceVoxels": 40286
+              },
+              {
+                "view": 1,
+                "confidentPixels": 64108,
+                "confidenceThreshold": 1.05,
+                "farClip98Percentile": 1.3975775194168092,
+                "integratedVoxels": 230143,
+                "nearSurfaceVoxels": 42927
+              }
+            ],
+            "vertices": 26370,
+            "faces": 46239,
+            "watertight": false,
+            "holeFilling": false,
+            "hiddenGeometry": "none",
+            "unknownBoundaryCapping": false,
+            "absoluteScaleKnown": false,
+            "seconds": 0.5619999999998981,
+            "limitations": [
+              "Camera poses and depth are predicted, not measured.",
+              "Fusion covers confident observed surfaces only.",
+              "TSDF merging is not an independent camera registration or appearance quality certificate."
+            ],
+            "depthSampling": "bilinear with four valid source neighbours",
+            "extractionSupport": "eight observed corners per grid cell",
+            "validExtractionCells": 245342
+          }
+        },
+        "metricScaleKnown": false,
+        "gravityAligned": false,
+        "confidenceRule": "min(max(1.05, percentile40), percentile90), official DA3 GLB rule"
+      },
+      "feedback": {
+        "registeredViews": 2,
+        "geometricallySupportedViews": 2,
+        "totalViews": 2,
+        "coverage": "observed_surfaces",
+        "coordinateScale": "relative",
+        "warnings": [
+          "Only observed surfaces are reconstructed; unseen faces remain open.",
+          "Scale is relative; north direction, gravity and map placement are not measured."
+        ],
+        "crossViewDepthAgreement": 0.9682148893951642,
+        "geometricallyConsistent": true,
+        "geometryConsistent": true,
+        "predictedCameraCount": 2,
+        "fusedVoxelsObservedBy2OrMore": 19665,
+        "independentlyVerifiedViews": 2
+      },
+      "timings": {
+        "preprocessing": 0.0,
+        "loading": 0.4059999999990396,
+        "estimating_cameras_and_depth": 0.8899999999994179,
+        "checking_geometry": 2.7969999999986612,
+        "fusing_observed_surfaces": 2.8439999999991414,
+        "validating": 3.5
+      },
+      "totalSeconds": 4.936999999999898,
+      "peakCudaBytes": 371808256,
+      "quality": "Joint neural multi-view observed surface reconstruction; camera poses and depth are predicted, absolute scale and hidden surfaces unknown.",
+      "qualityAssessment": {
+        "status": "review_required",
+        "accepted": false,
+        "scope": "observed_surfaces",
+        "geometryConsistent": true
+      },
+      "geometryEvidence": {
+        "pairChecks": [
+          {
+            "a": 0,
+            "b": 1,
+            "matches": 150,
+            "fundamentalInliers": 118,
+            "medianPredictedReprojectionErrorPx": 4.657285546133057,
+            "p90PredictedReprojectionErrorPx": 9.54154355663816,
+            "within12pxFraction": 0.940677966101695
+          }
+        ],
+        "crossViewDepthAgreement": 0.9682148893951642
+      },
+      "preprocessing": {
+        "removeBackground": false,
+        "alphaPreserved": true,
+        "manualCrop": false,
+        "warnings": []
+      },
+      "geometryConsistent": true,
+      "registrationEvidence": {
+        "method": "predicted depth reprojection with optional independent SIFT consistency",
+        "supportedViewIndices": [
+          0,
+          1
+        ],
+        "reliableDirectedPairs": [
+          {
+            "a": 0,
+            "b": 1,
+            "comparedPixels": 13604,
+            "supportedPixels": 13213,
+            "supportFraction": 0.97125845339606,
+            "baselineToMedianDepth": 0.22920921444892883
+          },
+          {
+            "a": 1,
+            "b": 0,
+            "comparedPixels": 13610,
+            "supportedPixels": 13136,
+            "supportFraction": 0.9651726671565025,
+            "baselineToMedianDepth": 0.22270189225673676
+          }
+        ],
+        "cameraPredictionAloneIsRegistration": false
+      },
+      "qualityReview": {
+        "status": "unreviewed",
+        "assetSha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f",
+        "limitations": [
+          "尚未完成照片与多角度网格对照审核"
+        ]
+      },
+      "representationKind": "image_reconstruction"
+    }
+  },
+  "asset": {
+    "id": "model-eb61f10eb5ebe2494b1022ac",
+    "imageId": "image-51520231c0e4f6f670303d9a",
+    "imageIds": [
+      "image-51520231c0e4f6f670303d9a",
+      "image-075db97864788ead64b045d0"
+    ],
+    "viewCount": 2,
+    "inputMode": "multi_view",
+    "poiId": null,
+    "campusId": "beiyangyuan",
+    "jobId": "job-bef5cbdcaeeef68027f63049",
+    "createdAt": "2026-09-26T04:19:57.495242+00:00",
+    "stage": "succeeded",
+    "generator": "depth-anything-3",
+    "version": "da3-observed-tsdf-v2",
+    "model": "DA3-SMALL",
+    "reconstructionScope": "observed_surfaces",
+    "reconstructionMode": "multiview_observed_surface",
+    "inputSha256s": [
+      "ecf04069986d70e9ad642cd76c62cdbc4884a792907ed0cf09a5a9d059e335fb",
+      "357fe310bc5fff546ea506b4bd0c8035e3fbe5a4256562c37014fbb9a620d9e6"
+    ],
+    "sha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f",
+    "bytes": 977796,
+    "bounds": [
+      [
+        -0.7866825258484778,
+        -0.16986109425499954,
+        -1.474544370124916
+      ],
+      [
+        0.663585953882681,
+        0.09163525126550158,
+        -0.4396222057865731
+      ]
+    ],
+    "extents": [
+      1.4502684797311587,
+      0.2614963455205011,
+      1.0349221643383428
+    ],
+    "vertices": 26370,
+    "faces": 46239,
+    "colors": true,
+    "upAxis": "Y",
+    "sourceCommit": "3d835ec1a5802d64a8b8b15f817a1ab54809bfe4",
+    "weightsRevision": "e08cab65ca0ec38e7826075418411ab90cab4da3",
+    "weightsSha256": "364492e38a3a06d221ac75da7f6621ada3f2361cd24fde11ba79091e9f40efcf",
+    "preprocessVersion": "da3-official-aspect-resize-alpha-v1",
+    "parameters": {
+      "processResolution": 504,
+      "poseMethod": "official camera decoder",
+      "attention": "torch SDPA",
+      "confidencePercentile": 40,
+      "fusion": {
+        "views": [
+          {
+            "view": 0,
+            "confidentPixels": 15584,
+            "retainedPixels": 15535,
+            "comparedPixels": 13604,
+            "supportedPixels": 13213,
+            "conflictingPixels": 49,
+            "confidenceThreshold": 1.05,
+            "relativeFarClip98Percentile": 1.362231907844543
+          },
+          {
+            "view": 1,
+            "confidentPixels": 15959,
+            "retainedPixels": 15891,
+            "comparedPixels": 13610,
+            "supportedPixels": 13136,
+            "conflictingPixels": 68,
+            "confidenceThreshold": 1.05,
+            "relativeFarClip98Percentile": 1.408214702606201
+          }
+        ],
+        "pairs": [
+          {
+            "a": 0,
+            "b": 1,
+            "comparedPixels": 13604,
+            "supportedPixels": 13213,
+            "supportFraction": 0.97125845339606,
+            "baselineToMedianDepth": 0.22920921444892883
+          },
+          {
+            "a": 1,
+            "b": 0,
+            "comparedPixels": 13610,
+            "supportedPixels": 13136,
+            "supportFraction": 0.9651726671565025,
+            "baselineToMedianDepth": 0.22270189225673676
+          }
+        ],
+        "pixelStride": 2,
+        "relativeVoxelSize": 0.0022763699293136598,
+        "mergedVertexSamples": 526,
+        "depthAgreementRelativeTolerance": 0.08,
+        "freeSpaceConflictTolerance": 0.15,
+        "hiddenGeometry": "none",
+        "holeFilling": false,
+        "method": "projective confidence-weighted TSDF, shared zero-level surface",
+        "tsdf": {
+          "method": "confidence-weighted projective TSDF with masked marching cubes",
+          "version": "cpu-tsdf-observed-v2",
+          "coordinateFrame": "OpenCV world",
+          "resolutionRequested": 256,
+          "gridShape": [
+            256,
+            52,
+            184
+          ],
+          "voxelSizeRelative": 0.005687215815144923,
+          "truncationRelative": 0.02274886326057969,
+          "boundsPercentiles": [
+            0.25,
+            99.75
+          ],
+          "observedVoxels": 291203,
+          "nearSurfaceVoxels": 63548,
+          "fusedVoxelsObservedBy2OrMore": 19665,
+          "fusedVoxelsObservedBy2+": 19665,
+          "multiViewNarrowBandFraction": 0.30945112356014354,
+          "extractionMaskVoxels": 291203,
+          "perView": [
+            {
+              "view": 0,
+              "confidentPixels": 62554,
+              "confidenceThreshold": 1.05,
+              "farClip98Percentile": 1.3610180377960206,
+              "integratedVoxels": 207958,
+              "nearSurfaceVoxels": 40286
+            },
+            {
+              "view": 1,
+              "confidentPixels": 64108,
+              "confidenceThreshold": 1.05,
+              "farClip98Percentile": 1.3975775194168092,
+              "integratedVoxels": 230143,
+              "nearSurfaceVoxels": 42927
+            }
+          ],
+          "views": [
+            {
+              "view": 0,
+              "confidentPixels": 62554,
+              "confidenceThreshold": 1.05,
+              "farClip98Percentile": 1.3610180377960206,
+              "integratedVoxels": 207958,
+              "nearSurfaceVoxels": 40286
+            },
+            {
+              "view": 1,
+              "confidentPixels": 64108,
+              "confidenceThreshold": 1.05,
+              "farClip98Percentile": 1.3975775194168092,
+              "integratedVoxels": 230143,
+              "nearSurfaceVoxels": 42927
+            }
+          ],
+          "vertices": 26370,
+          "faces": 46239,
+          "watertight": false,
+          "holeFilling": false,
+          "hiddenGeometry": "none",
+          "unknownBoundaryCapping": false,
+          "absoluteScaleKnown": false,
+          "seconds": 0.5619999999998981,
+          "limitations": [
+            "Camera poses and depth are predicted, not measured.",
+            "Fusion covers confident observed surfaces only.",
+            "TSDF merging is not an independent camera registration or appearance quality certificate."
+          ],
+          "depthSampling": "bilinear with four valid source neighbours",
+          "extractionSupport": "eight observed corners per grid cell",
+          "validExtractionCells": 245342
+        }
+      },
+      "metricScaleKnown": false,
+      "gravityAligned": false,
+      "confidenceRule": "min(max(1.05, percentile40), percentile90), official DA3 GLB rule"
+    },
+    "feedback": {
+      "registeredViews": 2,
+      "geometricallySupportedViews": 2,
+      "totalViews": 2,
+      "coverage": "observed_surfaces",
+      "coordinateScale": "relative",
+      "warnings": [
+        "Only observed surfaces are reconstructed; unseen faces remain open.",
+        "Scale is relative; north direction, gravity and map placement are not measured."
+      ],
+      "crossViewDepthAgreement": 0.9682148893951642,
+      "geometricallyConsistent": true,
+      "geometryConsistent": true,
+      "predictedCameraCount": 2,
+      "fusedVoxelsObservedBy2OrMore": 19665,
+      "independentlyVerifiedViews": 2
+    },
+    "timings": {
+      "preprocessing": 0.0,
+      "loading": 0.4059999999990396,
+      "estimating_cameras_and_depth": 0.8899999999994179,
+      "checking_geometry": 2.7969999999986612,
+      "fusing_observed_surfaces": 2.8439999999991414,
+      "validating": 3.5
+    },
+    "totalSeconds": 4.936999999999898,
+    "peakCudaBytes": 371808256,
+    "quality": "Joint neural multi-view observed surface reconstruction; camera poses and depth are predicted, absolute scale and hidden surfaces unknown.",
+    "qualityAssessment": {
+      "status": "review_required",
+      "accepted": false,
+      "scope": "observed_surfaces",
+      "geometryConsistent": true
+    },
+    "geometryEvidence": {
+      "pairChecks": [
+        {
+          "a": 0,
+          "b": 1,
+          "matches": 150,
+          "fundamentalInliers": 118,
+          "medianPredictedReprojectionErrorPx": 4.657285546133057,
+          "p90PredictedReprojectionErrorPx": 9.54154355663816,
+          "within12pxFraction": 0.940677966101695
+        }
+      ],
+      "crossViewDepthAgreement": 0.9682148893951642
+    },
+    "preprocessing": {
+      "removeBackground": false,
+      "alphaPreserved": true,
+      "manualCrop": false,
+      "warnings": []
+    },
+    "geometryConsistent": true,
+    "registrationEvidence": {
+      "method": "predicted depth reprojection with optional independent SIFT consistency",
+      "supportedViewIndices": [
+        0,
+        1
+      ],
+      "reliableDirectedPairs": [
+        {
+          "a": 0,
+          "b": 1,
+          "comparedPixels": 13604,
+          "supportedPixels": 13213,
+          "supportFraction": 0.97125845339606,
+          "baselineToMedianDepth": 0.22920921444892883
+        },
+        {
+          "a": 1,
+          "b": 0,
+          "comparedPixels": 13610,
+          "supportedPixels": 13136,
+          "supportFraction": 0.9651726671565025,
+          "baselineToMedianDepth": 0.22270189225673676
+        }
+      ],
+      "cameraPredictionAloneIsRegistration": false
+    },
+    "qualityReview": {
+      "status": "unreviewed",
+      "assetSha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f",
+      "limitations": [
+        "尚未完成照片与多角度网格对照审核"
+      ]
+    },
+    "representationKind": "image_reconstruction"
+  },
+  "wallSeconds": 50.39912223815918,
+  "providers": [
+    "hunyuan3d-2mini",
+    "triposr",
+    "depth-anything-3"
+  ],
+  "multiViewMaxViews": 2
+}

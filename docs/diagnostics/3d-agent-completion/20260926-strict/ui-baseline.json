@@ -1,0 +1,143 @@
+{
+  "errors": [],
+  "buttons": [
+    "运行日志",
+    "和海小棠聊聊",
+    "‹",
+    "›",
+    "搜索",
+    "本地图",
+    "在线地图",
+    "定位一次",
+    "持续定位",
+    "在地图选择起点",
+    "服务大通学生中心",
+    "宿舍区诚园",
+    "宿舍区格园",
+    "宿舍区平园",
+    "宿舍区齐园",
+    "宿舍区修园",
+    "宿舍区正园",
+    "宿舍区知园",
+    "教学国家大型地震工程模拟研究设施",
+    "体育综合体育馆",
+    "文化北洋纪念亭",
+    "文化求实会堂",
+    "文化三问桥",
+    "文化书田广场",
+    "文化太雷广场",
+    "文化天麟广场",
+    "教学杏荪楼",
+    "文化宣怀广场",
+    "餐饮学六食堂（菊园餐厅）",
+    "图书馆郑东图书馆",
+    "建筑建模与三维地图 打开"
+  ],
+  "inputs": [
+    {
+      "type": "select-one",
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "type": "number",
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "type": "select-one",
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "type": "select-one",
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "type": "select-one",
+      "name": "必去地点 1",
+      "placeholder": null
+    },
+    {
+      "type": "select-one",
+      "name": "必去地点 2",
+      "placeholder": null
+    },
+    {
+      "type": "select-one",
+      "name": "必去地点 3",
+      "placeholder": null
+    },
+    {
+      "type": "select-one",
+      "name": "必去地点 4",
+      "placeholder": null
+    },
+    {
+      "type": "select-one",
+      "name": "必去地点 5",
+      "placeholder": null
+    },
+    {
+      "type": "select-one",
+      "name": "避开参观点 1",
+      "placeholder": null
+    },
+    {
+      "type": "select-one",
+      "name": "避开参观点 2",
+      "placeholder": null
+    },
+    {
+      "type": "select-one",
+      "name": "避开参观点 3",
+      "placeholder": null
+    },
+    {
+      "type": "select-one",
+      "name": "避开参观点 4",
+      "placeholder": null
+    },
+    {
+      "type": "select-one",
+      "name": "避开参观点 5",
+      "placeholder": null
+    },
+    {
+      "type": "date",
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "type": "number",
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "type": "checkbox",
+      "name": null,
+      "placeholder": null
+    },
+    {
+      "type": "select-one",
+      "name": "当前介绍地点",
+      "placeholder": null
+    },
+    {
+      "type": "text",
+      "name": "搜索点位",
+      "placeholder": "搜索点位或别名"
+    },
+    {
+      "type": "select-one",
+      "name": "点位分类",
+      "placeholder": null
+    },
+    {
+      "type": "select-one",
+      "name": "常用起点",
+      "placeholder": null
+    }
+  ]
+}

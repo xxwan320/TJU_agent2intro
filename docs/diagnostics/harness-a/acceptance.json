@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-25",
+  "scope": "A data/assets and Windows browser executor; physical mobile deferred by user",
+  "cases": [
+    {"id":"A01","h":["H01"],"status":"PASS_REAL","scope":"Three existing POIs return real local excerpts, source IDs and POI binding, with zero network/model requests","evidence":"provider-probe.json"},
+    {"id":"A02","h":["H03"],"status":"PASS_OFFLINE","scope":"Current library closing time remains unknown without applicable evidence; HTTP failure differs from no evidence","evidence":"tests/knowledge/test_harness_provider.py and existing test_registered_retrieval.py"},
+    {"id":"A03","h":["H04","H17"],"status":"PASS_OFFLINE","scope":"Real TXT/MD parser and ASGI upload route exercised with fixture notice; session isolation and malicious instructions as inert text","evidence":"tests/knowledge/test_harness_provider.py"},
+    {"id":"A04","h":["H06","H23"],"status":"PASS_OFFLINE","scope":"Injected 503 alongside successful source retains evidence; source cache, timing and independent cancellation verified","evidence":"tests/knowledge/test_harness_provider.py"},
+    {"id":"A05","h":["H06"],"status":"PASS_REAL","scope":"Actual missing weather provider returns unavailable; no fixture weather in production","evidence":"backend/knowledge/harness_provider.py"},
+    {"id":"A06","h":["H09","H13"],"status":"PASS_REAL","scope":"91 original images and 104 mapped image instances readable; originals and mappings unchanged","limitations":"All 42 current public POIs have photos, so real missing-image branch NOT_RUN. Eight pre-existing cross-POI bindings flagged separately; not silently remapped.","evidence":"assets-report.md"},
+    {"id":"A07","h":["H07","H13"],"status":"PASS_REAL","scope":"Two existing avatar VRM containers present, campus architectural models absent; no invented model URLs","limitations":"VRM rendering/geometry accuracy not verified","evidence":"assets-report.md"},
+    {"id":"A08","h":["H11"],"status":"NOT_RUN","scope":"No real Windows microphone recording or physical mobile transcript","limitations":"Browser/desktop automation sandbox failed; existing ASR injected executor tested offline only"},
+    {"id":"A09","h":["H04"],"status":"PASS_OFFLINE","scope":"File-selection cancellation creates no uploadId; upload callback only receives selected file","evidence":"tests/interaction/a-device.test.mjs"},
+    {"id":"A10","h":["H15"],"status":"PASS_OFFLINE","scope":"Cancellation and share API return semantics do not claim delivery; Windows without share API reports unavailable","evidence":"tests/interaction/a-device.test.mjs"},
+    {"id":"A11","h":["H16"],"status":"PASS_OFFLINE","scope":"Unknown app rejected; injected app callback requires verified receipt","limitations":"No actual native app launch evidence or configured app registry","evidence":"tests/interaction/a-device.test.mjs"},
+    {"id":"A12","h":["H24"],"status":"NOT_RUN","scope":"Optional GUI extension not activated; browser device cancellation separately covered offline"}
+  ],
+  "externalBudget": {"localAdapterHttpPageFetches":15,"webReferenceOpens":3,"searchProviderRequests":0,"modelRequests":0},
+  "timing": "Three cold/warm raw observations and medians per POI/tool in provider-probe.json. Fresh provider means cache-cold, not cold OS/network. No P95 claims."
+}

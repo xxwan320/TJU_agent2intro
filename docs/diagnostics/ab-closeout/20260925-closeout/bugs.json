@@ -1,0 +1,44 @@
+[
+  {
+    "bugId": "CLOSEOUT-01",
+    "relatedCaseIds": [
+      "C12",
+      "H12",
+      "H22",
+      "H24"
+    ],
+    "input": "delay session establishment; stop, or begin another campus task before old response",
+    "expected": "no old /runs submission",
+    "before": "1 submission after cancel; reversed replies submitted [new,old]",
+    "rootCause": "active task published only after awaiting session; cancel had no reservation to invalidate",
+    "fix": "requestEpoch before awaits, cancellation invalidates reservation; timer checks owning active task",
+    "files": [
+      "frontend/src/transport/harness.ts"
+    ],
+    "after": "two controlled-delay regressions PASS; real Chrome delayed real session response produces 0 run submissions",
+    "evidence": [
+      "local-browser.json",
+      "cancel-before-session.png"
+    ]
+  },
+  {
+    "bugId": "CLOSEOUT-02",
+    "relatedCaseIds": [
+      "C12",
+      "H22"
+    ],
+    "input": "fill 256 terminal runs, begin a new session then its next generation",
+    "expected": "latest is keyed by new session; older generation cancels",
+    "before": "KeyError ('new','harness'); eviction overwrote key variable",
+    "rootCause": "capacity eviction reused incoming session key local variable",
+    "fix": "separate evicted_key from incoming key",
+    "files": [
+      "backend/model/harness.py"
+    ],
+    "after": "same test PASS; full backend 150 PASS",
+    "evidence": [
+      "backend-regression.json",
+      "tests/harness/test_closeout.py"
+    ]
+  }
+]

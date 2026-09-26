@@ -1,0 +1,49 @@
+{
+  "tts": 2,
+  "walking": 1,
+  "poi": 4,
+  "modelTasks": 1,
+  "requests": [
+    {
+      "kind": "modelTasks",
+      "path": "/api/harness/runs",
+      "at": "2026-09-25T13:21:07.419Z"
+    },
+    {
+      "kind": "poi",
+      "path": "/api/maps/amap/_AMapService/v3/place/text",
+      "at": "2026-09-25T13:21:12.093Z"
+    },
+    {
+      "kind": "tts",
+      "path": "/api/speech/tts",
+      "at": "2026-09-25T13:21:12.935Z"
+    },
+    {
+      "kind": "tts",
+      "path": "/api/speech/tts",
+      "at": "2026-09-25T13:21:12.935Z"
+    },
+    {
+      "kind": "poi",
+      "path": "/api/maps/amap/_AMapService/v3/place/text",
+      "at": "2026-09-25T13:22:03.255Z"
+    },
+    {
+      "kind": "walking",
+      "path": "/api/maps/amap/_AMapService/v3/direction/walking",
+      "at": "2026-09-25T13:22:08.358Z"
+    },
+    {
+      "kind": "poi",
+      "path": "/api/maps/amap/_AMapService/v3/place/text",
+      "at": "2026-09-25T13:22:08.552Z"
+    },
+    {
+      "kind": "poi",
+      "path": "/api/maps/amap/_AMapService/v3/place/text",
+      "at": "2026-09-25T13:22:33.860Z"
+    }
+  ],
+  "blocked": []
+}

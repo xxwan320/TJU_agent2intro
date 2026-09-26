@@ -1,0 +1,65 @@
+{
+  "build": "final harness build",
+  "device": "Windows Chrome 153.0.8010.53",
+  "cacheDefinition": "cold = new browser context; warm = same page after first point; backend cache not cleared",
+  "samples": [
+    {
+      "sample": 0,
+      "cache": "cold",
+      "poiId": "weijinlu-09-teaching",
+      "domMs": 211,
+      "imageMs": 250
+    },
+    {
+      "sample": 0,
+      "cache": "warm",
+      "poiId": "weijinlu-09-teaching",
+      "domMs": 17,
+      "imageMs": 106
+    },
+    {
+      "sample": 1,
+      "cache": "cold",
+      "poiId": "weijinlu-09-teaching",
+      "domMs": 28,
+      "imageMs": 47
+    },
+    {
+      "sample": 1,
+      "cache": "warm",
+      "poiId": "weijinlu-09-teaching",
+      "domMs": 74,
+      "imageMs": 152
+    },
+    {
+      "sample": 2,
+      "cache": "cold",
+      "poiId": "weijinlu-09-teaching",
+      "domMs": 23,
+      "imageMs": 45
+    },
+    {
+      "sample": 2,
+      "cache": "warm",
+      "poiId": "weijinlu-09-teaching",
+      "domMs": 73,
+      "imageMs": 1051
+    }
+  ],
+  "cancel": {
+    "status": "PASS_REAL",
+    "scope": "cancel receipt wait while precise origin absent; no GLM or walking request",
+    "uiMs": 47,
+    "routeAfter": ""
+  },
+  "medians": {
+    "cold": {
+      "domMs": 28,
+      "imageMs": 47
+    },
+    "warm": {
+      "domMs": 73,
+      "imageMs": 152
+    }
+  }
+}

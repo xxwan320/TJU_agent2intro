@@ -1,0 +1,15 @@
+{
+  "args": [
+    "E:/AI4TJU/.venv/Scripts/python.exe",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/harness/test_closeout.py",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "code": 1,
+  "stdout": "F                                                                        [100%]\n================================== FAILURES ===================================\n__________ test_capacity_eviction_keeps_new_session_generation_owner __________\n\n    def test_capacity_eviction_keeps_new_session_generation_owner():\n        h = Harness()\n        def ctx(s, g=1):\n            return ToolContext(sessionId=s, campusId='beiyangyuan', channel='harness', generation=g)\n        for i in range(256):\n            h.begin(ctx(str(i))).ended = True\n        newest = h.begin(ctx('new'))\n>       assert h.latest[('new', 'harness')] == (1, newest.id)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       KeyError: ('new', 'harness')\n\ntests\\harness\\test_closeout.py:10: KeyError\n=========================== short test summary info ===========================\nFAILED tests/harness/test_closeout.py::test_capacity_eviction_keeps_new_session_generation_owner\n1 failed in 0.07s\n",
+  "stderr": ""
+}

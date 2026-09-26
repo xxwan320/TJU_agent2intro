@@ -1,0 +1,347 @@
+{
+  "stage": "succeeded",
+  "generator": "depth-anything-3",
+  "version": "da3-tsdf-observed-v2",
+  "model": "DA3-SMALL",
+  "inputMode": "multi_view",
+  "reconstructionScope": "observed_surfaces",
+  "reconstructionMode": "multiview_observed_surface",
+  "imageIds": [
+    "official-soh-000",
+    "official-soh-010"
+  ],
+  "viewCount": 2,
+  "inputSha256s": [
+    "ea78c3b872b1e8b27de48cadf1d4a692cd42ddf5f72fcab78e2be2937935fb79",
+    "c91a69d4e050e75e3760fbacda18a452b9abcf3065e6d6bd940b4a99d48f7982"
+  ],
+  "sha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f",
+  "bytes": 977796,
+  "bounds": [
+    [
+      -0.7866825461387634,
+      -0.1698610931634903,
+      -1.4745444059371948
+    ],
+    [
+      0.6635859608650208,
+      0.09163524955511093,
+      -0.4396221935749054
+    ]
+  ],
+  "extents": [
+    1.4502685070037842,
+    0.2614963427186012,
+    1.0349222123622894
+  ],
+  "vertices": 26370,
+  "faces": 46239,
+  "colors": true,
+  "upAxis": "Y",
+  "sourceCommit": "3d835ec1a5802d64a8b8b15f817a1ab54809bfe4",
+  "weightsRevision": "e08cab65ca0ec38e7826075418411ab90cab4da3",
+  "weightsSha256": "364492e38a3a06d221ac75da7f6621ada3f2361cd24fde11ba79091e9f40efcf",
+  "preprocessVersion": "da3-official-aspect-resize-alpha-v1",
+  "parameters": {
+    "processResolution": 504,
+    "poseMethod": "official camera decoder",
+    "attention": "torch SDPA",
+    "confidencePercentile": 40,
+    "fusion": {
+      "method": "confidence-weighted projective TSDF with masked marching cubes",
+      "version": "cpu-tsdf-observed-v2",
+      "coordinateFrame": "OpenCV world",
+      "resolutionRequested": 256,
+      "gridShape": [
+        256,
+        52,
+        184
+      ],
+      "voxelSizeRelative": 0.005687215815144923,
+      "truncationRelative": 0.02274886326057969,
+      "boundsPercentiles": [
+        0.25,
+        99.75
+      ],
+      "observedVoxels": 291203,
+      "nearSurfaceVoxels": 63548,
+      "fusedVoxelsObservedBy2OrMore": 19665,
+      "fusedVoxelsObservedBy2+": 19665,
+      "multiViewNarrowBandFraction": 0.30945112356014354,
+      "extractionMaskVoxels": 291203,
+      "perView": [
+        {
+          "view": 0,
+          "confidentPixels": 62554,
+          "confidenceThreshold": 1.05,
+          "farClip98Percentile": 1.3610180377960206,
+          "integratedVoxels": 207958,
+          "nearSurfaceVoxels": 40286
+        },
+        {
+          "view": 1,
+          "confidentPixels": 64108,
+          "confidenceThreshold": 1.05,
+          "farClip98Percentile": 1.3975775194168092,
+          "integratedVoxels": 230143,
+          "nearSurfaceVoxels": 42927
+        }
+      ],
+      "views": [
+        {
+          "view": 0,
+          "confidentPixels": 62554,
+          "confidenceThreshold": 1.05,
+          "farClip98Percentile": 1.3610180377960206,
+          "integratedVoxels": 207958,
+          "nearSurfaceVoxels": 40286
+        },
+        {
+          "view": 1,
+          "confidentPixels": 64108,
+          "confidenceThreshold": 1.05,
+          "farClip98Percentile": 1.3975775194168092,
+          "integratedVoxels": 230143,
+          "nearSurfaceVoxels": 42927
+        }
+      ],
+      "vertices": 26370,
+      "faces": 46239,
+      "watertight": false,
+      "holeFilling": false,
+      "hiddenGeometry": "none",
+      "unknownBoundaryCapping": false,
+      "absoluteScaleKnown": false,
+      "seconds": 0.6100000000005821,
+      "limitations": [
+        "Camera poses and depth are predicted, not measured.",
+        "Fusion covers confident observed surfaces only.",
+        "TSDF merging is not an independent camera registration or appearance quality certificate."
+      ],
+      "depthSampling": "bilinear with four valid source neighbours",
+      "extractionSupport": "eight observed corners per grid cell",
+      "validExtractionCells": 245342,
+      "exportCoordinateFrame": "first-camera glTF Y-up",
+      "sha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f",
+      "bytes": 977796,
+      "output": ".runtime\\da3-evaluation\\official-soh-tsdf\\model.glb"
+    },
+    "metricScaleKnown": false,
+    "gravityAligned": false,
+    "confidenceRule": "min(max(1.05, percentile40), percentile90), official DA3 GLB rule"
+  },
+  "feedback": {
+    "registeredViews": 2,
+    "geometricallySupportedViews": 2,
+    "totalViews": 2,
+    "coverage": "observed_surfaces",
+    "coordinateScale": "relative",
+    "warnings": [
+      "仅覆盖照片中的已观测表面，未补造背面。",
+      "相机和深度为模型估计；绝对尺度及地图朝向未标定。"
+    ],
+    "crossViewDepthAgreement": 0.9682148893951642,
+    "geometricallyConsistent": true,
+    "geometryConsistent": true,
+    "predictedCameraCount": 2,
+    "fusionMethod": "confidence-weighted TSDF",
+    "fusedVoxelsObservedBy2OrMore": 19665
+  },
+  "timings": {
+    "preprocessing": 0.0,
+    "loading": 0.4219999999995707,
+    "estimating_cameras_and_depth": 0.7190000000000509,
+    "checking_geometry": 6.171999999999571,
+    "fusing_observed_surfaces": 6.219000000000051,
+    "validating": 6.296999999999571
+  },
+  "totalSeconds": 8.844000000000051,
+  "peakCudaBytes": 371808256,
+  "quality": "Joint neural multi-view observed surface reconstruction; camera poses and depth are predicted, absolute scale and hidden surfaces unknown.",
+  "qualityAssessment": {
+    "status": "review_required",
+    "accepted": false,
+    "scope": "observed_surfaces",
+    "geometryConsistent": true
+  },
+  "geometryEvidence": {
+    "pairChecks": [
+      {
+        "a": 0,
+        "b": 1,
+        "matches": 150,
+        "fundamentalInliers": 118,
+        "medianPredictedReprojectionErrorPx": 4.657285546133057,
+        "p90PredictedReprojectionErrorPx": 9.54154355663816,
+        "within12pxFraction": 0.940677966101695
+      }
+    ],
+    "crossViewDepthAgreement": 0.9682148893951642
+  },
+  "preprocessing": {
+    "removeBackground": false,
+    "alphaPreserved": true,
+    "manualCrop": false,
+    "warnings": []
+  },
+  "geometryConsistent": true,
+  "registrationEvidence": {
+    "method": "predicted depth reprojection with optional independent SIFT consistency",
+    "supportedViewIndices": [
+      0,
+      1
+    ],
+    "reliableDirectedPairs": [
+      {
+        "a": 0,
+        "b": 1,
+        "comparedPixels": 13604,
+        "supportedPixels": 13213,
+        "supportFraction": 0.97125845339606,
+        "baselineToMedianDepth": 0.22920921444892883
+      },
+      {
+        "a": 1,
+        "b": 0,
+        "comparedPixels": 13610,
+        "supportedPixels": 13136,
+        "supportFraction": 0.9651726671565025,
+        "baselineToMedianDepth": 0.22270189225673676
+      }
+    ],
+    "cameraPredictionAloneIsRegistration": false
+  },
+  "fusionSeconds": 0.6100000000005821,
+  "inferenceAndMeshSeconds": 8.233999999999469,
+  "timingScope": "DA3 camera/depth prediction and initial mesh processing, plus cached-evidence CPU TSDF fusion; installation and development excluded.",
+  "status": "succeeded",
+  "title": "悉尼歌剧院 · 双视角融合 Demo",
+  "sceneName": "悉尼歌剧院",
+  "poiId": null,
+  "scope": "两张真实照片覆盖的歌剧院外部表面；相机与深度由模型联合估计，再融合为同一个三角网格。背面未重建，绝对尺度未知。",
+  "generatedAt": "2026-09-26T04:16:14.163746+00:00",
+  "sourceImages": [
+    {
+      "url": "/assets/reconstruction/fusion-demo/input-1.png",
+      "title": "实拍视角 1",
+      "sourceUrl": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/3d835ec1a5802d64a8b8b15f817a1ab54809bfe4/assets/examples/SOH/000.png",
+      "sha256": "ea78c3b872b1e8b27de48cadf1d4a692cd42ddf5f72fcab78e2be2937935fb79",
+      "publisher": "Depth Anything 3 official repository example",
+      "rights": "Source repository sample; no independent photograph license asserted."
+    },
+    {
+      "url": "/assets/reconstruction/fusion-demo/input-2.png",
+      "title": "实拍视角 2",
+      "sourceUrl": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/3d835ec1a5802d64a8b8b15f817a1ab54809bfe4/assets/examples/SOH/010.png",
+      "sha256": "c91a69d4e050e75e3760fbacda18a452b9abcf3065e6d6bd940b4a99d48f7982",
+      "publisher": "Depth Anything 3 official repository example",
+      "rights": "Source repository sample; no independent photograph license asserted."
+    }
+  ],
+  "cameras": [
+    {
+      "viewIndex": 0,
+      "position": [
+        -3.637978807091713e-12,
+        -0.0,
+        -0.0
+      ],
+      "target": [
+        2.6150986758011197e-11,
+        -7.85983775351655e-12,
+        -1.351022676464057
+      ],
+      "up": [
+        1.0003424839508373e-11,
+        1.0000000217795684,
+        2.2575434868667057e-12
+      ],
+      "fovYDeg": 36.0658684214738,
+      "imageWidth": 504,
+      "imageHeight": 280,
+      "intrinsics": [
+        [
+          434.6514892578125,
+          0.0,
+          252.0
+        ],
+        [
+          0.0,
+          430.0344543457031,
+          140.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "viewIndex": 1,
+      "position": [
+        0.14651425182819366,
+        -0.0001465165987610817,
+        -0.010557558387517929
+      ],
+      "target": [
+        -0.19973226515449116,
+        0.0019481612351789272,
+        -1.372944997810391
+      ],
+      "up": [
+        -0.0053762970553420525,
+        0.9999813319238061,
+        0.0029038459095683785
+      ],
+      "fovYDeg": 35.64795430308307,
+      "imageWidth": 504,
+      "imageHeight": 280,
+      "intrinsics": [
+        [
+          439.55572509765625,
+          0.0,
+          252.0
+        ],
+        [
+          0.0,
+          435.4228210449219,
+          140.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "qualityReview": {
+    "status": "passed",
+    "assetSha256": "d7e73bcc0e0c2a3b15bff7e60b855c65ed8f7547c2445f39fdd4d7975aacc16f",
+    "reviewer": "Codex visual and geometry review",
+    "method": "Compared final TSDF mesh reprojections at both estimated source cameras against the two original photographs; inspected six alternate views and independent feature reprojection plus shared TSDF observations. Acceptance scope is recognizable observed surfaces only.",
+    "reviewedAt": "2026-09-26T04:16:07.694720+00:00",
+    "evidence": [
+      "source-reprojection-review.jpg",
+      "source-reprojection-metrics.json",
+      "pair-geometry.json",
+      "fusion.json",
+      "review-views.png"
+    ],
+    "checks": {
+      "identity": true,
+      "mainStructure": true,
+      "nonCollapsed": true,
+      "appearance": true
+    },
+    "scope": "recognizable_observed_surfaces",
+    "limitations": [
+      "只验收照片覆盖范围内可辨认的帆壳、基座与平台，不是完整建筑或测绘模型。",
+      "存在局部缺口、边缘锯齿及颜色模糊；未拍到的背面保持缺失。",
+      "相机、深度和尺度来自模型估计；未校准绝对尺寸、重力方向或地图位置。"
+    ]
+  },
+  "publicFileUrl": "/assets/reconstruction/fusion-demo/model.glb",
+  "isPregenerated": true
+}

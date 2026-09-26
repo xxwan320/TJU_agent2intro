@@ -1,0 +1,164 @@
+[
+  {
+    "registryId": "tju-main",
+    "entryUrls": [
+      "https://www.tju.edu.cn/"
+    ],
+    "topics": [
+      "campus_overview",
+      "stable_history",
+      "recent_news"
+    ],
+    "trustTier": "official",
+    "fetchMethod": "existing registered HTML parser",
+    "enabled": true,
+    "status": "PASS_REAL",
+    "lastCheckedAt": "2026-09-25T12:18:54.698786+00:00",
+    "priorVerification": "readable_index",
+    "observations": [
+      {
+        "registryId": "tju-main",
+        "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+        "lastCheckedAt": "2026-09-25T12:18:52.123313+00:00",
+        "status": "PASS_REAL",
+        "scope": "adapter extracted relevant evidence"
+      },
+      {
+        "registryId": "tju-main",
+        "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+        "lastCheckedAt": "2026-09-25T12:18:54.698786+00:00",
+        "status": "PASS_REAL",
+        "scope": "adapter extracted relevant evidence"
+      }
+    ]
+  },
+  {
+    "registryId": "tju-news",
+    "entryUrls": [
+      "https://news.tju.edu.cn/",
+      "https://news.tju.edu.cn/info/1003/89019.htm"
+    ],
+    "topics": [
+      "stable_history",
+      "poi_introduction",
+      "recent_news",
+      "official_notice"
+    ],
+    "trustTier": "official",
+    "fetchMethod": "existing registered HTML parser",
+    "enabled": true,
+    "status": "PASS_REAL",
+    "lastCheckedAt": "2026-09-25T12:18:57.197667+00:00",
+    "priorVerification": "readable_index_and_article",
+    "observations": [
+      {
+        "registryId": "tju-news",
+        "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+        "lastCheckedAt": "2026-09-25T12:18:54.700789+00:00",
+        "status": "PASS_REAL",
+        "scope": "adapter extracted relevant evidence"
+      },
+      {
+        "registryId": "tju-news",
+        "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+        "lastCheckedAt": "2026-09-25T12:18:57.197667+00:00",
+        "status": "PASS_REAL",
+        "scope": "adapter extracted relevant evidence"
+      }
+    ]
+  },
+  {
+    "registryId": "tju-alumni-beiyang",
+    "entryUrls": [
+      "https://alumni.tju.edu.cn/xyfwmap/byyxq.htm",
+      "https://alumni.tju.edu.cn/info/1137/3357.htm"
+    ],
+    "topics": [
+      "poi_catalog",
+      "poi_introduction",
+      "stable_history"
+    ],
+    "trustTier": "official",
+    "fetchMethod": "existing registered HTML parser",
+    "enabled": true,
+    "status": "NOT_RUN",
+    "lastCheckedAt": null,
+    "priorVerification": "readable_directory_image_only_detail",
+    "observations": []
+  },
+  {
+    "registryId": "tju-alumni-weijin",
+    "entryUrls": [
+      "https://alumni.tju.edu.cn/xyfwmap/wjlxq.htm"
+    ],
+    "topics": [
+      "poi_catalog",
+      "poi_introduction",
+      "stable_history"
+    ],
+    "trustTier": "official",
+    "fetchMethod": "existing registered HTML parser",
+    "enabled": true,
+    "status": "NOT_RUN",
+    "lastCheckedAt": null,
+    "priorVerification": "readable_directory",
+    "observations": []
+  },
+  {
+    "registryId": "tju-archives",
+    "entryUrls": [
+      "https://dag.tju.edu.cn/",
+      "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+      "https://dag.tju.edu.cn/web/news/info/231147/237592.htmlx"
+    ],
+    "topics": [
+      "stable_history",
+      "museum_visit_guide",
+      "recent_news",
+      "official_notice"
+    ],
+    "trustTier": "official",
+    "fetchMethod": "existing registered HTML parser",
+    "enabled": true,
+    "status": "NOT_RUN",
+    "lastCheckedAt": null,
+    "priorVerification": "readable_index_and_articles",
+    "observations": []
+  },
+  {
+    "registryId": "beiyang-wiki",
+    "entryUrls": [
+      "https://wiki.tjubot.cn/",
+      "https://wiki.tjubot.cn/category/campus-attractions/"
+    ],
+    "topics": [
+      "poi_introduction",
+      "stable_history",
+      "visitor_experience"
+    ],
+    "trustTier": "community",
+    "fetchMethod": "existing registered HTML parser",
+    "enabled": true,
+    "status": "NOT_RUN",
+    "lastCheckedAt": null,
+    "priorVerification": "readable_index_and_category",
+    "observations": []
+  },
+  {
+    "registryId": "tju-library",
+    "entryUrls": [
+      "https://home.lib.tju.edu.cn/"
+    ],
+    "topics": [
+      "library_visit_guide",
+      "official_notice"
+    ],
+    "trustTier": "official",
+    "fetchMethod": "existing registered HTML parser",
+    "enabled": false,
+    "status": "NOT_RUN",
+    "lastCheckedAt": null,
+    "priorVerification": "official_link_confirmed_body_not_extracted",
+    "observations": []
+  }
+]

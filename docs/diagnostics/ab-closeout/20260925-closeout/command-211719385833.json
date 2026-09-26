@@ -1,0 +1,10 @@
+{
+  "args": [
+    "node",
+    "--test",
+    "tests/interaction/harness-closeout.test.mjs"
+  ],
+  "code": 1,
+  "stdout": "✖ C12 stop during session establishment prevents any run submission (14.2058ms)\n✖ C12 newer run supersedes an older session wait even if replies arrive reversed (1.6705ms)\nℹ tests 2\nℹ suites 0\nℹ pass 0\nℹ fail 2\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 245.9755\n\n✖ failing tests:\n\ntest at tests\\interaction\\harness-closeout.test.mjs:13:1\n✖ C12 stop during session establishment prevents any run submission (14.2058ms)\n  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n  \n  1 !== 0\n  \n      at TestContext.<anonymous> (file:///E:/AI4TJU/tests/interaction/harness-closeout.test.mjs:16:213)\n      at async Test.run (node:internal/test_runner/test:1389:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {\n    generatedMessage: true,\n    code: 'ERR_ASSERTION',\n    actual: 1,\n    expected: 0,\n    operator: 'strictEqual',\n    diff: 'simple'\n  }\n\ntest at tests\\interaction\\harness-closeout.test.mjs:19:1\n✖ C12 newer run supersedes an older session wait even if replies arrive reversed (1.6705ms)\n  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n  + actual - expected\n  \n    [\n      'new',\n  +   'old'\n    ]\n  \n      at TestContext.<anonymous> (file:///E:/AI4TJU/tests/interaction/harness-closeout.test.mjs:22:385)\n      at async Test.run (node:internal/test_runner/test:1389:7)\n      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {\n    generatedMessage: true,\n    code: 'ERR_ASSERTION',\n    actual: [ 'new', 'old' ],\n    expected: [ 'new' ],\n    operator: 'deepStrictEqual',\n    diff: 'simple'\n  }\n",
+  "stderr": ""
+}

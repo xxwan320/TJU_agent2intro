@@ -1,0 +1,9 @@
+{
+  "args": [
+    "node",
+    "scripts/closeout-harness-performance.mjs"
+  ],
+  "code": 0,
+  "stdout": "{\n  \"build\": \"final harness build\",\n  \"device\": \"Windows Chrome 153.0.8010.53\",\n  \"cacheDefinition\": \"cold = new browser context; warm = same page after first point; backend cache not cleared\",\n  \"samples\": [\n    {\n      \"sample\": 0,\n      \"cache\": \"cold\",\n      \"poiId\": \"weijinlu-09-teaching\",\n      \"domMs\": 211,\n      \"imageMs\": 250\n    },\n    {\n      \"sample\": 0,\n      \"cache\": \"warm\",\n      \"poiId\": \"weijinlu-09-teaching\",\n      \"domMs\": 17,\n      \"imageMs\": 106\n    },\n    {\n      \"sample\": 1,\n      \"cache\": \"cold\",\n      \"poiId\": \"weijinlu-09-teaching\",\n      \"domMs\": 28,\n      \"imageMs\": 47\n    },\n    {\n      \"sample\": 1,\n      \"cache\": \"warm\",\n      \"poiId\": \"weijinlu-09-teaching\",\n      \"domMs\": 74,\n      \"imageMs\": 152\n    },\n    {\n      \"sample\": 2,\n      \"cache\": \"cold\",\n      \"poiId\": \"weijinlu-09-teaching\",\n      \"domMs\": 23,\n      \"imageMs\": 45\n    },\n    {\n      \"sample\": 2,\n      \"cache\": \"warm\",\n      \"poiId\": \"weijinlu-09-teaching\",\n      \"domMs\": 73,\n      \"imageMs\": 1051\n    }\n  ],\n  \"cancel\": {\n    \"status\": \"PASS_REAL\",\n    \"scope\": \"cancel receipt wait while precise origin absent; no GLM or walking request\",\n    \"uiMs\": 47,\n    \"routeAfter\": \"\"\n  },\n  \"medians\": {\n    \"cold\": {\n      \"domMs\": 28,\n      \"imageMs\": 47\n    },\n    \"warm\": {\n      \"domMs\": 73,\n      \"imageMs\": 152\n    }\n  }\n}\n",
+  "stderr": ""
+}

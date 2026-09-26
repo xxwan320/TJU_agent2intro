@@ -1,4 +1,4 @@
-"""Read image pixels to produce a bounded text-to-3D recovery condition."""
+"""Observe image pixels for the reconstruction planner. This is not a geometry quality certificate."""
 from pathlib import Path
 import sys,json,time,os
 root=Path(__file__).resolve().parents[1]
@@ -12,12 +12,12 @@ def review(path):
  image=ImageOps.exif_transpose(Image.open(path)).convert('RGB');image.thumbnail((640,640))
  model=AutoModelForVision2Seq.from_pretrained(weights['path'],local_files_only=True,dtype=torch.bfloat16,attn_implementation='sdpa').to('cuda').eval()
  processor=AutoProcessor.from_pretrained(weights['path'],local_files_only=True)
- messages=[{'role':'user','content':[{'type':'image','image':image},{'type':'text','text':'Describe the main object, its shape, visible parts and colors in one short English sentence. Ignore scenery, sky, ground, signs and background. Do not invent hidden details or dimensions.'}]}]
+ messages=[{'role':'user','content':[{'type':'image','image':image},{'type':'text','text':'Describe the main visible subject and its geometric shape, flat or curved surfaces, visible colors, and the background. State whether the subject is cut off by an image edge or partly obscured. State if this is an interior or exterior view when clear. Be concise. Do not invent hidden details, location identity or dimensions.'}]}]
  prompt=processor.apply_chat_template(messages,add_generation_prompt=True)
  inputs=processor(text=prompt,images=[image],return_tensors='pt').to('cuda')
  with torch.inference_mode():ids=model.generate(**inputs,max_new_tokens=100,do_sample=False)
  text=processor.batch_decode(ids[:,inputs['input_ids'].shape[1]:],skip_special_tokens=True)[0]
- return {'status':'reviewed','model':weights['repo'],'revision':weights['revision'],'input':'actual image pixels','usedFor':'text-to-3D condition','promptEnglish':text,'seconds':time.monotonic()-started,'peakCudaBytes':torch.cuda.max_memory_allocated()}
+ return {'status':'reviewed','model':weights['repo'],'revision':weights['revision'],'input':'actual image pixels','usedFor':'visible input observation for reconstruction planning','promptEnglish':text,'seconds':time.monotonic()-started,'peakCudaBytes':torch.cuda.max_memory_allocated()}
 if __name__=='__main__':
  output=Path(sys.argv[2])
  try:result=review(sys.argv[1])

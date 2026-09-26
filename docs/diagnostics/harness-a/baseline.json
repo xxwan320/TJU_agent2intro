@@ -1,0 +1,511 @@
+{
+  "observedAt": "2026-09-25T09:58:56.636183+00:00",
+  "configurationPresenceOnly": {
+    "CAMPUS_LLM_URL": true,
+    "CAMPUS_LLM_MODEL": true,
+    "CAMPUS_TTS_PROVIDER": true,
+    "CAMPUS_TTS_VOICE": true,
+    "CAMPUS_LLM_API_KEY": true,
+    "CAMPUS_WEB_SEARCH_ENABLED": true,
+    "CAMPUS_AMAP_JS_KEY": true,
+    "CAMPUS_AMAP_SECURITY_KEY": true,
+    "CAMPUS_ASR_URL": true,
+    "CAMPUS_ASR_MODEL": true,
+    "CAMPUS_ASR_API_KEY": true
+  },
+  "poiCount": 106,
+  "visiblePoiCount": 104,
+  "coverage": {
+    "status": "ready",
+    "version": "sha256:099644126fe4",
+    "source_pages": 23,
+    "fact_count": 242,
+    "chunk_count": 0,
+    "campuses": [
+      {
+        "campus_id": "weijinlu",
+        "facts": 132,
+        "pois": 22,
+        "verified_coordinates": 0,
+        "usable_media": 0
+      },
+      {
+        "campus_id": "beiyangyuan",
+        "facts": 110,
+        "pois": 20,
+        "verified_coordinates": 0,
+        "usable_media": 0
+      }
+    ]
+  },
+  "samples": [
+    {
+      "poi": {
+        "id": "beiyangyuan-zhengdong-library",
+        "campus_id": "beiyangyuan",
+        "name": "郑东图书馆",
+        "aliases": [
+          "郑东馆",
+          "图书馆"
+        ],
+        "category": "library",
+        "description": "北洋园校区图书馆，2015年9月投入使用。",
+        "source_refs": [
+          "src-library"
+        ],
+        "location": null,
+        "schematic_position": {
+          "map_id": "beiyangyuan-schematic-2017",
+          "x": 0.584,
+          "y": 0.522,
+          "source_ref": "src-maps-2017",
+          "quality": "map_checked"
+        },
+        "entrances": [],
+        "verification_status": "verified"
+      },
+      "hits": [
+        {
+          "id": "poi-beiyangyuan-zhengdong-library",
+          "title": "郑东图书馆",
+          "snippet": "校方资料在北洋园校区列有郑东图书馆。",
+          "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "beiyangyuan-zhengdong-library",
+          "title": "郑东图书馆",
+          "snippet": "迎新网介绍称，北洋园校区图书馆命名为郑东图书馆；该介绍还给出约5.4万平方米总建筑面积、3300个阅览座位等建设期资料。",
+          "url": "https://yx.tju.edu.cn/tdfc/xyfgbyy/",
+          "campus_id": "beiyangyuan",
+          "published_at": "2024-08-15",
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "zhengdong-opened",
+          "title": "郑东图书馆 · 沿革",
+          "snippet": "郑东图书馆于2015年9月投入使用。",
+          "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "zhengdong-designer",
+          "title": "郑东图书馆 · 沿革",
+          "snippet": "郑东图书馆由周恺领衔设计。",
+          "url": "https://www.tju.edu.cn/info/1046/1302.htm",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "poi": {
+        "id": "beiyangyuan-datong-center",
+        "campus_id": "beiyangyuan",
+        "name": "大通学生中心",
+        "aliases": [
+          "学生中心"
+        ],
+        "category": "service",
+        "description": "大通学生中心位于北洋园主轴线尽端的临水半岛；2016校方设计介绍与2017图面“学生活动中心”位置相互印证，图面仅为历史相对示意。",
+        "source_refs": [
+          "src-venues",
+          "src-landscape-2016"
+        ],
+        "location": null,
+        "schematic_position": {
+          "map_id": "beiyangyuan-schematic-2017",
+          "x": 0.47,
+          "y": 0.515,
+          "source_ref": "src-maps-2017",
+          "quality": "map_checked"
+        },
+        "entrances": [],
+        "verification_status": "verified"
+      },
+      "hits": [
+        {
+          "id": "poi-beiyangyuan-datong-center",
+          "title": "大通学生中心",
+          "snippet": "校方资料在北洋园校区列有大通学生中心。",
+          "url": "https://www.tju.edu.cn/info/1046/1285.htm",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "detail-landscape-2016-15",
+          "title": "大通学生中心 · 轴线位置",
+          "snippet": "大通学生中心位于北洋园主轴线尽端的临水半岛。",
+          "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+          "campus_id": "beiyangyuan",
+          "published_at": "2016-08-25",
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "detail-landscape-2016-16",
+          "title": "大通学生中心 · 体块",
+          "snippet": "大通学生中心由三个依次排列的矩形体块构成。",
+          "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+          "campus_id": "beiyangyuan",
+          "published_at": "2016-08-25",
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "detail-landscape-2016-17",
+          "title": "大通学生中心 · 设计",
+          "snippet": "大通学生中心设计团队包括齐欣、刘阳、戴博军和于向东。",
+          "url": "https://news.tju.edu.cn/info/1003/108399.htm",
+          "campus_id": "beiyangyuan",
+          "published_at": "2016-08-25",
+          "retrieved_at": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "poi": {
+        "id": "beiyangyuan-shangxian-stone",
+        "campus_id": "beiyangyuan",
+        "name": "尚贤石",
+        "aliases": [],
+        "category": "culture",
+        "description": "尚贤石于2015年落户天津大学北洋园校区。石上的“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》；这块石头也被称为“泰山孔子石”。参观时可以留意石上的题字。",
+        "source_refs": [
+          "src-fw-beiyang",
+          "tju-news-shangxian-20150928"
+        ],
+        "location": null,
+        "schematic_position": null,
+        "entrances": [],
+        "verification_status": "verified"
+      },
+      "hits": [
+        {
+          "id": "poi-beiyangyuan-shangxian-stone",
+          "title": "尚贤石",
+          "snippet": "校方资料在北洋园校区列有尚贤石。",
+          "url": "https://fw.tju.edu.cn/Beiyang.html",
+          "campus_id": "beiyangyuan",
+          "published_at": null,
+          "retrieved_at": "2026-09-14"
+        },
+        {
+          "id": "tju-news-shangxian-20150928",
+          "title": "【120年校庆】泰山孔子石落户北洋园",
+          "snippet": "尚贤石于2015年落户天津大学北洋园校区，石上“尚贤”二字由书法家赵冷月题写，取自《墨子·尚贤篇》，亦称泰山孔子石。这是历史介绍，不表示今日准入或开放时间。",
+          "url": "https://news.tju.edu.cn/info/1003/89019.htm",
+          "campus_id": "beiyangyuan",
+          "published_at": "2015-09-28",
+          "retrieved_at": "2026-09-17"
+        }
+      ]
+    }
+  ],
+  "registry": {
+    "schema_version": 1,
+    "checked_on": "2026-09-17",
+    "timezone": "Asia/Shanghai",
+    "status": "source_configuration_not_integrated",
+    "verification_note": "Sources were read with web tools in this conversation. This is not proof that the local project can fetch or parse them, nor an HTTP latency benchmark.",
+    "source_id_semantics": "Registry IDs identify sites/adapters; answer evidence sourceIds identify specific documents. Keep the two namespaces distinct.",
+    "sources": [
+      {
+        "id": "tju-main",
+        "name": "天津大学主站",
+        "tier": "official",
+        "enabled": true,
+        "hosts": [
+          "www.tju.edu.cn"
+        ],
+        "seed_urls": [
+          "https://www.tju.edu.cn/"
+        ],
+        "allowed_path_prefixes": [
+          "/"
+        ],
+        "topics": [
+          "campus_overview",
+          "stable_history",
+          "recent_news"
+        ],
+        "campuses": [
+          "beiyangyuan",
+          "weijinlu"
+        ],
+        "verification": "readable_index",
+        "source_content_kind": "mixed_index",
+        "usage_note": "官方介绍与相关栏目发现；仅首页条目不足以支撑具体当天入校规则。",
+        "cache_profile": "stable"
+      },
+      {
+        "id": "tju-news",
+        "name": "天津大学新闻网",
+        "tier": "official",
+        "enabled": true,
+        "hosts": [
+          "news.tju.edu.cn"
+        ],
+        "seed_urls": [
+          "https://news.tju.edu.cn/",
+          "https://news.tju.edu.cn/info/1003/89019.htm"
+        ],
+        "allowed_path_prefixes": [
+          "/"
+        ],
+        "topics": [
+          "stable_history",
+          "poi_introduction",
+          "recent_news",
+          "official_notice"
+        ],
+        "campuses": [
+          "beiyangyuan",
+          "weijinlu"
+        ],
+        "verification": "readable_index_and_article",
+        "source_content_kind": "index_and_articles",
+        "usage_note": "尚贤石历史正文已读；动态规则必须找到内容相关、适用日期明确的通知正文。站内转载保留原始发布者。",
+        "cache_profile": "by_document_kind"
+      },
+      {
+        "id": "tju-alumni-beiyang",
+        "name": "天津大学校友网·北洋园风物",
+        "tier": "official",
+        "enabled": true,
+        "hosts": [
+          "alumni.tju.edu.cn"
+        ],
+        "seed_urls": [
+          "https://alumni.tju.edu.cn/xyfwmap/byyxq.htm",
+          "https://alumni.tju.edu.cn/info/1137/3357.htm"
+        ],
+        "allowed_path_prefixes": [
+          "/xyfwmap/",
+          "/info/"
+        ],
+        "topics": [
+          "poi_catalog",
+          "poi_introduction",
+          "stable_history"
+        ],
+        "campuses": [
+          "beiyangyuan"
+        ],
+        "verification": "readable_directory_image_only_detail",
+        "source_content_kind": "directory_or_image_only",
+        "usage_note": "尚贤石详情本次仅可提取标题、日期与图片，不能把导航和页脚当讲解正文；缺正文转相关新闻网文章。",
+        "cache_profile": "stable"
+      },
+      {
+        "id": "tju-alumni-weijin",
+        "name": "天津大学校友网·卫津路风物",
+        "tier": "official",
+        "enabled": true,
+        "hosts": [
+          "alumni.tju.edu.cn"
+        ],
+        "seed_urls": [
+          "https://alumni.tju.edu.cn/xyfwmap/wjlxq.htm"
+        ],
+        "allowed_path_prefixes": [
+          "/xyfwmap/",
+          "/info/"
+        ],
+        "topics": [
+          "poi_catalog",
+          "poi_introduction",
+          "stable_history"
+        ],
+        "campuses": [
+          "weijinlu"
+        ],
+        "verification": "readable_directory",
+        "source_content_kind": "directory",
+        "usage_note": "与北洋园索引按校区区分；不因同站点就跨校区命中。",
+        "cache_profile": "stable"
+      },
+      {
+        "id": "tju-archives",
+        "name": "天津大学档案馆",
+        "tier": "official",
+        "enabled": true,
+        "hosts": [
+          "dag.tju.edu.cn"
+        ],
+        "seed_urls": [
+          "https://dag.tju.edu.cn/",
+          "https://dag.tju.edu.cn/web/news/info/235207/235247.htmlx",
+          "https://dag.tju.edu.cn/web/news/info/231147/237592.htmlx"
+        ],
+        "allowed_path_prefixes": [
+          "/"
+        ],
+        "topics": [
+          "stable_history",
+          "museum_visit_guide",
+          "recent_news",
+          "official_notice"
+        ],
+        "campuses": [
+          "beiyangyuan",
+          "weijinlu"
+        ],
+        "verification": "readable_index_and_articles",
+        "source_content_kind": "index_and_articles",
+        "usage_note": "校史博物馆指南未见发布日期；属于一般指南，需查临时调整。网上校史馆消息的2026-09-07日期来自官网公告列表。入馆规则不等于入校规则。",
+        "cache_profile": "by_document_kind"
+      },
+      {
+        "id": "beiyang-wiki",
+        "name": "北洋维基（社区补充来源）",
+        "tier": "community",
+        "enabled": true,
+        "hosts": [
+          "wiki.tjubot.cn"
+        ],
+        "seed_urls": [
+          "https://wiki.tjubot.cn/",
+          "https://wiki.tjubot.cn/category/campus-attractions/"
+        ],
+        "allowed_path_prefixes": [
+          "/"
+        ],
+        "topics": [
+          "poi_introduction",
+          "stable_history",
+          "visitor_experience"
+        ],
+        "campuses": [
+          "beiyangyuan",
+          "weijinlu"
+        ],
+        "verification": "readable_index_and_category",
+        "source_content_kind": "community_directory_and_articles",
+        "usage_note": "用于文化资料线索和经验补充；保存原始引用。历史拆除/新建线索不能直接生成当前可到访状态。运营主体未核实为学校官方。",
+        "cache_profile": "stable"
+      },
+      {
+        "id": "tju-library",
+        "name": "天津大学图书馆（正文适配待验）",
+        "tier": "official",
+        "enabled": false,
+        "hosts": [
+          "home.lib.tju.edu.cn",
+          "www.lib.tju.edu.cn"
+        ],
+        "seed_urls": [
+          "https://home.lib.tju.edu.cn/"
+        ],
+        "entry_aliases": [
+          "https://www.lib.tju.edu.cn/"
+        ],
+        "allowed_path_prefixes": [
+          "/"
+        ],
+        "topics": [
+          "library_visit_guide",
+          "official_notice"
+        ],
+        "campuses": [
+          "beiyangyuan",
+          "weijinlu"
+        ],
+        "verification": "official_link_confirmed_body_not_extracted",
+        "source_content_kind": "unparsed",
+        "official_identity_evidence": "https://www.tju.edu.cn/",
+        "usage_note": "主站确实链接图书馆，www.lib跳转home.lib；本轮只取到页面标题，不能判作无公告。定位真实公开内容接口或正文页并验证后，再启用抓取适配器。不要实时为每次点击启动浏览器。",
+        "cache_profile": "current_rule"
+      }
+    ],
+    "global_rules": {
+      "match_final_host_exactly": true,
+      "validate_redirect_targets": true,
+      "max_link_depth": 1,
+      "require_relevance_and_campus_match": true,
+      "extract_main_content_only": true,
+      "empty_article_status": "insufficient_text",
+      "unparsed_page_status": "unavailable",
+      "search_snippets_are_discovery_only": true,
+      "community_cannot_confirm_current_access": true,
+      "no_text_to_navigation_coordinates": true,
+      "no_image_download_or_remapping_in_this_task": true,
+      "do_not_count_reposts_as_independent_corroboration": true,
+      "new_domains_require_registry_validation": true
+    },
+    "question_routing": [
+      {
+        "intent": "stable_history_or_introduction",
+        "first": [
+          "local_knowledge",
+          "tju-news",
+          "tju-alumni-beiyang",
+          "tju-alumni-weijin",
+          "tju-archives"
+        ],
+        "fallback": [
+          "beiyang-wiki"
+        ],
+        "select_only_relevant_sources": true
+      },
+      {
+        "intent": "current_access_or_opening",
+        "first": [
+          "relevant_enabled_official_sources"
+        ],
+        "fallback": [
+          "other_relevant_enabled_official_sources"
+        ],
+        "forbidden_tiers": [
+          "community"
+        ],
+        "allow_unknown": true
+      },
+      {
+        "intent": "visitor_experience",
+        "first": [
+          "local_knowledge"
+        ],
+        "fallback": [
+          "beiyang-wiki"
+        ],
+        "label_suggestions": true
+      },
+      {
+        "intent": "recent_news",
+        "first": [
+          "tju-news",
+          "tju-archives"
+        ],
+        "fallback": [],
+        "ranking": "route_or_interest_relevance_then_publication_date",
+        "cap_items": 3
+      },
+      {
+        "intent": "navigation",
+        "first": [
+          "existing_map_service"
+        ],
+        "fallback": [
+          "user_candidate_selection"
+        ],
+        "web_text_cannot_supply_path_geometry": true
+      }
+    ],
+    "query_templates": {
+      "stable": "天津大学 {campus_name} {poi_name} 历史 介绍",
+      "current_access": "天津大学 {campus_name} {poi_name} 开放 预约 临时调整",
+      "recent_news": "天津大学 {topic} {as_of_year_month}",
+      "guidance": "Use provider domain filtering where supported and independently filter final URLs. Do not limit opening rules to articles published today; evaluate whether the rule applies today."
+    }
+  },
+  "modules": {
+    "PIL": false,
+    "pytest": true,
+    "pypdf": true
+  }
+}

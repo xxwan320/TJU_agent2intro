@@ -1,0 +1,6 @@
+{
+  "status": "BadRequestError",
+  "httpStatus": 400,
+  "detail": "<html>\r\n<head><title>400 The plain HTTP request was sent to HTTPS port</title></head>\r\n<body>\r\n<center><h1>400 Bad Request</h1></center>\r\n<center>The plain HTTP request was sent to HTTPS port</center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>",
+  "generationRequests": 0
+}

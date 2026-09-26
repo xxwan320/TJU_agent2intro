@@ -1,0 +1,30 @@
+{
+  "status": "connected",
+  "viewCount": 2,
+  "uniqueViewCount": 2,
+  "components": [
+    [
+      "image-51520231c0e4f6f670303d9a",
+      "image-075db97864788ead64b045d0"
+    ]
+  ],
+  "duplicates": [],
+  "pairs": [
+    {
+      "a": "image-51520231c0e4f6f670303d9a",
+      "b": "image-075db97864788ead64b045d0",
+      "matches": 273,
+      "inliers": 250,
+      "inlierRatio": 0.9158,
+      "coverageA": 0.5855,
+      "coverageB": 0.6034,
+      "overlapEvidence": true,
+      "geometry": "epipolar"
+    }
+  ],
+  "warnings": [],
+  "recommendations": [],
+  "method": "mutual SIFT ratio matches + fundamental/homography RANSAC; heuristic overlap evidence only",
+  "version": "sift-overlap-v1",
+  "elapsedSeconds": 0.218
+}

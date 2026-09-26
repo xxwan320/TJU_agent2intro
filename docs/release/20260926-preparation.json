@@ -1,0 +1,33 @@
+{
+  "status": "FINAL_SOURCE_SNAPSHOT_READY_FOR_RELEASE",
+  "baseCommit": "1f235cba2e792ca147e397487d8d2e8a093ac7be",
+  "localBranch": "release/3d-navigation-20260926",
+  "remoteUrl": "https://github.com/xxwan320/TJU_agent2intro.git",
+  "targetBranch": "fix/ip-route-autoplanning",
+  "observedRemoteHead": "f459060bd5e8e1c9d5540ca348d5e08fe9a18e36",
+  "rootWorkingChangesImported": true,
+  "oldPublishWorkingChangesImported": false,
+  "committed": false,
+  "pushed": false,
+  "lfsCheckout": "pointer-only; downloads skipped",
+  "modelSelection": {
+    "imageDefault": "depth-anything-3 (DA3-SMALL) + confidence-weighted CPU TSDF for two-view observed surfaces",
+    "triposr": "optional comparison baseline",
+    "shap-e": "optional text concept support",
+    "smolvlm": "real image description, not geometry certification",
+    "singleImage": "Hunyuan/TripoSR remain optional; not used for successful fusion demo"
+  },
+  "largeWeightPolicy": "No new model weight binaries or local environments; pinned upstream downloads only.",
+  "remaining": [
+    "Normal fast-forward publication to fix/ip-route-autoplanning and remote SHA verification."
+  ],
+  "lfsBaselineDryRun": {
+    "command": "git lfs push --dry-run origin release/3d-navigation-20260926",
+    "exitCode": 0,
+    "listedObjects": 0,
+    "checkedAt": "2026-09-26",
+    "newPublicGlbFilter": "unspecified; regular Git objects"
+  },
+  "knownNonDemoLimitation": "Existing optional TripoSR/SmolVLM installers may mistake unsmudged LFS pointers for downloaded weights; use explicit LFS pull and SHA verification. Static demos do not load these weights.",
+  "uiRegression": "12/12 passed; final assets index-BubmQRjh.js and index-C-fyEXQY.css"
+}

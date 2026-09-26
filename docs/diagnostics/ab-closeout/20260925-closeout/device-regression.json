@@ -1,0 +1,5 @@
+{
+  "code": 0,
+  "stdout": "✔ probe requires configured APIs and does not invoke permissions or app callbacks (1.8355ms)\n✔ unknown apps and spoofed session fail before creating an action (0.2012ms)\n✔ trusted continuation has fresh correlation; duplicate actions never run twice (0.9607ms)\n✔ cancel and disconnect tombstones prohibit replay (0.2335ms)\n✔ expired pending actions and stale generations cannot resume (54.5027ms)\n✔ uncooperative in-flight providers are bounded and cancelled (31.5914ms)\n✔ late results after generation changes cannot complete (61.636ms)\n✔ unverified app receipt cannot claim successful opening (0.4031ms)\n✔ share resolution means no verified delivery and AbortError means cancelled (0.4658ms)\n✔ file cancel never uploads; a selected markdown yields only uploadId (0.8919ms)\n✔ injected existing speech adapter handles permission denial and final text (0.4728ms)\n✔ Windows API absence stays unavailable and all emitted shapes validate against B Python contract (125.4298ms)\nℹ tests 12\nℹ suites 0\nℹ pass 12\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 533.1916\n",
+  "stderr": ""
+}

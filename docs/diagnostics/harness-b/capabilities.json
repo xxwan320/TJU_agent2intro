@@ -1,0 +1,17 @@
+{
+  "model": "glm-5.1",
+  "nativeTools": "available",
+  "streamedToolArguments": "available",
+  "toolCallIdRoundtrip": "available",
+  "proofRunId": "8db05c6f-203d-4341-a2d0-435367b85d5c",
+  "proof": "document-final.json + run-ledger.jsonl",
+  "sdkRetries": 0,
+  "gatewayRetries": "unknown",
+  "imageInput": "unknown",
+  "audioInput": "unknown",
+  "parallelModelToolCalls": "unknown",
+  "nativeMcp": "unknown",
+  "externalMcp": "unavailable: no configured service",
+  "gui": "disabled",
+  "campus3d": "disabled"
+}

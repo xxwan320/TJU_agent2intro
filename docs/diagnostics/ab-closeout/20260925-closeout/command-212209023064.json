@@ -1,0 +1,9 @@
+{
+  "args": [
+    "node",
+    "scripts/closeout-harness-route-browser.mjs"
+  ],
+  "code": 0,
+  "stdout": "{\n  \"status\": \"PASS_REAL\",\n  \"mapCalls\": [\n    {\n      \"path\": \"/api/maps/config\",\n      \"at\": 1790342521183\n    },\n    {\n      \"path\": \"/maps\",\n      \"at\": 1790342521467\n    },\n    {\n      \"path\": \"/api/maps/amap/_AMapService/v3/log/init\",\n      \"at\": 1790342522670\n    },\n    {\n      \"path\": \"/mapsplugincdn\",\n      \"at\": 1790342522691\n    },\n    {\n      \"path\": \"/maps/checkredirect\",\n      \"at\": 1790342522975\n    },\n    {\n      \"path\": \"/maps/checkredirectcdn\",\n      \"at\": 1790342523202\n    },\n    {\n      \"path\": \"/api/maps/external-navigation/beiyangyuan-zhengdong-library\",\n      \"at\": 1790342523255\n    },\n    {\n      \"path\": \"/api/maps/amap/_AMapService/v3/place/text\",\n      \"at\": 1790342523255\n    },\n    {\n      \"path\": \"/api/maps/amap/_AMapService/v3/log/init\",\n      \"at\": 1790342523267\n    },\n    {\n      \"path\": \"/api/maps/amap/_AMapService/v3/direction/walking\",\n      \"at\": 1790342528357\n    },\n    {\n      \"path\": \"/api/maps/external-navigation/beiyangyuan-datong-center\",\n      \"at\": 1790342528552\n    },\n    {\n      \"path\": \"/api/maps/amap/_AMapService/v3/place/text\",\n      \"at\": 1790342528552\n    }\n  ],\n  \"errors\": [],\n  \"elapsedMs\": 5674,\n  \"answer\": \"路线：已完成（限返回证据）\",\n  \"routeId\": \"dc3dbd22-ecf4-4369-8c7a-9f3686fc672e\",\n  \"selectionPreservesRoute\": true,\n  \"canvasCount\": 1\n}\n",
+  "stderr": ""
+}
